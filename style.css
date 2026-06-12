@@ -387,7 +387,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 #themes { padding: 100px 0; }
 .theme-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 .theme-card {
@@ -698,6 +698,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .persist-grid { grid-template-columns: 1fr; }
   .persist-compare { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
+  .theme-showcase { grid-template-columns: repeat(2, 1fr); }
   .privacy-grid { grid-template-columns: 1fr; }
   .cs-features { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
