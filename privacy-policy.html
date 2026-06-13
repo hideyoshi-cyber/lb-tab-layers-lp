@@ -202,6 +202,7 @@
       <li><strong>閲覧履歴</strong>（history 権限）：本日の閲覧履歴をサイドパネルに一覧表示する機能に使用します（PRO版のみ）</li>
       <li><strong>アラーム</strong>（alarms 権限）：タブの自動サスペンド機能およびライセンスの定期検証に使用します</li>
       <li><strong>サイドパネル</strong>（sidePanel 権限）：Chromeのサイドパネルにタブ管理UIを表示します</li>
+      <li><strong>サイトブロック</strong>（declarativeNetRequest 権限）：フォーカスモード中、ユーザーが指定したサイトをブロックページへリダイレクトします。ブロックルールはローカルで生成され、外部送信されません</li>
     </ul>
 
     <h2>2. データの保存場所</h2>
@@ -230,6 +231,12 @@
     </ul>
     <p>決済処理は <strong>Stripe, Inc.</strong> のセキュアな決済ページで行われます。クレジットカード情報は当社サーバーを経由しません。</p>
 
+    <h3>3-3. 検索補助・検索サジェスト</h3>
+    <p>検索入力時、候補取得のため入力文字列を Google サジェストサービス（suggestqueries.google.com）へ送信します。</p>
+
+    <h3>3-4. AI検索機能（任意・ユーザーが有効化した場合のみ）</h3>
+    <p>ユーザーが選択したAIエンジン（Chrome内蔵AI / Google Gemini / OpenAI / Anthropic Claude）へ、保存タブのタイトル・URLを送信します。APIキーはユーザーが設定し、ローカルにのみ保存されます。</p>
+
     <h2>4. 第三者への提供</h2>
     <p>本拡張機能は、ユーザーのデータを第三者に提供、販売、または共有することはありません。決済処理に関してはStripe社のプライバシーポリシーが適用されます。</p>
 
@@ -248,7 +255,7 @@
     ウェブサイト：<a href="https://www.liquid-block.com" target="_blank" rel="noopener">https://www.liquid-block.com</a></p>
 
     <div class="policy-footer">
-      <p>最終更新日：2026年6月12日</p>
+      <p>最終更新日：2026年6月13日</p>
       <p>© 2026 Liquid Block Inc. All rights reserved.</p>
     </div>
   </div>

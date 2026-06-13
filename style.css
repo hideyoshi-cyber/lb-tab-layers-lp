@@ -702,11 +702,32 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .privacy-grid { grid-template-columns: 1fr; }
   .cs-features { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .privacy-card { padding: 32px; }
-  .coming-soon-card { padding: 36px 24px; }
-  #hero { padding: 120px 20px 60px; }
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.8rem; }
+  .privacy-card { padding: 32px 20px; }
+  .coming-soon-card { padding: 36px 20px; }
+  #hero { padding: 120px 16px 60px; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+
+  /* Prevent text overflow on mobile */
+  .container { padding: 0 16px; }
+  .btn { padding: 14px 24px; font-size: 1rem; }
+  .btn-large { padding: 16px 28px; font-size: 1.05rem; }
+  .hero-sub { font-size: 1.05rem; }
+  .hero-note { font-size: 0.8rem; }
+  .feature-header p { font-size: 1rem; }
+  .pain-card p, .persist-card p { font-size: 0.95rem; }
+  .feat-card { padding: 24px 20px; }
+  .feat-card p { font-size: 0.92rem; }
+  .faq-item summary { font-size: 1rem; }
+  .faq-item p { font-size: 0.95rem; }
+  .cs-item p { font-size: 0.85rem; }
+  .privacy-item p { font-size: 0.92rem; }
+  #final-cta { padding: 80px 0; }
+  #final-cta p { font-size: 1rem; }
+
+  /* Comparison table mobile */
+  .compare-table { font-size: 0.8rem; }
+  .compare-table th, .compare-table td { padding: 10px 8px; }
 }
 
 @media (min-width: 1024px) {
