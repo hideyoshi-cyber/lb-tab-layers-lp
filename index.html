@@ -5,36 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LB TAB Layers — タブを閉じても、消えない。Chrome 拡張機能</title>
   <meta name="description" content="タブを閉じても、消えない。ブックマークに自動保存されるレイヤー型タブ管理 Chrome 拡張機能。PC再起動・拡張削除後もデータは残り続けます。">
+  <link rel="canonical" href="https://liquid-block.com/lb-tab-layers">
+  <!-- OGP / Facebook -->
   <meta property="og:title" content="LB TAB Layers — タブを閉じても、消えない。">
   <meta property="og:description" content="ブックマークに自動保存されるレイヤー型タブ管理。40テーマ・AI検索・通知バッジ搭載。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://liquid-block.com/lb-tab-layers">
+  <meta property="og:image" content="https://liquid-block.com/lb-tab-layers/chrome-store-screenshot.png">
+  <meta property="og:site_name" content="LB TAB Layers">
+  <meta property="og:locale" content="ja_JP">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LB TAB Layers — タブを閉じても、消えない。Chrome 拡張機能">
+  <meta name="twitter:description" content="タブを閉じても、消えない。ブックマークに自動保存されるレイヤー型タブ管理 Chrome 拡張機能。PC再起動・拡張削除後もデータは残り続けます。">
+  <meta name="twitter:image" content="https://liquid-block.com/lb-tab-layers/chrome-store-screenshot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "LB TAB Layers",
-    "operatingSystem": "Chrome",
-    "applicationCategory": "BrowserApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome, Edge",
+      "applicationCategory": "BrowserApplication",
+      "downloadUrl": "https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej",
+      "softwareVersion": "2.6.1",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "基本機能は無料でご利用いただけます。PROプラン（買い切り）もご用意しています。"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      },
+      "description": "タブを閉じても、消えない。ブックマークに自動保存されるレイヤー型タブ管理 Chrome 拡張機能。PC再起動・拡張削除後もデータは残り続けます。",
+      "browserRequirements": "Google Chrome 114 以降、Microsoft Edge",
+      "featureList": [
+        "レイヤー型タブ管理（プロジェクトごとにタブをグループ化）",
+        "自動ブックマーク保存によるデータ永続化（PC再起動・拡張削除でも消えない）",
+        "ファジー検索（曖昧な日本語入力でのタブ検索）",
+        "通知バッジ（GmailやSlackなどの未読バッジ連携）",
+        "バンパーピンバー（よく使うタブの常駐）",
+        "ダッシュボード（大画面での全グループ一覧管理）",
+        "重複タブ掃除（同一URL of 自動クリーンアップ）",
+        "AIタブ検索（Gemini / GPT等によるインテリジェント検索）"
+      ]
     },
-    "author": {
-      "@type": "Organization",
-      "name": "Liquid Block Inc.",
-      "url": "https://www.liquid-block.com"
-    },
-    "description": "ブックマークに自動保存されるレイヤー型タブ管理 Chrome 拡張機能"
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "拡張を削除したらデータはどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "タブはChromeブックマークとして残るため、拡張を削除してもリンクは失われません。再インストール時にグループとタブが復元されます。※ テーマ・色・タグ等の設定はローカル保存のため削除時にリセットされます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PRO は月額ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ、買い切りです。今なら期間限定セールで $4.99（通常 $9.99）。一度のお支払いで永久にご利用いただけます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのブラウザで使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Chrome 114 以降、および Microsoft Edge で動作します（Windows / Mac / Linux / ChromeOS）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "データは外部に送信されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "タブ・グループのデータはローカルブラウザ内に保存されます。ライセンス検証用の匿名ID of ほか、アイコン表示や検索補助で一部外部サービスと通信します。"
+          }
+        }
+      ]
+    }
+  ]
   </script>
 </head>
 <body>
@@ -42,13 +107,13 @@
   <header id="site-header">
     <nav class="nav-container">
       <a href="https://www.liquid-block.com" class="logo" aria-label="Liquid Block Home">
-        <img src="liquidLogo.svg" alt="Liquid Block" class="logo-icon">
+        <img src="liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45">
         <span class="logo-text">TAB Layers</span>
       </a>
       <div class="nav-links">
         <a href="#features">機能</a>
         <a href="#themes">テーマ</a>
-        <a href="#whats-new">v2.6</a>
+        <a href="#whats-new">v2.6.1</a>
         <a href="#faq">FAQ</a>
       </div>
       <a href="#cta-main" class="nav-cta">無料で始める</a>
@@ -58,63 +123,77 @@
   <!-- ===== HERO ===== -->
   <section id="hero">
     <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Chrome / Edge 拡張機能 — 無料
-      </div>
-      <h1>
-        タブを閉じても<br>
-        <strong>消えない。</strong>
-      </h1>
-      <p class="hero-sub">
-        ブックマークに自動保存される<br>レイヤー型タブ管理。<br>
-        再起動しても、クラッシュしても、<br>データはそこにあります。
-      </p>
-      <div class="hero-actions" id="cta-main">
-        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary" id="hero-cta-chrome">
-          Chrome に追加
-        </a>
-        <a href="#" class="btn btn-ghost" id="hero-cta-edge">
-          Edge に追加
-          <span class="badge-soon">準備中</span>
-        </a>
-      </div>
-      <p class="hero-note">40テーマ · ブックマーク同期 · 日本語 / English · Chrome & Edge 対応</p>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-browser-frame">
-        <div class="browser-dots"><span></span><span></span><span></span></div>
-        <div class="browser-content" id="hero-screenshot">
-          <!-- Screenshot placeholder — replace with actual -->
-          <div class="screenshot-placeholder">
-            <div class="sp-sidebar">
-              <div class="sp-group" style="--accent: #FF6B6B">
-                <div class="sp-group-header"><span class="sp-dot" style="background:#FF6B6B"></span> Design Project</div>
-                <div class="sp-tab">📄 Figma — Dashboard</div>
-                <div class="sp-tab">📄 Dribbble — Inspiration</div>
-                <div class="sp-tab">📄 Google Fonts</div>
-              </div>
-              <div class="sp-group" style="--accent: #4A90E2">
-                <div class="sp-group-header"><span class="sp-dot" style="background:#4A90E2"></span> Development</div>
-                <div class="sp-tab active">📄 GitHub — PR #142</div>
-                <div class="sp-tab">📄 Stack Overflow</div>
-                <div class="sp-tab"><span class="sp-badge">3</span>📄 Gmail</div>
-              </div>
-              <div class="sp-group" style="--accent: #2BAA6E">
-                <div class="sp-group-header"><span class="sp-dot" style="background:#2BAA6E"></span> Personal</div>
-                <div class="sp-tab">📄 YouTube Music</div>
-                <div class="sp-tab">📄 Amazon</div>
-              </div>
-            </div>
-          </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Chrome / Edge 拡張機能 — 無料
         </div>
+        <h1>
+          タブを閉じても<br>
+          <strong>消えない。</strong>
+        </h1>
+        <p class="hero-sub">
+          ブックマークに自動保存される<br>レイヤー型タブ管理。<br>
+          再起動しても、クラッシュしても、<br>データはそこにあります。
+        </p>
+        <div class="hero-actions" id="cta-main">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary" id="hero-cta-chrome">
+            Chrome に追加
+          </a>
+          <a href="#" class="btn btn-ghost" id="hero-cta-edge">
+            Edge に追加
+            <span class="badge-soon">準備中</span>
+          </a>
+        </div>
+        <p class="hero-note">40テーマ · ブックマーク同期 · 日本語 / English · Chrome 対応（Edge 準備中）</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot-wrapper">
+          <img src="WebLBtaLayers.png" alt="LB TAB Layers v2.6.1 サイドパネル" class="hero-screenshot-img" loading="eager" width="354" height="1191">
+          <div class="hero-screenshot-badge">v2.6.1 — Warm テーマ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IS EXTENSION ===== -->
+  <section id="about-extension">
+    <div class="section-glow"></div>
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>ブラウザ拡張機能とは？</span>
+        <h2>ブラウザを劇的にパワーアップさせる<br><span class="text-gradient">「後付けのプチアプリ」です。</span></h2>
+        <p>「拡張機能（アドオン）」について詳しくない方でもご安心ください。スマホにアプリを入れるのと同じくらい簡単です。</p>
+      </div>
+      
+      <div class="ext-explain-grid">
+        <div class="ext-explain-card">
+          <div class="ext-explain-num">01</div>
+          <h4>ワンクリックで即座に追加</h4>
+          <p>難しいインストール作業やパソコンの再起動は不要。「Chrome に追加」ボタンを押すだけで、数秒であなたのブラウザに組み込まれます。</p>
+        </div>
+        <div class="ext-explain-card">
+          <div class="ext-explain-num">02</div>
+          <h4>サイドパネルに常駐してアシスト</h4>
+          <p>導入すると、ブラウザの横にスリムな専用操作画面（サイドパネル）が出現。ネットサーフィンや仕事を邪魔することなく、常にタブ管理をサポートします。</p>
+        </div>
+        <div class="ext-explain-card">
+          <div class="ext-explain-num">03</div>
+          <h4>無料・安全ですぐに試せる</h4>
+          <p>Chrome ウェブストアというGoogle公式のストアから配信されているため、セキュリティ的にも安心・安全。いつでもボタン一つで簡単に削除・無効化できます。</p>
+        </div>
+      </div>
+
+      <div class="ext-explain-visual">
+        <img src="chrome-store-screenshot.png" alt="Chrome ウェブストアで配信中" class="ext-explain-img" loading="lazy" width="1024" height="625">
       </div>
     </div>
   </section>
 
   <!-- ===== PAIN POINTS ===== -->
   <section id="pain-points">
+    <div class="section-glow"></div>
     <div class="container">
       <div class="pain-grid">
         <div class="pain-card">
@@ -136,6 +215,9 @@
       <div class="pain-solution">
         <div class="solution-arrow">↓</div>
         <p class="solution-text">LB TAB Layers は、<strong>この悪循環を断ち切ります。</strong></p>
+        <div class="solution-visual">
+          <img src="tab-bookmarks-one.jpg" alt="タブとブックマークをひとつに" class="solution-img" loading="lazy" width="640" height="400">
+        </div>
       </div>
     </div>
   </section>
@@ -175,6 +257,9 @@
           <p>Chrome ブックマークに保存 →<br><strong>何があっても残る</strong></p>
         </div>
       </div>
+      <div class="persist-visual">
+        <img src="tab-persistence-one.jpg" alt="企画書の資料タブ・オンラインツールタブ・沢山のAIタブ" class="persist-img" loading="lazy" width="640" height="400">
+      </div>
     </div>
   </section>
 
@@ -208,7 +293,7 @@
         </div>
         <div class="feat-card">
           <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="3"/><path d="M5 12l7-7 7 7"/><rect x="4" y="19" width="16" height="2" rx="1"/></svg></div>
-          <div><h3>Arc 風ピンバー</h3>
+          <div><h3>バンパーピンバー</h3>
           <p>よく使うサイトを常駐。ワンクリックで即アクセス。</p></div>
         </div>
         <div class="feat-card">
@@ -237,6 +322,9 @@
           <p>集中モードで<br>不要なタブをブロック。<br>ポモドーロタイマー内蔵。</p></div>
         </div>
       </div>
+      <div class="features-visual">
+        <img src="tab-features-one.jpg" alt="一括でタブが消える！でもブックマーク化で消えない安心" class="features-img" loading="lazy" width="640" height="400">
+      </div>
     </div>
   </section>
 
@@ -249,37 +337,117 @@
         <p>ミニマルからダークまで。暗くても明るくても美しい。</p>
       </div>
       <div class="theme-showcase">
-        <div class="theme-card" style="--bg:#F8F9FA;--accent:#FF6B6B;--text:#333">
-          <div class="theme-preview"><span class="theme-dot" style="background:#FF6B6B"></span><span class="theme-dot" style="background:#ECEFEF"></span></div>
+        <!-- Liquid Warm (看板テーマ) -->
+        <div class="theme-card" style="--t-bg:#F8F9FA;--t-hbg:#fff;--t-ac:#FF6B6B;--t-t1:#2B303A;--t-t2:#5C6370;--t-t3:#8A94A6;--t-sbg:#ECEFEF;--t-zb:#ECEFEF;--t-ib:#fff;--t-bd:rgba(43,48,58,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
           <span class="theme-name">Liquid Warm</span>
         </div>
-        <div class="theme-card" style="--bg:#0F1115;--accent:#A5C9EB;--text:#eee">
-          <div class="theme-preview"><span class="theme-dot" style="background:#A5C9EB"></span><span class="theme-dot" style="background:#1a1d24"></span></div>
+        <!-- Pastel Mint -->
+        <div class="theme-card" style="--t-bg:#EAFAF1;--t-hbg:#fff;--t-ac:#2ECC71;--t-t1:#145A32;--t-t2:#2ECC71;--t-t3:#58D68D;--t-sbg:#D5F5E3;--t-zb:#D5F5E3;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(46,204,113,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Pastel Mint</span>
+        </div>
+        <!-- Pastel Rose -->
+        <div class="theme-card" style="--t-bg:#FDEDEC;--t-hbg:#fff;--t-ac:#E74C3C;--t-t1:#641E16;--t-t2:#E74C3C;--t-t3:#F1948A;--t-sbg:#FADBD8;--t-zb:#FADBD8;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(231,76,60,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Pastel Rose</span>
+        </div>
+        <!-- Nordic Cozy -->
+        <div class="theme-card" style="--t-bg:#FAF6F0;--t-hbg:#FAF6F0;--t-ac:#7EA172;--t-t1:#3E4A3B;--t-t2:#6B7A68;--t-t3:#9AA896;--t-sbg:#fff;--t-zb:#F0E5DC;--t-ib:rgba(250,246,240,0.7);--t-bd:rgba(110,125,104,0.1)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Nordic Cozy</span>
+        </div>
+        <!-- Elegant Glass (ダーク) -->
+        <div class="theme-card" style="--t-bg:#0F1115;--t-hbg:#0F1115;--t-ac:#A5C9EB;--t-t1:#F3F4F6;--t-t2:#9CA3AF;--t-t3:#6B7280;--t-sbg:rgba(255,255,255,0.03);--t-zb:rgba(255,255,255,0.04);--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
           <span class="theme-name">Elegant Glass</span>
         </div>
-        <div class="theme-card" style="--bg:#09090B;--accent:#E11D48;--text:#eee">
-          <div class="theme-preview"><span class="theme-dot" style="background:#E11D48"></span><span class="theme-dot" style="background:#18181B"></span></div>
+        <!-- Cyberpunk (ダーク) -->
+        <div class="theme-card" style="--t-bg:#09090B;--t-hbg:#09090B;--t-ac:#E11D48;--t-t1:#F4F4F5;--t-t2:#A1A1AA;--t-t3:#71717A;--t-sbg:rgba(255,255,255,0.03);--t-zb:#18181B;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
           <span class="theme-name">Cyberpunk</span>
         </div>
-        <div class="theme-card" style="--bg:#0D1117;--accent:#00FF41;--text:#eee">
-          <div class="theme-preview"><span class="theme-dot" style="background:#00FF41"></span><span class="theme-dot" style="background:#161B22"></span></div>
-          <span class="theme-name">Matrix Green</span>
+        <!-- Toy (ポップ・個性派) -->
+        <div class="theme-card" style="--t-bg:#F4F6F9;--t-hbg:#F4F6F9;--t-ac:#4EA8DE;--t-t1:#073B4C;--t-t2:#118AB2;--t-t3:#83C5BE;--t-sbg:#fff;--t-zb:#FFFDF0;--t-ib:#fff;--t-bd:#073B4C">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Toy</span>
         </div>
-        <div class="theme-card" style="--bg:#121212;--accent:#D4AF37;--text:#eee">
-          <div class="theme-preview"><span class="theme-dot" style="background:#D4AF37"></span><span class="theme-dot" style="background:#1C1C1C"></span></div>
+        <!-- Royal Gold (ラグジュアリー) -->
+        <div class="theme-card" style="--t-bg:#121212;--t-hbg:#121212;--t-ac:#D4AF37;--t-t1:#F0E6D2;--t-t2:#D4AF37;--t-t3:#8A753C;--t-sbg:#1C1C1C;--t-zb:#1C1C1C;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(212,175,55,0.15)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
           <span class="theme-name">Royal Gold</span>
-        </div>
-        <div class="theme-card" style="--bg:#F5EEF8;--accent:#9B59B6;--text:#333">
-          <div class="theme-preview"><span class="theme-dot" style="background:#9B59B6"></span><span class="theme-dot" style="background:#E8DAEF"></span></div>
-          <span class="theme-name">Lavender Dream</span>
-        </div>
-        <div class="theme-card" style="--bg:#000000;--accent:#FFFFFF;--text:#eee">
-          <div class="theme-preview"><span class="theme-dot" style="background:#FFFFFF"></span><span class="theme-dot" style="background:#111111"></span></div>
-          <span class="theme-name">Retro RPG</span>
-        </div>
-        <div class="theme-card" style="--bg:#1A0033;--accent:#FF0055;--text:#eee">
-          <div class="theme-preview"><span class="theme-dot" style="background:#FF0055"></span><span class="theme-dot" style="background:#2B0066"></span></div>
-          <span class="theme-name">Synthwave</span>
         </div>
       </div>
       <p class="theme-more">+ 他 32 テーマ</p>
@@ -445,41 +613,42 @@
       </div>
     </div>
   </section>
-  <!-- ===== v2.6 NEW FEATURES ===== -->
+
+  <!-- ===== v2.6.1 NEW FEATURES ===== -->
   <section id="whats-new">
     <div class="container">
       <div class="coming-soon-card">
         <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v2.6</div>
-        <h2>v2.6 — <span class="text-gradient">さらなる進化。</span></h2>
-        <p class="cs-sub">最新アップデートで搭載された新機能。</p>
+        <div class="cs-badge">NEW IN v2.6.1</div>
+        <h2>v2.6.1 — <span class="text-gradient">極上の操作性。</span></h2>
+        <p class="cs-sub">最新アップデートで搭載された新機能・UX改善。</p>
         <div class="cs-features">
           <div class="cs-item">
             <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/><line x1="3" y1="15" x2="9" y2="15"/></svg></span>
             <div>
-              <h4>セクション区切り</h4>
-              <p>グループを視覚的に分類。<br>仕事 / 個人 / アーカイブを<br>一目で区別。</p>
+              <h4>UI見出しの追加＆メニュー簡素化</h4>
+              <p>各セクションに見出しラベルを追加。また、グループの操作ボタンを整理し、主要操作以外を「⋯」に隠すことで操作迷子を防ぎます。</p>
+            </div>
+          </div>
+          <div class="cs-item">
+            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="10" y1="14" x2="3" y2="21"/></svg></span>
+            <div>
+              <h4>フォルダ開閉の極上アニメーション</h4>
+              <p>グループの開閉動作を完全に滑らかに。タブリストがヘッダーの裏に美しく滑り込むレイヤーアニメーションを実現。</p>
             </div>
           </div>
           <div class="cs-item">
             <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
             <div>
-              <h4>★ランク &amp; タグ</h4>
-              <p>ブックマークに重要度とタグを付与。<br>大量のタブも直感的に<br>優先順位付け。</p>
+              <h4>★ランク &amp; タグ＆アーカイブ</h4>
+              <p>ブックマークに重要度とタグを付与。終わったプロジェクトをスマートにアーカイブでき、見た目を常にスッキリ保てます。</p>
             </div>
           </div>
           <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="15.5" r="2.5"/><circle cx="8.5" cy="15.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.82-.12 2.67-.35"/></svg></span>
+            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></span>
             <div>
-              <h4>40テーマ</h4>
-              <p>Cyberpunk・Synthwave・<br>Royal Gold など40種のテーマで<br>自分だけのワークスペースに。</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></span>
-            <div>
-              <h4>アーカイブ機能</h4>
-              <p>終わった案件をアーカイブ。<br>データを保持したまま<br>見た目をスッキリ。</p>
+              <h4>40テーマ ＆ 各種生産性ツール</h4>
+              <p>40種の選べるテーマに加え、重複タブ掃除・フォーカスタイマー・自動サスペンドなど充実の機能を完備。</p>
             </div>
           </div>
         </div>
@@ -512,21 +681,30 @@
         </details>
 
       </div>
+      <div class="faq-visual">
+        <img src="tab-faq-one.jpg" alt="タブがたくさん！ブックマークはどこ？" class="faq-img" loading="lazy" width="640" height="400">
+      </div>
     </div>
   </section>
 
   <!-- ===== FINAL CTA ===== -->
   <section id="final-cta">
-    <div class="container">
-      <h2>タブの悪循環を、<br><span class="text-gradient">今日で終わりに。</span></h2>
-      <p>100個のタブを開きっぱなしにする日々はもう終わり。</p>
-      <div class="hero-actions">
-        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary btn-large" id="cta-final-chrome">
-          Chrome に無料で追加
-        </a>
-        <a href="#" class="btn btn-ghost btn-large" id="cta-final-edge">
-          Edge に追加 <span class="badge-soon">準備中</span>
-        </a>
+    <div class="section-glow"></div>
+    <div class="container cta-flex-container">
+      <div class="cta-content">
+        <h2>タブの悪循環を、<br><span class="text-gradient">今日で終わりに。</span></h2>
+        <p>100個のタブを開きっぱなしにする日々はもう終わり。</p>
+        <div class="hero-actions">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary btn-large" id="cta-final-chrome">
+            Chrome に無料で追加
+          </a>
+          <a href="#" class="btn btn-ghost btn-large" id="cta-final-edge">
+            Edge に追加 <span class="badge-soon">準備中</span>
+          </a>
+        </div>
+      </div>
+      <div class="cta-image-wrapper">
+        <img src="WebLBtaLayers.png" alt="" class="cta-bg-img" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </section>
@@ -536,7 +714,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="liquidLogo.svg" alt="Liquid Block" class="footer-logo">
+          <img src="liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64">
           <p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p>
           <div class="social-share">
             <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fliquid-block.com%2Ftab-layers&text=LB%20TAB%20Layers%20%E2%80%94%20%E3%82%BF%E3%83%96%E3%82%92%E9%96%89%E3%81%98%E3%81%A6%E3%82%82%E6%B6%88%E3%81%88%E3%81%AA%E3%81%84%E3%80%82Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD" target="_blank" rel="noopener" class="share-btn" aria-label="Xでシェア">

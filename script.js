@@ -1,4 +1,4 @@
-/* LB TAB Layers LP — script.js */
+/* LB TAB Layers LP 窶・script.js */
 'use strict';
 
 // ===== Scroll-based header styling =====
@@ -24,8 +24,12 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      if (entry.target.classList.contains('scroll-trigger')) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
       observer.unobserve(entry.target);
     }
   });
@@ -36,6 +40,12 @@ document.querySelectorAll('.pain-card, .persist-card, .feat-card, .theme-card, .
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+
+// Observe images for scroll-scale animation
+document.querySelectorAll('.solution-img, .persist-img, .features-img, .faq-img').forEach(el => {
+  el.classList.add('scroll-trigger');
   observer.observe(el);
 });
 
@@ -59,3 +69,4 @@ document.querySelectorAll('.btn').forEach(btn => {
     console.log('[LP] CTA click:', id);
   });
 });
+
