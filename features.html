@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>機能紹介と使い方 — LB TAB Layers</title>
+  <meta name="description" content="ブラウザ拡張機能『LB TAB Layers』の主要機能と使い方を詳しく解説。レイヤー型タブ管理、ブックマーク自動同期、日本語ファジー検索、AIタブ検索など、あなたのブラウジングを劇的に変える機能をご紹介。">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/features.html">
+  <!-- OGP -->
+  <meta property="og:title" content="機能紹介と使い方 — LB TAB Layers">
+  <meta property="og:description" content="レイヤー型タブ管理、ブックマーク自動同期、日本語ファジー検索、AI検索など、ブラウザを劇的に変える機能の一覧。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tablayers.liquid-block.com/features.html">
+  <meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <meta property="og:site_name" content="LB TAB Layers">
+  <meta property="og:locale" content="ja_JP">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo" aria-label="Liquid Block Home">
+        <img src="liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45">
+        <span class="logo-text">TAB Layers</span>
+      </a>
+      <div class="nav-links">
+        <a href="features.html" class="active" style="color:var(--text); background:rgba(0,0,0,0.04)">機能一覧</a>
+        <a href="index.html#themes">テーマ</a>
+        <a href="index.html#whats-new">v2.6.1</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <a href="index.html#cta-main" class="nav-cta">無料で始める</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="features-hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <span class="feature-tag">全機能紹介</span>
+      <h1>ブラウジングを革新する<br><span class="text-gradient">TAB Layersのテクノロジー。</span></h1>
+      <p>日常の作業スピードとブラウザの快適性を圧倒的に高める、洗練された機能をご紹介します。</p>
+    </div>
+  </section>
+
+  <!-- ===== DETAIL FEATURES LIST ===== -->
+  <section class="container">
+    <div class="detail-grid">
+      
+      <!-- 1. レイヤー型タブ管理 -->
+      <div class="detail-section" id="layer-management">
+        <div class="detail-info">
+          <div class="detail-icon-box">
+            <i class="ti ti-layers-intersect"></i>
+          </div>
+          <h2>仕事の文脈を切り替える<br>「レイヤー型」タブ整理</h2>
+          <p>
+            複数のプロジェクトやクライアント、作業用途（リサーチ、経理、SNSなど）ごとにタブを「レイヤーグループ」として整理・管理できます。<br>
+            ワンクリックでグループ内のすべてのタブを一括で開き、作業が終わったら一瞬で閉じてメモリを解放します。
+          </p>
+          <ul class="detail-list">
+            <li><i class="ti ti-circle-check"></i> 複数タブの一括復元＆一括消去</li>
+            <li><i class="ti ti-circle-check"></i> ドラッグ＆ドロップによる直感的な並び替え</li>
+            <li><i class="ti ti-circle-check"></i> サブグループ（フォルダの階層化）に完全対応</li>
+          </ul>
+        </div>
+        <div class="detail-visual">
+          <div class="layer-box-stack">
+            <div class="layer-item-ui">
+              <span class="layer-dot" style="background:#EF4444"></span>
+              <span>A社プロモーション企画</span>
+              <span style="margin-left:auto;font-size:0.8rem;color:var(--text-secondary)">8 tabs</span>
+            </div>
+            <div class="layer-item-ui active">
+              <span class="layer-dot" style="background:#4A60D1"></span>
+              <span>製品デザイン・リサーチ</span>
+              <span style="margin-left:auto;font-size:0.8rem;color:var(--accent)">14 tabs</span>
+            </div>
+            <div class="layer-item-ui">
+              <span class="layer-dot" style="background:#10B981"></span>
+              <span>経費精算・オンラインツール</span>
+              <span style="margin-left:auto;font-size:0.8rem;color:var(--text-secondary)">4 tabs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. ブックマーク自動保存 -->
+      <div class="detail-section reverse" id="persistence">
+        <div class="detail-info">
+          <div class="detail-icon-box">
+            <i class="ti ti-bookmark-share"></i>
+          </div>
+          <h2>絶対に消えない安心感<br>ブックマーク双方向自動同期</h2>
+          <p>
+            他のタブ管理ツールと異なり、TAB Layersで保存したグループやタブは**すべてブラウザ純正の「ブックマーク」と自動同期**されます。<br>
+            そのため、万が一この拡張機能を削除してしまったり、ブラウザが突然クラッシュしたり、PCが強制再起動したとしても、データが失われることは絶対にありません。
+          </p>
+          <ul class="detail-list">
+            <li><i class="ti ti-circle-check"></i> 拡張機能を削除してもブックマークにそのまま残る</li>
+            <li><i class="ti ti-circle-check"></i> 双方向同期：ブックマーク側を編集してもTAB Layersへ自動反映</li>
+            <li><i class="ti ti-circle-check"></i> サーバーを介さないためプライバシーも万全</li>
+          </ul>
+        </div>
+        <div class="detail-visual">
+          <img src="tab-persistence-one.jpg" alt="ブックマーク同期のイメージ" style="max-width:440px;">
+        </div>
+      </div>
+
+      <!-- 3. 日本語ファジー検索 -->
+      <div class="detail-section" id="fuzzy-search">
+        <div class="detail-info">
+          <div class="detail-icon-box">
+            <i class="ti ti-search"></i>
+          </div>
+          <h2>ひらがな・ローマ字対応<br>日本語スマートファジー検索</h2>
+          <p>
+            膨大なタブの中から目的のページを秒速で検索。「めーる」とひらがなで入力するだけで「Gmail」をヒットさせたり、「あまぞん」で「Amazon」を見つけたりできます。<br>
+            90語以上の日本語検索用辞書を内蔵し、スペルミスや曖昧な記憶からでもお目当てのタブを確実に引き当てます。
+          </p>
+          <ul class="detail-list">
+            <li><i class="ti ti-circle-check"></i> カタカナ・ひらがな・ローマ字の曖昧マッチング</li>
+            <li><i class="ti ti-circle-check"></i> 開いているタブ、保存したタブ、既存ブックマークすべてを同時に検索</li>
+            <li><i class="ti ti-circle-check"></i> キーボードショートカットで瞬時に検索バーへフォーカス</li>
+          </ul>
+        </div>
+        <div class="detail-visual">
+          <div class="visual-card-ui" style="text-align:left; max-width:340px;">
+            <div style="font-weight:700;font-size:0.8rem;color:var(--text-secondary);margin-bottom:8px;text-transform:uppercase;">Fuzzy Search Demo</div>
+            <div style="background:var(--bg-white); border:1px solid var(--border); padding:8px 12px; border-radius:10px; display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+              <i class="ti ti-search" style="color:var(--accent)"></i>
+              <span style="color:var(--text)">めーる</span>
+              <span style="animation: pulse-dot 1.5s infinite; font-weight:100; color:var(--accent)">|</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <div style="background:var(--bg-white); padding:8px; border-radius:8px; border:1px solid var(--accent); font-size:0.85rem; display:flex; align-items:center; gap:8px;">
+                <i class="ti ti-mail" style="color:#EA4335"></i>
+                <strong>Gmail</strong>
+                <span style="font-size:0.75rem; color:var(--text-secondary); margin-left:auto;">mail.google.com</span>
+              </div>
+              <div style="opacity:0.5; padding:8px; font-size:0.85rem; display:flex; align-items:center; gap:8px;">
+                <i class="ti ti-calendar" style="color:#4285F4"></i>
+                <span>Google Calendar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 通知バッジ -->
+      <div class="detail-section reverse" id="notification-badge">
+        <div class="detail-info">
+          <div class="detail-icon-box">
+            <i class="ti ti-bell"></i>
+          </div>
+          <h2>未読情報を見逃さない<br>Gmail・Slack通知バッジ自動検知</h2>
+          <p>
+            閉じている（非アクティブの）タブや、グループフォルダ内に格納されているサイトに新しい通知（Gmailの未読数、Slackのメンションなど）が届いた際、グループフォルダの横に赤い通知バッジを自動で表示します。<br>
+            タブを1つずつチェックしなくても、どのプロジェクトに更新があったのかが一目で分かります。
+          </p>
+          <ul class="detail-list">
+            <li><i class="ti ti-circle-check"></i> バックグラウンドタブのタイトル変化から通知を自動検知</li>
+            <li><i class="ti ti-circle-check"></i> Gmail, Slack, MS Teams, Chatworkなどビジネスツールに標準対応</li>
+            <li><i class="ti ti-circle-check"></i> グループを畳んでいてもバッジが表示されるためスッキリ管理</li>
+          </ul>
+        </div>
+        <div class="detail-visual">
+          <div class="visual-card-ui" style="max-width:300px; text-align:left;">
+            <div style="background:var(--bg-white); border:1px solid var(--border); border-left:3px solid #EF4444; padding:12px; border-radius:12px; display:flex; align-items:center; gap:8px;">
+              <i class="ti ti-folder" style="color:#EF4444; font-size:20px;"></i>
+              <strong style="font-size:0.9rem;">連絡・コミュニケーション</strong>
+              <span style="background:#EF4444; color:white; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:10px; margin-left:auto;">5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. AIタブ検索 -->
+      <div class="detail-section" id="ai-search">
+        <div class="detail-info">
+          <div class="detail-icon-box">
+            <i class="ti ti-wand"></i>
+          </div>
+          <h2>意味で探す・自動でまとめる<br>AIアシスタント機能（Beta）</h2>
+          <p>
+            Chromeの内蔵AI（Gemini Nano）や、お持ちのAPIキー（Gemini / OpenAI / Claude）を接続することで、高度なAI検索機能がアンロックされます。<br>
+            「出張で使えそうなホテル」「来週のミーティング資料」といった抽象的な言葉でタブを検索したり、開いているタブをAIが分析して自動でフォルダに分類・命名して整理することができます。
+          </p>
+          <ul class="detail-list">
+            <li><i class="ti ti-circle-check"></i> セマンティック検索：URLやタイトルに含まれない意味を汲み取って検索</li>
+            <li><i class="ti ti-circle-check"></i> AI自動グループ化：散らかったタブをワンクリックで自動カテゴリ分類</li>
+            <li><i class="ti ti-circle-check"></i> プライバシー配慮：API接続はローカルで直接実行されます</li>
+          </ul>
+        </div>
+        <div class="detail-visual">
+          <div class="visual-card-ui" style="text-align:left; max-width:340px;">
+            <div style="background:linear-gradient(135deg, #7c3aed, #c026d3); padding:2px; border-radius:12px;">
+              <div style="background:var(--bg-white); padding:12px; border-radius:10px;">
+                <div style="display:flex; align-items:center; gap:6px; margin-bottom:8px;">
+                  <i class="ti ti-sparkles" style="color:#c026d3;"></i>
+                  <span style="font-weight:700; font-size:0.85rem; color:#7c3aed;">AI自動グループ分類の結果</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px; font-size:0.8rem;">
+                  <div style="background:var(--bg); padding:6px 10px; border-radius:6px; display:flex; align-items:center; gap:6px;">
+                    <i class="ti ti-folder" style="color:#7c3aed"></i>
+                    <span>出張ホテル予約 (3)</span>
+                  </div>
+                  <div style="background:var(--bg); padding:6px 10px; border-radius:6px; display:flex; align-items:center; gap:6px;">
+                    <i class="ti ti-folder" style="color:#7c3aed"></i>
+                    <span>競合UIリサーチ (5)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. フォーカスタイマー & 自動サスペンド -->
+      <div class="detail-section reverse" id="productivity-tools">
+        <div class="detail-info">
+          <div class="detail-icon-box">
+            <i class="ti ti-clock"></i>
+          </div>
+          <h2>集中とメモリ節約を両立<br>フォーカスタイマー ＆ 自動サスペンド</h2>
+          <p>
+            作業の生産性を高めるためのツールも内蔵しています。<br>
+            ポモドーロ・テクニックに基づく**フォーカスタイマー**により、集中時間中にSNSなどの不要なサイトへのアクセスを自動ブロック。また、使っていないタブのメモリを一時停止する**自動サスペンド**により、PCが重くなるのを防ぎます。
+          </p>
+          <ul class="detail-list">
+            <li><i class="ti ti-circle-check"></i> フォーカスタイマー：指定フォルダ内のサイトをタイマー中にアクセス遮断</li>
+            <li><i class="ti ti-circle-check"></i> 自動サスペンド：一定時間操作のないタブのメモリを自動解放</li>
+            <li><i class="ti ti-circle-check"></i> 重複タブ掃除：同じサイトを複数開いている場合にワンクリックで整理</li>
+          </ul>
+        </div>
+        <div class="detail-visual">
+          <div class="visual-card-ui">
+            <div class="timer-circle">25:00</div>
+            <div style="font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:4px;">Focus Mode Active</div>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin:0;">🛡️ 娯楽・SNSフォルダはブロック中</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PRO VS FREE ===== -->
+  <section id="compare-plans" style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag">プラン比較</span>
+        <h2>無料プラン vs PROプラン</h2>
+        <p>基本機能は永久無料。PRO版で無制限のパワーを解放。</p>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="feature-col">機能</th>
+              <th>無料版</th>
+              <th class="highlight-col" style="background:var(--accent); color:white;">PRO版（買い切り）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ブックマーク自動同期</td>
+              <td><span class="t-yes">✓</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>日本語ファジー検索</td>
+              <td><span class="t-yes">✓</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>通知バッジ表示</td>
+              <td><span class="t-yes">✓</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>最大グループ数</td>
+              <td>5グループまで</td>
+              <td class="highlight-col"><strong>無制限</strong></td>
+            </tr>
+            <tr>
+              <td>サブグループ階層</td>
+              <td>2階層まで</td>
+              <td class="highlight-col"><strong>無制限</strong></td>
+            </tr>
+            <tr>
+              <td>カラーテーマ</td>
+              <td>3テーマのみ</td>
+              <td class="highlight-col"><strong>全40テーマ解放</strong></td>
+            </tr>
+            <tr>
+              <td>本日の閲覧履歴</td>
+              <td><span class="t-no">✗</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>高度なAI検索（Gemini等）</td>
+              <td><span class="t-no">✗</span> (内蔵AIのみ可)</td>
+              <td class="highlight-col"><span class="t-yes">✓</span> (OpenAI/Claude等対応)</td>
+            </tr>
+            <tr>
+              <td>一括スクリーンショット・資料化 <span class="badge-soon" style="margin-left:0">v2.7</span></td>
+              <td><span class="t-no">✗</span></td>
+              <td class="highlight-col"><strong>✓ (PowerPoint / PDF / ZIP出力)</strong></td>
+            </tr>
+            <tr class="price-row">
+              <td>料金</td>
+              <td><strong>無料</strong></td>
+              <td class="highlight-col"><strong>$4.99</strong> <small>(通常 $9.99 / 買い切り)</small></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section id="final-cta" style="padding:120px 0;">
+    <div class="section-glow"></div>
+    <div class="container cta-flex-container">
+      <div class="cta-content">
+        <h2>あなたのブラウザを、<br><span class="text-gradient">極上の作業空間へ。</span></h2>
+        <p>TAB Layersを導入して、増えすぎたタブのストレスから解放されましょう。</p>
+        <div class="hero-actions">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary btn-large">
+            Chrome に無料で追加
+          </a>
+          <a href="index.html" class="btn btn-ghost btn-large">
+            トップページへ戻る
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64">
+          <p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="https://www.liquid-block.com/video-pool">Video Pool</a>
+          <a href="index.html">LB TAB Layers</a>
+          <a href="https://gijirec.liquid-block.com/">議事メモレック</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="https://www.liquid-block.com">会社概要</a>
+          <a href="privacy-policy.html">プライバシーポリシー</a>
+          <a href="mailto:info@liquid-block.com">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Block Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
