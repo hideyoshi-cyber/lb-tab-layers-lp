@@ -1273,3 +1273,204 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   }
 }
 
+/* ---------- VS COMPARISON PAGES ---------- */
+.vs-hero {
+  padding: 140px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.vs-hero .container { position: relative; z-index: 1; }
+.vs-hero h1 { margin-bottom: 20px; }
+.vs-hero .vs-verdict {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* 2-column compare table */
+.vs-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-white);
+  margin-top: 48px;
+}
+.vs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.vs-table th,
+.vs-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.vs-table thead th {
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: var(--bg);
+  color: var(--text-secondary);
+}
+.vs-table thead th:first-child {
+  text-align: left;
+  min-width: 200px;
+}
+.vs-table thead th.vs-ours {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+.vs-table thead th.vs-theirs {
+  color: var(--text-tertiary);
+}
+.vs-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text);
+}
+.vs-table td.vs-ours {
+  background: rgba(74, 96, 209, 0.04);
+  font-weight: 500;
+}
+.vs-table tbody tr:last-child td { border-bottom: none; }
+
+/* Advantage cards */
+.vs-advantages {
+  padding: 80px 0;
+}
+.vs-adv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.vs-adv-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  transition: all var(--transition);
+}
+.vs-adv-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.vs-adv-icon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+.vs-adv-card h3 { margin-bottom: 10px; font-size: 1.15rem; }
+.vs-adv-card p { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.65; }
+
+/* Use-case / recommendation section */
+.vs-usecase {
+  padding: 60px 0 80px;
+}
+.vs-usecase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+.vs-usecase-card {
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1px solid var(--border);
+}
+.vs-usecase-card.theirs {
+  background: var(--bg);
+}
+.vs-usecase-card.ours {
+  background: linear-gradient(135deg, rgba(74,96,209,0.06), rgba(139,92,246,0.06));
+  border-color: rgba(74,96,209,0.15);
+}
+.vs-usecase-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+.vs-usecase-card ul {
+  list-style: none;
+  padding: 0;
+}
+.vs-usecase-card ul li {
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.vs-usecase-card ul li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.vs-usecase-card.theirs ul li::before {
+  color: var(--text-tertiary);
+}
+
+/* Other comparisons links */
+.vs-others {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+.vs-others-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.vs-others-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+.vs-others-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+.vs-others-link .arrow {
+  margin-left: auto;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+/* VS CTA */
+.vs-cta {
+  padding: 80px 0;
+  text-align: center;
+}
+.vs-cta h2 { margin-bottom: 16px; }
+.vs-cta p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 768px) {
+  .vs-adv-grid { grid-template-columns: 1fr; }
+  .vs-usecase-grid { grid-template-columns: 1fr; }
+  .vs-others-grid { grid-template-columns: 1fr; }
+  .vs-hero { padding: 120px 0 40px; }
+}
