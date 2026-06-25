@@ -393,7 +393,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 .ext-explain-img {
   width: 100%;
-  max-width: 600px;
+  max-width: 450px;
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: 
