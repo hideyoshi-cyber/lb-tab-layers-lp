@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tablayers.liquid-block.com/sitemap.xml
