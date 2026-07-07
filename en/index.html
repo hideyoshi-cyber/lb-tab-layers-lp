@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LB TAB Layers | Chrome Tab Manager Extension — Auto-Save Tabs as Bookmarks</title>
+  <meta name="description" content="Too many tabs open? LB TAB Layers auto-saves your tabs as Chrome bookmarks. Your data survives restarts, crashes, and even extension removal. 1,000-word fuzzy search, notification badges, 40 themes, AI search. Free for Windows, Mac, Linux.">
+  <meta name="keywords" content="tab manager,chrome extension,tab organizer,bookmark manager,tab groups,too many tabs,save tabs,restore tabs,tab management,chrome tabs,browser extension,tab productivity,LB TAB Layers">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tablayers.liquid-block.com/zh/">
+  <link rel="alternate" hreflang="ko" href="https://tablayers.liquid-block.com/ko/">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/">
+  <meta property="og:title" content="LB TAB Layers | Chrome Tab Manager — Auto-Save Tabs as Bookmarks">
+  <meta property="og:description" content="Auto-save tabs as Chrome bookmarks. Survive restarts, crashes, extension removal. 1,000-word search, notification badges, 40 themes. Free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tablayers.liquid-block.com/en/">
+  <meta property="og:image" content="https://tablayers.liquid-block.com/tab-bookmarks-one.jpg">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="LB TAB Layers">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LB TAB Layers | Chrome Tab Manager — Auto-Save as Bookmarks">
+  <meta name="twitter:description" content="Auto-save tabs as bookmarks. Survive restarts & crashes. 1,000-word search, 40 themes, AI search. Free.">
+  <meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-bookmarks-one.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome, Edge",
+      "applicationCategory": "BrowserApplication",
+      "downloadUrl": "https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej",
+      "softwareVersion": "2.7.0",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Core features are free. PRO plan available as a one-time purchase." },
+      "author": { "@type": "Organization", "name": "Liquid Block Inc.", "url": "https://www.liquid-block.com" },
+      "description": "Close tabs without losing them. Auto-save tabs as Chrome bookmarks. Your data survives restarts, crashes, and even extension removal.",
+      "browserRequirements": "Google Chrome 114+, Microsoft Edge",
+      "featureList": [
+        "Layer-based tab management (group tabs by project)",
+        "Auto bookmark save for data persistence (survives restarts & extension removal)",
+        "1,000-word fuzzy search (instant search with flexible matching)",
+        "Notification badges (unread counts for Gmail, Slack, etc.)",
+        "Bumper Pin Bar (pin up to 10 frequently used sites with auto favicon)",
+        "40 color themes (customize your workspace aesthetics)",
+        "Star ranking (assign ★1-★5 importance to groups & tabs)",
+        "Tag system (cross-folder classification with #tags)",
+        "Dashboard (full-screen group overview with drag & drop)",
+        "Duplicate tab cleanup (auto-detect and remove duplicate URLs)",
+        "AI tab search (intelligent search via Gemini / GPT / Claude)"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What happens to my data if I uninstall the extension?", "acceptedAnswer": { "@type": "Answer", "text": "Your tabs are saved as Chrome bookmarks, so they remain even after uninstalling. When you reinstall, your groups and tabs are restored. Note: theme, color, and tag settings are stored locally and will be reset." } },
+        { "@type": "Question", "name": "Is PRO a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No, it's a one-time purchase. Currently on sale for $4.99 (regular $9.99). Pay once, use forever." } },
+        { "@type": "Question", "name": "Which browsers are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Google Chrome 114+ and Microsoft Edge on Windows, Mac, Linux, and ChromeOS." } },
+        { "@type": "Question", "name": "Is my data sent to external servers?", "acceptedAnswer": { "@type": "Answer", "text": "Tab and group data is stored locally in your browser's bookmarks. Only an anonymous ID is used for license verification. Some external services are used for favicon display and search assistance." } },
+        { "@type": "Question", "name": "Can I restore tabs after a PC restart?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tabs managed by LB TAB Layers are saved as Chrome bookmarks, so they can be restored with one click from the side panel after any restart, crash, or forced shutdown." } },
+        { "@type": "Question", "name": "What's the difference between Free and PRO?", "acceptedAnswer": { "@type": "Answer", "text": "Free includes basic tab management and bookmark saving. PRO (one-time purchase) unlocks all 40 themes, AI search, focus timer, and more." } }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "LB TAB Layers", "item": "https://tablayers.liquid-block.com/en/" }]
+    }
+  ]
+  </script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo" aria-label="LB TAB Layers Home">
+        <img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45">
+        <span class="logo-text">TAB Layers</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#themes">Themes</a>
+        <a href="#whats-new">v2.7.0</a>
+        <a href="#faq">FAQ</a>
+        <a href="../blog/">Blog</a>
+        <a href="../" title="日本語">🌐 JA</a>
+      </div>
+      <a href="#cta-main" class="nav-cta">Get Started Free</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Chrome / Edge Extension — Free
+        </div>
+        <h1>
+          Close your tabs.<br>
+          <strong>They won't disappear.</strong>
+        </h1>
+        <p class="hero-sub">
+          Auto-saved as Chrome bookmarks.<br>Layer-based tab management.<br>
+          Survives restarts, crashes,<br>and even extension removal.
+        </p>
+        <div class="hero-actions" id="cta-main">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary" id="hero-cta-chrome">
+            Add to Chrome
+          </a>
+          <a href="#" class="btn btn-ghost" id="hero-cta-edge">
+            Add to Edge
+            <span class="badge-soon">Coming Soon</span>
+          </a>
+        </div>
+        <p class="hero-note">40 Themes · Notification Badges · 1,000-Word Fuzzy Search · Pin Bar · Bookmark Sync · Chrome (Edge coming soon)</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot-wrapper">
+          <img src="../WebLBtaLayers.png" alt="LB TAB Layers v2.7.0 Side Panel" class="hero-screenshot-img" loading="eager" width="354" height="1191">
+          <div class="hero-screenshot-badge">v2.7.0 — Warm Theme</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO INTRO ===== -->
+  <section id="video-intro">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch</span>
+        <h2>LB TAB Layers <span class="text-gradient">15-Second Spot</span></h2>
+        <p>Find any tab, instantly.</p>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IS EXTENSION ===== -->
+  <section id="about-extension">
+    <div class="section-glow"></div>
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>What is a Browser Extension?</span>
+        <h2>A mini app that <span class="text-gradient">supercharges your browser.</span></h2>
+        <p>Never heard of extensions? Don't worry — it's as easy as installing an app on your phone.</p>
+      </div>
+      <div class="ext-explain-grid">
+        <div class="ext-explain-card">
+          <div class="ext-explain-num">01</div>
+          <h4>One-Click Install</h4>
+          <p>No complex setup or PC restart needed. Just click "Add to Chrome" and it's ready in seconds.</p>
+        </div>
+        <div class="ext-explain-card">
+          <div class="ext-explain-num">02</div>
+          <h4>Always-On Side Panel</h4>
+          <p>Once installed, a slim panel appears on the side of your browser. Manage tabs without interrupting your workflow.</p>
+        </div>
+        <div class="ext-explain-card">
+          <div class="ext-explain-num">03</div>
+          <h4>Free, Safe & Easy to Try</h4>
+          <p>Distributed through the official Chrome Web Store by Google. Secure, trustworthy, and removable with one click anytime.</p>
+        </div>
+      </div>
+      <div class="ext-explain-visual">
+        <img src="../tab-layer-preview.png" alt="LB TAB Layers Side Panel Preview" class="ext-explain-img" loading="lazy" width="640" height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIN POINTS ===== -->
+  <section id="pain-points">
+    <div class="section-glow"></div>
+    <div class="container">
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="10.01"/><line x1="10" y1="10" x2="10" y2="10.01"/><line x1="14" y1="10" x2="14" y2="10.01"/><line x1="18" y1="10" x2="18" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/></svg></div>
+          <h3>100 Tabs Always Open</h3>
+          <p>"If I close it, I'll lose it"<br>So nothing gets closed.<br>Your PC slows to a crawl.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+          <h3>"Where was that page?"</h3>
+          <p>Searching through a sea of tabs<br>every single day.<br>5 minutes, 10 minutes, wasted.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#EF4444" stroke-width="2"/></svg></div>
+          <h3>All Lost After Restart</h3>
+          <p>PC too slow → restart →<br>all tabs gone →<br>30 minutes to recover.</p>
+        </div>
+      </div>
+      <div class="pain-solution">
+        <div class="solution-arrow">↓</div>
+        <p class="solution-text">LB TAB Layers <strong>breaks this vicious cycle.</strong></p>
+        <div class="solution-visual">
+          <img src="../tab-bookmarks-one.jpg" alt="Tabs and bookmarks unified" class="solution-img" loading="lazy" width="640" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY FEATURE: PERSISTENCE ===== -->
+  <section id="persistence" class="feature-showcase">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Persistence</span>
+        <h2>Close them.<br><span class="text-gradient">They stay.</span></h2>
+        <p>Tabs are saved as Chrome bookmarks.<br>So they never disappear, no matter what.</p>
+      </div>
+      <div class="persist-grid">
+        <div class="persist-card">
+          <div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
+          <h4>PC restarts?</h4>
+          <p>Bookmarks survive.</p>
+        </div>
+        <div class="persist-card">
+          <div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h4>Chrome crashes?</h4>
+          <p>Bookmarks survive.</p>
+        </div>
+        <div class="persist-card">
+          <div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <h4>Extension removed?</h4>
+          <p>Bookmarks survive.</p>
+        </div>
+      </div>
+      <div class="persist-compare">
+        <div class="compare-bad">
+          <h4>❌ Other Tab Managers</h4>
+          <p>Store in proprietary storage →<br>Uninstall = <strong>all data lost</strong></p>
+        </div>
+        <div class="compare-good">
+          <h4>✅ LB TAB Layers</h4>
+          <p>Saved as Chrome bookmarks →<br><strong>Data survives everything</strong></p>
+        </div>
+      </div>
+      <div class="persist-visual">
+        <img src="../tab-persistence-one.jpg" alt="Planning docs, online tools, and AI tabs — all saved" class="persist-img" loading="lazy" width="640" height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Key Features</span>
+        <h2>Everything, <span class="text-gradient">right here.</span></h2>
+      </div>
+      <div class="features-grid">
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h3>Layer-Based Tab Management</h3><p>Group by project, client, or topic.<br>One-click restore for the whole group.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.81-.13 2.65-.36.3-.08.5-.32.54-.63.07-.54.45-.98.98-1.11.23-.06.47-.07.71-.03.29.05.57-.1.68-.37.37-.87.58-1.83.58-2.83 0-5.5-4.5-10-10-10z"/></svg></div><div><h3>40 Color Themes</h3><p>Minimal, dark, pop, and more.<br>Customize to match your mood or workflow.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6a2 2 0 0 1 2 2v14l-5-3-5 3V6a2 2 0 0 1 2-2z"/></svg></div><div><h3>Two-Way Bookmark Sync</h3><p>Tab data stored as native Chrome bookmarks.<br>Survives extension removal and PC restarts.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="6" y1="18" x2="18" y2="18"/></svg></div><div><h3>AI Tab Search</h3><p>Search with Chrome Built-in AI / Gemini / OpenAI / Claude for semantic matching.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="3"/><path d="M5 12l7-7 7 7"/><rect x="4" y="19" width="16" height="2" rx="1"/></svg></div><div><h3>Bumper Pin Bar</h3><p>Pin up to 10 frequently used sites.<br>Auto favicon fetch & collapsible toggle.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><h3>★ Star Ranking</h3><p>Assign ★1–★5 importance<br>to groups and individual tabs.<br>Sort and filter by priority.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div><div><h3>#Tag Cross-Classification</h3><p>Add custom tags to any tab.<br>Filter across folders with tag-based views.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><div><h3>Dashboard</h3><p>Full-screen view of all groups.<br>Drag & drop to reorganize.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div><div><h3>Bulk Tab Close</h3><p>Close all tabs in a group at once.<br>Free up memory instantly.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="9" x2="9" y2="21"/></svg></div><div><h3>Bulk Tab Grouping</h3><p>Select multiple tabs and<br>group them with one click.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M9 9l6 6"/><path d="M15 9l-6 6"/></svg></div><div><h3>Duplicate Tab Cleanup</h3><p>Auto-detect same-URL tabs.<br>Clean up with one click.</p></div></div>
+        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/></svg></div><div><h3>Full-Screen Bookmark Manager</h3><p>View all existing bookmarks.<br>Drag or select folders to import<br>into TAB Layers.</p></div></div>
+      </div>
+      <div class="features-visual">
+        <img src="../tab-features-one.jpg" alt="Tabs closed in bulk — but bookmarks keep them safe" class="features-img" loading="lazy" width="640" height="400">
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="../features.html" class="btn btn-ghost" style="border-color: var(--accent); color: var(--accent); font-weight: 600;">See all features & how to use &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THEMES ===== -->
+  <section id="themes">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="15.5" r="2.5"/><circle cx="8.5" cy="15.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.82-.12 2.67-.35"/></svg>40 Themes</span>
+        <h2>Your ideal <span class="text-gradient">workspace.</span></h2>
+        <p>From minimal to dark. Beautiful in any lighting.</p>
+      </div>
+      <div class="theme-showcase">
+        <div class="theme-card" style="--t-bg:#F8F9FA;--t-hbg:#fff;--t-ac:#FF6B6B;--t-t1:#2B303A;--t-t2:#5C6370;--t-t3:#8A94A6;--t-sbg:#ECEFEF;--t-zb:#ECEFEF;--t-ib:#fff;--t-bd:rgba(43,48,58,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Liquid Warm</span></div>
+        <div class="theme-card" style="--t-bg:#EAFAF1;--t-hbg:#fff;--t-ac:#2ECC71;--t-t1:#145A32;--t-t2:#2ECC71;--t-t3:#58D68D;--t-sbg:#D5F5E3;--t-zb:#D5F5E3;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(46,204,113,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Pastel Mint</span></div>
+        <div class="theme-card" style="--t-bg:#FDEDEC;--t-hbg:#fff;--t-ac:#E74C3C;--t-t1:#641E16;--t-t2:#E74C3C;--t-t3:#F1948A;--t-sbg:#FADBD8;--t-zb:#FADBD8;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(231,76,60,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Pastel Rose</span></div>
+        <div class="theme-card" style="--t-bg:#FAF6F0;--t-hbg:#FAF6F0;--t-ac:#7EA172;--t-t1:#3E4A3B;--t-t2:#6B7A68;--t-t3:#9AA896;--t-sbg:#fff;--t-zb:#F0E5DC;--t-ib:rgba(250,246,240,0.7);--t-bd:rgba(110,125,104,0.1)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Nordic Cozy</span></div>
+        <div class="theme-card" style="--t-bg:#0F1115;--t-hbg:#0F1115;--t-ac:#A5C9EB;--t-t1:#F3F4F6;--t-t2:#9CA3AF;--t-t3:#6B7280;--t-sbg:rgba(255,255,255,0.03);--t-zb:rgba(255,255,255,0.04);--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Elegant Glass</span></div>
+        <div class="theme-card" style="--t-bg:#09090B;--t-hbg:#09090B;--t-ac:#E11D48;--t-t1:#F4F4F5;--t-t2:#A1A1AA;--t-t3:#71717A;--t-sbg:rgba(255,255,255,0.03);--t-zb:#18181B;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Cyberpunk</span></div>
+        <div class="theme-card" style="--t-bg:#F4F6F9;--t-hbg:#F4F6F9;--t-ac:#4EA8DE;--t-t1:#073B4C;--t-t2:#118AB2;--t-t3:#83C5BE;--t-sbg:#fff;--t-zb:#FFFDF0;--t-ib:#fff;--t-bd:#073B4C"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Toy</span></div>
+        <div class="theme-card" style="--t-bg:#121212;--t-hbg:#121212;--t-ac:#D4AF37;--t-t1:#F0E6D2;--t-t2:#D4AF37;--t-t3:#8A753C;--t-sbg:#1C1C1C;--t-zb:#1C1C1C;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(212,175,55,0.15)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Royal Gold</span></div>
+      </div>
+      <p class="theme-more">+ 32 more themes</p>
+    </div>
+  </section>
+
+  <!-- ===== COMPETITOR COMPARISON ===== -->
+  <section id="compare">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Compare</span>
+        <h2>Why <strong>LB TAB Layers</strong>?</h2>
+        <p>See how we compare to other tab managers at a glance.</p>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table" id="compare-table">
+          <thead><tr>
+            <th class="feature-col">Feature</th>
+            <th class="highlight-col">LB TAB Layers</th>
+            <th>OneTab</th><th>Workona</th><th>Session Buddy</th><th>Toby</th><th>Chrome Built-in</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Bookmark Persistence</td><td class="highlight-col"><span class="t-yes">✓</span> <span class="t-only">Only</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td></tr>
+            <tr><td>Side Panel</td><td class="highlight-col"><span class="t-yes">✓</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-yes">✓</span></td></tr>
+            <tr><td>Group Management</td><td class="highlight-col"><span class="t-yes">✓</span></td><td><span class="t-no">✗</span></td><td><span class="t-yes">✓</span></td><td><span class="t-half">△</span></td><td><span class="t-yes">✓</span></td><td><span class="t-yes">✓</span></td></tr>
+            <tr><td>Nested Subgroups</td><td class="highlight-col"><span class="t-yes">✓</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td></tr>
+            <tr><td>Theme Customization</td><td class="highlight-col"><span class="t-yes">40</span></td><td><span class="t-no">✗</span></td><td>1</td><td><span class="t-no">✗</span></td><td>1</td><td><span class="t-no">✗</span></td></tr>
+            <tr><td>Overlay Mode</td><td class="highlight-col"><span class="t-yes">✓</span> <span class="t-only">Only</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td></tr>
+            <tr><td>Bulk Tab Close</td><td class="highlight-col"><span class="t-yes">✓</span></td><td><span class="t-yes">✓</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td></tr>
+            <tr><td>★ Ranking & Tags</td><td class="highlight-col"><span class="t-yes">✓</span> <span class="t-only">Only</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td><td><span class="t-no">✗</span></td></tr>
+            <tr><td>Drag & Drop</td><td class="highlight-col"><span class="t-yes">✓</span></td><td><span class="t-no">✗</span></td><td><span class="t-yes">✓</span></td><td><span class="t-no">✗</span></td><td><span class="t-yes">✓</span></td><td><span class="t-yes">✓</span></td></tr>
+            <tr class="price-row"><td>Price</td><td class="highlight-col"><strong>Free</strong><br><span class="t-price-sub">PRO <s>$9.99</s> $4.99</span></td><td>Free</td><td>$7-8<span class="t-price-sub">/mo</span></td><td>Free</td><td>Paid</td><td>Free</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY ===== -->
+  <section id="privacy">
+    <div class="container">
+      <div class="privacy-card">
+        <h2><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-4px;margin-right:6px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Privacy</h2>
+        <div class="privacy-grid">
+          <div class="privacy-item"><h4>Local Storage</h4><p>Tabs and groups are stored<br>in your Chrome bookmarks only.<br>Nothing is stored on our servers.<br><a href="../privacy-policy.html" style="font-size:0.85rem;color:var(--accent)">Privacy Policy →</a></p></div>
+          <div class="privacy-item"><h4>Anonymous Auth</h4><p>Only an anonymous ID is used for license verification. No personal information collected.</p></div>
+          <div class="privacy-item"><h4>Secure Payments</h4><p>Credit card information is processed by Stripe. It never touches our servers.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== v2.7.0 NEW FEATURES ===== -->
+  <section id="whats-new">
+    <div class="container">
+      <div class="coming-soon-card">
+        <div class="cs-glow"></div>
+        <div class="cs-badge">NEW IN v2.7.0</div>
+        <h2>v2.7.0 — <span class="text-gradient">Premium UX.</span></h2>
+        <p class="cs-sub">New features and UX improvements in the latest update.</p>
+        <div class="cs-features">
+          <div class="cs-item"><span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="3"/><path d="M5 12l7-7 7 7"/><rect x="4" y="19" width="16" height="2" rx="1"/></svg></span><div><h4>Enhanced Pin Bar</h4><p>Pin up to 10 frequently used sites. Accurate auto favicon fetch with smart collapse/expand toggle.</p></div></div>
+          <div class="cs-item"><span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><circle cx="18" cy="4" r="3" fill="var(--accent)" stroke="none"/></svg></span><div><h4>Notification Badges</h4><p>Display unread counts for Gmail, Slack, Teams, etc. as red badges on tab icons. Badges aggregate to group folders.</p></div></div>
+          <div class="cs-item"><span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><div><h4>1,000-Word Fuzzy Search</h4><p>Type in any form — abbreviation, phonetic, or partial — and find the right tab instantly from a 1,000+ word dictionary.</p></div></div>
+          <div class="cs-item"><span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span><div><h4>Two-Way Bookmark Sync</h4><p>Full bi-directional sync with Chrome bookmarks. Bookmarks added or removed externally are reflected in real time.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <div class="feature-header"><h2>Frequently Asked Questions</h2></div>
+      <div class="faq-list">
+        <details class="faq-item" id="faq-1"><summary>What happens to my data if I uninstall the extension?</summary><p>Your tabs remain as Chrome bookmarks, so your links are preserved even after uninstalling. When you reinstall, your groups and tabs are restored.<br><small>※ Theme, color, and tag settings are stored locally and will be reset on removal.</small></p></details>
+        <details class="faq-item" id="faq-2"><summary>Is PRO a subscription?</summary><p>No, it's a one-time purchase. Currently on sale for $4.99 (regular $9.99). Pay once, use forever.</p></details>
+        <details class="faq-item" id="faq-3"><summary>Which browsers are supported?</summary><p>Google Chrome 114+ and Microsoft Edge (Windows / Mac / Linux / ChromeOS).</p></details>
+        <details class="faq-item" id="faq-4"><summary>Is my data sent to external servers?</summary><p>Tab and group data is stored locally in your browser. Only an anonymous ID is used for license verification. Some external services are used for favicon display and search. <a href="../privacy-policy.html" style="color:var(--accent)">See our Privacy Policy →</a></p></details>
+        <details class="faq-item" id="faq-5"><summary>Can I restore tabs after a PC restart?</summary><p>Yes. Tabs managed by LB TAB Layers are saved as Chrome bookmarks, so they can be restored with one click from the side panel after any restart, crash, or forced shutdown.</p></details>
+        <details class="faq-item" id="faq-6"><summary>What's the difference between Free and PRO?</summary><p>Free includes basic tab management and bookmark saving. PRO (one-time purchase) unlocks all 40 themes, AI search, focus timer, and all features.</p></details>
+      </div>
+      <div class="faq-visual">
+        <img src="../tab-faq-one.jpg" alt="So many tabs! Where are my bookmarks?" class="faq-img" loading="lazy" width="640" height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section id="final-cta">
+    <div class="section-glow"></div>
+    <div class="container cta-flex-container">
+      <div class="cta-content">
+        <h2>End the tab chaos,<br><span class="text-gradient">starting today.</span></h2>
+        <p>No more 100 tabs open at all times.</p>
+        <div class="hero-actions">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn btn-primary btn-large" id="cta-final-chrome">Add to Chrome — Free</a>
+          <a href="#" class="btn btn-ghost btn-large" id="cta-final-edge">Add to Edge <span class="badge-soon">Coming Soon</span></a>
+        </div>
+      </div>
+      <div class="cta-image-wrapper">
+        <img src="../WebLBtaLayers.png" alt="" class="cta-bg-img" aria-hidden="true" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64">
+          <p>Liquid Block Inc.<br>Video & Motion Graphics Production<br>Based in Kobe, Japan</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="https://www.liquid-block.com/video-pool">Video Pool</a>
+          <a href="#">LB TAB Layers</a>
+          <a href="https://gijirec.liquid-block.com/">GijiMemo Rec</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="https://www.liquid-block.com">About Us</a>
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="mailto:info@liquid-block.com">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Block Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
