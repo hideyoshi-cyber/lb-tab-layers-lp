@@ -75,4 +75,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/chrome-tab-too-many.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

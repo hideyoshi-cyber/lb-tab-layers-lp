@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromeのタブ、開きすぎてませんか？100個問題の解決法 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chromeのタブを100個以上開くとPCが重くなる原因と、すぐ試せる5つの対策を解説。ブックマーク保存で安心してタブを閉じる方法も紹介。">
+  <meta name="keywords" content="Chrome タブ 多すぎ,タブ 開きすぎ,Chrome 重い,タブ 100個,タブ管理,メモリ 節約,Chrome 拡張機能,タブ 整理,PC 重い タブ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-tab-too-many.html">
+  <meta property="og:title" content="Chromeのタブ、開きすぎてませんか？100個問題の解決法">
+  <meta property="og:description" content="Chromeのタブを100個以上開くとPCが重くなる原因と、すぐ試せる5つの対策を解説。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-tab-too-many.html">
+  <meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <meta property="og:site_name" content="LB TAB Layers">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-07T00:00:00+09:00">
+  <meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chromeのタブ、開きすぎてませんか？100個問題の解決法">
+  <meta name="twitter:description" content="Chromeのタブを100個以上開くとPCが重くなる原因と、すぐ試せる5つの対策を解説。">
+  <meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "LB TAB Layers", "item": "https://tablayers.liquid-block.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tablayers.liquid-block.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "タブ100個問題の解決法", "item": "https://tablayers.liquid-block.com/blog/chrome-tab-too-many.html" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Chromeのタブ、開きすぎてませんか？100個問題の解決法",
+      "description": "Chromeのタブを100個以上開くとPCが重くなる原因と、すぐ試せる5つの対策を解説。",
+      "author": { "@type": "Organization", "name": "Liquid Block Inc." },
+      "publisher": { "@type": "Organization", "name": "Liquid Block Inc.", "logo": { "@type": "ImageObject", "url": "https://tablayers.liquid-block.com/icon128.png" } },
+      "datePublished": "2026-07-07",
+      "mainEntityOfPage": "https://tablayers.liquid-block.com/blog/chrome-tab-too-many.html"
+    }
+  ]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ===== BLOG ARTICLE STYLES ===== */
+    .blog-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+    }
+    .blog-hero .blog-tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+    }
+    .blog-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .blog-meta {
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
+    }
+    .blog-meta time { font-weight: 500; }
+
+    .blog-content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .blog-content h2 {
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      margin: 56px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      letter-spacing: -0.01em;
+    }
+    .blog-content h3 {
+      font-size: 1.15rem;
+      margin: 36px 0 12px;
+      color: var(--accent);
+    }
+    .blog-content p {
+      margin: 16px 0;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      font-size: 0.95rem;
+    }
+    .blog-content ul, .blog-content ol {
+      margin: 16px 0;
+      padding-left: 24px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      font-size: 0.95rem;
+    }
+    .blog-content li { margin: 8px 0; }
+    .blog-content strong { color: var(--text); }
+
+    .blog-callout {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .blog-callout p { color: var(--text); margin: 0; }
+    .blog-callout strong { color: var(--accent); }
+
+    .blog-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .blog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .blog-table th, .blog-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-table th {
+      background: var(--bg-card);
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .blog-table td { color: var(--text-secondary); }
+    .blog-table tr:last-child td { border-bottom: none; }
+
+    .blog-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .blog-step {
+      display: flex;
+      align-items: flex-start;
+      margin: 24px 0;
+      padding: 20px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .blog-step-body h3 { margin-top: 0; color: var(--text); font-size: 1.05rem; }
+    .blog-step-body p { margin: 6px 0 0; font-size: 0.9rem; }
+
+    .blog-cta-box {
+      background: linear-gradient(135deg, #4A60D1 0%, #6B7FE3 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px 36px;
+      text-align: center;
+      margin: 48px 0;
+    }
+    .blog-cta-box h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin: 0 0 12px;
+    }
+    .blog-cta-box p {
+      color: rgba(255,255,255,0.85);
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+    }
+    .blog-cta-box .btn {
+      background: #fff;
+      color: var(--accent);
+      padding: 14px 32px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-block;
+      transition: var(--transition);
+    }
+    .blog-cta-box .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .blog-related {
+      margin: 48px 0;
+    }
+    .blog-related h3 {
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .blog-related a {
+      display: block;
+      padding: 16px 20px;
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin: 8px 0;
+      color: var(--accent);
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .blog-related a:hover {
+      border-color: var(--accent);
+      transform: translateX(4px);
+    }
+    .blog-related a span {
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="logo" aria-label="LB TAB Layers Home">
+        <img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45">
+        <span class="logo-text">TAB Layers</span>
+      </a>
+      <div class="nav-links">
+        <a href="../features.html">機能紹介</a>
+        <a href="../index.html#themes">テーマ</a>
+        <a href="../index.html#whats-new">v2.7.0</a>
+        <a href="../index.html#faq">FAQ</a>
+      </div>
+      <a href="../index.html#cta-main" class="nav-cta">無料で始める</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="blog-tag">タブ管理のコツ</span>
+      <h1>Chromeのタブ、<br>開きすぎてませんか？<br>100個問題の解決法</h1>
+      <p class="blog-meta">
+        <time datetime="2026-07-07">2026.07.07</time> · Liquid Block Inc. · 読了 5分
+      </p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <article class="blog-content">
+
+    <p>「後で読むから…」「これも参考に…」<br>気づいたらChromeのタブが50個、100個と増殖していませんか？</p>
+    <p>この記事では、<strong>タブを開きすぎるとPCが重くなる原因</strong>と、<strong>すぐに試せる5つの解決法</strong>を紹介します。</p>
+
+    <!-- ===== SECTION 1 ===== -->
+    <h2>なぜタブを開きすぎるとPCが重くなるのか？</h2>
+
+    <p>Chromeは「マルチプロセスアーキテクチャ」を採用しています。これは各タブが独立したプロセスとして動作する設計で、1つのタブがクラッシュしても他に影響しないメリットがあります。</p>
+
+    <p>しかし、その代償として<strong>タブ1つにつき約50〜300MBのメモリを消費</strong>します。</p>
+
+    <div class="blog-table-wrap">
+      <table class="blog-table">
+        <thead>
+          <tr><th>タブ数</th><th>メモリ使用量の目安</th><th>PCへの影響</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10個</td><td>約 1〜2 GB</td><td>ほぼ問題なし</td></tr>
+          <tr><td>30個</td><td>約 3〜5 GB</td><td>やや重くなる</td></tr>
+          <tr><td>50個</td><td>約 5〜8 GB</td><td>動作が遅い・ファンが回る</td></tr>
+          <tr><td>100個</td><td>約 8〜15 GB</td><td>フリーズ・クラッシュの危険</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="blog-callout">
+      <p><strong>💡 ポイント:</strong> 8GBメモリのPCでタブ50個を開くと、OS自体の動作に必要なメモリまで圧迫します。「Chrome 重い」と感じたら、まずタブの数を疑ってください。</p>
+    </div>
+
+    <!-- ===== SECTION 2 ===== -->
+    <h2>タブを閉じられない3つの心理</h2>
+
+    <p>多くの人がタブを閉じられない理由は、技術的な問題ではなく<strong>心理的な問題</strong>です。</p>
+
+    <ol>
+      <li><strong>「後で使うかもしれない」不安</strong><br>閉じたら二度と見つけられないかもしれない、という恐怖。実際には検索すれば見つかることがほとんどです。</li>
+      <li><strong>「整理する時間がない」先延ばし</strong><br>整理すべきとわかっていても、今の作業を中断したくない。結果、タブは増え続けます。</li>
+      <li><strong>「開いておけば安心」収集癖</strong><br>情報を手元に置いておきたい。ブックマークに保存するのは面倒だけど、タブなら開いたままでいい——そう思ってしまいます。</li>
+    </ol>
+
+    <p>この3つの心理に共通するのは、<strong>「閉じたら消える」という前提</strong>です。もし「閉じても消えない」なら、安心して閉じられるはずです。</p>
+
+    <!-- ===== SECTION 3 ===== -->
+    <h2>すぐ試せる5つの解決法</h2>
+
+    <div class="blog-step">
+      <span class="blog-num">1</span>
+      <div class="blog-step-body">
+        <h3>Chromeのタスクマネージャーで確認する</h3>
+        <p><strong>Shift + Esc</strong> でChromeのタスクマネージャーが開きます。どのタブがどれだけメモリを消費しているかリアルタイムで確認できます。上位のタブから閉じましょう。</p>
+      </div>
+    </div>
+
+    <div class="blog-step">
+      <span class="blog-num">2</span>
+      <div class="blog-step-body">
+        <h3>「後で読む」タブはブックマークに保存する</h3>
+        <p><strong>Ctrl + D</strong> でブックマークに保存。開きっぱなしにしなくても、いつでも戻れます。ただし、ブックマークの整理が面倒になる問題が次に発生します。</p>
+      </div>
+    </div>
+
+    <div class="blog-step">
+      <span class="blog-num">3</span>
+      <div class="blog-step-body">
+        <h3>不要な拡張機能をオフにする</h3>
+        <p><code>chrome://extensions</code> で使っていない拡張機能を無効化。拡張機能もバックグラウンドでメモリを消費しています。</p>
+      </div>
+    </div>
+
+    <div class="blog-step">
+      <span class="blog-num">4</span>
+      <div class="blog-step-body">
+        <h3>Chrome の「メモリセーバー」をオンにする</h3>
+        <p><code>chrome://settings/performance</code> → メモリセーバーをON。非アクティブなタブのメモリを自動解放します。ただし、タブに戻ったときに再読み込みが発生します。</p>
+      </div>
+    </div>
+
+    <div class="blog-step">
+      <span class="blog-num">5</span>
+      <div class="blog-step-body">
+        <h3>タブ管理拡張機能を使う（根本解決）</h3>
+        <p>タブを「プロジェクトごとにグループ化して保存」→「閉じてメモリ解放」→「必要なときにワンクリック復元」。これが根本的な解決策です。</p>
+      </div>
+    </div>
+
+    <!-- ===== SECTION 4 ===== -->
+    <h2>根本解決：「閉じても消えない」タブ管理</h2>
+
+    <p>対策1〜4は「タブを減らす」アプローチですが、根本的な問題は<strong>「タブを閉じると情報が消える」という不安</strong>にあります。</p>
+
+    <p>もしタブの情報が<strong>自動的にブックマークに保存</strong>されるなら？</p>
+
+    <ul>
+      <li>安心してタブを閉じられる → メモリ解放</li>
+      <li>必要なときにワンクリックで復元できる</li>
+      <li>PCが再起動しても、拡張を削除しても消えない</li>
+    </ul>
+
+    <p>これを実現するのが<strong>LB TAB Layers</strong>です。</p>
+
+    <div class="blog-callout">
+      <p><strong>LB TAB Layers のアプローチ:</strong><br>タブをChromeブックマークとして保存。プロジェクトごとにフォルダ分けし、サイドパネルからワンクリック復元。1,000語超の日本語検索で、保存したタブを即座に見つけられます。</p>
+    </div>
+
+    <div class="blog-table-wrap">
+      <table class="blog-table">
+        <thead>
+          <tr><th>対策</th><th>効果</th><th>手間</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>手動でブックマーク保存</td><td>△ 忘れがち</td><td>毎回 Ctrl+D が必要</td></tr>
+          <tr><td>Chrome メモリセーバー</td><td>○ メモリ節約</td><td>再読み込みが発生</td></tr>
+          <tr><td>タブを全部閉じる</td><td>◎ メモリ解放</td><td>× 情報が消える</td></tr>
+          <tr><td><strong>LB TAB Layers</strong></td><td><strong>◎ メモリ解放 + 情報保存</strong></td><td><strong>◎ 自動保存</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta-box">
+      <h3>タブ100個問題を今日から解決。</h3>
+      <p>ブックマーク自動保存 · 1,000語検索 · 40テーマ · 無料</p>
+      <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a>
+    </div>
+
+    <!-- ===== SECTION 5 ===== -->
+    <h2>まとめ</h2>
+
+    <p>Chromeのタブが増えすぎてPCが重くなる問題は、多くの人が経験しています。対策としては：</p>
+
+    <ol>
+      <li><strong>タスクマネージャー</strong>でメモリ消費を確認する</li>
+      <li><strong>ブックマーク</strong>に保存してタブを閉じる</li>
+      <li>不要な<strong>拡張機能</strong>をオフにする</li>
+      <li>Chromeの<strong>メモリセーバー</strong>を活用する</li>
+      <li><strong>タブ管理拡張</strong>で根本解決する</li>
+    </ol>
+
+    <p>特に5つ目の「タブ管理拡張」は、<strong>タブを閉じてもデータが消えない安心感</strong>を提供してくれる根本的な解決策です。日々100個以上のタブと格闘している方は、ぜひ一度試してみてください。</p>
+
+    <!-- RELATED -->
+    <div class="blog-related">
+      <h3>関連記事・ページ</h3>
+      <a href="../vs-onetab.html">LB TAB Layers vs OneTab — 徹底比較 <span>→</span></a>
+      <a href="../index.html#faq">よくある質問（FAQ） <span>→</span></a>
+      <a href="../index.html#features">全機能一覧 <span>→</span></a>
+    </div>
+
+  </article>
+
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64">
+          <p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="https://www.liquid-block.com/video-pool">Video Pool</a>
+          <a href="../index.html">LB TAB Layers</a>
+          <a href="https://gijirec.liquid-block.com/">議事メモレック</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="https://www.liquid-block.com">会社概要</a>
+          <a href="../privacy-policy.html">プライバシーポリシー</a>
+          <a href="mailto:info@liquid-block.com">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Block Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
