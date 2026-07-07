@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome拡張機能の安全性 — 危険な拡張の見分け方と安全なタブ管理 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome拡張機能の安全性を見分ける方法を解説。The Great Suspenderの削除事件から学ぶ、安全な拡張の選び方と最小権限の重要性。">
+  <meta name="keywords" content="Chrome 拡張 安全性,Chrome 拡張 危険,Chrome 拡張 セキュリティ,拡張機能 安全,マルウェア Chrome,Great Suspender">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-extension-safety.html">
+  <meta property="og:title" content="Chrome拡張機能の安全性 — 危険な拡張の見分け方"><meta property="og:description" content="危険な拡張の見分け方と安全なタブ管理拡張の選び方を解説。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome拡張機能の安全性"><meta name="twitter:description" content="危険な拡張の見分け方と安全な選び方を解説。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Chrome拡張の安全性","item":"https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome拡張機能の安全性 — 危険な拡張の見分け方","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-07","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.7.0</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">セキュリティ</span><h1>Chrome拡張機能の安全性<br>危険な拡張の見分け方と<br>安全なタブ管理</h1><p class="blog-meta"><time datetime="2026-07-07">2026.07.07</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <p>2021年、200万ユーザーを誇るタブ管理拡張<strong>「The Great Suspender」がマルウェア化</strong>し、GoogleがChrome Web Storeから強制削除しました。</p>
+    <p>この事件は、拡張機能の安全性がいかに重要かを示しています。この記事では、<strong>危険な拡張の見分け方</strong>と、安全なタブ管理拡張の選び方を解説します。</p>
+
+    <h2>The Great Suspender 事件から学ぶ</h2>
+    <p>The Great Suspenderは非アクティブなタブを「サスペンド」してメモリを節約する人気拡張でした。しかし、開発者が変わった後：</p>
+    <ul>
+      <li>広告トラッキングコードが密かに埋め込まれた</li>
+      <li>ユーザーの閲覧データが外部サーバーに送信された</li>
+      <li>Googleが「マルウェア」と認定し、<strong>全ユーザーのブラウザから強制削除</strong></li>
+    </ul>
+    <p>200万ユーザーが一夜にしてサスペンドしていたタブを失いました。</p>
+
+    <h2>危険な拡張を見分ける5つのチェックポイント</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>権限を確認する</h3><p>インストール時に求められる権限を確認。<strong>「すべてのサイトのデータを読み取る」権限</strong>は、正当な理由がない限り危険信号です。タブ管理だけなら最小限の権限で十分です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>開発者を確認する</h3><p>開発者のWebサイト・プライバシーポリシーが公開されているか。<strong>法人が運営</strong>しているか個人かも重要な判断材料です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>最終更新日を確認する</h3><p>1年以上更新されていない拡張は、セキュリティパッチが当たっていない可能性。逆に、<strong>頻繁にアップデートされている拡張は安心</strong>です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>レビューを読む</h3><p>★1のレビューに「突然動作が変わった」「広告が表示されるようになった」があれば<strong>開発者変更の兆候</strong>かもしれません。</p></div></div>
+    <div class="blog-step"><span class="blog-num">5</span><div class="blog-step-body"><h3>データ保存方式を確認する</h3><p>データが拡張独自のストレージに保存される場合、<strong>拡張削除でデータが消失</strong>します。ブックマーク保存なら、拡張とデータが独立しているので安全です。</p></div></div>
+
+    <h2>LB TAB Layers のセキュリティ設計</h2>
+    <div class="blog-callout"><p><strong>LB TAB Layers の安全設計:</strong><br>
+    ✓ <strong>最小権限</strong> — 「すべてのサイトのデータ」権限は不要<br>
+    ✓ <strong>ブックマーク保存</strong> — 拡張削除してもデータは残る<br>
+    ✓ <strong>外部送信なし</strong> — AI検索を除き、データは一切外部に送信されない<br>
+    ✓ <strong>法人運営</strong> — Liquid Block Inc. が開発・運営<br>
+    ✓ <strong>定期更新</strong> — 月次アップデートでセキュリティを維持</p></div>
+
+    <div class="blog-cta-box"><h3>安全なタブ管理を、安心して。</h3><p>最小権限 · ブックマーク保存 · 外部送信なし · 法人運営</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="best-tab-extensions-2026.html">【2026年版】Chrome タブ管理拡張おすすめ5選 <span>→</span></a><a href="../vs-tab-suspender.html">LB TAB Layers vs Tab Suspender — 徹底比較 <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI検索でタブを見つける — 自然言語でブックマークを探す新体験 | LB TAB Layers Blog</title>
+  <meta name="description" content="「あの記事どこだっけ？」をAIが解決。Gemini・GPT・Claudeで保存したタブを自然言語で検索する新しいブックマーク検索体験を紹介。">
+  <meta name="keywords" content="AI検索 ブックマーク,AI タブ検索,Gemini 検索,ChatGPT ブックマーク,Chrome AI,自然言語 検索">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/ai-tab-search.html">
+  <meta property="og:title" content="AI検索でタブを見つける — 自然言語でブックマークを探す"><meta property="og:description" content="Gemini・GPT・Claudeで保存タブを自然言語検索する新体験。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/ai-tab-search.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI検索でタブを見つける"><meta name="twitter:description" content="自然言語でブックマークを探す新体験。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"AI検索でタブを見つける","item":"https://tablayers.liquid-block.com/blog/ai-tab-search.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"AI検索でタブを見つける","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-07","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/ai-tab-search.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.7.0</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">AI活用</span><h1>AI検索でタブを見つける<br>自然言語で<br>ブックマークを探す新体験</h1><p class="blog-meta"><time datetime="2026-07-07">2026.07.07</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <p>「先週見たあのデザインの参考サイト、どこだっけ？」<br>タイトルもURLも覚えていない。キーワード検索でもヒットしない——。</p>
+    <p>そんなとき、<strong>AIに「デザインの参考にしたサイト」と聞くだけ</strong>で見つかったら？</p>
+
+    <h2>従来の検索の限界</h2>
+    <h3>キーワード検索の問題</h3>
+    <p>従来の検索は<strong>タイトルやURLに含まれる単語が一致</strong>しないとヒットしません。例えば「レスポンシブデザイン」というタイトルのページを「スマホ対応のレイアウト」では検索できません。</p>
+
+    <h3>ファジー検索でも限界がある</h3>
+    <p>LB TAB Layers の1,000語ファジー検索は「がいよう」「概要」「ガイヨウ」の表記揺れに対応しますが、<strong>意味的な検索</strong>はできません。</p>
+
+    <h2>AI検索の仕組み</h2>
+    <p>LB TAB Layers のAI検索は、保存されたタブの<strong>タイトルとURLをAIに送信</strong>し、自然言語の質問に対して最も関連性の高いタブを見つけます。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>質問の例</th><th>見つかるタブ</th></tr></thead><tbody>
+    <tr><td>「先週見たUIデザインのサイト」</td><td>Dribbble, Behance等のデザイン系サイト</td></tr>
+    <tr><td>「Reactのフック解説」</td><td>React Hooks関連のドキュメント</td></tr>
+    <tr><td>「会議で共有した資料」</td><td>Google Docs, Notion等のドキュメント</td></tr>
+    <tr><td>「競合のLPページ」</td><td>競合他社のランディングページ</td></tr>
+    </tbody></table></div>
+
+    <h2>対応AIモデル</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Google Gemini</h3><p>Googleの最新AI。日本語の理解力が高く、レスポンスも高速。<strong>おすすめの第一選択</strong>です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>OpenAI GPT</h3><p>ChatGPTで有名なGPTモデル。幅広い知識と高い推論力で、曖昧な質問にも的確に回答します。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>Anthropic Claude</h3><p>安全性と正確性に定評のあるClaude。長いタブリストでも正確にマッチングします。</p></div></div>
+
+    <div class="blog-callout"><p><strong>使い方:</strong> サイドパネルの検索バーで🔍アイコンを長押し → AIモデルを選択 → 自然言語で質問するだけ。APIキーの設定が必要ですが、一度設定すればあとは聞くだけです。</p></div>
+
+    <div class="blog-cta-box"><h3>「あのサイト、どこだっけ？」を AI に聞く。</h3><p>Gemini · GPT · Claude 対応 · 自然言語検索 · 無料</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="bookmark-organization.html">ブックマーク整理術：フォルダ管理の限界と次世代の方法 <span>→</span></a><a href="best-tab-extensions-2026.html">【2026年版】Chrome タブ管理拡張おすすめ5選 <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
