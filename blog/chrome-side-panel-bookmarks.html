@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome サイドパネルで「すべてのブックマーク」を表示する方法 — もっと便利に使う裏技も | LB TAB Layers Blog</title>
+  <meta name="description" content="Chromeのサイドパネルでブックマークを表示する方法を図解。標準機能の使い方から、タブとブックマークを同時管理できる拡張機能の活用法まで、知っておきたい全手順を解説。">
+  <meta name="keywords" content="Chrome サイドパネル ブックマーク,Chrome ブックマーク 表示,サイドパネル 使い方,ブックマーク サイドバー,Chrome 拡張機能 サイドパネル,ブックマーク 一覧表示">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-side-panel-bookmarks.html">
+  <meta property="og:title" content="Chrome サイドパネルで「すべてのブックマーク」を表示する方法"><meta property="og:description" content="サイドパネルでブックマーク一覧を表示する方法と、さらに便利に使う拡張機能の活用法。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-side-panel-bookmarks.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-bookmarks-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome サイドパネルでブックマークを表示する方法"><meta name="twitter:description" content="標準機能の使い方＋拡張で進化させる方法を解説。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-bookmarks-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"サイドパネルでブックマークを表示","item":"https://tablayers.liquid-block.com/blog/chrome-side-panel-bookmarks.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome サイドパネルで「すべてのブックマーク」を表示する方法","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-10","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-side-panel-bookmarks.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.2</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>サイドパネルを開いて<br>「すべてのブックマーク」を<br>表示する方法</h1><p class="blog-meta"><time datetime="2026-07-10">2026.07.10</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <p>Chrome にはブラウザの横にスリムなパネルを表示する「<strong>サイドパネル</strong>」機能があります。ここにブックマーク一覧を表示すれば、ページを見ながらブックマークにアクセスできて便利です。</p>
+    <p>しかし、意外と「やり方がわからない」「存在自体を知らなかった」という方が多い機能でもあります。</p>
+    <p>この記事では、<strong>標準機能でブックマークをサイドパネルに表示する方法</strong>と、さらに<strong>タブ管理と統合してパワーアップさせる方法</strong>を解説します。</p>
+
+    <h2>方法① Chrome 標準のサイドパネルでブックマークを表示する</h2>
+    <p>特別なインストールは不要です。Chrome の標準機能だけで使えます。</p>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>サイドパネルアイコンをクリック</h3><p>Chrome のアドレスバーの右端にある <strong>サイドパネルアイコン</strong>（四角が2つ並んだようなアイコン）をクリックします。見つからない場合は、アドレスバーに <code>chrome://settings/appearance</code> と入力し、「サイドパネルのボタンを表示する」をオンにしてください。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>パネル上部のドロップダウンで「ブックマーク」を選択</h3><p>サイドパネルが開いたら、上部にドロップダウンメニューがあります。ここから「<strong>ブックマーク</strong>」を選択すると、すべてのブックマークがフォルダ構造で一覧表示されます。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>フォルダを展開してブックマークを開く</h3><p>フォルダをクリックして展開し、目的のブックマークをクリックすれば、現在のタブまたは新しいタブで開けます。</p></div></div>
+
+    <div class="blog-callout"><p><strong>ショートカット：</strong> ブックマークバーが表示されている場合、バー上の任意の場所を右クリック → 「サイドパネルに表示」でも同じ画面を開けます。<br>キーボード派なら <strong>Ctrl + Shift + B</strong> でブックマークバーの表示/非表示を切り替えた後、サイドパネルへ移行できます。</p></div>
+
+    <h2>標準サイドパネルの「限界」</h2>
+    <p>Chrome 標準のブックマークサイドパネルはシンプルで使いやすいですが、いくつかの限界があります。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>できること</th><th>できないこと</th></tr></thead><tbody>
+    <tr><td>ブックマークの一覧表示</td><td>開いているタブの一覧表示</td></tr>
+    <tr><td>フォルダの展開・折りたたみ</td><td>タブとブックマークの同時管理</td></tr>
+    <tr><td>ブックマークの検索（完全一致）</td><td>あいまい検索（ファジー検索）</td></tr>
+    <tr><td>ドラッグでフォルダ移動</td><td>タブの一括保存・一括復元</td></tr>
+    <tr><td>ブックマークの追加・削除</td><td>テーマのカスタマイズ</td></tr>
+    </tbody></table></div>
+
+    <p>つまり、標準サイドパネルは<strong>「ブックマーク専用の閲覧窓」</strong>です。<br>今開いているタブの状態は一切見えず、タブ管理は別の操作が必要になります。</p>
+
+    <h2>方法② タブもブックマークも「1つのサイドパネル」で管理する</h2>
+    <p>ここからが本題です。</p>
+    <blockquote><p>もし、サイドパネルに<strong>開いているタブ</strong>と<strong>保存したブックマーク</strong>の両方が表示されていたら？</p></blockquote>
+    <p>それを実現するのが、Chrome 拡張機能 <strong>LB TAB Layers</strong> です。</p>
+    <p>インストールすると、Chrome のサイドパネルが<strong>タブ＆ブックマーク統合管理パネル</strong>に進化します。</p>
+
+    <h3>標準 vs LB TAB Layers：同じサイドパネルでここまで違う</h3>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>比較項目</th><th>Chrome 標準</th><th>LB TAB Layers</th></tr></thead><tbody>
+    <tr><td>表示できるもの</td><td>ブックマークだけ</td><td><strong>タブ＋ブックマーク両方</strong></td></tr>
+    <tr><td>タブの一括保存</td><td>✗ 不可</td><td><strong>✓ ワンクリック</strong></td></tr>
+    <tr><td>タブの一括復元</td><td>✗ 不可</td><td><strong>✓ ワンクリック</strong></td></tr>
+    <tr><td>検索</td><td>完全一致のみ</td><td><strong>1,000語ファジー検索 + AI検索</strong></td></tr>
+    <tr><td>重複チェック</td><td>✗ なし</td><td><strong>✓ 自動検出＆クリーンアップ</strong></td></tr>
+    <tr><td>通知バッジ</td><td>✗ なし</td><td><strong>✓ Gmail・Slack の未読数表示</strong></td></tr>
+    <tr><td>テーマ</td><td>変更不可</td><td><strong>40種類の美麗テーマ</strong></td></tr>
+    <tr><td>サブフォルダ（ネスト）</td><td>対応</td><td><strong>対応（無制限ネスト）</strong></td></tr>
+    <tr><td>データの保存先</td><td>Chrome ブックマーク</td><td><strong>Chrome ブックマーク（同じ）</strong></td></tr>
+    </tbody></table></div>
+
+    <p>最後の行に注目してください。<br>LB TAB Layers のデータ保存先は、Chrome 標準のブックマークと<strong>まったく同じ場所</strong>です。</p>
+    <p>つまり——</p>
+    <ul>
+      <li>LB TAB Layers で保存したタブは、<strong>標準のブックマークサイドパネルからも見える</strong></li>
+      <li>逆に、標準で追加したブックマークも <strong>LB TAB Layers から見える</strong></li>
+      <li>拡張機能を削除しても、<strong>ブックマークは消えない</strong></li>
+    </ul>
+    <p>完全な<strong>双方向同期</strong>です。どちらから操作しても、データは常に同じ。</p>
+
+    <h2>LB TAB Layers の導入手順</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Chrome ウェブストアからインストール</h3><p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" style="color:var(--accent)">LB TAB Layers のストアページ</a> → 「Chrome に追加」をクリック。数秒で完了します。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>サイドパネルを開く</h3><p>アドレスバー右端のサイドパネルアイコンをクリック。ドロップダウンから「<strong>LB TAB Layers</strong>」を選択します。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>フォルダを作って、タブを追加</h3><p>「＋」ボタンでフォルダ（レイヤー）を作成。開いているタブをドラッグするか、ワンクリックで追加。<strong>追加した瞬間、自動的にブックマーク化</strong>されます。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>安心してタブを閉じる</h3><p>ブックマークとして保存されているので、タブを閉じても大丈夫。必要なときにクリックするだけで即復元。<strong>メモリが解放されてPCが軽くなります</strong>。</p></div></div>
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 既存のブックマークはどうなりますか？</h3>
+    <p>そのまま残ります。LB TAB Layers は Chrome のブックマーク内に専用フォルダを作成してデータを管理するため、既存のブックマークに影響を与えません。むしろ、既存のブックマークフォルダもサイドパネルから閲覧・管理できるようになります。</p>
+
+    <h3>Q. 標準のブックマークサイドパネルと併用できますか？</h3>
+    <p>はい。サイドパネルのドロップダウンで「ブックマーク」と「LB TAB Layers」を切り替えて使えます。データは同じ場所にあるので、どちらで見ても内容は一致しています。</p>
+
+    <h3>Q. 拡張を削除したらデータは消えますか？</h3>
+    <p>いいえ。データは Chrome のブックマークとして保存されているため、拡張機能を削除してもリンクは残ります。再インストールすれば、すべてのデータが復元されます。</p>
+
+    <h3>Q. 無料で使えますか？</h3>
+    <p>3ヶ月間、すべての機能を無料でお試しいただけます。その後も基本機能は引き続き利用可能です。全機能をフルで使い続けたい場合は、PRO版（買い切り $4.99〜$9.99）へのアップグレードをご検討ください。</p>
+
+    <h2>まとめ</h2>
+    <p>Chrome のサイドパネルでブックマークを表示する方法は2つあります。</p>
+    <ol>
+      <li><strong>標準機能</strong>：サイドパネルアイコン → ドロップダウンで「ブックマーク」を選択。シンプルだが、ブックマーク閲覧しかできない</li>
+      <li><strong>LB TAB Layers</strong>：サイドパネルがタブ＆ブックマーク統合管理パネルに進化。開いているタブも保存済みのブックマークも、<strong>1つの画面で一元管理</strong>できる</li>
+    </ol>
+    <p>「ブックマークを見ながらタブを整理したい」<br>「タブを閉じる前にブックマーク保存するのが面倒」</p>
+    <p>そんな方は、ぜひ一度 LB TAB Layers を試してみてください。</p>
+
+    <div class="blog-cta-box"><h3>サイドパネルで、タブもブックマークも一元管理。</h3><p>自動ブックマーク保存 · 3ヶ月フル無料 · 40テーマ · AI検索</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-side-panel-guide.html">Chrome サイドパネル活用ガイド <span>→</span></a><a href="tabs-heavy-bookmarks-tedious.html">タブだらけで重い。ブックマークがめんどくさい。それを解決するアプリの話 <span>→</span></a><a href="bookmark-organization.html">ブックマーク整理術：フォルダ管理の限界と次世代の方法 <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
