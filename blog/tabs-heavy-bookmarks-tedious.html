@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タブだらけで重い。ブックマークがめんどくさい。それを解決するアプリの話 | LB TAB Layers Blog</title>
+  <meta name="description" content="タブを100個開いてPCが重い。でもブックマークするのはめんどくさい。この2つの悩みを同時に解決するために生まれたChrome拡張機能 LB TAB Layers の設計思想と使い方を紹介。">
+  <meta name="keywords" content="タブ 重い,タブ 開きすぎ,ブックマーク めんどくさい,Chrome 遅い,タブ管理,メモリ 節約,ブックマーク 自動保存,LB TAB Layers">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/tabs-heavy-bookmarks-tedious.html">
+  <meta property="og:title" content="タブだらけで重い。ブックマークがめんどくさい。それを解決するアプリの話"><meta property="og:description" content="タブ100個でPCが重い。ブックマークは面倒。この2つを同時に解決するChrome拡張の話。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/tabs-heavy-bookmarks-tedious.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-bookmarks-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="タブだらけで重い。ブックマークがめんどくさい。"><meta name="twitter:description" content="この2つの悩みを同時に解決するChrome拡張の話。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-bookmarks-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"タブだらけで重い。ブックマークがめんどくさい。","item":"https://tablayers.liquid-block.com/blog/tabs-heavy-bookmarks-tedious.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"タブだらけで重い。ブックマークがめんどくさい。それを解決するアプリの話","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-10","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/tabs-heavy-bookmarks-tedious.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.2</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">プロダクト思想</span><h1>タブだらけで重い。<br>ブックマークがめんどくさい。<br>それを解決するアプリの話</h1><p class="blog-meta"><time datetime="2026-07-10">2026.07.10</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <p>あなたの Chrome、今タブが何個開いていますか？</p>
+    <p>20個？　50個？　100個超え？</p>
+    <p>「閉じたら二度と戻れない気がして、閉じられない」<br>「ブックマークすればいいのはわかってる。でも、<strong>めんどくさい</strong>」</p>
+    <p>わかります。私もそうでした。</p>
+    <p>だから、この2つの悩みを<strong>同時に、自動で解決する</strong>アプリを作りました。<br>Chrome拡張機能 <strong>LB TAB Layers</strong> です。</p>
+
+    <h2>悩み① タブだらけで、PCが重い</h2>
+    <p>Chrome のタブは、1つにつき<strong>約100〜300MBのメモリ</strong>を消費します。</p>
+    <p>20個で2GB。50個で5GB。100個開けば10GB——。<br>ノートPC のメモリが8GBなら、Chrome だけで限界突破です。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>タブ数</th><th>メモリ消費（目安）</th><th>体感</th></tr></thead><tbody>
+    <tr><td>10個以下</td><td>〜1GB</td><td>快適</td></tr>
+    <tr><td>20〜30個</td><td>2〜4GB</td><td>ちょっと重い</td></tr>
+    <tr><td>50個以上</td><td>5GB超</td><td>ファンが唸る</td></tr>
+    <tr><td>100個超</td><td>10GB超</td><td>フリーズ寸前</td></tr>
+    </tbody></table></div>
+
+    <p>結果、PCが遅くなる。ファンが回る。バッテリーが減る。<br>でも閉じられない。<strong>だって、あとで使うかもしれないから。</strong></p>
+
+    <h2>悩み② ブックマークするのが、めんどくさい</h2>
+    <p>「タブを閉じる前にブックマークすればいい」——理屈ではわかっています。</p>
+    <p>でも実際にやると、こうなります。</p>
+    <ol>
+      <li>タブを右クリック（または Ctrl+D）</li>
+      <li>保存先フォルダを選ぶ</li>
+      <li>名前を編集する（任意）</li>
+      <li>「完了」を押す</li>
+    </ol>
+    <p>これを <strong>1つずつ、全タブに対して繰り返す</strong>。</p>
+    <p>50個のタブをブックマークするのに、何分かかるでしょうか？<br>答え：<strong>誰もやりません。</strong></p>
+    <p>めんどくさいから放置する → タブが溜まる → PCが重くなる → でもブックマークはめんどくさい——。</p>
+    <p><strong>この無限ループ</strong>が、世界中のブラウザユーザーを苦しめています。</p>
+
+    <div class="blog-callout"><p><strong>核心：</strong> 問題は「タブが多いこと」ではなく、<strong>「閉じるための安心な手段がないこと」</strong>です。ブックマークという安全網はあるのに、そこに保存する行為が面倒すぎて機能していない。ここにこそ、解決すべき本質がありました。</p></div>
+
+    <h2>解決策：タブを閉じたら、自動でブックマークになる</h2>
+    <p>LB TAB Layers の答えは、極めてシンプルです。</p>
+    <blockquote><p>タブを管理した瞬間、<strong>自動的に Chrome のブックマークとして保存される</strong>。</p></blockquote>
+    <p>ユーザーが「ブックマークする」という行為を<strong>意識する必要は一切ありません</strong>。</p>
+
+    <h3>具体的にどう動くのか</h3>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>タブをグループに入れる</h3><p>サイドパネルで「仕事」「調べもの」「あとで読む」などのフォルダ（レイヤー）を作り、開いているタブをドラッグまたはワンクリックで追加。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>自動でブックマーク化</h3><p>追加した瞬間、裏側で Chrome のブックマークフォルダにリアルタイム同期。<strong>ユーザーは何もしなくていい</strong>。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>安心してタブを閉じる</h3><p>ブックマークとして保存されているから、タブを閉じてもデータは消えない。<strong>メモリが解放されてPCが軽くなる</strong>。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>必要なときにワンクリック復元</h3><p>サイドパネルからタブ名をクリックするだけで即座に復元。フォルダごと一括復元も可能。</p></div></div>
+
+    <p>つまり、<strong>「ブックマークする」という面倒な作業が、完全に消える</strong>のです。</p>
+
+    <h2>なぜ「ブックマーク」なのか</h2>
+    <p>世の中には多くのタブマネージャーがあります。OneTab、Session Buddy、Workona——。<br>しかし、そのほとんどは<strong>アプリ独自のストレージ</strong>にデータを保存しています。</p>
+    <p>つまり——</p>
+    <ul>
+      <li>拡張機能を<strong>アンインストールしたら、全データ消失</strong></li>
+      <li>Chrome がクラッシュしたら、<strong>復元できないかもしれない</strong></li>
+      <li>PCを買い替えたら、<strong>移行が大変</strong></li>
+    </ul>
+    <p>LB TAB Layers は、保存先を Chrome の<strong>ブックマーク</strong>にしました。</p>
+    <p>ブックマークは Chrome の中核機能です。だから——</p>
+    <ul>
+      <li>拡張を削除しても、<strong>ブックマークは残る</strong></li>
+      <li>Chrome がクラッシュしても、<strong>ブックマークは残る</strong></li>
+      <li>PC再起動しても、<strong>ブックマークは残る</strong></li>
+      <li>Google アカウントで同期すれば、<strong>別のPCでも使える</strong></li>
+    </ul>
+    <p>「めんどくさい」を消して、「消えない安心」を手に入れる。<br>これが LB TAB Layers の設計思想です。</p>
+
+    <h2>さらに、その先へ</h2>
+    <p>ブックマーク自動保存だけなら、ただの便利ツールです。<br>LB TAB Layers は、その上に<strong>「使いたくなる」体験</strong>を載せました。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>機能</th><th>何が嬉しいか</th></tr></thead><tbody>
+    <tr><td><strong>40種類のテーマ</strong></td><td>毎日使うものだから、見た目が美しいと気分が上がる</td></tr>
+    <tr><td><strong>日本語ファジー検索</strong></td><td>「かれんだー」で Google Calendar が見つかる。1,000語対応</td></tr>
+    <tr><td><strong>AI タブ検索</strong></td><td>「先週見たデザインのサイト」で Dribbble が出てくる</td></tr>
+    <tr><td><strong>通知バッジ</strong></td><td>Gmail・Slack の未読数がサイドパネルに表示される</td></tr>
+    <tr><td><strong>重複タブ整理</strong></td><td>同じページを何回も開いていたのを自動検出＆掃除</td></tr>
+    <tr><td><strong>リンク切れチェック</strong></td><td>保存したのに404になったページを自動で発見</td></tr>
+    <tr><td><strong>ダッシュボード</strong></td><td>大画面で全グループを一覧管理。ドラッグで並べ替え</td></tr>
+    </tbody></table></div>
+
+    <h2>3ヶ月、フルで試せます</h2>
+    <p>「良さそうだけど、本当に使うかな？」</p>
+    <p>そう思うのは当然です。だから、<strong>3ヶ月間すべての機能を無料</strong>で使えるトライアルを用意しました。</p>
+    <ul>
+      <li><strong>トライアル中</strong>：全機能フルアクセス。制限なし</li>
+      <li><strong>3ヶ月後</strong>：気に入ったら PRO（買い切り $4.99〜$9.99）。買わなくても基本機能は使い続けられます</li>
+    </ul>
+    <p>3ヶ月あれば、タブ管理が<strong>習慣</strong>になります。<br>習慣になれば、もう「タブだらけで重い」に戻ることはありません。</p>
+
+    <h2>開発者として、伝えたいこと</h2>
+    <p>私は神戸で映像制作会社を経営しながら、このアプリを一人で開発しました。</p>
+    <p>きっかけは単純です。<strong>自分自身がタブだらけで困っていたから。</strong></p>
+    <p>映像の参考サイト、クライアントの資料、請求書のページ、SNS——。<br>気づけば100個以上のタブが開いていて、PCのファンが唸り、ブラウザがフリーズする。</p>
+    <p>「ブックマークすればいいのに」と何度も思いました。<br>でも結局、<strong>めんどくさくてやらない</strong>。</p>
+    <p>だから作りました。<br>「タブを閉じたら、勝手にブックマークされている」——そんなアプリを。</p>
+    <p>同じ悩みを抱えている方に、ぜひ一度試してほしいです。</p>
+
+    <div class="blog-cta-box"><h3>タブだらけの毎日を、今日で終わりに。</h3><p>自動ブックマーク保存 · 3ヶ月フル無料 · 40テーマ · AI検索</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-tab-too-many.html">Chromeのタブ、開きすぎてませんか？100個問題の解決法 <span>→</span></a><a href="chrome-memory-saving.html">Chrome メモリ節約テクニック7選 <span>→</span></a><a href="ai-reviews-tab-layers.html">AIに自社アプリを評価させたら「救世主」と言われた話 <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
