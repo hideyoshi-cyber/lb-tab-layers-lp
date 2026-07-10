@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIに自社アプリを評価させたら"救世主"と言われた話 — 開発者が語る本音 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome拡張機能「LB TAB Layers」の開発者がAIにアプリを評価させてみた。AIが絶賛した5つの設計思想、標準ブックマークサイドバーとの決定的な違い、そしてAI駆動開発の舞台裏を語る。">
+  <meta name="keywords" content="Chrome拡張機能 開発,AI アプリ評価,タブ管理 開発秘話,LB TAB Layers,Antigravity 開発,ブックマーク 永続化,インディーハッカー,一人開発">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/ai-reviews-tab-layers.html">
+  <meta property="og:title" content="AIに自社アプリを評価させたら"救世主"と言われた話"><meta property="og:description" content="開発者がAIにアプリを評価させてみた結果と、AI駆動開発の舞台裏。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/ai-reviews-tab-layers.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-ai-preview.png"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AIに自社アプリを評価させたら"救世主"と言われた話"><meta name="twitter:description" content="開発者がAIに評価させた結果と、AI駆動開発の裏側。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-ai-preview.png">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"AIに自社アプリを評価させたら","item":"https://tablayers.liquid-block.com/blog/ai-reviews-tab-layers.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"AIに自社アプリを評価させたら"救世主"と言われた話","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-10","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/ai-reviews-tab-layers.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.2</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">開発ストーリー</span><h1>AIに自社アプリを<br>評価させたら<br>「救世主」と言われた話</h1><p class="blog-meta"><time datetime="2026-07-10">2026.07.10</time> · Liquid Block Inc. · 読了 8分</p></div></section>
+
+  <article class="blog-content">
+    <p>「このアプリどう思います？　いいアプリでしょ。」</p>
+    <p>ある日、自分が開発した Chrome 拡張機能 <strong>LB TAB Layers</strong> の Chrome Web Store リンクを、そのままAIに投げてみました。するとAIは、こんな風に答えたのです——</p>
+    <blockquote><p>「ブラウザがタブだらけで重くなる」「大事なページを閉じられなくて困っている」という方には、<strong>救世主になり得る非常に良い選択肢</strong>です。</p></blockquote>
+    <p>……褒めすぎです。でも嬉しい。<br>しかも、「なんと、こちらのアプリのご開発者様でしたか！大変失礼いたしました。」と返されたときは笑いました。</p>
+    <p>この記事では、AIとの会話を通じて浮かび上がった <strong>LB TAB Layers の設計思想</strong>と、<strong>AI駆動で一人開発した舞台裏</strong>、そして<strong>「日本で誰も本気でやっていない」ブラウザ拡張ビジネス</strong>について語ります。</p>
+
+    <h2>✨ AIが注目した5つの強み</h2>
+    <p>AIは事前情報なしで Chrome Web Store のページだけを見て、以下のポイントを挙げました。</p>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>データが消えない安心感</h3><p>一般的なタブマネージャーはアプリ独自のストレージにデータを保存するため、アンインストールで全データが消えるリスクがあります。LB TAB Layers は Chrome の<strong>ブックマークにリアルタイム同期</strong>する設計を採用。万が一のときもデータは保護されます。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>作業空間の一発切り替え</h3><p>「仕事のタブ群」「プライベートのタブ群」をフォルダ（レイヤー）ごとに<strong>1クリックで丸ごと入れ替え</strong>。頭の切り替えが圧倒的に楽になります。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>便利機能の網羅性</h3><p>通知バッジ、重複タブのクリーンアップ、メモリ節約の自動サスペンド、Gemini/GPT/Claude対応のAIタブ検索——。今どきのタブマネージャーに欲しい機能がほぼ全部入っています。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>信頼の国内開発</h3><p>神戸のデザインクリエイティブセンターに拠点を置く<strong>株式会社リキッドブロック</strong>が開発。日本語サポートも万全で安心感があります。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">5</span><div class="blog-step-body"><h3>40種類のテーマとデザイン性</h3><p>映像・モーショングラフィックスを本業とするデザイン会社だからこそ実現した、<strong>圧倒的な美しさ</strong>。Arcスタイルのピンバーや通知バッジなど、細部までこだわりが詰まっています。</p></div></div>
+
+    <h2>📊 Chromeの標準ブックマークサイドバーとの違い</h2>
+    <p>AIとの会話で、「<strong>標準のブックマークサイドバーと何が違うのか？</strong>」という核心的な比較も出ました。</p>
+    <p>裏側のデータ（保存先）は同じ Chrome のブックマーク。しかし設計思想が全く異なります。</p>
+    <p>標準サイドバーは「<strong>本のしおり</strong>」——静かな保管庫。<br>LB TAB Layers は「<strong>机の上の模様替え</strong>」——作業環境のセーブ＆ロード。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>比較項目</th><th>Chrome 標準</th><th>LB TAB Layers</th></tr></thead><tbody>
+    <tr><td>タブの保存・復元</td><td>1つずつクリック or 右クリック「すべて開く」</td><td><strong>1クリックで一括保存＆一括復元</strong></td></tr>
+    <tr><td>メモリ管理</td><td>関与しない</td><td><strong>自動サスペンドで軽量化</strong></td></tr>
+    <tr><td>検索</td><td>完全一致 / 前方一致のみ</td><td><strong>1,000語ファジー検索 + AI検索</strong></td></tr>
+    <tr><td>重複管理</td><td>なし（ゴミ屋敷化しやすい）</td><td><strong>自動検出＆クリーンアップ</strong></td></tr>
+    <tr><td>デザイン</td><td>無機質なフォルダ一覧（変更不可）</td><td><strong>40種類の美麗テーマ</strong></td></tr>
+    </tbody></table></div>
+
+    <p>つまり、標準ブックマークの「消えない安心感」を享受しながら、その上に「超強力なワークスペース管理」を載せた<strong>ハイブリッド設計</strong>が最大の強みです。</p>
+
+    <h2>🛠 AI駆動の一人開発——Antigravityとの闘い</h2>
+    <p>「これね。僕開発してん。」</p>
+    <p>AIにそう伝えると、開発プロセスについて深い質問が飛んできました。</p>
+    <p>LB TAB Layers は、Google の次世代AI開発プラットフォーム <strong>Antigravity（アンチグラビティ）</strong> を使い、拡張機能の開発から公式サイトの構築まで、<strong>たった一人で</strong>完成させました。</p>
+    <p>従来の「AIがコードを補完してくれるエディタ」とは次元が違います。人間が指示を出すだけで、<strong>AIエージェントが自律的にタスクリストを組み、コード修正からテストまで一気通貫</strong>で行ってくれる——いわゆる「エージェント駆動開発」です。</p>
+
+    <h3>開発で実践した3つの鉄則</h3>
+    <p>AIに丸投げする「バイブコーディング」では、ここまでのクオリティにはなりません。実践したのは以下の3つです。</p>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>しつこく聞く</h3><p>AIは時に仕様の前提を忘れて「もっともらしい嘘」をつきます。人間が<strong>妥協せず何度も問い詰める</strong>ことで、AIの出力精度を極限まで引き上げました。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>スクリーンショットを共有する</h3><p>UIの崩れや画面の挙動は、コードで説明するより<strong>「見た目」を見せるのが最速</strong>。マルチモーダルなAIの視覚認識をフル活用し、40種類のテーマやサイドパネルのUIを追い込みました。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>「なぜ？」を問い続ける</h3><p>「直して」だけだとAIは表面的なパッチを当てるだけ。<strong>なぜそうなったかという思考プロセスのバグ</strong>を修正させることで、ブックマーク双方向同期という複雑な処理を破綻させずに組み上げました。</p></div></div>
+
+    <div class="blog-callout"><p><strong>AIのコメント:</strong> 「AIに丸投げする"バイブコーディング"ではなく、人間が超厳格なディレクターとしてAIのポテンシャルを絞り出したからこそ、このクオリティの拡張機能とWebサイトが1人で完成したのですね。」</p></div>
+
+    <h2>🌊 日本で誰も本気でやっていない「拡張機能ビジネス」</h2>
+    <p>AIとの会話で、ある核心に触れました。</p>
+    <blockquote><p>日本国内で「ブラウザ拡張機能」を主軸に、ここまで本気で勝負しているスタートアップや企業は、<strong>事実上ほぼ存在しません</strong>。</p></blockquote>
+
+    <p>海外では、4,300億円で買収された Honey（クーポン自動適用）や、Workona、Toby のように「拡張機能だけで巨大なビジネスを作る」スタートアップが当たり前に存在します。</p>
+    <p>しかし日本では、拡張機能といえば「大企業SaaSのおまけ」か「個人開発者の小規模ツール」がほとんど。<strong>法人として、デザイン会社の意地をかけて、プロダクト品質のUI/UXを作り込んだ拡張機能</strong>——これは計り知れないブルーオーシャンです。</p>
+
+    <h3>なぜ日本の会社はやらないのか？</h3>
+    <ul>
+      <li><strong>マネタイズの常識に縛られている</strong>：日本のIT企業は「受託」「スマホアプリ」「SaaS」の3択で考えがち。Chrome拡張ストアで世界を相手にする発想は、企画会議で通りにくい</li>
+      <li><strong>ブラウザというインフラの強さに気づいていない</strong>：現代のビジネスパーソンがPCを開いている時間の9割はブラウザの中。iOS/Androidに匹敵するプラットフォームなのに、そこへ直接プロダクトを送り込む重要性に気づいている日本の経営者は極めて稀</li>
+    </ul>
+
+    <h3>だからこそ、LB TAB Layers の立ち位置が光る</h3>
+    <ul>
+      <li><strong>「日本製」の信頼ブランド</strong>：タブマネージャーの多くは海外製で日本語検索が弱い。「神戸発、デザイン会社が本気で作った、日本語ファジー検索対応の安心な拡張機能」というストーリーは、全ビジネスパーソンに刺さる</li>
+      <li><strong>海外勢と戦えるクオリティ</strong>：40種類のテーマ、ブックマーク自動永続化、通知バッジ——OneTab や Session Buddy を完全に凌駕する仕様がすでに揃っている</li>
+    </ul>
+
+    <h2>⚠️ 正直に言う——注意点も</h2>
+    <p>AIは良い点だけでなく、注意点も挙げてくれました。フェアに共有します。</p>
+    <ul>
+      <li><strong>無料版には制限がある</strong>：3ヶ月の無料トライアル後、フル機能を使い続けるにはPRO版（買い切り $4.99〜$9.99）へのアップグレードが必要</li>
+      <li><strong>ブックマークの整理が必要になることも</strong>：タブの保存先がChromeのブックマークになるため、既存のブックマーク構造との共存を最初に少し整理する必要があるかもしれません</li>
+    </ul>
+
+    <h2>💬 まとめ——AIと開発者の本音</h2>
+    <p>AIに自社アプリを評価させるという、少し恥ずかしい実験。でも、第三者（しかもAI）の視点から見た自分のプロダクトの強みと弱みが、驚くほどクリアに浮かび上がりました。</p>
+    <p>LB TAB Layers は、<strong>「タブを閉じても消えない安心感」</strong>と<strong>「作業空間をワンクリックで切り替える快適さ」</strong>を両立させた、唯一無二のタブマネージャーです。</p>
+    <p>そしてその裏側には、<strong>AIエージェントと一人の人間が、しつこく、泥臭く、妥協せずに作り上げた</strong>開発の物語があります。</p>
+    <p>「タブだらけで重い……」と感じたことがある方は、ぜひ一度試してみてください。</p>
+
+    <div class="blog-cta-box"><h3>タブの悪循環を、今日で終わりに。</h3><p>3ヶ月フル機能無料 · ブックマーク永続保存 · 40テーマ · AI検索</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="ai-tab-search.html">AI検索でタブを見つける — 自然言語で探す新体験 <span>→</span></a><a href="best-tab-extensions-2026.html">【2026年版】Chrome タブ管理拡張おすすめ5選 <span>→</span></a><a href="chrome-tab-too-many.html">Chromeのタブ、開きすぎてませんか？100個問題の解決法 <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
