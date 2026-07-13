@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoogleスプレッドシートでChromeタブ・ブックマークを完全自動同期する方法 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chromeのタブやフォルダ、星、メモ書きをGoogleスプレッドシート経由で自動同期。複数PC間での共有・バックアップが驚くほど簡単になるv2.8.5の新機能を紹介。">
+  <meta name="keywords" content="Chrome タブ 同期,ブックマーク 同期 スプレッドシート,Chrome 複数PC 共有,タブ管理 メモ,LB TAB Layers,スプレッドシート 連携">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/spreadsheet-sync-notes.html">
+  <meta property="og:title" content="GoogleスプレッドシートでChromeタブ・ブックマークを自動同期する方法"><meta property="og:description" content="Chromeのタブやフォルダ、星、メモ書きをスプレッドシートで完全自動同期。複数PC間での共有が劇的に簡単に。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/spreadsheet-sync-notes.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GoogleスプレッドシートでChromeタブを自動同期する方法"><meta name="twitter:description" content="複数PC間でのタブ共有が劇的に簡単に。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"スプレッドシートでChromeタブ自動同期","item":"https://tablayers.liquid-block.com/blog/spreadsheet-sync-notes.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"GoogleスプレッドシートでChromeタブ・ブックマークを完全自動同期する方法","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-13","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/spreadsheet-sync-notes.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.5</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">アップデート</span><h1>Googleスプレッドシートで<br>Chromeタブ・ブックマークを<br>完全自動同期する方法</h1><p class="blog-meta"><time datetime="2026-07-13">2026.07.13</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <p>仕事用PCと個人用PCなど、複数のPCを使っていると<strong>「あっちのPCで保存したタブやフォルダ構造、星ランク、メモ書きを、こっちのPCでもそのまま使いたい」</strong>と思ったことはありませんか？</p>
+    <p>Chromeの標準同期では、ブックマークのURLのみが同期され、拡張機能独自のデータ（フォルダの色、星の数、メモ書き）は同期されません。</p>
+    <p>LB TAB Layersのバージョン <strong>v2.8.5</strong> では、この問題を解決する<strong>「Googleスプレッドシート自動同期機能」</strong>と<strong>「メモ書き（Description）インライン機能」</strong>を実装しました。</p>
+
+    <h2>v2.8.5 スプレッドシート自動同期の仕組み</h2>
+    <p>本機能は、ご自身のGoogleドライブ上に作成されたスプレッドシートを「マスターデータベース」として読み書きします。</p>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>変更時のリアルタイム自動保存</h3><p>グループの追加、星ランク、タグ、メモを編集した瞬間に、拡張機能がバックグラウンドで自動的にスプレッドシートにデータを書き出します（3秒デバウンス保存）。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>20分おきの定期自動読み込み</h3><p>サイドパネルが開いている間、20分おきに自動的かつサイレントにスプレッドシートからデータを読み込み、ローカルデータおよび物理ブックマークツリーを再構築します。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>最大3階層のフォルダ構造を完全再現</h3><p>スプレッドシート内の階層データに基づき、Chrome側の物理的なブックマークフォルダツリーを元の並び順通りに100%正確に再作成して同期します。</p></div></div>
+
+    <h2>新機能：タブごとの「メモ書き」＆「インライン編集」</h2>
+    <p>溜まったタブに「なぜ保存したか」「何に使う資料か」をメモ書きとして残せるようになりました。</p>
+    <ul>
+      <li><strong>サイドパネルで編集</strong>：タブを右クリックして「メモを編集」からすぐに入力可能。</li>
+      <li><strong>ダッシュボードでインライン編集</strong>：大画面ダッシュボードのカード内にある「メモを追加...」またはメモのテキストをクリックするだけで、その場で入力欄に切り替わって瞬時に保存・編集できます。</li>
+      <li><strong>Markdownコピー連携</strong>：タブやフォルダをMarkdown形式でコピーした際、<code>- [タイトル](URL) - メモ内容</code> のように自動でメモも付与されてコピーされます。ブログ執筆やリサーチ資料の共有に絶大に便利です。</li>
+    </ul>
+
+    <h2>かんたん3ステップ連携手順</h2>
+    <p>設定はGoogleアカウントを紐付けるだけで完了します。</p>
+    <ol>
+      <li>設定パネル（⚙）を開き、「Data & Sync」タブを選択。</li>
+      <li>「Googleでサインイン」を行い、<strong>「新規作成」</strong>を押すとドライブ上に専用スプレッドシートが自動作成されます。</li>
+      <li>そのスプレッドシートID（またはシートのURL）を、他のPCのLB TAB Layers設定画面に入力するだけで同期が開始されます。</li>
+    </ol>
+
+    <div class="blog-callout"><p><strong>💡 ユーザー直接編集にも対応</strong>：自動作成されたスプレッドシートを直接開いて、ブラウザを通さずに「メモ」や「星の数」「タグ」を手動で書き換えることも可能です。次の自動同期タイミング（または手動同期ボタン）で、ブラウザ側に完全に反映されます。</p></div>
+
+    <div class="blog-cta-box"><h3>PC間でタブやメモを完全同期。</h3><p>自動スプレッドシート同期 · メモ書き · タブ管理 · 無料</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="bookmark-organization.html">挫折しないブックマーク整理術！フォルダ階層の正解パターン <span>→</span></a><a href="chrome-side-panel-guide.html">Chromeサイドパネルの便利な使い方とおすすめ拡張機能 <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
