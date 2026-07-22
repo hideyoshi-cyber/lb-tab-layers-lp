@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2.8.61 アップデート — 8言語完全対応・CSSリファクタリング・操作性改善 | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers v2.8.61をリリース。韓国語・台湾中国語・ドイツ語・フランス語・スペイン語・ポルトガル語の6言語を追加し計8言語に対応。CSSを8モジュールに分割するリファクタリング、右クリックでフォルダに直接保存、フォント&密度カスタマイズなどを導入。">
+  <meta name="keywords" content="LB TAB Layers v2.8.61,Chrome拡張 アップデート,多言語対応,CSSリファクタリング,右クリック保存,フォントカスタマイズ,8言語対応,韓国語,台湾中国語,ドイツ語">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/v2861-update.html">
+  <meta property="og:title" content="v2.8.61 アップデート — 8言語完全対応・CSSリファクタリング"><meta property="og:description" content="8言語完全対応、CSSモジュール化、右クリック保存など多数の改善を導入。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/v2861-update.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="v2.8.61 アップデート — 8言語完全対応・CSSリファクタリング"><meta name="twitter:description" content="8言語完全対応、CSSモジュール化、右クリック保存など多数の改善を導入。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"v2.8.61 アップデート","item":"https://tablayers.liquid-block.com/blog/v2861-update.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"v2.8.61 アップデート — 8言語完全対応・CSSリファクタリング・操作性改善","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-22","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/v2861-update.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.61</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">アップデート</span><h1>v2.8.61 アップデート<br>8言語完全対応・CSS設計刷新</h1><p class="blog-meta"><time datetime="2026-07-22">2026.07.22</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <p>LB TAB Layers <strong>v2.8.61</strong> をリリースしました。本バージョンでは、<strong>6つの新言語の追加によるグローバル対応</strong>、<strong>CSS設計の全面的なリファクタリング</strong>、そして<strong>右クリックメニューからのフォルダ直接保存</strong>など、品質と使いやすさを大きく向上させています。</p>
+
+    <h2>🌐 8言語完全対応 — 世界のユーザーへ</h2>
+    <p>これまで日本語と英語の2言語対応でしたが、v2.8.61では以下の6言語を追加し、<strong>計8言語</strong>に完全対応しました。</p>
+    <ul>
+      <li>🇰🇷 <strong>韓国語（한국어）</strong></li>
+      <li>🇹🇼 <strong>台湾中国語（繁體中文）</strong></li>
+      <li>🇩🇪 <strong>ドイツ語（Deutsch）</strong></li>
+      <li>🇫🇷 <strong>フランス語（Français）</strong></li>
+      <li>🇪🇸 <strong>スペイン語（Español）</strong></li>
+      <li>🇵🇹 <strong>ポルトガル語（Português）</strong></li>
+    </ul>
+    <p>単なるボタンラベルの翻訳にとどまらず、<strong>ヘルプガイド全4ステップ</strong>、<strong>チュートリアル</strong>、<strong>PRO/アップグレード画面</strong>、<strong>週間レポート</strong>、<strong>フィードバックフォーム</strong>、<strong>エラーメッセージ</strong>まで、全369キー中367キー（99.5%）を翻訳しています。未翻訳の2キーはブランド名（「LB TAB Layers」「PRODUCED BY」）のため翻訳不要です。</p>
+    <p>ブラウザの言語設定に自動追従するため、ユーザーは何も設定する必要がありません。</p>
+
+    <h2>📐 CSSリファクタリング — 保守性の大幅向上</h2>
+    <p>これまで1ファイル <strong>3,682行</strong> に集約されていた <code>sidepanel.css</code> を、<strong>8つの論理モジュール</strong>に分割しました。</p>
+    <ul>
+      <li><strong>themes.css</strong> — 40テーマのCSS変数定義</li>
+      <li><strong>base.css</strong> — フォント・リセット・ユーティリティ</li>
+      <li><strong>layout.css</strong> — ヘッダー・検索・セクション配置</li>
+      <li><strong>components.css</strong> — グループカード・タブ行・ピンバー</li>
+      <li><strong>panels.css</strong> — 設定・ヘルプ・モーダル</li>
+      <li><strong>features.css</strong> — AI検索・オンボーディング・RSS</li>
+      <li><strong>upgrade.css</strong> — PRO・トライアル・レポート</li>
+      <li><strong>animations.css</strong> — アニメーション・トランジション</li>
+    </ul>
+    <p>この変更はユーザーから見た見た目や動作には影響しませんが、開発チームにとって「どのファイルのどこを触ればいいか」が明確になり、今後の機能追加やバグ修正のスピードが大幅に向上します。</p>
+
+    <h2>📂 右クリックでフォルダに直接保存</h2>
+    <p>単独タブ（Ungrouped）や本日の履歴にあるサイトを<strong>右クリック</strong>すると、コンテキストメニューに「フォルダに保存」オプションが表示されるようになりました。任意のグループフォルダを選ぶだけで、ドラッグ操作なしで素早くタブを整理できます。</p>
+
+    <h2>🔤 フォント＆密度カスタマイズ</h2>
+    <p>設定パネルに新しい「テキスト＆密度」セクションを追加しました。</p>
+    <ul>
+      <li><strong>フォントサイズ</strong> — スライダーで自由に調整</li>
+      <li><strong>タブ行の高さ</strong> — コンパクト〜ゆったりまで</li>
+      <li><strong>フォルダヘッダーの太さ</strong> — Thin / Normal / Bold</li>
+      <li><strong>フォルダ名の色調</strong> — Default / Medium / Light</li>
+    </ul>
+    <p>小さな画面でも大きなモニターでも、自分好みの情報密度でタブを管理できます。</p>
+
+    <h2>🔧 Stickyヘッダー修正</h2>
+    <p>単独タブセクションのヘッダーがスクロール時に隠れてしまう問題を修正しました。原因は親要素の <code>overflow: hidden</code> が <code>position: sticky</code> を無効化していたためで、<code>overflow: visible</code> に変更することで解決しました。</p>
+
+    <h2>📊 ストアリスティングの修正</h2>
+    <p>Free版とPRO版の機能比較表を、コード上の実際の制限と一致するよう修正しました。</p>
+    <ul>
+      <li><strong>オーバーレイモード</strong> → 実際はPRO/Trial限定（Free版から除外）</li>
+      <li><strong>ダッシュボード</strong> → PRO版の特典として追記</li>
+      <li><strong>★ランク/タグ</strong> → Free版は10個まで、PRO版は無制限と明記</li>
+    </ul>
+
+    <h2>アップデート方法</h2>
+    <p>Chrome Web Store から自動更新されます。手動で更新する場合は <code>chrome://extensions</code> を開き、「更新」ボタンをクリックしてください。</p>
+
+    <p style="margin-top:3rem;text-align:center;"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" target="_blank" rel="noopener" class="blog-cta-btn">Chrome Web Store で確認する →</a></p>
+  </article>
+
+  <footer id="site-footer"><div class="container"><p>© 2026 Liquid Block Inc. — <a href="../privacy-policy.html">Privacy Policy</a></p></div></footer>
+</body>
+</html>
