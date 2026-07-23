@@ -44,7 +44,7 @@
       "operatingSystem": "Chrome, Edge",
       "applicationCategory": "BrowserApplication",
       "downloadUrl": "https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej",
-      "softwareVersion": "2.8.61",
+      "softwareVersion": "2.8.62",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -184,7 +184,7 @@
       <div class="nav-links">
         <a href="features.html">機能紹介</a>
         <a href="#themes">テーマ</a>
-        <a href="#whats-new">v2.8.61</a>
+        <a href="#whats-new">v2.8.62</a>
         <a href="#faq">FAQ</a>
         <a href="blog/">Blog</a>
         <a href="en/" title="English">🌐 EN</a>
@@ -223,8 +223,8 @@
       </div>
       <div class="hero-visual">
         <div class="hero-screenshot-wrapper">
-          <img src="WebLBtaLayers.png" alt="LB TAB Layers v2.8.61 サイドパネル" class="hero-screenshot-img" loading="eager" width="354" height="1191">
-          <div class="hero-screenshot-badge">v2.8.61 — Warm テーマ</div>
+          <img src="WebLBtaLayers.png" alt="LB TAB Layers v2.8.62 サイドパネル" class="hero-screenshot-img" loading="eager" width="354" height="1191">
+          <div class="hero-screenshot-badge">v2.8.62 — Warm テーマ</div>
         </div>
       </div>
     </div>
@@ -715,55 +715,41 @@
     </div>
   </section>
 
-  <!-- ===== v2.8.61 NEW FEATURES ===== -->
+  <!-- ===== v2.8.62 NEW FEATURES ===== -->
   <section id="whats-new">
     <div class="container">
       <div class="coming-soon-card">
         <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v2.8.61</div>
-        <h2>v2.8.61 — <span class="text-gradient">世界へ。</span></h2>
-        <p class="cs-sub">8言語完全対応 + CSS設計刷新 + 操作性の磨き上げ。</p>
+        <div class="cs-badge">NEW IN v2.8.62</div>
+        <h2>v2.8.62 — <span class="text-gradient">統合。</span></h2>
+        <p class="cs-sub">タブUI統合 + 折りたたみ操作 + タイマー改善 + アクセシビリティ強化。</p>
         <div class="cs-features">
           <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v6"/></svg></span>
             <div>
-              <h4>8言語完全対応</h4>
-              <p>日本語・英語に加え、韓国語・台湾中国語・ドイツ語・フランス語・スペイン語・ポルトガル語に完全対応。ヘルプ・チュートリアル・エラーメッセージまですべて翻訳済み。</p>
+              <h4>単独タブ＋本日の履歴 → タブUI統合</h4>
+              <p>2行のセクションヘッダーを1行のChrome風タブバーに統合。アクティブタブにアクセント下線＋背景ハイライト。画面スペースを節約し、より多くのタブを表示。</p>
             </div>
           </div>
           <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 12h18"/><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
             <div>
-              <h4>CSSモジュール設計</h4>
-              <p>3,682行のモノリシックCSSを8モジュールに分割。テーマ・レイアウト・コンポーネント等を論理的に整理し、保守性とパフォーマンスを大幅に向上。</p>
+              <h4>ワンクリック折りたたみ</h4>
+              <p>タブバー先頭のシェブロンボタンでコンテンツを即座に折りたたみ・展開。グループリストをフル画面で使いたい時に便利。</p>
             </div>
           </div>
           <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></span>
+            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             <div>
-              <h4>右クリックでフォルダに直接保存</h4>
-              <p>単独タブや履歴を右クリックして、任意のグループフォルダに直接保存。ドラッグ操作なしで素早くタブを整理できます。</p>
+              <h4>タイマーの操作性改善</h4>
+              <p>未起動時に「☱ タイマー」テキストを表示。タイマー設定ポップアップの表示位置を最適化し、他のUI要素と干渉しない配置に。</p>
             </div>
           </div>
           <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></span>
+            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
             <div>
-              <h4>フォント＆密度カスタマイズ</h4>
-              <p>フォントサイズ・タブ行の高さ・フォルダヘッダーの太さ・色調を自由に調整。自分好みの表示密度を実現できます。</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-            <div>
-              <h4>コンテキストメニューの多言語化</h4>
-              <p>右クリックメニュー、設定パネル、エラーメッセージなど、すべてのUI文字列を8言語に対応。ブラウザの言語設定に自動追従します。</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-            <div>
-              <h4>Stickyヘッダー修正</h4>
-              <p>単独タブセクションのヘッダーがスクロール時に隠れる問題を修正。常に視認性の高いナビゲーションを維持します。</p>
+              <h4>アクセシビリティ強化</h4>
+              <p>select要素・ボタン要素にaria-labelを追加。スクリーンリーダーをご利用の方にも快適な操作性を提供。</p>
             </div>
           </div>
         </div>

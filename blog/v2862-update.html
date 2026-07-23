@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2.8.62 アップデート — タブUI統合・タイマー改善・アクセシビリティ強化 | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers v2.8.62をリリース。「単独タブ」と「本日の履歴」を1行タブUIに統合し画面スペースを最適化。折りたたみシェブロン、タイマーのスタート/停止ボタン、アクセシビリティ改善を導入。">
+  <meta name="keywords" content="LB TAB Layers v2.8.62,Chrome拡張 アップデート,タブUI統合,タイマー改善,アクセシビリティ,Chrome タブ管理">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/v2862-update.html">
+  <meta property="og:title" content="v2.8.62 アップデート — タブUI統合・タイマー改善"><meta property="og:description" content="単独タブと本日の履歴を1行タブUIに統合。タイマー改善・アクセシビリティ強化も。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/v2862-update.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="v2.8.62 アップデート — タブUI統合・タイマー改善"><meta name="twitter:description" content="単独タブと本日の履歴を1行タブUIに統合。タイマー改善・アクセシビリティ強化も。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"v2.8.62 アップデート","item":"https://tablayers.liquid-block.com/blog/v2862-update.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"v2.8.62 アップデート — タブUI統合・タイマー改善・アクセシビリティ強化","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-23","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/v2862-update.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.62</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">アップデート</span><h1>v2.8.62 アップデート<br>タブUI統合・操作性の進化</h1><p class="blog-meta"><time datetime="2026-07-23">2026.07.23</time> · Liquid Block Inc. · 読了 3分</p></div></section>
+
+  <article class="blog-content">
+    <p>LB TAB Layers <strong>v2.8.62</strong> をリリースしました。本バージョンでは、<strong>サイドパネル下部のUI構造を大幅に刷新</strong>し、操作性とスペース効率を向上させています。</p>
+
+    <h2>🗂️ 単独タブ＋本日の履歴 → タブUI統合</h2>
+    <p>これまで2行のセクションヘッダーで分かれていた「<strong>単独タブ</strong>」と「<strong>本日の履歴</strong>」を、<strong>1行のタブバー</strong>に統合しました。</p>
+    <ul>
+      <li>Chrome風のタブデザイン — アクティブタブにはアクセントカラーの下線＋背景ハイライト</li>
+      <li>タブ間にセパレーターラインを配置し、視覚的な区切りを明確化</li>
+      <li>単独タブのアクションボタン（ゴミ箱・自動振分け・新規フォルダ）はタブバー内に統合</li>
+      <li>「本日の履歴」タブ選択時、アクションボタンはスペースを保持したまま非表示化（レイアウトシフトなし）</li>
+    </ul>
+    <p>この変更により、<strong>ヘッダー1行分の画面スペースを節約</strong>し、より多くのタブを一度に表示できるようになりました。</p>
+
+    <h2>▶ ワンクリック折りたたみ</h2>
+    <p>タブバーの先頭にアクセントカラーの<strong>シェブロンボタン（▼/▶）</strong>を追加しました。</p>
+    <ul>
+      <li>クリックするとコンテンツエリアが折りたたまれ、タブバーだけの表示に</li>
+      <li>もう一度クリックすると、アクティブなパネルが再表示</li>
+      <li>グループリストをフル画面で使いたい時に便利</li>
+    </ul>
+
+    <h2>⏱ タイマーの操作性改善</h2>
+    <p>ピンバーのタイマー機能を改善しました。</p>
+    <ul>
+      <li>タイマー未起動時に「⏱ タイマー」のテキストラベルを表示 — アイコンだけでは分かりにくかったフィードバックを反映</li>
+      <li>実行中・一時停止中のスタート/停止ボタンの視認性を向上</li>
+      <li>タイマー設定ポップアップの表示位置を最適化（position:fixedで他の要素と干渉しない配置に）</li>
+    </ul>
+
+    <h2>♿ アクセシビリティ強化</h2>
+    <p>Microsoft Edge Tools のアクセシビリティ検査結果を反映し、以下を修正しました。</p>
+    <ul>
+      <li><strong>select要素</strong> — ダッシュボードのソートメニューに <code>aria-label</code> を追加</li>
+      <li><strong>ボタン要素</strong> — アイコンのみのボタンにスクリーンリーダー用テキストを追加</li>
+    </ul>
+    <p>スクリーンリーダーをご利用の方にも、より快適にお使いいただけるようになりました。</p>
+
+    <h2>アップデート方法</h2>
+    <p>Chrome Web Store から自動更新されます。手動で更新する場合は <code>chrome://extensions</code> を開き、「更新」ボタンをクリックしてください。</p>
+
+    <p style="margin-top:3rem;text-align:center;"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" target="_blank" rel="noopener" class="blog-cta-btn">Chrome Web Store で確認する →</a></p>
+  </article>
+
+  <footer id="site-footer"><div class="container"><p>© 2026 Liquid Block Inc. — <a href="../privacy-policy.html">Privacy Policy</a></p></div></footer>
+</body>
+</html>
