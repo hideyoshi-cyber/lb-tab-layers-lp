@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📊 ダッシュボード — LB TAB Layers Feature Demo</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+/* Dashboard mock in sidepanel */
+#scene1 .page-content{opacity:0.15;filter:grayscale(0.6);}
+#scene1 .browser-bar{opacity:0.25;}
+#scene1 .sp-search{opacity:0.3;}
+#scene1 .sp-tabbar{opacity:0.3;}
+
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;}
+.dash-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:8px;padding:8px;font-size:10px;}
+.dash-card-title{font-size:9px;font-weight:700;color:#8A94A6;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
+.dash-card-value{font-size:20px;font-weight:800;color:#2B303A;margin-bottom:2px;}
+.dash-card-sub{font-size:9px;color:#8A94A6;}
+.dash-card.accent .dash-card-value{color:#FF6B6B;}
+.dash-bar{height:4px;border-radius:2px;background:#f0edea;margin-top:4px;}
+.dash-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#FF6B6B,#FF8E53);}
+
+/* Link check animation */
+@keyframes scanLine{0%{top:0;}100%{top:calc(100% - 2px);}}
+@keyframes checkMark{0%{opacity:0;transform:scale(0);}100%{opacity:1;transform:scale(1);}}
+.link-check-list{padding:0 6px;font-size:10px;}
+.lc-item{display:flex;align-items:center;gap:5px;padding:4px 6px;border-radius:4px;margin-bottom:3px;}
+.lc-status{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.lc-status.ok{background:#34a853;}
+.lc-status.err{background:#ea4335;}
+.lc-status.checking{background:#FBBC05;animation:plusPulse 1s infinite;}
+.lc-url{flex:1;color:#5C6370;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* Duplicate detection */
+@keyframes dupHighlight{0%,100%{background:transparent;}50%{background:rgba(255,107,107,0.1);}}
+.dup-item{animation:dupHighlight 2s 1s infinite;}
+.dup-badge{font-size:8px;background:#FF6B6B;color:#fff;padding:1px 5px;border-radius:6px;font-weight:700;margin-left:auto;}
+
+/* Focus timer in dashboard */
+.timer-display{text-align:center;padding:8px;}
+.timer-time{font-size:28px;font-weight:800;color:#FF6B6B;font-variant-numeric:tabular-nums;letter-spacing:1px;}
+.timer-label{font-size:9px;color:#8A94A6;margin-top:2px;}
+.timer-progress{width:80%;height:4px;background:#f0edea;border-radius:2px;margin:6px auto 0;}
+.timer-progress-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#FF6B6B,#FBBC05);animation:timerFill 25s linear infinite;}
+@keyframes timerFill{0%{width:0;}100%{width:100%;}}
+</style>
+<script>if(window!==window.top)document.documentElement.classList.add('is-embed');</script>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html">🔖 ブックマーク</a>
+    <a href="search-organize.html">🔍 検索・整理</a>
+    <a href="dashboard.html" class="active">📊 ダッシュボード</a>
+    <a href="rss-timeline.html">📰 RSS</a>
+    <a href="timer-clock.html">⏱ タイマー</a>
+    <a href="customize.html">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="demo-hero">
+  <div class="demo-hero-badge">Overview</div>
+  <h1>📊 全てを<em>俯瞰する</em>ダッシュボード</h1>
+  <p>グループ数、タブ数、リンク切れ、重複タブ…<br>タブの健全性をひと目で把握し、一括整理できます。</p>
+</div>
+
+<!-- ===== SCENE 1: Dashboard Overview ===== -->
+<div class="demo-section" id="scene1">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+        <div class="browser-tab"><div class="fav" style="background:#ea4335;"></div> Gmail</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-news">
+          <div class="n-header"><div class="n-logo"></div><div class="n-nav"><span></span><span></span></div></div>
+          <div class="n-body">
+            <div class="n-main"><div class="n-hero-img" style="background:linear-gradient(135deg,#2d333b,#1f2328);"></div><div class="n-hero-title"></div></div>
+            <div class="n-sidebar"><div class="n-ad"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidepanel">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">📊 ダッシュボード</span></div>
+        <div class="sp-body" style="padding:0;">
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="dash-card-title">グループ数</div>
+              <div class="dash-card-value">8</div>
+              <div class="dash-card-sub">+2 今週</div>
+            </div>
+            <div class="dash-card accent">
+              <div class="dash-card-title">総タブ数</div>
+              <div class="dash-card-value">47</div>
+              <div class="dash-card-sub">アクティブ 12</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-title">リンク切れ</div>
+              <div class="dash-card-value" style="color:#ea4335;">2</div>
+              <div class="dash-bar"><div class="dash-bar-fill" style="width:8%;background:#ea4335;"></div></div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-title">重複タブ</div>
+              <div class="dash-card-value" style="color:#FBBC05;">3</div>
+              <div class="dash-bar"><div class="dash-bar-fill" style="width:12%;background:#FBBC05;"></div></div>
+            </div>
+          </div>
+          <!-- Link check -->
+          <div style="padding:6px 8px;"><div style="font-size:10px;font-weight:700;color:#2B303A;margin-bottom:4px;">🔗 リンクチェック</div></div>
+          <div class="link-check-list">
+            <div class="lc-item"><div class="lc-status ok"></div><span class="lc-url">github.com/repo</span></div>
+            <div class="lc-item"><div class="lc-status ok"></div><span class="lc-url">mail.google.com</span></div>
+            <div class="lc-item"><div class="lc-status err"></div><span class="lc-url" style="text-decoration:line-through;color:#ea4335;">old-site.com/page</span></div>
+            <div class="lc-item"><div class="lc-status checking"></div><span class="lc-url">docs.example.com</span></div>
+          </div>
+          <!-- Duplicates -->
+          <div style="padding:6px 8px;margin-top:4px;"><div style="font-size:10px;font-weight:700;color:#2B303A;margin-bottom:4px;">🔄 重複タブ</div></div>
+          <div style="padding:0 6px;">
+            <div class="tab-row dup-item"><div class="tab-fav" style="background:#ea4335;"></div><span class="tab-title">Gmail — 受信トレイ</span><span class="dup-badge">×2</span></div>
+          </div>
+          <!-- Timer -->
+          <div class="timer-display">
+            <div class="timer-time">24:38</div>
+            <div class="timer-label">フォーカスタイマー</div>
+            <div class="timer-progress"><div class="timer-progress-fill"></div></div>
+          </div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">ダッシュボード</div><div class="sp-tab-item">グループ</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">1</span> 全グループ俯瞰 ＆ 健全性チェック</h3>
+  <p>グループ数・タブ数・リンク切れ・重複タブをカード表示で即座に把握。リンク切れURLの自動検出、重複タブの統合、フォーカスタイマーまで1画面に集約しています。</p>
+</div>
+
+<div class="feature-desc">
+  <h2><span class="desc-icon">📊</span> タブの「健康診断」を自動で</h2>
+  <p class="desc-lead">
+    ブックマークやタブを長く使っていると、リンク切れのURL、同じページを何度も開いてしまう重複タブが溜まっていきます。
+    LB TAB Layersのダッシュボードは、これらの問題を<strong>自動で検出</strong>して表示します。<br><br>
+    <strong>リンク切れチェック</strong>は保存済みのURLをスキャンし、404エラーや接続できないページをハイライト。
+    <strong>重複整理</strong>は同じURLのタブを検出し、ワンクリックで統合できます。
+    <strong>フォーカスタイマー</strong>を使えば、ポモドーロのように集中時間を管理しながら作業できます。
+  </p>
+  <ul class="desc-merits">
+    <li><strong>全グループ俯瞰</strong> — グループ数、タブ数、アクティブ率をひと目で把握</li>
+    <li><strong>リンク切れ検出</strong> — 死んだURLを自動発見。古いブックマークの掃除が簡単に</li>
+    <li><strong>重複タブ統合</strong> — 同じページを複数開いている場合に検出・統合を提案</li>
+    <li><strong>フォーカスタイマー</strong> — ポモドーロ対応の集中タイマー。作業効率をサイドパネル内で管理</li>
+  </ul>
+  <div class="desc-target">
+    <div class="desc-target-label">🎯 こんな方にぴったり</div>
+    <p>
+      <strong>大量のブックマークを持つ情報収集家</strong> — 何年もかけて溜めたブックマークの中にリンク切れが潜んでいないか、自動で健康チェック。<br><br>
+      <strong>メモリ不足に悩む方</strong> — 重複タブの検出・統合でメモリ使用量を削減。特にChromebookユーザーに効果的。<br><br>
+      <strong>集中力を維持したい在宅ワーカー</strong> — フォーカスタイマーでポモドーロ・テクニックを実践。タブ管理画面から離れずに時間管理。
+    </p>
+  </div>
+</div>
+
+<div class="demo-next">
+  <a href="rss-timeline.html">次へ: 📰 RSS タイムライン →</a>
+</div>
+
+</body>
+</html>

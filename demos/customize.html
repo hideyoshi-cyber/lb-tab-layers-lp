@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎨 カスタマイズ — LB TAB Layers Feature Demo</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+/* ===== Sidepanel open/close animation ===== */
+@keyframes panelSlideIn{
+  0%,15%{width:0;opacity:0;border-left-width:0;}
+  25%,70%{width:300px;opacity:1;border-left-width:1px;}
+  80%,100%{width:0;opacity:0;border-left-width:0;}
+}
+@keyframes pageExpand{
+  0%,15%{flex:1;}
+  25%,70%{flex:1;}
+  80%,100%{flex:1;}
+}
+@keyframes iconPulse{
+  0%,15%{color:#8A94A6;transform:scale(1);}
+  20%,25%{color:#FF6B6B;transform:scale(1.3);}
+  30%,70%{color:#FF6B6B;transform:scale(1);}
+  75%,80%{color:#FF6B6B;transform:scale(1.3);}
+  85%,100%{color:#8A94A6;transform:scale(1);}
+}
+#scene0 .slide-panel{overflow:hidden;animation:panelSlideIn 8s infinite;width:0;}
+#scene0 .slide-panel>*{min-width:300px;}
+#scene0 .browser-bar{opacity:0.5;}
+#scene0 .sp-icon-toggle{animation:iconPulse 8s infinite;font-size:14px;cursor:pointer;display:flex;align-items:center;}
+@keyframes arrowHint{
+  0%,15%{opacity:1;transform:translateX(0);}
+  25%,70%{opacity:0;transform:translateX(10px);}
+  80%,100%{opacity:1;transform:translateX(0);}
+}
+#scene0 .open-hint{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:10px;color:#FF6B6B;font-weight:700;animation:arrowHint 8s infinite;pointer-events:none;}
+
+/* Theme switching animation */
+@keyframes themeSwitch{
+  0%,20%{--t-bg:#F8F9FA;--t-ac:#FF6B6B;--t-head:#fff;--t-border:rgba(255,107,107,0.12);}
+  25%,45%{--t-bg:#1a1a2e;--t-ac:#e94560;--t-head:#16213e;--t-border:rgba(233,69,96,0.2);}
+  50%,70%{--t-bg:#f0f5e6;--t-ac:#6b8e23;--t-head:#fff;--t-border:rgba(107,142,35,0.15);}
+  75%,95%{--t-bg:#fdf6ec;--t-ac:#d4a574;--t-head:#fff;--t-border:rgba(212,165,116,0.15);}
+  100%{--t-bg:#F8F9FA;--t-ac:#FF6B6B;--t-head:#fff;--t-border:rgba(255,107,107,0.12);}
+}
+#scene1 .browser-bar{opacity:0.35;}
+#scene1 .page-content{opacity:0.2;filter:grayscale(0.5);}
+#scene1 .theme-panel{animation:themeSwitch 12s infinite;background:var(--t-bg);transition:background 0.8s;}
+#scene1 .theme-panel .sp-head{background:var(--t-head);transition:background 0.8s;}
+#scene1 .theme-panel .folder{border-color:var(--t-border);transition:border-color 0.8s;}
+#scene1 .theme-panel .sp-tab-item.active{color:var(--t-ac);border-bottom-color:var(--t-ac);transition:all 0.8s;}
+#scene1 .theme-panel .plus-btn{background:var(--t-ac);transition:background 0.8s;}
+#scene1 .theme-panel .folder-count{color:var(--t-ac);transition:color 0.8s;}
+
+/* Theme swatch grid */
+.theme-swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:6px;margin-bottom:6px;}
+.theme-swatch{height:18px;border-radius:4px;cursor:default;transition:all 0.3s;border:2px solid transparent;}
+.theme-swatch:hover{transform:scale(1.1);}
+.theme-swatch.active-swatch{border-color:#2B303A;transform:scale(1.15);}
+@keyframes swatchCycle{
+  0%,20%{border-color:#FF6B6B;}
+  25%,45%{border-color:#e94560;}
+  50%,70%{border-color:#6b8e23;}
+  75%,95%{border-color:#d4a574;}
+  100%{border-color:#FF6B6B;}
+}
+.theme-swatch.cycling{animation:swatchCycle 12s infinite;border-width:2px;border-style:solid;}
+
+/* Panel position animation */
+@keyframes panelSlideToLeft{
+  0%,40%{flex-direction:row;}
+  50%,90%{flex-direction:row-reverse;}
+  100%{flex-direction:row;}
+}
+#scene2 .page-content{opacity:0.35;}
+#scene2 .browser-bar{opacity:0.35;}
+.panel-switch-body{display:flex;height:420px;position:relative;overflow:hidden;}
+.panel-pos-left,.panel-pos-right{position:absolute;inset:0;display:flex;transition:opacity 0.6s;}
+.panel-pos-right{opacity:1;animation:posSwitch 8s infinite;}
+.panel-pos-left{opacity:0;animation:posSwitchAlt 8s infinite;}
+@keyframes posSwitch{
+  0%,35%{opacity:1;}
+  40%,85%{opacity:0;}
+  90%,100%{opacity:1;}
+}
+@keyframes posSwitchAlt{
+  0%,35%{opacity:0;}
+  40%,85%{opacity:1;}
+  90%,100%{opacity:0;}
+}
+/* Settings panel highlight */
+.settings-section{padding:8px;font-size:10px;}
+.settings-group{margin-bottom:8px;}
+.settings-group-title{font-size:10px;font-weight:700;color:#2B303A;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.settings-row{display:flex;align-items:center;gap:8px;padding:4px 8px;background:#fff;border:1px solid rgba(0,0,0,0.04);border-radius:6px;margin-bottom:3px;}
+.settings-label{font-size:10px;color:#5C6370;flex:1;}
+.settings-toggle{display:flex;gap:2px;}
+.settings-opt{font-size:9px;padding:3px 10px;border-radius:4px;background:#f0edea;color:#8A94A6;font-weight:600;cursor:default;transition:all 0.3s;}
+.settings-opt.sel{background:#FF6B6B;color:#fff;}
+@keyframes optSwitch{
+  0%,35%{background:#FF6B6B;color:#fff;}
+  40%,85%{background:#f0edea;color:#8A94A6;}
+  90%,100%{background:#FF6B6B;color:#fff;}
+}
+@keyframes optSwitchAlt{
+  0%,35%{background:#f0edea;color:#8A94A6;}
+  40%,85%{background:#FF6B6B;color:#fff;}
+  90%,100%{background:#f0edea;color:#8A94A6;}
+}
+#scene2 .opt-right{animation:optSwitch 8s infinite;}
+#scene2 .opt-left{animation:optSwitchAlt 8s infinite;}
+
+/* Language switch */
+@keyframes langSwitch{
+  0%,15%{content:'タブを検索...';}
+  20%,35%{content:'Search tabs...';}
+  40%,55%{content:'탭 검색...';}
+  60%,75%{content:'搜索标签...';}
+  80%,95%{content:'Onglets...';}
+  100%{content:'タブを検索...';}
+}
+</style>
+<script>if(window!==window.top)document.documentElement.classList.add('is-embed');</script>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html">🔖 ブックマーク</a>
+    <a href="search-organize.html">🔍 検索・整理</a>
+    <a href="dashboard.html">📊 ダッシュボード</a>
+    <a href="rss-timeline.html">📰 RSS</a>
+    <a href="timer-clock.html">⏱ タイマー</a>
+    <a href="customize.html" class="active">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="demo-hero">
+  <div class="demo-hero-badge">Personalization</div>
+  <h1>🎨 自分だけの<em>作業空間</em>に</h1>
+  <p>サイドパネルの開閉、40種類のテーマ、8言語対応、パネルの左右切替。<br>あなたの好みに合わせてカスタマイズできます。</p>
+</div>
+
+<!-- ===== SCENE 0: Sidepanel Open/Close ===== -->
+<div class="demo-section" id="scene0">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+        <div class="browser-tab"><div class="fav" style="background:#ea4335;"></div> Gmail</div>
+        <div class="browser-tab"><div class="fav" style="background:#4285F4;"></div> Google</div>
+      </div>
+      <div class="sp-icon-toggle" title="サイドパネル切替">◧</div>
+    </div>
+    <div class="browser-body" style="position:relative;">
+      <div class="page-content" style="flex:1;">
+        <div class="page-news">
+          <div class="n-header"><div class="n-logo"></div><div class="n-nav"><span></span><span></span></div></div>
+          <div class="n-body">
+            <div class="n-main"><div class="n-hero-img" style="background:linear-gradient(135deg,#2d333b,#1f2328);"></div><div class="n-hero-title"></div><div class="n-hero-desc"></div>
+              <div class="n-articles">
+                <div class="n-article"><div class="n-thumb"></div><div class="n-lines"><div class="n-line"></div><div class="n-line short"></div></div></div>
+                <div class="n-article"><div class="n-thumb"></div><div class="n-lines"><div class="n-line"></div><div class="n-line short"></div></div></div>
+              </div>
+            </div>
+            <div class="n-sidebar"><div class="n-ad"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidepanel slide-panel">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">TAB Layers</span><div class="sp-icons"><div class="sp-icon"></div></div></div>
+        <div class="sp-search">🔍 タブを検索...</div>
+        <div class="sp-body">
+          <div class="folder">
+            <div class="folder-head"><span class="folder-chevron">▼</span><span class="folder-icon">📁</span> 開発用 <span class="folder-count">3</span><div class="plus-btn">+</div></div>
+            <div class="folder-tabs">
+              <div class="tab-row"><div class="tab-fav" style="background:#333;"></div><span class="tab-title">GitHub — Dashboard</span></div>
+              <div class="tab-row"><div class="tab-fav" style="background:#e44d26;"></div><span class="tab-title">MDN — CSS Grid</span></div>
+              <div class="tab-row"><div class="tab-fav" style="background:#3178c6;"></div><span class="tab-title">TypeScript Docs</span></div>
+            </div>
+          </div>
+          <div class="folder">
+            <div class="folder-head"><span class="folder-chevron">▶</span><span class="folder-icon">📁</span> リサーチ <span class="folder-count">5</span></div>
+          </div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">単独タブ <span class="sp-tab-cnt">3</span></div><div class="sp-tab-item">本日の履歴</div></div>
+      </div>
+      <div class="open-hint">◀ パネルを開く</div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">1</span> サイドパネルの開閉</h3>
+  <p>Chromeのツールバーアイコンをクリックするだけで、サイドパネルがスライドイン/アウト。必要なときだけ表示し、使わないときは収納して画面を広く使えます。</p>
+</div>
+
+<!-- ===== SCENE 1: Theme Switch ===== -->
+<div class="demo-section" id="scene1">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+        <div class="browser-tab"><div class="fav" style="background:#4285F4;"></div> Google</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-search">
+          <div class="s-logo"></div>
+          <div class="s-bar"><div class="s-icon"></div><div class="s-text"></div></div>
+          <div class="s-btns"><div class="s-btn"></div><div class="s-btn"></div></div>
+        </div>
+      </div>
+      <div class="sidepanel theme-panel">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">TAB Layers</span></div>
+        <div class="theme-swatches">
+          <div class="theme-swatch cycling" style="background:linear-gradient(135deg,#FF6B6B,#FF8E8E);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#e94560,#c2185b);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#6b8e23,#8fbc8f);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#d4a574,#deb887);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#4a90d9,#6db3f2);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#9c27b0,#ba68c8);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#00bcd4,#4dd0e1);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#ff9800,#ffb74d);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#607d8b,#90a4ae);"></div>
+          <div class="theme-swatch" style="background:linear-gradient(135deg,#1a1a2e,#16213e);"></div>
+        </div>
+        <div class="sp-search">🔍 タブを検索...</div>
+        <div class="sp-body">
+          <div class="folder">
+            <div class="folder-head">
+              <span class="folder-chevron">▼</span><span class="folder-icon">📁</span> 開発用
+              <span class="folder-count">3</span>
+              <div class="plus-btn">+</div>
+            </div>
+            <div class="folder-tabs">
+              <div class="tab-row"><div class="tab-fav" style="background:#333;"></div><span class="tab-title">GitHub — Dashboard</span></div>
+              <div class="tab-row"><div class="tab-fav" style="background:#e44d26;"></div><span class="tab-title">MDN — CSS Grid</span></div>
+            </div>
+          </div>
+          <div class="folder">
+            <div class="folder-head"><span class="folder-chevron">▶</span><span class="folder-icon">📁</span> リサーチ <span class="folder-count">5</span></div>
+          </div>
+        </div>
+        <div class="sp-tabbar">
+          <div class="sp-tab-item active">単独タブ <span class="sp-tab-cnt">2</span></div>
+          <div class="sp-tab-item">本日の履歴</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">2</span> 40+テーマカラー切替</h3>
+  <p>Warm、Dark、Pastel、Neonなど4０種類以上のテーマを用意。クリックだけで即座にプレビューされ、気分や作業環境に合わせていつでも切り替えられます。</p>
+</div>
+
+<!-- ===== SCENE 2: Panel Position ===== -->
+<div class="demo-section" id="scene2">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+      </div>
+    </div>
+    <div class="panel-switch-body">
+      <!-- Right position -->
+      <div class="panel-pos-right">
+        <div class="page-content">
+          <div class="page-news">
+            <div class="n-header"><div class="n-logo"></div></div>
+            <div class="n-body"><div class="n-main"><div class="n-hero-img" style="background:linear-gradient(135deg,#2d333b,#1f2328);"></div><div class="n-hero-title"></div></div></div>
+          </div>
+        </div>
+        <div class="sidepanel">
+          <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">⚙ 設定</span></div>
+          <div class="settings-section">
+            <div class="settings-group">
+              <div class="settings-group-title">🎨 デザイン</div>
+              <div class="settings-row">
+                <span class="settings-label">パネル位置</span>
+                <div class="settings-toggle">
+                  <div class="settings-opt opt-left">← 左</div>
+                  <div class="settings-opt opt-right sel">右 →</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sp-body" style="padding-top:0;">
+            <div class="folder"><div class="folder-head"><span class="folder-chevron">▶</span><span class="folder-icon">📁</span> 開発用 <span class="folder-count">3</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Left position -->
+      <div class="panel-pos-left">
+        <div class="sidepanel" style="border-left:none;border-right:1px solid rgba(0,0,0,0.06);">
+          <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">⚙ 設定</span></div>
+          <div class="settings-section">
+            <div class="settings-group">
+              <div class="settings-group-title">🎨 デザイン</div>
+              <div class="settings-row">
+                <span class="settings-label">パネル位置</span>
+                <div class="settings-toggle">
+                  <div class="settings-opt sel">← 左</div>
+                  <div class="settings-opt">右 →</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sp-body" style="padding-top:0;">
+            <div class="folder"><div class="folder-head"><span class="folder-chevron">▶</span><span class="folder-icon">📁</span> 開発用 <span class="folder-count">3</span></div></div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="page-news">
+            <div class="n-header"><div class="n-logo"></div></div>
+            <div class="n-body"><div class="n-main"><div class="n-hero-img" style="background:linear-gradient(135deg,#2d333b,#1f2328);"></div><div class="n-hero-title"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">3</span> サイドパネル左右切替</h3>
+  <p>設定画面の「デザイン」セクションから、パネル位置を「左」または「右」に切替。利き手やモニター配置に合わせて、最適なレイアウトを選べます。</p>
+</div>
+
+<div class="feature-desc">
+  <h2><span class="desc-icon">🎨</span> 40テーマ × パネル位置 × 8言語</h2>
+  <p class="desc-lead">
+    毎日使うツールだからこそ、見た目にもこだわりたい。
+    LB TAB Layersは<strong>40種類以上のテーマカラー</strong>を用意しています。
+    温かみのあるWarmテーマ、洗練されたDarkテーマ、ポップなPastelテーマ…
+    あなたの気分や作業環境に合わせて、いつでも切り替えられます。<br><br>
+    サイドパネルの位置も<strong>左右を自由に変更</strong>可能。
+    設定画面の「デザイン」セクションから、パネル位置を「左」または「右」に切り替えるだけ。
+    利き手やモニターの配置に合わせて、最適なレイアウトを選べます。<br><br>
+    さらに、<strong>8言語対応</strong>（日本語、英語、韓国語、中国語繁体、中国語簡体、フランス語、スペイン語、ポルトガル語）で、世界中のユーザーに使っていただけます。
+  </p>
+  <ul class="desc-merits">
+    <li><strong>サイドパネル開閉</strong> — Chromeのサイドパネルとして動作。ツールバーのアイコンをクリックするだけでスライドイン/アウト。必要なときだけ表示し、邪魔にならない</li>
+    <li><strong>40+テーマ</strong> — Warm、Dark、Pastel、Lux、Neon…豊富なカラーバリエーション。ダークモード対応も</li>
+    <li><strong>パネル位置変更</strong> — 設定 → デザインから左右を切替。利き手やデュアルモニター配置に対応</li>
+    <li><strong>8言語対応</strong> — 日/英/韓/中(繁)/中(簡)/仏/西/葡。UIが母国語で表示される安心感</li>
+    <li><strong>即時プレビュー</strong> — テーマ選択時にリアルタイムで色が変わる。保存前に仕上がりを確認</li>
+  </ul>
+  <div class="desc-target">
+    <div class="desc-target-label">🎯 こんな方にぴったり</div>
+    <p>
+      <strong>UI美観にこだわる方</strong> — ブラウザのデフォルトデザインに満足できない方。40テーマから自分だけの配色を見つけてください。<br><br>
+      <strong>左利きの方</strong> — サイドパネルを左側に配置すれば、マウスとの距離が近くなり操作しやすくなります。<br><br>
+      <strong>海外ユーザー</strong> — 英語、フランス語、スペイン語など8言語対応。母国語でストレスなく使えます。
+    </p>
+  </div>
+</div>
+
+<div class="demo-next">
+  <a href="index.html">← 機能一覧に戻る</a>
+</div>
+
+</body>
+</html>

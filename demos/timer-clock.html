@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⏱ タイマー / 時計 — LB TAB Layers Feature Demo</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+#scene1 .page-content{opacity:0.15;filter:grayscale(0.6);}
+#scene1 .browser-bar{opacity:0.25;}
+#scene1 .sp-head{opacity:0.4;}
+#scene1 .sp-search{opacity:0.3;}
+
+/* Clock display */
+.clock-area{text-align:center;padding:20px 12px;}
+.clock-digital{font-size:48px;font-weight:800;color:#2B303A;letter-spacing:2px;font-variant-numeric:tabular-nums;margin-bottom:4px;}
+.clock-date{font-size:11px;color:#8A94A6;margin-bottom:20px;}
+.clock-colon{animation:colonBlink 1s infinite;}
+@keyframes colonBlink{0%,49%{opacity:1;}50%,100%{opacity:0.2;}}
+
+/* Pomodoro timer */
+.pomo-area{padding:0 16px;}
+.pomo-title{font-size:11px;font-weight:700;color:#2B303A;margin-bottom:10px;display:flex;align-items:center;gap:5px;}
+.pomo-ring{width:120px;height:120px;border-radius:50%;border:6px solid #f0edea;margin:0 auto 12px;position:relative;display:flex;align-items:center;justify-content:center;}
+.pomo-ring::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:6px solid transparent;border-top-color:#FF6B6B;animation:pomoRotate 25s linear infinite;}
+@keyframes pomoRotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+.pomo-time{font-size:28px;font-weight:800;color:#FF6B6B;font-variant-numeric:tabular-nums;}
+.pomo-label{font-size:10px;color:#8A94A6;text-align:center;margin-bottom:8px;}
+.pomo-controls{display:flex;justify-content:center;gap:8px;margin-bottom:16px;}
+.pomo-btn{width:28px;height:28px;border-radius:50%;border:none;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;}
+.pomo-btn.play{background:#FF6B6B;color:#fff;}
+.pomo-btn.stop{background:#f0edea;color:#8A94A6;}
+
+/* Alarm list */
+.alarm-list{padding:0 16px 12px;}
+.alarm-title{font-size:10px;font-weight:700;color:#8A94A6;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
+.alarm-item{display:flex;align-items:center;gap:8px;padding:6px 8px;background:#fff;border:1px solid rgba(0,0,0,0.04);border-radius:8px;margin-bottom:4px;font-size:10px;}
+.alarm-time{font-size:14px;font-weight:700;color:#2B303A;font-variant-numeric:tabular-nums;}
+.alarm-label{font-size:10px;color:#8A94A6;flex:1;}
+.alarm-toggle{width:28px;height:16px;border-radius:8px;background:#34a853;position:relative;}
+.alarm-toggle::after{content:'';position:absolute;right:2px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;}
+.alarm-toggle.off{background:#ddd;}
+.alarm-toggle.off::after{right:auto;left:2px;}
+</style>
+<script>if(window!==window.top)document.documentElement.classList.add('is-embed');</script>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html">🔖 ブックマーク</a>
+    <a href="search-organize.html">🔍 検索・整理</a>
+    <a href="dashboard.html">📊 ダッシュボード</a>
+    <a href="rss-timeline.html">📰 RSS</a>
+    <a href="timer-clock.html" class="active">⏱ タイマー</a>
+    <a href="customize.html">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="demo-hero">
+  <div class="demo-hero-badge">Productivity</div>
+  <h1>⏱ 時計とタイマーで<em>集中する</em></h1>
+  <p>デジタル時計、ポモドーロタイマー、アラーム。<br>タブ管理しながら時間管理も、サイドパネルで完結。</p>
+</div>
+
+<div class="demo-section" id="scene1">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+        <div class="browser-tab"><div class="fav" style="background:#e44d26;"></div> MDN</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-news">
+          <div class="n-header"><div class="n-logo"></div><div class="n-nav"><span></span><span></span></div></div>
+          <div class="n-body">
+            <div class="n-main"><div class="n-hero-img" style="background:linear-gradient(135deg,#2d333b,#1f2328);"></div><div class="n-hero-title"></div></div>
+            <div class="n-sidebar"><div class="n-ad"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidepanel">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">⏱ 時計・タイマー</span></div>
+        <div class="sp-body" style="padding:0;">
+          <!-- Clock -->
+          <div class="clock-area">
+            <div class="clock-digital">14<span class="clock-colon">:</span>38</div>
+            <div class="clock-date">2026年7月24日（木）</div>
+          </div>
+          <!-- Pomodoro -->
+          <div class="pomo-area">
+            <div class="pomo-title">🍅 ポモドーロタイマー</div>
+            <div class="pomo-ring">
+              <div class="pomo-time">24:38</div>
+            </div>
+            <div class="pomo-label">フォーカス中 — あと 24分</div>
+            <div class="pomo-controls">
+              <div class="pomo-btn stop">⏸</div>
+              <div class="pomo-btn play">▶</div>
+              <div class="pomo-btn stop">⏹</div>
+            </div>
+          </div>
+          <!-- Alarms -->
+          <div class="alarm-list">
+            <div class="alarm-title">⏰ アラーム</div>
+            <div class="alarm-item"><span class="alarm-time">15:00</span><span class="alarm-label">ミーティング</span><div class="alarm-toggle"></div></div>
+            <div class="alarm-item"><span class="alarm-time">18:00</span><span class="alarm-label">退勤</span><div class="alarm-toggle off"></div></div>
+          </div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">時計</div><div class="sp-tab-item">タイマー</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">1</span> デジタル時計 ＆ ポモドーロタイマー</h3>
+  <p>サイドパネルに常時表示の時計と、25分集中/5分休憩のポモドーロタイマーを内蔵。アラーム設定でミーティングの見逃しも防止。作業画面を離れずに時間管理ができます。</p>
+</div>
+
+<div class="feature-desc">
+  <h2><span class="desc-icon">⏱</span> 作業画面を離れずに、時間を管理</h2>
+  <p class="desc-lead">
+    作業に集中していると、時間を忘れてしまうことはありませんか？
+    ミーティングの時間を過ぎてしまったり、休憩を取り忘れたり…。<br><br>
+    LB TAB Layersの<strong>時計・タイマー機能</strong>は、サイドパネル内にデジタル時計と
+    ポモドーロタイマーを内蔵しています。わざわざスマホや別のアプリを確認する必要がありません。
+    タブを管理しながら、視線の端で時間を把握できます。<br><br>
+    <strong>ポモドーロタイマー</strong>は25分の集中と5分の休憩を繰り返すテクニックに対応。
+    タイマー完了時にはアラーム通知でお知らせします。
+  </p>
+  <ul class="desc-merits">
+    <li><strong>常時表示の時計</strong> — サイドパネルに時刻を常時表示。フルスクリーン作業中でも時間が見える</li>
+    <li><strong>ポモドーロ対応</strong> — 25分集中 / 5分休憩のサイクルを自動管理。カスタム時間設定も可能</li>
+    <li><strong>アラーム機能</strong> — ミーティングや締切のリマインダーをセット。ブラウザ通知でお知らせ</li>
+    <li><strong>タブ管理と統合</strong> — 作業コンテキストの切替とタイマーを同じサイドパネルで。ツールの行き来が不要</li>
+  </ul>
+  <div class="desc-target">
+    <div class="desc-target-label">🎯 こんな方にぴったり</div>
+    <p>
+      <strong>ポモドーロ・テクニック実践者</strong> — 集中と休憩のリズムをブラウザ内で完結。別アプリのインストール不要。<br><br>
+      <strong>在宅ワーカー</strong> — オフィスの時計がない環境で、サイドパネルが時計代わりに。ミーティングの見逃しも防止。<br><br>
+      <strong>Chromebookユーザー</strong> — アプリのインストールが制限された環境でも、ブラウザ拡張でタイマー機能が使えます。
+    </p>
+  </div>
+</div>
+
+<div class="demo-next">
+  <a href="customize.html">次へ: 🎨 カスタマイズ →</a>
+</div>
+
+</body>
+</html>

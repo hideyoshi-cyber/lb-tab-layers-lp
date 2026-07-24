@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔍 検索・整理 — LB TAB Layers Feature Demo</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+/* Search typing animation */
+@keyframes typing{0%{width:0;}100%{width:100%;}}
+@keyframes cursorBlink{0%,100%{border-right-color:#FF6B6B;}50%{border-right-color:transparent;}}
+#scene1 .page-content{opacity:0.15;filter:grayscale(0.6);}
+#scene1 .browser-bar{opacity:0.25;}
+#scene1 .sp-head{opacity:0.4;}
+#scene1 .sp-tabbar{opacity:0.3;}
+.search-active{background:#fff !important;border-color:#FF6B6B !important;box-shadow:0 0 0 2px rgba(255,107,107,0.15);}
+.search-typing{display:inline-block;overflow:hidden;white-space:nowrap;border-right:2px solid #FF6B6B;animation:typing 2s 0.5s steps(12) both, cursorBlink 0.8s 2.5s infinite;}
+.search-results{margin-top:4px;}
+.search-results .sr-item{display:flex;align-items:center;gap:5px;padding:5px 8px;border-radius:6px;font-size:11px;color:#5C6370;opacity:0;transition:all 0.3s;}
+.search-results .sr-item:nth-child(1){animation:fadeSlideUp 0.3s 2.2s both;}
+.search-results .sr-item:nth-child(2){animation:fadeSlideUp 0.3s 2.4s both;}
+.search-results .sr-item:nth-child(3){animation:fadeSlideUp 0.3s 2.6s both;}
+.search-results .sr-item .sr-match{color:#FF6B6B;font-weight:600;}
+.search-results .sr-item .sr-group{font-size:9px;color:#8A94A6;margin-left:auto;background:rgba(0,0,0,0.04);padding:1px 6px;border-radius:8px;}
+.ai-badge{font-size:8px;background:linear-gradient(135deg,#FF6B6B,#FF8E53);color:#fff;padding:1px 5px;border-radius:6px;font-weight:700;margin-left:4px;}
+
+/* Tags & Rank - staged animation (18s cycle) */
+#scene2 .page-content{opacity:0.15;filter:grayscale(0.6);}
+#scene2 .browser-bar{opacity:0.25;}
+#scene2 .sp-head{opacity:0.4;}
+#scene2 .sp-search{opacity:0.3;}
+#scene2 .sp-tabbar{opacity:0.3;}
+
+/* Tag styles */
+.tag{display:inline-block;font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;margin:1px 2px;}
+.tag.blue{background:rgba(66,133,244,0.1);color:#4285F4;}
+.tag.red{background:rgba(255,107,107,0.1);color:#FF6B6B;}
+.tag.green{background:rgba(52,168,83,0.1);color:#34a853;}
+.rank-stars{font-size:10px;color:#FBBC05;margin-left:auto;letter-spacing:-1px;}
+
+/* Step indicator */
+.step-indicator{position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:6px;background:rgba(255,255,255,0.95);padding:4px 12px;border-radius:20px;box-shadow:0 2px 12px rgba(0,0,0,0.1);font-size:10px;font-weight:700;}
+.step-dot{display:flex;align-items:center;gap:3px;color:#ccc;transition:color 0.3s;}
+.step-dot .s-num{width:16px;height:16px;border-radius:50%;background:#e0e0e0;color:#fff;display:flex;align-items:center;justify-content:center;font-size:8px;transition:background 0.3s;}
+
+/* 18s cycle: 0-5s=Step1(tags), 6-10s=Step2(ranks), 11-16s=Step3(sort), 17-18s=reset */
+/* Step indicator highlights */
+@keyframes step1Active{0%,5%{color:#FF6B6B;}33%,100%{color:#ccc;}}
+@keyframes step2Active{0%,33%{color:#ccc;}34%,60%{color:#FF6B6B;}61%,100%{color:#ccc;}}
+@keyframes step3Active{0%,61%{color:#ccc;}62%,94%{color:#FF6B6B;}95%,100%{color:#ccc;}}
+@keyframes step1Num{0%,5%{background:#FF6B6B;}33%,100%{background:#e0e0e0;}}
+@keyframes step2Num{0%,33%{background:#e0e0e0;}34%,60%{background:#FF6B6B;}61%,100%{background:#e0e0e0;}}
+@keyframes step3Num{0%,61%{background:#e0e0e0;}62%,94%{background:#FF6B6B;}95%,100%{background:#e0e0e0;}}
+#scene2 .step-1{animation:step1Active 18s infinite;}
+#scene2 .step-1 .s-num{animation:step1Num 18s infinite;}
+#scene2 .step-2{animation:step2Active 18s infinite;}
+#scene2 .step-2 .s-num{animation:step2Num 18s infinite;}
+#scene2 .step-3{animation:step3Active 18s infinite;}
+#scene2 .step-3 .s-num{animation:step3Num 18s infinite;}
+
+/* Step 1: Tags appear one by one (0-5s) */
+@keyframes tagAppear{
+  0%,5%{opacity:0;transform:scale(0.5);}
+  8%,28%{opacity:1;transform:scale(1);}
+  94%,100%{opacity:0;transform:scale(0.5);}
+}
+#scene2 .tag-1{opacity:0;animation:tagAppear 18s 0s infinite;}
+#scene2 .tag-2{opacity:0;animation:tagAppear 18s 1s infinite;}
+#scene2 .tag-3{opacity:0;animation:tagAppear 18s 2s infinite;}
+
+/* Step 2: Stars light up (6-10s) */
+@keyframes starsLight{
+  0%,33%{opacity:0.15;filter:grayscale(1);}
+  38%,56%{opacity:1;filter:grayscale(0);}
+  94%,100%{opacity:0.15;filter:grayscale(1);}
+}
+@keyframes starGlow{
+  0%,33%{text-shadow:none;}
+  40%,56%{text-shadow:0 0 8px rgba(251,188,5,0.5);}
+  94%,100%{text-shadow:none;}
+}
+#scene2 .stars-row1{opacity:0.15;animation:starsLight 18s 0s infinite;}
+#scene2 .stars-row2{opacity:0.15;animation:starsLight 18s 0.8s infinite;}
+#scene2 .stars-row3{opacity:0.15;animation:starsLight 18s 1.6s infinite;}
+#scene2 .stars-row1,#scene2 .stars-row2,#scene2 .stars-row3{animation-name:starsLight, starGlow;}
+
+/* Step 3: Auto-sort - rows swap positions (11-16s) */
+/* Row A (Instagram ★) moves down, Row B (Twitter ★★★) moves up */
+@keyframes sortUp{
+  0%,61%{transform:translateY(0);background:transparent;}
+  66%,88%{transform:translateY(-44px);background:rgba(255,107,107,0.06);}
+  94%,100%{transform:translateY(0);background:transparent;}
+}
+@keyframes sortMid{
+  0%,61%{transform:translateY(0);background:transparent;}
+  66%,88%{transform:translateY(-22px);background:rgba(255,107,107,0.04);}
+  94%,100%{transform:translateY(0);background:transparent;}
+}
+@keyframes sortDown{
+  0%,61%{transform:translateY(0);background:transparent;}
+  66%,88%{transform:translateY(44px);background:rgba(255,107,107,0.04);}
+  94%,100%{transform:translateY(0);background:transparent;}
+}
+/* Before sort: Instagram(★), YouTube(★★), Twitter(★★★) → After: Twitter(★★★), YouTube(★★), Instagram(★) */
+#scene2 .sort-row-1{animation:sortDown 18s infinite;}
+#scene2 .sort-row-2{animation:sortMid 18s infinite;animation-direction:normal;}
+#scene2 .sort-row-3{animation:sortUp 18s infinite;}
+
+/* Sort label */
+@keyframes sortLabelShow{
+  0%,61%{opacity:0;transform:translateX(-50%) translateY(4px);}
+  64%,88%{opacity:1;transform:translateX(-50%) translateY(0);}
+  94%,100%{opacity:0;transform:translateX(-50%) translateY(4px);}
+}
+.sort-label{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;color:#FF6B6B;background:rgba(255,107,107,0.08);padding:3px 10px;border-radius:10px;white-space:nowrap;opacity:0;animation:sortLabelShow 18s infinite;}
+</style>
+<script>if(window!==window.top)document.documentElement.classList.add('is-embed');</script>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html">🔖 ブックマーク</a>
+    <a href="search-organize.html" class="active">🔍 検索・整理</a>
+    <a href="dashboard.html">📊 ダッシュボード</a>
+    <a href="rss-timeline.html">📰 RSS</a>
+    <a href="timer-clock.html">⏱ タイマー</a>
+    <a href="customize.html">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="demo-hero">
+  <div class="demo-hero-badge">Smart Search</div>
+  <h1>🔍 AIで<em>見つける</em>、タグで<em>整える</em></h1>
+  <p>100個以上のタブでも瞬時に検索。AIが文脈を理解してサジェスト。<br>#タグと★ランクで優先度を可視化します。</p>
+</div>
+
+<!-- ===== SCENE 1: AI Search ===== -->
+<div class="demo-section" id="scene1">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+        <div class="browser-tab"><div class="fav" style="background:#e44d26;"></div> MDN</div>
+        <div class="browser-tab"><div class="fav" style="background:#3178c6;"></div> TS Docs</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-news">
+          <div class="n-header"><div class="n-logo"></div><div class="n-nav"><span></span><span></span></div></div>
+          <div class="n-body">
+            <div class="n-main"><div class="n-hero-img" style="background:linear-gradient(135deg,#2d333b,#1f2328);"></div><div class="n-hero-title"></div><div class="n-hero-desc"></div></div>
+            <div class="n-sidebar"><div class="n-ad"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidepanel">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">TAB Layers</span></div>
+        <div class="sp-search search-active">🔍 <span class="search-typing">CSS レイアウト</span><span class="ai-badge">AI</span></div>
+        <div class="sp-body">
+          <div class="search-results">
+            <div class="sr-item"><div class="tab-fav" style="background:#e44d26;"></div> MDN — <span class="sr-match">CSS</span> Grid <span class="sr-group">開発用</span></div>
+            <div class="sr-item"><div class="tab-fav" style="background:#333;"></div> GitHub — <span class="sr-match">CSS</span> Tricks <span class="sr-group">リサーチ</span></div>
+            <div class="sr-item"><div class="tab-fav" style="background:#3178c6;"></div> Flexbox <span class="sr-match">レイアウト</span>ガイド <span class="sr-group">リサーチ</span></div>
+          </div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">単独タブ</div><div class="sp-tab-item">本日の履歴</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">1</span> AI検索（Beta）</h3>
+  <p>検索バーにキーワードを入力すると、AIが文脈を理解して関連タブをサジェスト。「CSS レイアウト」で検索すれば、FlexboxやGridのタブも候補に表示されます。</p>
+</div>
+
+<!-- ===== SCENE 2: Tags → Rank → Auto-sort (staged) ===== -->
+<div class="demo-section" id="scene2">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#1da1f2;"></div> Twitter</div>
+        <div class="browser-tab"><div class="fav" style="background:#ff0000;"></div> YouTube</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-sns">
+          <div class="sns-header"><div class="sns-avatar"></div><span class="sns-name">@user</span></div>
+          <div class="sns-feed">
+            <div class="sns-post">
+              <div class="sns-post-header"><div class="sns-post-avatar" style="background:#1da1f2;"></div><span class="sns-post-name">Post</span></div>
+              <div class="sns-post-text"></div><div class="sns-post-text short"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidepanel" style="position:relative;">
+        <!-- Step indicator -->
+        <div class="step-indicator">
+          <div class="step-dot step-1"><span class="s-num">1</span> タグ付け</div>
+          <div class="step-dot step-2"><span class="s-num">2</span> ランク</div>
+          <div class="step-dot step-3"><span class="s-num">3</span> 自動整列</div>
+        </div>
+        <div class="sp-head" style="margin-top:28px;"><div class="sp-logo"></div><span class="sp-name">TAB Layers</span></div>
+        <div class="sp-search">🔍 タブを検索...</div>
+        <div class="sp-body" style="position:relative;">
+          <div class="folder">
+            <div class="folder-head"><span class="folder-chevron">▼</span><span class="folder-icon">📁</span> SNS運用 <span class="folder-count">3</span></div>
+            <div class="folder-tabs">
+              <!-- Row 1: Instagram (initially top, moves to bottom in sort) -->
+              <div class="tab-row sort-row-1">
+                <div class="tab-fav" style="background:#e1306c;"></div>
+                <span class="tab-title">Instagram — 投稿</span>
+                <span class="rank-stars stars-row1">★</span>
+              </div>
+              <!-- Row 2: YouTube (stays middle) -->
+              <div class="tab-row sort-row-2">
+                <div class="tab-fav" style="background:#ff0000;"></div>
+                <span class="tab-title">YouTube — Studio</span>
+                <span class="rank-stars stars-row2">★★</span>
+              </div>
+              <!-- Row 3: Twitter (initially bottom, moves to top in sort) -->
+              <div class="tab-row sort-row-3">
+                <div class="tab-fav" style="background:#1da1f2;"></div>
+                <span class="tab-title">Twitter — ホーム</span>
+                <span class="rank-stars stars-row3">★★★</span>
+              </div>
+            </div>
+            <!-- Tags area -->
+            <div style="padding:4px 18px;min-height:20px;">
+              <span class="tag blue tag-1">#marketing</span>
+              <span class="tag red tag-2">#urgent</span>
+              <span class="tag green tag-3">#weekly</span>
+            </div>
+          </div>
+          <div class="folder">
+            <div class="folder-head"><span class="folder-chevron">▶</span><span class="folder-icon">📁</span> 開発用 <span class="folder-count">4</span></div>
+          </div>
+          <div class="sort-label">★ランク順に自動整列 ↕</div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">単独タブ</div><div class="sp-tab-item">本日の履歴</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">2</span> #タグ → ★ランク → 自動整列の3ステップ</h3>
+  <p>Step1: タブに#タグを付けて分類。Step2: ★ランクで重要度を設定。Step3: ランク順に自動でソート。3つの段階で、大量のタブが整理されていきます。</p>
+</div>
+
+<!-- ===== Description ===== -->
+<div class="feature-desc">
+  <h2><span class="desc-icon">🔍</span> 100+タブでも、探す時間ゼロに</h2>
+  <p class="desc-lead">
+    タブが10個を超えると、目的のタブを探すのに時間がかかります。30個、50個…と増えると、もはや迷路です。<br><br>
+    LB TAB Layersの<strong>AI検索（Beta）</strong>は、タブのタイトルとURLだけでなく、
+    文脈や関連性を理解してサジェストします。「CSS レイアウト」と入力すれば、
+    「Flexboxガイド」や「CSS Grid」のタブも候補に表示されます。<br><br>
+    さらに、<strong>#タグ</strong>でタブにラベルを付け、<strong>★ランク</strong>で優先度を設定。
+    「#urgent タグのタブだけ表示」「★3つのタブを最優先で開く」といった使い方が可能です。
+    <strong>自動振分け</strong>機能を使えば、URLパターンに基づいてタブを自動でフォルダに分類します。
+  </p>
+  <ul class="desc-merits">
+    <li><strong>AI検索（Beta）</strong> — タイトル・URL・文脈を横断検索。「CSSの記事」のような曖昧な検索にも対応</li>
+    <li><strong>#タグ付け</strong> — 複数のタグを自由に付けて分類。タグフィルターで瞬時に絞り込み</li>
+    <li><strong>★ランク</strong> — 重要度を3段階で設定。最優先のタブを見失わない</li>
+    <li><strong>自動振分け</strong> — 「github.com → 開発用」のようにURLルールを設定すれば、新しいタブが自動でフォルダに入る</li>
+  </ul>
+  <div class="desc-target">
+    <div class="desc-target-label">🎯 こんな方にぴったり</div>
+    <p>
+      <strong>リサーチ業務が多いマーケター</strong> — 競合サイト、広告データ、SNS分析…大量のタブを横断的に検索して、必要な情報に即アクセス。<br><br>
+      <strong>大学院生・研究者</strong> — 論文、参考文献、実験データのタブを#タグと★ランクで分類。重要論文は★3つで見失わない。<br><br>
+      <strong>情報収集が趣味の方</strong> — ニュース、ブログ、Redditの投稿…自動振分けで勝手に整理されるので、収集に集中できます。
+    </p>
+  </div>
+</div>
+
+<div class="demo-next">
+  <a href="dashboard.html">次へ: 📊 ダッシュボード →</a>
+</div>
+
+</body>
+</html>
