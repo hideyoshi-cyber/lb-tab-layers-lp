@@ -6,14 +6,18 @@
   <meta name="description" content="Chrome拡張機能の安全性を見分ける方法を解説。The Great Suspenderの削除事件から学ぶ、安全な拡張の選び方と最小権限の重要性。">
   <meta name="keywords" content="Chrome 拡張 安全性,Chrome 拡張 危険,Chrome 拡張 セキュリティ,拡張機能 安全,マルウェア Chrome,Great Suspender">
   <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-extension-safety.html">
-  <meta property="og:title" content="Chrome拡張機能の安全性 — 危険な拡張の見分け方"><meta property="og:description" content="危険な拡張の見分け方と安全なタブ管理拡張の選び方を解説。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome拡張機能の安全性"><meta name="twitter:description" content="危険な拡張の見分け方と安全な選び方を解説。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <meta property="og:title" content="Chrome拡張機能の安全性 — 危険な拡張の見分け方"><meta property="og:description" content="危険な拡張の見分け方と安全なタブ管理拡張の選び方を解説。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome拡張機能の安全性"><meta name="twitter:description" content="危険な拡張の見分け方と安全な選び方を解説。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
   <script type="application/ld+json">
   [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Chrome拡張の安全性","item":"https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome拡張機能の安全性 — 危険な拡張の見分け方","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-07","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-extension-safety.html"}]
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Chrome拡張機能の安全性を確認する方法は？", "acceptedAnswer": {"@type": "Answer", "text": "chrome://extensionsで各拡張機能の詳細を開き、「サイトへのアクセス」と「権限」を確認してください。「すべてのサイトのデータの読み取りと変更」を要求する拡張機能は特に注意が必要です。LB TAB Layersは必要最小限の権限のみ使用しています。"}}]}
+  </script>
 </head>
 <body>
   <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.61</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
@@ -21,7 +25,7 @@
   <section class="blog-hero"><div class="container"><span class="blog-tag">セキュリティ</span><h1>Chrome拡張機能の安全性<br>危険な拡張の見分け方と<br>安全なタブ管理</h1><p class="blog-meta"><time datetime="2026-07-07">2026.07.07</time> · Liquid Block Inc. · 読了 5分</p></div></section>
 
   <article class="blog-content">
-    <img src="hero-safety-update.png" alt="Chrome拡張機能の安全性と権限チェック" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <img src="hero-safety-update.webp" alt="Chrome拡張機能の安全性と権限チェック" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
 
 
     <p>2021年、200万ユーザーを誇るタブ管理拡張<strong>「The Great Suspender」がマルウェア化</strong>し、GoogleがChrome Web Storeから強制削除しました。</p>
