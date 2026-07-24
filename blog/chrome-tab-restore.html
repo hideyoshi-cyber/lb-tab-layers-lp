@@ -38,7 +38,7 @@
       "author": { "@type": "Organization", "name": "Liquid Block Inc." },
       "publisher": { "@type": "Organization", "name": "Liquid Block Inc.", "logo": { "@type": "ImageObject", "url": "https://tablayers.liquid-block.com/icon128.png" } },
       "datePublished": "2026-07-07",
-      "mainEntityOfPage": "https://tablayers.liquid-block.com/blog/chrome-tab-restore.html"
+      "speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage": "https://tablayers.liquid-block.com/blog/chrome-tab-restore.html"
     }
   ]
   </script>
@@ -51,6 +51,10 @@
 
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "誤って閉じたChromeのタブを復元する方法は？", "acceptedAnswer": {"@type": "Answer", "text": "5つの方法があります：(1) Ctrl+Shift+T で直前に閉じたタブを復元 (2) 履歴（Ctrl+H）から探す (3) 最近閉じたタブ一覧から復元 (4) Chromeの「前回のセッションを復元」機能 (5) LB TAB Layersの自動バックアップから復元。"}}, {"@type": "Question", "name": "PC再起動でChromeのタブが全部消えた場合は？", "acceptedAnswer": {"@type": "Answer", "text": "Chrome設定→「起動時」で「前回開いていたページを開く」を有効にしてください。また、LB TAB Layersを使えばタブが自動的にブックマークとして保存されるため、PCがクラッシュしてもタブデータは残ります。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "HowTo", "name": "誤って閉じたChromeタブを復元する方法", "description": "閉じてしまったChromeのタブを復元するための5つの方法を順番に解説", "step": [{"@type": "HowToStep", "position": 1, "name": "Ctrl+Shift+Tで直前のタブを復元", "text": "キーボードでCtrl+Shift+T（MacはCmd+Shift+T）を押すと、直前に閉じたタブが即座に復元されます。複数回押せば最大25個まで遡れます。"}, {"@type": "HowToStep", "position": 2, "name": "履歴から探す", "text": "Ctrl+H（MacはCmd+Y）で履歴を開き、閉じたページを検索して再度開きます。"}, {"@type": "HowToStep", "position": 3, "name": "最近閉じたタブ一覧から復元", "text": "タブバーの空白を右クリック→「閉じたタブを開く」で最近閉じたタブの一覧が表示されます。"}, {"@type": "HowToStep", "position": 4, "name": "Chrome起動設定を変更する", "text": "設定→「起動時」→「前回開いていたページを開く」を有効にすると、Chrome終了時のタブが次回起動時に自動復元されます。"}, {"@type": "HowToStep", "position": 5, "name": "LB TAB Layersの自動バックアップから復元", "text": "LB TAB Layersを使用していれば、タブが自動的にブックマークとして保存されているため、いつでも復元可能です。"}]}
   </script>
 </head>
 <body>
@@ -85,7 +89,10 @@
 
 
 
-    <p>Windows Updateで勝手に再起動された。突然のブルースクリーン。電源ボタンの長押し——。<br>そして起動したら、<strong>Chromeのタブが全部消えていた</strong>。</p>
+    
+    <p class="ai-answer"><strong>誤って閉じたChromeのタブを復元するには、Ctrl+Shift+T（Macは Cmd+Shift+T）を押すのが最も簡単</strong>です。直前に閉じたタブが即座に復元されます。複数回押せば、閉じた順に最大25個まで遡って復元可能です。それ以外にも、履歴（Ctrl+H）やChrome起動設定での復元方法があります。</p>
+
+<p>Windows Updateで勝手に再起動された。突然のブルースクリーン。電源ボタンの長押し——。<br>そして起動したら、<strong>Chromeのタブが全部消えていた</strong>。</p>
     <p>この記事では、<strong>消えたタブを復元する5つの方法</strong>と、<strong>二度と消えないようにする予防策</strong>を解説します。</p>
 
     <h2>消えたタブを復元する5つの方法</h2>
