@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail・Discord・Slack の未読、タブを開かずに確認する方法｜通知バッジ機能 | LB TAB Layers Blog</title>
+  <meta name="description" content="Gmail、Slack、Discord、Facebook Messenger、YouTube、ChatWorkの未読通知をサイドパネルに赤バッジで常時表示。タブを開かなくても未読数がわかるLB TAB Layersの通知バッジ機能を詳しく解説。">
+  <meta name="keywords" content="Gmail 未読 通知,Slack 通知 Chrome,Discord 未読 確認,Facebook Messenger 通知,YouTube 通知,ChatWork 通知,Chrome 拡張機能 通知,未読バッジ,LB TAB Layers">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/notification-badge-guide.html">
+  <meta property="og:title" content="Gmail・Discord・Slackの未読、タブを開かずに確認する方法"><meta property="og:description" content="連絡系サービスの未読数をサイドパネルに赤バッジで常時表示。タブを開かなくても未読がわかる通知バッジ機能。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/notification-badge-guide.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gmail・Discord・Slackの未読、タブを開かずに確認する方法"><meta name="twitter:description" content="連絡系サービスの未読数をサイドパネルに赤バッジで常時表示する通知バッジ機能の解説。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"通知バッジガイド","item":"https://tablayers.liquid-block.com/blog/notification-badge-guide.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Gmail・Discord・Slackの未読、タブを開かずに確認する方法","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-24","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/notification-badge-guide.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.62</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能紹介</span><h1>Gmail・Discord・Slack の未読<br>タブを開かずに確認する方法</h1><p class="blog-meta"><time datetime="2026-07-24">2026.07.24</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <p>仕事中、こんな経験はありませんか？</p>
+    <ul>
+      <li>「Gmailに新着きてるかな…」とタブを切り替えて確認 → <strong>集中が途切れる</strong></li>
+      <li>「Slackで誰か呼んでるかも」と気になってチラ見 → <strong>別のチャンネルに気を取られて10分ロス</strong></li>
+      <li>「Discordの通知音は聞こえたけど、何件溜まってるか分からない」</li>
+    </ul>
+    <p><strong>タブを開かなくても未読がわかれば、作業の流れを止めずに済む</strong>のに——。</p>
+    <p>LB TAB Layers の<strong>通知バッジ機能</strong>は、まさにこの問題を解決します。</p>
+
+    <h2>🔔 通知バッジとは？</h2>
+    <p>通知バッジは、Gmail や Slack などの連絡系サービスをフォルダに入れておくだけで、<strong>未読メッセージ数をサイドパネル上にリアルタイムで赤バッジ表示</strong>する機能です。</p>
+    <p>スマートフォンのアプリアイコンに表示される赤い数字バッジと同じ感覚で、ブラウザのサイドパネルから未読状況をひと目で把握できます。</p>
+
+    <h2>📮 対応サービス一覧</h2>
+    <p>以下のような連絡系・通知系サービスで未読バッジが自動表示されます：</p>
+
+    <h3>✉️ メール</h3>
+    <ul>
+      <li><strong>Gmail</strong> — 未読メール数をバッジ表示。タブを開かなくても「今3件溜まってるな」がわかる</li>
+      <li><strong>Outlook（Web版）</strong> — Microsoft 365 ユーザーにも対応</li>
+    </ul>
+
+    <h3>💬 ビジネスチャット</h3>
+    <ul>
+      <li><strong>Slack</strong> — 未読メッセージ・メンション数を表示。チャンネルを巡回しなくても確認OK</li>
+      <li><strong>ChatWork</strong> — 日本のビジネスシーンで多用されるChatWorkの未読も一目瞭然</li>
+      <li><strong>Microsoft Teams（Web版）</strong> — チームの通知を見逃さない</li>
+    </ul>
+
+    <h3>🎮 コミュニティ・SNS</h3>
+    <ul>
+      <li><strong>Discord</strong> — サーバーごとの未読・メンション数をバッジで表示。ゲーム中でもコミュニティの動きがわかる</li>
+      <li><strong>Facebook / Messenger</strong> — 友達からのメッセージや通知の未読数</li>
+      <li><strong>X（旧Twitter）</strong> — DMやリプライの未読通知</li>
+    </ul>
+
+    <h3>🎬 メディア・その他</h3>
+    <ul>
+      <li><strong>YouTube</strong> — チャンネル登録先の新着動画通知</li>
+      <li><strong>LINE（Web版）</strong> — ブラウザ版LINEの未読メッセージ</li>
+      <li><strong>WhatsApp Web</strong> — 海外の連絡先との未読も表示</li>
+    </ul>
+
+    <h2>💡 仕組み：なぜバッジが表示されるのか</h2>
+    <p>通知バッジは、各Webサービスのページタイトルに含まれる <strong>未読数の数字</strong>を自動で検出して表示しています。</p>
+    <p>たとえば Gmail では、未読メールがあるとブラウザのタブタイトルが <code>受信トレイ (3) - Gmail</code> のように変わります。LB TAB Layers はこの <code>(3)</code> を読み取って赤バッジに変換しているのです。</p>
+    <p>そのため、<strong>追加の設定やAPI連携は一切不要</strong>。フォルダにサービスのタブを入れておくだけで、自動的にバッジが表示されます。</p>
+
+    <h2>🎯 活用シーン</h2>
+
+    <h3>シーン1：集中作業中の「チラ見」を最小化</h3>
+    <p>コードを書いている最中、企画書を書いている最中、デザインに集中している最中——。サイドパネルの端に赤バッジが見えたら「あとで対応しよう」、バッジがなければ「安心して作業を続けよう」。<strong>タブを切り替える必要がない</strong>ので、集中力の損失が最小限です。</p>
+
+    <h3>シーン2：複数サービスの通知を一箇所で管理</h3>
+    <p>Gmail・Slack・ChatWork・Discord——仕事で使う連絡ツールが多い人ほど、通知バッジの恩恵は大きくなります。</p>
+    <p>たとえば「<strong>連絡・通知</strong>」というフォルダを作って、以下のタブをまとめて入れておくだけ：</p>
+    <ul>
+      <li>📧 Gmail</li>
+      <li>💬 Slack</li>
+      <li>💬 ChatWork</li>
+      <li>🎮 Discord</li>
+      <li>📘 Facebook Messenger</li>
+    </ul>
+    <p>フォルダ横にバッジが表示されるので、どのサービスに未読があるかが <strong>サイドパネルを一目見るだけ</strong>でわかります。</p>
+
+    <h3>シーン3：「タブを開きっぱなし」から卒業</h3>
+    <p>従来は「Gmail の未読が気になるからタブを閉じられない」「Slack のタブは常に開いておかないと不安」という理由で、タブを開きっぱなしにしていたかもしれません。</p>
+    <p>通知バッジがあれば、<strong>タブを閉じてもバッジで未読がわかる</strong>ので、安心してタブを閉じてメモリを節約できます。必要なときにフォルダからワンクリックで復元すればOKです。</p>
+
+    <hr>
+
+    <h2>⚙️ 設定方法（かんたん3ステップ）</h2>
+    <ol>
+      <li><strong>フォルダを作成</strong> — サイドパネルで「連絡ツール」や「通知」などの名前でフォルダを作成</li>
+      <li><strong>タブを追加</strong> — Gmail・Slack・Discord などのタブをフォルダに追加（＋ボタンまたは右クリック保存）</li>
+      <li><strong>自動でバッジ表示</strong> — 未読があれば赤バッジが自動的に表示されます。設定完了！</li>
+    </ol>
+    <p>特別な設定画面を開く必要はありません。<strong>フォルダに入れるだけ</strong>で機能します。</p>
+
+    <hr>
+
+    <h2>まとめ</h2>
+    <p>LB TAB Layers の通知バッジ機能は、<strong>「タブを開かずに未読がわかる」</strong>というシンプルな体験を提供します。</p>
+    <p>Gmail・Slack・Discord・Facebook・YouTube・ChatWork——普段使っている連絡系サービスをフォルダに入れておくだけで、サイドパネルが<strong>通知ダッシュボード</strong>に変わります。</p>
+    <p>集中を妨げずに通知を管理したい方は、ぜひ試してみてください。</p>
+
+    <p style="margin-top:3rem;text-align:center;"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" target="_blank" rel="noopener" class="blog-cta-btn">Chrome Web Store で無料インストール →</a></p>
+  </article>
+
+  <footer id="site-footer"><div class="container"><p>© 2026 Liquid Block Inc. — <a href="../privacy-policy.html">Privacy Policy</a></p></div></footer>
+</body>
+</html>
