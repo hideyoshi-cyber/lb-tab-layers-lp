@@ -78,6 +78,12 @@
 
   <!-- Blog Articles (New - 2026-08-18) -->
   <url>
+    <loc>https://tablayers.liquid-block.com/blog/chrome-extension-growth-report.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/blog/ai-tools-bookmark-collection.html</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>

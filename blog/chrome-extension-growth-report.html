@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome拡張の成長記録 — 一人開発のリアルなアクセスデータを公開 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome Web Storeに公開した拡張機能のリアルなアクセスデータを公開。100セッション・32ユーザー・1インストール。一人開発の現実とそこから見えた改善策。">
+  <meta name="keywords" content="Chrome拡張 開発,Chrome Web Store アクセス,個人開発 拡張機能,Chrome拡張 マーケティング,インディー開発 成長,一人開発 記録">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-extension-growth-report.html">
+  <meta property="og:title" content="Chrome拡張の成長記録 — リアルなアクセスデータを公開"><meta property="og:description" content="100セッション・32ユーザー。一人開発のChrome拡張のリアルな数字。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-extension-growth-report.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome拡張の成長記録"><meta name="twitter:description" content="100セッション・32ユーザー。一人開発のリアルな数字を公開。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Chrome拡張の成長記録","item":"https://tablayers.liquid-block.com/blog/chrome-extension-growth-report.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome拡張の成長記録 — 一人開発のリアルなアクセスデータを公開","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-08-18","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-extension-growth-report.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.5</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">開発ストーリー</span><h1>Chrome拡張の成長記録<br>一人開発のリアルな<br>アクセスデータを公開</h1><p class="blog-meta"><time datetime="2026-08-18">2026.08.18</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <p>Chrome Web Storeに拡張機能を公開して、<strong>28日間で何が起きたか</strong>——。<br>きれいな成功ストーリーではなく、<strong>リアルな数字</strong>をすべて公開します。</p>
+
+    <h2>28日間のサマリー</h2>
+    <p>2026年7月21日〜8月17日のGoogle Analyticsデータです。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table">
+      <tr><th>指標</th><th>数値</th><th>所感</th></tr>
+      <tr><td><strong>アクティブユーザー</strong></td><td>32人</td><td>まだ少ないが、着実に</td></tr>
+      <tr><td><strong>新規ユーザー</strong></td><td>28人</td><td>全体の87%が初訪問</td></tr>
+      <tr><td><strong>セッション数</strong></td><td>100</td><td>1人あたり約3回訪問</td></tr>
+      <tr><td><strong>平均エンゲージメント</strong></td><td>5秒</td><td>改善の余地あり</td></tr>
+      <tr><td><strong>リピーター</strong></td><td>6人</td><td>19%がリピート</td></tr>
+    </table></div>
+
+    <p>正直に言います。<strong>大きな数字ではありません。</strong>でも、ゼロから始めた一人開発としてはリアルな成長過程です。</p>
+
+    <h2>ユーザーはどこから来たか</h2>
+    <p>流入元の内訳が興味深い結果でした。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table">
+      <tr><th>チャネル</th><th>ユーザー数</th><th>割合</th><th>エンゲージメント</th></tr>
+      <tr><td><strong>Direct（直接アクセス）</strong></td><td>15人</td><td>45.5%</td><td>0秒</td></tr>
+      <tr><td><strong>Organic Search（検索）</strong></td><td>12人</td><td>36.4%</td><td><strong>13秒</strong></td></tr>
+      <tr><td><strong>Referral（他サイト経由）</strong></td><td>4人</td><td>12.1%</td><td>6秒</td></tr>
+      <tr><td><strong>Unassigned</strong></td><td>2人</td><td>6.1%</td><td>0秒</td></tr>
+    </table></div>
+
+    <h3>見えてきたこと</h3>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>検索ユーザーの質が高い</h3><p>Organic Searchから来たユーザーは<strong>平均13秒</strong>のエンゲージメント。他チャネルの0〜6秒と比べて圧倒的に長い。<strong>「自分の課題を解決したくて検索した人」</strong>は、ちゃんと内容を読んでくれる。SEO記事の価値が証明されました。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>直接アクセスが最多だが滞在が短い</h3><p>Directの45%は多いですが、エンゲージメント0秒。これはChrome Web Storeの管理画面や自分自身のアクセスが含まれている可能性が高く、<strong>実質的なユーザーはOrganic Search</strong>だと考えています。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>海外ユーザーが意外と多い</h3><p>日本12人、インド5人、シンガポール3人、フィリピン2人。<strong>日本以外が6割</strong>。英語版ページの必要性を感じています。</p></div></div>
+
+    <h2>コホート分析で見る定着率</h2>
+    <p>週ごとのリテンション（再訪問率）は以下の通り。</p>
+
+    <div class="blog-table-wrap"><table class="blog-table">
+      <tr><th>コホート</th><th>1ヶ月</th><th>2ヶ月</th><th>3ヶ月</th></tr>
+      <tr><td>全ユーザー</td><td>165%</td><td>3.5%</td><td>3.1%</td></tr>
+    </table></div>
+
+    <p>1ヶ月目の165%は新規流入の増加によるもの。2ヶ月目以降は<strong>約3%のユーザーが継続利用</strong>。100人に3人が戻ってくる計算です。これはChrome拡張としては一般的な数字ですが、改善の余地は大きい。</p>
+
+    <h2>最も閲覧されたページ</h2>
+
+    <div class="blog-table-wrap"><table class="blog-table">
+      <tr><th>ページ</th><th>表示回数</th><th>イベント</th></tr>
+      <tr><td>Chrome Web Store 製品ページ (V2)</td><td>117</td><td>page_view</td></tr>
+      <tr><td>Chrome Web Store 製品ページ</td><td>100</td><td>session_start</td></tr>
+      <tr><td>新規訪問</td><td>28</td><td>first_visit</td></tr>
+      <tr><td>マガジン/情報ページ</td><td>1</td><td>install</td></tr>
+    </table></div>
+
+    <p>ここで注目すべきは<strong>インストール数が1</strong>ということ。117回表示されて、1回しかインストールされていない。<strong>コンバージョン率 0.85%</strong>。</p>
+
+    <h2>なぜインストールされないのか（自己分析）</h2>
+    <p>数字と向き合って、いくつかの仮説を立てました。</p>
+
+    <ul>
+      <li><strong>ストアページの説明文</strong>が魅力的でない可能性。「何ができるか」が一目でわかるスクリーンショットが必要</li>
+      <li><strong>競合との差別化</strong>が伝わっていない。OneTabやSession Buddyとの違いを明確に</li>
+      <li><strong>エンゲージメント5秒</strong>は短すぎる。ページを開いて5秒で離脱 = 第一印象で魅力が伝わっていない</li>
+      <li><strong>海外ユーザーが6割</strong>なのに日本語メインの説明。英語対応が急務</li>
+    </ul>
+
+    <h2>次の28日間でやること</h2>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>SEOブログを強化</h3><p>Organic Searchのエンゲージメントが最も高いことが判明。<strong>検索で見つけてもらう記事を増やす</strong>ことが最も効果的な集客方法。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>Chrome Web Storeのスクリーンショットを改善</h3><p>製品ページの第一印象を改善。「タブ管理の何が嬉しいか」を3秒で伝えるビジュアルに。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>英語版の充実</h3><p>海外からのアクセスが6割。英語のストア説明文とランディングページを優先的に整備。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>ランディングページからの導線強化</h3><p>ブログ記事 → LP → Chrome Web Store のフローを最適化。各段階でのコンバージョンを測定。</p></div></div>
+
+    <h2>一人開発でも、データは嘘をつかない</h2>
+    <p>100セッション、32ユーザー、1インストール。</p>
+    <p>この数字を見て「少ない」と思うかもしれません。でも、<strong>データがあるからこそ次の手が打てます</strong>。</p>
+    <ul>
+      <li>検索経由のユーザーはちゃんと読んでくれる → SEOを強化する</li>
+      <li>海外ユーザーが多い → 英語対応する</li>
+      <li>インストール率が低い → ストアページを改善する</li>
+    </ul>
+    <p>大企業の華やかな成長曲線ではない。でも、<strong>一人開発のリアルな成長</strong>はこういうものです。次の28日間のレポートでどれだけ改善できたか、またこのブログで報告します。</p>
+
+    <div class="blog-callout"><p><strong>💡 LB TAB Layers</strong>は、映像制作会社Liquid Blockが自社の業務改善から生まれたChrome拡張。タブをレイヤーに分類し、ブックマークに自動保存。一人開発だからこそ、ユーザーの声に素早く対応できます。</p></div>
+
+    <div class="blog-cta-box"><h3>一人開発のChrome拡張を試してみる。</h3><p>レイヤー管理 · ブックマーク保存 · あいまい検索 · 無料</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="ai-reviews-tab-layers.html">AIに自社アプリを評価させたら「救世主」と言われた話 <span>→</span></a><a href="user-reviews.html">「絶妙に便利」「スッキリして気持ちいい」リアルな感想まとめ <span>→</span></a></div>
+
+    <div class="blog-share"><h3>この記事をシェア</h3><div class="blog-share-buttons"><a class="blog-share-btn share-x" href="#" target="_blank" rel="noopener">𝕏 ポスト</a><a class="blog-share-btn share-line" href="#" target="_blank" rel="noopener">LINE</a><a class="blog-share-btn share-hatena" href="#" target="_blank" rel="noopener">B! はてブ</a><button class="blog-share-btn share-copy">🔗 リンクをコピー</button></div></div>
+  </article>
+
+  <div class="mobile-pc-banner"><button class="mobile-pc-banner-close" aria-label="閉じる">✕</button><div class="mobile-pc-banner-inner"><div class="mobile-pc-banner-title"><span>🖥</span> PC用のChrome拡張機能です</div><div class="mobile-pc-banner-buttons"><a class="mobile-pc-btn btn-mail" href="mailto:?subject=LB%20TAB%20Layers%20%E2%80%94%20PC%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&body=%E3%80%90LB%20TAB%20Layers%E3%80%91%0AChrome%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%88%E7%84%A1%E6%96%99%EF%BC%89%0A%0Ahttps%3A%2F%2Fchromewebstore.google.com%2Fdetail%2Flb-tab-layers%2Fgcniamnnhmkppdlfejcmncjbabaamjej">📧 メールで送る</a><button class="mobile-pc-btn btn-bookmark">⭐ ブックマーク保存</button></div><div class="mobile-pc-bookmark-guide">Chromeの右上 <strong>⋮</strong> → <strong>☆</strong> でこのページをブックマーク追加。<br>同じGoogleアカウントのPCに自動同期されます。</div></div></div>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
