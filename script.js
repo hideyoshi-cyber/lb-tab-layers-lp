@@ -70,3 +70,68 @@ document.querySelectorAll('.btn').forEach(btn => {
   });
 });
 
+// ===== Share Buttons =====
+(function initShareButtons() {
+  const shareSection = document.querySelector('.blog-share-buttons');
+  if (!shareSection) return;
+
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  // Set share URLs dynamically
+  const xBtn = shareSection.querySelector('.share-x');
+  if (xBtn) xBtn.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  const lineBtn = shareSection.querySelector('.share-line');
+  if (lineBtn) lineBtn.href = `https://social-plugins.line.me/lineit/share?url=${pageUrl}`;
+
+  const hatenaBtn = shareSection.querySelector('.share-hatena');
+  if (hatenaBtn) hatenaBtn.href = `https://b.hatena.ne.jp/entry/${window.location.href}`;
+
+  // Copy button
+  const copyBtn = shareSection.querySelector('.share-copy');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        copyBtn.classList.add('copied');
+        copyBtn.textContent = '✓ コピーしました';
+        setTimeout(() => {
+          copyBtn.classList.remove('copied');
+          copyBtn.textContent = '🔗 リンクをコピー';
+        }, 2000);
+      });
+    });
+  }
+})();
+
+// ===== Mobile PC Banner =====
+(function initMobileBanner() {
+  const banner = document.querySelector('.mobile-pc-banner');
+  if (!banner) return;
+
+  // Close button
+  const closeBtn = banner.querySelector('.mobile-pc-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      banner.style.display = 'none';
+      document.body.style.paddingBottom = '0';
+      sessionStorage.setItem('mobile-banner-closed', '1');
+    });
+  }
+
+  // If already closed this session, hide
+  if (sessionStorage.getItem('mobile-banner-closed')) {
+    banner.style.display = 'none';
+    document.body.style.paddingBottom = '0';
+  }
+
+  // Bookmark guide toggle
+  const bookmarkBtn = banner.querySelector('.btn-bookmark');
+  const guide = banner.querySelector('.mobile-pc-bookmark-guide');
+  if (bookmarkBtn && guide) {
+    bookmarkBtn.addEventListener('click', () => {
+      guide.classList.toggle('visible');
+    });
+  }
+})();
+

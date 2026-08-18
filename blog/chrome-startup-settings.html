@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome起動時の設定ガイド — 前回のタブを復元する方法 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chromeを起動したとき前回のタブが消えていた経験はありませんか？起動時設定の変更方法と、タブを確実に復元する5つの方法を解説。">
+  <meta name="keywords" content="Chrome 起動時 タブ復元,Chrome 前回のタブ,Chrome タブ 消えた,Chrome 起動 設定,タブ 復元 方法">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-startup-settings.html">
+  <meta property="og:title" content="Chrome起動時の設定ガイド — 前回のタブを復元する方法"><meta property="og:description" content="Chrome起動時にタブを復元する設定方法と確実な保存策。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-startup-settings.html"><meta property="og:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome起動時の設定ガイド"><meta name="twitter:description" content="Chrome起動時にタブを復元する設定方法。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/tab-features-one.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Chrome起動時の設定ガイド","item":"https://tablayers.liquid-block.com/blog/chrome-startup-settings.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome起動時の設定ガイド — 前回のタブを復元する方法","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-08-18","mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-startup-settings.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.5</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">トラブル解決</span><h1>Chrome起動時の設定ガイド<br>前回のタブを復元する方法</h1><p class="blog-meta"><time datetime="2026-08-18">2026.08.18</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <p>PCを再起動したら、昨日開いていたタブが全部消えていた——。<br>この問題、実は<strong>Chromeの起動時設定</strong>を変えるだけで解決できます。</p>
+
+    <h2>Chrome起動時の3つの設定</h2>
+    <p><code>chrome://settings/onStartup</code> を開くと、3つの選択肢があります。</p>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>新しいタブページを開く（デフォルト）</h3><p>起動時に空のタブが1つだけ開きます。<strong>前回のタブは復元されません</strong>。多くの人がこの設定のままで、タブが消える原因になっています。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>前回開いていたページを開く（おすすめ）</h3><p>前回Chrome終了時のタブをすべて復元。<strong>PCの再起動後もタブが維持されます</strong>。ほとんどの人はこの設定に変更すべきです。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>特定のページまたはページセットを開く</h3><p>毎回同じURLを開く設定。Gmail・Slack・カレンダーなど、固定で使うサイトがある場合に便利です。</p></div></div>
+
+    <h2>設定変更の手順</h2>
+    <ol>
+      <li>Chromeのアドレスバーに <code>chrome://settings/onStartup</code> と入力</li>
+      <li>「<strong>前回開いていたページを開く</strong>」を選択</li>
+      <li>設定は自動保存されるので、これで完了</li>
+    </ol>
+
+    <h2>それでもタブが消えるケース</h2>
+    <p>「前回開いていたページを開く」に設定していても、タブが消えるケースがあります。</p>
+    <ul>
+      <li><strong>Chromeのクラッシュ</strong>：異常終了時は復元されないことがある</li>
+      <li><strong>Windows Update の強制再起動</strong>：Chromeが正常終了されない</li>
+      <li><strong>Chromeの更新</strong>：まれに復元に失敗する</li>
+      <li><strong>複数ウィンドウ</strong>：最後に閉じたウィンドウのタブのみ復元される</li>
+    </ul>
+    <p>つまり、この設定は「最善の努力」であり、<strong>100%の保証ではありません</strong>。</p>
+
+    <h2>確実にタブを保存する方法</h2>
+    <p>起動時設定に頼らず、タブを確実に保存するには：</p>
+    <ul>
+      <li><strong>ブックマークに保存</strong>：手動でCtrl+Dで保存（1つずつなので面倒）</li>
+      <li><strong>Chromeの履歴</strong>：Ctrl+Hで過去のタブを探せる（探すのが大変）</li>
+      <li><strong>タブ管理拡張</strong>：自動でブックマークに保存、復元もワンクリック</li>
+    </ul>
+
+    <div class="blog-callout"><p><strong>💡 LB TAB Layers</strong>は、開いているタブを<strong>Chromeのブックマークに自動保存</strong>。PC再起動・クラッシュ・Chrome更新後も、タブの情報は消えません。起動時設定の「保険」として最強の組み合わせです。</p></div>
+
+    <div class="blog-cta-box"><h3>PC再起動でもタブが消えない。</h3><p>自動ブックマーク保存 · ワンクリック復元 · 起動時設定の保険 · 無料</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-tab-restore.html">PC再起動でタブが全部消えた！復元する5つの方法 <span>→</span></a><a href="chrome-tab-too-many.html">Chromeのタブ、開きすぎてませんか？100個問題の解決法 <span>→</span></a></div>
+
+    <div class="blog-share"><h3>この記事をシェア</h3><div class="blog-share-buttons"><a class="blog-share-btn share-x" href="#" target="_blank" rel="noopener">𝕏 ポスト</a><a class="blog-share-btn share-line" href="#" target="_blank" rel="noopener">LINE</a><a class="blog-share-btn share-hatena" href="#" target="_blank" rel="noopener">B! はてブ</a><button class="blog-share-btn share-copy">🔗 リンクをコピー</button></div></div>
+  </article>
+
+  <div class="mobile-pc-banner"><button class="mobile-pc-banner-close" aria-label="閉じる">✕</button><div class="mobile-pc-banner-inner"><div class="mobile-pc-banner-title"><span>🖥</span> PC用のChrome拡張機能です</div><div class="mobile-pc-banner-buttons"><a class="mobile-pc-btn btn-mail" href="mailto:?subject=LB%20TAB%20Layers%20%E2%80%94%20PC%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&body=%E3%80%90LB%20TAB%20Layers%E3%80%91%0AChrome%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%88%E7%84%A1%E6%96%99%EF%BC%89%0A%0Ahttps%3A%2F%2Fchromewebstore.google.com%2Fdetail%2Flb-tab-layers%2Fgcniamnnhmkppdlfejcmncjbabaamjej">📧 メールで送る</a><button class="mobile-pc-btn btn-bookmark">⭐ ブックマーク保存</button></div><div class="mobile-pc-bookmark-guide">Chromeの右上 <strong>⋮</strong> → <strong>☆</strong> でこのページをブックマーク追加。<br>同じGoogleアカウントのPCに自動同期されます。</div></div></div>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -76,6 +76,68 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog Articles (New - 2026-08-18) -->
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/keyboard-shortcuts-chrome.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/tab-management-for-students.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/chrome-startup-settings.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/tab-management-for-designers.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/chrome-bookmarks-sync-guide.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/focus-mode-productivity.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/chrome-vs-edge-tab-management.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/tab-hoarding-psychology.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/chrome-profile-guide.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/blog/notification-badge-guide.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog Articles -->
   <url>
     <loc>https://tablayers.liquid-block.com/blog/</loc>
