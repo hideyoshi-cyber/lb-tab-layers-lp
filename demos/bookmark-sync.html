@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔖 ブックマーク連携 — LB TAB Layers Feature Demo</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+/* ===== Bookmark sync animation ===== */
+#scene1 .browser-bar{opacity:0.35;}
+#scene1 .sp-head{opacity:0.4;}
+#scene1 .sp-search{opacity:0.3;}
+#scene1 .sp-tabbar{opacity:0.3;}
+#scene1 .page-content{opacity:0.2;filter:grayscale(0.5);}
+#scene1 .folder.sync{animation:folderGlow 3s 1s infinite;}
+#scene1 .folder.sync .plus-btn{animation:plusPulse 1.5s 2s infinite;}
+@keyframes syncArrow{0%,100%{opacity:0;transform:translateX(-10px);}30%,70%{opacity:1;transform:translateX(0);}}
+#scene1 .sync-indicator{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-size:10px;color:#FF6B6B;font-weight:700;opacity:0;animation:fadeSlideUp 0.5s 3.5s both;}
+
+/* ===== Chrome vs LB comparison ===== */
+.compare-wrapper{max-width:960px;margin:0 auto;padding:0 24px 40px;}
+.compare-title-bar{text-align:center;margin-bottom:24px;}
+.compare-title-bar h2{font-size:22px;font-weight:800;color:#2B303A;margin-bottom:6px;}
+.compare-title-bar p{font-size:13px;color:#8A94A6;}
+.compare-grid{display:grid;grid-template-columns:1fr 50px 1fr;gap:0;align-items:start;}
+.compare-vs{display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#ccc;align-self:center;}
+.compare-browser{border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.06);}
+.compare-browser.winner{border-color:rgba(255,107,107,0.3);box-shadow:0 4px 24px rgba(255,107,107,0.1);}
+.compare-browser .browser-bar{height:32px;}
+.compare-browser .browser-body{height:320px;}
+.compare-label{text-align:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.compare-label.chrome-l{color:#4285F4;}
+.compare-label.lb-l{color:#FF6B6B;}
+.compare-result{text-align:center;margin-top:12px;font-size:12px;font-weight:700;padding:10px;border-radius:8px;}
+.compare-result.lose{background:#F8F9FA;color:#8A94A6;}
+.compare-result.win{background:rgba(255,107,107,0.08);color:#FF6B6B;}
+
+/* Chrome popup animation */
+@keyframes starGlow{0%,100%{color:#ccc;}40%,60%{color:#FBBC05;text-shadow:0 0 8px rgba(251,188,5,0.4);}}
+@keyframes popupSlide{0%{opacity:0;transform:translateY(-8px) scale(0.95);}100%{opacity:1;transform:translateY(0) scale(1);}}
+@keyframes stepReveal{0%{opacity:0;max-height:0;}100%{opacity:1;max-height:60px;}}
+.chrome-page .star-icon{font-size:16px;position:absolute;right:12px;top:8px;animation:starGlow 4s 1s infinite;}
+.chrome-popup{position:absolute;right:8px;top:30px;width:160px;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:8px;font-size:10px;opacity:0;animation:popupSlide 0.3s 2s both;}
+.chrome-popup .cp-title{font-weight:700;margin-bottom:6px;color:#2B303A;}
+.chrome-popup .cp-field{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:4px;padding:3px 6px;margin-bottom:4px;color:#666;font-size:9px;}
+.chrome-popup .cp-folder{background:#f0f0f0;border:1px solid #ddd;border-radius:4px;padding:3px 6px;font-size:9px;color:#666;opacity:0;animation:stepReveal 0.3s 3s both;}
+.chrome-popup .cp-folder-list{margin-top:3px;padding-left:8px;font-size:8px;color:#999;opacity:0;animation:stepReveal 0.3s 3.8s both;}
+.chrome-popup .cp-btn{display:block;width:100%;text-align:center;background:#4285F4;color:#fff;border:none;border-radius:4px;padding:4px;font-size:9px;font-weight:600;margin-top:6px;opacity:0;animation:stepReveal 0.3s 4.5s both;}
+
+/* LB side: quick save */
+.lb-sidepanel .folder.lb-sync{animation:folderGlow 3s 5s infinite;}
+.lb-sidepanel .folder.lb-sync .plus-btn{animation:plusPulse 1s 5.5s 2;}
+@keyframes lbSaved{0%{opacity:0;transform:scale(0.8);}100%{opacity:1;transform:scale(1);}}
+.lb-saved{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:700;color:#FF6B6B;background:rgba(255,107,107,0.1);padding:4px 12px;border-radius:12px;opacity:0;animation:lbSaved 0.4s 6.2s both;}
+
+/* Sheets mock */
+#scene-sheets .browser-bar{opacity:0.35;}
+#scene-sheets .page-content{opacity:1;}
+.sheets-mock{height:100%;display:flex;flex-direction:column;font-size:10px;}
+.sheets-bar{height:28px;background:#0f9d58;display:flex;align-items:center;padding:0 10px;gap:8px;}
+.sheets-bar .sh-logo{width:16px;height:16px;background:rgba(255,255,255,0.3);border-radius:2px;}
+.sheets-bar .sh-title{color:rgba(255,255,255,0.8);font-size:10px;font-weight:600;}
+.sheets-toolbar{height:24px;background:#f8f8f8;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;padding:0 8px;gap:4px;}
+.sheets-toolbar span{width:16px;height:12px;background:#e0e0e0;border-radius:2px;}
+.sheets-grid{flex:1;display:grid;grid-template-columns:30px repeat(5,1fr);font-size:9px;border-collapse:collapse;}
+.sheets-grid .sh-header{background:#f0f0f0;border:1px solid #e0e0e0;padding:2px 4px;text-align:center;font-weight:600;color:#666;}
+.sheets-grid .sh-cell{border:1px solid #e8e8e8;padding:2px 4px;color:#333;}
+.sheets-grid .sh-cell.highlight{background:rgba(255,107,107,0.06);color:#FF6B6B;font-weight:600;}
+.sheets-grid .sh-row-num{background:#f0f0f0;border:1px solid #e0e0e0;padding:2px 4px;text-align:center;color:#999;}
+@keyframes cellFade{0%{background:transparent;}50%{background:rgba(255,107,107,0.12);}100%{background:rgba(255,107,107,0.04);}}
+#scene-sheets .sh-cell.new-data{animation:cellFade 2s 1.5s both;}
+</style>
+<script>if(window!==window.top)document.documentElement.classList.add('is-embed');</script>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html" class="active">🔖 ブックマーク</a>
+    <a href="search-organize.html">🔍 検索・整理</a>
+    <a href="dashboard.html">📊 ダッシュボード</a>
+    <a href="rss-timeline.html">📰 RSS</a>
+    <a href="timer-clock.html">⏱ タイマー</a>
+    <a href="customize.html">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="demo-hero">
+  <div class="demo-hero-badge">Data Safety</div>
+  <h1>🔖 ブックマークと<em>自動同期</em></h1>
+  <p>保存したタブはChromeブックマークに自動で同期。<br>拡張機能を削除しても、データは残ります。</p>
+</div>
+
+<!-- ===== SCENE 1: Auto Sync ===== -->
+<div class="demo-section" id="scene1">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#ea4335;"></div> Gmail</div>
+        <div class="browser-tab"><div class="fav" style="background:#4285F4;"></div> Google</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-search">
+          <div class="s-logo"></div>
+          <div class="s-bar"><div class="s-icon"></div><div class="s-text"></div></div>
+          <div class="s-btns"><div class="s-btn"></div><div class="s-btn"></div></div>
+        </div>
+      </div>
+      <div class="sidepanel" style="position:relative;">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">TAB Layers</span></div>
+        <div class="sp-search">🔍 タブを検索...</div>
+        <div class="sp-body">
+          <div class="folder sync">
+            <div class="folder-head">
+              <span class="folder-chevron">▼</span><span class="folder-icon">📁</span> 仕事用
+              <span class="folder-count">2</span>
+              <div class="plus-btn">+</div>
+            </div>
+            <div class="folder-tabs">
+              <div class="tab-row"><div class="tab-fav" style="background:#4285F4;"></div><span class="tab-title">Google — 検索結果</span></div>
+              <div class="tab-row" style="opacity:0;animation:fadeSlideUp 0.4s 3s both;"><div class="tab-fav" style="background:#ea4335;"></div><span class="tab-title">Gmail — 受信トレイ</span></div>
+            </div>
+          </div>
+          <div class="folder">
+            <div class="folder-head"><span class="folder-chevron">▶</span><span class="folder-icon">📁</span> プライベート <span class="folder-count">3</span></div>
+          </div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">単独タブ</div><div class="sp-tab-item">本日の履歴</div></div>
+        <div class="sync-indicator">🔖 ブックマークに自動同期完了</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">1</span> 双方向自動同期</h3>
+  <p>タブをフォルダに追加すると、Chromeのブックマークに自動で同期。拡張機能を削除しても、ブックマークにデータが残るので安心です。</p>
+</div>
+
+<!-- ===== Chrome vs LB comparison ===== -->
+<div class="compare-wrapper">
+  <div class="compare-title-bar">
+    <h2>⭐ Chrome標準 vs 📁 LB TAB Layers</h2>
+    <p>ブックマーク保存の操作を比較してみましょう</p>
+  </div>
+  <div class="compare-grid">
+    <div>
+      <div class="compare-label chrome-l">Chrome 標準</div>
+      <div class="compare-browser">
+        <div class="browser-bar">
+          <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+          <div class="browser-tabs"><div class="browser-tab active"><div class="fav" style="background:#ea4335;"></div> Gmail</div></div>
+        </div>
+        <div class="browser-body">
+          <div class="page-content chrome-page" style="position:relative;">
+            <div class="page-search">
+              <div class="s-logo"></div>
+              <div class="s-bar"><div class="s-icon"></div><div class="s-text"></div></div>
+              <div class="s-btns"><div class="s-btn"></div><div class="s-btn"></div></div>
+            </div>
+            <div class="star-icon">⭐</div>
+            <div class="chrome-popup">
+              <div class="cp-title">ブックマークを追加</div>
+              <div class="cp-field">Gmail — 受信トレイ</div>
+              <div class="cp-folder">📁 フォルダ: ブックマークバー ▼</div>
+              <div class="cp-folder-list">├ 仕事用<br>├ プライベート<br>└ その他...</div>
+              <div class="cp-btn">完了</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="compare-result lose">4ステップ 😩 ★→名前→フォルダ探す→完了</div>
+    </div>
+    <div class="compare-vs">VS</div>
+    <div>
+      <div class="compare-label lb-l">LB TAB Layers</div>
+      <div class="compare-browser winner">
+        <div class="browser-bar">
+          <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+          <div class="browser-tabs"><div class="browser-tab active"><div class="fav" style="background:#ea4335;"></div> Gmail</div></div>
+        </div>
+        <div class="browser-body">
+          <div class="page-content" style="opacity:0.2;filter:grayscale(0.5);">
+            <div class="page-search">
+              <div class="s-logo"></div>
+              <div class="s-bar"><div class="s-icon"></div><div class="s-text"></div></div>
+              <div class="s-btns"><div class="s-btn"></div><div class="s-btn"></div></div>
+            </div>
+          </div>
+          <div class="sidepanel lb-sidepanel" style="position:relative;">
+            <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">TAB Layers</span></div>
+            <div class="sp-body" style="padding-top:6px;">
+              <div class="folder lb-sync">
+                <div class="folder-head">
+                  <span class="folder-chevron">▼</span><span class="folder-icon">📁</span> 仕事用
+                  <span class="folder-count">2</span>
+                  <div class="plus-btn">+</div>
+                </div>
+              </div>
+            </div>
+            <div class="lb-saved">✓ 保存 + 🔖同期完了</div>
+          </div>
+        </div>
+      </div>
+      <div class="compare-result win">1ステップ 🎉 ＋ボタンだけ！</div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">2</span> Chrome標準 vs LB TAB Layers</h3>
+  <p>Chrome標準のブックマーク保存は「★→名前→フォルダ探し→完了」の4ステップ。LB TAB Layersなら「＋」ボタンの1ステップだけ。先にフォルダを作る逆アプローチが効率の秘密です。</p>
+</div>
+
+<!-- ===== SCENE: Google Sheets ===== -->
+<div class="demo-section" id="scene-sheets">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#0f9d58;"></div> Sheets — タブデータ</div>
+      </div>
+    </div>
+    <div class="browser-body" style="height:280px;">
+      <div class="page-content">
+        <div class="sheets-mock">
+          <div class="sheets-bar"><div class="sh-logo"></div><span class="sh-title">TAB Layers エクスポート</span></div>
+          <div class="sheets-toolbar"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="sheets-grid">
+            <div class="sh-header"></div><div class="sh-header">A</div><div class="sh-header">B</div><div class="sh-header">C</div><div class="sh-header">D</div><div class="sh-header">E</div>
+            <div class="sh-row-num">1</div><div class="sh-cell" style="font-weight:600;">グループ</div><div class="sh-cell" style="font-weight:600;">タイトル</div><div class="sh-cell" style="font-weight:600;">URL</div><div class="sh-cell" style="font-weight:600;">タグ</div><div class="sh-cell" style="font-weight:600;">ランク</div>
+            <div class="sh-row-num">2</div><div class="sh-cell">仕事用</div><div class="sh-cell">Gmail</div><div class="sh-cell" style="color:#1a73e8;">mail.google.com</div><div class="sh-cell">#mail</div><div class="sh-cell">★★★</div>
+            <div class="sh-row-num">3</div><div class="sh-cell">仕事用</div><div class="sh-cell">Docs</div><div class="sh-cell" style="color:#1a73e8;">docs.google.com</div><div class="sh-cell">#docs</div><div class="sh-cell">★★</div>
+            <div class="sh-row-num">4</div><div class="sh-cell new-data highlight">開発用</div><div class="sh-cell new-data highlight">GitHub</div><div class="sh-cell new-data" style="color:#1a73e8;">github.com</div><div class="sh-cell new-data">#dev</div><div class="sh-cell new-data">★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">3</span> Google Sheets連携</h3>
+  <p>タブデータをスプレッドシートにエクスポート。グループ名、タイトル、URL、タグ、ランクが一覧表に。チーム共有やバックアップに活用できます。</p>
+</div>
+
+<!-- ===== Description ===== -->
+<div class="feature-desc">
+  <h2><span class="desc-icon">🔖</span> データが消えない安心感</h2>
+  <p class="desc-lead">
+    「拡張機能を削除したら、保存したタブデータも全部消えてしまった」—— そんな悲劇、ありませんか？<br><br>
+    LB TAB Layersは、保存したタブデータをChromeのブックマークに<strong>双方向で自動同期</strong>します。
+    万が一、拡張機能をアンインストールしても、データはブックマークとして残り続けます。
+    Chromeのブックマーク同期を有効にしていれば、別のデバイスにも自動で反映されます。<br><br>
+    さらに、<strong>Google Sheets連携</strong>でタブデータをスプレッドシートにエクスポートすることも可能。
+    チームでの情報共有や、バックアップとしてお使いいただけます。
+  </p>
+  <ul class="desc-merits">
+    <li><strong>双方向同期</strong> — TAB Layers ↔ ブックマーク。どちらを編集しても自動で反映</li>
+    <li><strong>削除しても残る</strong> — 拡張アンインストール後もブックマークにデータ保持</li>
+    <li><strong>複数端末同期</strong> — Chromeのブックマーク同期を通じて、PC・スマホ・タブレットで共有</li>
+    <li><strong>Sheets連携</strong> — タブデータをスプレッドシートにエクスポート。チーム共有やバックアップに</li>
+  </ul>
+  <div class="desc-target">
+    <div class="desc-target-label">🎯 こんな方にぴったり</div>
+    <p>
+      <strong>データ紛失が怖い方</strong> — 何百ものブックマークを持つ情報収集家。クラッシュや誤操作でデータを失った経験がある方に安心を提供します。<br><br>
+      <strong>複数端末で作業する方</strong> — 会社のPC、自宅のPC、Chromebookを使い分ける方。ブックマーク同期で全端末のタブデータが同じ状態に。<br><br>
+      <strong>チームで情報共有したい方</strong> — リサーチ結果のURLリストをSheetsに出力し、チームメンバーと共有。
+    </p>
+  </div>
+</div>
+
+<div class="demo-next">
+  <a href="search-organize.html">次へ: 🔍 検索・整理 →</a>
+</div>
+
+</body>
+</html>

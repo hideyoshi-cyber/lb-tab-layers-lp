@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LB TAB Layers — Feature Demo Hub</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+.hub-hero{text-align:center;padding:80px 24px 40px;max-width:700px;margin:0 auto;}
+.hub-hero h1{font-size:36px;font-weight:800;color:#2B303A;margin-bottom:12px;line-height:1.3;}
+.hub-hero h1 em{font-style:normal;color:#FF6B6B;}
+.hub-hero p{font-size:14px;color:#8A94A6;line-height:1.8;}
+
+.hub-grid{max-width:900px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.hub-card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.06);text-decoration:none;color:inherit;transition:all 0.3s;display:block;position:relative;overflow:hidden;}
+.hub-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.25);}
+.hub-card-icon{font-size:32px;margin-bottom:12px;display:block;}
+.hub-card-title{font-size:16px;font-weight:700;color:#2B303A;margin-bottom:6px;}
+.hub-card-desc{font-size:12px;color:#8A94A6;line-height:1.6;}
+.hub-card-arrow{position:absolute;right:16px;bottom:16px;font-size:16px;color:#FF6B6B;opacity:0;transform:translateX(-4px);transition:all 0.3s;}
+.hub-card:hover .hub-card-arrow{opacity:1;transform:translateX(0);}
+.hub-card-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;}
+.hub-card-tag{font-size:9px;font-weight:600;padding:2px 8px;border-radius:8px;background:rgba(255,107,107,0.06);color:#FF6B6B;}
+
+.hub-footer{text-align:center;padding:40px 24px;font-size:12px;color:#8A94A6;}
+.hub-footer a{color:#FF6B6B;text-decoration:none;font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html">🔖 ブックマーク</a>
+    <a href="search-organize.html">🔍 検索・整理</a>
+    <a href="dashboard.html">📊 ダッシュボード</a>
+    <a href="rss-timeline.html">📰 RSS</a>
+    <a href="timer-clock.html">⏱ タイマー</a>
+    <a href="customize.html">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="hub-hero">
+  <h1>LB TAB Layers<br><em>Feature Demos</em></h1>
+  <p>各機能をアニメーションで体験できます。<br>カテゴリを選んで、詳細をご覧ください。</p>
+</div>
+
+<div class="hub-grid">
+  <a href="tab-management.html" class="hub-card">
+    <span class="hub-card-icon">📂</span>
+    <div class="hub-card-title">タブ管理（コア）</div>
+    <div class="hub-card-desc">レイヤーグループ、ドラッグ＆ドロップ、サブフォルダ、一括開く/閉じる。タブを作業文脈ごとに整理。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">レイヤーグループ</span>
+      <span class="hub-card-tag">D&D</span>
+      <span class="hub-card-tag">サブフォルダ</span>
+      <span class="hub-card-tag">一括操作</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+  <a href="bookmark-sync.html" class="hub-card">
+    <span class="hub-card-icon">🔖</span>
+    <div class="hub-card-title">ブックマーク連携</div>
+    <div class="hub-card-desc">双方向自動同期でデータを安全に保持。Chrome標準との比較デモ付き。Google Sheets連携も。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">自動同期</span>
+      <span class="hub-card-tag">Chrome比較</span>
+      <span class="hub-card-tag">Sheets連携</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+  <a href="search-organize.html" class="hub-card">
+    <span class="hub-card-icon">🔍</span>
+    <div class="hub-card-title">検索・整理</div>
+    <div class="hub-card-desc">AI検索（Beta）で文脈を理解した検索。#タグと★ランクでタブに優先度を設定。自動振分け機能も。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">AI検索</span>
+      <span class="hub-card-tag">#タグ</span>
+      <span class="hub-card-tag">★ランク</span>
+      <span class="hub-card-tag">自動振分け</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+  <a href="dashboard.html" class="hub-card">
+    <span class="hub-card-icon">📊</span>
+    <div class="hub-card-title">ダッシュボード</div>
+    <div class="hub-card-desc">全グループの俯瞰、リンク切れチェック、フォーカスタイマー、重複タブ検出をひとつの画面で。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">俯瞰表示</span>
+      <span class="hub-card-tag">リンク切れ</span>
+      <span class="hub-card-tag">タイマー</span>
+      <span class="hub-card-tag">重複検出</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+  <a href="rss-timeline.html" class="hub-card">
+    <span class="hub-card-icon">📰</span>
+    <div class="hub-card-title">RSS タイムライン</div>
+    <div class="hub-card-desc">お気に入りサイトのRSSフィードをサイドパネルで受信。ブラウザ内で情報収集が完結。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">フィード受信</span>
+      <span class="hub-card-tag">新着通知</span>
+      <span class="hub-card-tag">ワンクリック保存</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+  <a href="timer-clock.html" class="hub-card">
+    <span class="hub-card-icon">⏱</span>
+    <div class="hub-card-title">タイマー / 時計</div>
+    <div class="hub-card-desc">デジタル時計、ポモドーロタイマー、アラーム。作業画面を離れずに時間管理。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">デジタル時計</span>
+      <span class="hub-card-tag">ポモドーロ</span>
+      <span class="hub-card-tag">アラーム</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+  <a href="customize.html" class="hub-card">
+    <span class="hub-card-icon">🎨</span>
+    <div class="hub-card-title">カスタマイズ</div>
+    <div class="hub-card-desc">40テーマカラー、サイドパネル左右切替、8言語対応。自分だけの作業空間を作れます。</div>
+    <div class="hub-card-tags">
+      <span class="hub-card-tag">40テーマ</span>
+      <span class="hub-card-tag">左右切替</span>
+      <span class="hub-card-tag">8言語</span>
+    </div>
+    <span class="hub-card-arrow">→</span>
+  </a>
+</div>
+
+<div class="hub-footer">
+  <p>LB TAB Layers — <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbammnmkbhj" target="_blank">Chrome Web Store</a> で無料インストール</p>
+</div>
+
+</body>
+</html>

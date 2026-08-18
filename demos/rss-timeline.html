@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 RSS タイムライン — LB TAB Layers Feature Demo</title>
+<link rel="stylesheet" href="demo-shared.css">
+<style>
+#scene1 .page-content{opacity:0.15;filter:grayscale(0.6);}
+#scene1 .browser-bar{opacity:0.25;}
+#scene1 .sp-head{opacity:0.4;}
+#scene1 .sp-search{opacity:0.3;}
+#scene1 .sp-tabbar{opacity:0.3;}
+
+/* RSS feed cards */
+.rss-feed{padding:6px;display:flex;flex-direction:column;gap:6px;}
+.rss-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:8px;padding:8px;cursor:default;transition:all 0.3s;}
+.rss-card:hover{border-color:rgba(255,107,107,0.3);}
+.rss-source{display:flex;align-items:center;gap:5px;margin-bottom:4px;}
+.rss-source-icon{width:14px;height:14px;border-radius:3px;flex-shrink:0;}
+.rss-source-name{font-size:9px;font-weight:600;color:#8A94A6;}
+.rss-source-time{font-size:8px;color:#bbb;margin-left:auto;}
+.rss-title{font-size:11px;font-weight:600;color:#2B303A;line-height:1.4;margin-bottom:3px;}
+.rss-desc{font-size:9px;color:#8A94A6;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.rss-badge{display:inline-block;font-size:8px;background:#FF6B6B;color:#fff;padding:1px 6px;border-radius:8px;font-weight:700;animation:plusPulse 2s infinite;}
+
+/* Staggered card animation */
+.rss-card:nth-child(1){opacity:0;animation:fadeSlideUp 0.4s 0.5s both;}
+.rss-card:nth-child(2){opacity:0;animation:fadeSlideUp 0.4s 1.0s both;}
+.rss-card:nth-child(3){opacity:0;animation:fadeSlideUp 0.4s 1.5s both;}
+.rss-card:nth-child(4){opacity:0;animation:fadeSlideUp 0.4s 2.0s both;}
+.rss-card:nth-child(5){opacity:0;animation:fadeSlideUp 0.4s 2.5s both;}
+</style>
+<script>if(window!==window.top)document.documentElement.classList.add('is-embed');</script>
+</head>
+<body>
+
+<nav class="demo-nav">
+  <a href="index.html" class="demo-nav-logo"><span class="dot"></span> Feature Demos</a>
+  <div class="demo-nav-links">
+    <a href="tab-management.html">📂 タブ管理</a>
+    <a href="bookmark-sync.html">🔖 ブックマーク</a>
+    <a href="search-organize.html">🔍 検索・整理</a>
+    <a href="dashboard.html">📊 ダッシュボード</a>
+    <a href="rss-timeline.html" class="active">📰 RSS</a>
+    <a href="timer-clock.html">⏱ タイマー</a>
+    <a href="customize.html">🎨 カスタマイズ</a>
+  </div>
+</nav>
+
+<div class="demo-hero">
+  <div class="demo-hero-badge">Stay Updated</div>
+  <h1>📰 ブラウザ内で<em>ニュースを追う</em></h1>
+  <p>RSSフィードをサイドパネルで受信。<br>別アプリ不要、ブラウザを離れずに最新情報をキャッチ。</p>
+</div>
+
+<div class="demo-section" id="scene1">
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+      <div class="browser-tabs">
+        <div class="browser-tab active"><div class="fav" style="background:#333;"></div> GitHub</div>
+        <div class="browser-tab"><div class="fav" style="background:#4285F4;"></div> Google</div>
+      </div>
+    </div>
+    <div class="browser-body">
+      <div class="page-content">
+        <div class="page-news">
+          <div class="n-header"><div class="n-logo"></div><div class="n-nav"><span></span><span></span></div></div>
+          <div class="n-body">
+            <div class="n-main"><div class="n-hero-img"></div><div class="n-hero-title"></div><div class="n-hero-desc"></div>
+              <div class="n-articles">
+                <div class="n-article"><div class="n-thumb"></div><div class="n-lines"><div class="n-line"></div><div class="n-line short"></div></div></div>
+                <div class="n-article"><div class="n-thumb"></div><div class="n-lines"><div class="n-line"></div><div class="n-line short"></div></div></div>
+              </div>
+            </div>
+            <div class="n-sidebar"><div class="n-ad"></div><div class="n-trending"><div class="n-t-item"></div><div class="n-t-item" style="width:70%"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidepanel">
+        <div class="sp-head"><div class="sp-logo"></div><span class="sp-name">📰 RSS タイムライン</span><span class="rss-badge" style="margin-left:auto;">3 新着</span></div>
+        <div class="sp-search">🔍 フィードを検索...</div>
+        <div class="sp-body">
+          <div class="rss-feed">
+            <div class="rss-card">
+              <div class="rss-source"><div class="rss-source-icon" style="background:#f26522;"></div><span class="rss-source-name">GIGAZINE</span><span class="rss-source-time">5分前</span></div>
+              <div class="rss-title">Google、新しいAIモデル「Gemini 4.0」を発表</div>
+              <div class="rss-desc">Googleは本日、次世代AIモデル「Gemini 4.0」を発表しました。従来モデルと比較して...</div>
+            </div>
+            <div class="rss-card">
+              <div class="rss-source"><div class="rss-source-icon" style="background:#1da1f2;"></div><span class="rss-source-name">TechCrunch JP</span><span class="rss-source-time">18分前</span></div>
+              <div class="rss-title">Chrome拡張機能の新ポリシーが開発者に与える影響</div>
+              <div class="rss-desc">Googleが発表したManifest V3への移行期限が近づく中、多くの開発者が対応を...</div>
+            </div>
+            <div class="rss-card">
+              <div class="rss-source"><div class="rss-source-icon" style="background:#e44d26;"></div><span class="rss-source-name">CSS-Tricks</span><span class="rss-source-time">1時間前</span></div>
+              <div class="rss-title">CSS Container Queriesの実践的な使い方</div>
+              <div class="rss-desc">コンテナクエリがついに全ブラウザでサポートされ...</div>
+            </div>
+            <div class="rss-card">
+              <div class="rss-source"><div class="rss-source-icon" style="background:#333;"></div><span class="rss-source-name">GitHub Blog</span><span class="rss-source-time">3時間前</span></div>
+              <div class="rss-title">Copilot Workspace がGA — 開発ワークフローの未来</div>
+              <div class="rss-desc">GitHub Copilot Workspaceが正式リリース。Issue...</div>
+            </div>
+            <div class="rss-card">
+              <div class="rss-source"><div class="rss-source-icon" style="background:#ff6b35;"></div><span class="rss-source-name">Publickey</span><span class="rss-source-time">5時間前</span></div>
+              <div class="rss-title">Node.js 24 LTSリリース — 新機能まとめ</div>
+              <div class="rss-desc">Node.js 24がLTSとしてリリースされました。注目の...</div>
+            </div>
+          </div>
+        </div>
+        <div class="sp-tabbar"><div class="sp-tab-item active">タイムライン</div><div class="sp-tab-item">フィード管理</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene-caption">
+  <h3><span class="cap-num">1</span> RSSフィードをサイドパネルで受信</h3>
+  <p>お気に入りサイトのRSSフィードURLを登録するだけ。新着記事がカード形式で順番に流れてきます。気になる記事はワンクリックでタブに開き、そのままフォルダに保存できます。</p>
+</div>
+
+<div class="feature-desc">
+  <h2><span class="desc-icon">📰</span> 情報収集を、ブラウザの中で完結</h2>
+  <p class="desc-lead">
+    最新ニュースやブログの更新を追うために、別のRSSリーダーアプリを使っていませんか？
+    LB TAB Layersの<strong>RSSタイムライン</strong>なら、サイドパネル内でフィードを受信・閲覧できます。<br><br>
+    お気に入りのサイトのRSSフィードURLを登録するだけ。新着記事がカード形式でタイムラインに流れてきます。
+    気になる記事はワンクリックで新しいタブに開き、すぐにフォルダに保存。
+    <strong>情報収集 → 整理 → 活用</strong>のサイクルがブラウザの中で完結します。
+  </p>
+  <ul class="desc-merits">
+    <li><strong>サイドパネル内で完結</strong> — 別アプリへの切り替え不要。作業しながらニュースをチェック</li>
+    <li><strong>新着通知バッジ</strong> — 未読記事数をリアルタイムで表示。見逃しを防止</li>
+    <li><strong>ワンクリックで保存</strong> — 気になった記事をそのままタブグループに追加。読み返しも簡単</li>
+    <li><strong>複数フィード対応</strong> — テック、ニュース、趣味…ジャンルごとにフィードを管理</li>
+  </ul>
+  <div class="desc-target">
+    <div class="desc-target-label">🎯 こんな方にぴったり</div>
+    <p>
+      <strong>テック情報を追いたいエンジニア</strong> — GitHub Blog、CSS-Tricks、Publickey…お気に入りのテックブログの更新を逃さない。<br><br>
+      <strong>ニュースを効率的にチェックしたい方</strong> — 朝のニュースチェックをサイドパネルで。メインの作業画面を邪魔しません。<br><br>
+      <strong>RSSリーダーアプリに不満がある方</strong> — Feedly等の有料プランに代わる無料の代替手段として。
+    </p>
+  </div>
+</div>
+
+<div class="demo-next">
+  <a href="timer-clock.html">次へ: ⏱ タイマー / 時計 →</a>
+</div>
+
+</body>
+</html>
