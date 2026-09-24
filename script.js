@@ -70,3 +70,34 @@ document.querySelectorAll('.btn').forEach(btn => {
   });
 });
 
+// ===== Mobile PC Banner =====
+(function initMobileBanner() {
+  const banner = document.querySelector('.mobile-pc-banner');
+  if (!banner) return;
+
+  // Close button
+  const closeBtn = banner.querySelector('.mobile-pc-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      banner.style.display = 'none';
+      document.body.style.paddingBottom = '0';
+      sessionStorage.setItem('mobile-banner-closed', '1');
+    });
+  }
+
+  // If already closed this session, hide
+  if (sessionStorage.getItem('mobile-banner-closed')) {
+    banner.style.display = 'none';
+    document.body.style.paddingBottom = '0';
+  }
+
+  // Bookmark guide toggle
+  const bookmarkBtn = banner.querySelector('.btn-bookmark');
+  const guide = banner.querySelector('.mobile-pc-bookmark-guide');
+  if (bookmarkBtn && guide) {
+    bookmarkBtn.addEventListener('click', () => {
+      guide.classList.toggle('visible');
+    });
+  }
+})();
+
