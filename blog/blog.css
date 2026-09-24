@@ -436,6 +436,7 @@
 .bshare-fb { background: #1877F2; }
 .bshare-line { background: #06C755; }
 .bshare-hatena { background: #00A4DE; }
+.bshare-li { background: #0A66C2; } /* 英語ブログ（/en/blog/）の LinkedIn シェア */
 .bshare-copy, .bshare-native { background: var(--bg-white); color: var(--text); border-color: var(--border); }
 .bshare-copy:hover, .bshare-native:hover { color: var(--accent); border-color: var(--accent); }
 .bshare-copy.copied { color: var(--accent); border-color: var(--accent); }
