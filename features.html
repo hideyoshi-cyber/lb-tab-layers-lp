@@ -64,7 +64,7 @@
       <div class="nav-links">
         <a href="features.html" class="active" style="color:var(--text); background:rgba(0,0,0,0.04)">機能一覧</a>
         <a href="index.html#themes">テーマ</a>
-        <a href="index.html#whats-new">v2.8.62</a>
+        <a href="index.html#whats-new">v2.8.67</a>
         <a href="blog/">Blog</a>
       </div>
       <a href="index.html#cta-main" class="nav-cta">無料で始める</a>
@@ -143,7 +143,7 @@
           </p>
           <ul class="detail-list">
             <li><i class="ti ti-circle-check"></i> セマンティック検索：URLやタイトルに含まれない意味を汲み取って検索</li>
-            <li><i class="ti ti-circle-check"></i> AI自動グループ化：散らかったタブをワンクリックで自動カテゴリ分類</li>
+            <li><i class="ti ti-circle-check"></i> AIサイドバー：見ているページを添付して要約・質問（Chrome内蔵AIならAPIキー不要）</li>
             <li><i class="ti ti-circle-check"></i> プライバシー配慮：API接続はローカルで直接実行されます</li>
           </ul>
         </div>
@@ -263,6 +263,60 @@
     </div>
   </section>
 
+  <!-- 8. 起動時のチラ見せ (v2.8.67) -->
+  <section style="padding:100px 0; border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-section" id="startup-peek">
+          <div class="detail-info">
+            <div class="detail-icon-box">
+              <i class="ti ti-eye"></i>
+            </div>
+            <h2>起動したことが、<br>ひと目でわかる。</h2>
+            <p>
+              v2.8.67で「起動時の表示」を追加しました。<br>
+              Chromeを起動して最初に開いたWebページで、サイドバーがスッと出てスッと収納される「チラ見せ」。拡張機能を入れたのに存在を忘れてしまう、を防ぎます。
+            </p>
+            <ul class="detail-list">
+              <li><i class="ti ti-circle-check"></i> OFF／チラ見せ／常に開く の3択（既定はチラ見せ）</li>
+              <li><i class="ti ti-circle-check"></i> 出ている間に触れれば、収納せずにそのまま使える</li>
+              <li><i class="ti ti-circle-check"></i> 起動後1回だけ。ページ移動のたびに出てこない</li>
+              <li><i class="ti ti-circle-check"></i> 新しいタブ画面でも、アイコンの緑「ON」バッジで起動をお知らせ</li>
+            </ul>
+            <p style="font-size:0.9rem;"><a href="blog/startup-peek-overlay.html">設定方法を詳しく見る →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. サムネイル付きライブラリ表示 (v2.8.67) -->
+  <section style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-section" id="library-view">
+          <div class="detail-info">
+            <div class="detail-icon-box">
+              <i class="ti ti-layout-grid"></i>
+            </div>
+            <h2>名前を忘れても、<br>見た目で見つかる。</h2>
+            <p>
+              ダッシュボードで、保存したタブをページのサムネイル付きカードで一覧できるようになりました。<br>
+              サムネイルの保存数は31枚から1,442枚へ。画像はお使いのPCの中だけに保存され、外部には送信されません。
+            </p>
+            <ul class="detail-list">
+              <li><i class="ti ti-circle-check"></i> 16:10のカードに、ページ上部を潰さず切り出して表示</li>
+              <li><i class="ti ti-circle-check"></i> 右クリック「サムネイルを更新」で古い絵を撮り直し</li>
+              <li><i class="ti ti-circle-check"></i> フォルダプリセットは作成前にプレビュー、作成後8秒間は取り消し可能</li>
+              <li><i class="ti ti-circle-check"></i> はじめてガイドは7ステップに刷新、ヘルプからいつでも再生</li>
+            </ul>
+            <p style="font-size:0.9rem;"><a href="blog/dashboard-library-view.html">ライブラリ表示の使い方 →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== PRO VS FREE ===== -->
   <section id="compare-plans" style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
@@ -308,8 +362,23 @@
             </tr>
             <tr>
               <td>高度なAI検索（Gemini等）</td>
-              <td><span class="t-no">✗</span> (内蔵AIのみ可)</td>
+              <td><span class="t-no">✗</span></td>
               <td class="highlight-col"><span class="t-yes">✓</span> (OpenAI/Claude等対応)</td>
+            </tr>
+            <tr>
+              <td>AIサイドバー（ページの要約・質問）</td>
+              <td><span class="t-yes">✓</span> (Chrome内蔵AI)</td>
+              <td class="highlight-col"><span class="t-yes">✓</span> (Gemini APIキーも可)</td>
+            </tr>
+            <tr>
+              <td>ダッシュボード（サムネイル付きライブラリ表示）</td>
+              <td><span class="t-no">✗</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>オーバーレイ表示（起動時のチラ見せ）</td>
+              <td><span class="t-no">✗</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
             </tr>
             <tr>
               <td>★ランク＆タグ</td>
@@ -383,7 +452,7 @@
           <h4>Products</h4>
           <a href="https://www.liquid-block.com/video-pool">Video Pool</a>
           <a href="index.html">LB TAB Layers</a>
-          <a href="https://gijirec.liquid-block.com/">議事メモレック</a>
+          <a href="https://gijimemorec.liquid-block.com/">議事メモレック</a>
         </div>
         <div class="footer-links">
           <h4>Company</h4>

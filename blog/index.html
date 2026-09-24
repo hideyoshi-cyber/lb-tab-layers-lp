@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
 </head>
 <body>
-  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.62</a><a href="../blog/" class="active" style="color:var(--text); background:rgba(0,0,0,0.04)">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/" class="active" style="color:var(--text); background:rgba(0,0,0,0.04)">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
 
   <section class="blog-index-hero">
     <div class="container">
@@ -27,7 +27,310 @@
 
   <section style="padding: 0 0 80px;">
     <div class="container">
+      <form class="blog-search" role="search" action="./" method="get">
+        <div class="blog-search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="blog-search" type="search" name="q" placeholder="記事を検索（例：スクショ、ブックマーク 重複、RSS）" aria-label="ブログ内を検索" autocomplete="off">
+          <kbd class="blog-search-kbd" aria-hidden="true">/</kbd>
+        </div>
+        <div id="blog-tags" class="blog-tags" aria-label="カテゴリで絞り込み"></div>
+        <p id="blog-search-status" class="blog-search-status" aria-live="polite"></p>
+      </form>
       <div class="blog-grid">
+
+        <a href="all-features-guide.html" class="blog-card">
+          <span class="blog-card-tag">完全ガイド</span>
+          <h2>LB TAB Layers 全機能ガイド — モード別の機能一覧</h2>
+          <p>タブ・整理・スクショ・AI・DBの5つのモードと設定まで、LB TAB Layersの全機能を一覧に。1機能ずつの解説記事へのリンク集です。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 6分</div>
+        </a>
+
+        <a href="fewer-extensions-lighter-chrome.html" class="blog-card">
+          <span class="blog-card-tag">活用テクニック</span>
+          <h2>Chromeが重いなら拡張機能を減らそう — 1つで置き換えられる拡張の一覧</h2>
+          <p>拡張機能は1つ入れるごとにメモリを使います。タスクマネージャーでの確かめ方と、タブ管理・ブックマーク整理・スクショ・RSS・AIを1つにまとめる方法。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 7分</div>
+        </a>
+
+        <a href="feature-rss-reader.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】RSSリーダー</h2>
+          <p>LB TAB Layersでは、グループを「RSSフィードフォルダ」にすると、登録したフィードの新着記事をサイドバー全体に画像つきカードで表示できます。RSSフォルダの作り方、フィ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-rss-presets-detect.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】おすすめRSSフィードと自動検出</h2>
+          <p>LB TAB Layersには、10カテゴリ・約180のおすすめRSSフィードのカタログと、見ているページのRSSを自動で見つける機能があります。フィードのURLを自分で探さずにR</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-bookmark-dedup.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】ブックマーク重複検出</h2>
+          <p>LB TAB Layersの「整理」モードでは、Chromeのすべてのブックマークから同じページの重複を見つけて削除できます。重複とみなす条件（http/https・末尾スラッシュ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-dead-link-check.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】リンク切れチェック</h2>
+          <p>LB TAB Layersには、開けなくなったブックマークを見つけるリンク切れチェックが2か所にあります。整理モード（全ブックマーク・即削除）とダッシュボード（保存タブ・ゴミ箱に3</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-bulk-screenshot.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】一括スクリーンショット</h2>
+          <p>LB TAB Layersの「スクショ」モードでは、グループ内のページを一括でキャプチャし、ZIPやPowerPoint（1枚／2×2／3×3レイアウト）で保存できます。撮影の仕組</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-ai-sidebar.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】AIサイドバー</h2>
+          <p>LB TAB Layersの「AI」モードでは、見ているページの本文や選択したテキストを添付して、AIに要約や質問ができます。Chrome内蔵AI（APIキー不要・無料）とGemi</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-ai-settings.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】AIの設定とAPIキー</h2>
+          <p>LB TAB LayersのAI機能で使うエンジン（Chrome内蔵AI・Gemini・OpenAI・Claude）の違い、Gemini APIキーの取得手順、キーがどこに保存され</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-dashboard.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】ダッシュボード</h2>
+          <p>LB TAB Layersのダッシュボードは、グループや保存タブ、Chromeのブックマークを大きな画面で一覧・整理する機能です。開き方、ブックマークの取り込み、検索、並べ替え、メ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-dashboard-cleanup.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】ダッシュボードの整理ツール</h2>
+          <p>LB TAB Layersのダッシュボードには、LB TAB Layersのフォルダの中だけを対象にした整理ツールがあります。同じ名前のフォルダの一括統合、重複ブックマークの一括削</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-weekly-report.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】週間パフォーマンスレポート</h2>
+          <p>LB TAB Layersの週間パフォーマンスレポートは、今週の検索・グループ復元・重複除去・AI検索の回数と、推定の節約時間・節約メモリを表示します。見方と、推定値の計算の目安を</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-star-rank-tags.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】★ランクとタグ</h2>
+          <p>LB TAB Layersでは、グループやタブに★1〜★5のランクを付けられます。★で絞り込む方法、ダッシュボードでの★順の並べ替えとタグ付け、無料版とPRO版の違いを解説。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-archive.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】アーカイブ</h2>
+          <p>LB TAB Layersのアーカイブは、使わなくなったグループを削除せずにしまっておく機能です。ブックマークの「📦 アーカイブ」フォルダへの移動、サイドパネルからの復元、ダッシ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-split-view.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】スプリット（2画面を同時に開く）</h2>
+          <p>LB TAB Layersのスプリットは、保存した2つのタブを1つにまとめ、クリックすると画面の左半分と右半分に別ウィンドウで同時に開く機能です。作り方と、資料を見ながらの作業での</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-copy-markdown.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】Markdown形式でコピー</h2>
+          <p>LB TAB Layersでは、グループの全タブをMarkdown形式のリンク一覧としてクリップボードにコピーできます。出力される形式、メモや区切りセクションの扱い、Slack・N</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-right-click-menu.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】右クリックメニューでできること一覧</h2>
+          <p>LB TAB Layersは多くの操作を右クリックメニューにまとめています。グループ・保存したタブ・グループ一覧の空白・単独タブの4か所で出るメニュー項目と、それぞれの機能を一覧で</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-sidebar-mode.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】表示モード（固定／オーバーレイ）</h2>
+          <p>LB TAB Layersは、Chrome標準のサイドパネルに表示する「固定」と、ページに重ねてボタンで出し入れする「オーバーレイ」の2つの表示モードを選べます。違い、左右の位置、</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-display-settings.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】表示のカスタマイズ</h2>
+          <p>LB TAB Layersの設定「表示とテーマ」で変えられる項目の一覧。文字サイズ（10〜20）、タブ行の高さ（22〜40）、フォルダの厚み、フォルダ名の太さと色調、ピンバーやサム</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-panel-layout.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】画面レイアウト（リサイズ・折りたたみ）</h2>
+          <p>LB TAB Layersのサイドパネルは、上のグループ一覧と下の「単独タブ／本日の履歴」エリアの境目をドラッグしてリサイズでき、下のエリアは折りたたむこともできます。広さの保存と</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-json-backup.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】JSONでバックアップ・移行</h2>
+          <p>LB TAB Layersの全データをJSONファイルに書き出して保存し、別のPCや再インストール後に読み込む方法。ファイル名、読み込み時の上書きの注意点、ブックマーク同期・スプレ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-groups-subgroups.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】グループとサブグループ</h2>
+          <p>LB TAB Layersの基本機能「グループ（フォルダ）」の使い方。作成・色とアイコン・サブグループによる入れ子・名前の編集・削除まで。グループは実際のChromeブックマークフ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-bookmark-sync.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】ブックマーク同期</h2>
+          <p>LB TAB Layersのグループと保存タブは、Chromeのブックマーク内「LB TAB Layers」フォルダと同期しています。同期の仕組み、ブックマーク側で編集したときの反</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-save-tabs.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】タブを保存する3つの方法</h2>
+          <p>LB TAB Layersでタブをグループに保存する3つの方法（グループの＋ボタン・ドラッグ＆ドロップ・右クリックの「フォルダに保存」）と、重複チェック、表示名の変更、保存したタブ</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-ungrouped-tabs.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】単独タブの一覧と一括操作</h2>
+          <p>LB TAB Layersの「単独タブ」は、どのグループにも保存していない開いているタブの一覧です。表示中以外を一括で閉じる、新しいグループにまとめる、ドメイン単位で自動グループ化</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-today-history.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】本日の履歴</h2>
+          <p>LB TAB Layersの「本日の履歴」は、今日（0時以降）に見たページをサイドパネルに一覧表示する機能です。表示される条件、今開いているタブとの関係、検索での絞り込みを解説しま</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-fuzzy-search.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】日本語あいまい検索</h2>
+          <p>LB TAB Layersの検索欄は、タイトルとURLの部分一致に加えて、カタカナ・ひらがな・全角半角の違いを吸収し、1,068語の別名辞書で「めーる」→Gmailのように探せます</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-pin-bar-clock.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】ピンバーと時計・タイマー</h2>
+          <p>LB TAB Layersのピンバーは、よく使うサイトを最大10個アイコンで並べる場所です。ドラッグでピン留めする方法と、同じ場所に表示できる時計（天気つき）・作業タイマー（20/</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-focus-timer.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】フォーカスタイマーとサイトブロック</h2>
+          <p>LB TAB Layersのフォーカスタイマーは、ブロック対象に指定したグループのサイトを25分間開けなくする集中モードです。ブロック対象の設定方法、途中解除用のPIN、ブロック中</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-tab-dividers.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】区切りセクション</h2>
+          <p>LB TAB Layersの区切りセクションは、1つのグループの中に「資料」「参考サイト」などの見出し線を入れる機能です。追加方法、名前の付け方、並べ替え、Markdownコピーで</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="feature-notes.html" class="blog-card">
+          <span class="blog-card-tag">機能ガイド</span>
+          <h2>【機能ガイド】メモ機能</h2>
+          <p>LB TAB Layersでは保存したタブにメモを付けられます。右クリックでの追加方法、マウスを乗せたときの表示、ダッシュボードでの編集、Markdownコピーやスプレッドシート連</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="v2867-update.html" class="blog-card">
+          <span class="blog-card-tag">アップデート</span>
+          <h2>v2.8.67 アップデート — 起動時の「チラ見せ」・ライブラリ表示・プリセットの取り消し</h2>
+          <p>ブラウザ起動時にサイドバーが一瞬現れる「チラ見せ」、サムネイル付きのライブラリ表示、保存できるサムネイルは31枚→1,442枚。プリセットの取り消しやガイド刷新も。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 5分</div>
+        </a>
+
+        <a href="startup-peek-overlay.html" class="blog-card">
+          <span class="blog-card-tag">使い方</span>
+          <h2>Chrome起動時にサイドバーを自動で開く方法</h2>
+          <p>Chromeを起動したらタブ管理のサイドバーが自動で出る——。OFF・チラ見せ・常に開くの違いと設定手順、表示されないときのチェックポイントを解説。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 6分</div>
+        </a>
+
+        <a href="dashboard-library-view.html" class="blog-card">
+          <span class="blog-card-tag">使い方</span>
+          <h2>保存したタブを「見た目」で探す — サムネイル付きライブラリ表示</h2>
+          <p>名前は忘れても、見た目は覚えている。ダッシュボードで保存タブをサムネイル付きカードで並べる方法と、サムネイルを撮り直すコツを解説。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 5分</div>
+        </a>
+
+        <a href="bookmark-thumbnail-view.html" class="blog-card">
+          <span class="blog-card-tag">活用テクニック</span>
+          <h2>Chromeのブックマークをサムネイル付きで一覧表示する方法</h2>
+          <p>Chrome標準のブックマークはファビコンと文字だけ。画像で探せるようにする3つの方法（新しいタブのショートカット／スピードダイヤル拡張／タブ管理拡張）を比較。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 6分</div>
+        </a>
+
+        <a href="how-to-folder-presets.html" class="blog-card">
+          <span class="blog-card-tag">使い方</span>
+          <h2>フォルダ構成をワンクリックで作る「プリセット」の使い方</h2>
+          <p>案件が始まるたびに同じフォルダを手で作る手間をゼロに。業種別テンプレ、自分の構成を保存するカスタムプリセット、プレビューと取り消しの使い方。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 5分</div>
+        </a>
+
+        <a href="web-meeting-tabs.html" class="blog-card">
+          <span class="blog-card-tag">用途別</span>
+          <h2>Web会議の直前にもたつかない — 会議のタブをワンクリックで揃える</h2>
+          <p>取引先ごとに違う会議ツール、どこにあるかわからない資料。会議URL・資料・議事録を「会議セット」として保存し、ワンクリックで揃える方法。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 5分</div>
+        </a>
+
+        <a href="getting-started-setup.html" class="blog-card">
+          <span class="blog-card-tag">使い方</span>
+          <h2>LB TAB Layers 初期設定ガイド — インストール後の5分でやること</h2>
+          <p>インストールしたら最初の5分でやること。サイドパネルの開き方、5つのモード、最初のグループ作成、おすすめの初期設定まで。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 6分</div>
+        </a>
+
+        <a href="how-to-change-theme.html" class="blog-card">
+          <span class="blog-card-tag">使い方</span>
+          <h2>LB TAB Layersのテーマを変更する方法 — 全40種類</h2>
+          <p>毎日見る画面だから、好きな色で。全40種類のテーマの系統と、無料で使える3種、用途別の選び方を紹介。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 4分</div>
+        </a>
+
+        <a href="extension-shortcut-keys.html" class="blog-card">
+          <span class="blog-card-tag">活用テクニック</span>
+          <h2>Chrome拡張機能のショートカットキーを設定・変更する方法</h2>
+          <p>拡張機能はキーボードで一発起動できます。chrome://extensions/shortcuts での設定手順、設定できないときの原因、タブ操作の定番ショートカット一覧。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 5分</div>
+        </a>
+
+        <a href="free-vs-pro.html" class="blog-card">
+          <span class="blog-card-tag">料金・プラン</span>
+          <h2>LB TAB Layers 無料版とPRO版の違い — トライアルと延長の仕組み</h2>
+          <p>無料版とPRO版（買い切り）の違いを一覧で。3ヶ月のフル機能トライアル、フィードバックで90日延長できる仕組み、終了後のデータの扱いまで。</p>
+          <div class="blog-card-meta">2026.09.24 · 読了 5分</div>
+        </a>
+
+        <a href="gemini-thread-organize.html" class="blog-card">
+          <span class="blog-card-tag">AI活用</span>
+          <h2>Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチ</h2>
+          <p>Geminiにフォルダ機能がない中で、チャット履歴を効率的に管理する5つの方法。タイトルルール化・ピン留めから、タブ管理拡張でAIチャットを横断管理する方法まで。</p>
+          <div class="blog-card-meta">2026.09.08 · 読了 6分</div>
+        </a>
 
         <a href="tab-bookmark-management-guide.html" class="blog-card">
           <span class="blog-card-tag">完全ガイド</span>
@@ -208,7 +511,8 @@
     </div>
   </section>
 
-  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijirec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
   <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
 </body>
 </html>

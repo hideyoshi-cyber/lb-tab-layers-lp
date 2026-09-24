@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】リンク切れチェック — 開けなくなったブックマークを見つけて片付ける | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layersには、開けなくなったブックマークを見つけるリンク切れチェックが2か所にあります。整理モード（全ブックマーク・即削除）とダッシュボード（保存タブ・ゴミ箱に30日）の違い、判定の仕組みを解説。">
+  <meta name="keywords" content="ブックマーク リンク切れ,リンク切れ チェック,404 ブックマーク 削除,開けない ブックマーク,ブックマーク 整理 ツール,LB TAB Layers リンク切れ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html">
+  <meta property="og:title" content="【機能ガイド】リンク切れチェック — 開けなくなったブックマークを見つけて片付ける"><meta property="og:description" content="LB TAB Layersには、開けなくなったブックマークを見つけるリンク切れチェックが2か所にあります。整理モード（全ブックマーク・即削除"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="【機能ガイド】リンク切れチェック — 開けなくなったブックマークを見つけて片付ける"><meta name="twitter:description" content="LB TAB Layersには、開けなくなったブックマークを見つけるリンク切れチェックが2か所にあります。整理モード（全ブックマーク・即削除"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"リンク切れチェック","item":"https://tablayers.liquid-block.com/blog/feature-dead-link-check.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】リンク切れチェック — 開けなくなったブックマークを見つけて片付ける","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-dead-link-check.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"リンク切れのブックマークを見つける方法は？","acceptedAnswer":{"@type":"Answer","text":"LB TAB Layersの「整理」モードで「リンク切れチェック」を押すと、Chromeのすべてのブックマークを調べてリンク切れを一覧にします。ダッシュボードでは保存したタブを調べて、確定と不明に分けて表示します。"}},{"@type":"Question","name":"リンク切れを削除したあと元に戻せますか？","acceptedAnswer":{"@type":"Answer","text":"ダッシュボードから移動した場合は「🗑 ゴミ箱」フォルダに30日間残るため戻せます。整理モードの削除はChromeのブックマークから直接削除されるため、元に戻せません。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>リンク切れチェック<br>開けないブックマークを片付ける</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="リンク切れのブックマークを見つける" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%20%E2%80%94%20%E9%96%8B%E3%81%91%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%A6%E7%89%87%E4%BB%98%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%20%E2%80%94%20%E9%96%8B%E3%81%91%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%A6%E7%89%87%E4%BB%98%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html" data-title="【機能ガイド】リンク切れチェック — 開けなくなったブックマークを見つけて片付ける" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>リンク切れチェックは、アクセスしても開けなくなったブックマークを見つける機能です。</strong>「整理」モードではChromeの全ブックマークを調べて即削除でき、ダッシュボードではLB TAB Layers に保存したタブを調べて「🗑 ゴミ箱」フォルダへ移動（30日後に自動削除）できます。</p>
+
+    <h2>2つのリンク切れチェックの違い</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>整理モード</th><th>ダッシュボード</th></tr></thead><tbody>
+    <tr><td>調べる範囲</td><td>Chromeのすべてのブックマーク</td><td>LB TAB Layers に保存したタブ</td></tr>
+    <tr><td>結果の分け方</td><td>リンク切れの件数</td><td>「リンク切れ確定（404／410）」と「不明（タイムアウト・サーバーエラー）」</td></tr>
+    <tr><td>削除</td><td>Chromeのブックマークから<strong>即削除</strong>（元に戻せない）</td><td>「🗑 ゴミ箱」フォルダへ移動、<strong>30日後に自動削除</strong></td></tr>
+    <tr><td>プラン</td><td>無料</td><td>PRO版・トライアル中（ダッシュボード）</td></tr>
+    </tbody></table></div>
+
+    <h2>整理モードで使う</h2>
+    <ol>
+      <li>モードバーの「整理」→「リンク切れチェック」</li>
+      <li>「○ / ○ チェック中...」と進み、終わると「○件のリンク切れ」が表示されます</li>
+      <li>1件ずつ「削除」するか、「すべて削除」</li>
+    </ol>
+
+    <h2>ダッシュボードで使う</h2>
+    <ol>
+      <li><a href="feature-dashboard.html">ダッシュボード</a>の「リンク切れチェック」</li>
+      <li>結果が「確定」と「不明」に分かれて表示されます</li>
+      <li>ゴミ箱へ移動すると、ブックマーク内の「🗑 ゴミ箱」フォルダに入り、30日後に自動で削除されます</li>
+    </ol>
+
+    <h2>判定の仕組み</h2>
+    <ul>
+      <li>まず軽い方法（HEADリクエスト）で確認し、サイトが対応していなければ通常の読み込み（GET）で確認します</li>
+      <li>1件あたり8秒で打ち切り、3件ずつ並行して調べます</li>
+      <li>404（見つからない）・410（削除済み）は「リンク切れ」、タイムアウトやサーバーエラーは「不明」扱い</li>
+    </ul>
+    <div class="blog-callout"><p>💡 「不明」は一時的なサーバー障害やログインが必要なページのこともあります。すぐに消さず、開いて確かめるのがおすすめです。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. リンク切れのブックマークを見つける方法は？</h3>
+    <p>LB TAB Layersの「整理」モードで「リンク切れチェック」を押すと、Chromeのすべてのブックマークを調べてリンク切れを一覧にします。ダッシュボードでは保存したタブを調べて、確定と不明に分けて表示します。</p>
+
+    <h3>Q. リンク切れを削除したあと元に戻せますか？</h3>
+    <p>ダッシュボードから移動した場合は「🗑 ゴミ箱」フォルダに30日間残るため戻せます。整理モードの削除はChromeのブックマークから直接削除されるため、元に戻せません。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%20%E2%80%94%20%E9%96%8B%E3%81%91%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%A6%E7%89%87%E4%BB%98%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-dead-link-check.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%20%E2%80%94%20%E9%96%8B%E3%81%91%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%A6%E7%89%87%E4%BB%98%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html" data-title="【機能ガイド】リンク切れチェック — 開けなくなったブックマークを見つけて片付ける" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>タブを閉じても、消えない。</h3><p>機能はすべて3ヶ月フル無料でお試しいただけます。データはChromeのブックマークに残ります。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-bookmark-dedup.html">ブックマーク重複検出 <span>→</span></a><a href="feature-dashboard-cleanup.html">ダッシュボードの整理ツール <span>→</span></a><a href="bookmark-organization.html">ブックマーク整理術 <span>→</span></a><a href="all-features-guide.html">全機能ガイド <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LB TAB Layers 初期設定ガイド — インストール後の5分でやること | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layersをインストールしたら最初にやること。サイドパネルの開き方、5つのモード（タブ・整理・スクショ・AI・DB）、最初のグループ作成、おすすめの初期設定、ガイドの再生方法までを5分で解説。">
+  <meta name="keywords" content="LB TAB Layers 使い方,LB TAB Layers 初期設定,タブ管理 拡張 使い方,Chrome 拡張 はじめ方,タブ グループ 作り方,サイドパネル 使い方">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/getting-started-setup.html">
+  <meta property="og:title" content="LB TAB Layers 初期設定ガイド — インストール後の5分でやること"><meta property="og:description" content="開き方、5つのモード、最初のグループ、おすすめ設定まで。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/getting-started-setup.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="LB TAB Layers 初期設定ガイド — インストール後の5分でやること"><meta name="twitter:description" content="開き方、5つのモード、最初のグループ、おすすめ設定まで。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"初期設定ガイド","item":"https://tablayers.liquid-block.com/blog/getting-started-setup.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"LB TAB Layers 初期設定ガイド — インストール後の5分でやること","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/getting-started-setup.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LB TAB Layersはどうやって開きますか？","acceptedAnswer":{"@type":"Answer","text":"ツールバーのLB TAB Layersアイコンをクリックするか、キーボードのAlt+T（MacはOption+T）でサイドパネルを開きます。アイコンが見当たらない場合は、Chromeのパズルアイコンからピン留めしてください。"}},{"@type":"Question","name":"最初のガイドをスキップしてしまいました。もう一度見られますか？","acceptedAnswer":{"@type":"Answer","text":"はい。サイドパネルのヘルプにある「ガイドを再生」から、7ステップのガイドをいつでも再生できます。"}},{"@type":"Question","name":"LB TAB Layersを削除したら、保存したタブは消えますか？","acceptedAnswer":{"@type":"Answer","text":"消えません。グループと保存タブはChromeのブックマークフォルダと同期しているため、拡張機能を削除してもブックマークとして残ります。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"LB TAB Layersの初期設定をする","step":[{"@type":"HowToStep","position":1,"name":"サイドパネルを開く","text":"ツールバーのアイコンをクリックするか、Alt+Tでサイドパネルを開きます。"},{"@type":"HowToStep","position":2,"name":"モードバーを確認する","text":"上部のモードバーで、タブ・整理・スクショ・AI・DBの5つの画面を切り替えられることを確認します。"},{"@type":"HowToStep","position":3,"name":"グループを作る","text":"タブモードの「＋」からグループ（フォルダ）を作成します。"},{"@type":"HowToStep","position":4,"name":"タブを保存する","text":"開いているタブをグループへドラッグ＆ドロップします。Chromeのブックマークとして保存されます。"},{"@type":"HowToStep","position":5,"name":"好みの設定をする","text":"テーマ、起動時の表示、サムネイルプレビューなどを好みに合わせて設定します。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">使い方</span><h1>LB TAB Layers<br>初期設定ガイド</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="LB TAB Layersのサイドパネルとモードバー" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html&amp;text=LB%20TAB%20Layers%20%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%82%AC%E3%82%A4%E3%83%89%20%E2%80%94%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%BE%8C%E3%81%AE5%E5%88%86%E3%81%A7%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html&amp;title=LB%20TAB%20Layers%20%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%82%AC%E3%82%A4%E3%83%89%20%E2%80%94%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%BE%8C%E3%81%AE5%E5%88%86%E3%81%A7%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/getting-started-setup.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/getting-started-setup.html" data-title="LB TAB Layers 初期設定ガイド — インストール後の5分でやること" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB TAB Layers はインストール後、ツールバーのアイコンか Alt+T でサイドパネルを開いて使います。</strong>最初にやることは①上部のモードバー（タブ・整理・スクショ・AI・DB）を知る、②「＋」でグループを1つ作る、③開いているタブをドラッグしてグループに保存する、の3つです。保存したタブはChromeのブックマークに同期されるので、拡張を消してもデータは残ります。</p>
+
+    <p>LB TAB Layers をインストールしていただき、ありがとうございます。</p>
+    <p>多機能な拡張機能ですが、<strong>最初に覚えることは3つだけ</strong>です。この記事では、インストール後の5分で済ませておきたいことを順番に紹介します。</p>
+    <div class="blog-callout"><p>💡 初回起動時には、同じ内容を画面上で案内する<strong>7ステップのガイド</strong>が表示されます。スキップしてしまっても、ヘルプの<strong>「ガイドを再生」</strong>からいつでも見直せます。</p></div>
+
+    <h2>ステップ1：開き方を覚える</h2>
+    <p>LB TAB Layers は、Chromeの右側に表示されるサイドパネルで使います。開き方は2通りです。</p>
+    <ul>
+      <li>ツールバーの LB TAB Layers アイコンをクリック（見当たらないときは、パズルのアイコンからピン留め）</li>
+      <li>キーボードの <strong>Alt+T</strong>（Macは Option+T）</li>
+    </ul>
+    <p>ショートカットの変更方法は「<a href="extension-shortcut-keys.html">Chrome拡張機能のショートカットキーを設定・変更する方法</a>」で紹介しています。</p>
+
+    <h2>ステップ2：5つのモードを知る</h2>
+    <p>サイドパネルの上部にある<strong>モードバー</strong>で、5つの画面を切り替えて使います。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>モード</th><th>できること</th></tr></thead><tbody>
+    <tr><td><strong>タブ</strong></td><td>グループ（フォルダ）を作ってタブを保存・一括オープン。いちばんよく使う画面</td></tr>
+    <tr><td><strong>整理</strong></td><td>ブックマークの重複とリンク切れをまとめて掃除</td></tr>
+    <tr><td><strong>スクショ</strong></td><td>グループ内のページを一括で撮影して、ZIPやPowerPointに保存</td></tr>
+    <tr><td><strong>AI</strong></td><td>見ているページを添付して要約や質問。Chrome内蔵AIならAPIキー不要</td></tr>
+    <tr><td><strong>DB</strong></td><td>大画面のダッシュボード。サムネイル付きのライブラリ表示で一覧・整理</td></tr>
+    </tbody></table></div>
+    <p>最初は<strong>「タブ」モードだけ</strong>使えれば十分です。ほかのモードは必要になったときに試してみてください。</p>
+
+    <h2>ステップ3：最初のグループを作る</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>「＋」でグループを作成</h3><p>タブモードの「＋」から、グループ（フォルダ）を1つ作ります。「今週の仕事」「A社」「調べもの」など、何でもかまいません。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>タブをドラッグ＆ドロップ</h3><p>いま開いているタブの一覧から、残したいタブをグループへドラッグします。この瞬間に<strong>Chromeのブックマークとして保存</strong>されます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>安心してタブを閉じる</h3><p>保存したタブは閉じても消えません。次に使うときはグループの <strong>▶</strong> でまとめて開けます。</p></div></div>
+    <p>グループの構成を一から考えるのが面倒なら、ようこそ画面の<strong>「プリセットから始める」</strong>や、右クリックの<strong>「フォルダプリセット」</strong>も使えます（→「<a href="how-to-folder-presets.html">プリセットの使い方</a>」）。</p>
+
+    <h2>ステップ4：好みに合わせて設定する（任意）</h2>
+    <p>ここからはお好みで。よく変更される設定を3つ紹介します。</p>
+    <ul>
+      <li><strong>テーマ（ワークスペース カラー）</strong> — 全40種類から見た目を選べます（→「<a href="how-to-change-theme.html">テーマを変更する方法</a>」）</li>
+      <li><strong>起動時の表示</strong> — Chrome起動時にサイドバーを「チラ見せ」または「常に開く」（→「<a href="startup-peek-overlay.html">起動時にサイドバーを自動で開く方法</a>」）</li>
+      <li><strong>サムネイルプレビュー</strong> — ダッシュボードでページの見た目から探せるようにする（→「<a href="dashboard-library-view.html">ライブラリ表示</a>」）</li>
+    </ul>
+
+    <h2>データはどこに保存される？</h2>
+    <p>LB TAB Layers のグループと保存タブは、<strong>Chromeのブックマークフォルダと同期</strong>しています。</p>
+    <ul>
+      <li>PCを再起動しても消えない</li>
+      <li>Chromeが落ちても消えない</li>
+      <li><strong>拡張機能を削除しても、ブックマークとして残る</strong></li>
+    </ul>
+    <p>「タブ管理ツールを試したら、やめたときにデータが全部消えた」という心配がないのが、LB TAB Layers の一番の特長です。</p>
+
+    <h2>困ったときは</h2>
+    <p>サイドパネルの<strong>ヘルプ</strong>に、操作ガイドと「ガイドを再生」ボタンがあります。はじめの7ステップガイドは、モードバー → グループ作成 → タブ一覧 → 整理 → スクショ → AI → ヘルプの順に案内します。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. LB TAB Layersはどうやって開きますか？</h3>
+    <p>ツールバーのLB TAB Layersアイコンをクリックするか、キーボードのAlt+T（MacはOption+T）でサイドパネルを開きます。アイコンが見当たらない場合は、Chromeのパズルアイコンからピン留めしてください。</p>
+
+    <h3>Q. 最初のガイドをスキップしてしまいました。もう一度見られますか？</h3>
+    <p>はい。サイドパネルのヘルプにある「ガイドを再生」から、7ステップのガイドをいつでも再生できます。</p>
+
+    <h3>Q. LB TAB Layersを削除したら、保存したタブは消えますか？</h3>
+    <p>消えません。グループと保存タブはChromeのブックマークフォルダと同期しているため、拡張機能を削除してもブックマークとして残ります。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html&amp;text=LB%20TAB%20Layers%20%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%82%AC%E3%82%A4%E3%83%89%20%E2%80%94%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%BE%8C%E3%81%AE5%E5%88%86%E3%81%A7%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgetting-started-setup.html&amp;title=LB%20TAB%20Layers%20%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A%E3%82%AC%E3%82%A4%E3%83%89%20%E2%80%94%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%BE%8C%E3%81%AE5%E5%88%86%E3%81%A7%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/getting-started-setup.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/getting-started-setup.html" data-title="LB TAB Layers 初期設定ガイド — インストール後の5分でやること" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>まずはグループを1つ作ってみよう。</h3><p>タブを閉じても、消えない。3ヶ月フル無料 · 自動ブックマーク保存 · 8言語対応</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="tab-bookmark-management-guide.html">タブとブックマークの管理｜Chrome効率化の完全ガイド <span>→</span></a><a href="chrome-side-panel-guide.html">Chromeサイドパネル活用ガイド <span>→</span></a><a href="free-vs-pro.html">LB TAB Layers 無料版とPRO版の違い <span>→</span></a><a href="v2867-update.html">v2.8.67 アップデート <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

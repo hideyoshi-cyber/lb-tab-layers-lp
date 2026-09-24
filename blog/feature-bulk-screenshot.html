@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layersの「スクショ」モードでは、グループ内のページを一括でキャプチャし、ZIPやPowerPoint（1枚／2×2／3×3レイアウト）で保存できます。撮影の仕組み、JPEGとPNGの違い、競合調査や報告書での使い方を解説。">
+  <meta name="keywords" content="スクリーンショット 一括,Webページ キャプチャ まとめて,スクショ PowerPoint,競合調査 スクショ,Chrome スクショ 拡張,LB TAB Layers スクショ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html">
+  <meta property="og:title" content="【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに"><meta property="og:description" content="LB TAB Layersの「スクショ」モードでは、グループ内のページを一括でキャプチャし、ZIPやPowerPoint（1枚／2×2／3×"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに"><meta name="twitter:description" content="LB TAB Layersの「スクショ」モードでは、グループ内のページを一括でキャプチャし、ZIPやPowerPoint（1枚／2×2／3×"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"一括スクリーンショット","item":"https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"複数のWebページをまとめてスクリーンショットできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。LB TAB Layersの「スクショ」モードでグループを選び「一括キャプチャ」を押すと、グループ内のページを順番に開いて撮影します。ZIPやPowerPointで保存できます。"}},{"@type":"Question","name":"ページ全体（縦に長いページ）を撮れますか？","acceptedAnswer":{"@type":"Answer","text":"一括スクリーンショットはブラウザに表示されている範囲（1画面分）を撮影します。ページ全体を縦に長く撮る方式ではありません。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"LB TAB Layersでグループのページを一括スクリーンショットする","step":[{"@type":"HowToStep","position":1,"name":"スクショモードを開く","text":"モードバーから「スクショ」を選びます。"},{"@type":"HowToStep","position":2,"name":"グループを選ぶ","text":"撮影したいページが入ったグループフォルダを選びます。"},{"@type":"HowToStep","position":3,"name":"一括キャプチャする","text":"JPEGかPNGを選び「一括キャプチャ」を押します。"},{"@type":"HowToStep","position":4,"name":"保存する","text":"「ZIPでダウンロード」または「PowerPointでダウンロード」で保存します。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>一括スクリーンショット<br>ZIP・PowerPointで保存</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-extensions-comparison.webp" alt="グループのページを一括でスクリーンショット" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E4%B8%80%E6%8B%AC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%20%E2%80%94%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E6%92%AE%E3%81%A3%E3%81%A6ZIP%E3%83%BBPowerPoint%E3%81%AB" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E4%B8%80%E6%8B%AC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%20%E2%80%94%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E6%92%AE%E3%81%A3%E3%81%A6ZIP%E3%83%BBPowerPoint%E3%81%AB" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html" data-title="【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>「スクショ」モードでグループを選んで「一括キャプチャ」を押すと、グループ内のページを順番に開いてスクリーンショットを撮ります。</strong>撮った画像はZIPでまとめて保存するか、PowerPointのスライド（1枚／2×2／3×3のレイアウト）にして保存できます。今見ているページだけを撮ることもできます。</p>
+
+    <h2>使い方</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>「スクショ」モードを開く</h3><p>モードバーから「スクショ」を選びます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>グループフォルダを選ぶ</h3><p>撮りたいページが入ったグループを選びます（「グループ名（○件）」と件数が表示されます）。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>形式を選んで「一括キャプチャ」</h3><p>JPEG（軽量）かPNG（高画質）を選んで開始。「○件のキャプチャ完了！」で終わりです。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>保存する</h3><p>「ZIPでダウンロード」か「PowerPointでダウンロード」を選びます。1枚ずつコピー・保存・削除もできます。</p></div></div>
+
+    <h2>PowerPointのレイアウト</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>レイアウト</th><th>向いている用途</th></tr></thead><tbody>
+    <tr><td>1スライド1画像</td><td>1ページずつ説明する資料</td></tr>
+    <tr><td>2×2グリッド</td><td>4サイトを見比べる</td></tr>
+    <tr><td>3×3グリッド</td><td>一覧性重視の競合マップ</td></tr>
+    </tbody></table></div>
+
+    <h2>撮影の仕組みと注意点</h2>
+    <ul>
+      <li>1ページずつ新しいタブで開き、読み込みを待ってから<strong>表示されている範囲（1画面分）</strong>を撮影し、タブを閉じます。ページ全体を縦に長く撮る方式ではありません</li>
+      <li>撮影中はタブが切り替わるので、終わるまでブラウザを操作しないでください</li>
+      <li>読み込みが遅いページは、8秒を目安に撮影に進みます</li>
+      <li>「現在のページをキャプチャ」なら、今見ている画面だけを撮れます</li>
+    </ul>
+    <h2>使いどころ</h2>
+    <ul>
+      <li>競合サイトのトップページを並べた調査資料</li>
+      <li>制作したサイトの納品報告</li>
+      <li>定期的な「今のデザイン」の記録</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 複数のWebページをまとめてスクリーンショットできますか？</h3>
+    <p>はい。LB TAB Layersの「スクショ」モードでグループを選び「一括キャプチャ」を押すと、グループ内のページを順番に開いて撮影します。ZIPやPowerPointで保存できます。</p>
+
+    <h3>Q. ページ全体（縦に長いページ）を撮れますか？</h3>
+    <p>一括スクリーンショットはブラウザに表示されている範囲（1画面分）を撮影します。ページ全体を縦に長く撮る方式ではありません。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E4%B8%80%E6%8B%AC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%20%E2%80%94%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E6%92%AE%E3%81%A3%E3%81%A6ZIP%E3%83%BBPowerPoint%E3%81%AB" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-bulk-screenshot.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E4%B8%80%E6%8B%AC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%20%E2%80%94%20%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E6%92%AE%E3%81%A3%E3%81%A6ZIP%E3%83%BBPowerPoint%E3%81%AB" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-bulk-screenshot.html" data-title="【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>タブを閉じても、消えない。</h3><p>機能はすべて3ヶ月フル無料でお試しいただけます。データはChromeのブックマークに残ります。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-groups-subgroups.html">グループとサブグループ <span>→</span></a><a href="all-features-guide.html">全機能ガイド <span>→</span></a><a href="fewer-extensions-lighter-chrome.html">拡張機能を減らしてChromeを軽くする <span>→</span></a><a href="feature-dashboard.html">ダッシュボードの使い方 <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

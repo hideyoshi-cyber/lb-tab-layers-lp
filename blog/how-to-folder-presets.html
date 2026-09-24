@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フォルダ構成をワンクリックで作る「プリセット」の使い方 — プレビューと取り消しで安心 | LB TAB Layers Blog</title>
+  <meta name="description" content="案件ごとに同じフォルダ構成を毎回手で作っていませんか。LB TAB Layersのフォルダプリセット（受託案件・社内プロジェクト・経理・事務・人事）と、自分の構成を保存するカスタムプリセット、適用前プレビューと8秒の取り消しを解説。">
+  <meta name="keywords" content="ブックマーク フォルダ 構成,フォルダ テンプレート,案件 フォルダ 作り方,プロジェクト フォルダ 構成,タブ管理 テンプレート,LB TAB Layers プリセット">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/how-to-folder-presets.html">
+  <meta property="og:title" content="フォルダ構成をワンクリックで作る「プリセット」の使い方"><meta property="og:description" content="業種別テンプレと自作プリセット。適用前プレビューと8秒の取り消しで安心。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/how-to-folder-presets.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="フォルダ構成をワンクリックで作る「プリセット」の使い方"><meta name="twitter:description" content="業種別テンプレと自作プリセット。適用前プレビューと8秒の取り消しで安心。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"フォルダプリセットの使い方","item":"https://tablayers.liquid-block.com/blog/how-to-folder-presets.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"フォルダ構成をワンクリックで作る「プリセット」の使い方 — プレビューと取り消しで安心","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/how-to-folder-presets.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ブックマークのフォルダ構成をテンプレートとして使い回せますか？","acceptedAnswer":{"@type":"Answer","text":"LB TAB Layersでは、フォルダを右クリックして「この構造をプリセットとして保存」を選ぶと、親フォルダとサブフォルダの構成をカスタムプリセットとして登録できます。次回からはフォルダプリセットの一覧から呼び出すだけで同じ構成を作れます。"}},{"@type":"Question","name":"プリセットで作ったフォルダを取り消せますか？","acceptedAnswer":{"@type":"Answer","text":"v2.8.67以降、作成直後に表示されるお知らせの「元に戻す」から8秒間取り消せます。ただし、その間にタブを追加していた場合は、保存したタブを誤って消さないよう取り消しは行われません。"}},{"@type":"Question","name":"プリセットにはリンクも入っていますか？","acceptedAnswer":{"@type":"Answer","text":"右クリックのフォルダプリセット（受託案件・社内プロジェクト・経理・事務・人事）はフォルダの骨組みだけで、リンクは入っていません。ようこそ画面の「プリセットから始める」で選べるグループには、よく使うサイトのリンクが入っています。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"LB TAB Layersのフォルダプリセットでフォルダ構成を作る","step":[{"@type":"HowToStep","position":1,"name":"グループ一覧を右クリック","text":"サイドパネルのグループ一覧の上で右クリックし、「フォルダプリセット」を開きます。"},{"@type":"HowToStep","position":2,"name":"プリセットを選ぶ","text":"受託案件・社内プロジェクト・経理・事務・人事、またはカスタムプリセットから選びます。"},{"@type":"HowToStep","position":3,"name":"フォルダ名を入力","text":"親フォルダの名前を入力します。初期値はプリセット名です。"},{"@type":"HowToStep","position":4,"name":"プレビューを確認して作成","text":"「この構成で作成します。」と表示されるフォルダの一覧を確認して作成します。"},{"@type":"HowToStep","position":5,"name":"必要なら取り消す","text":"作成直後のお知らせの「元に戻す」を8秒以内に押すと取り消せます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">使い方</span><h1>フォルダ構成を<br>ワンクリックで作る<br>「プリセット」の使い方</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-assets.webp" alt="案件ごとのフォルダ構成をプリセットでまとめて作るイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html&amp;text=%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E6%88%90%E3%82%92%E3%83%AF%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E4%BD%9C%E3%82%8B%E3%80%8C%E3%83%97%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%80%8D%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%20%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A8%E5%8F%96%E3%82%8A%E6%B6%88%E3%81%97%E3%81%A7%E5%AE%89%E5%BF%83" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html&amp;title=%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E6%88%90%E3%82%92%E3%83%AF%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E4%BD%9C%E3%82%8B%E3%80%8C%E3%83%97%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%80%8D%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%20%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A8%E5%8F%96%E3%82%8A%E6%B6%88%E3%81%97%E3%81%A7%E5%AE%89%E5%BF%83" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/how-to-folder-presets.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/how-to-folder-presets.html" data-title="フォルダ構成をワンクリックで作る「プリセット」の使い方 — プレビューと取り消しで安心" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB TAB Layers の「フォルダプリセット」は、グループ一覧を右クリックして選ぶだけで、決まったフォルダ構成（例：受託案件 ＞ 進行・管理／設計・デザイン／開発・検証／納品・請求）をまとめて作れる機能です。</strong>v2.8.67 からは作成前に構成をプレビューでき、作成後8秒間は「元に戻す」で取り消せます。自分で作った構成を「この構造をプリセットとして保存」で登録することもできます。</p>
+
+    <p>新しい案件が始まるたび、ブックマークに「進行」「デザイン」「開発」「請求」……と同じフォルダを手で作っていませんか。</p>
+    <p>フォルダ構成は一度決めてしまえば毎回同じです。<strong>型が決まっているものは、型ごと呼び出せばいい</strong>。それがLB TAB Layersのフォルダプリセットです。</p>
+
+    <h2>用意されている4つのプリセット</h2>
+    <p>最初から、よく使われる4種類のフォルダ構成を用意しています。それぞれ親フォルダ1つと、4つのサブフォルダが作られます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>プリセット</th><th>作られるサブフォルダ</th></tr></thead><tbody>
+    <tr><td><strong>📁 受託案件</strong></td><td>進行・管理／設計・デザイン／開発・検証／納品・請求</td></tr>
+    <tr><td><strong>📁 社内プロジェクト</strong></td><td>企画・計画／開発／テスト・QA／リリース・広報</td></tr>
+    <tr><td><strong>📁 経理・事務</strong></td><td>請求・見積／支払・入金／月次決算／年末調整</td></tr>
+    <tr><td><strong>📁 人事</strong></td><td>採用・選考／面接・評価／オンボーディング／労務・給与</td></tr>
+    </tbody></table></div>
+    <p>プリセットで作られるのは<strong>フォルダの骨組みだけ</strong>で、リンクは入っていません。あとは作業中のタブをドラッグ＆ドロップで入れていくだけです。</p>
+
+    <h2>使い方</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>グループ一覧を右クリック</h3><p>サイドパネルのグループ一覧の上で右クリックし、<strong>「フォルダプリセット」</strong>を開きます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>プリセットを選ぶ</h3><p>受託案件・社内プロジェクト・経理・事務・人事、または自分で保存したカスタムプリセットから選びます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>フォルダ名を入力する</h3><p>親フォルダの名前を入力します。初期値はプリセット名（例：「受託案件」）なので、「A社 Webサイト制作」のように案件名に書き換えるのがおすすめです。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>プレビューで構成を確認して作成</h3><p>「この構成で作成します。」と、作られるフォルダの一覧が表示されます。問題なければそのまま作成します。</p></div></div>
+    <div class="blog-step"><span class="blog-num">5</span><div class="blog-step-body"><h3>間違えたら8秒以内に「元に戻す」</h3><p>作成直後に表示されるお知らせの<strong>「元に戻す」</strong>を押すと、作ったフォルダをまとめて取り消せます。</p></div></div>
+
+    <h2>取り消しが「止まる」ときがある理由</h2>
+    <p>作成したフォルダに、取り消しまでの間に<strong>タブを追加していた場合</strong>は、「タブが追加されているため取り消せません」と表示されて取り消しは行われません。</p>
+    <p>これは、せっかく保存したタブをフォルダごと消してしまう事故を防ぐための安全装置です。LB TAB Layers のフォルダは実際のブックマークフォルダと同期しているので、<strong>消すときは慎重すぎるくらいがちょうどいい</strong>と考えています。</p>
+
+    <h2>自分の構成を「カスタムプリセット」にする</h2>
+    <p>用意された4種類が自分の仕事に合わない場合は、<strong>自分で作ったフォルダ構成をそのままプリセットとして保存</strong>できます。</p>
+    <ol>
+      <li>いつも使うフォルダ構成（親フォルダ＋サブフォルダ）を一度作る</li>
+      <li>その親フォルダを右クリックし、<strong>「この構造をプリセットとして保存」</strong>を選ぶ</li>
+      <li>次からは、フォルダプリセットの一覧に自分のプリセットが並ぶ</li>
+    </ol>
+    <p>たとえば映像制作なら「企画・構成／撮影／編集／MA・納品」、Web制作なら「要件定義／デザイン／コーディング／公開・保守」といった具合に、<strong>自社の進行フローをそのまま型にできます</strong>。</p>
+
+    <h2>はじめての方向けの「プリセットから始める」</h2>
+    <p>インストール直後のようこそ画面には<strong>「プリセットから始める」</strong>ボタンがあり、「🌅 朝のルーティン」「🛠️ Google ツール」「💼 仕事・タスク」「📚 リファレンス」など、<strong>リンク入りのグループ</strong>を選んで追加できます。こちらはフォルダの骨組みではなく、よく使うサイトが最初から入ったお試し用のグループです。</p>
+    <div class="blog-callout"><p>ℹ️ 無料版では作成できるグループ数に上限（5個）があります。上限を超える分は、PRO版で追加できます。インストールから3ヶ月の無料トライアル中は制限なくお使いいただけます。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. ブックマークのフォルダ構成をテンプレートとして使い回せますか？</h3>
+    <p>LB TAB Layersでは、フォルダを右クリックして「この構造をプリセットとして保存」を選ぶと、親フォルダとサブフォルダの構成をカスタムプリセットとして登録できます。次回からはフォルダプリセットの一覧から呼び出すだけで同じ構成を作れます。</p>
+
+    <h3>Q. プリセットで作ったフォルダを取り消せますか？</h3>
+    <p>v2.8.67以降、作成直後に表示されるお知らせの「元に戻す」から8秒間取り消せます。ただし、その間にタブを追加していた場合は、保存したタブを誤って消さないよう取り消しは行われません。</p>
+
+    <h3>Q. プリセットにはリンクも入っていますか？</h3>
+    <p>右クリックのフォルダプリセット（受託案件・社内プロジェクト・経理・事務・人事）はフォルダの骨組みだけで、リンクは入っていません。ようこそ画面の「プリセットから始める」で選べるグループには、よく使うサイトのリンクが入っています。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html&amp;text=%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E6%88%90%E3%82%92%E3%83%AF%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E4%BD%9C%E3%82%8B%E3%80%8C%E3%83%97%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%80%8D%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%20%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A8%E5%8F%96%E3%82%8A%E6%B6%88%E3%81%97%E3%81%A7%E5%AE%89%E5%BF%83" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fhow-to-folder-presets.html&amp;title=%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E6%88%90%E3%82%92%E3%83%AF%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E4%BD%9C%E3%82%8B%E3%80%8C%E3%83%97%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%80%8D%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%20%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A8%E5%8F%96%E3%82%8A%E6%B6%88%E3%81%97%E3%81%A7%E5%AE%89%E5%BF%83" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/how-to-folder-presets.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/how-to-folder-presets.html" data-title="フォルダ構成をワンクリックで作る「プリセット」の使い方 — プレビューと取り消しで安心" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>案件のたびのフォルダ作り、もう手でやらない。</h3><p>フォルダ構成を型ごと呼び出し。プレビューと取り消しで安心。3ヶ月フル無料</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="bookmark-organization.html">ブックマーク整理術 <span>→</span></a><a href="v2867-update.html">v2.8.67 アップデート — プリセットの取り消しほか <span>→</span></a><a href="remote-work-tab-management.html">リモートワークのタブ管理 <span>→</span></a><a href="getting-started-setup.html">LB TAB Layers 初期設定ガイド <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

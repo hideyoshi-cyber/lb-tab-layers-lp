@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】グループとサブグループ — タブを案件・用途ごとにまとめる | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layersの基本機能「グループ（フォルダ）」の使い方。作成・色とアイコン・サブグループによる入れ子・名前の編集・削除まで。グループは実際のChromeブックマークフォルダと同期します。">
+  <meta name="keywords" content="LB TAB Layers グループ,タブ グループ 作り方,タブ フォルダ 分け,サブグループ,タブ 入れ子,ブックマーク フォルダ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html">
+  <meta property="og:title" content="【機能ガイド】グループとサブグループ — タブを案件・用途ごとにまとめる"><meta property="og:description" content="LB TAB Layersの基本機能「グループ（フォルダ）」の使い方。作成・色とアイコン・サブグループによる入れ子・名前の編集・削除まで。グ"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="【機能ガイド】グループとサブグループ — タブを案件・用途ごとにまとめる"><meta name="twitter:description" content="LB TAB Layersの基本機能「グループ（フォルダ）」の使い方。作成・色とアイコン・サブグループによる入れ子・名前の編集・削除まで。グ"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"グループとサブグループ","item":"https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】グループとサブグループ — タブを案件・用途ごとにまとめる","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LB TAB Layersのグループはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"Chromeのブックマークに、グループと同じ名前のフォルダとして保存されます。拡張機能を削除してもブックマークとして残ります。"}},{"@type":"Question","name":"グループの中にグループを作れますか？","acceptedAnswer":{"@type":"Answer","text":"はい。サブグループとして入れ子にできます。無料版は2階層まで、PRO版とトライアル中は無制限です。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"LB TAB Layersでグループを作る","step":[{"@type":"HowToStep","position":1,"name":"「＋」をクリック","text":"サイドパネル上部の「＋」から新しいグループを開きます。"},{"@type":"HowToStep","position":2,"name":"名前・カラー・アイコンを決める","text":"グループ名を入力し、8色のカラーとアイコンを選びます。"},{"@type":"HowToStep","position":3,"name":"作成する","text":"「作成」を押すと、Chromeのブックマークにも同じ名前のフォルダが作られます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>グループと<br>サブグループ</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="LB TAB Layersのグループとサブグループ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%A8%E3%82%B5%E3%83%96%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20%E2%80%94%20%E3%82%BF%E3%83%96%E3%82%92%E6%A1%88%E4%BB%B6%E3%83%BB%E7%94%A8%E9%80%94%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%A8%E3%82%B5%E3%83%96%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20%E2%80%94%20%E3%82%BF%E3%83%96%E3%82%92%E6%A1%88%E4%BB%B6%E3%83%BB%E7%94%A8%E9%80%94%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html" data-title="【機能ガイド】グループとサブグループ — タブを案件・用途ごとにまとめる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>グループは、LB TAB Layers でタブをまとめる単位（フォルダ）です。</strong>「＋」で作成し、名前・8色のカラー・アイコンを設定できます。グループの中にはサブグループを作って入れ子にでき、各グループはChromeのブックマークフォルダとして保存されます。</p>
+
+    <h2>グループでできること</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>操作</th><th>方法</th></tr></thead><tbody>
+    <tr><td>作成</td><td>ヘッダーの「＋」→ グループ名・カラー・アイコンを選んで「作成」</td></tr>
+    <tr><td>サブグループ</td><td>グループのメニューから「サブグループを追加」</td></tr>
+    <tr><td>タブを追加</td><td>グループの「＋」で今見ているタブを追加、またはタブをドラッグ＆ドロップ</td></tr>
+    <tr><td>まとめて開く／閉じる</td><td>グループ名のクリックか ▶ で全タブを開く、■ で閉じる（保存は維持）</td></tr>
+    <tr><td>名前の編集・削除</td><td>グループ名を右クリック</td></tr>
+    <tr><td>折りたたみ</td><td>グループ見出しで開閉</td></tr>
+    </tbody></table></div>
+
+    <h2>作り方</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>「＋」をクリック</h3><p>サイドパネル上部の「＋」から「新しいグループ」を開きます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>名前・カラー・アイコンを決める</h3><p>グループ名（例：「Liquid Block 案件A」）を入力し、8色のカラーとアイコンを選びます。色とアイコンは一覧で見分けるための目印です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>「作成」</h3><p>グループができると同時に、Chromeのブックマークにも同じ名前のフォルダが作られます。</p></div></div>
+
+    <h2>サブグループで入れ子にする</h2>
+    <p>「A社」グループの中に「企画」「制作」「請求」を作る、というように<strong>グループの中にグループ</strong>を作れます。ブックマーク側でも親フォルダの中のフォルダとして保存されます。</p>
+    <p>決まった構成を毎回作るなら、右クリックの<a href="how-to-folder-presets.html">フォルダプリセット</a>を使うと一発で作れます。</p>
+
+    <h2>知っておきたいこと</h2>
+    <ul>
+      <li><strong>削除するとブックマークごと消えます。</strong>グループを削除すると、中のタブやサブグループ、対応するブックマークフォルダもすべて削除されます。しばらく使わないだけなら<a href="feature-archive.html">アーカイブ</a>が安全です</li>
+      <li>グループ名で全タブを開くので、中身が多いグループはタブが一度にたくさん開きます</li>
+    </ul>
+    <div class="blog-callout"><p>ℹ️ 無料版ではグループは5個まで、入れ子は2階層までです。PRO版と3ヶ月の無料トライアル中は無制限です。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. LB TAB Layersのグループはどこに保存されますか？</h3>
+    <p>Chromeのブックマークに、グループと同じ名前のフォルダとして保存されます。拡張機能を削除してもブックマークとして残ります。</p>
+
+    <h3>Q. グループの中にグループを作れますか？</h3>
+    <p>はい。サブグループとして入れ子にできます。無料版は2階層まで、PRO版とトライアル中は無制限です。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%A8%E3%82%B5%E3%83%96%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20%E2%80%94%20%E3%82%BF%E3%83%96%E3%82%92%E6%A1%88%E4%BB%B6%E3%83%BB%E7%94%A8%E9%80%94%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-groups-subgroups.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%A8%E3%82%B5%E3%83%96%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20%E2%80%94%20%E3%82%BF%E3%83%96%E3%82%92%E6%A1%88%E4%BB%B6%E3%83%BB%E7%94%A8%E9%80%94%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-groups-subgroups.html" data-title="【機能ガイド】グループとサブグループ — タブを案件・用途ごとにまとめる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>タブを閉じても、消えない。</h3><p>機能はすべて3ヶ月フル無料でお試しいただけます。データはChromeのブックマークに残ります。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-bookmark-sync.html">ブックマーク同期の仕組み <span>→</span></a><a href="feature-save-tabs.html">タブを保存する3つの方法 <span>→</span></a><a href="how-to-folder-presets.html">フォルダプリセットの使い方 <span>→</span></a><a href="all-features-guide.html">LB TAB Layers 全機能ガイド <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

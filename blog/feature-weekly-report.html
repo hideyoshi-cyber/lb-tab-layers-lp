@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】週間パフォーマンスレポート — どれだけ時間とメモリを節約できたか | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layersの週間パフォーマンスレポートは、今週の検索・グループ復元・重複除去・AI検索の回数と、推定の節約時間・節約メモリを表示します。見方と、推定値の計算の目安を解説。">
+  <meta name="keywords" content="作業効率 見える化,タブ管理 効果,時間 節約 レポート,ブラウザ メモリ 節約,生産性 レポート,LB TAB Layers レポート">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-weekly-report.html">
+  <meta property="og:title" content="【機能ガイド】週間パフォーマンスレポート — どれだけ時間とメモリを節約できたか"><meta property="og:description" content="LB TAB Layersの週間パフォーマンスレポートは、今週の検索・グループ復元・重複除去・AI検索の回数と、推定の節約時間・節約メモリを"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-weekly-report.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="【機能ガイド】週間パフォーマンスレポート — どれだけ時間とメモリを節約できたか"><meta name="twitter:description" content="LB TAB Layersの週間パフォーマンスレポートは、今週の検索・グループ復元・重複除去・AI検索の回数と、推定の節約時間・節約メモリを"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"週間パフォーマンスレポート","item":"https://tablayers.liquid-block.com/blog/feature-weekly-report.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】週間パフォーマンスレポート — どれだけ時間とメモリを節約できたか","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-productivity-work.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-weekly-report.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"週間レポートの節約時間は正確な値ですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。検索1回0.5分、グループ復元1回2分などの目安を操作回数に掛けた推定値です。効果をイメージするための参考値としてご覧ください。"}},{"@type":"Question","name":"週間レポートはどこから見られますか？","acceptedAnswer":{"@type":"Answer","text":"サイドパネルに表示されるトライアルのお知らせの📊ボタンから開けます。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>週間パフォーマンス<br>レポート</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-productivity-work.webp" alt="週間パフォーマンスレポート" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E9%80%B1%E9%96%93%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20%E2%80%94%20%E3%81%A9%E3%82%8C%E3%81%A0%E3%81%91%E6%99%82%E9%96%93%E3%81%A8%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%92%E7%AF%80%E7%B4%84%E3%81%A7%E3%81%8D%E3%81%9F%E3%81%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E9%80%B1%E9%96%93%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20%E2%80%94%20%E3%81%A9%E3%82%8C%E3%81%A0%E3%81%91%E6%99%82%E9%96%93%E3%81%A8%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%92%E7%AF%80%E7%B4%84%E3%81%A7%E3%81%8D%E3%81%9F%E3%81%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-weekly-report.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-weekly-report.html" data-title="【機能ガイド】週間パフォーマンスレポート — どれだけ時間とメモリを節約できたか" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>週間パフォーマンスレポートは、LB TAB Layers でどれだけ作業が楽になったかを数字で見せる機能です。</strong>今週の検索・グループ復元・重複除去・AI検索の回数と、そこから計算した推定の節約時間と節約メモリ、インストールからの累計を表示します。トライアルのお知らせにある📊ボタンから開けます。</p>
+
+    <h2>表示される項目</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>今週</th><th>累計</th></tr></thead><tbody>
+    <tr><td>検索／グループ復元／重複除去／AI検索の回数</td><td>インストールしてからの週数</td></tr>
+    <tr><td>推定節約時間</td><td>合計節約時間</td></tr>
+    <tr><td>推定メモリ節約</td><td>合計メモリ節約</td></tr>
+    </tbody></table></div>
+
+    <h2>推定値の計算の目安</h2>
+    <p>節約時間とメモリは、操作1回ごとに次の目安を掛けて計算しています。<strong>実際の測定値ではなく、効果をイメージするための目安</strong>です。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>操作</th><th>節約時間</th><th>節約メモリ</th></tr></thead><tbody>
+    <tr><td>検索1回</td><td>0.5分</td><td>—</td></tr>
+    <tr><td>グループ復元1回</td><td>2分</td><td>—</td></tr>
+    <tr><td>タブを閉じる1回</td><td>1分</td><td>30MB</td></tr>
+    <tr><td>重複除去1件</td><td>0.5分</td><td>40MB</td></tr>
+    <tr><td>AI検索1回</td><td>1分</td><td>—</td></tr>
+    </tbody></table></div>
+
+    <h2>開き方</h2>
+    <p>サイドパネルに表示されるトライアルのお知らせにある<strong>📊ボタン</strong>を押すと開きます。</p>
+    <div class="blog-callout"><p>💡 「グループ復元」が多い週は、タブを閉じても戻せる安心感を使いこなせている証拠です。逆に検索が多いなら、よく使うサイトを<a href="feature-pin-bar-clock.html">ピンバー</a>に置くと、さらに速くなります。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 週間レポートの節約時間は正確な値ですか？</h3>
+    <p>いいえ。検索1回0.5分、グループ復元1回2分などの目安を操作回数に掛けた推定値です。効果をイメージするための参考値としてご覧ください。</p>
+
+    <h3>Q. 週間レポートはどこから見られますか？</h3>
+    <p>サイドパネルに表示されるトライアルのお知らせの📊ボタンから開けます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E9%80%B1%E9%96%93%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20%E2%80%94%20%E3%81%A9%E3%82%8C%E3%81%A0%E3%81%91%E6%99%82%E9%96%93%E3%81%A8%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%92%E7%AF%80%E7%B4%84%E3%81%A7%E3%81%8D%E3%81%9F%E3%81%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-weekly-report.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E9%80%B1%E9%96%93%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20%E2%80%94%20%E3%81%A9%E3%82%8C%E3%81%A0%E3%81%91%E6%99%82%E9%96%93%E3%81%A8%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%92%E7%AF%80%E7%B4%84%E3%81%A7%E3%81%8D%E3%81%9F%E3%81%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-weekly-report.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-weekly-report.html" data-title="【機能ガイド】週間パフォーマンスレポート — どれだけ時間とメモリを節約できたか" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>タブを閉じても、消えない。</h3><p>機能はすべて3ヶ月フル無料でお試しいただけます。データはChromeのブックマークに残ります。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="free-vs-pro.html">無料版とPRO版の違い <span>→</span></a><a href="chrome-memory-saving.html">Chrome メモリ節約テクニック <span>→</span></a><a href="feature-pin-bar-clock.html">ピンバーと時計・タイマー <span>→</span></a><a href="all-features-guide.html">全機能ガイド <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

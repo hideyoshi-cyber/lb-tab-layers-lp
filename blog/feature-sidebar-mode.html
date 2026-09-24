@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定 | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layersは、Chrome標準のサイドパネルに表示する「固定」と、ページに重ねてボタンで出し入れする「オーバーレイ」の2つの表示モードを選べます。違い、左右の位置、幅、ボタン位置の設定を解説。">
+  <meta name="keywords" content="Chrome サイドパネル 左側,サイドバー 幅 変更,オーバーレイ 表示,サイドパネル 常に表示,画面 狭い サイドバー,LB TAB Layers 表示モード">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html">
+  <meta property="og:title" content="【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定"><meta property="og:description" content="LB TAB Layersは、Chrome標準のサイドパネルに表示する「固定」と、ページに重ねてボタンで出し入れする「オーバーレイ」の2つの"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定"><meta name="twitter:description" content="LB TAB Layersは、Chrome標準のサイドパネルに表示する「固定」と、ページに重ねてボタンで出し入れする「オーバーレイ」の2つの"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"表示モード（固定／オーバーレイ）","item":"https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-ai-search.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"固定とオーバーレイの違いは？","acceptedAnswer":{"@type":"Answer","text":"固定はChrome標準のサイドパネルに表示し、ページの横に並べて使います。オーバーレイはページに重ねて表示し、画面端のボタンで出し入れするため、ページの幅が狭くなりません。"}},{"@type":"Question","name":"サイドバーの幅を変えられますか？","acceptedAnswer":{"@type":"Answer","text":"オーバーレイでは小（280px）・中（360px）・大（440px）から選べます。オーバーレイ表示はPRO版の機能で、3ヶ月の無料トライアル中は利用できます。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>表示モード<br>固定とオーバーレイ</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-ai-search.webp" alt="サイドパネルとオーバーレイの表示モード" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E8%A1%A8%E7%A4%BA%E3%83%A2%E3%83%BC%E3%83%89%20%E2%80%94%20%E6%A8%99%E6%BA%96%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%A8%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E8%A1%A8%E7%A4%BA%E3%83%A2%E3%83%BC%E3%83%89%20%E2%80%94%20%E6%A8%99%E6%BA%96%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%A8%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html" data-title="【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB TAB Layers には2つの表示モードがあります。</strong>「固定」はChrome標準のサイドパネルに表示し、ページの横に並べて使います。「オーバーレイ」はページの上に重ねて表示し、画面端のボタンで出し入れします。オーバーレイでは左右の位置、幅（280／360／440px）、ボタンの位置を選べます。</p>
+
+    <h2>2つのモードの違い</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>固定（標準サイドパネル）</th><th>オーバーレイ</th></tr></thead><tbody>
+    <tr><td>表示場所</td><td>Chromeのサイドパネル</td><td>ページの上に重ねて表示</td></tr>
+    <tr><td>ページの幅</td><td>パネルの分だけ狭くなる</td><td>狭くならない（使わないときは収納）</td></tr>
+    <tr><td>出し入れ</td><td>アイコン・Alt+T</td><td>画面端のボタン・Alt+T</td></tr>
+    <tr><td>起動時の自動表示</td><td>不可（Chromeの仕様）</td><td>可（→ <a href="startup-peek-overlay.html">チラ見せ</a>）</td></tr>
+    <tr><td>使える場所</td><td>すべてのページ</td><td>通常のWebページ（新しいタブや chrome:// ページでは表示できない）</td></tr>
+    <tr><td>プラン</td><td>無料</td><td>PRO版・トライアル中</td></tr>
+    </tbody></table></div>
+
+    <h2>オーバーレイの設定項目</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>項目</th><th>選択肢</th></tr></thead><tbody>
+    <tr><td>オーバーレイ表示位置</td><td>左／右</td></tr>
+    <tr><td>オーバーレイ幅</td><td>小（280px）／中（360px）／大（440px）</td></tr>
+    <tr><td>ボタン位置</td><td>左上・右上・左中央・右中央・左下・右下</td></tr>
+    <tr><td>起動時の表示</td><td>OFF／チラ見せ／常に開く</td></tr>
+    </tbody></table></div>
+
+    <h2>設定のしかた</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>設定を開く</h3><p>サイドパネルの設定を開き、「サイドバーモード」を探します。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>「固定」か「オーバーレイ」を選ぶ</h3><p>オーバーレイを選ぶと、位置・幅・ボタン位置・起動時の表示を設定できるようになります。</p></div></div>
+
+    <h2>どちらを選ぶ？</h2>
+    <ul>
+      <li><strong>画面が広い・常に見ていたい</strong> → 固定</li>
+      <li><strong>ノートPCで画面が狭い</strong> → オーバーレイ（必要なときだけ出す）</li>
+      <li><strong>左手側に置きたい</strong> → オーバーレイで「左」、またはChromeの設定でサイドパネルを左に</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 固定とオーバーレイの違いは？</h3>
+    <p>固定はChrome標準のサイドパネルに表示し、ページの横に並べて使います。オーバーレイはページに重ねて表示し、画面端のボタンで出し入れするため、ページの幅が狭くなりません。</p>
+
+    <h3>Q. サイドバーの幅を変えられますか？</h3>
+    <p>オーバーレイでは小（280px）・中（360px）・大（440px）から選べます。オーバーレイ表示はPRO版の機能で、3ヶ月の無料トライアル中は利用できます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E8%A1%A8%E7%A4%BA%E3%83%A2%E3%83%BC%E3%83%89%20%E2%80%94%20%E6%A8%99%E6%BA%96%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%A8%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-sidebar-mode.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E8%A1%A8%E7%A4%BA%E3%83%A2%E3%83%BC%E3%83%89%20%E2%80%94%20%E6%A8%99%E6%BA%96%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%A8%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-sidebar-mode.html" data-title="【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>タブを閉じても、消えない。</h3><p>機能はすべて3ヶ月フル無料でお試しいただけます。データはChromeのブックマークに残ります。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="startup-peek-overlay.html">起動時にサイドバーを自動で開く方法 <span>→</span></a><a href="feature-display-settings.html">表示のカスタマイズ <span>→</span></a><a href="chrome-side-panel-guide.html">Chromeサイドパネル活用ガイド <span>→</span></a><a href="free-vs-pro.html">無料版とPRO版の違い <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

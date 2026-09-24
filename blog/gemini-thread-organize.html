@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチとAIチャット管理術 | LB TAB Layers Blog</title>
+  <meta name="description" content="Google Geminiにはスレッドをフォルダで整理する機能がありません。タイトルルール化・ピン留め・拡張機能・LB TAB Layersを使った5つの代替アプローチを解説。AIチャット履歴が散らかる問題を解決します。">
+  <meta name="keywords" content="Gemini スレッド 整理,Gemini フォルダ,Gemini 履歴 管理,AIチャット 整理,Gemini タブ管理,Chrome タブ管理,AI活用 整理術">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/gemini-thread-organize.html">
+  <meta property="og:title" content="Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチ"><meta property="og:description" content="Geminiにフォルダ機能がない中で、チャット履歴を効率的に管理する5つの方法。タブ管理拡張との連携術も紹介。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/gemini-thread-organize.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-gemini-organize.jpg"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Geminiのスレッドをフォルダ整理する方法"><meta name="twitter:description" content="フォルダ機能がないGeminiの履歴を整理する5つの代替アプローチ。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-gemini-organize.jpg">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Geminiスレッドのフォルダ整理","item":"https://tablayers.liquid-block.com/blog/gemini-thread-organize.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチとAIチャット管理術","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-08","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/gemini-thread-organize.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Geminiのスレッド（チャット履歴）をフォルダに分けて整理できますか？","acceptedAnswer":{"@type":"Answer","text":"2026年9月時点では、Google Geminiにはチャットスレッドをフォルダに分類する標準機能はありません。代替として、タイトルにカテゴリ名をつけるルール化、重要スレッドのピン留め、ブラウザの拡張機能を使う方法があります。"}},{"@type":"Question","name":"Geminiの履歴が多すぎて探せないときの対処法は？","acceptedAnswer":{"@type":"Answer","text":"(1) タイトルの先頭に【仕事】【語学】などのカテゴリ名をつける (2) 重要なスレッドをピン留めする (3) 目的別に別タブでGeminiを開き、LB TAB Layersなどのタブ管理拡張で「AIチャット」フォルダにまとめて保存すると、疑似的なフォルダ管理が実現できます。"}},{"@type":"Question","name":"AIチャット（Gemini・ChatGPT・Claude）のタブが増えすぎたときの管理方法は？","acceptedAnswer":{"@type":"Answer","text":"LB TAB Layersのサイドパネルで「AIチャット」フォルダを作り、各AIサービスのタブをドラッグ＆ドロップで保存すれば、タブを閉じてもワンクリックで復元できます。通知バッジ機能でGeminiの応答完了も確認でき、AI検索で過去に保存したチャットURLを自然言語で探すこともできます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Geminiのスレッドを擬似フォルダで管理する方法","step":[{"@type":"HowToStep","position":1,"name":"タイトルにカテゴリ名をつける","text":"Geminiのチャットタイトルを変更し、先頭に【仕事】【語学】【趣味】などのカテゴリ名をつけます。一覧で並んだ時にカテゴリごとにまとまって見えます。"},{"@type":"HowToStep","position":2,"name":"重要なスレッドをピン留めする","text":"チャット履歴の一覧から、残したいスレッドの三点リーダー（︙）をクリックし「固定」を選択します。これでスレッドが常に上部に表示されます。"},{"@type":"HowToStep","position":3,"name":"目的別のタブをフォルダ保存する","text":"LB TAB Layersをインストールし、サイドパネルに「AIチャット」フォルダを作成。目的別に開いたGeminiのタブをフォルダに追加して保存します。"},{"@type":"HowToStep","position":4,"name":"タブを閉じてメモリを解放する","text":"保存したタブはブックマークとして残るため、安心して閉じられます。必要なときにクリックで即復元。メモリも解放されてPCが軽くなります。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">AI活用</span><h1>Geminiのスレッドを<br>フォルダ整理できない問題 —<br>5つの代替アプローチ</h1><p class="blog-meta"><time datetime="2026-09-08">2026.09.08</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-gemini-organize.jpg" alt="GeminiのAIチャットスレッドをフォルダで整理するイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html&amp;text=Gemini%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%95%B4%E7%90%86%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%20%E2%80%94%205%E3%81%A4%E3%81%AE%E4%BB%A3%E6%9B%BF%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html&amp;title=Gemini%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%95%B4%E7%90%86%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%20%E2%80%94%205%E3%81%A4%E3%81%AE%E4%BB%A3%E6%9B%BF%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/gemini-thread-organize.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/gemini-thread-organize.html" data-title="Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチ" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>2026年9月時点で、Google Geminiにはチャットスレッドをフォルダに分けて整理する機能がありません。</strong>代替として、タイトルのルール化、ピン留め、拡張機能の活用、そしてタブ管理拡張でAIチャットタブを丸ごとフォルダ保存する方法があります。</p>
+
+    <p>「Geminiのスレッドを整理することはできないんですね。フォルダ構造にとか……」</p>
+    <p>そう思った方、多いのではないでしょうか。</p>
+    <p>おっしゃる通り、現在のGeminiには過去のチャットをフォルダに分けて管理する機能が<strong>標準では搭載されていません</strong>。ChatGPTもClaudeも、2026年時点ではフォルダ機能に対応しておらず、AIチャットツール全般に共通する課題です。</p>
+    <p>履歴がどんどん溜まっていくと、「あのときの回答、どのスレッドだっけ？」と過去のやり取りを探すのが本当に大変になります。</p>
+    <p>この記事では、<strong>フォルダ機能がない中でGeminiの履歴を使いやすく整理するための5つの代替アプローチ</strong>を紹介します。最後の方法は、タブ管理の発想で根本的に解決するアプローチです。</p>
+
+    <h2>現状の問題：なぜGeminiの履歴は散らかるのか</h2>
+    <p>Geminiのサイドバーに並ぶチャット履歴は、基本的に<strong>時系列の一覧</strong>です。</p>
+    <ul>
+      <li>フォルダ分類ができない</li>
+      <li>タグ付けもできない</li>
+      <li>検索はできるが、キーワードを忘れたら詰む</li>
+      <li>スレッド数が増えるほど、目的のチャットを見つけるのに時間がかかる</li>
+    </ul>
+    <p>仕事・趣味・勉強と用途をまたいで使うほど、「あの回答がどこにあるかわからない」問題は深刻になります。</p>
+
+    <h2>アプローチ① タイトルの「ルール化」で擬似フォルダにする</h2>
+    <p>Gemini のチャットタイトルは自由に変更できます。これを利用して、先頭に<strong>カテゴリ名を統一フォーマットで付ける</strong>と、一覧に並んだ時に視覚的に探しやすくなります。</p>
+
+    <div class="blog-callout"><p><strong>タイトル命名ルールの例：</strong></p>
+    <ul style="margin:0">
+      <li>【仕事】〇〇の企画書案</li>
+      <li>【語学】英文メールの添削</li>
+      <li>【趣味】京都旅行の計画</li>
+      <li>【開発】Python スクレイピングのエラー修正</li>
+      <li>【SEO】ブログ記事のタイトル案</li>
+    </ul></div>
+
+    <p>ポイントは<strong>全角カッコ【 】</strong>を使うこと。半角よりも視認性が高く、一覧でパッと目に入ります。自動生成されたタイトルのままにせず、会話が終わったら必ずリネームする習慣をつけましょう。</p>
+
+    <h2>アプローチ② 重要なスレッドの「固定（ピン留め）」</h2>
+    <p>何度も使いたいプロンプトや、長期プロジェクトのスレッドは、<strong>ピン留め</strong>して上部に固定するのが一番確実です。</p>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>三点リーダーをクリック</h3><p>Gemini のチャット履歴一覧から、固定したいスレッドのタイトル横にある<strong>三点リーダー（︙）</strong>をクリックします。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>「固定」を選択</h3><p>メニューから「<strong>固定</strong>」を選択。これで新しいチャットを開いても、固定したスレッドは常に一覧の最上部に表示されます。</p></div></div>
+
+    <p>ピン留めは数に制限がないため、「定型プロンプト集」「進行中のプロジェクト」など、頻繁にアクセスするものを固定しておくと効率的です。</p>
+
+    <h2>アプローチ③ ブラウザの拡張機能でフォルダ化する</h2>
+    <p>PCの Chrome をお使いであれば、<strong>サードパーティ製の拡張機能</strong>を使ってGeminiの画面にフォルダ機能を追加できます。</p>
+    <p>「Folders for Gemini」などの拡張機能を導入すると、サイドバーにフォルダを作成し、ドラッグ＆ドロップでスレッドを分類できるようになります。</p>
+
+    <div class="blog-callout" style="border-left-color: #E53935;"><p>⚠️ <strong>注意点：</strong>これらはGoogle公式の機能ではありません。</p>
+    <ul style="margin:0">
+      <li>Gemini側のデザイン変更で<strong>突然使えなくなる</strong>可能性がある</li>
+      <li>業務上の機密情報を扱う場合は、<strong>セキュリティ観点</strong>から慎重に</li>
+      <li>拡張機能自体のメンテナンスが止まるリスクもある</li>
+    </ul></div>
+
+    <h2>アプローチ④ 目的ごとに「別タブ」で管理する — 発想の転換</h2>
+    <p>ここからが、タブ管理の視点を加えたアプローチです。</p>
+    <p>Gemini内の履歴を整理しようとするのではなく、<strong>「用途ごとに専用のGeminiタブを開いておく」</strong>という発想に切り替えてみてください。</p>
+
+    <blockquote><p>Gemini側にフォルダがないなら、<strong>ブラウザのタブ管理を「フォルダ」代わりに使えばいい。</strong></p></blockquote>
+
+    <p>たとえば——</p>
+    <ul>
+      <li>「SEOキーワード調査」の Gemini タブ</li>
+      <li>「コードレビュー」の Gemini タブ</li>
+      <li>「ブログ記事のリライト」の Gemini タブ</li>
+      <li>「英語メールの添削」の ChatGPT タブ</li>
+      <li>「長文分析」の Claude タブ</li>
+    </ul>
+    <p>これらを<strong>タブ管理拡張のフォルダに保存</strong>しておけば、タブを閉じてもワンクリックで即座に復元できます。<br>Gemini側の履歴を探すのではなく、<strong>ブラウザのタブとして管理する</strong>ほうが圧倒的に速いのです。</p>
+
+    <h2>アプローチ⑤ LB TAB Layers で AI チャットタブを一元管理する</h2>
+    <p>この「タブ＝フォルダ」の発想を最も効率的に実現するのが、Chrome 拡張機能 <strong>LB TAB Layers</strong> です。</p>
+
+    <h3>LB TAB Layers で実現できること</h3>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>機能</th><th>AIチャット管理での活用</th></tr></thead><tbody>
+    <tr><td><strong>フォルダ管理</strong></td><td>「AI チャット」「仕事AI」「勉強AI」などのフォルダを作成し、Gemini・ChatGPT・Claude のタブをまとめて保存</td></tr>
+    <tr><td><strong>サブフォルダ</strong></td><td>「AI チャット」の中に「SEO」「コーディング」「翻訳」のサブフォルダを作成して細分化</td></tr>
+    <tr><td><strong>ワンクリック復元</strong></td><td>保存したAIチャットタブを、必要なときにクリック1つで即復元</td></tr>
+    <tr><td><strong>一括保存・一括復元</strong></td><td>「仕事AI」フォルダ内の全タブを一括で開く。作業開始時にワンクリックでAI作業環境が復活</td></tr>
+    <tr><td><strong>AI 検索</strong></td><td>「先週 SEO について聞いた Gemini のスレッド」のように、自然言語で保存済みタブを検索</td></tr>
+    <tr><td><strong>通知バッジ</strong></td><td>Gemini が長い応答を生成中でも、タブを開かずにサイドパネルで完了を確認</td></tr>
+    <tr><td><strong>ブックマーク同期</strong></td><td>保存したタブはChrome ブックマークに同期。拡張を消してもデータは残る</td></tr>
+    <tr><td><strong>メモリ節約</strong></td><td>使わないAIタブを閉じてメモリを解放。Gemini は1タブで300〜500MBを消費することも</td></tr>
+    </tbody></table></div>
+
+    <h3>具体的な運用フロー</h3>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>「AI チャット」フォルダを作る</h3><p>LB TAB Layers のサイドパネルで「＋」ボタンをクリックし、「AI チャット」フォルダを作成します。必要に応じて「SEO」「コーディング」「翻訳」などのサブフォルダも作成。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>Gemini タブをフォルダに追加</h3><p>開いている Gemini のタブを、サイドパネルのフォルダにドラッグ＆ドロップ、または「＋」ボタンで追加。<strong>その瞬間にブックマークとして自動保存</strong>されます。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>安心してタブを閉じる</h3><p>ブックマークとして保存されているので、タブを閉じてもデータは消えません。<strong>メモリが解放されてPCが軽くなります</strong>。Gemini は1タブあたり300〜500MBのメモリを消費するため、使わないスレッドを閉じる効果は絶大です。</p></div></div>
+
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>必要なときにワンクリックで復元</h3><p>サイドパネルのフォルダから、保存したタブをクリックするだけ。Gemini がそのスレッドの状態で開きます。「全部開く」で一括復元も可能です。</p></div></div>
+
+    <h3>なぜこの方法がベストなのか</h3>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>比較項目</th><th>Gemini内で整理</th><th>LB TAB Layers で管理</th></tr></thead><tbody>
+    <tr><td>フォルダ分類</td><td>✗ 不可</td><td><strong>✓ 無制限</strong></td></tr>
+    <tr><td>サブフォルダ</td><td>✗ 不可</td><td><strong>✓ 対応</strong></td></tr>
+    <tr><td>Gemini + ChatGPT + Claude の横断管理</td><td>✗ 不可（各サービス個別）</td><td><strong>✓ 1つのフォルダで統合</strong></td></tr>
+    <tr><td>検索方法</td><td>キーワード一致のみ</td><td><strong>1,000語ファジー検索 + AI検索</strong></td></tr>
+    <tr><td>メモリへの影響</td><td>タブを開き続ける必要あり</td><td><strong>閉じてもワンクリック復元</strong></td></tr>
+    <tr><td>データの安全性</td><td>Gemini側のUI変更に依存</td><td><strong>Chrome ブックマークに保存（永続）</strong></td></tr>
+    <tr><td>外部拡張のリスク</td><td>Folders for Geminiなどは非公式</td><td><strong>Chrome Web Store 公式審査済み</strong></td></tr>
+    </tbody></table></div>
+
+    <p>特に大きいのは<strong>「複数AIサービスの横断管理」</strong>ができる点です。Gemini・ChatGPT・Claude を用途別に使い分けている人にとって、1つの管理画面ですべてのAIチャットタブを整理できるのは画期的です。</p>
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Geminiに将来フォルダ機能が追加されたら、この方法は不要になりますか？</h3>
+    <p>Geminiにフォルダ機能が追加されても、ChatGPTやClaudeまで含めた<strong>横断管理</strong>は Gemini 単体ではできません。複数のAIを使い分けるなら、タブ管理拡張による一元管理は引き続き有効です。</p>
+
+    <h3>Q. Geminiのタブを保存したら、スレッドの途中から再開できますか？</h3>
+    <p>はい。GeminiのURLにはスレッドIDが含まれているため、保存したタブを復元すると<strong>そのスレッドの会話がそのまま表示</strong>されます。途中からの続きも可能です。</p>
+
+    <h3>Q. AIのタブはメモリをどれくらい消費しますか？</h3>
+    <p>Gemini・ChatGPT・Claude はいずれもリッチなWebアプリで、<strong>1タブあたり300〜500MB</strong>程度のメモリを消費します。5つのAIタブを常時開いていると、それだけで1.5〜2.5GBのメモリを専有。LB TAB Layers で閉じて保存すれば、その分のメモリが即座に解放されます。</p>
+
+    <h3>Q. 無料で使えますか？</h3>
+    <p>3ヶ月間、すべての機能を無料でお試しいただけます。その後も基本機能は引き続き利用可能です。</p>
+
+    <h2>まとめ</h2>
+    <p>Gemini のスレッドをフォルダで整理する方法は、大きく5つあります。</p>
+    <ol>
+      <li><strong>タイトルのルール化</strong> — 先頭に【カテゴリ名】をつけて擬似フォルダに</li>
+      <li><strong>ピン留め</strong> — 重要なスレッドを上部に固定</li>
+      <li><strong>専用拡張機能</strong> — 「Folders for Gemini」等で画面内にフォルダを追加（非公式）</li>
+      <li><strong>目的別タブ管理</strong> — 発想を変え、タブ単位でフォルダ保存する</li>
+      <li><strong>LB TAB Layers</strong> — タブ管理拡張で Gemini・ChatGPT・Claude を横断的にフォルダ管理</li>
+    </ol>
+    <p>最も手軽なのは①②の組み合わせ。<br>最も根本的な解決は⑤の<strong>「AIチャットタブをフォルダ管理する」</strong>アプローチです。</p>
+    <p>AIを日常的に使うなら、<strong>AIチャット自体をブラウザのタブとして管理する</strong>発想を取り入れてみてください。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html&amp;text=Gemini%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%95%B4%E7%90%86%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%20%E2%80%94%205%E3%81%A4%E3%81%AE%E4%BB%A3%E6%9B%BF%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fgemini-thread-organize.html&amp;title=Gemini%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%95%B4%E7%90%86%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%20%E2%80%94%205%E3%81%A4%E3%81%AE%E4%BB%A3%E6%9B%BF%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/gemini-thread-organize.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/gemini-thread-organize.html" data-title="Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチ" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>AIチャットのタブ、散らかっていませんか？</h3><p>Gemini・ChatGPT・Claude をフォルダで一元管理。3ヶ月フル無料 · 自動ブックマーク保存 · AI検索</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="ai-tab-search.html">AIでタブを探す — LB TAB Layers の AI 検索機能 <span>→</span></a><a href="chrome-tab-too-many.html">タブを開きすぎた時の対処法 — 100タブ超えの管理術 <span>→</span></a><a href="chrome-memory-saving.html">Chrome メモリ節約テクニック — タブ整理でPCが軽くなる <span>→</span></a><a href="tabs-heavy-bookmarks-tedious.html">タブだらけで重い。ブックマークがめんどくさい。それを解決するアプリの話 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://gemini.google.com/" target="_blank" rel="noopener">Google Gemini — 公式サイト</a>
+      <a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener">Gemini アクティビティの管理 — Google 公式ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

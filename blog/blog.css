@@ -290,3 +290,78 @@
   padding-top: 12px;
   border-top: 1px solid var(--border);
 }
+
+/* ===== ブログ内検索（一覧ページ） ===== */
+/* .blog-card は display:flex なので hidden 属性だけでは消えない。明示的に打ち消す */
+.blog-card[hidden], .bshare-btn[hidden] { display: none !important; }
+.blog-search { max-width: 760px; margin: 0 auto 36px; }
+.blog-search-box {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); padding: 12px 18px;
+  transition: var(--transition);
+}
+.blog-search-box:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.blog-search-box svg { width: 18px; height: 18px; color: var(--text-tertiary); flex-shrink: 0; }
+.blog-search-box input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+  font: inherit; font-size: 1rem; color: var(--text);
+}
+.blog-search-box input::placeholder { color: var(--text-tertiary); }
+.blog-search-kbd {
+  font-family: inherit; font-size: 0.75rem; color: var(--text-tertiary);
+  border: 1px solid var(--border); border-radius: 6px; padding: 1px 7px;
+}
+.blog-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+.blog-tag-chip {
+  font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  background: var(--bg-white); color: var(--text-secondary);
+  border: 1px solid var(--border); border-radius: var(--radius-pill);
+  padding: 5px 14px; transition: var(--transition);
+}
+.blog-tag-chip:hover { border-color: var(--accent); color: var(--accent); }
+.blog-tag-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.blog-search-status { text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin: 14px 0 0; min-height: 1.4em; }
+
+/* ===== シェアボタン（記事ページ） ===== */
+.blog-share { margin: 0 0 2rem; }
+.blog-share-bottom { margin: 2.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.blog-share-title { font-size: 0.9rem; font-weight: 700; color: var(--text); margin: 0 0 12px; text-align: center; }
+.blog-share-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.blog-share-bottom .blog-share-buttons { justify-content: center; }
+.bshare-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: inherit; font-size: 0.8rem; font-weight: 600; line-height: 1;
+  padding: 8px 14px; border-radius: var(--radius-pill);
+  border: 1px solid transparent; color: #fff; text-decoration: none; cursor: pointer;
+  transition: var(--transition);
+}
+.bshare-btn:hover { transform: translateY(-2px); opacity: 0.92; color: #fff; }
+.bshare-btn svg { width: 15px; height: 15px; }
+.bshare-mark { font-weight: 800; letter-spacing: 0.02em; }
+.bshare-x { background: #000; }
+.bshare-fb { background: #1877F2; }
+.bshare-line { background: #06C755; }
+.bshare-hatena { background: #00A4DE; }
+.bshare-copy, .bshare-native { background: var(--bg-white); color: var(--text); border-color: var(--border); }
+.bshare-copy:hover, .bshare-native:hover { color: var(--accent); border-color: var(--accent); }
+.bshare-copy.copied { color: var(--accent); border-color: var(--accent); }
+
+/* ===== ブログ内検索（記事の末尾） ===== */
+.blog-search-mini { margin-top: 2.5rem; padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-white); }
+.blog-search-mini-label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; color: var(--text); }
+.blog-search-mini-row { display: flex; gap: 8px; }
+.blog-search-mini-row input {
+  flex: 1; min-width: 0; font: inherit; font-size: 0.95rem; color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 10px 16px; background: transparent;
+}
+.blog-search-mini-row input:focus { outline: 0; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.blog-search-mini-row button {
+  font: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer;
+  border: 0; border-radius: var(--radius-pill); padding: 10px 20px; background: var(--accent); color: #fff;
+}
+@media (max-width: 600px) {
+  .bshare-btn .bshare-label { display: none; }
+  .bshare-btn { padding: 9px 12px; }
+  .bshare-copy .bshare-label { display: inline; }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome拡張機能のショートカットキーを設定・変更する方法 — タブ操作の定番ショートカット一覧つき | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome拡張機能のショートカットキーは chrome://extensions/shortcuts で設定・変更できます。手順、設定できないときの原因、「Chrome内／グローバル」の違い、タブ操作に使える定番ショートカット一覧をまとめました。">
+  <meta name="keywords" content="Chrome 拡張機能 ショートカット 変更,chrome://extensions/shortcuts,拡張機能 キーボードショートカット,Chrome タブ ショートカット,Chrome ショートカット 一覧,LB TAB Layers Alt+T">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html">
+  <meta property="og:title" content="Chrome拡張機能のショートカットキーを設定・変更する方法"><meta property="og:description" content="chrome://extensions/shortcuts での設定手順と、タブ操作の定番ショートカット一覧。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Chrome拡張機能のショートカットキーを設定・変更する方法"><meta name="twitter:description" content="chrome://extensions/shortcuts での設定手順と、タブ操作の定番ショートカット一覧。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"拡張機能のショートカットキー設定","item":"https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome拡張機能のショートカットキーを設定・変更する方法 — タブ操作の定番ショートカット一覧つき","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","image":"https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chrome拡張機能のショートカットキーはどこで変更できますか？","acceptedAnswer":{"@type":"Answer","text":"アドレスバーに chrome://extensions/shortcuts と入力して開く画面で、拡張機能ごとにショートカットキーを設定・変更できます。拡張機能の管理画面の左メニュー「キーボード ショートカット」からも開けます。"}},{"@type":"Question","name":"拡張機能のショートカットが効かないのはなぜですか？","acceptedAnswer":{"@type":"Answer","text":"ほかの拡張機能やChrome本体と同じキーの組み合わせになっている、CtrlやAltを含まない組み合わせにしている、表示中のWebアプリがそのキーを先に使っている、などが主な原因です。chrome://extensions/shortcuts で割り当てを確認してください。"}},{"@type":"Question","name":"LB TAB Layersのショートカットキーは？","acceptedAnswer":{"@type":"Answer","text":"初期設定ではAlt+T（MacはOption+T）でサイドパネルを開けます。chrome://extensions/shortcuts の「LB TAB Layers を開く」から変更できます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Chrome拡張機能のショートカットキーを設定する","step":[{"@type":"HowToStep","position":1,"name":"ショートカット設定画面を開く","text":"アドレスバーに chrome://extensions/shortcuts と入力して開きます。"},{"@type":"HowToStep","position":2,"name":"入力欄をクリックする","text":"設定したい拡張機能の操作の入力欄をクリックします。"},{"@type":"HowToStep","position":3,"name":"キーの組み合わせを押す","text":"CtrlまたはAlt（MacではCommand、Control、Option）を含むキーの組み合わせを押します。"},{"@type":"HowToStep","position":4,"name":"有効範囲を選ぶ","text":"選べる場合は「Chrome 内」か「グローバル」を選びます。通常は「Chrome 内」で十分です。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.67</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">活用テクニック</span><h1>Chrome拡張機能の<br>ショートカットキーを<br>設定・変更する方法</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-memory-speedup.webp" alt="Chromeのショートカットキーでタブを素早く操作するイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html&amp;text=Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC%E3%82%92%E8%A8%AD%E5%AE%9A%E3%83%BB%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%82%BF%E3%83%96%E6%93%8D%E4%BD%9C%E3%81%AE%E5%AE%9A%E7%95%AA%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A4%E3%81%8D" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html&amp;title=Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC%E3%82%92%E8%A8%AD%E5%AE%9A%E3%83%BB%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%82%BF%E3%83%96%E6%93%8D%E4%BD%9C%E3%81%AE%E5%AE%9A%E7%95%AA%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A4%E3%81%8D" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html" data-title="Chrome拡張機能のショートカットキーを設定・変更する方法 — タブ操作の定番ショートカット一覧つき" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome拡張機能のショートカットキーは、アドレスバーに chrome://extensions/shortcuts と入力して開く画面で設定・変更できます。</strong>拡張機能ごとの入力欄をクリックし、使いたいキーの組み合わせ（Ctrl または Alt を含む）を押すだけです。LB TAB Layers は初期設定で Alt+T（Macは Option+T）に割り当てられています。</p>
+
+    <p>拡張機能はツールバーのアイコンから開くもの、と思っていませんか。</p>
+    <p>実はChromeの拡張機能の多くは、<strong>キーボードショートカットで一発起動</strong>できます。マウスを画面の右上まで動かす必要がなくなるだけで、1日に何十回も開くツールなら体感はかなり変わります。</p>
+
+    <h2>拡張機能のショートカットを設定・変更する手順</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>ショートカット設定画面を開く</h3><p>アドレスバーに <code>chrome://extensions/shortcuts</code> と入力して開きます。拡張機能の管理画面（<code>chrome://extensions</code>）の左メニュー「キーボード ショートカット」からも開けます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>拡張機能の入力欄をクリック</h3><p>インストールしている拡張機能ごとに、ショートカットを割り当てられる操作が並んでいます。設定したい操作の入力欄（鉛筆アイコン）をクリックします。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>キーの組み合わせを押す</h3><p>使いたいキーをそのまま押します。<strong>Ctrl または Alt（Macでは Command／Control／Option）を含む組み合わせ</strong>にする必要があります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>有効範囲を選ぶ</h3><p>入力欄の横で「Chrome 内」か「グローバル」を選べる場合があります。通常は「Chrome 内」で十分です。</p></div></div>
+
+    <h2>「Chrome 内」と「グローバル」の違い</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>有効範囲</th><th>動作</th><th>おすすめ</th></tr></thead><tbody>
+    <tr><td><strong>Chrome 内</strong></td><td>Chromeのウィンドウを操作しているときだけ反応する</td><td>ほとんどの拡張機能はこちら</td></tr>
+    <tr><td>グローバル</td><td>ほかのアプリを使っているときも反応する</td><td>他のアプリのショートカットと衝突しやすいので慎重に</td></tr>
+    </tbody></table></div>
+
+    <h2>ショートカットが設定できない・効かないときは</h2>
+    <ul>
+      <li><strong>ほかの拡張機能と重複している</strong> — 同じ組み合わせはひとつの拡張機能にしか割り当てられません。後からインストールした拡張の欄が空になっていることがあります</li>
+      <li><strong>Chrome本体のショートカットと重なっている</strong> — Ctrl+T など、Chromeがすでに使っている組み合わせは避けましょう</li>
+      <li><strong>単独のキーを押している</strong> — Ctrl や Alt を含まない組み合わせは登録できません</li>
+      <li><strong>ページ側が横取りしている</strong> — Webアプリによっては独自のショートカットを持っていて、拡張より先に反応することがあります</li>
+    </ul>
+
+    <h2>LB TAB Layers は Alt+T</h2>
+    <p>LB TAB Layers は、インストールした時点で <strong>Alt+T（Macは Option+T）</strong>でサイドパネルを開けるよう設定されています。</p>
+    <ul>
+      <li>割り当てを変えたいときは、上の手順で <code>chrome://extensions/shortcuts</code> の「LB TAB Layers を開く」を変更します</li>
+      <li>サイドパネルの設定画面にも、Alt+T の案内と設定画面への誘導を常に表示しています（v2.8.67〜）</li>
+      <li>名前の編集やタブの並び替えなど、マウス操作のコツはヘルプの<strong>「操作ガイド」</strong>にまとめています</li>
+    </ul>
+
+    <h2>タブ操作に使える Chrome の定番ショートカット</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>操作</th><th>Windows</th><th>Mac</th></tr></thead><tbody>
+    <tr><td>新しいタブを開く</td><td>Ctrl+T</td><td>⌘+T</td></tr>
+    <tr><td>今のタブを閉じる</td><td>Ctrl+W</td><td>⌘+W</td></tr>
+    <tr><td>閉じたタブを開き直す</td><td>Ctrl+Shift+T</td><td>⌘+Shift+T</td></tr>
+    <tr><td>次のタブへ</td><td>Ctrl+Tab</td><td>⌘+Option+→</td></tr>
+    <tr><td>前のタブへ</td><td>Ctrl+Shift+Tab</td><td>⌘+Option+←</td></tr>
+    <tr><td>1〜8番目のタブへ</td><td>Ctrl+1〜8</td><td>⌘+1〜8</td></tr>
+    <tr><td>いちばん右のタブへ</td><td>Ctrl+9</td><td>⌘+9</td></tr>
+    <tr><td>今のページをブックマーク</td><td>Ctrl+D</td><td>⌘+D</td></tr>
+    <tr><td>開いているタブをすべてブックマーク</td><td>Ctrl+Shift+D</td><td>⌘+Shift+D</td></tr>
+    <tr><td>ブックマークバーの表示切り替え</td><td>Ctrl+Shift+B</td><td>⌘+Shift+B</td></tr>
+    </tbody></table></div>
+    <p>「閉じたタブを開き直す」は覚えておくと便利ですが、戻せるのは直近に閉じたものだけです。あとで使うタブは、閉じる前にグループへ保存しておくのが確実です（→「<a href="chrome-tab-restore.html">閉じたタブを復元する方法</a>」）。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Chrome拡張機能のショートカットキーはどこで変更できますか？</h3>
+    <p>アドレスバーに chrome://extensions/shortcuts と入力して開く画面で、拡張機能ごとにショートカットキーを設定・変更できます。拡張機能の管理画面の左メニュー「キーボード ショートカット」からも開けます。</p>
+
+    <h3>Q. 拡張機能のショートカットが効かないのはなぜですか？</h3>
+    <p>ほかの拡張機能やChrome本体と同じキーの組み合わせになっている、CtrlやAltを含まない組み合わせにしている、表示中のWebアプリがそのキーを先に使っている、などが主な原因です。chrome://extensions/shortcuts で割り当てを確認してください。</p>
+
+    <h3>Q. LB TAB Layersのショートカットキーは？</h3>
+    <p>初期設定ではAlt+T（MacはOption+T）でサイドパネルを開けます。chrome://extensions/shortcuts の「LB TAB Layers を開く」から変更できます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html&amp;text=Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC%E3%82%92%E8%A8%AD%E5%AE%9A%E3%83%BB%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%82%BF%E3%83%96%E6%93%8D%E4%BD%9C%E3%81%AE%E5%AE%9A%E7%95%AA%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A4%E3%81%8D" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fextension-shortcut-keys.html&amp;title=Chrome%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC%E3%82%92%E8%A8%AD%E5%AE%9A%E3%83%BB%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%82%BF%E3%83%96%E6%93%8D%E4%BD%9C%E3%81%AE%E5%AE%9A%E7%95%AA%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A4%E3%81%8D" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/extension-shortcut-keys.html" data-title="Chrome拡張機能のショートカットキーを設定・変更する方法 — タブ操作の定番ショートカット一覧つき" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>Alt+T で、いつでもタブの司令塔へ。</h3><p>キーボード一発でサイドパネルを開く。3ヶ月フル無料 · 自動ブックマーク保存</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-tab-restore.html">閉じたタブを復元する方法 <span>→</span></a><a href="startup-peek-overlay.html">Chrome起動時にサイドバーを自動で開く方法 <span>→</span></a><a href="bulk-close-bulk-open.html">タブの一括クローズ・一括オープン <span>→</span></a><a href="getting-started-setup.html">LB TAB Layers 初期設定ガイド <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/157179" target="_blank" rel="noopener">Chrome のキーボード ショートカット — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
