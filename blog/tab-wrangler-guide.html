@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Wranglerとは？使い方と設定、自動で閉じる前に知っておきたいこと | LB TAB Layers Blog</title>
+  <meta name="description" content="Tab Wrangler（タブラングラー）は、しばらく使っていないタブを自動で閉じるChrome拡張です。閉じたタブを戻せる「Tab Corral」、ロック・除外リスト・最小タブ数などの設定と初期値、使う前に知っておきたい注意点、代わりの方法を日本語で解説します。">
+  <meta name="keywords" content="tab wrangler,Tab Wrangler 使い方,Tab Wrangler 日本語,タブ 自動で閉じる 拡張,Tab Corral,Chrome タブ 自動 閉じる">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html">
+  <meta property="og:title" content="Tab Wranglerとは？使い方と設定、自動で閉じる前に知っておきたいこと"><meta property="og:description" content="使っていないタブを自動で閉じる Tab Wrangler の使い方・初期設定・注意点。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-28T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tab Wranglerとは？使い方と設定、自動で閉じる前に知っておきたいこと"><meta name="twitter:description" content="使っていないタブを自動で閉じる Tab Wrangler の使い方・初期設定・注意点。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Tab Wranglerの使い方","item":"https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Tab Wranglerとは？使い方と設定、自動で閉じる前に知っておきたいこと","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-28","image":"https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Tab Wranglerは何分でタブを閉じますか？","acceptedAnswer":{"@type":"Answer","text":"初期設定では、60分使っていないタブを閉じます。ただし開いているタブが20個を超えていないときは閉じません。どちらも「Options」の画面で変更できます。"}},{"@type":"Question","name":"Tab Wranglerで閉じたタブを戻すには？","acceptedAnswer":{"@type":"Answer","text":"アイコンを押して「Tab Corral」を開き、一覧から戻したいタブをクリックします。タイトルやURLで検索することもできます。"}},{"@type":"Question","name":"Tab Wranglerで閉じてほしくないタブがあるときは？","acceptedAnswer":{"@type":"Answer","text":"「Tab Lock」の画面で鍵のアイコンを押すとそのタブは閉じられません。サイトごと守りたいときは除外リストにドメイン（例：mail.google.com）を追加します。ピン留めしたタブと今見ているタブは、もともと閉じられません。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">比較・乗り換え</span><h1>Tab Wranglerとは？<br>使い方と注意点</h1><p class="blog-meta"><time datetime="2026-09-28">2026.09.28</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-extensions-comparison.webp" alt="Tab Wranglerの使い方" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html&amp;text=Tab%20Wrangler%E3%81%A8%E3%81%AF%EF%BC%9F%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E8%A8%AD%E5%AE%9A%E3%80%81%E8%87%AA%E5%8B%95%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E5%89%8D%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html&amp;title=Tab%20Wrangler%E3%81%A8%E3%81%AF%EF%BC%9F%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E8%A8%AD%E5%AE%9A%E3%80%81%E8%87%AA%E5%8B%95%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E5%89%8D%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html" data-title="Tab Wranglerとは？使い方と設定、自動で閉じる前に知っておきたいこと" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Tab Wrangler は、しばらく見ていないタブを自動で閉じるオープンソースのChrome拡張です。</strong>初期設定では、60分使っていないタブを、開いているタブが20個を超えたときだけ閉じます。閉じたタブは拡張内の「Tab Corral」という一覧に残り、クリックで開き直せます。作業中のタブ・ピン留めしたタブは閉じられず、ロックや除外リストで閉じたくないタブも守れます。</p>
+
+    <p>タブを開きすぎてしまう人にとって、「使っていないタブを勝手に閉じてくれる」拡張は魅力的です。その代表が <strong>Tab Wrangler</strong> です。</p>
+    <p>ただ、タブが自動で閉じるのは便利な反面、慣れるまでは「あのタブどこいった？」も起こります。この記事では、Tab Wrangler の使い方と設定、使う前に知っておきたいことをまとめます。</p>
+
+    <h2>Tab Wrangler でできること</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>機能</th><th>内容</th></tr></thead><tbody>
+    <tr><td>自動で閉じる</td><td>一定時間見ていないタブを自動で閉じる（初期設定は60分）</td></tr>
+    <tr><td>Tab Corral</td><td>自動で閉じたタブの一覧。タイトルやURLで検索でき、クリックで開き直せる</td></tr>
+    <tr><td>ロック</td><td>タブ単位・ウィンドウ単位で「自動で閉じない」を指定</td></tr>
+    <tr><td>除外リスト</td><td>指定したサイト（例：<code>mail.google.com</code>）は閉じない</td></tr>
+    <tr><td>最小タブ数</td><td>開いているタブがこの数を超えるまでは閉じない（初期設定は20）</td></tr>
+    <tr><td>一時停止</td><td>ワンクリックで自動クローズを止めて、あとで再開</td></tr>
+    <tr><td>バックアップ</td><td>閉じたタブの一覧と設定をファイルに書き出し・読み込み</td></tr>
+    </tbody></table></div>
+    <p>今見ているタブと、ピン留めしたタブは自動では閉じられません。設定で、音声を再生中のタブやタブグループに入っているタブを守ることもできます。</p>
+
+    <h2>基本の使い方</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>インストールして、そのまま使う</h3><p>Chromeウェブストアから追加すると、すぐに動き始めます。アドレスバーの横のアイコンを押すと、「Tab Corral」「Tab Lock」「Options」の3つの画面があります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>閉じたくないタブをロックする</h3><p>「Tab Lock」の画面には、開いているタブごとに「あと何分で閉じるか」が表示されます。鍵のアイコンを押すと、そのタブは閉じられなくなります。ページを右クリックしてロックすることもできます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>閉じられたタブを戻す</h3><p>「Tab Corral」の一覧からクリックすると開き直せます。最近閉じたタブの一部は、戻る・進むの履歴やスクロール位置ごと戻せます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>時間と最小タブ数を調整する</h3><p>「Options」で、閉じるまでの時間と最小タブ数を変えられます。最初は初期設定のまま使い、「閉じるのが早すぎる」と感じたら時間を延ばすのがおすすめです。</p></div></div>
+
+    <h2>使う前に知っておきたいこと</h2>
+    <ul>
+      <li><strong>閉じたタブは「拡張の中」にある</strong> — Tab Corral は拡張機能の中の一覧です。拡張を削除すると一覧も消えるので、残したいときは先にバックアップ（書き出し）をしておきましょう</li>
+      <li><strong>一覧は「閉じた順」の1本のリスト</strong> — 案件ごとに分ける仕組みではないので、あとから探すときはタイトルやURLでの検索が頼りです</li>
+      <li><strong>入力途中のページに注意</strong> — フォームを書きかけたまま放置したタブも、時間が来れば閉じられます。書きかけのページはロックしておくと安心です</li>
+      <li><strong>保存件数には上限がある</strong> — Tab Corral に残せる数には上限（初期設定1,000件）があり、古いものから消えていきます</li>
+    </ul>
+
+    <h2>「自動で閉じる」が合わない人の選択肢</h2>
+    <p>勝手に閉じられるのが落ち着かない、という人もいます。その場合は目的に合わせて別の方法があります。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>目的</th><th>方法</th></tr></thead><tbody>
+    <tr><td>メモリだけ減らしたい（タブは残したい）</td><td>Chrome標準の「メモリセーバー」（設定 →「パフォーマンス」）。タブは開いたまま、使っていないタブのメモリを解放します（→ <a href="chrome-memory-saving.html">メモリ節約テクニック</a>）</td></tr>
+    <tr><td>閉じる前に、あとで探せる形で残したい</td><td>タブを案件ごとのグループに保存してから、自分で閉じる</td></tr>
+    <tr><td>今開いているタブを丸ごとリストにしたい</td><td>リスト変換型の拡張（→ <a href="onetab-alternative.html">OneTabの代替を探すなら</a>）</td></tr>
+    </tbody></table></div>
+
+    <h2>LB TAB Layers との違い</h2>
+    <p>LB TAB Layers には、タブを時間で自動的に閉じる機能はありません。考え方が逆で、<strong>「閉じる前に保存する」</strong>ための拡張です。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>Tab Wrangler</th><th>LB TAB Layers</th></tr></thead><tbody>
+    <tr><td>タブを閉じるタイミング</td><td>時間が来たら自動</td><td>自分で閉じる（グループの ■、単独タブの一括クローズ）</td></tr>
+    <tr><td>閉じたタブの置き場所</td><td>拡張の中の一覧（Tab Corral）</td><td>Chromeのブックマーク</td></tr>
+    <tr><td>整理のしかた</td><td>閉じた順の1本のリスト</td><td>案件ごとのグループ・サブグループ</td></tr>
+    <tr><td>拡張を削除したとき</td><td>一覧は消える（書き出しておけば復元できる）</td><td>ブックマークとして残る</td></tr>
+    </tbody></table></div>
+    <p>LB TAB Layers では、今どのグループにも入っていないタブが「単独タブ」に並び、「表示中以外のタブを一括で閉じる」で片付けられます。残したいものは先にグループへ保存しておけば、閉じてもワンクリックで戻せます（→ <a href="feature-ungrouped-tabs.html">単独タブの片付け</a>）。</p>
+    <p>2つは役割が違うので、併用もできます。保存したいものはLB TAB Layersのグループへ、それ以外の放置タブはTab Wranglerに任せる、という使い分けです。詳しい比較は <a href="../vs-tab-wrangler.html">LB TAB Layers vs Tab Wrangler</a> にまとめています。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Tab Wranglerは何分でタブを閉じますか？</h3>
+    <p>初期設定では、60分使っていないタブを閉じます。ただし開いているタブが20個を超えていないときは閉じません。どちらも「Options」の画面で変更できます。</p>
+
+    <h3>Q. Tab Wranglerで閉じたタブを戻すには？</h3>
+    <p>アイコンを押して「Tab Corral」を開き、一覧から戻したいタブをクリックします。タイトルやURLで検索することもできます。</p>
+
+    <h3>Q. Tab Wranglerで閉じてほしくないタブがあるときは？</h3>
+    <p>「Tab Lock」の画面で鍵のアイコンを押すとそのタブは閉じられません。サイトごと守りたいときは除外リストにドメイン（例：mail.google.com）を追加します。ピン留めしたタブと今見ているタブは、もともと閉じられません。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html&amp;text=Tab%20Wrangler%E3%81%A8%E3%81%AF%EF%BC%9F%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E8%A8%AD%E5%AE%9A%E3%80%81%E8%87%AA%E5%8B%95%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E5%89%8D%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-wrangler-guide.html&amp;title=Tab%20Wrangler%E3%81%A8%E3%81%AF%EF%BC%9F%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E8%A8%AD%E5%AE%9A%E3%80%81%E8%87%AA%E5%8B%95%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E5%89%8D%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/tab-wrangler-guide.html" data-title="Tab Wranglerとは？使い方と設定、自動で閉じる前に知っておきたいこと" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>閉じる前に、保存しておく。</h3><p>案件ごとのグループに保存して、安心して閉じる。3ヶ月フル無料でお試しいただけます。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-ungrouped-tabs.html">単独タブの片付け <span>→</span></a><a href="bulk-close-bulk-open.html">一括オープン・一括クローズ <span>→</span></a><a href="chrome-memory-saving.html">Chrome メモリ節約テクニック <span>→</span></a><a href="onetab-alternative.html">OneTabの代替を探すなら <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://github.com/tabwrangler/tabwrangler" target="_blank" rel="noopener">Tab Wrangler — GitHub（公式リポジトリ）</a>
+      <a href="https://support.google.com/chrome/answer/12929150?hl=ja" target="_blank" rel="noopener">Chrome のパフォーマンス設定（メモリセーバー） — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
