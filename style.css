@@ -1935,4 +1935,8 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 /* 比較表の注記（2026-09-28） */
+/* 文章で比べる表なので、セルの中で折り返す（body の word-break: keep-all だと日本語が縮まない） */
+#compare .compare-table { min-width: 900px; }
+#compare .compare-table td { white-space: normal; word-break: normal; overflow-wrap: anywhere; min-width: 104px; line-height: 1.5; font-size: 0.9rem; vertical-align: middle; }
+#compare .compare-table td:first-child { min-width: 170px; }
 .compare-note { max-width: 960px; margin: 16px auto 0; font-size: 0.85rem; color: var(--text-tertiary); line-height: 1.6; }
