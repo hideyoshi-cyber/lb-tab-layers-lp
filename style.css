@@ -1888,6 +1888,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 .reduce-before { color: var(--text-secondary); font-size: 1rem; line-height: 1.5; }
 .reduce-arrow { color: var(--accent); font-size: 1.2rem; font-weight: 600; }
 .reduce-after { color: var(--text); font-size: 1rem; font-weight: 600; line-height: 1.5; }
+#hero h1 .h1-phrase { display: inline-block; }
 .reduce-close { text-align: center; margin-top: 36px; font-size: 1.15rem; font-weight: 600; color: var(--text); }
 
 #philosophy { padding: 100px 0; }
