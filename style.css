@@ -1908,3 +1908,27 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .philosophy-card { padding: 40px 22px; text-align: left; }
   .philosophy-card p br { display: none; }
 }
+
+/* ===== VS CHROME BUILT-IN（2026-09-28） ===== */
+#vs-builtin { padding: 100px 0 80px; border-top: 1px solid var(--border); }
+.builtin-list { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+.builtin-row {
+  display: grid; grid-template-columns: 170px 1fr 1fr; gap: 20px; align-items: start;
+  background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px 24px;
+}
+.builtin-head { background: transparent; border: none; padding: 0 24px 2px; font-size: 0.85rem; font-weight: 600; color: var(--text-tertiary); }
+.builtin-head div:last-child { color: var(--accent); }
+.builtin-key { font-weight: 700; color: var(--text); font-size: 1rem; }
+.builtin-std { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+.builtin-lb { color: var(--text); font-size: 0.95rem; line-height: 1.6; font-weight: 600; }
+.builtin-label { display: none; }
+.builtin-close { text-align: center; margin-top: 32px; color: var(--text-secondary); font-size: 1rem; }
+
+@media (max-width: 768px) {
+  #vs-builtin { padding: 72px 0 60px; }
+  .builtin-head { display: none; }
+  .builtin-row { grid-template-columns: 1fr; gap: 8px; padding: 16px 18px; }
+  .builtin-label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-tertiary); margin-bottom: 2px; }
+  .builtin-lb .builtin-label { color: var(--accent); }
+}

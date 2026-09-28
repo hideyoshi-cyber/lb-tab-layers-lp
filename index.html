@@ -661,6 +661,27 @@
     </div>
   </section>
 
+  <!-- ===== VS CHROME BUILT-IN ===== -->
+  <section id="vs-builtin">
+    <div class="container">
+      <div class="feature-header">
+        <span class="feature-tag">Chrome標準との違い</span>
+        <h2>Chrome標準の機能より、<span class="text-gradient">ここが便利。</span></h2>
+        <p>保存先は標準と同じChromeのブックマーク。標準の便利さはそのままに、足りないところだけを足します。</p>
+      </div>
+      <div class="builtin-list">
+        <div class="builtin-row builtin-head" aria-hidden="true"><div></div><div>Chrome 標準</div><div>LB TAB Layers</div></div>
+        <div class="builtin-row"><div class="builtin-key">タブグループ</div><div class="builtin-std"><span class="builtin-label">Chrome 標準</span>名前と色でタブをまとめる。グループの中にグループは作れない</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>グループの中にサブグループ。終わった案件はアーカイブ。構成はプリセットで一発作成</div></div>
+        <div class="builtin-row"><div class="builtin-key">ブックマーク</div><div class="builtin-std"><span class="builtin-label">Chrome 標準</span>フォルダを「すべて開く」はできても、まとめて閉じる・今開いているかを見ることはできない</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>▶ でまとめて開き、■ でまとめて閉じる。開いているタブと保存したタブを同じ一覧で見分けられる</div></div>
+        <div class="builtin-row"><div class="builtin-key">ブックマークの整理</div><div class="builtin-std"><span class="builtin-label">Chrome 標準</span>重複やリンク切れを見つける機能はない</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>全ブックマークから重複を検出。リンク切れもチェックして一括で片付け</div></div>
+        <div class="builtin-row"><div class="builtin-key">検索</div><div class="builtin-std"><span class="builtin-label">Chrome 標準</span>入力した文字がそのまま含まれるものだけ。タブとブックマークは別々に探す</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>保存したタブ・開いているタブ・今日見たページ（PRO）をまとめて検索。「めーる」でGmailも</div></div>
+        <div class="builtin-row"><div class="builtin-key">タブの保存と片付け</div><div class="builtin-std"><span class="builtin-label">Chrome 標準</span>☆で1ページずつ保存。保存していないタブは開いたまま増えていく</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>右クリックからグループへ保存。保存していないタブは一括で閉じる・サイトごとに自動でグループ分け</div></div>
+        <div class="builtin-row"><div class="builtin-key">スクリーンショット</div><div class="builtin-std"><span class="builtin-label">Chrome 標準</span>複数のページをまとめて撮る機能はない</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>グループのページをまとめて撮影し、ZIPやPowerPoint（表紙・目次つき）で保存</div></div>
+      </div>
+      <p class="builtin-close">標準と同じ場所に保存するから、LB TAB Layers をやめても、データはChromeにそのまま残ります。</p>
+    </div>
+  </section>
+
   <!-- ===== COMPETITOR COMPARISON ===== -->
   <section id="compare">
     <div class="container">
@@ -793,19 +814,31 @@
   <section id="privacy">
     <div class="container">
       <div class="privacy-card">
-        <h2><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-4px;margin-right:6px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>プライバシー</h2>
+        <h2><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-4px;margin-right:6px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>会社のPCでも安心して使える</h2>
         <div class="privacy-grid">
+          <div class="privacy-item">
+            <h4>アカウント登録は不要</h4>
+            <p>インストールしてすぐ使えます。<br>メールアドレスの登録もありません。</p>
+          </div>
           <div class="privacy-item">
             <h4>ローカル保存</h4>
             <p>タブ・グループの保存先は、<br>あなたのChromeブックマークだけ。<br>当社サーバーには保存しません。<br><a href="privacy-policy.html" style="font-size:0.85rem;color:var(--accent)">プライバシーポリシー →</a></p>
+          </div>
+          <div class="privacy-item">
+            <h4>同期を切れば、そのPCだけに</h4>
+            <p>Chromeのブックマーク同期をオフにした環境では、データはそのPCの中だけに残ります。</p>
           </div>
           <div class="privacy-item">
             <h4>匿名認証</h4>
             <p>ライセンス検証のみ匿名IDを使用。個人情報の収集なし。</p>
           </div>
           <div class="privacy-item">
-            <h4>安全な決済</h4>
-            <p>クレジットカード情報は Stripe が処理。当社サーバーを経由しません。</p>
+            <h4>外部AIは、使うときだけ</h4>
+            <p>外部AIを使う場合だけ、ご自身のAPIキーで各AIサービスに直接送信。使わなければ送信されません。</p>
+          </div>
+          <div class="privacy-item">
+            <h4>安全な決済・買い切り</h4>
+            <p>クレジットカード情報は Stripe が処理し、当社サーバーを経由しません。月額の契約や更新もありません。</p>
           </div>
         </div>
       </div>
