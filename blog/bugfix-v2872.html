@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>不具合のお知らせと修正（v2.8.72）— 右クリック保存・サムネイルのプレビュー | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers で見つかった不具合のお知らせです。右クリック「TAB Layers に保存」で作ったばかりの空のグループに保存できない、タブのサムネイルのプレビューが消えずに残る、の2件を v2.8.72 で修正しました。原因と、更新が届くまでの回避方法をまとめています。">
+  <meta name="keywords" content="LB TAB Layers 不具合,LB TAB Layers v2.8.72,TAB Layers 右クリック 保存できない,サムネイル プレビュー 消えない,Chrome拡張 不具合 修正">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/bugfix-v2872.html">
+  <meta property="og:title" content="不具合のお知らせと修正（v2.8.72）"><meta property="og:description" content="右クリック保存とサムネイルのプレビューの不具合を修正しました。原因と回避方法。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/bugfix-v2872.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-29T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="不具合のお知らせと修正（v2.8.72）"><meta name="twitter:description" content="右クリック保存とサムネイルのプレビューの不具合を修正しました。原因と回避方法。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"不具合のお知らせ（v2.8.72）","item":"https://tablayers.liquid-block.com/blog/bugfix-v2872.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"不具合のお知らせと修正（v2.8.72）— 右クリック保存・サムネイルのプレビュー","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-29","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/bugfix-v2872.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"右クリックから保存したページが、グループに入りません。","acceptedAnswer":{"@type":"Answer","text":"作ったばかりで、まだタブが1つも入っていないグループで起きる不具合です。v2.8.72 で修正しました。更新が届くまでは、サイドパネルからそのグループにタブを1つ保存すると、以後は右クリックからも保存できます。"}},{"@type":"Question","name":"サムネイルのプレビューが消えずに残ります。","acceptedAnswer":{"@type":"Answer","text":"画像の読み込み中にマウスが外れると起きる不具合で、v2.8.72 で修正しました。更新が届くまでは、Alt+T でサイドバーを閉じて開き直すと消えます。"}},{"@type":"Question","name":"更新はいつ届きますか？","acceptedAnswer":{"@type":"Answer","text":"Chrome ウェブストアの審査が通ると、自動で更新されます。chrome://extensions でデベロッパー モードをオンにして「更新」を押すと、すぐに確認できます。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">アップデート</span><h1>不具合のお知らせと<br>修正（v2.8.72）</h1><p class="blog-meta"><time datetime="2026-09-29">2026.09.29</time> · Liquid Block Inc. · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="不具合の修正のお知らせ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html&amp;text=%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%81%A8%E4%BF%AE%E6%AD%A3%EF%BC%88v2.8.72%EF%BC%89%E2%80%94%20%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E4%BF%9D%E5%AD%98%E3%83%BB%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html&amp;title=%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%81%A8%E4%BF%AE%E6%AD%A3%EF%BC%88v2.8.72%EF%BC%89%E2%80%94%20%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E4%BF%9D%E5%AD%98%E3%83%BB%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/bugfix-v2872.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/bugfix-v2872.html" data-title="不具合のお知らせと修正（v2.8.72）— 右クリック保存・サムネイルのプレビュー" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>v2.8.72 で2件の不具合を修正しました。</strong>①右クリック「TAB Layers に保存」で、作ったばかりの空のグループを選んでも保存されない。②タブにマウスを載せたときのサムネイルのプレビューが、マウスを外しても消えない。更新が届くまでは、①はサイドパネルからそのグループにタブを1つ保存する、②は Alt+T でサイドバーを閉じて開き直すと解消します。</p>
+
+    <p>いつも LB TAB Layers をお使いいただき、ありがとうございます。</p>
+    <p>ご利用中の方からの報告と配信前の確認で、2件の不具合が見つかりました。どちらも<strong>次の更新 v2.8.72 で修正</strong>し、Chrome ウェブストアの審査に出す準備をしています。ご不便をおかけして申し訳ありません。</p>
+    <p>ここでは、何が起きていたか、なぜ起きたか、更新が届くまでの回避方法をお知らせします。</p>
+
+    <h2>① 右クリックから、作ったばかりのグループに保存できない</h2>
+    <h3>起きていたこと</h3>
+    <p>ページを右クリックして「TAB Layers に保存」からグループを選ぶと、そのページをグループに保存できます。この機能は v2.8.71（ストアの審査中）で追加したもので、配信前の確認中に見つかりました。ところが、<strong>新しく作ったばかりで、まだタブが1つも入っていないグループ</strong>を選ぶと、保存されませんでした。タブがすでに入っているグループには、問題なく保存できていました。</p>
+    <h3>原因</h3>
+    <p>LB TAB Layers のグループは、Chrome のブックマークフォルダそのものです（→ <a href="feature-bookmark-sync.html">ブックマーク同期のしくみ</a>）。右クリックからの保存は、選んだグループのブックマークフォルダへ直接ページを入れます。</p>
+    <p>ところが、グループのブックマークフォルダは<strong>そのグループに初めてタブを入れたとき</strong>に作る作りになっていました。空のグループにはフォルダがまだないため、保存先が見つからなかったのです。</p>
+    <p>このとき「サイドパネルを一度開いてから保存してください」と表示していましたが、パネルを開いてもフォルダは作られないため、この案内も正しくありませんでした。</p>
+    <h3>修正内容</h3>
+    <p>グループを作ったら、すぐにブックマークフォルダも作るようにしました。サイドパネル・ダッシュボード・スプレッドシートからの取り込みなど、どの方法でグループを作っても同じです。すでにある空のグループも、更新後にサイドパネルを開くとフォルダが作られます。</p>
+    <p>あわせて、Chrome の起動直後などに右クリックメニューの作り直しが重なると、グループの一部がメニューに出なくなることがある点も直しました。</p>
+    <h3>更新が届くまでの回避方法</h3>
+    <div class="blog-callout"><p>💡 サイドパネルで、開いているタブを1つそのグループへ<strong>ドラッグして保存</strong>してください。これでフォルダが作られ、以後は右クリックからも保存できます。不要ならそのタブはあとで消してもかまいません。</p></div>
+
+    <h2>② サムネイルのプレビューが消えない</h2>
+    <h3>起きていたこと</h3>
+    <p>サムネイルの表示をオンにしていると、保存したタブにマウスを載せたときにページの小さなプレビューが出ます。このプレビューが、<strong>マウスを外しても画面に残ったまま</strong>になることがありました。何度か起きると、プレビューが重なって残ることもありました。</p>
+    <h3>原因</h3>
+    <p>プレビューは、マウスを載せたときに保存してある画像を読み込み、読み込み終わってから表示します。</p>
+    <p>ところが、<strong>画像を読み込んでいる途中でマウスが外れる</strong>と、「消す」処理のほうが先に動いてしまいました。そのあとで画像が表示されるため、もう消す処理が来ず、画面に残り続けていました。タブの一覧が書き直されたときにも、同じように取り残されることがありました。</p>
+    <h3>修正内容</h3>
+    <p>プレビューの出し入れを1か所にまとめ、画面に出るプレビューは常に1枚だけにしました。</p>
+    <ul>
+      <li>読み込みの途中でマウスが外れたり、別のタブに移ったりしたら、読み込みが終わっても表示しない</li>
+      <li>マウスが外れたとき、一覧が書き直されたとき、スクロール・クリック・キー操作をしたとき、サイドバーからマウスが出たときには、必ず消す</li>
+    </ul>
+    <p>ダッシュボードのカードのプレビューも同じ仕組みに揃えました。</p>
+    <h3>更新が届くまでの回避方法</h3>
+    <div class="blog-callout"><p>💡 残ってしまったときは、<strong>Alt+T</strong> でサイドバーを閉じて、もう一度 Alt+T で開き直すと消えます（→ <a href="extension-shortcut-keys.html">ショートカットキー</a>）。気になる場合は、設定でサムネイルの表示をオフにしておくこともできます。</p></div>
+
+    <h2>更新の届き方</h2>
+    <p>Chrome の拡張機能は、ストアの審査が通ると自動で更新されます。すぐに更新したい場合は、<code>chrome://extensions</code> を開き、右上の「デベロッパー モード」をオンにしてから「更新」を押してください。</p>
+    <p>不具合や気になる動きを見つけたら、ストアのレビューやお問い合わせからお知らせいただけると助かります。いただいた報告は、ひとつずつ原因を確かめて直していきます。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 右クリックから保存したページが、グループに入りません。</h3>
+    <p>作ったばかりで、まだタブが1つも入っていないグループで起きる不具合です。v2.8.72 で修正しました。更新が届くまでは、サイドパネルからそのグループにタブを1つ保存すると、以後は右クリックからも保存できます。</p>
+
+    <h3>Q. サムネイルのプレビューが消えずに残ります。</h3>
+    <p>画像の読み込み中にマウスが外れると起きる不具合で、v2.8.72 で修正しました。更新が届くまでは、Alt+T でサイドバーを閉じて開き直すと消えます。</p>
+
+    <h3>Q. 更新はいつ届きますか？</h3>
+    <p>Chrome ウェブストアの審査が通ると、自動で更新されます。chrome://extensions でデベロッパー モードをオンにして「更新」を押すと、すぐに確認できます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html&amp;text=%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%81%A8%E4%BF%AE%E6%AD%A3%EF%BC%88v2.8.72%EF%BC%89%E2%80%94%20%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E4%BF%9D%E5%AD%98%E3%83%BB%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbugfix-v2872.html&amp;title=%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%81%A8%E4%BF%AE%E6%AD%A3%EF%BC%88v2.8.72%EF%BC%89%E2%80%94%20%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E4%BF%9D%E5%AD%98%E3%83%BB%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/bugfix-v2872.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/bugfix-v2872.html" data-title="不具合のお知らせと修正（v2.8.72）— 右クリック保存・サムネイルのプレビュー" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-cta-box"><h3>報告、ありがとうございます。</h3><p>いただいた声から、ひとつずつ直しています。3ヶ月フル無料でお試しいただけます。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=bugfix-v2872" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-right-click-menu.html">右クリックメニューでできること <span>→</span></a><a href="feature-bookmark-sync.html">ブックマーク同期のしくみ <span>→</span></a><a href="extension-shortcut-keys.html">ショートカットキー <span>→</span></a><a href="v2867-update.html">v2.8.71 アップデート <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
