@@ -173,3 +173,17 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+// 記事下部の動画：押したら YouTube の再生画面に差し替える
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.blog-video-play');
+  if (!b) return;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+  f.title = 'LB TAB Layers 操作イメージ映像';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  f.setAttribute('allowfullscreen', '');
+  f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+  f.className = 'blog-video-frame';
+  b.replaceWith(f);
+});
