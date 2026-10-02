@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromeのブックマークをエクスポート・インポートする方法 — バックアップ・PC移行・他ブラウザからの引っ越し | LB TAB Layers Blog</title>
+  <meta name="description" content="Chromeのブックマークをエクスポート（HTMLファイルに書き出し）・インポート（取り込み）する手順を解説。バックアップ、新しいPCへの移行、EdgeやFirefoxなど他のブラウザからの引っ越し、取り込んだブックマークの保存場所、インポート後の重複の片付けまで。">
+  <meta name="keywords" content="ブックマーク エクスポート,ブックマーク インポート,Chrome ブックマーク 移行,ブックマーク バックアップ,ブックマーク 引っ越し,ブックマーク HTML">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/bookmark-export-import.html">
+  <meta property="og:title" content="Chromeのブックマークをエクスポート・インポートする方法"><meta property="og:description" content="バックアップ・PC移行・他ブラウザからの引っ越しの手順。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/bookmark-export-import.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-02T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Chromeのブックマークをエクスポート・インポートする方法"><meta name="twitter:description" content="バックアップ・PC移行・他ブラウザからの引っ越しの手順。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"ブックマークのエクスポート・インポート","item":"https://tablayers.liquid-block.com/blog/bookmark-export-import.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chromeのブックマークをエクスポート・インポートする方法 — バックアップ・PC移行・他ブラウザからの引っ越し","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-02","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/bookmark-export-import.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chromeのブックマークをエクスポートするには？","acceptedAnswer":{"@type":"Answer","text":"ブックマークマネージャー（Ctrl+Shift+O、Macは⌘+Option+B）を開き、上部の︙から「ブックマークをエクスポート」を選びます。すべてのブックマークが1つのHTMLファイルに書き出されます。"}},{"@type":"Question","name":"ブックマークをインポートすると、今のブックマークは消えますか？","acceptedAnswer":{"@type":"Answer","text":"消えません。すでにブックマークがある場合、取り込んだものは「その他のブックマーク」の中の新しいフォルダに追加されます。同じページが重複しやすいので、取り込んだあとに重複を片付けるのがおすすめです。"}},{"@type":"Question","name":"新しいPCにブックマークを移すいちばん簡単な方法は？","acceptedAnswer":{"@type":"Answer","text":"新しいPCでも同じGoogleアカウントでChromeにログインし、同期をオンにする方法です。ブックマークが自動で移るので、ファイルのやり取りは要りません。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Chromeのブックマークをエクスポート・インポートする","step":[{"@type":"HowToStep","position":1,"name":"ブックマークマネージャーを開く","text":"Ctrl+Shift+O（Macは⌘+Option+B）でブックマークマネージャーを開きます。"},{"@type":"HowToStep","position":2,"name":"エクスポートする","text":"上部の︙から「ブックマークをエクスポート」を選び、HTMLファイルを保存します。"},{"@type":"HowToStep","position":3,"name":"インポートする","text":"取り込む側のChromeで、右上の︙ →「ブックマークとリスト」→「ブックマークと設定をインポート」を選び、HTMLファイルを選んで「完了」を押します。"},{"@type":"HowToStep","position":4,"name":"重複を片付ける","text":"取り込んだあと、重複したブックマークを削除します。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>Chromeのブックマークを<br>エクスポート・インポート</h1><p class="blog-meta"><time datetime="2026-10-02">2026.10.02</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-assets.webp" alt="ブックマークのエクスポートとインポート" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html&amp;text=Chrome%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%83%BBPC%E7%A7%BB%E8%A1%8C%E3%83%BB%E4%BB%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8B%E3%82%89%E3%81%AE%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html&amp;title=Chrome%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%83%BBPC%E7%A7%BB%E8%A1%8C%E3%83%BB%E4%BB%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8B%E3%82%89%E3%81%AE%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/bookmark-export-import.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/bookmark-export-import.html" data-title="Chromeのブックマークをエクスポート・インポートする方法 — バックアップ・PC移行・他ブラウザからの引っ越し" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chromeのブックマークは、ブックマークマネージャー（Ctrl+Shift+O）の上部の︙ →「ブックマークをエクスポート」でHTMLファイルに書き出せます。</strong>取り込むときは、右上の︙ →「ブックマークとリスト」→「ブックマークと設定をインポート」でファイルを選びます。すでにブックマークがある場合、取り込んだものは「その他のブックマーク」の中の新しいフォルダに入ります。</p>
+
+    <p>ブックマークのエクスポート（書き出し）とインポート（取り込み）は、次のようなときに使います。</p>
+    <ul>
+      <li><strong>バックアップ</strong> — 大掃除の前や、定期的な保険として</li>
+      <li><strong>PCの移行</strong> — Googleアカウントの同期を使わない場合</li>
+      <li><strong>ブラウザの引っ越し</strong> — Edge・Firefox・Safari などとの行き来</li>
+    </ul>
+
+    <h2>エクスポート（書き出し）</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>ブックマークマネージャーを開く</h3><p>Ctrl+Shift+O（Macは ⌘+Option+B）、または右上の︙ →「ブックマークとリスト」→「ブックマーク マネージャ」。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>上部の︙ →「ブックマークをエクスポート」</h3><p>保存場所を選ぶと、すべてのブックマークがフォルダ構成ごと1つのHTMLファイルに書き出されます。</p></div></div>
+    <div class="blog-callout"><p>💡 ファイル名に日付を入れて保存しておくと、「いつの時点のバックアップか」がすぐわかります。</p></div>
+
+    <h2>インポート（取り込み）</h2>
+    <h3>HTMLファイルから取り込む</h3>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>右上の︙ →「ブックマークとリスト」→「ブックマークと設定をインポート」</h3><p>取り込み元を選ぶ画面が開きます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>HTMLファイルを選ぶ</h3><p>「ファイルを選択」で書き出しておいたHTMLファイルを選び、「完了」を押します。</p></div></div>
+    <h3>他のブラウザから直接取り込む</h3>
+    <p>同じPCに入っているブラウザなら、同じ画面で取り込み元のブラウザを選ぶだけで、ブックマークを直接取り込めます。ブラウザによっては、履歴やパスワードなども一緒に選べます。</p>
+
+    <h2>取り込んだブックマークはどこに入る？</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>Chromeの状態</th><th>取り込んだブックマークの場所</th></tr></thead><tbody>
+    <tr><td>ブックマークが1つもない</td><td>ブックマークバー</td></tr>
+    <tr><td>すでにブックマークがある</td><td>ブックマークバーの右端「その他のブックマーク」の中の、新しいフォルダ</td></tr>
+    </tbody></table></div>
+    <p>今あるブックマークを上書きするのではなく、<strong>別のフォルダとして追加</strong>されます。</p>
+
+    <h2>取り込んだあとは「重複」を片付ける</h2>
+    <p>インポートは追加なので、同じページのブックマークが二重、三重になりがちです。取り込んだあとは重複を一度片付けておきましょう。LB TAB Layers の「整理」→「重複を検出」なら、Chromeのすべてのブックマークから重複を見つけられます（→ <a href="feature-bookmark-dedup.html">ブックマーク重複検出</a>、片付け全体の流れは <a href="too-many-bookmarks.html">ブックマークが多すぎて整理できない人へ</a>）。</p>
+
+    <h2>PCの移行なら「同期」がいちばん楽</h2>
+    <p>新しいPCでも同じGoogleアカウントでChromeにログインし、同期をオンにすれば、ブックマークは自動で移ります。ファイルのやり取りは要りません（→ <a href="chrome-bookmarks-sync-guide.html">Chromeのブックマーク同期ガイド</a>）。</p>
+
+    <h2>LB TAB Layers を使っている場合</h2>
+    <ul>
+      <li><strong>グループと保存したタブ</strong> — ブックマークの「LB TAB Layers」フォルダに入っているので、ブックマークのエクスポートや同期に含まれます</li>
+      <li><strong>メモや★ランク</strong> — ブックマークには入らないので、LB TAB Layers の設定の「データ管理」→「エクスポート (JSON)」で書き出します（→ <a href="feature-json-backup.html">JSONバックアップ</a>）</li>
+      <li><strong>新しいPCで</strong> — ブックマークが同期されたChromeに LB TAB Layers を入れると、「LB TAB Layers」フォルダからグループを復元できます</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Chromeのブックマークをエクスポートするには？</h3>
+    <p>ブックマークマネージャー（Ctrl+Shift+O、Macは⌘+Option+B）を開き、上部の︙から「ブックマークをエクスポート」を選びます。すべてのブックマークが1つのHTMLファイルに書き出されます。</p>
+
+    <h3>Q. ブックマークをインポートすると、今のブックマークは消えますか？</h3>
+    <p>消えません。すでにブックマークがある場合、取り込んだものは「その他のブックマーク」の中の新しいフォルダに追加されます。同じページが重複しやすいので、取り込んだあとに重複を片付けるのがおすすめです。</p>
+
+    <h3>Q. 新しいPCにブックマークを移すいちばん簡単な方法は？</h3>
+    <p>新しいPCでも同じGoogleアカウントでChromeにログインし、同期をオンにする方法です。ブックマークが自動で移るので、ファイルのやり取りは要りません。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html&amp;text=Chrome%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%83%BBPC%E7%A7%BB%E8%A1%8C%E3%83%BB%E4%BB%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8B%E3%82%89%E3%81%AE%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbookmark-export-import.html&amp;title=Chrome%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20%E2%80%94%20%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%83%BBPC%E7%A7%BB%E8%A1%8C%E3%83%BB%E4%BB%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8B%E3%82%89%E3%81%AE%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/bookmark-export-import.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/bookmark-export-import.html" data-title="Chromeのブックマークをエクスポート・インポートする方法 — バックアップ・PC移行・他ブラウザからの引っ越し" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>バックアップの手間を、減らす。</h3><p>タブを保存するとブックマークに。エクスポートにも同期にもそのまま含まれます。3ヶ月フル無料でお試しいただけます。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=bookmark-export-import" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-bookmarks-sync-guide.html">Chromeのブックマーク同期ガイド <span>→</span></a><a href="feature-json-backup.html">JSONバックアップ <span>→</span></a><a href="too-many-bookmarks.html">ブックマークが多すぎて整理できない人へ <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？ <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/96816?hl=ja" target="_blank" rel="noopener">Chrome のブックマークと設定をインポートする — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

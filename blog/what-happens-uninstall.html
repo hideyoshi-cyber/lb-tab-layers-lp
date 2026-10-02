@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること | LB TAB Layers Blog</title>
+  <meta name="description" content="Chromeの拡張機能を削除すると、拡張の中に保存していたデータは一緒に消えます。タブ管理・ブックマーク系の拡張のデータ保存先3タイプ（拡張の中・クラウド・Chromeのブックマーク）の違いと、削除する前にやっておくこと、「無効にする」との違いを解説します。">
+  <meta name="keywords" content="拡張機能 削除 データ,拡張機能 アンインストール データ,拡張機能 消したら,タブ管理 拡張 データ 保存先,拡張機能 無効 削除 違い,拡張機能 データ 消える">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/what-happens-uninstall.html">
+  <meta property="og:title" content="拡張機能を削除したらデータはどうなる？保存先の3タイプ"><meta property="og:description" content="保存先によって、削除したあとに残るものが違います。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/what-happens-uninstall.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-01T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="拡張機能を削除したらデータはどうなる？保存先の3タイプ"><meta name="twitter:description" content="保存先によって、削除したあとに残るものが違います。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"拡張機能を削除したらデータはどうなる？","item":"https://tablayers.liquid-block.com/blog/what-happens-uninstall.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-01","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/what-happens-uninstall.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chromeの拡張機能を削除するとデータは消えますか？","acceptedAnswer":{"@type":"Answer","text":"拡張機能が自分の中に保存していたデータ（設定や保存リストなど）は一緒に消えます。Chromeのブックマークとして保存されたものはChrome本体のデータなので残ります。クラウドに保存するタイプは、アカウント側に残ることが多いです。"}},{"@type":"Question","name":"拡張機能を「オフ」にするのと「削除」の違いは？","acceptedAnswer":{"@type":"Answer","text":"オフ（無効）は拡張が動かなくなるだけで、データは残ります。オンに戻せば元どおりです。削除すると拡張の中のデータも消え、入れ直しても戻りません。"}},{"@type":"Question","name":"LB TAB Layersを削除するとグループは消えますか？","acceptedAnswer":{"@type":"Answer","text":"グループと保存したタブはChromeのブックマークに保存されているので残ります。メモや★ランク、設定などは拡張の中に保存されているため消えます。残したい場合は、削除の前にJSONエクスポートで書き出してください。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">セキュリティ</span><h1>拡張機能を削除したら<br>データはどうなる？</h1><p class="blog-meta"><time datetime="2026-10-01">2026.10.01</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="拡張機能を削除したときのデータ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html&amp;text=%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%EF%BC%9F%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E4%BF%9D%E5%AD%98%E5%85%88%E3%81%A8%E3%80%81%E6%B6%88%E3%81%99%E5%89%8D%E3%81%AB%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html&amp;title=%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%EF%BC%9F%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E4%BF%9D%E5%AD%98%E5%85%88%E3%81%A8%E3%80%81%E6%B6%88%E3%81%99%E5%89%8D%E3%81%AB%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/what-happens-uninstall.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/what-happens-uninstall.html" data-title="拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chromeの拡張機能を削除すると、その拡張が自分の中に保存していたデータ（設定や保存リストなど）は一緒に消えます。</strong>一方、Chromeのブックマークとして保存されたものはChrome本体のデータなので、拡張を消しても残ります。タブ管理の拡張を消す前は、その拡張のエクスポート機能でデータを書き出しておきましょう。いったん止めたいだけなら、削除ではなく「オフ（無効）」にすればデータは残ります。</p>
+
+    <p>「この拡張、もう使っていないから消そう」。その前に、中に何が入っているかを確かめたことはありますか。タブ管理やブックマーク系の拡張には、何か月分もの作業の記録が入っていることがあります。</p>
+
+    <h2>保存先は大きく3タイプ</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>保存先</th><th>拡張を削除すると</th><th>別のPCで使うには</th></tr></thead><tbody>
+    <tr><td>拡張機能の中</td><td><strong>一緒に消える</strong></td><td>エクスポート → インポート</td></tr>
+    <tr><td>サービスのクラウド（アカウント）</td><td>拡張からは消えるが、アカウント側に残ることが多い</td><td>同じアカウントでログイン</td></tr>
+    <tr><td>Chromeのブックマーク</td><td><strong>残る</strong>（Chrome本体のデータ）</td><td>Chromeの同期（Googleアカウント）</td></tr>
+    </tbody></table></div>
+    <p>「タブを保存しておける拡張」でも、どこに保存しているかで削除したときの結果がまったく違います。拡張の説明ページやヘルプで、保存先を確認しておきましょう。</p>
+
+    <h2>「削除」と「オフ（無効）」の違い</h2>
+    <p><code>chrome://extensions</code> では、拡張機能ごとに「オフにする」と「削除」を選べます。</p>
+    <ul>
+      <li><strong>オフ（無効）</strong> — 拡張は動かなくなるが、データは残る。オンに戻せば元どおり</li>
+      <li><strong>削除</strong> — 拡張と、拡張の中のデータが消える。入れ直しても戻らない</li>
+    </ul>
+    <p>Chromeが重いので一時的に止めたい、どの拡張が原因か切り分けたい、というときは、まず「オフ」で十分です（→ <a href="fewer-extensions-lighter-chrome.html">拡張機能を減らしてChromeを軽くする</a>）。</p>
+
+    <h2>削除する前のチェックリスト</h2>
+    <ol>
+      <li><strong>保存先を確認する</strong> — 拡張の中か、クラウドか、ブックマークか</li>
+      <li><strong>エクスポートする</strong> — 設定画面に「エクスポート」「バックアップ」があれば書き出しておく</li>
+      <li><strong>ブックマークもバックアップする</strong> — ブックマークマネージャー（Ctrl+Shift+O）の︙ →「ブックマークをエクスポート」</li>
+      <li><strong>まず「オフ」で数日過ごす</strong> — 困らなければ削除する</li>
+    </ol>
+
+    <h2>LB TAB Layers の場合</h2>
+    <p>LB TAB Layers のグループと保存したタブは、Chromeのブックマーク内の「LB TAB Layers」フォルダに保存されています。<strong>拡張を削除しても、ブックマークとして残ります</strong>。入れ直したときは、残っている「LB TAB Layers」フォルダからグループを復元できます（→ <a href="feature-bookmark-sync.html">ブックマーク同期のしくみ</a>）。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>データ</th><th>保存先</th><th>拡張を削除すると</th></tr></thead><tbody>
+    <tr><td>グループ・サブグループ・保存したタブ</td><td>Chromeのブックマーク</td><td>残る</td></tr>
+    <tr><td>アーカイブしたグループ</td><td>ブックマークの「📦 アーカイブ」フォルダ</td><td>残る</td></tr>
+    <tr><td>メモ、グループの★ランク</td><td>拡張の中</td><td>消える（JSONに書き出せる）</td></tr>
+    <tr><td>設定・テーマ、ダッシュボードのタブの★とタグ、サムネイル</td><td>拡張の中</td><td>消える</td></tr>
+    </tbody></table></div>
+    <p>メモや★ランクも残したい場合は、削除の前に設定の「データ管理」→「エクスポート (JSON)」で書き出しておきましょう（→ <a href="feature-json-backup.html">JSONバックアップ</a>）。</p>
+    <div class="blog-callout"><p>⚠️ 反対に、ブックマーク側で「LB TAB Layers」フォルダを丸ごと削除すると、グループも消えます。ブックマークを整理するときは、このフォルダを消さないように注意してください。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Chromeの拡張機能を削除するとデータは消えますか？</h3>
+    <p>拡張機能が自分の中に保存していたデータ（設定や保存リストなど）は一緒に消えます。Chromeのブックマークとして保存されたものはChrome本体のデータなので残ります。クラウドに保存するタイプは、アカウント側に残ることが多いです。</p>
+
+    <h3>Q. 拡張機能を「オフ」にするのと「削除」の違いは？</h3>
+    <p>オフ（無効）は拡張が動かなくなるだけで、データは残ります。オンに戻せば元どおりです。削除すると拡張の中のデータも消え、入れ直しても戻りません。</p>
+
+    <h3>Q. LB TAB Layersを削除するとグループは消えますか？</h3>
+    <p>グループと保存したタブはChromeのブックマークに保存されているので残ります。メモや★ランク、設定などは拡張の中に保存されているため消えます。残したい場合は、削除の前にJSONエクスポートで書き出してください。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html&amp;text=%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%EF%BC%9F%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E4%BF%9D%E5%AD%98%E5%85%88%E3%81%A8%E3%80%81%E6%B6%88%E3%81%99%E5%89%8D%E3%81%AB%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fwhat-happens-uninstall.html&amp;title=%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E3%82%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%EF%BC%9F%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E4%BF%9D%E5%AD%98%E5%85%88%E3%81%A8%E3%80%81%E6%B6%88%E3%81%99%E5%89%8D%E3%81%AB%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/what-happens-uninstall.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/what-happens-uninstall.html" data-title="拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>消しても、残る設計。</h3><p>グループと保存したタブはChromeのブックマークに。3ヶ月フル無料でお試しいただけます。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=what-happens-uninstall" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-bookmark-sync.html">ブックマーク同期のしくみ <span>→</span></a><a href="feature-json-backup.html">JSONバックアップ <span>→</span></a><a href="chrome-extension-safety.html">Chrome拡張の安全性 <span>→</span></a><a href="fewer-extensions-lighter-chrome.html">拡張機能を減らしてChromeを軽くする <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/187443?hl=ja" target="_blank" rel="noopener">拡張機能をインストールして管理する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

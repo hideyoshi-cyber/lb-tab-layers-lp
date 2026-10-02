@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案件ごとにタブを切り替える仕事術 — 開く・閉じるをグループ単位にして頭も切り替える | LB TAB Layers Blog</title>
+  <meta name="description" content="複数の案件を並行して進めるときの、タブの切り替え術。Chrome標準のタブグループ・ウィンドウの名前付け・プロファイルの使い分けと、案件ごとのグループを「始めるときにまとめて開き、終わったらまとめて閉じる」運用のしかた、1日の流れの例を紹介します。">
+  <meta name="keywords" content="案件 タブ 切り替え,プロジェクト タブ 管理,タブ 案件ごと,複数案件 並行 タブ,タブグループ 仕事,仕事 タブ 整理">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html">
+  <meta property="og:title" content="案件ごとにタブを切り替える仕事術 — グループ単位で開く・閉じる"><meta property="og:description" content="1案件＝1グループ。始めるときに開き、終わったら閉じる。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-02T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="案件ごとにタブを切り替える仕事術 — グループ単位で開く・閉じる"><meta name="twitter:description" content="1案件＝1グループ。始めるときに開き、終わったら閉じる。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"案件ごとにタブを切り替える仕事術","item":"https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"案件ごとにタブを切り替える仕事術 — 開く・閉じるをグループ単位にして頭も切り替える","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-02","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"複数の案件のタブを分けて管理するには？","acceptedAnswer":{"@type":"Answer","text":"1案件につき1つのグループ（フォルダ）を作り、案件のタブをそこに保存します。取りかかるときにそのグループのタブをまとめて開き、離れるときはまとめて閉じると、画面に見えるタブが今の案件のものだけになります。"}},{"@type":"Question","name":"Chromeのタブグループだけでは足りませんか？","acceptedAnswer":{"@type":"Answer","text":"タブグループは色分けや折りたたみで見た目を分けられますが、タブは開いたままです。案件が増えるとタブの数とメモリも増えるので、使っていない案件のタブは保存して閉じる方法と組み合わせるのがおすすめです。"}},{"@type":"Question","name":"Chromeのウィンドウに名前を付けるには？","acceptedAnswer":{"@type":"Answer","text":"タブの横の何もない場所を右クリックして「ウィンドウに名前を付ける」を選びます。名前はAlt+Tabでウィンドウを切り替えるときなどに表示されます。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">仕事術</span><h1>案件ごとに<br>タブを切り替える仕事術</h1><p class="blog-meta"><time datetime="2026-10-02">2026.10.02</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="案件ごとにタブを切り替える" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html&amp;text=%E6%A1%88%E4%BB%B6%E3%81%94%E3%81%A8%E3%81%AB%E3%82%BF%E3%83%96%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B%E4%BB%95%E4%BA%8B%E8%A1%93%20%E2%80%94%20%E9%96%8B%E3%81%8F%E3%83%BB%E9%96%89%E3%81%98%E3%82%8B%E3%82%92%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%8D%98%E4%BD%8D%E3%81%AB%E3%81%97%E3%81%A6%E9%A0%AD%E3%82%82%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html&amp;title=%E6%A1%88%E4%BB%B6%E3%81%94%E3%81%A8%E3%81%AB%E3%82%BF%E3%83%96%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B%E4%BB%95%E4%BA%8B%E8%A1%93%20%E2%80%94%20%E9%96%8B%E3%81%8F%E3%83%BB%E9%96%89%E3%81%98%E3%82%8B%E3%82%92%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%8D%98%E4%BD%8D%E3%81%AB%E3%81%97%E3%81%A6%E9%A0%AD%E3%82%82%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html" data-title="案件ごとにタブを切り替える仕事術 — 開く・閉じるをグループ単位にして頭も切り替える" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>複数の案件を並行するなら、「1案件＝1グループ」にしてタブを案件単位で開け閉めするのが効果的です。</strong>取りかかるときにその案件のタブをまとめて開き、切り替えるときはまとめて閉じてから次の案件を開きます。画面に見えるタブが今の案件のものだけになるので、頭の切り替えもしやすくなります。</p>
+
+    <p>A社のデザイン確認をしていたはずが、B社の見積もりのタブが目に入り、気づけば社内の資料を開いている——。複数の案件を並行していると、タブと一緒に頭の中も散らかります。</p>
+    <p>ポイントは、<strong>目に入るタブを「今の案件」のものだけにすること</strong>です。</p>
+
+    <h2>Chrome標準でできる切り替え方</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>方法</th><th>向いている場面</th><th>弱いところ</th></tr></thead><tbody>
+    <tr><td>タブグループ</td><td>1つのウィンドウの中で案件ごとに色分け・折りたたみ</td><td>開いたままなのでタブの数は減らない</td></tr>
+    <tr><td>ウィンドウを分けて名前を付ける</td><td>案件ごとにウィンドウを分けて、Alt+Tabで切り替え</td><td>ウィンドウが増えると結局どれかわからない</td></tr>
+    <tr><td>プロファイルを分ける</td><td>仕事とプライベートなど、ログインごと分けたいとき</td><td>案件単位で作るには重い</td></tr>
+    </tbody></table></div>
+    <p>ウィンドウの名前は、タブの横の何もないところを右クリック →「ウィンドウに名前を付ける」で付けられます。タブグループとの違いは <a href="tab-groups-vs-extensions.html">タブグループと拡張機能の違い</a>、プロファイルは <a href="chrome-profile-guide.html">Chromeのプロファイル活用ガイド</a> で詳しく書いています。</p>
+
+    <h2>「開いたまま切り替える」から「開け閉めで切り替える」へ</h2>
+    <p>標準の方法はどれも、<strong>全案件のタブを開いたまま</strong>見た目を分けるやり方です。案件が3つ、4つになると、タブの数もメモリも増える一方です。</p>
+    <p>そこで、案件のタブを保存しておき、<strong>取りかかるときに開き、離れるときに閉じる</strong>運用にします。LB TAB Layers のグループを使うと、これをボタン1つでできます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>やること</th><th>操作</th></tr></thead><tbody>
+    <tr><td>案件の置き場所を作る</td><td>「＋」でグループを作成。案件名・カラー・アイコンを付ける（→ <a href="feature-groups-subgroups.html">グループとサブグループ</a>）</td></tr>
+    <tr><td>いつもの構成を一発で作る</td><td>右クリックのフォルダプリセット（受託案件・社内プロジェクトなど）（→ <a href="how-to-folder-presets.html">フォルダプリセット</a>）</td></tr>
+    <tr><td>取りかかる</td><td>グループの ▶ で、案件のタブをまとめて開く</td></tr>
+    <tr><td>離れる</td><td>グループの ■ で、案件のタブをまとめて閉じる（保存はそのまま）（→ <a href="bulk-close-bulk-open.html">一括オープン・一括クローズ</a>）</td></tr>
+    <tr><td>今週の優先度を付ける</td><td>グループに★ランク。★で絞り込むと重要案件だけ表示（→ <a href="feature-star-rank-tags.html">★ランクとタグ</a>）</td></tr>
+    <tr><td>終わった案件をしまう</td><td>右クリック →「アーカイブ」（→ <a href="feature-archive.html">アーカイブ</a>）</td></tr>
+    </tbody></table></div>
+
+    <h2>1日の流れの例</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>朝：共通のツールだけ開く</h3><p>メール・カレンダー・チャットは案件をまたいで使うので、ピンバーに置いておきます（→ <a href="feature-pin-bar-clock.html">ピンバー</a>）。案件のグループはまだ開きません。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>午前：A社の案件</h3><p>A社のグループを ▶ で開いて作業。途中で見つけた資料は、そのままA社のグループに保存します。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>切り替え：閉じてから開く</h3><p>A社のグループを ■ でまとめて閉じてから、B社のグループを ▶ で開きます。どのグループにも入れていない調べもののタブは、「単独タブ」の一括クローズで片付けます（→ <a href="feature-ungrouped-tabs.html">単独タブ</a>）。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>終業：全部閉じて帰る</h3><p>保存したタブはブックマークに残っているので、全部閉じても翌朝 ▶ で同じ状態から再開できます。</p></div></div>
+    <div class="blog-callout"><p>💡 「閉じる」は「忘れる」ではありません。保存してあるから閉じられる、閉じるから次の案件に集中できる——という順番です。集中したい時間はフォーカスタイマーでSNSなどをブロックすると、さらに切り替えやすくなります（→ <a href="feature-focus-timer.html">フォーカスタイマー</a>）。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 複数の案件のタブを分けて管理するには？</h3>
+    <p>1案件につき1つのグループ（フォルダ）を作り、案件のタブをそこに保存します。取りかかるときにそのグループのタブをまとめて開き、離れるときはまとめて閉じると、画面に見えるタブが今の案件のものだけになります。</p>
+
+    <h3>Q. Chromeのタブグループだけでは足りませんか？</h3>
+    <p>タブグループは色分けや折りたたみで見た目を分けられますが、タブは開いたままです。案件が増えるとタブの数とメモリも増えるので、使っていない案件のタブは保存して閉じる方法と組み合わせるのがおすすめです。</p>
+
+    <h3>Q. Chromeのウィンドウに名前を付けるには？</h3>
+    <p>タブの横の何もない場所を右クリックして「ウィンドウに名前を付ける」を選びます。名前はAlt+Tabでウィンドウを切り替えるときなどに表示されます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html&amp;text=%E6%A1%88%E4%BB%B6%E3%81%94%E3%81%A8%E3%81%AB%E3%82%BF%E3%83%96%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B%E4%BB%95%E4%BA%8B%E8%A1%93%20%E2%80%94%20%E9%96%8B%E3%81%8F%E3%83%BB%E9%96%89%E3%81%98%E3%82%8B%E3%82%92%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%8D%98%E4%BD%8D%E3%81%AB%E3%81%97%E3%81%A6%E9%A0%AD%E3%82%82%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-tabs-by-project.html&amp;title=%E6%A1%88%E4%BB%B6%E3%81%94%E3%81%A8%E3%81%AB%E3%82%BF%E3%83%96%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B%E4%BB%95%E4%BA%8B%E8%A1%93%20%E2%80%94%20%E9%96%8B%E3%81%8F%E3%83%BB%E9%96%89%E3%81%98%E3%82%8B%E3%82%92%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%8D%98%E4%BD%8D%E3%81%AB%E3%81%97%E3%81%A6%E9%A0%AD%E3%82%82%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/switch-tabs-by-project.html" data-title="案件ごとにタブを切り替える仕事術 — 開く・閉じるをグループ単位にして頭も切り替える" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>1案件＝1グループ。</h3><p>▶ でまとめて開いて、■ でまとめて閉じる。3ヶ月フル無料でお試しいただけます。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=switch-tabs-by-project" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="remote-work-tab-management.html">リモートワークのタブ管理 <span>→</span></a><a href="bulk-close-bulk-open.html">一括オープン・一括クローズ <span>→</span></a><a href="how-to-folder-presets.html">フォルダプリセット <span>→</span></a><a href="tab-groups-vs-extensions.html">タブグループと拡張機能の違い <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/2391819?hl=ja&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Chrome でタブを管理する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
