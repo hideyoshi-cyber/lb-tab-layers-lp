@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タブの「セッション保存」と「ブックマーク保存」、どちらが安全？ — 消えにくさ・戻しやすさで比べる | LB TAB Layers Blog</title>
+  <meta name="description" content="タブを残す「セッション保存」と「ブックマーク保存」の違いを、消えにくさと戻しやすさで比べます。Chrome の「前回開いていたページを開く」、拡張の中に保存するタイプ、ブックマークに保存するタイプが、それぞれどんなときに消えるかと、使い分けを説明します。">
+  <meta name="keywords" content="セッション保存 ブックマーク 違い,タブ 保存 安全,Chrome セッション 保存,タブ 保存 拡張機能 比較,タブ 消えない 保存方法,セッション 消えた">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html">
+  <meta property="og:title" content="セッション保存とブックマーク保存、どちらが安全？"><meta property="og:description" content="何が残って、何が消えるのか。タブを残す2つの方法を、消えにくさと戻しやすさで比べました。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-08T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="セッション保存とブックマーク保存、どちらが安全？"><meta name="twitter:description" content="何が残って、何が消えるのか。タブを残す2つの方法を、消えにくさと戻しやすさで比べました。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"セッション保存とブックマーク保存の違い","item":"https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"タブの「セッション保存」と「ブックマーク保存」、どちらが安全？ — 消えにくさ・戻しやすさで比べる","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-08","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"セッション保存とブックマーク保存の違いは？","acceptedAnswer":{"@type":"Answer","text":"セッション保存は、ウィンドウとタブの並びなど「今の状態」をまるごと記録します。ブックマーク保存は、ページのタイトルとアドレスを Chrome のブックマークとして残します。前者は状態をそのまま戻すのが得意で、後者は長く残すのが得意です。"}},{"@type":"Question","name":"Chrome の「前回開いていたページを開く」だけでは足りませんか？","acceptedAnswer":{"@type":"Answer","text":"翌日に続きをやる程度なら便利です。ただし強制終了のあとや、更新・再起動のタイミングによっては、思ったとおりに戻らないことがあります。何日も使うタブは、ブックマークにも保存しておくと安心です。"}},{"@type":"Question","name":"ブックマークに保存すれば、絶対に消えませんか？","acceptedAnswer":{"@type":"Answer","text":"Chrome の再起動や拡張の削除では消えません。ただし、自分でフォルダを削除すると、同期しているほかの PC からも消えます。ときどきブックマークをエクスポートしておくと安心です。"}},{"@type":"Question","name":"LB TAB Layers を削除すると、保存したタブはどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"グループと保存したタブは Chrome のブックマークの「LB TAB Layers」フォルダに残ります。メモや★、設定は拡張の中にあるので、残したい場合は削除の前に「エクスポート (JSON)」で書き出してください。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">タブ管理のコツ</span><h1>セッション保存と<br>ブックマーク保存、どちらが安全？</h1><p class="blog-meta"><time datetime="2026-10-08">2026.10.08</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-assets.webp" alt="セッション保存とブックマーク保存の違い" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html&amp;text=%E3%82%BF%E3%83%96%E3%81%AE%E3%80%8C%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E4%BF%9D%E5%AD%98%E3%80%8D%E3%81%A8%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E4%BF%9D%E5%AD%98%E3%80%8D%E3%80%81%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E5%AE%89%E5%85%A8%EF%BC%9F%20%E2%80%94%20%E6%B6%88%E3%81%88%E3%81%AB%E3%81%8F%E3%81%95%E3%83%BB%E6%88%BB%E3%81%97%E3%82%84%E3%81%99%E3%81%95%E3%81%A7%E6%AF%94%E3%81%B9%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html&amp;title=%E3%82%BF%E3%83%96%E3%81%AE%E3%80%8C%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E4%BF%9D%E5%AD%98%E3%80%8D%E3%81%A8%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E4%BF%9D%E5%AD%98%E3%80%8D%E3%80%81%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E5%AE%89%E5%85%A8%EF%BC%9F%20%E2%80%94%20%E6%B6%88%E3%81%88%E3%81%AB%E3%81%8F%E3%81%95%E3%83%BB%E6%88%BB%E3%81%97%E3%82%84%E3%81%99%E3%81%95%E3%81%A7%E6%AF%94%E3%81%B9%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html" data-title="タブの「セッション保存」と「ブックマーク保存」、どちらが安全？ — 消えにくさ・戻しやすさで比べる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>長く残したいタブは、ブックマーク保存のほうが安全です。</strong>ブックマークは Chrome 本体のデータなので、Chrome の再起動や拡張の削除では消えず、Google アカウントで別の PC にも同期できます。一方セッション保存は、ウィンドウやタブの並びまでそのまま戻せるのが強みですが、保存先が Chrome の一時的なデータや拡張の中なので、異常終了や拡張の削除で消えることがあります。「今の状態を少しのあいだ取っておく」ならセッション、「何日も何か月も使う」ならブックマーク、と使い分けるのがおすすめです。</p>
+
+    <p>開いているタブを残しておく方法は、大きく分けて2つあります。<strong>開いている状態をまるごと記録する「セッション保存」</strong>と、<strong>ページのアドレスを1つずつ残す「ブックマーク保存」</strong>です。</p>
+    <p>どちらも「タブを保存する」と呼ばれますが、残る場所が違うので、消えるときの条件もまったく違います。この記事では、2つの違いと、どんなときにどちらを使えばいいかを整理します。</p>
+
+    <h2>「セッション」と「ブックマーク」は何が違うのか</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>セッション保存</th><th>ブックマーク保存</th></tr></thead><tbody>
+    <tr><td><strong>残すもの</strong></td><td>開いているウィンドウとタブの並び、ピン留めなど「今の状態」</td><td>ページのタイトルとアドレス</td></tr>
+    <tr><td><strong>保存先</strong></td><td>Chrome のセッションのデータ、または拡張の中</td><td>Chrome のブックマーク（Chrome 本体のデータ）</td></tr>
+    <tr><td><strong>得意なこと</strong></td><td>さっきの状態をそのまま戻す</td><td>何日・何か月たっても残す、別の PC でも使う</td></tr>
+    <tr><td><strong>苦手なこと</strong></td><td>長く取っておくこと</td><td>ウィンドウの並びまで再現すること</td></tr>
+    </tbody></table></div>
+    <p>セッションは「写真」、ブックマークは「住所録」にたとえると分かりやすいかもしれません。写真はその瞬間の様子がそのまま残りますが、なくしたら終わりです。住所録は様子までは残りませんが、いつでも同じ場所へ行けます。</p>
+
+    <h2>セッション保存には2つのタイプがある</h2>
+    <h3>Chrome の「前回開いていたページを開く」</h3>
+    <p>Chrome の設定の「起動時」で「前回開いていたページを開く」を選ぶと、次に起動したとき、閉じる前のタブが戻ります。いちばん手軽なセッション保存です。</p>
+    <p>ただし、これは Chrome が<strong>正しく終了したときの状態</strong>をもとにしています。強制終了やフリーズのあと、更新や再起動のタイミングによっては、思ったとおりに戻らないことがあります。複数のウィンドウを開いていた場合に、一部しか戻らないこともあります（→「<a href="chrome-startup-settings.html">Chrome の起動時の設定</a>」）。</p>
+    <h3>拡張機能でセッションを保存する</h3>
+    <p>「今のウィンドウのタブを、名前を付けて保存」できる拡張機能もたくさんあります。多くは、保存したリストを<strong>拡張機能の中</strong>（拡張ごとの保存領域）に置きます。</p>
+    <p>拡張の中のデータは、その拡張を削除すると一緒に消えます。エクスポートやクラウド保存に対応している拡張もあるので、使っている拡張の保存先とバックアップの方法は、一度確かめておくと安心です（→「<a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？</a>」）。</p>
+
+    <h2>ブックマーク保存の強みと、弱み</h2>
+    <p>ブックマークは Chrome 本体が管理しているデータです。そのため、次のようなときも残ります。</p>
+    <ul>
+      <li>Chrome を終了した・PC を再起動した・Chrome が強制終了した</li>
+      <li>タブ管理の拡張機能を削除した</li>
+      <li>PC を買い替えた（Google アカウントで同期していれば、新しい PC にも出てくる）</li>
+    </ul>
+    <p>一方で、弱みもあります。</p>
+    <ul>
+      <li><strong>ウィンドウの並びは戻らない</strong> — どのウィンドウの何番目にあったか、までは残りません</li>
+      <li><strong>1つずつ保存するのは面倒</strong> — Ctrl+D で1枚ずつ、フォルダを選んで…を毎日くり返すのは続きません</li>
+      <li><strong>消したら同期先でも消える</strong> — 同期は「バックアップ」ではありません。フォルダを丸ごと消すと、同期しているほかの PC からも消えます</li>
+    </ul>
+    <p>最後の点は、ブックマークでも見落としがちなところです。大事なブックマークは、ときどきブックマークマネージャー（Ctrl+Shift+O）の︙ →「ブックマークをエクスポート」でファイルに書き出しておくと安心です（→「<a href="bookmark-export-import.html">ブックマークのエクスポート・インポート</a>」）。</p>
+
+    <h2>消えるのは、どんなとき？ 一覧で比べる</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>こんなとき</th><th>Chrome の起動時の復元</th><th>拡張の中に保存</th><th>ブックマークに保存</th></tr></thead><tbody>
+    <tr><td>Chrome を普通に終了した</td><td>○ 戻る</td><td>○ 残る</td><td>○ 残る</td></tr>
+    <tr><td>強制終了・フリーズのあと</td><td>△ 戻らないことがある</td><td>○ 残る（保存済みのもの）</td><td>○ 残る</td></tr>
+    <tr><td>タブ管理の拡張を削除した</td><td>—</td><td>× 消える</td><td>○ 残る</td></tr>
+    <tr><td>新しい PC に移った</td><td>× 戻らない</td><td>△ エクスポート次第</td><td>○ 同期で出てくる</td></tr>
+    <tr><td>うっかりフォルダを削除した</td><td>—</td><td>—</td><td>△ 同期先でも消える</td></tr>
+    </tbody></table></div>
+    <p>どの方法にも弱いところはありますが、<strong>「何か月も取っておく」ことにいちばん強いのはブックマーク</strong>です。</p>
+
+    <h2>よくある思いちがい：「同期しているからタブも安心」</h2>
+    <p>Chrome の同期をオンにしていると、履歴のページから、ほかの PC やスマートフォンで開いているタブを見られます。便利な機能ですが、これは<strong>「今どこで何を開いているか」を見せるもの</strong>で、タブを長く取っておく場所ではありません。向こうの端末でタブを閉じれば、一覧からも消えます。</p>
+    <p>同期で長く残るのは、ブックマークや履歴のほうです。何日も使うタブは、開いたままにして同期に任せるのではなく、ブックマークとして残しておくのが確実です。</p>
+    <p>反対に「開いたまま残す」方法には、タブが増えるほど Chrome が重くなるという別の弱みもあります。保存して閉じておけば、メモリも空きます（→「<a href="chrome-memory-saving.html">Chrome メモリ節約テクニック</a>」）。</p>
+
+    <h2>使い分けのおすすめ</h2>
+    <ul>
+      <li><strong>今日の続きを明日やる</strong> — Chrome の「前回開いていたページを開く」で十分。ただし大事なタブは別に保存しておく</li>
+      <li><strong>案件の資料のように、何日も何週間も使う</strong> — ブックマークに保存する</li>
+      <li><strong>拡張を入れ替える可能性がある</strong> — ブックマークに保存する（拡張を消しても残るため）</li>
+      <li><strong>ウィンドウの並びまで大事</strong> — セッション保存。ただし保存先とバックアップの方法を確かめておく</li>
+    </ul>
+
+    <h2>LB TAB Layers は「ブックマーク保存」を手軽にする</h2>
+    <p>ブックマーク保存のいちばんの弱みは「面倒」なことです。LB TAB Layers は、そこを減らすための拡張機能です。</p>
+    <ul>
+      <li>サイドパネルでタブをグループにドラッグすると、そのまま Chrome のブックマークとして保存されます。保存先は、ブックマークの中の「LB TAB Layers」フォルダです</li>
+      <li>グループの ▶ でまとめて開き、■ でまとめて閉じます。閉じても保存は残ります</li>
+      <li>ページの右クリック「TAB Layers に保存」で、作ってあるグループに入れられます</li>
+      <li>保存したタブは、ひらがなや呼び名でも探せます（→「<a href="search-tabs-japanese.html">タブをひらがな・カタカナで検索する方法</a>」）</li>
+    </ul>
+    <p>保存先がブックマークなので、LB TAB Layers を消してもグループと保存したタブは残ります。ただし、タブに付けたメモやグループの★、設定などは拡張の中にあるので、残したいときは設定の「エクスポート (JSON)」で書き出しておいてください（→「<a href="feature-json-backup.html">JSONでバックアップ</a>」）。</p>
+    <p>主要なタブ管理拡張4社の中で、保存先が Chrome のブックマークなのは LB TAB Layers だけです（当社調べ）。「消えたらどうしよう」と考えずにタブを閉じられると、そのぶん頭を仕事に使えます。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. セッション保存とブックマーク保存の違いは？</h3>
+    <p>セッション保存は、ウィンドウとタブの並びなど「今の状態」をまるごと記録します。ブックマーク保存は、ページのタイトルとアドレスを Chrome のブックマークとして残します。前者は状態をそのまま戻すのが得意で、後者は長く残すのが得意です。</p>
+
+    <h3>Q. Chrome の「前回開いていたページを開く」だけでは足りませんか？</h3>
+    <p>翌日に続きをやる程度なら便利です。ただし強制終了のあとや、更新・再起動のタイミングによっては、思ったとおりに戻らないことがあります。何日も使うタブは、ブックマークにも保存しておくと安心です。</p>
+
+    <h3>Q. ブックマークに保存すれば、絶対に消えませんか？</h3>
+    <p>Chrome の再起動や拡張の削除では消えません。ただし、自分でフォルダを削除すると、同期しているほかの PC からも消えます。ときどきブックマークをエクスポートしておくと安心です。</p>
+
+    <h3>Q. LB TAB Layers を削除すると、保存したタブはどうなりますか？</h3>
+    <p>グループと保存したタブは Chrome のブックマークの「LB TAB Layers」フォルダに残ります。メモや★、設定は拡張の中にあるので、残したい場合は削除の前に「エクスポート (JSON)」で書き出してください。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html&amp;text=%E3%82%BF%E3%83%96%E3%81%AE%E3%80%8C%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E4%BF%9D%E5%AD%98%E3%80%8D%E3%81%A8%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E4%BF%9D%E5%AD%98%E3%80%8D%E3%80%81%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E5%AE%89%E5%85%A8%EF%BC%9F%20%E2%80%94%20%E6%B6%88%E3%81%88%E3%81%AB%E3%81%8F%E3%81%95%E3%83%BB%E6%88%BB%E3%81%97%E3%82%84%E3%81%99%E3%81%95%E3%81%A7%E6%AF%94%E3%81%B9%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fsession-vs-bookmark-save.html&amp;title=%E3%82%BF%E3%83%96%E3%81%AE%E3%80%8C%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E4%BF%9D%E5%AD%98%E3%80%8D%E3%81%A8%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E4%BF%9D%E5%AD%98%E3%80%8D%E3%80%81%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E5%AE%89%E5%85%A8%EF%BC%9F%20%E2%80%94%20%E6%B6%88%E3%81%88%E3%81%AB%E3%81%8F%E3%81%95%E3%83%BB%E6%88%BB%E3%81%97%E3%82%84%E3%81%99%E3%81%95%E3%81%A7%E6%AF%94%E3%81%B9%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/session-vs-bookmark-save.html" data-title="タブの「セッション保存」と「ブックマーク保存」、どちらが安全？ — 消えにくさ・戻しやすさで比べる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>長く使うタブは、ブックマークに。</h3><p>ドラッグするだけで Chrome のブックマークに保存。拡張を消しても残ります。アカウント登録なし · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=session-vs-bookmark-save" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-bookmark-sync.html">【機能ガイド】ブックマーク同期 — 拡張を消してもデータが残る仕組み <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること <span>→</span></a><a href="chrome-startup-settings.html">Chrome起動時の設定ガイド — 前回のタブを復元する方法 <span>→</span></a><a href="bookmark-export-import.html">Chromeのブックマークをエクスポート・インポートする方法 <span>→</span></a><a href="feature-save-tabs.html">【機能ガイド】タブを保存する3つの方法 — ＋ボタン・ドラッグ・右クリック <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/95314?hl=ja" target="_blank" rel="noopener">起動ページとホームページを設定する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
