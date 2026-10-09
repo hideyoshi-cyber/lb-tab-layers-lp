@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome でタブをまとめて閉じるショートカット — 全部・ほかを・選んで閉じる方法と、閉じても失わないコツ | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome でタブをまとめて閉じるショートカットと操作をまとめます。ウィンドウごと閉じる Ctrl+Shift+W、「他のタブを閉じる」「右側のタブを閉じる」、複数選択して Ctrl+W。閉じすぎたときの戻し方と、閉じても失わないための保存のしかたも説明します。">
+  <meta name="keywords" content="Chrome タブ まとめて閉じる,タブ 全部閉じる ショートカット,Chrome タブ 一括 閉じる,Ctrl+Shift+W,他のタブを閉じる,Chrome 複数タブ 閉じる">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html">
+  <meta property="og:title" content="Chrome でタブをまとめて閉じるショートカット"><meta property="og:description" content="全部・ほかを・選んで閉じる方法と、閉じる前に1秒で保存しておくコツ。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-10T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Chrome でタブをまとめて閉じるショートカット"><meta name="twitter:description" content="全部・ほかを・選んで閉じる方法と、閉じる前に1秒で保存しておくコツ。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"タブをまとめて閉じるショートカット","item":"https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome でタブをまとめて閉じるショートカット — 全部・ほかを・選んで閉じる方法と、閉じても失わないコツ","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-10","image":"https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chrome のタブを全部まとめて閉じるショートカットは？","acceptedAnswer":{"@type":"Answer","text":"Ctrl+Shift+W（Macは ⌘+Shift+W）で、今のウィンドウのタブがすべて閉じます。ほかのウィンドウは閉じません。"}},{"@type":"Question","name":"今のタブ以外を全部閉じるには？","acceptedAnswer":{"@type":"Answer","text":"残したいタブを右クリックして「他のタブを閉じる」を選びます。そのタブより右だけを閉じたいときは「右側のタブを閉じる」を選びます。"}},{"@type":"Question","name":"まとめて閉じたタブを戻せますか？","acceptedAnswer":{"@type":"Answer","text":"Ctrl+Shift+T（Macは ⌘+Shift+T）で、閉じた順にさかのぼって戻せます。ウィンドウごと閉じた場合は、ウィンドウ単位で戻ります。何日も使うタブは、閉じる前に保存しておくと確実です。"}},{"@type":"Question","name":"LB TAB Layers の「表示中以外のタブを一括で閉じる」で閉じたタブは保存されますか？","acceptedAnswer":{"@type":"Answer","text":"保存されません。閉じるのは、どのグループにも入っていないタブ（単独タブ）のうち今見ているもの以外です。残したいタブは、先にグループへドラッグするか、「新しいグループにまとめる」で保存してから閉じてください。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Chrome のタブを保存してからまとめて閉じる","step":[{"@type":"HowToStep","position":1,"name":"パネルを開く","text":"Alt+T（Macは Option+T）で LB TAB Layers を開きます。"},{"@type":"HowToStep","position":2,"name":"グループにまとめる","text":"「単独タブ」の「新しいグループにまとめる」を押して名前を付け、開いているタブを保存します。"},{"@type":"HowToStep","position":3,"name":"■ で閉じる","text":"作ったグループの ■ を押して、タブをまとめて閉じます。保存は残ります。"},{"@type":"HowToStep","position":4,"name":"▶ で開き直す","text":"必要になったら、グループの ▶ でまとめて開き直します。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>Chrome でタブを<br>まとめて閉じるショートカット</h1><p class="blog-meta"><time datetime="2026-10-10">2026.10.10</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-memory-speedup.webp" alt="Chrome のタブをまとめて閉じる" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html&amp;text=Chrome%20%E3%81%A7%E3%82%BF%E3%83%96%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E9%96%89%E3%81%98%E3%82%8B%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%20%E2%80%94%20%E5%85%A8%E9%83%A8%E3%83%BB%E3%81%BB%E3%81%8B%E3%82%92%E3%83%BB%E9%81%B8%E3%82%93%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%A8%E3%80%81%E9%96%89%E3%81%98%E3%81%A6%E3%82%82%E5%A4%B1%E3%82%8F%E3%81%AA%E3%81%84%E3%82%B3%E3%83%84" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html&amp;title=Chrome%20%E3%81%A7%E3%82%BF%E3%83%96%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E9%96%89%E3%81%98%E3%82%8B%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%20%E2%80%94%20%E5%85%A8%E9%83%A8%E3%83%BB%E3%81%BB%E3%81%8B%E3%82%92%E3%83%BB%E9%81%B8%E3%82%93%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%A8%E3%80%81%E9%96%89%E3%81%98%E3%81%A6%E3%82%82%E5%A4%B1%E3%82%8F%E3%81%AA%E3%81%84%E3%82%B3%E3%83%84" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html" data-title="Chrome でタブをまとめて閉じるショートカット — 全部・ほかを・選んで閉じる方法と、閉じても失わないコツ" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome のタブを全部まとめて閉じるなら、Ctrl+Shift+W（Macは ⌘+Shift+W）で今のウィンドウごと閉じます。</strong>今のタブだけ残したいときは、タブを右クリックして「他のタブを閉じる」。いくつか選んで閉じたいときは、Ctrl（Macは ⌘）や Shift を押しながらタブをクリックして選び、Ctrl+W（Macは ⌘+W）です。閉じすぎたら Ctrl+Shift+T で戻せますが、何日も使うタブは、閉じる前に保存しておくと安心です。</p>
+
+    <p>調べものが一段落して、タブが20枚、30枚と並んでいる。1枚ずつ × を押していくのは大変です。Chrome には、タブをまとめて閉じる方法がいくつか用意されています。</p>
+    <p>この記事では、<strong>「全部閉じる」「ほかを閉じる」「選んで閉じる」</strong>の3つの方法と、閉じたあとに「あのページ、やっぱり要った」とならないためのコツをまとめます。</p>
+
+    <h2>まとめて閉じるショートカット一覧</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>したいこと</th><th>Windows</th><th>Mac</th></tr></thead><tbody>
+    <tr><td>今のタブを閉じる</td><td>Ctrl+W</td><td>⌘+W</td></tr>
+    <tr><td><strong>今のウィンドウを、タブごと全部閉じる</strong></td><td><strong>Ctrl+Shift+W</strong>（または Alt+F4）</td><td><strong>⌘+Shift+W</strong></td></tr>
+    <tr><td>選んだタブをまとめて閉じる</td><td>タブを選んで Ctrl+W</td><td>タブを選んで ⌘+W</td></tr>
+    <tr><td>閉じたタブ・ウィンドウを戻す</td><td>Ctrl+Shift+T</td><td>⌘+Shift+T</td></tr>
+    </tbody></table></div>
+    <p>Chrome そのものを終了するときは、右上の︙ →「終了」を使います（Mac は ⌘+Q）。</p>
+
+    <h2>方法1：全部閉じる（ウィンドウごと）</h2>
+    <p>Ctrl+Shift+W（Macは ⌘+Shift+W）を押すと、<strong>今のウィンドウにあるタブがすべて閉じます</strong>。ほかのウィンドウはそのままです。</p>
+    <p>ウィンドウを1つしか開いていない場合は、Chrome の画面がすべて閉じます。仕事用と調べもの用でウィンドウを分けておくと、「調べもののウィンドウだけ一気に閉じる」という使い方ができます。</p>
+
+    <h2>方法2：今のタブ以外を閉じる</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>残したいタブを右クリック</h3><p>タブの上で右クリックすると、メニューが出ます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>「他のタブを閉じる」を選ぶ</h3><p>右クリックしたタブだけが残り、同じウィンドウのほかのタブが閉じます。<strong>「右側のタブを閉じる」</strong>を選べば、そのタブより右にあるタブだけを閉じられます。左に大事なタブを並べておく人には、こちらが便利です。</p></div></div>
+    <p>ピン留めしたタブは、ふだん使うものを左端に固定しておく機能です。毎日使うページはピン留めしておくと、片付けのときに残すものと閉じるものを分けやすくなります。</p>
+
+    <h2>方法3：選んで閉じる</h2>
+    <ul>
+      <li><strong>Ctrl（Macは ⌘）を押しながらクリック</strong> — 1枚ずつ、好きなタブを選べます</li>
+      <li><strong>Shift を押しながらクリック</strong> — 今のタブから、クリックしたタブまでを並びでまとめて選べます</li>
+    </ul>
+    <p>選んだら Ctrl+W（Macは ⌘+W）を押すと、選んだタブがまとめて閉じます。選んだタブの1枚を右クリックして「タブを閉じる」でも同じです。</p>
+
+    <h3>閉じすぎたときは Ctrl+Shift+T</h3>
+    <p>まとめて閉じたあとに「1枚だけ要るものがあった」と気づいたら、Ctrl+Shift+T（Macは ⌘+Shift+T）を押します。ウィンドウごと閉じた場合は、ウィンドウが中のタブごと戻ります。くわしくは「<a href="reopen-closed-tab-shortcut.html">閉じたタブを元に戻すショートカット</a>」で説明しています。</p>
+    <p>ただ、Ctrl+Shift+T は「最近閉じたもの」を戻す機能です。何日も前に閉じたタブや、そのあと Chrome を何度も開き直したあとでは、探すのが大変になります（→「<a href="tabs-lost-after-restart.html">再起動でタブが消えたときの対処法</a>」）。</p>
+
+    <h2>閉じても失わないコツ：閉じる前に保存する</h2>
+    <p>タブをまとめて閉じられない理由の多くは、「あとで要るかもしれない」という不安です。<strong>閉じる前に保存しておけば、その不安がなくなって、気軽に閉じられます</strong>。</p>
+    <p>Chrome だけでやるなら、タブを全部ブックマークする方法があります。ただ、毎回フォルダを作って名前を付けるのは手間がかかります。LB TAB Layers には、閉じる前の保存を短くする方法がいくつかあります。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>1枚だけなら Ctrl+Shift+S</h3><p>見ているページで Ctrl+Shift+S（Macは ⌘+Shift+S）を押すと、そのページが「📥 あとで整理」グループに保存されます。パネルを開かなくてもよく、保存したらそのまま Ctrl+W で閉じて大丈夫です。整理はあとでまとめてやります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>開いているタブを丸ごと残すなら「新しいグループにまとめる」</h3><p>Alt+T（Macは Option+T）でパネルを開き、「単独タブ」の<strong>「新しいグループにまとめる」</strong>を押して名前を付けると、まだ保存していないタブがまとめて1つのグループに保存されます。保存できたら、そのグループの <strong>■</strong> でまとめて閉じます。閉じても保存は残ります。無料版で作れるグループは5つまでなので、いっぱいのときは使い終わったグループを片付けてから使ってください。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>要らないものだけ閉じるなら「表示中以外のタブを一括で閉じる」</h3><p>グループに保存したいものを先にドラッグしておき、残りは「単独タブ」の<strong>「表示中以外のタブを一括で閉じる」</strong>で片付けます。今見ているタブと、グループに保存したタブは閉じません。ここで閉じたタブは保存されないので、残したいものは先にグループへ入れてください。</p></div></div>
+    <p>どの方法でも、保存先は Chrome のブックマークです。翌日でも来週でも、グループの ▶ を押せば、まとめて開き直せます（→「<a href="bulk-close-bulk-open.html">タブを一括で消して、ブックマークを一括で開く</a>」）。</p>
+    <div class="blog-callout"><p>💡 Ctrl+Shift+S は、LB TAB Layers のサイドパネルを一度開いたあとに使えるようになります。押しても保存されないときは、ほかの拡張機能が同じキーを使っていないか、<code>chrome://extensions/shortcuts</code> で確かめてください（→「<a href="extension-shortcut-keys.html">ショートカットキーの設定・変更</a>」）。</p></div>
+
+    <h2>「全部」より「案件ごと」に閉じると楽になる</h2>
+    <p>ウィンドウごと閉じる方法は手軽ですが、仕事の途中だと「Aの案件のタブは閉じたいけれど、Bの案件はまだ使う」ということがよくあります。タブが1つのウィンドウに混ざっていると、選んで閉じるのにも時間がかかります。</p>
+    <p>最初から案件ごとにグループへ保存しておけば、閉じるときもグループの ■ を押すだけです。Aの案件が終わったらAの ■、Bに移るときはBの ▶。閉じる・開くを案件の単位でできるようになると、どのタブを残すか迷う時間がなくなります（→「<a href="switch-tabs-by-project.html">案件ごとにタブを切り替える仕事術</a>」）。</p>
+
+    <h2>まとめ</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>こんなとき</th><th>操作</th></tr></thead><tbody>
+    <tr><td>ウィンドウのタブを全部閉じる</td><td>Ctrl+Shift+W（Macは ⌘+Shift+W）</td></tr>
+    <tr><td>今のタブだけ残す</td><td>タブを右クリック →「他のタブを閉じる」</td></tr>
+    <tr><td>いくつか選んで閉じる</td><td>Ctrl／Shift＋クリックで選んで Ctrl+W</td></tr>
+    <tr><td>閉じすぎた</td><td>Ctrl+Shift+T</td></tr>
+    <tr><td>閉じる前に1枚保存</td><td>Ctrl+Shift+S（LB TAB Layers）</td></tr>
+    <tr><td>閉じる前に全部保存</td><td>「新しいグループにまとめる」→ ■（LB TAB Layers）</td></tr>
+    </tbody></table></div>
+    <p>タブを閉じることは、頭の中を片付けることでもあります。「閉じても戻れる」状態にしておけば、目の前の1枚に集中できます。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Chrome のタブを全部まとめて閉じるショートカットは？</h3>
+    <p>Ctrl+Shift+W（Macは ⌘+Shift+W）で、今のウィンドウのタブがすべて閉じます。ほかのウィンドウは閉じません。</p>
+
+    <h3>Q. 今のタブ以外を全部閉じるには？</h3>
+    <p>残したいタブを右クリックして「他のタブを閉じる」を選びます。そのタブより右だけを閉じたいときは「右側のタブを閉じる」を選びます。</p>
+
+    <h3>Q. まとめて閉じたタブを戻せますか？</h3>
+    <p>Ctrl+Shift+T（Macは ⌘+Shift+T）で、閉じた順にさかのぼって戻せます。ウィンドウごと閉じた場合は、ウィンドウ単位で戻ります。何日も使うタブは、閉じる前に保存しておくと確実です。</p>
+
+    <h3>Q. LB TAB Layers の「表示中以外のタブを一括で閉じる」で閉じたタブは保存されますか？</h3>
+    <p>保存されません。閉じるのは、どのグループにも入っていないタブ（単独タブ）のうち今見ているもの以外です。残したいタブは、先にグループへドラッグするか、「新しいグループにまとめる」で保存してから閉じてください。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html&amp;text=Chrome%20%E3%81%A7%E3%82%BF%E3%83%96%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E9%96%89%E3%81%98%E3%82%8B%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%20%E2%80%94%20%E5%85%A8%E9%83%A8%E3%83%BB%E3%81%BB%E3%81%8B%E3%82%92%E3%83%BB%E9%81%B8%E3%82%93%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%A8%E3%80%81%E9%96%89%E3%81%98%E3%81%A6%E3%82%82%E5%A4%B1%E3%82%8F%E3%81%AA%E3%81%84%E3%82%B3%E3%83%84" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclose-all-tabs-shortcut.html&amp;title=Chrome%20%E3%81%A7%E3%82%BF%E3%83%96%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E9%96%89%E3%81%98%E3%82%8B%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%20%E2%80%94%20%E5%85%A8%E9%83%A8%E3%83%BB%E3%81%BB%E3%81%8B%E3%82%92%E3%83%BB%E9%81%B8%E3%82%93%E3%81%A7%E9%96%89%E3%81%98%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%A8%E3%80%81%E9%96%89%E3%81%98%E3%81%A6%E3%82%82%E5%A4%B1%E3%82%8F%E3%81%AA%E3%81%84%E3%82%B3%E3%83%84" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/close-all-tabs-shortcut.html" data-title="Chrome でタブをまとめて閉じるショートカット — 全部・ほかを・選んで閉じる方法と、閉じても失わないコツ" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>閉じる前に、1秒で保存。</h3><p>Ctrl+Shift+S で今のページを保存、■ でまとめて閉じても保存は残ります。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=close-all-tabs-shortcut" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="reopen-closed-tab-shortcut.html">閉じたタブを元に戻すショートカット — Ctrl+Shift+Tと、戻せないときの探し方 <span>→</span></a><a href="bulk-close-bulk-open.html">タブを一括で消して、ブックマークを一括で開く。それだけで世界が変わる <span>→</span></a><a href="feature-ungrouped-tabs.html">【機能ガイド】単独タブ — グループに入っていないタブを一括で片付ける <span>→</span></a><a href="keyboard-shortcuts-chrome.html">Chromeキーボードショートカット完全ガイド — タブ操作を10倍速くする <span>→</span></a><a href="tab-hoarding-psychology.html">タブを閉じられない心理学 — デジタルホーディングの解消法 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/157179?hl=ja" target="_blank" rel="noopener">Chrome のキーボード ショートカット — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/2391819?hl=ja&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Chrome でタブを管理する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
