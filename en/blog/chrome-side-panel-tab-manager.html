@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Side Panel Tab Manager: Keep Your Tabs Next to the Page | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome’s side panel can host extensions. How it works, how to open and move it, and what a side panel tab manager like LB TAB Layers does there.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html">
+  <meta property="og:title" content="A tab manager in Chrome’s side panel"><meta property="og:description" content="How Chrome’s side panel works, how to open and move it, and why a tab manager fits there better than in a popup or a separate tab."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-10-14T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="A tab manager in Chrome’s side panel"><meta name="twitter:description" content="How Chrome’s side panel works, how to open and move it, and why a tab manager fits there better than in a popup or a separate tab."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Side panel tab manager","item":"https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Using a tab manager in Chrome’s side panel — what the side panel is, how to open it, and why tabs belong there","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-14","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can extensions use Chrome’s side panel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Since Chrome 114, extensions can show their own panel in the side panel. You pick it from the menu at the top of the panel or by clicking the extension’s icon."}},{"@type":"Question","name":"How do I open LB TAB Layers in the side panel?","acceptedAnswer":{"@type":"Answer","text":"Press Alt+T (Option+T on Mac), or click the extension’s icon in the toolbar. You can change the shortcut at chrome://extensions/shortcuts."}},{"@type":"Question","name":"Can I move the side panel to the left?","acceptedAnswer":{"@type":"Answer","text":"Yes. Chrome lets you choose whether the side panel appears on the left or right in its Appearance settings."}},{"@type":"Question","name":"Does a side panel tab manager slow Chrome down?","acceptedAnswer":{"@type":"Answer","text":"The panel itself is a single page, much lighter than a few extra tabs. A tab manager usually reduces memory use overall, because it makes closing tabs safe."}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">v2.8.71</a><a href="./">Blog</a><a href="../../blog/chrome-side-panel-guide.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Guide</span><h1>Chrome side panel tab manager: keep your tabs next to the page</h1><p class="blog-meta"><time datetime="2026-10-14">Oct 14, 2026</time> · Liquid Block Inc. · 6 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-bookmarks-panel.webp" alt="A tab manager open in Chrome’s side panel" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-side-panel-tab-manager.html&amp;text=Using%20a%20tab%20manager%20in%20Chrome%E2%80%99s%20side%20panel%20%E2%80%94%20what%20the%20side%20panel%20is%2C%20how%20to%20open%20it%2C%20and%20why%20tabs%20belong%20there" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-side-panel-tab-manager.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-side-panel-tab-manager.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">Chrome’s <strong>side panel</strong> is a column next to the page that can show Chrome’s own tools — such as bookmarks and the reading list — or a panel from an extension. A side panel tab manager stays open <strong>while you browse</strong>, so you can save, find, open and close tabs without leaving the page. LB TAB Layers opens in the side panel with <strong>Alt+T</strong> (Option+T on Mac) and keeps your tabs in groups saved as Chrome bookmarks.</p>
+
+    <h2>What Chrome’s side panel is</h2>
+    <p>The side panel is a resizable column on one side of the browser window. It shares the screen with the page instead of covering it. Chrome uses it for its own tools — bookmarks, the reading list, reading mode and others, depending on your version — and since Chrome 114, extensions can put their own panel there.</p>
+    <p>That last part matters for tab management. Before the side panel, a tab manager had two places to live: a small <strong>popup</strong> that closes the moment you click the page, or a <strong>separate tab</strong> you switch to and away from. Neither lets you look at your tabs and your work at the same time.</p>
+
+    <h2>How to open, move and resize the side panel</h2>
+    <ul>
+      <li><strong>Open it</strong> from the side panel button in the toolbar, or by clicking an extension’s icon if that extension uses the side panel. Many extensions also offer a keyboard shortcut.</li>
+      <li><strong>Switch panels</strong> with the menu at the top of the panel, which lists Chrome’s tools and the extensions that provide a panel.</li>
+      <li><strong>Resize it</strong> by dragging its inner edge.</li>
+      <li><strong>Move it to the left or right</strong> in Chrome’s settings, under Appearance (side panel position). Left suits people who read from the left edge; right keeps it out of the way.</li>
+    </ul>
+
+    <h2>Why a tab manager belongs in the side panel</h2>
+    <table>
+      <thead><tr><th>Where the tab manager lives</th><th>See it while you work?</th><th>Typical problem</th></tr></thead>
+      <tbody>
+        <tr><td>Toolbar popup</td><td>No — it closes when you click the page</td><td>Fine for one action, tiring for sorting</td></tr>
+        <tr><td>Its own tab</td><td>No — you switch back and forth</td><td>Adds yet another tab</td></tr>
+        <tr><td>The tab bar itself</td><td>Yes, but cramped</td><td>Tab titles shrink to icons</td></tr>
+        <tr><td>Side panel</td><td>Yes</td><td>Uses some screen width</td></tr>
+      </tbody>
+    </table>
+    <p>A vertical list also reads better than a horizontal tab bar. Titles have room to be readable, and groups can be nested and collapsed like folders.</p>
+
+    <h2>What LB TAB Layers shows in the side panel</h2>
+    <table>
+      <thead><tr><th>Area</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Mode bar (top)</td><td>Switch between <strong>Tabs</strong>, <strong>Clean</strong>, <strong>Shots</strong>, <strong>AI</strong> and <strong>DB</strong></td></tr>
+        <tr><td>Search and pin bar</td><td>Typo-tolerant search over saved tabs; up to 10 favourite sites pinned as icons</td></tr>
+        <tr><td>Group list (middle)</td><td>Your groups and subgroups. ▶ opens a group’s tabs, ■ closes them, + saves the current tab</td></tr>
+        <tr><td>Solo Tabs / Today’s History (bottom)</td><td>Open tabs not saved anywhere yet, or pages you visited today (Today’s History is PRO)</td></tr>
+      </tbody>
+    </table>
+    <p>Saved tabs that are open and closed look different, so you can tell at a glance what is on screen. You can drag the divider between the group list and the bottom area — see <a href="feature-panel-layout.html">panel layout</a>.</p>
+
+    <h2>Things you can do without leaving the page</h2>
+    <ul>
+      <li><strong>Save the page you are reading</strong> with + on a group, or drag a tab from Solo Tabs onto a group.</li>
+      <li><strong>Open something in the background.</strong> Middle-click a closed saved tab and it opens next to your current tab without switching to it — like middle-clicking a link. Middle-clicking an open one closes it.</li>
+      <li><strong>Switch projects.</strong> ■ on one group, ▶ on another. The panel stays where it is while the tabs change.</li>
+      <li><strong>Ask about the page.</strong> The AI mode can attach the page you are viewing and summarize it or answer questions. With Chrome’s built-in AI, where your Chrome supports it, no API key is needed.</li>
+      <li><strong>Glance at the time.</strong> The pin bar area includes a clock and a work timer.</li>
+    </ul>
+
+    <h2>How is this different from Chrome’s own bookmarks panel?</h2>
+    <p>Chrome can already show your bookmarks in the side panel, so it is fair to ask what a tab manager adds. The bookmarks panel is a list of saved links. A tab manager also knows about your <strong>open</strong> tabs:</p>
+    <ul>
+      <li>It shows which saved pages are open right now and which are closed.</li>
+      <li>It can open or close a whole folder of tabs in one click (▶ and ■), instead of one link at a time.</li>
+      <li>It lists the open tabs you haven’t saved anywhere yet (<strong>Solo Tabs</strong>), so you can sort them before closing the window.</li>
+      <li>It adds things bookmarks don’t have, such as notes on a saved tab and search that tolerates typos.</li>
+    </ul>
+    <p>Because LB TAB Layers stores its groups as bookmark folders, the two don’t compete: a group you create in the panel also shows up in Chrome’s bookmarks panel and bookmark manager, inside the “LB TAB Layers” folder.</p>
+
+    <h2>Side panel or overlay?</h2>
+    <p>LB TAB Layers has two display modes, set in the settings:</p>
+    <ul>
+      <li><strong>Fixed (Standard Side Panel)</strong> — Chrome’s side panel. The page gets narrower to make room. This is the default and is free.</li>
+      <li><strong>Overlay</strong> — the panel slides over the page and hides again with a button, so the page keeps its full width. Overlay is a PRO feature (included in the free trial).</li>
+    </ul>
+    <p>On a wide monitor, the standard side panel is usually the better choice: you can leave it open all day. On a small laptop screen, overlay saves width.</p>
+
+    <h2>Get started</h2>
+    <ol>
+      <li><strong>Install LB TAB Layers</strong> from the Chrome Web Store.</li>
+      <li><strong>Press Alt+T</strong> (Option+T on Mac) to open it in the side panel. To change the key, go to <code>chrome://extensions/shortcuts</code> — see <a href="extension-shortcut-keys.html">extension keyboard shortcuts</a>.</li>
+      <li><strong>Create a group</strong> with the New Group button and drag a few tabs into it. A Chrome bookmark folder with the same name appears at the same time.</li>
+      <li><strong>Leave the panel open</strong> while you work, and close tabs with ■ instead of the tab bar’s ×.</li>
+    </ol>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Can extensions use Chrome’s side panel?</h3>
+    <p>Yes. Since Chrome 114, extensions can show their own panel in the side panel. You pick it from the menu at the top of the panel or by clicking the extension’s icon.</p>
+
+    <h3>Q. How do I open LB TAB Layers in the side panel?</h3>
+    <p>Press Alt+T (Option+T on Mac), or click the extension’s icon in the toolbar. You can change the shortcut at chrome://extensions/shortcuts.</p>
+
+    <h3>Q. Can I move the side panel to the left?</h3>
+    <p>Yes. Chrome lets you choose whether the side panel appears on the left or right in its Appearance settings.</p>
+
+    <h3>Q. Does a side panel tab manager slow Chrome down?</h3>
+    <p>The panel itself is a single page, much lighter than a few extra tabs. A tab manager usually reduces memory use overall, because it makes closing tabs safe.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-side-panel-tab-manager.html&amp;text=Using%20a%20tab%20manager%20in%20Chrome%E2%80%99s%20side%20panel%20%E2%80%94%20what%20the%20side%20panel%20is%2C%20how%20to%20open%20it%2C%20and%20why%20tabs%20belong%20there" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-side-panel-tab-manager.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-side-panel-tab-manager.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/chrome-side-panel-tab-manager.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Your tabs, right next to your work.</h3><p>Open LB TAB Layers in the side panel with Alt+T. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog_en&amp;utm_campaign=chrome-side-panel-tab-manager" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="feature-panel-layout.html">Panel layout <span>→</span></a><a href="extension-shortcut-keys.html">Chrome extension keyboard shortcuts <span>→</span></a><a href="chrome-tab-groups-vs-tab-manager.html">Tab groups vs. tab managers <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>

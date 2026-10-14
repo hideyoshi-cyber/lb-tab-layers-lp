@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エンジニアのタブ管理 — ドキュメント・Issue・PR・ステージングを作業ごとにまとめる | LB TAB Layers Blog</title>
+  <meta name="description" content="エンジニアの増えがちなタブ（ドキュメント・Issue・PR・ステージング・ローカル環境）を、作業（チケット）ごとのグループで管理する方法。区切りセクション、割り込み時の切り替え、Markdownでの引き継ぎ、URLの一部での検索まで説明します。">
+  <meta name="keywords" content="エンジニア タブ管理,プログラマー タブ 整理,開発 ブラウザ タブ 多い,GitHub タブ 整理,ドキュメント タブ 管理,Chrome 開発者 タブ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html">
+  <meta property="og:title" content="エンジニアのタブ管理 — Issue・PR・ドキュメントを作業ごとに"><meta property="og:description" content="チケットごとにグループ、中を区切って、割り込みは ■ と ▶。引き継ぎは Markdown でコピー。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-14T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="エンジニアのタブ管理 — Issue・PR・ドキュメントを作業ごとに"><meta name="twitter:description" content="チケットごとにグループ、中を区切って、割り込みは ■ と ▶。引き継ぎは Markdown でコピー。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"エンジニアのタブ管理","item":"https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"エンジニアのタブ管理 — ドキュメント・Issue・PR・ステージングを作業ごとにまとめる","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-14","image":"https://tablayers.liquid-block.com/blog/hero-productivity-work.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"localhost のページも保存できますか？","acceptedAnswer":{"@type":"Answer","text":"できます。開いているタブをグループへドラッグするか、グループの「＋」で保存します。ただし、開発サーバーのポート番号が変わると別のURLになるので、保存したURLでは開けなくなります。"}},{"@type":"Question","name":"作業ごとにウィンドウを分けられますか？","acceptedAnswer":{"@type":"Answer","text":"グループを右クリックして「新しいウィンドウで開く」を選ぶと、そのグループのタブだけが新しいウィンドウにまとめて開きます。"}},{"@type":"Question","name":"保存したタブの一覧を、PR の説明に貼れますか？","acceptedAnswer":{"@type":"Answer","text":"グループを右クリックして「Markdown形式でコピー」を選ぶと、リンクの一覧がコピーされます。区切りセクションは太字の見出しに、メモはリンクのうしろに付きます。"}},{"@type":"Question","name":"■ で閉じたタブはどこに残りますか？","acceptedAnswer":{"@type":"Answer","text":"Chrome のブックマークに、グループと同じ名前のフォルダとして残っています。▶ でいつでもまとめて開き直せます。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">用途別</span><h1>エンジニアのタブ管理<br>作業ごとにまとめる</h1><p class="blog-meta"><time datetime="2026-10-14">2026.10.14</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-productivity-work.webp" alt="エンジニアのドキュメント・Issue・PR・ステージングのタブを作業ごとに整理する" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html&amp;text=%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%20%E2%80%94%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BBIssue%E3%83%BBPR%E3%83%BB%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%92%E4%BD%9C%E6%A5%AD%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html&amp;title=%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%20%E2%80%94%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BBIssue%E3%83%BBPR%E3%83%BB%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%92%E4%BD%9C%E6%A5%AD%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html" data-title="エンジニアのタブ管理 — ドキュメント・Issue・PR・ステージングを作業ごとにまとめる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>エンジニアのタブは、「チケット（作業）1件につきグループ1つ」にまとめると片付きます。</strong>グループの中は「Issue・PR」「資料」「確認用（ステージング・ローカル）」のように区切っておき、割り込みが来たら今のグループを ■ で閉じて、別のグループを ▶ で開きます。終わった作業のリンクは「Markdown形式でコピー」で、そのまま引き継ぎやPRの説明に貼れます。</p>
+
+    <p>開発をしていると、タブはすぐに増えます。言語やライブラリのドキュメント、Issue、PR、レビューのコメント、CI の結果、ステージング、手元の <code>localhost</code>。調べものの途中で開いた Stack Overflow や公式の議論も混ざります。</p>
+    <p>困るのは、<strong>割り込み</strong>が来たときです。急ぎの不具合を見るためにタブを開き足すと、さっきまでの作業のタブと混ざって、どれがどの作業のものか分からなくなります。</p>
+    <p>この記事では、エンジニアのタブを<strong>作業ごと</strong>にまとめて、すぐに切り替えられるようにする方法を説明します。</p>
+
+    <h2>1. 分け方：チケット1件にグループ1つ</h2>
+    <p>おすすめは、<strong>「ずっと使うもの」と「この作業だけで使うもの」を分ける</strong>ことです。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>グループ</th><th>中に入れるもの</th><th>いつ開くか</th></tr></thead><tbody>
+    <tr><td><strong>毎日</strong></td><td>リポジトリの通知・CI の一覧・チャット・カレンダー</td><td>朝いちばん</td></tr>
+    <tr><td><strong>リファレンス</strong></td><td>よく引く言語・フレームワークの公式ドキュメント、社内の開発ルール</td><td>必要なときに1枚ずつ</td></tr>
+    <tr><td><strong>#1234 ログインの改修</strong></td><td>Issue・PR・関係するドキュメント・ステージング・<code>localhost</code></td><td>その作業をするとき</td></tr>
+    <tr><td><strong>#1240 不具合の調査</strong></td><td>不具合の報告・ログ・調べた記事</td><td>割り込みが来たとき</td></tr>
+    </tbody></table></div>
+    <p>グループ名には、チケットの番号を入れておくと、Issue やブランチ名と結びつけやすくなります。ドキュメントは、作業ごとに同じページを入れるより、「リファレンス」に1つだけ置いて、必要なときに開くほうが散らかりません。</p>
+    <p>ドキュメントを保存するときは、<strong>使っている版のページ</strong>を残すのがおすすめです。「最新版」のURLは、ライブラリが更新されると中身が変わることがあります。URLに版の番号が入っているページなら、あとで開いても同じ説明が読めます。</p>
+    <p>サブグループを使って「リファレンス」の下を「言語」「ライブラリ」「社内」に分けることもできます（→「<a href="feature-groups-subgroups.html">グループとサブグループ</a>」）。無料版はグループ5つまで（サブグループも含む）なので、終わった作業はこまめに片付けるのがコツです。</p>
+
+    <h2>2. グループの中を区切る</h2>
+    <p>1つの作業でも、タブが10枚を超えると見づらくなります。グループの中に<strong>区切りセクション</strong>を入れて、見出しを付けておきましょう。</p>
+    <ul>
+      <li><strong>Issue・PR</strong> — Issue、PR、レビューのコメント</li>
+      <li><strong>資料</strong> — この作業で読んだドキュメントや記事</li>
+      <li><strong>確認用</strong> — ステージング、<code>localhost</code>、管理画面</li>
+    </ul>
+    <p>区切りは、グループの<strong>「セクション区切りを追加」</strong>から入れられます（→「<a href="feature-tab-dividers.html">区切りセクション</a>」）。</p>
+    <p>なぜそのページを残したのかは、保存したタブを右クリックして<strong>「メモを編集」</strong>で書いておけます。「この設定値の説明は中ほど」「レビューで指摘された箇所」のように一行あるだけで、あとで開き直す手間が減ります。</p>
+
+    <h2>3. 割り込みが来たら：■ で閉じて、▶ で開く</h2>
+    <p>急ぎの調査が入ったら、今の作業のグループの <strong>■</strong> を押します。そのグループのタブがまとめて閉じますが、保存はそのままです。続けて、調査用のグループを作って ▶ で開きます。</p>
+    <p>調査が終わったら、調査のグループを ■ で閉じて、元の作業のグループを ▶ で開き直します。<strong>閉じたときと同じタブがそろう</strong>ので、「どこまでやったっけ」を思い出す時間が短くなります。</p>
+    <div class="blog-callout"><p>💡 作業ごとにウィンドウを分けたい人は、グループを右クリックして<strong>「新しいウィンドウで開く」</strong>を選びます。そのグループのタブだけが、新しいウィンドウにまとめて開きます。</p></div>
+    <p>今のページを見たまま、保存したタブを<strong>中クリック</strong>すると、右隣に裏で開きます（v2.8.72 以降）。PR の画面を見ながら、関係するドキュメントを2〜3枚出しておく、といった使い方ができます。</p>
+
+    <h2>4. ステージングや localhost のURLも保存できる</h2>
+    <p>グループに保存できるのは、ふつうのWebページだけではありません。<code>http://localhost:3000/</code> のような手元の開発環境や、ステージングのURLも、同じように保存できます。開いているタブをグループへドラッグするか、グループの <strong>＋</strong>（現在のタブを追加）で入れます。</p>
+    <p>ただし、次の点に気をつけてください。</p>
+    <ul>
+      <li><strong>ポート番号が変わると、別のURLになります。</strong>開発サーバーの番号を作業ごとに変えている場合は、保存したURLを開いても表示されません</li>
+      <li><strong>ステージングにログインが必要な場合</strong>は、開いたあとにログインの画面になることがあります</li>
+      <li><code>chrome://</code> で始まるChromeの設定画面などは、右クリックの「TAB Layers に保存」やショートカットでの保存の対象外です</li>
+    </ul>
+
+    <h2>5. 終わったら：Markdown でコピーして引き継ぐ</h2>
+    <p>作業が終わったら、グループを右クリックして<strong>「Markdown形式でコピー」</strong>を選びます。グループの中のタブが、次のようなリンクの一覧としてコピーされます。</p>
+    <div class="blog-callout"><p><code>### #1234 ログインの改修</code><br><code>**Issue・PR**</code><br><code>- [ログイン画面の改修](https://…) - レビュー2回目で承認</code><br><code>**資料**</code><br><code>- [認証ライブラリのドキュメント](https://…)</code></p></div>
+    <p>区切りセクションは太字の見出しに、メモはリンクのうしろに付きます。PR の説明、引き継ぎのメモ、チャットにそのまま貼れます（→「<a href="feature-copy-markdown.html">Markdown形式でコピー</a>」）。</p>
+    <p>コピーしたら、グループは削除するか、右クリックの<strong>「アーカイブ」</strong>でしまっておきます。似た不具合がまた起きたときに、調べた資料をすぐに出せます（→「<a href="feature-archive.html">アーカイブ</a>」）。</p>
+
+    <h2>6. 探すときは、URLの一部でも</h2>
+    <p>検索欄は、タブの名前だけでなくURLも探します。リポジトリ名やドメイン、Issue の番号などURLに入っている言葉でも見つかります。保存したタブに付けたメモも、検索の対象です。</p>
+    <p>今日開いたけれど保存しなかったページは、PRO版（トライアル中も使えます）の<strong>「本日の履歴」</strong>から探せます（→「<a href="feature-today-history.html">本日の履歴</a>」）。</p>
+
+    <h2>まとめ</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>場面</th><th>やること</th></tr></thead><tbody>
+    <tr><td><strong>作業を始める</strong></td><td>チケット番号の名前でグループを作り、Issue・PR・資料・確認用を入れる</td></tr>
+    <tr><td><strong>中が増えた</strong></td><td>「セクション区切りを追加」で見出しを入れ、メモで理由を書く</td></tr>
+    <tr><td><strong>割り込み</strong></td><td>今のグループを ■ → 調査用のグループを ▶</td></tr>
+    <tr><td><strong>作業が終わった</strong></td><td>「Markdown形式でコピー」で引き継ぎ → 削除かアーカイブ</td></tr>
+    </tbody></table></div>
+    <p>タブを探して開き直す時間が減れば、そのぶん、コードのことを考える時間に回せます。まずは今の作業を1件、グループにしてみてください。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. localhost のページも保存できますか？</h3>
+    <p>できます。開いているタブをグループへドラッグするか、グループの「＋」で保存します。ただし、開発サーバーのポート番号が変わると別のURLになるので、保存したURLでは開けなくなります。</p>
+
+    <h3>Q. 作業ごとにウィンドウを分けられますか？</h3>
+    <p>グループを右クリックして「新しいウィンドウで開く」を選ぶと、そのグループのタブだけが新しいウィンドウにまとめて開きます。</p>
+
+    <h3>Q. 保存したタブの一覧を、PR の説明に貼れますか？</h3>
+    <p>グループを右クリックして「Markdown形式でコピー」を選ぶと、リンクの一覧がコピーされます。区切りセクションは太字の見出しに、メモはリンクのうしろに付きます。</p>
+
+    <h3>Q. ■ で閉じたタブはどこに残りますか？</h3>
+    <p>Chrome のブックマークに、グループと同じ名前のフォルダとして残っています。▶ でいつでもまとめて開き直せます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html&amp;text=%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%20%E2%80%94%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BBIssue%E3%83%BBPR%E3%83%BB%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%92%E4%BD%9C%E6%A5%AD%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-management-for-engineers.html&amp;title=%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%20%E2%80%94%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BBIssue%E3%83%BBPR%E3%83%BB%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%92%E4%BD%9C%E6%A5%AD%E3%81%94%E3%81%A8%E3%81%AB%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/tab-management-for-engineers.html" data-title="エンジニアのタブ管理 — ドキュメント・Issue・PR・ステージングを作業ごとにまとめる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>作業ごとにまとめて、割り込みは ■ と ▶ で。</h3><p>チケット1件にグループ1つ。閉じても保存は残る。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=tab-management-for-engineers" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-tab-dividers.html">【機能ガイド】区切りセクション <span>→</span></a><a href="feature-copy-markdown.html">【機能ガイド】Markdown形式でコピー <span>→</span></a><a href="switch-tabs-by-project.html">案件ごとにタブを切り替える方法 <span>→</span></a><a href="tab-management-for-designers.html">デザイナーのタブ管理 <span>→</span></a><a href="bulk-close-bulk-open.html">タブを一括で消して、ブックマークを一括で開く <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
