@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タブ管理拡張の「権限」の見方 — LB TAB Layers が使う権限と、その理由をすべて書きます | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome のタブ管理拡張の「権限」をどこで見て、何を確かめればよいかを説明します。あわせて、LB TAB Layers（v2.8.72）が使う権限と「すべてのサイト」へのアクセスについて、何のために使い、何を外に送るのかを一つずつ書きました。">
+  <meta name="keywords" content="拡張機能 権限 見方,Chrome 拡張 権限 危険,タブ管理 拡張 安全,すべてのウェブサイト上にある自分のデータの読み取りと変更,拡張機能 サイトへのアクセス,LB TAB Layers 権限">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html">
+  <meta property="og:title" content="タブ管理拡張の権限の見方 — LB TAB Layers が使う権限と理由"><meta property="og:description" content="権限はどこで見て、何を確かめるか。LB TAB Layers が使う権限と、その理由をすべて書きました。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-15T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="タブ管理拡張の権限の見方 — LB TAB Layers が使う権限と理由"><meta name="twitter:description" content="権限はどこで見て、何を確かめるか。LB TAB Layers が使う権限と、その理由をすべて書きました。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"タブ管理拡張の権限の見方","item":"https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"タブ管理拡張の「権限」の見方 — LB TAB Layers が使う権限と、その理由","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-15","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LB TAB Layers は、見ているページの内容を集めていますか？","acceptedAnswer":{"@type":"Answer","text":"集めていません。すべてのページに入れている処理は、オーバーレイ表示・RSSの検出・保存の結果の表示と、AIサイドバーで添付を選んだときの本文の読み取りだけです。ページの中身を当社のサーバーに送ることはありません。"}},{"@type":"Question","name":"「閲覧履歴」の権限は何に使っていますか？","acceptedAnswer":{"@type":"Answer","text":"「本日の履歴」（PRO版・トライアル中）で、今日の0時以降に見たページを一覧に出すために使っています。履歴を外に送ることはありません。"}},{"@type":"Question","name":"サイトへのアクセスを「クリックされた場合のみ」にしても使えますか？","acceptedAnswer":{"@type":"Answer","text":"タブの保存・▶ で開く・■ で閉じる・検索といった基本の操作は使えます。許可していないサイトでは、オーバーレイ表示やスクリーンショット、RSSの検出などが動かなくなります。"}},{"@type":"Question","name":"拡張の更新で権限が増えたら、どうなりますか？","acceptedAnswer":{"@type":"Answer","text":"新しい確認が必要な権限が増えた場合、Chrome が確認を求め、許可するまで拡張を止めることがあります。chrome://extensions で内容を見てから許可してください。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"拡張機能の権限を確認する","step":[{"@type":"HowToStep","position":1,"name":"ストアのページを見る","text":"Chrome ウェブストアの拡張のページで、プライバシーへの取り組みの欄とプライバシーポリシーを確認します。"},{"@type":"HowToStep","position":2,"name":"追加の確認画面を見る","text":"「Chrome に追加」を押したときに出る権限の一覧を確認します。"},{"@type":"HowToStep","position":3,"name":"入れたあとは詳細を見る","text":"chrome://extensions を開き、拡張の「詳細」で権限の一覧と「サイトへのアクセス」を確認します。"},{"@type":"HowToStep","position":4,"name":"必要ならアクセスを絞る","text":"「サイトへのアクセス」を「クリックされた場合のみ」や「特定のサイトで」に変えます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">セキュリティ</span><h1>タブ管理拡張の「権限」の見方<br>LB TAB Layers の場合</h1><p class="blog-meta"><time datetime="2026-10-15">2026.10.15</time> · Liquid Block Inc. · 読了 8分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="タブ管理拡張の権限の見方と、LB TAB Layers が使う権限" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html&amp;text=%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E3%80%8C%E6%A8%A9%E9%99%90%E3%80%8D%E3%81%AE%E8%A6%8B%E6%96%B9%20%E2%80%94%20LB%20TAB%20Layers%20%E3%81%8C%E4%BD%BF%E3%81%86%E6%A8%A9%E9%99%90%E3%81%A8%E3%80%81%E3%81%9D%E3%81%AE%E7%90%86%E7%94%B1" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html&amp;title=%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E3%80%8C%E6%A8%A9%E9%99%90%E3%80%8D%E3%81%AE%E8%A6%8B%E6%96%B9%20%E2%80%94%20LB%20TAB%20Layers%20%E3%81%8C%E4%BD%BF%E3%81%86%E6%A8%A9%E9%99%90%E3%81%A8%E3%80%81%E3%81%9D%E3%81%AE%E7%90%86%E7%94%B1" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html" data-title="タブ管理拡張の「権限」の見方 — LB TAB Layers が使う権限と、その理由" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>拡張機能の権限は、「その拡張が何に触れられるか」の申告です。</strong>Chrome ウェブストアのページ、追加するときの確認画面、<code>chrome://extensions</code> の「詳細」で見られます。確かめたいのは、①権限の理由が機能と結びついているか、②外に何を送るかがプライバシーポリシーに書いてあるか、の2つです。LB TAB Layers は12の権限と「すべてのサイト」へのアクセスを使っています。理由はこの記事でひとつずつ説明します。</p>
+
+    <p>拡張機能を入れるとき、「〜の読み取りと変更」という確認が出てきます。なんとなく「追加」を押している人も多いと思います。</p>
+    <p>タブ管理の拡張は、開いているタブやブックマークを扱うので、どうしても権限は多めになります。この記事では、<strong>権限をどこで見て、何を確かめればよいか</strong>を説明します。そのうえで、私たちの LB TAB Layers が使っている権限を、理由と一緒に<strong>すべて</strong>書きます。</p>
+    <p>危ない拡張の見分け方の全体像は「<a href="chrome-extension-safety.html">Chrome拡張機能の安全性</a>」にまとめています。この記事は、その中の「権限」を深く見る回です。</p>
+
+    <h2>1. 権限は「何に触れるか」の申告</h2>
+    <p>Chrome の拡張機能は、使いたい機能を先に申告しておく決まりになっています。たとえば、ブックマークを読み書きしたい拡張は「ブックマーク」の権限を、開いているタブの情報を使いたい拡張は「タブ」の権限を申告します。申告していないものには、触れられません。</p>
+    <p>なかでも大きいのが、<strong>サイトへのアクセス</strong>です。「すべてのサイト」へのアクセスを持つ拡張は、見ているページの中身を読んだり、ページに表示を足したりできます。追加するときに「すべてのウェブサイト上にある自分のデータの読み取りと変更」のような確認が出るのは、このためです。</p>
+    <p>権限が多いこと自体が悪いわけではありません。大事なのは、<strong>その権限が、その拡張の機能のために本当に要るのか</strong>です。</p>
+
+    <h2>2. 権限を見る3つの場所</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Chrome ウェブストアのページ</h3><p>拡張のページの下のほうに、<strong>プライバシーへの取り組み</strong>の欄があります。どんなデータを扱うか、開発元が申告した内容と、プライバシーポリシーへのリンクが載っています。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>追加するときの確認画面</h3><p>「Chrome に追加」を押すと、主な権限の一覧が出ます。ここで気になるものがあれば、いったん「キャンセル」して調べてからでも遅くありません。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>入れたあとは chrome://extensions の「詳細」</h3><p>アドレスバーに <code>chrome://extensions</code> と入れて、拡張の<strong>「詳細」</strong>を押します。権限の一覧と、<strong>「サイトへのアクセス」</strong>の設定が見られます。</p></div></div>
+    <p>なお、拡張の更新で新しい権限が増えたときは、Chrome が確認を求め、許可するまで拡張を止めることがあります。突然拡張が止まったら、まず <code>chrome://extensions</code> を開いてみてください。</p>
+
+    <h2>3. 確かめたいこと</h2>
+    <ul>
+      <li><strong>理由が機能と結びついているか</strong> — 「ブックマークに保存する拡張だから、ブックマークの権限」のように説明がつくか。説明のつかない権限があれば、開発元に理由を聞いてもよいくらいです</li>
+      <li><strong>外に何を送るかが書いてあるか</strong> — プライバシーポリシーに、送り先と送るものが具体的に書いてあるか。「収集しません」だけで、送り先が一つも書いていないものは、かえって確かめようがありません</li>
+      <li><strong>データがどこに残るか</strong> — 拡張の中だけに保存するのか、Chrome のブックマークのような外の場所に保存するのか。拡張を消したときに何が残るかが変わります（→「<a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？</a>」）</li>
+    </ul>
+
+    <h2>4. LB TAB Layers が使う権限と、その理由</h2>
+    <p>ここからは、私たちの拡張の話です。配信中の v2.8.72 が申告している権限と、コードの中で実際に何に使っているかを並べました。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>権限</th><th>使っている機能</th></tr></thead><tbody>
+    <tr><td><strong>tabs</strong>（タブ）</td><td>開いているタブの名前とURLを一覧に出す。▶ でまとめて開く、■ でまとめて閉じる</td></tr>
+    <tr><td><strong>tabGroups</strong>（タブグループ）</td><td>Chrome のタブグループの状態（名前・色）を読んで、表示に使う</td></tr>
+    <tr><td><strong>bookmarks</strong>（ブックマーク）</td><td>グループとタブを Chrome のブックマークとして保存する。「整理」の重複やリンク切れのチェックでは、操作したときにブックマーク全体を読む</td></tr>
+    <tr><td><strong>storage</strong>（保存）</td><td>設定・グループの並び・メモ・サムネイルなどを、ブラウザの中に保存する</td></tr>
+    <tr><td><strong>sidePanel</strong>（サイドパネル）</td><td>Chrome のサイドパネルに表示する</td></tr>
+    <tr><td><strong>history</strong>（履歴）</td><td>「本日の履歴」（PRO版・トライアル中）。今日の0時以降に見たページだけを読んで、一覧に出す</td></tr>
+    <tr><td><strong>alarms</strong>（タイマー）</td><td>ライセンスの確認（1日1回）、ブックマークとの同期の確認（5分ごと）、フォーカスタイマーの終わりの時刻</td></tr>
+    <tr><td><strong>declarativeNetRequest</strong></td><td>フォーカスタイマーの間、自分でブロック対象にしたサイトを開けなくする</td></tr>
+    <tr><td><strong>identity</strong>（Googleアカウント）</td><td>スプレッドシート連携を使うときだけ。Google の確認画面で許可すると、自分のスプレッドシートに書き出し・読み込みができる</td></tr>
+    <tr><td><strong>downloads</strong>（ダウンロード）</td><td>スクリーンショットと録画をファイルに保存する。保存のたびに、保存先を選ぶ画面が出る</td></tr>
+    <tr><td><strong>contextMenus</strong>（右クリックメニュー）</td><td>ページの右クリックに「TAB Layers に保存」を出し、選んだグループに保存する</td></tr>
+    <tr><td><strong>scripting</strong></td><td>ページ全体のスクリーンショット（下までスクロールして撮る）と、自動スクロールでの録画。操作したときだけ、そのページに補助の処理を入れる</td></tr>
+    <tr><td><strong>すべてのサイトへのアクセス</strong></td><td>次の章で説明します</td></tr>
+    </tbody></table></div>
+    <p>スプレッドシート連携の許可は、Google の画面では「スプレッドシートの表示・編集」のように出ます。許可の範囲としてはアカウントのスプレッドシート全体になりますが、拡張が使うのは、自分で作った（または指定した）1つのシートだけです。連携しなければ、この権限は使われません。</p>
+
+    <h2>5. 「すべてのサイト」へのアクセスを正直に</h2>
+    <p>いちばん気になるのは、この権限だと思います。LB TAB Layers は、<code>http</code> と <code>https</code> のすべてのページに、小さな処理（content script）を入れています。その処理がしていることは、次の4つです。</p>
+    <ul>
+      <li><strong>オーバーレイ表示</strong>（PRO版・トライアル中）— ページの上に重ねてサイドバーを出す。起動時のチラ見せもこれを使う</li>
+      <li><strong>RSSフィードの検出</strong> — ページの中にRSSの案内（link 要素）があるかを見て、あればパネルに知らせる</li>
+      <li><strong>AIサイドバーへの添付</strong> — AIサイドバーで「ページを添付」を選んだときだけ、本文や選んだ文章を読む</li>
+      <li><strong>保存の結果の表示</strong> — 右クリックで保存したとき、ページの上に「保存しました」を出す</li>
+    </ul>
+    <p>このほか、スクリーンショットとサムネイル（160×100の小さな画像）の撮影、操作したときのリンク切れチェック、登録したRSSの取得にも、サイトへのアクセスを使います。</p>
+    <p><strong>ページの中身を、当社のサーバーに送ることはありません。</strong>外に送るものは、次の章にすべて書きます。</p>
+
+    <h2>6. 外に送るもの（すべて）</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>送り先</th><th>送るもの</th><th>いつ</th></tr></thead><tbody>
+    <tr><td>当社（liquid-block.com）</td><td>インストールID（ランダムに作られた番号）</td><td>ライセンスの確認のとき</td></tr>
+    <tr><td>Google（検索の候補）</td><td>検索欄に入れた文字</td><td>検索欄に入力したとき（候補を出すため）</td></tr>
+    <tr><td>Google（サイトのアイコン）</td><td>表示するサイトのドメイン</td><td>一部の画面でアイコンを出すとき</td></tr>
+    <tr><td>選んだAI（Gemini など）</td><td>質問・添付したページの本文、またはAI検索での保存タブの名前とURL</td><td>AIを使ったときだけ。Chrome内蔵AIを選べばPCの中で処理され、外には出ない</td></tr>
+    <tr><td>自分のGoogleスプレッドシート</td><td>保存したタブの一覧</td><td>連携したときだけ</td></tr>
+    <tr><td>Open-Meteo（天気）</td><td>パソコンのタイムゾーンから推定した、都市くらいの大まかな地点</td><td>ピンバーの時計に天気を出すとき</td></tr>
+    </tbody></table></div>
+    <p>詳しくは<a href="../privacy-policy.html">プライバシーポリシー</a>に書いています。検索欄の文字が Google に送られる点は、知らずに使っている人もいると思うので、ここで改めてお伝えします。</p>
+    <p>保存したグループとタブは、Chrome のブックマークです。Chrome のブックマーク同期をオンにしている場合は、Chrome 本体の機能として Google のサービスで同期されます。</p>
+
+    <h2>7. サイトへのアクセスを絞りたいとき</h2>
+    <p><code>chrome://extensions</code> で LB TAB Layers の「詳細」を開き、<strong>「サイトへのアクセス」</strong>を「クリックされた場合のみ」や「特定のサイトで」に変えられます。</p>
+    <p>絞った場合も、サイドパネルでのタブの保存・▶ で開く・■ で閉じる・検索といった基本の操作は使えます。ただ、許可していないサイトでは、オーバーレイ表示、スクリーンショット、RSSの検出、AIサイドバーへのページの添付などが動かなくなります。使い方に合わせて選んでください。</p>
+    <p>権限は、拡張を選ぶときの大事な手がかりです。気になる権限があれば、遠慮なく開発元に聞いてください。私たちへの質問は info@liquid-block.com で受け付けています。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. LB TAB Layers は、見ているページの内容を集めていますか？</h3>
+    <p>集めていません。すべてのページに入れている処理は、オーバーレイ表示・RSSの検出・保存の結果の表示と、AIサイドバーで添付を選んだときの本文の読み取りだけです。ページの中身を当社のサーバーに送ることはありません。</p>
+
+    <h3>Q. 「閲覧履歴」の権限は何に使っていますか？</h3>
+    <p>「本日の履歴」（PRO版・トライアル中）で、今日の0時以降に見たページを一覧に出すために使っています。履歴を外に送ることはありません。</p>
+
+    <h3>Q. サイトへのアクセスを「クリックされた場合のみ」にしても使えますか？</h3>
+    <p>タブの保存・▶ で開く・■ で閉じる・検索といった基本の操作は使えます。許可していないサイトでは、オーバーレイ表示やスクリーンショット、RSSの検出などが動かなくなります。</p>
+
+    <h3>Q. 拡張の更新で権限が増えたら、どうなりますか？</h3>
+    <p>新しい確認が必要な権限が増えた場合、Chrome が確認を求め、許可するまで拡張を止めることがあります。chrome://extensions で内容を見てから許可してください。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html&amp;text=%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E3%80%8C%E6%A8%A9%E9%99%90%E3%80%8D%E3%81%AE%E8%A6%8B%E6%96%B9%20%E2%80%94%20LB%20TAB%20Layers%20%E3%81%8C%E4%BD%BF%E3%81%86%E6%A8%A9%E9%99%90%E3%81%A8%E3%80%81%E3%81%9D%E3%81%AE%E7%90%86%E7%94%B1" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftab-extension-permissions-safety.html&amp;title=%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E3%81%AE%E3%80%8C%E6%A8%A9%E9%99%90%E3%80%8D%E3%81%AE%E8%A6%8B%E6%96%B9%20%E2%80%94%20LB%20TAB%20Layers%20%E3%81%8C%E4%BD%BF%E3%81%86%E6%A8%A9%E9%99%90%E3%81%A8%E3%80%81%E3%81%9D%E3%81%AE%E7%90%86%E7%94%B1" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/tab-extension-permissions-safety.html" data-title="タブ管理拡張の「権限」の見方 — LB TAB Layers が使う権限と、その理由" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>何に使うかを、隠さない。</h3><p>保存先は Chrome のブックマーク。ページの中身を当社に送ることはありません。アカウント登録なし · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=tab-extension-permissions-safety" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-extension-safety.html">Chrome拡張機能の安全性 — 危険な拡張の見分け方 <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？ <span>→</span></a><a href="fewer-extensions-lighter-chrome.html">拡張機能を減らして Chrome を軽くする <span>→</span></a><a href="feature-ai-sidebar.html">【機能ガイド】AIサイドバー <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/187443?hl=ja" target="_blank" rel="noopener">拡張機能をインストールして管理する — Google Chrome ヘルプ</a>
+      <a href="https://developer.chrome.com/docs/extensions/develop/concepts/permission-warnings?hl=ja" target="_blank" rel="noopener">権限に関する警告について — Chrome for Developers</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
