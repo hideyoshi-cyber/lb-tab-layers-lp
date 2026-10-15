@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Buddy から乗り換えるときの手順と違い — 保存したセッションを、案件ごとのグループへ | LB TAB Layers Blog</title>
+  <meta name="description" content="Session Buddy から LB TAB Layers へ乗り換えるときの手順です。最初にやるバックアップ、保存したセッションを開いてグループに入れる方法、Chrome の「すべてのタブをブックマークに追加」を使う方法、考え方の違いと、併用のしかたまで説明します。">
+  <meta name="keywords" content="Session Buddy 乗り換え,Session Buddy 代わり,Session Buddy 移行,セッション 保存 拡張 乗り換え,Session Buddy ブックマーク,タブ 保存 拡張 移行">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html">
+  <meta property="og:title" content="Session Buddy から乗り換えるときの手順と違い"><meta property="og:description" content="まずバックアップ、次に保存したセッションを開いてグループへ。2つの移し方と、考え方の違い。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-16T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Session Buddy から乗り換えるときの手順と違い"><meta name="twitter:description" content="まずバックアップ、次に保存したセッションを開いてグループへ。2つの移し方と、考え方の違い。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Session Buddy からの乗り換え","item":"https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Session Buddy から乗り換えるときの手順と違い","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-16","image":"https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Session Buddy のデータを、LB TAB Layers に読み込めますか？","acceptedAnswer":{"@type":"Answer","text":"直接は読み込めません。Session Buddy で保存したセッションを開き、そのタブを LB TAB Layers のグループに入れ直してください。タブが多いときは、Chrome の「すべてのタブをブックマークに追加」で「LB TAB Layers」フォルダの中に保存すると、まとめてグループにできます。"}},{"@type":"Question","name":"Session Buddy は、いつ消せばいいですか？","acceptedAnswer":{"@type":"Answer","text":"移したいタブをすべてグループに入れ終わり、Session Buddy の書き出し（エクスポート）でバックアップを取ってからにしてください。拡張の中のデータは、拡張を削除すると一緒に消えます。"}},{"@type":"Question","name":"「すべてのタブをブックマークに追加」で保存したのに、グループに出てきません。","acceptedAnswer":{"@type":"Answer","text":"保存した場所が「LB TAB Layers」フォルダの中か確認してください。そのうえで、LB TAB Layers を一度閉じて開き直すと、グループとして読み込まれます。"}},{"@type":"Question","name":"LB TAB Layers の「インポート (JSON)」で、Session Buddy のファイルは読めますか？","acceptedAnswer":{"@type":"Answer","text":"読めません。「インポート (JSON)」は、LB TAB Layers の「エクスポート (JSON)」で書き出したファイル専用です。読み込むと今のデータが上書きされるので注意してください。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Session Buddy から LB TAB Layers へ移す","step":[{"@type":"HowToStep","position":1,"name":"バックアップを取る","text":"Session Buddy の書き出し（エクスポート）で、保存したセッションをファイルに残します。"},{"@type":"HowToStep","position":2,"name":"セッションを開く","text":"移したいセッションを、Session Buddy から新しいウィンドウで開きます。"},{"@type":"HowToStep","position":3,"name":"LB TAB Layers を開く","text":"そのウィンドウで Alt+T（Macは Option+T）を押します。"},{"@type":"HowToStep","position":4,"name":"グループに入れる","text":"「＋」で案件のグループを作り、「単独タブ」から残したいタブをドラッグします。"},{"@type":"HowToStep","position":5,"name":"残りを閉じる","text":"グループに入れなかったタブを閉じます。すべて移し終わったら、Session Buddy を削除してもかまいません。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">比較・乗り換え</span><h1>Session Buddy から<br>乗り換えるときの手順と違い</h1><p class="blog-meta"><time datetime="2026-10-16">2026.10.16</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-extensions-comparison.webp" alt="Session Buddy から LB TAB Layers へ乗り換える手順" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html&amp;text=Session%20Buddy%20%E3%81%8B%E3%82%89%E4%B9%97%E3%82%8A%E6%8F%9B%E3%81%88%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%A8%E9%81%95%E3%81%84" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html&amp;title=Session%20Buddy%20%E3%81%8B%E3%82%89%E4%B9%97%E3%82%8A%E6%8F%9B%E3%81%88%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%A8%E9%81%95%E3%81%84" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html" data-title="Session Buddy から乗り換えるときの手順と違い" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Session Buddy から乗り換えるときは、まず Session Buddy の書き出し（エクスポート）でバックアップを取り、それから保存したセッションを1つずつ開いて、LB TAB Layers のグループに入れていきます。</strong>LB TAB Layers には Session Buddy のデータを直接読み込む機能はありません。タブが多いときは、Chrome の「すべてのタブをブックマークに追加」で「LB TAB Layers」フォルダの中に保存すると、まとめてグループにできます。</p>
+
+    <p>Session Buddy は、開いているウィンドウとタブを「セッション」として保存し、あとで開き直せる拡張機能です。長く使われている定番の1つです。</p>
+    <p>この記事では、Session Buddy から LB TAB Layers へ移りたい人のために、<strong>データを失わずに移す手順</strong>と、使い始める前に知っておきたい<strong>考え方の違い</strong>をまとめます。</p>
+    <div class="blog-callout"><p>💡 先にお伝えすると、LB TAB Layers には <strong>Session Buddy のデータを直接読み込む機能はありません</strong>。この記事の手順は、保存したセッションのタブを一度開いて、LB TAB Layers のグループに入れ直す方法です。</p></div>
+
+    <h2>1. 考え方の違い：「まるごと残す」と「分けて残す」</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>Session Buddy</th><th>LB TAB Layers</th></tr></thead><tbody>
+    <tr><td>残す単位</td><td>ウィンドウのタブをまるごと（セッション）</td><td>案件ごとのグループ</td></tr>
+    <tr><td>保存するとき</td><td>そのときの状態を記録する</td><td>グループにタブを入れた時点で保存。あとから足したり減らしたりできる</td></tr>
+    <tr><td>保存先</td><td>拡張機能の中</td><td>Chrome のブックマーク</td></tr>
+    <tr><td>拡張を消したとき</td><td>中のデータも消える（書き出しておけば残せる）</td><td>ブックマークとして残る</td></tr>
+    <tr><td>開く場所</td><td>拡張の画面</td><td>サイドパネル（Alt+T）</td></tr>
+    </tbody></table></div>
+    <p>Session Buddy は、「今の状態を、そのまま記録しておく」のが得意です。LB TAB Layers は、「A社の仕事」「経理」のように<strong>案件ごとにタブを分けて、その単位で開いたり閉じたりする</strong>ための道具です。</p>
+    <p>なので、乗り換えは「セッションを全部そのまま移す」より、<strong>「今も使うタブだけを、案件ごとに分けて移す」</strong>と考えるとうまくいきます。保存方法の違いは「<a href="session-vs-bookmark-save.html">セッション保存とブックマーク保存、どちらが安全か</a>」でも詳しく書いています。</p>
+
+    <h2>2. 最初に：Session Buddy でバックアップを取る</h2>
+    <p>移す前に、Session Buddy の<strong>書き出し（エクスポート）</strong>で、保存したセッションをファイルに残しておきましょう。拡張の中のデータは、拡張を削除すると一緒に消えます。移し忘れがあっても、ファイルがあればあとから確かめられます。</p>
+    <p>書き出したファイルは、LB TAB Layers では読み込めません。あくまで「念のための控え」として、PCの分かる場所に置いておきます。</p>
+    <p><strong>Session Buddy は、移し終わるまで消さないでください。</strong>しばらくは両方を入れたままで大丈夫です。</p>
+
+    <h2>3. 移し方A：セッションを開いて、グループに入れる</h2>
+    <p>セッションが少ない人や、移すタブを選びたい人に向いた方法です。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Session Buddy で、保存したセッションを開く</h3><p>移したいセッションを、Session Buddy の画面から開きます。新しいウィンドウで開くと、ほかのタブと混ざりません。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>そのウィンドウで Alt+T</h3><p>開いたウィンドウで、Alt+T（Macは Option+T）を押して LB TAB Layers を開きます。LB TAB Layers の「単独タブ」には、<strong>今のウィンドウ</strong>のタブが並びます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>「＋」でグループを作り、タブをドラッグ</h3><p>「＋」で案件の名前のグループを作り、残したいタブを「単独タブ」からグループへドラッグします。この時点で、Chrome のブックマークとして保存されます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>残りのタブを閉じる</h3><p>グループに入れなかったタブは、もう使わないものです。「単独タブ」のメニューの「表示中以外のタブを一括で閉じる」で片付けられます（→「<a href="feature-ungrouped-tabs.html">単独タブの片付け</a>」）。</p></div></div>
+    <p>1つのセッションに、いくつもの案件のタブが混ざっていることもあると思います。その場合は、グループを2つ3つ作って、タブを分けて入れてください。</p>
+
+    <h2>4. 移し方B：Chrome の機能で、まとめてブックマークにする</h2>
+    <p>タブがとても多く、まずは全部を移してから整理したい人向けの方法です。LB TAB Layers は、ブックマークの<strong>「LB TAB Layers」フォルダの中にあるフォルダを、グループとして読み込む</strong>仕組みになっています。これを使います。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>セッションを新しいウィンドウで開く</h3><p>移し方Aと同じく、Session Buddy から移したいセッションを開きます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>Ctrl+Shift+D で「すべてのタブをブックマークに追加」</h3><p>そのウィンドウで <strong>Ctrl+Shift+D</strong>（Macは Command+Shift+D）を押します。Chrome のメニューの「ブックマークとリスト」→「すべてのタブをブックマークに追加」でも同じです。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>保存先に「LB TAB Layers」フォルダを選ぶ</h3><p>フォルダの名前を案件の名前にして、保存する場所に<strong>「LB TAB Layers」</strong>フォルダを選びます。LB TAB Layers を一度でも開いていれば、このフォルダはブックマークの中にできています。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>LB TAB Layers を開き直す</h3><p>LB TAB Layers を一度閉じて、もう一度開くと、作ったフォルダがグループとして並びます。</p></div></div>
+    <p>この方法は、ウィンドウのタブを全部まとめて保存します。移したあとに、いらないタブを消したり、別のグループへドラッグで分けたりしてください。無料版はグループ5つまでなので、セッションが多い人は、まず今の仕事に関係するものから移すのがおすすめです（インストールから3か月は、すべての機能を試せます）。</p>
+    <p>Chrome のブックマークの操作は、「<a href="bookmark-export-import.html">ブックマークのエクスポート・インポート</a>」でも説明しています。</p>
+
+    <h2>5. 移したあとの使い方</h2>
+    <p>Session Buddy では「保存したセッションを開く」でしたが、LB TAB Layers では<strong>グループの ▶ で開いて、■ で閉じる</strong>が基本です。閉じても保存はそのままなので、案件を切り替えるたびに ■ と ▶ を押すだけです。</p>
+    <p>グループに入れたタブは、Chrome のブックマークなので、LB TAB Layers を消しても残ります。Chrome の再起動でタブが消えたときの心配も減ります（→「<a href="tabs-lost-after-restart.html">Chrome の再起動でタブが消えたときの対処法</a>」）。</p>
+    <p>LB TAB Layers 自体のデータ（グループの色や並び、メモなど）を控えておきたいときは、設定の<strong>「エクスポート (JSON)」</strong>でファイルに書き出せます（→「<a href="feature-json-backup.html">JSONでバックアップ・移行する</a>」）。</p>
+
+    <h2>6. 併用するのもあり</h2>
+    <p>「その日の終わりに、全部のウィンドウの状態を記録しておきたい」という使い方は、Session Buddy のほうが向いています。案件ごとに分けて開いたり閉じたりするのは LB TAB Layers、ウィンドウの記録は Session Buddy、と役割を分けて両方使うこともできます。</p>
+    <p>2つの比較は <a href="../vs-session-buddy.html">LB TAB Layers vs Session Buddy</a> にもまとめています。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Session Buddy のデータを、LB TAB Layers に読み込めますか？</h3>
+    <p>直接は読み込めません。Session Buddy で保存したセッションを開き、そのタブを LB TAB Layers のグループに入れ直してください。タブが多いときは、Chrome の「すべてのタブをブックマークに追加」で「LB TAB Layers」フォルダの中に保存すると、まとめてグループにできます。</p>
+
+    <h3>Q. Session Buddy は、いつ消せばいいですか？</h3>
+    <p>移したいタブをすべてグループに入れ終わり、Session Buddy の書き出し（エクスポート）でバックアップを取ってからにしてください。拡張の中のデータは、拡張を削除すると一緒に消えます。</p>
+
+    <h3>Q. 「すべてのタブをブックマークに追加」で保存したのに、グループに出てきません。</h3>
+    <p>保存した場所が「LB TAB Layers」フォルダの中か確認してください。そのうえで、LB TAB Layers を一度閉じて開き直すと、グループとして読み込まれます。</p>
+
+    <h3>Q. LB TAB Layers の「インポート (JSON)」で、Session Buddy のファイルは読めますか？</h3>
+    <p>読めません。「インポート (JSON)」は、LB TAB Layers の「エクスポート (JSON)」で書き出したファイル専用です。読み込むと今のデータが上書きされるので注意してください。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html&amp;text=Session%20Buddy%20%E3%81%8B%E3%82%89%E4%B9%97%E3%82%8A%E6%8F%9B%E3%81%88%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%A8%E9%81%95%E3%81%84" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fswitch-from-session-buddy.html&amp;title=Session%20Buddy%20%E3%81%8B%E3%82%89%E4%B9%97%E3%82%8A%E6%8F%9B%E3%81%88%E3%82%8B%E3%81%A8%E3%81%8D%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%A8%E9%81%95%E3%81%84" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/switch-from-session-buddy.html" data-title="Session Buddy から乗り換えるときの手順と違い" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>今も使うタブを、案件ごとに。</h3><p>保存先は Chrome のブックマーク。拡張を消しても残ります。アカウント登録なし · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=switch-from-session-buddy" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="onetab-alternative.html">OneTabの代替を探すなら <span>→</span></a><a href="tab-wrangler-guide.html">Tab Wranglerとは？使い方と設定 <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？ <span>→</span></a><a href="feature-ungrouped-tabs.html">単独タブの片付け <span>→</span></a><a href="feature-json-backup.html">【機能ガイド】JSONでバックアップ・移行する <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

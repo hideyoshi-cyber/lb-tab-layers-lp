@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Management for Developers: Docs, Issues, PRs and Staging | LB TAB Layers Blog</title>
+  <meta name="description" content="Developers juggle docs, issues, pull requests, dashboards and localhost. A practical tab setup per task, with Chrome tricks and LB TAB Layers groups.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html">
+  <meta property="og:title" content="Tab management for developers"><meta property="og:description" content="A group per task for docs, issues, pull requests and environments — and how to switch tasks without losing your place."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-10-16T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Tab management for developers"><meta name="twitter:description" content="A group per task for docs, issues, pull requests and environments — and how to switch tasks without losing your place."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Tab management for developers","item":"https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Tab management for developers — a group per task for docs, issues, pull requests and environments","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-16","image":"https://tablayers.liquid-block.com/blog/hero-productivity-work.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How should developers organize browser tabs?","acceptedAnswer":{"@type":"Answer","text":"Use one group per task, named after the ticket, plus a few permanent groups for environments, monitoring and reference docs. Close a task’s group when you switch and reopen it when you return."}},{"@type":"Question","name":"Can I save localhost pages in LB TAB Layers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any open tab can be saved to a group from the side panel. The page right-click menu and the Ctrl+Shift+S shortcut work on http and https pages, including http://localhost, but not on chrome:// pages."}},{"@type":"Question","name":"How do I share a set of links in a pull request?","acceptedAnswer":{"@type":"Answer","text":"Use Copy as Markdown on the group. It copies a heading with the group name and a Markdown link for each tab, including any notes, ready to paste."}},{"@type":"Question","name":"Will closing a group lose my tabs?","acceptedAnswer":{"@type":"Answer","text":"No. ■ closes the tabs but every saved tab stays as a Chrome bookmark. Press ▶ on the group to open them again."}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">v2.8.71</a><a href="./">Blog</a><a href="../../blog/" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Workflow</span><h1>Tab management for developers: docs, issues, PRs and staging</h1><p class="blog-meta"><time datetime="2026-10-16">Oct 16, 2026</time> · Liquid Block Inc. · 7 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-productivity-work.webp" alt="A developer’s tabs organized by task" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-management-for-developers.html&amp;text=Tab%20management%20for%20developers%20%E2%80%94%20a%20group%20per%20task%20for%20docs%2C%20issues%2C%20pull%20requests%20and%20environments" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-management-for-developers.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-management-for-developers.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">The tab setup that works best for most developers is <strong>one group per task</strong> (a ticket, a feature, a bug), plus a few <strong>permanent groups</strong> for environments and reference docs. Close a task’s tabs when you switch and reopen them when you come back. In LB TAB Layers, ■ closes a group, ▶ reopens it, and every group is saved as a Chrome bookmark folder, so a context switch no longer costs you your context.</p>
+
+    <p>A typical afternoon: the issue you are working on, the pull request that will fix it, three pages of API docs, a Stack Overflow answer, the CI run, the staging site, <code>localhost:3000</code>, the logs dashboard — and then someone asks you to review another PR. Developer tabs multiply because every task touches several tools, and every interruption adds another set.</p>
+
+    <h2>Why developer tabs get out of hand</h2>
+    <ul>
+      <li><strong>Tasks overlap.</strong> You are rarely on one thing. A review, a hotfix and the main feature all have their own tabs.</li>
+      <li><strong>Context is expensive to rebuild.</strong> Finding that one docs page and that one comment again takes longer than reading them did.</li>
+      <li><strong>So nothing gets closed.</strong> The tab bar becomes the to-do list, and Chrome becomes the heaviest thing on the machine next to your IDE and containers.</li>
+    </ul>
+
+    <h2>A structure that works: tasks and permanent groups</h2>
+    <table>
+      <thead><tr><th>Group</th><th>What goes in it</th><th>Lifetime</th></tr></thead>
+      <tbody>
+        <tr><td>One per task (e.g. “#482 login timeout”)</td><td>The issue, the PR, the docs and answers you needed for it</td><td>Until it ships, then archive or delete</td></tr>
+        <tr><td>Environments</td><td>Local, staging and production URLs, admin panels</td><td>Permanent</td></tr>
+        <tr><td>Monitoring</td><td>CI, logs, error tracking, dashboards</td><td>Permanent</td></tr>
+        <tr><td>Reference</td><td>Language and framework docs, style guides, internal wiki pages</td><td>Permanent</td></tr>
+        <tr><td>Reviews</td><td>PRs waiting for your review</td><td>Emptied often</td></tr>
+      </tbody>
+    </table>
+    <p>Name task groups after the ticket number so search finds them. Inside a large group, add <strong>section dividers</strong> (<strong>Add section divider</strong> in the group’s … menu) to separate “Spec”, “Code” and “Testing”.</p>
+
+    <h2>Chrome habits worth having</h2>
+    <ul>
+      <li><strong>Ctrl-click or middle-click</strong> links from an issue or search results to open them in the background, then read them in order.</li>
+      <li><strong>Ctrl+1 to Ctrl+8</strong> jump to a tab by position; <strong>Ctrl+9</strong> goes to the last tab. Pin your local app so it is always tab 1.</li>
+      <li><strong>Chrome profiles</strong> keep work and personal accounts apart — useful when you have several GitHub or cloud accounts.</li>
+      <li><strong>Shift+Esc</strong> opens Chrome’s Task Manager, handy when a dev build or a dashboard is eating memory.</li>
+    </ul>
+
+    <h2>Switching tasks without losing your place</h2>
+    <p>LB TAB Layers sits in Chrome’s side panel (<strong>Alt+T</strong>, Option+T on Mac). The workflow for an interruption looks like this:</p>
+    <ol>
+      <li><strong>Save what you have open.</strong> Every tab not yet in a group is listed under <strong>Solo Tabs</strong>. Click <strong>Group all into a new group</strong> and name it after the ticket. Or drag individual tabs into an existing task group.</li>
+      <li><strong>Close the task with ■.</strong> The tabs close and free memory for your build; the group stays saved as a Chrome bookmark folder.</li>
+      <li><strong>Do the other thing.</strong> Press ▶ on “Reviews” or on the hotfix group.</li>
+      <li><strong>Come back with ▶.</strong> The original task’s tabs reopen — the issue, the PR, the exact docs pages.</li>
+    </ol>
+    <p>Because ▶ only opens tabs that aren’t already open, you won’t end up with three copies of the staging site. To give a task its own window, use <strong>Open in new window</strong> from the group’s … menu.</p>
+
+    <h2>Features that suit developer work</h2>
+    <table>
+      <thead><tr><th>Feature</th><th>How developers use it</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ctrl+Shift+S</strong> (⌘+Shift+S)</td><td>Drop the current page into <strong>📥 Sort later</strong> without touching the mouse — an answer you will need, a doc you want to read properly</td></tr>
+        <tr><td>Right-click → <strong>Save to TAB Layers</strong></td><td>Save a page or a link from an issue straight into the task’s group, without opening it</td></tr>
+        <tr><td>Notes on saved tabs</td><td>“Repro steps are in comment 14”, “Use the v2 endpoint” — see <a href="feature-notes.html">notes</a></td></tr>
+        <tr><td><strong>Copy as Markdown</strong></td><td>Copy a group as a Markdown list of links (with notes) for a PR description, a ticket or a stand-up</td></tr>
+        <tr><td><strong>Create split (pair)</strong></td><td>Save two pages as a pair that opens side by side in two windows — docs and the app, or staging and production</td></tr>
+        <tr><td>Typo-tolerant search</td><td>Find a saved page by title, URL or note, even with a typo — see <a href="feature-fuzzy-search.html">search</a></td></tr>
+        <tr><td>Focus timer</td><td>Blocks distracting sites such as social media for 25 minutes while you concentrate</td></tr>
+        <tr><td><strong>Auto Group by Domain</strong></td><td>Sort a messy window of Solo Tabs into one group per site in one click</td></tr>
+      </tbody>
+    </table>
+    <p>Copy as Markdown produces a heading with the group name and one line per tab, which pastes cleanly into most issue trackers and chat tools.</p>
+
+    <h2>Things developers ask about</h2>
+    <ul>
+      <li><strong>localhost and internal URLs.</strong> Any tab can be saved into a group from the side panel. The page right-click menu and Ctrl+Shift+S work on normal <code>http</code> and <code>https</code> pages, which includes <code>http://localhost</code>; they don’t work on <code>chrome://</code> pages.</li>
+      <li><strong>Shortcut clashes.</strong> If a browser-based IDE or tool already uses Ctrl+Shift+S or Alt+T, change LB TAB Layers’ keys at <code>chrome://extensions/shortcuts</code>.</li>
+      <li><strong>Where the data goes.</strong> Groups are plain Chrome bookmarks in a folder named “LB TAB Layers”, so they sync with Chrome, can be exported from the bookmark manager, and stay if you remove the extension. No account is needed.</li>
+      <li><strong>Finished tasks.</strong> When a ticket ships, right-click its group and choose <strong>Archive</strong> to keep it out of the way without deleting it, or delete it if you won’t need it again (deleting a group also deletes its bookmark folder).</li>
+    </ul>
+
+    <h2>A daily rhythm</h2>
+    <ol>
+      <li><strong>Morning:</strong> ▶ on “Monitoring” to check CI and errors, then ■.</li>
+      <li><strong>Work:</strong> ▶ on today’s task group. New tabs you open for it go into the group as you find them useful.</li>
+      <li><strong>Interruptions:</strong> ■ on the task, ▶ on the other group, then back.</li>
+      <li><strong>End of day:</strong> anything left in Solo Tabs either goes into a group or gets closed with <strong>Close all tabs except active</strong>.</li>
+    </ol>
+    <p class="blog-note">ℹ️ The free version allows up to 5 groups (subgroups count toward that). Developers with many tasks usually want more — every feature, with no group limit, is unlocked during the 3-month free trial, and PRO is a one-time purchase.</p>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. How should developers organize browser tabs?</h3>
+    <p>Use one group per task, named after the ticket, plus a few permanent groups for environments, monitoring and reference docs. Close a task’s group when you switch and reopen it when you return.</p>
+
+    <h3>Q. Can I save localhost pages in LB TAB Layers?</h3>
+    <p>Yes. Any open tab can be saved to a group from the side panel. The page right-click menu and the Ctrl+Shift+S shortcut work on http and https pages, including http://localhost, but not on chrome:// pages.</p>
+
+    <h3>Q. How do I share a set of links in a pull request?</h3>
+    <p>Use Copy as Markdown on the group. It copies a heading with the group name and a Markdown link for each tab, including any notes, ready to paste.</p>
+
+    <h3>Q. Will closing a group lose my tabs?</h3>
+    <p>No. ■ closes the tabs but every saved tab stays as a Chrome bookmark. Press ▶ on the group to open them again.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-management-for-developers.html&amp;text=Tab%20management%20for%20developers%20%E2%80%94%20a%20group%20per%20task%20for%20docs%2C%20issues%2C%20pull%20requests%20and%20environments" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-management-for-developers.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-management-for-developers.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/tab-management-for-developers.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Switch tasks. Keep your context.</h3><p>A group per ticket, saved as Chrome bookmarks. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog_en&amp;utm_campaign=tab-management-for-developers" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="bulk-close-bulk-open.html">Close all at once, open all at once <span>→</span></a><a href="feature-notes.html">Notes on saved tabs <span>→</span></a><a href="feature-fuzzy-search.html">Search that forgives typos <span>→</span></a><a href="feature-right-click-menu.html">Everything in the right-click menu <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>
