@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIのタブはTAB Layersで、AIへの指示はサイドパネルで — 姉妹拡張「LB AI Prompt side bar」を公開しました | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers の姉妹拡張「LB AI Prompt side bar」を公開しました。200件以上のAIコマンドを選んで整えて、ChatGPT・Claude・Geminiの入力欄に1クリックで入れられます。AIのタブを TAB Layers でまとめて開き、指示はサイドパネルから入れる使い方を紹介します。">
+  <meta name="keywords" content="LB AI Prompt side bar,プロンプト Chrome拡張,ChatGPT プロンプト テンプレート,AI サイドパネル,Chrome サイドパネル 拡張機能,AI タブ まとめて開く">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html">
+  <meta property="og:title" content="姉妹拡張「LB AI Prompt side bar」を公開しました"><meta property="og:description" content="AIのタブは TAB Layers でまとめて開き、AIへの指示はサイドパネルから1クリックで。生成AIを毎日使う人のための組み合わせを紹介します。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-19T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="姉妹拡張「LB AI Prompt side bar」を公開しました"><meta name="twitter:description" content="AIのタブは TAB Layers でまとめて開き、AIへの指示はサイドパネルから1クリックで。生成AIを毎日使う人のための組み合わせを紹介します。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"LB AI Prompt side bar を公開","item":"https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"姉妹拡張「LB AI Prompt side bar」を公開しました","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-19","image":"https://tablayers.liquid-block.com/blog/hero-ai-search.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LB AI Prompt side bar は、AIそのものですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。ChatGPT・Claude・Gemini などのAIに入れる指示（プロンプト）を、選んで整えて入れるための道具です。AIの利用は、それぞれのサービスのアカウントで行います。"}},{"@type":"Question","name":"LB TAB Layers と同時にサイドパネルに表示できますか？","acceptedAnswer":{"@type":"Answer","text":"Chrome のサイドパネルは、一度に1つの拡張機能だけを表示します。上のメニューで切り替えるか、LB AI Prompt side bar の ⧉ で別のウィンドウに出すと、両方を同時に使えます。"}},{"@type":"Question","name":"無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えます。無料版でも各タブのおすすめのコマンドはずっと使えます。はじめの14日間は、すべての機能を無料で試せます（カードの登録は不要です）。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">仕事術</span><h1>AIへの指示を、<br>サイドパネルから1クリックで</h1><p class="blog-meta"><time datetime="2026-10-19">2026.10.19</time> · Liquid Block Inc. · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-ai-search.webp" alt="AIのタブと、AIに入れるプロンプトを、サイドパネルで並べて使うイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html&amp;text=%E5%A7%89%E5%A6%B9%E6%8B%A1%E5%BC%B5%E3%80%8CLB%20AI%20Prompt%20side%20bar%E3%80%8D%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html&amp;title=%E5%A7%89%E5%A6%B9%E6%8B%A1%E5%BC%B5%E3%80%8CLB%20AI%20Prompt%20side%20bar%E3%80%8D%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html" data-title="姉妹拡張「LB AI Prompt side bar」を公開しました" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB AI Prompt side bar は、生成AIへの指示（プロンプト）を「選ぶ・整える・入れる」ための Chrome 拡張です。</strong>目的別に並んだ200件以上のコマンドから選び、選択肢と空欄を埋めて、⚡ を押すと開いているAIの入力欄に入ります。AIのタブは LB TAB Layers のグループに保存して ▶ でまとめて開き、指示は LB AI Prompt side bar から入れる、という分け方がおすすめです。</p>
+
+    <p>ChatGPT、Claude、Gemini。仕事でAIを開いている時間が長くなるほど、タブは増え、毎回の「どう頼むか」を書く手間も増えていきます。</p>
+    <p>LB TAB Layers を作っている株式会社リキッドブロックから、その「頼み方」を用意しておくための Chrome 拡張、<strong>LB AI Prompt side bar</strong> を公開しました。この記事では、何ができるかと、LB TAB Layers と一緒に使うときのコツを紹介します。</p>
+
+    <h2>LB AI Prompt side bar でできること</h2>
+    <p>Chrome のサイドパネルで使う、<strong>AIに入れる指示（プロンプト）の道具箱</strong>です。AIそのものではなく、いつも使っているAIに指示を入れる役目をします。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>選ぶ</h3><p>日常・文章・ビジネス・経営・映像・開発・画像・動画など、目的別のタブに200件以上のコマンドが並んでいます。迷ったら、各タブの「おすすめ」から。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>整える</h3><p>役割・目的・背景などの選択肢を選び、空欄を埋めるだけで、指示が仕上がります。プレビューで確かめて、そのまま直すこともできます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>⚡ で入れる</h3><p>⚡ を押すと、開いているAIの入力欄にそのまま入ります。ChatGPT・Claude・Gemini のほか、動画や画像を作るAIも含めて22のAIに対応しています。</p></div></div>
+
+    <h2>LB TAB Layers と一緒に使うコツ</h2>
+    <h3>AIのタブは、TAB Layers の「AI」グループに</h3>
+    <p>毎日使うAIのタブを、TAB Layers で「AI」という名前のグループに保存しておきます。Alt+T で開いて ▶ を押せば、ChatGPT・Claude・Gemini がまとめて開きます。すでに開いているAIのタブは、二重には開きません。毎朝のタブをまとめて開く方法は「<a href="one-click-open-tab-set.html">毎朝使うタブを1クリックでまとめて開く方法</a>」で紹介しています。</p>
+
+    <h3>サイドパネルは、切り替えるか、別ウィンドウに</h3>
+    <p>Chrome のサイドパネルは、<strong>1つのウィンドウで、一度に1つの拡張機能の画面だけ</strong>を表示します。LB TAB Layers と LB AI Prompt side bar を行き来するときは、サイドパネルの上のメニューで切り替えます。</p>
+    <p>両方を同時に見たいときは、LB AI Prompt side bar の右上の <strong>⧉（別のウィンドウで開く）</strong>が便利です。プロンプトの画面だけを小さな別ウィンドウに出せるので、サイドパネルには TAB Layers を開いたまま、AIのタブに指示を入れられます。別のモニターに置いておくこともできます。</p>
+
+    <h3>ショートカットはぶつかりません</h3>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>LB TAB Layers</th><th>LB AI Prompt side bar</th></tr></thead><tbody>
+    <tr><td><strong>開くキー</strong></td><td>Alt+T</td><td>Alt+A</td></tr>
+    <tr><td><strong>役目</strong></td><td>タブとブックマークを整理して、まとめて開く</td><td>AIへの指示を選んで整えて、入力欄に入れる</td></tr>
+    <tr><td><strong>保存先</strong></td><td>Chrome のブックマーク</td><td>このパソコンの Chrome の中</td></tr>
+    </tbody></table></div>
+
+    <h2>データの扱い</h2>
+    <p>LB AI Prompt side bar で書いたプロンプトや入力した内容は、弊社のサーバーには送られません。弊社からは見えない作りです。⚡ で入れた内容は、送信した先のAIのサービスに渡るので、社外秘の情報を扱うときは、社内のルールに沿って送る範囲を選んでください。</p>
+
+    <h2>料金と入れ方</h2>
+    <p>無料版でも、各タブの「おすすめ」のコマンド、AIニュース、挿入・コピー・検索がずっと使えます。はじめの14日間は、すべての機能を無料で試せます（カードの登録は要りません）。有料プランは月3.49ドル、または年30ドル（税別。日本のお客様は消費税10%が加わります）です。</p>
+    <p>Chrome ウェブストアから、無料で追加できます。</p>
+    <ul>
+      <li><a href="https://chromewebstore.google.com/detail/eilgmkiljehjhpdienfpahaogneahmeh?hl=ja" target="_blank" rel="noopener">Chrome ウェブストア：LB AI Prompt side bar</a></li>
+      <li><a href="https://aipromptbar.liquid-block.com/" target="_blank" rel="noopener">公式サイト（使い方の動画・コマンドの一覧）</a></li>
+    </ul>
+    <p>タブを探す時間を減らすのが LB TAB Layers、AIへの頼み方を考える時間を減らすのが LB AI Prompt side bar です。あわせて使ってみてください。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. LB AI Prompt side bar は、AIそのものですか？</h3>
+    <p>いいえ。ChatGPT・Claude・Gemini などのAIに入れる指示（プロンプト）を、選んで整えて入れるための道具です。AIの利用は、それぞれのサービスのアカウントで行います。</p>
+
+    <h3>Q. LB TAB Layers と同時にサイドパネルに表示できますか？</h3>
+    <p>Chrome のサイドパネルは、一度に1つの拡張機能だけを表示します。上のメニューで切り替えるか、LB AI Prompt side bar の ⧉ で別のウィンドウに出すと、両方を同時に使えます。</p>
+
+    <h3>Q. 無料で使えますか？</h3>
+    <p>使えます。無料版でも各タブのおすすめのコマンドはずっと使えます。はじめの14日間は、すべての機能を無料で試せます（カードの登録は不要です）。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html&amp;text=%E5%A7%89%E5%A6%B9%E6%8B%A1%E5%BC%B5%E3%80%8CLB%20AI%20Prompt%20side%20bar%E3%80%8D%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fai-prompt-side-bar-release.html&amp;title=%E5%A7%89%E5%A6%B9%E6%8B%A1%E5%BC%B5%E3%80%8CLB%20AI%20Prompt%20side%20bar%E3%80%8D%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/ai-prompt-side-bar-release.html" data-title="姉妹拡張「LB AI Prompt side bar」を公開しました" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>AIのタブは、▶ ひとつで。</h3><p>「AI」のグループを作って ▶ を押すだけ。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=ai-prompt-side-bar-release" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="one-click-open-tab-set.html">毎朝使うタブを1クリックでまとめて開く方法 <span>→</span></a><a href="chrome-side-panel-guide.html">Chrome サイドパネル活用ガイド <span>→</span></a><a href="ai-tools-bookmark-collection.html">生成AIリンク集をブックマークでまとめる <span>→</span></a><a href="gemini-thread-organize.html">Geminiのスレッドをフォルダ整理できない問題 <span>→</span></a><a href="web-meeting-tabs.html">Web会議の直前にもたつかない — 会議と資料のタブをワンクリックで揃える方法 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">サイドパネルを使用する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
