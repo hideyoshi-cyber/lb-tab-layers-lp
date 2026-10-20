@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブでの表示ほか | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers v2.9.0 の変更点。タブとブックマークを切り替える画面レイアウト、カード型のメモ＆チェックリスト、別窓・タブでの表示、よく使うサイトの提案、OneTab からの乗り換え、AI検索の修正などをまとめました。">
+  <meta name="keywords" content="LB TAB Layers v2.9.0,Chrome拡張 アップデート,タブ ブックマーク 切り替え,サイドパネル メモ チェックリスト,タブ管理 別窓,OneTab 乗り換え,よく使うサイト,Chrome 内蔵AI">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/v290-update.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/v290-update.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/v290-update.html">
+  <meta property="og:title" content="v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブ表示"><meta property="og:description" content="「タブ」「ブックマーク」「統合」「メモ」をワンクリックで切り替え。メモ＆チェックリスト、別窓・タブでの表示、よく使うサイトの提案、OneTab からの乗り換えなど。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/v290-update.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-20T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブ表示"><meta name="twitter:description" content="「タブ」「ブックマーク」「統合」「メモ」をワンクリックで切り替え。メモ＆チェックリスト、別窓・タブでの表示、よく使うサイトの提案、OneTab からの乗り換えなど。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"v2.9.0 アップデート","item":"https://tablayers.liquid-block.com/blog/v290-update.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブでの表示ほか","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-20","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/v290-update.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"アップデートすると、いつもの画面は変わりますか？","acceptedAnswer":{"@type":"Answer","text":"これまで使っていた方は、これまでと同じ「統合」の画面のまま始まります。サイドパネルに「新しい『切り分けレイアウト』が選べるようになりました」という案内が出るので、［試してみる］で切り分けレイアウトを試せます。案内は［試してみる］か［×］を押すまで、パネルを開くたびに表示されます。"}},{"@type":"Question","name":"新しいメモは、ほかのPCと同期されますか？","acceptedAnswer":{"@type":"Answer","text":"同期されません。メモはこのPCの Chrome の中（拡張機能の保存領域）に保存され、Chrome のブックマークには入りません。拡張機能を削除すると消え、「エクスポート (JSON)」にも含まれないので、大事なメモはコピーや .txt 保存で控えておいてください。"}},{"@type":"Question","name":"新しい機能は無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"画面レイアウトの切り替え、メモ＆チェックリスト、別窓・タブでの表示、よく使うサイトの提案、OneTab からの乗り換え、右クリック保存の改善は無料です。大画面ダッシュボード、オーバーレイ、AI検索、本日の履歴は、PRO版とトライアル中に使えます。"}},{"@type":"Question","name":"よく使うサイトの提案で、閲覧履歴は送信されますか？","acceptedAnswer":{"@type":"Answer","text":"集計はこのPCの中で行い、当社には送信しません（アイコンの表示のため、サイトのドメインが Google のアイコン取得サービスに送られます）。提案は自動では追加されず、チェックして「追加する」を押したものだけが入ります。"}},{"@type":"Question","name":"保存したグループやタブは、アップデートで消えませんか？","acceptedAnswer":{"@type":"Answer","text":"グループと保存したタブは Chrome のブックマークとして保存されているので、アップデートしてもそのまま残ります。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">アップデート</span><h1>v2.9.0 アップデート<br>見たいものを、見たい形で。</h1><p class="blog-meta"><time datetime="2026-10-20">2026.10.20</time> · Liquid Block Inc. · 読了 9分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="LB TAB Layers v2.9.0 アップデート情報" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html&amp;text=v2.9.0%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E9%81%B8%E3%81%B9%E3%82%8B%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%BB%E5%88%A5%E7%AA%93%E3%81%A8%E3%82%BF%E3%83%96%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%BB%E3%81%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html&amp;title=v2.9.0%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E9%81%B8%E3%81%B9%E3%82%8B%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%BB%E5%88%A5%E7%AA%93%E3%81%A8%E3%82%BF%E3%83%96%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%BB%E3%81%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/v290-update.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/v290-update.html" data-title="v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブでの表示ほか" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB TAB Layers v2.9.0 の主な変更は、①「タブ」「ブックマーク」「統合」「メモ」をワンクリックで切り替える画面レイアウト、②カード型のメモ＆チェックリスト、③独立ウィンドウ（別窓）や1つのタブとして開ける表示方法の3つです。</strong>ほかに、よく使うサイトの提案、OneTab からの乗り換え、空のグループへの右クリック保存の改善、Chrome 内蔵AIでの AI検索の修正、ピンバーに置ける数の拡大（12個まで）を行いました。いま使っている方は、これまでと同じ「統合」の画面のまま始まり、新しいレイアウトは案内から試せます。</p>
+
+    <p>LB TAB Layers の <strong>v2.9.0</strong> を、2026年10月17日から Chrome ウェブストアで配信しています。今回のテーマは<strong>「見たいものを、見たい形で」</strong>です。開いているタブと保存したブックマークを分けて見る、サイドパネルではなく別の窓やタブで開く、作業のメモを横に置いておく。画面の使い方を、仕事や画面の大きさに合わせて選べるようにしました。</p>
+
+    <h2>v2.9.0 の変更点一覧</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>変更</th><th>内容</th><th>プラン</th></tr></thead><tbody>
+    <tr><td>画面レイアウトの切替バー</td><td>「タブ」「ブックマーク」「統合」「メモ」をワンクリックで切り替え。ボタンの並びはドラッグで変えられる</td><td>無料</td></tr>
+    <tr><td>メモ＆チェックリスト</td><td>カード型のメモとチェックリスト。入力すると自動で保存</td><td>無料</td></tr>
+    <tr><td>別窓・タブで開く</td><td>サイドパネルのほかに、独立ウィンドウ（別窓）や1つのタブとして開ける</td><td>無料（ダッシュボードは PRO版／トライアル中）</td></tr>
+    <tr><td>よく使うサイトの提案</td><td>過去14日間の閲覧履歴から候補を出し、選んだものを「📈 よく使う」グループとピンバーへ</td><td>無料</td></tr>
+    <tr><td>OneTab から乗り換える</td><td>OneTab の書き出しテキストを貼り付けて、グループとして取り込む</td><td>無料</td></tr>
+    <tr><td>右クリック保存の改善</td><td>空のまま残っていた古いグループにも、ページの右クリックから保存できるように</td><td>無料</td></tr>
+    <tr><td>AI検索の修正</td><td>「Chrome Built-in AI」を選んだときの AI検索が、今の Chrome で動くように</td><td>PRO版／トライアル中</td></tr>
+    <tr><td>ピンバー</td><td>置けるサイトを10個から12個に</td><td>無料</td></tr>
+    </tbody></table></div>
+
+    <h2>① 画面レイアウト — 「タブ」「ブックマーク」「統合」「メモ」を切り替える</h2>
+    <p>サイドパネルの<strong>グループ一覧のすぐ上</strong>に、4つのボタンが並ぶ切替バーが加わりました。上部のモード（タブ・整理・スクショ・AI・DB）が「タブ」のときに表示されます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>ボタン</th><th>表示されるもの</th></tr></thead><tbody>
+    <tr><td><strong>タブ</strong></td><td>開いているタブのうち、どのグループにも保存していないもの（単独タブ）を画面いっぱいに表示。下のタブで「本日の履歴」（PRO版／トライアル中）や「メモ」にも切り替えられます。ボタンの数字は単独タブの数です</td></tr>
+    <tr><td><strong>ブックマーク</strong></td><td>保存したグループの一覧を画面いっぱいに表示。ボタンの数字はグループの数です（サブグループを含み、アーカイブしたものは除く）</td></tr>
+    <tr><td><strong>統合</strong></td><td>これまでどおり、上にグループ一覧、下に単独タブ／本日の履歴／メモを並べて表示</td></tr>
+    <tr><td><strong>メモ</strong></td><td>メモ＆チェックリストを画面いっぱいに表示。数字はメモの枚数です</td></tr>
+    </tbody></table></div>
+    <p>「タブ」「ブックマーク」「メモ」の3つは、1つの画面を広く使う<strong>切り分けレイアウト</strong>です。「統合」は、これまでの上下に並べる<strong>統合レイアウト</strong>です。最後に選んだ画面は保存され、次に開いたときもその画面から始まります。</p>
+
+    <h3>ボタンの並びは、ドラッグで変えられます</h3>
+    <p>4つのボタンは、つかんで左右にドラッグすると並びを入れ替えられます。よく使う画面を左端に置いておく、といった使い方ができます。並びは保存され、同じ Chrome で開いているほかの画面にも反映されます。</p>
+
+    <h3>「タブ」画面から保存する2つの方法</h3>
+    <p>切り分けレイアウトの「タブ」画面には、グループ一覧が出ません。そこで、画面を切り替えずに保存する方法を用意しました。</p>
+    <ul>
+      <li><strong>行の「フォルダに保存」</strong> — 単独タブの行にマウスを乗せると、右側にフォルダのアイコンが出ます。押すと「フォルダに保存 ›」「タブを閉じる」のメニューが出るので、「フォルダに保存」を押し、並んだグループから保存先を選びます（行の右クリックでも同じメニューが出ます）</li>
+      <li><strong>「ブックマーク」ボタンへドラッグ</strong> — タブの行をつかんで、切替バーの「ブックマーク」に重ねると、少しして「ブックマーク」画面に切り替わります。そのまま保存したいグループの上で離すと保存されます。ボタンの上で離しただけでは、画面が切り替わるだけで保存はされません</li>
+    </ul>
+    <p>保存したタブは Chrome のブックマークになります。タブ自体は開いたままで、単独タブの一覧からは外れます。また、「タブ」画面で「新しいグループ」を押すと、自動で「ブックマーク」画面に切り替わってからグループを作ります。</p>
+
+    <h3>ほかの切り替え方</h3>
+    <ul>
+      <li>「新しいグループ」やダッシュボードのボタンが並ぶアイコンの列の、いちばん左のボタン（切り分けと統合を切り替えます）</li>
+      <li>「設定」→「表示とテーマ」→「表示要素」→「画面レイアウト」で、「切り分け（タブ / ブックマーク）」か「統合（上下分割）」を選ぶ</li>
+    </ul>
+    <div class="blog-callout"><p>💡 上下の境目をドラッグするリサイズと、下の欄の折りたたみは、「統合」のときに使えます。切り分けレイアウトでは、それぞれの画面が全体の高さを使います。</p></div>
+
+    <h3>いま使っている方は、画面がそのまま変わりません</h3>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>始まる画面</th><th>表示される案内</th></tr></thead><tbody>
+    <tr><td>これまで使っていた方（アップデートした方）</td><td>これまでと同じ「統合」</td><td><strong>新しい「切り分けレイアウト」が選べるようになりました</strong>　［試してみる］［×］</td></tr>
+    <tr><td>新しく使い始める方</td><td>切り分けレイアウトの「タブ」画面</td><td><strong>画面レイアウトはいつでも変更できます</strong>　［統合表示を試す］［×］</td></tr>
+    </tbody></table></div>
+    <p>案内は、どちらかのボタンを押すまで、パネルを開くたびに表示されます。［試してみる］を押すと切り分けレイアウトの「タブ」画面に、［統合表示を試す］を押すと統合レイアウトに切り替わります。［×］で閉じたあとも、切替バーからいつでも切り替えられます。以前に使っていて、Chrome のブックマークからグループが戻った方も、これまでと同じ「統合」で始まります。</p>
+
+    <h2>② メモ＆チェックリスト — パネルの中に、メモ帳と ToDo を</h2>
+    <p>サイドパネルの中で使える、<strong>カード型のメモとチェックリスト</strong>を加えました。Google Keep のように、1枚ずつカードで並ぶ形です（Google のサービスと連携する機能ではありません）。</p>
+    <p>開く場所は2つあります。</p>
+    <ul>
+      <li>切替バーの<strong>「メモ」</strong> — 画面いっぱいに使えます</li>
+      <li>下の欄の<strong>「メモ」</strong>タブ（「単独タブ」「本日の履歴」の隣）— 統合レイアウトなら、上でグループを見ながら下でメモを書けます</li>
+    </ul>
+    <p>はじめて開くと、「クイックメモ」という名前のチェックリストが1枚できています。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>操作</th><th>できること</th></tr></thead><tbody>
+    <tr><td>＋ メモを入力…</td><td>文章のメモを一番上に作る</td></tr>
+    <tr><td>☑ チェックリスト</td><td>チェックリストを一番上に作る</td></tr>
+    <tr><td>Enter</td><td>チェックリストで、すぐ下に新しい項目を足す（日本語の変換を確定する Enter では増えません）</td></tr>
+    <tr><td>Backspace</td><td>空の項目で押すと、その項目を消して前の項目へ戻る</td></tr>
+    <tr><td>チェックを入れる</td><td>項目がカード下の「完了したアイテム (N)」に移り、打ち消し線で表示される（見出しを押すと開閉）</td></tr>
+    <tr><td>ピン（カード右上）</td><td>「固定済み」としてメモの一番上にまとめる</td></tr>
+    <tr><td>チェックボックスを表示/非表示</td><td>文章のメモとチェックリストを切り替える（文章に切り替えると、チェックの印は消えます）</td></tr>
+    <tr><td>背景色を変更</td><td>標準の色を含む8つから、カードの色を選ぶ</td></tr>
+    <tr><td>コピー</td><td>タイトルを「### タイトル」、チェックリストを「- [ ] 項目」「- [x] 項目」の形でコピー</td></tr>
+    <tr><td>テキスト保存 (.txt)</td><td>コピーと同じ内容を .txt ファイルでダウンロード</td></tr>
+    <tr><td>このメモを削除</td><td>確認のあとで削除（元に戻す機能はありません）</td></tr>
+    </tbody></table></div>
+    <p>入力した内容は自動で保存され、文字を打ったあとに「✓ 自動保存済み」が少しのあいだ表示されます。同じ Chrome で開いているサイドパネル・別窓・タブ表示のあいだでは、内容が反映されます。</p>
+    <div class="blog-callout"><p>⚠️ <strong>メモの保存先について</strong>：メモはこのPCの Chrome の中（拡張機能の保存領域）に保存されます。グループやタブとは違って Chrome のブックマークには入らないため、ほかのPCには同期されず、拡張機能を削除すると消えます。「エクスポート (JSON)」にも含まれません。大事なメモは、コピーや .txt 保存で控えておいてください。</p></div>
+    <p>なお、保存したタブ1つずつに「なぜ残したか」を書いておく<a href="feature-notes.html">タブのメモ</a>は、これまでどおり使えます。今回のメモ＆チェックリストとは別の機能です。</p>
+
+    <h2>③ サイドパネル以外で開く — 独立ウィンドウ（別窓）・新しいタブ</h2>
+    <p>LB TAB Layers を、Chrome のサイドパネル以外の形でも開けるようになりました。ヘッダー右上、時計のアイコンの右隣にあるボタンを押すと、「表示方法を選択」のメニューが出ます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>メニュー</th><th>開き方</th><th>プラン</th></tr></thead><tbody>
+    <tr><td>独立ウィンドウ（別窓）で開く</td><td>タブバーやアドレスバーのない小さなウィンドウで開く。画面の好きな場所に置ける</td><td>無料</td></tr>
+    <tr><td>新しいタブで開く</td><td>ブラウザの1つのタブとして、広く表示する</td><td>無料</td></tr>
+    <tr><td>大画面ダッシュボードを開く</td><td>2カラム＋カード一覧で全体を整理する</td><td>PRO版／トライアル中</td></tr>
+    </tbody></table></div>
+    <ul>
+      <li>別窓はサイズを覚えて、次回も同じ大きさで開きます。すでに開いていれば、ふだんは新しく増やさずに前に出します（タブ表示も同じです）</li>
+      <li>別窓から操作しても、一覧には通常のブラウザウィンドウのタブが並び、タブもブラウザウィンドウ側で開きます</li>
+      <li>単独タブの「表示中以外のタブを一括で閉じる」と、スクショモードの「このページを撮る」は、サイドパネルで使ってください。別窓やタブ表示では「表示中のページ」が LB TAB Layers 自身の画面と判断されるため、ブラウザで見ていたタブまで閉じる対象に入ったり、目的のページを撮れなかったりします</li>
+    </ul>
+    <h3>アイコンや Alt+T で、最初から別窓やタブで開く</h3>
+    <p>「設定」→「表示とテーマ」→「サイドバーモード」の「サイドバー表示モード」が、4つから選べるようになりました。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>選択肢</th><th>拡張機能のアイコン／Alt+T を押したとき</th><th>プラン</th></tr></thead><tbody>
+    <tr><td>固定</td><td>Chrome 標準のサイドパネルが開く</td><td>無料</td></tr>
+    <tr><td>ｵｰﾊﾞｰﾚｲ</td><td>ページの上にサイドバーを出し入れする</td><td>PRO版／トライアル中</td></tr>
+    <tr><td>別窓</td><td>独立ウィンドウが開く（開いていれば前に出す）</td><td>無料</td></tr>
+    <tr><td>タブ</td><td>タブ表示が開く（開いていればそのタブに切り替える）</td><td>無料</td></tr>
+    </tbody></table></div>
+    <p>ヘッダーのメニューは、その場で1回開くための操作なので、この設定は変わりません。いつもの開き方を変えたいときは、こちらで選んでください。</p>
+
+    <h2>④ よく使うサイトの提案</h2>
+    <p>Chrome に残っている<strong>過去14日間の閲覧履歴</strong>から、よく使っているサイトを探して提案します。サイトごとに使った日数を数え、14日のうち3日以上使ったサイトが候補に並びます（最大20件）。8日以上使ったサイトには、最初からチェックが入っています。検索サイト（www.google.co.jp や bing.com など）、ログイン用のアドレス（accounts.google.com など）、IPアドレスや localhost などは数えません。</p>
+    <p>開き方は2つです。</p>
+    <ul>
+      <li>グループ一覧の上に出る案内「よく使うサイトが○件見つかりました」の「見てみる」（切り分けレイアウトでは「ブックマーク」画面に出ます）</li>
+      <li>「設定」→「データと同期」→「はじめる・乗り換える」→「よく使うサイトを見つける」（いつでも何度でも使えます）</li>
+    </ul>
+    <p>一覧でチェックを付けて「追加する」を押すと、<strong>「📈 よく使う」グループ</strong>に入ります。「ピンバーにも置く」にチェックが入っていれば（最初はオン）、ピンバーにも並びます。提案するだけで、自動で追加することはありません。</p>
+    <ul>
+      <li>「📈 よく使う」グループは、無料版のグループ数（5個）に数えません</li>
+      <li>グループに入れたサイトは、ほかのグループと同じく Chrome のブックマークとして保存されます</li>
+      <li>案内は、14日のうち8日以上使ったサイトがあり、「📈 よく使う」グループがまだないときに出ます。×で閉じると、以後は出ません</li>
+    </ul>
+    <div class="blog-callout"><p>🔒 集計はこのPCの中で行い、当社には送信しません（アイコンの表示のため、サイトのドメインが Google のアイコン取得サービスに送られます）。使っているのは以前からの閲覧履歴とブックマークの権限で、このアップデートで新しい権限は増えていません。</p></div>
+
+    <h2>⑤ OneTab から乗り換える</h2>
+    <p>OneTab にためたタブを、LB TAB Layers のグループとして取り込めるようになりました。取り込みは無料です。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>OneTab のテキストをコピーする</h3><p>OneTab の「Export / Import URLs」を開き、表示されたテキストをすべてコピーします。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>取り込みの画面を開く</h3><p>LB TAB Layers の「設定」→「データと同期」→「はじめる・乗り換える」→「OneTab から乗り換える」を押します。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>貼り付けて「取り込む」</h3><p>貼り付けると「○グループ・○件を取り込みます」と表示されます。「取り込み先のグループ名」（最初は「OneTab から」）を確かめて、「取り込む」を押します。</p></div></div>
+    <ul>
+      <li>OneTab で空行に区切られていたまとまりが、取り込み先グループの中の<strong>サブグループ</strong>になります。名前は「グループ 1（12件）」のような形です（OneTab で付けたグループ名は、書き出したテキストに入っていないため引き継がれません）。まとまりが1つだけなら、取り込み先のグループに直接入ります</li>
+      <li>取り込んだタブは Chrome のブックマークとして保存されます</li>
+      <li>すでに別のグループに保存してあるURLも取り込み、その件数を完了のお知らせで伝えます</li>
+    </ul>
+    <div class="blog-callout"><p>ℹ️ 取り込みは、グループ数の上限で止まることはありません。ただし取り込んだグループ（サブグループを含む）も無料版の5グループに数えられるため、トライアル終了後は、一覧の先頭5グループ以外を使うには PRO版が必要です（データは Chrome のブックマークとして残ります）。</p></div>
+
+    <h2>⑥ 空のグループへの右クリック保存を改善</h2>
+    <p>Webページの右クリック「TAB Layers に保存」で、<strong>以前に作って空のまま残っていたグループ</strong>を選ぶと、「サイドパネルを一度開いてから保存してください」と表示されて保存できないことがありました。v2.9.0 では、その場でグループのブックマークフォルダを作ってから保存します。サイドパネルを開いていなくても保存できます。</p>
+    <ul>
+      <li>今のページを「📥 あとで整理」に保存するショートカット（Ctrl+Shift+S、Macは Command+Shift+S）も、サイドパネルを一度も開いていない状態で使えるようになりました</li>
+      <li>グループに紐付いていたフォルダを Chrome 側で消してしまったグループや、名前が空のグループでは、「このグループはまだ準備中です。…」と表示されます。サイドパネルからタブを1つ保存すると、右クリックからも保存できるようになります</li>
+    </ul>
+    <p>右クリック保存のこれまでの修正は「<a href="bugfix-v2872.html">不具合のお知らせと修正（v2.8.72）</a>」をご覧ください。</p>
+
+    <h2>⑦ AI検索が Chrome 内蔵AIで動くように</h2>
+    <p>AI検索（PRO版／トライアル中）で、AIエンジンに「Chrome Built-in AI (無料)」を選んでいると、今の Chrome ではエラーになって検索できない不具合がありました。v2.9.0 で、現在の Chrome の内蔵AIに対応しました。</p>
+    <ul>
+      <li>「設定」→「AI機能」で「AI機能を有効にする (Beta)」をオンにすると、検索欄に杖のアイコンのボタンが出ます</li>
+      <li>Chrome 内蔵AIは、PCの中で処理します。はじめて使うときは、Chrome がモデル（数GB）をダウンロードするため時間がかかります</li>
+      <li>対応していないPCでは「この端末では Chrome 内蔵AI を利用できません…」と表示されます。そのときは、Gemini などのクラウドのAIを APIキーで使う方法を選べます（その場合、保存したタブのタイトルとURLが、選んだAIの事業者に送られます）</li>
+      <li>「(無料)」は API の料金がかからないという意味で、AI検索そのものは PRO版／トライアル中の機能です</li>
+    </ul>
+
+    <h2>そのほかの変更</h2>
+    <ul>
+      <li><strong>ピンバーは12個まで</strong> — ピンバーに置けるサイトを、10個から12個に増やしました</li>
+    </ul>
+
+    <h2>アップデート方法</h2>
+    <p>Chrome ウェブストアから自動で更新されます。すぐに更新したい場合は <code>chrome://extensions</code> を開き、右上の「デベロッパー モード」をオンにして「更新」を押してください。保存したグループとタブは Chrome のブックマークに保存されているので、アップデートしてもそのまま残ります。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. アップデートすると、いつもの画面は変わりますか？</h3>
+    <p>これまで使っていた方は、これまでと同じ「統合」の画面のまま始まります。サイドパネルに「新しい『切り分けレイアウト』が選べるようになりました」という案内が出るので、［試してみる］で切り分けレイアウトを試せます。案内は［試してみる］か［×］を押すまで、パネルを開くたびに表示されます。</p>
+
+    <h3>Q. 新しいメモは、ほかのPCと同期されますか？</h3>
+    <p>同期されません。メモはこのPCの Chrome の中（拡張機能の保存領域）に保存され、Chrome のブックマークには入りません。拡張機能を削除すると消え、「エクスポート (JSON)」にも含まれないので、大事なメモはコピーや .txt 保存で控えておいてください。</p>
+
+    <h3>Q. 新しい機能は無料で使えますか？</h3>
+    <p>画面レイアウトの切り替え、メモ＆チェックリスト、別窓・タブでの表示、よく使うサイトの提案、OneTab からの乗り換え、右クリック保存の改善は無料です。大画面ダッシュボード、オーバーレイ、AI検索、本日の履歴は、PRO版とトライアル中に使えます。</p>
+
+    <h3>Q. よく使うサイトの提案で、閲覧履歴は送信されますか？</h3>
+    <p>集計はこのPCの中で行い、当社には送信しません（アイコンの表示のため、サイトのドメインが Google のアイコン取得サービスに送られます）。提案は自動では追加されず、チェックして「追加する」を押したものだけが入ります。</p>
+
+    <h3>Q. 保存したグループやタブは、アップデートで消えませんか？</h3>
+    <p>グループと保存したタブは Chrome のブックマークとして保存されているので、アップデートしてもそのまま残ります。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html&amp;text=v2.9.0%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E9%81%B8%E3%81%B9%E3%82%8B%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%BB%E5%88%A5%E7%AA%93%E3%81%A8%E3%82%BF%E3%83%96%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%BB%E3%81%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv290-update.html&amp;title=v2.9.0%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E9%81%B8%E3%81%B9%E3%82%8B%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%BB%E5%88%A5%E7%AA%93%E3%81%A8%E3%82%BF%E3%83%96%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%81%BB%E3%81%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/v290-update.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/v290-update.html" data-title="v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブでの表示ほか" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>見たいものを、見たい形で。</h3><p>タブとブックマークを切り替える画面、メモ＆チェックリスト、別窓やタブでの表示。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=v290-update" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-sidebar-mode.html">【機能ガイド】表示モード — 標準サイドパネルとオーバーレイの違いと設定 <span>→</span></a><a href="feature-notes.html">【機能ガイド】メモ機能 — 保存したタブに「なぜ残したか」を書いておく <span>→</span></a><a href="free-vs-pro.html">LB TAB Layers 無料版とPRO版の違い — 3ヶ月トライアルと延長の仕組みまで <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">Chrome サイドパネルを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/187443?hl=ja" target="_blank" rel="noopener">拡張機能をインストールして管理する — Google Chrome ヘルプ</a>
+      <a href="https://developer.chrome.com/docs/ai/built-in?hl=ja" target="_blank" rel="noopener">組み込みの AI — Chrome for Developers</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
