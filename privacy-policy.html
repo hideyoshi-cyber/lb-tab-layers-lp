@@ -226,7 +226,8 @@
       <li><strong>タブグループ情報</strong>（tabGroups 権限）：Chromeのタブグループ状態を取得し、表示に使用します</li>
       <li><strong>ブックマーク情報</strong>（bookmarks 権限）：ユーザーが保存したグループのタブをブックマークに同期します。重複検出・リンク切れチェックでは、ユーザーの操作によりChromeのブックマーク全体を読み取ります</li>
       <li><strong>ローカルストレージ</strong>（storage 権限）：ユーザーの設定（テーマ、グループ構成、メモなど）をブラウザ内に保存します</li>
-      <li><strong>閲覧履歴</strong>（history 権限）：本日の閲覧履歴をサイドパネルに一覧表示する機能に使用します（PRO版のみ）</li>
+      <li><strong>閲覧履歴</strong>（history 権限）：本日の閲覧履歴をサイドパネルに一覧表示する機能（PRO版のみ）と、よく使うサイトの提案に使用します。提案は、直近14日間の履歴をこのパソコンの中でだけ集計し、外部には送信しません</li>
+      <li><strong>ファビコン</strong>（favicon 権限）：保存したページ・ピン・よく使うサイトの横に、Chromeがこのパソコンに保存しているサイトのアイコンを表示します。外部のサービスには送信しません</li>
       <li><strong>アラーム</strong>（alarms 権限）：ライセンスの定期確認（1日1回）、ブックマークとの同期確認（5分ごと）、フォーカスタイマーの終了時刻の管理に使用します</li>
       <li><strong>サイドパネル</strong>（sidePanel 権限）：Chromeのサイドパネルにタブ管理UIを表示します</li>
       <li><strong>サイトブロック</strong>（declarativeNetRequest 権限）：フォーカスモード中、ユーザーが指定したサイトをブロックページへリダイレクトします。ブロックルールはローカルで生成され、外部送信されません</li>
@@ -257,7 +258,6 @@
     <p>以下はUIの表示目的であり、ユーザーデータの送信は行いません。</p>
     <ul>
       <li><strong>Tabler Icons</strong>（cdn.jsdelivr.net）：アイコンフォント</li>
-      <li><strong>Google Favicon Service</strong>（www.google.com/s2/favicons）：ウェブサイトのFavicon取得（表示するサイトのドメインが送られます）</li>
     </ul>
 
     <h3>3-2. ライセンス管理（PRO版購入機能）</h3>
@@ -319,7 +319,7 @@
     ウェブサイト：<a href="https://www.liquid-block.com" target="_blank" rel="noopener">https://www.liquid-block.com</a></p>
 
     <div class="policy-footer">
-      <p>最終更新日：2026年9月28日</p>
+      <p>最終更新日：2026年10月21日</p>
       <p>© 2026 Liquid Block Inc. All rights reserved.</p>
     </div>
   </div>
