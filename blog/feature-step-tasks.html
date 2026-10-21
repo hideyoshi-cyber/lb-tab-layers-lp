@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】ステップタスク — 仕事を作業工程に分けて、終わりが見える形にする | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers の「ステップタスク」は、仕事を作業工程（ステップ）に分け、全部の工程が終わってはじめて1タスクと数える機能です。今日・今週の完了数、案件（グループ）へのひもづけ、Googleカレンダーへの追加まで、使い方を解説します。">
+  <meta name="keywords" content="タスク管理 工程,作業 分解 タスク,タスク 細分化,ブラウザ タスク管理,Chrome 拡張 タスク,仕事 手が止まる 進め方">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-step-tasks.html">
+  <meta property="og:title" content="【機能ガイド】ステップタスク — 仕事を作業工程に分ける"><meta property="og:description" content="全部の工程が終わってはじめて1つと数える。今日・今週の完了数が見えます。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-step-tasks.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-21T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="【機能ガイド】ステップタスク — 仕事を作業工程に分ける"><meta name="twitter:description" content="全部の工程が終わってはじめて1つと数える。今日・今週の完了数が見えます。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"ステップタスク","item":"https://tablayers.liquid-block.com/blog/feature-step-tasks.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"ステップタスク：仕事を作業工程に分けて、終わりが見える形にする","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-21","image":"https://tablayers.liquid-block.com/blog/hero-productivity-work.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-step-tasks.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"無料版でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"ステップタスクは PRO版の機能です。インストールから3か月のお試しの間は、使えます。期限が切れても、作ったデータは消えず、画面にロックの案内が出ます。"}},{"@type":"Question","name":"日付は必ず決める必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。日付は任意です。日付のないタスクは「日付なし・これから」に入ります。開始時間も任意です。"}},{"@type":"Question","name":"工程の数は変えられますか？","acceptedAnswer":{"@type":"Answer","text":"変えられます。作るときに「ステップの数」を決められ（初期は5）、作ったあとも、「ステップを追加」で増やせます。"}},{"@type":"Question","name":"Googleカレンダーへの追加に、ログインは必要ですか？","acceptedAnswer":{"@type":"Answer","text":"必要ありません。ボタンを押すと、予定の作成画面が開くだけです。押したときだけ、タスクの名前と工程の一覧が、カレンダーの画面に渡されます。当社のサーバーには送られません。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"ステップタスクで、仕事を作業工程に分けて進める","step":[{"@type":"HowToStep","position":1,"name":"「ステップ」を開く","text":"サイドパネルの切替バーで「ステップ」を押します。"},{"@type":"HowToStep","position":2,"name":"「作業工程から作る」を押す","text":"ひな形を選ぶか、自分で工程を書きます。"},{"@type":"HowToStep","position":3,"name":"ステップの数・目安の時間・やる日・案件を決める","text":"決めたら「作る」を押します。日付と案件は、付けなくても作れます。"},{"@type":"HowToStep","position":4,"name":"工程にチェックを付ける","text":"全部の工程にチェックが付くと、1タスクとして数えられます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>ステップタスク<br>仕事を作業工程に分けて進める</h1><p class="blog-meta"><time datetime="2026-10-21">2026.10.21</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-productivity-work.webp" alt="仕事を作業工程に分けて進めるイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html&amp;text=%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%82%BF%E3%82%B9%E3%82%AF%EF%BC%9A%E4%BB%95%E4%BA%8B%E3%82%92%E4%BD%9C%E6%A5%AD%E5%B7%A5%E7%A8%8B%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E3%80%81%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B%E5%BD%A2%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html&amp;title=%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%82%BF%E3%82%B9%E3%82%AF%EF%BC%9A%E4%BB%95%E4%BA%8B%E3%82%92%E4%BD%9C%E6%A5%AD%E5%B7%A5%E7%A8%8B%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E3%80%81%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B%E5%BD%A2%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-step-tasks.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-step-tasks.html" data-title="ステップタスク：仕事を作業工程に分けて、終わりが見える形にする" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>「ステップタスク」は、仕事を作業工程（ステップ）に分け、全部の工程にチェックが付いてはじめて「1タスク」と数える機能です。</strong>「提案資料をつくる」のような大きい仕事も、「目的を決める → 骨子 → 下書き → 見直す → 提出」のように分けると、次の1歩が見えます。今日・今週の完了数が出て、案件（グループ）にもつなげられます。PRO版の機能ですが、インストールから3か月のお試しの間は使えます。</p>
+    <div class="blog-callout blog-soon" style="border-left-color:#F59E0B;"><p>🕒 <strong>近日配信：</strong>v2.11.0 は現在、Chrome Web Store の審査中です。この記事で紹介している機能は、配信が始まると自動アップデートで使えるようになります（いまストアで配信中の版は v2.10.0 です）。</p></div>
+
+    <p>「提案資料をつくる」。この一行のままでは、どこから手を付ければいいのか分からず、手が止まることがあります。<strong>仕事は、大きいままだと進みにくく、分けると進めやすい</strong>ものです。</p>
+    <p>LB TAB Layers の v2.11.0 で加わった「ステップタスク」は、仕事を作業工程（ステップ）に分けて進める機能です。この記事では、使い方をまとめます。</p>
+
+    <h2>1. 「全部の工程が終わってはじめて1つ」と数える</h2>
+    <p>ステップタスクの特徴は、数え方です。</p>
+    <ul>
+      <li>タスクは、複数の<strong>ステップ（作業工程）</strong>でできています</li>
+      <li><strong>すべてのステップにチェックが付いたときだけ</strong>、1タスクと数えます。途中の工程は数えません</li>
+    </ul>
+    <p>「半分やった」を数えないので、進み具合が正直に見えます。逆に、工程の1つひとつにチェックを付けられるので、「今どこまで進んだか」は、その場で分かります。</p>
+
+    <h2>2. 使い方</h2>
+    <ol>
+      <li><strong>「ステップ」を開く。</strong>サイドパネルの切替バーにある「ステップ」を押します。統合レイアウトでは、下のタブ（メモの隣）にも出ます</li>
+      <li><strong>「作業工程から作る」を押す。</strong>ひな形を選ぶと、ステップが並びます。ひな形を使わずに、自分で工程を書くこともできます</li>
+      <li><strong>数や日付を決める。</strong>「ステップの数」（初期は5）、「目安の時間（分）」（初期は120）、「やる日」、結びつける案件（グループ）を決めて、「作る」を押します</li>
+      <li><strong>工程にチェックを付けていく。</strong>全部の工程にチェックが付くと、タスクが完了します</li>
+    </ol>
+    <p>ステップの数や内容は、作ったあとでも自由に変えられます（「ステップを追加」で増やせます）。日付は、<strong>付けなくても</strong>作れます。日付のないタスクは、「日付なし・これから」に入ります。</p>
+
+    <h2>3. 今日・今週の完了数と、目標</h2>
+    <p>画面の上に、<strong>今日</strong>と<strong>今週（月曜〜日曜）</strong>の完了数が出ます。目標は、初期設定では次のとおりです。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>下のライン</th><th>上のライン</th></tr></thead><tbody>
+    <tr><td><strong>1日</strong></td><td>最低ライン 3</td><td>上出来 4</td></tr>
+    <tr><td><strong>1週間</strong></td><td>合格 15</td><td>満点 20</td></tr>
+    </tbody></table></div>
+    <p>目標の数は、「目標の設定」から、自分のペースに合わせて変えられます。完了すると、「最低ライン達成（3つ完了）。あと1つで上出来」のように、あといくつかが表示されます。</p>
+    <p>タスクは、「今日のステップタスク」「持ち越し」「日付なし・これから」「完了したタスク」に分かれて並びます。</p>
+
+    <h2>4. 案件（グループ）につなげる</h2>
+    <p>タスクは、<strong>案件（グループ）に結びつけられます</strong>。結びつけると、そのグループの見出しに、その案件のタスクの数が出ます。「A社のCMリニューアル」のグループを開くと、その案件で、あといくつの作業が残っているかが分かります。</p>
+    <p>案件ごとに、タブ（資料のページ）・メモ・作業工程を、同じグループにつなげて持てる、という使い方です。結びつけるかどうかは、タスクごとに選べます。</p>
+
+    <h2>5. Googleカレンダーに追加する</h2>
+    <p>日付を決めたタスクは、<strong>「Googleカレンダーに追加」</strong>のボタンで、予定にできます。</p>
+    <ul>
+      <li>ボタンを押すと、Googleカレンダーの<strong>予定の作成画面</strong>が開きます。タスクの名前と、工程の一覧が入った状態です</li>
+      <li>ログインや、Googleアカウントの権限の許可は、<strong>要りません</strong>。ふだん使っているブラウザで、画面が開くだけです</li>
+      <li>押したときだけ、タスクの名前と工程の一覧が、カレンダーの画面に渡されます。当社のサーバーには、送られません</li>
+    </ul>
+
+    <h2>6. データの扱い</h2>
+    <ul>
+      <li>ステップタスクは、お使いのブラウザの中（拡張の保存領域）にだけ保存されます</li>
+      <li>設定の「エクスポート」で、バックアップに含まれます</li>
+      <li>PRO版の期限が切れても、作ったデータは<strong>消えません</strong>。画面には、ロックの案内が出ます</li>
+    </ul>
+
+    <h2>7. メモとの違い</h2>
+    <p>メモは、自由に書いて残すもの。ステップタスクは、<strong>終わりが決まっている作業</strong>を進めるものです。「あとで読み返したい」ことはメモに、「終わらせたい作業」はステップタスクに、と使い分けると、頭の中が整理できます（<a href="feature-notes.html">メモの機能ガイド</a>）。</p>
+
+    <h2>まとめ</h2>
+    <ul>
+      <li>仕事を作業工程に分け、<strong>全部の工程が終わってはじめて1つ</strong>と数える</li>
+      <li>今日・今週の完了数と、目標（初期は1日3〜4・週15〜20）が見える。目標は変えられる</li>
+      <li>日付は任意。案件（グループ）につなげると、グループの見出しにタスク数が出る</li>
+      <li>「Googleカレンダーに追加」は、ログイン不要で、予定の作成画面を開くだけ</li>
+      <li>データはブラウザの中だけ。PRO版の機能で、3か月のお試しの間は使える</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 無料版でも使えますか？</h3>
+    <p>ステップタスクは PRO版の機能です。インストールから3か月のお試しの間は、使えます。期限が切れても、作ったデータは消えず、画面にロックの案内が出ます。</p>
+
+    <h3>Q. 日付は必ず決める必要がありますか？</h3>
+    <p>いいえ。日付は任意です。日付のないタスクは「日付なし・これから」に入ります。開始時間も任意です。</p>
+
+    <h3>Q. 工程の数は変えられますか？</h3>
+    <p>変えられます。作るときに「ステップの数」を決められ（初期は5）、作ったあとも、「ステップを追加」で増やせます。</p>
+
+    <h3>Q. Googleカレンダーへの追加に、ログインは必要ですか？</h3>
+    <p>必要ありません。ボタンを押すと、予定の作成画面が開くだけです。押したときだけ、タスクの名前と工程の一覧が、カレンダーの画面に渡されます。当社のサーバーには送られません。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html&amp;text=%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%82%BF%E3%82%B9%E3%82%AF%EF%BC%9A%E4%BB%95%E4%BA%8B%E3%82%92%E4%BD%9C%E6%A5%AD%E5%B7%A5%E7%A8%8B%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E3%80%81%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B%E5%BD%A2%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-step-tasks.html&amp;title=%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%82%BF%E3%82%B9%E3%82%AF%EF%BC%9A%E4%BB%95%E4%BA%8B%E3%82%92%E4%BD%9C%E6%A5%AD%E5%B7%A5%E7%A8%8B%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E3%80%81%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B%E5%BD%A2%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-step-tasks.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-step-tasks.html" data-title="ステップタスク：仕事を作業工程に分けて、終わりが見える形にする" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>大きい仕事を、終わりが見える形に。</h3><p>作業工程に分けて、今日・今週の完了数を見る。アカウント登録なし · データはブラウザの中 · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=feature-step-tasks" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-notes.html">【機能ガイド】メモ <span>→</span></a><a href="feature-groups-subgroups.html">【機能ガイド】グループとサブグループ <span>→</span></a><a href="ai-chat-answer-notes.html">AIチャットの回答を、元のチャットのページとひもづけてメモに残す方法 <span>→</span></a><a href="feature-ungrouped-tabs.html">【機能ガイド】単独タブ <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
