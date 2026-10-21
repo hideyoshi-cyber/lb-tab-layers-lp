@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会議の前の5分で整える — 資料のタブ・議題・録音をそろえるチェックリスト | LB TAB Layers Blog</title>
+  <meta name="description" content="会議の開始前5分でやることを、資料のタブ・議題・前回の宿題・録音の4つに分けたチェックリストにしました。道具なしでも使える手順と、LB TAB Layers・LB AI Prompt side bar・議事メモレックで手間を減らす方法を紹介します。">
+  <meta name="keywords" content="会議 準備 チェックリスト,会議前 準備,会議 資料 タブ,アジェンダ 作り方,会議 録音 準備,Web会議 準備">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html">
+  <meta property="og:title" content="会議の前の5分で、資料・議題・録音をそろえる"><meta property="og:description" content="開始前の5分でやることをチェックリストに。資料のタブ、議題の3行、前回の宿題、録音の同意までをそろえます。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-22T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="会議の前の5分で、資料・議題・録音をそろえる"><meta name="twitter:description" content="開始前の5分でやることをチェックリストに。資料のタブ、議題の3行、前回の宿題、録音の同意までをそろえます。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"会議の前の5分で整える","item":"https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"会議の前の5分で整える：資料のタブ・議題・録音をそろえる","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-22","image":"https://tablayers.liquid-block.com/blog/hero-productivity-work.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"会議の準備は、何分前から始めればよいですか？","acceptedAnswer":{"@type":"Answer","text":"5分あれば足ります。資料のタブを開く（1分）、議題を3行にする（2分）、前回の宿題を見る（1分）、録音の同意と準備（1分）の順です。資料を会議ごとにまとめて保存しておくと、最初の1分がほぼ要らなくなります。"}},{"@type":"Question","name":"議題は、どのくらいの長さで書けばよいですか？","acceptedAnswer":{"@type":"Answer","text":"目的・決めること・時間割の3行が目安です。決めることは多くて3つにします。決めることが書けない会議は、チャットでの共有で済む場合もあります。"}},{"@type":"Question","name":"会議の録音には、参加者の同意が必要ですか？","acceptedAnswer":{"@type":"Answer","text":"始める前に、目的を伝えて同意を取るのが安全です。社外の人がいる会議や人事の話をする会議では、録音しない判断もあります。考え方は議事メモレックのブログの「会議の録音に相手の同意は必要か」にまとめられています。"}},{"@type":"Question","name":"LB TAB Layers で ▶ を押したら、開いている会議のタブがもう1枚開きますか？","acceptedAnswer":{"@type":"Answer","text":"開きません。▶ は、まだ開いていないページだけを開きます。会議のURLだけ先に開いていても、足りない資料だけが開きます。"}},{"@type":"Question","name":"3つの道具は連携していますか？","acceptedAnswer":{"@type":"Answer","text":"連携の機能はありません。議事録の文章をAIに渡すときも、資料のリンクを共有するときも、コピーして貼り付けます。そのぶん、それぞれの道具だけでも使えます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"会議の前の5分で、資料・議題・録音をそろえる","step":[{"@type":"HowToStep","position":1,"name":"資料のタブを開く","text":"会議のURL・議題・前回の議事録・共有する資料を、会議ごとのグループから ▶ でまとめて開きます。"},{"@type":"HowToStep","position":2,"name":"議題を3行にする","text":"目的・決めること・時間割の3行に縮めます。"},{"@type":"HowToStep","position":3,"name":"前回の宿題を見る","text":"前回の議事録の「だれが・何を・いつまでに」を確かめ、終わっていなければ議題の最初に足します。"},{"@type":"HowToStep","position":4,"name":"録音の同意と準備","text":"参加者に録音の目的を伝えて同意を取り、マイクの位置と通知を確かめます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">仕事術</span><h1>会議の前の5分で、<br>資料・議題・録音をそろえる</h1><p class="blog-meta"><time datetime="2026-10-22">2026.10.22</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-productivity-work.webp" alt="会議の前に、資料のタブと議題と録音の準備をそろえるイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html&amp;text=%E4%BC%9A%E8%AD%B0%E3%81%AE%E5%89%8D%E3%81%AE5%E5%88%86%E3%81%A7%E6%95%B4%E3%81%88%E3%82%8B%EF%BC%9A%E8%B3%87%E6%96%99%E3%81%AE%E3%82%BF%E3%83%96%E3%83%BB%E8%AD%B0%E9%A1%8C%E3%83%BB%E9%8C%B2%E9%9F%B3%E3%82%92%E3%81%9D%E3%82%8D%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html&amp;title=%E4%BC%9A%E8%AD%B0%E3%81%AE%E5%89%8D%E3%81%AE5%E5%88%86%E3%81%A7%E6%95%B4%E3%81%88%E3%82%8B%EF%BC%9A%E8%B3%87%E6%96%99%E3%81%AE%E3%82%BF%E3%83%96%E3%83%BB%E8%AD%B0%E9%A1%8C%E3%83%BB%E9%8C%B2%E9%9F%B3%E3%82%92%E3%81%9D%E3%82%8D%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html" data-title="会議の前の5分で整える：資料のタブ・議題・録音をそろえる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>会議の前の5分は、「資料のタブを開く」「議題を3行にする」「前回の宿題を見る」「録音の同意と準備」の4つに使います。</strong>資料は会議ごとにまとめて保存しておけば1回で開けます。議題は「目的・決めること・時間割」の3行にします。録音するときは、始める前に参加者の同意を取ります。</p>
+
+    <p>会議が始まってから資料のリンクを探す。議題があいまいなまま話が広がる。終わってから「録音しておけばよかった」と気づく。どれも、よくあることです。</p>
+    <p>多くは、<strong>開始前の5分</strong>で防げます。この記事では、5分でやることをチェックリストにしました。道具がなくても使える手順を先に書き、そのあとで手間を減らす道具を紹介します。</p>
+
+    <h2>5分のチェックリスト</h2>
+    <p>やることは4つです。時間は目安なので、慣れたら順番を入れ替えてもかまいません。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>いつ</th><th>やること</th><th>確かめること</th></tr></thead><tbody>
+    <tr><td><strong>5分前</strong></td><td>資料のタブをそろえる</td><td>会議のURL・議題・前回の議事録・共有する資料が開いているか</td></tr>
+    <tr><td><strong>4分前</strong></td><td>議題を3行にする</td><td>目的・決めること・時間割が書けるか</td></tr>
+    <tr><td><strong>2分前</strong></td><td>前回の宿題を見る</td><td>だれが・何を・いつまでに、が終わっているか</td></tr>
+    <tr><td><strong>1分前</strong></td><td>録音の同意と準備</td><td>同意の取り方を決めたか。マイクの位置と通知は大丈夫か</td></tr>
+    </tbody></table></div>
+
+    <h2>1. 資料のタブをそろえる（1分）</h2>
+    <p>会議の直前に資料を探すと、メール・チャット・共有フォルダを行ったり来たりします。そこで、<strong>会議ごとに資料の置き場所を1つ決めておきます。</strong></p>
+    <p>入れておくものは、だいたい次の4つです。</p>
+    <ul>
+      <li>会議のURL（Zoom・Google Meet・Teams など）</li>
+      <li>議題を書いたドキュメント</li>
+      <li>前回の議事録</li>
+      <li>画面で共有する資料（スライド・表・Webページ）</li>
+    </ul>
+    <p>LB TAB Layers なら、会議ごとに「グループ」を作って、この4つを保存しておきます。会議の前に Alt+T（Macは Option+T）でサイドパネルを開き、グループの <strong>▶</strong> を押すと、まとめて開きます。<strong>すでに開いているページは、二重に開きません。</strong>グループの「説明（任意）」に会議の目的を1行書いておくと、開いたときに目に入ります。</p>
+    <p>定例会議なら、このグループは毎回そのまま使えます。作り方のくわしい手順は「<a href="web-meeting-tabs.html">Web会議の直前にもたつかない — 会議と資料のタブをワンクリックで揃える方法</a>」にまとめています。</p>
+
+    <h2>2. 議題を3行にする（2分）</h2>
+    <p>議題が長い文章だと、会議の途中で「今、何の話だっけ」となります。開始前に、次の3行に縮めておきます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>行</th><th>書くこと</th><th>例</th></tr></thead><tbody>
+    <tr><td><strong>目的</strong></td><td>この会議が終わったとき、何がそろっていればよいか</td><td>新しい問い合わせフォームの公開日を決める</td></tr>
+    <tr><td><strong>決めること</strong></td><td>その場で決めたいことを、多くて3つ</td><td>公開日・テストの担当・告知の方法</td></tr>
+    <tr><td><strong>時間割</strong></td><td>話題ごとの時間</td><td>報告10分・検討15分・まとめ5分</td></tr>
+    </tbody></table></div>
+    <p>「決めること」が書けないときは、会議にしなくてよい話かもしれません。チャットでの共有で済むなら、そのほうが早く終わります。</p>
+    <p>議題のたたき台は、AIに作らせることもできます。<a href="https://aipromptbar.liquid-block.com/" target="_blank" rel="noopener">LB AI Prompt side bar</a> は、AIへの指示（コマンド）をサイドパネルで選んで、空欄と選択肢を埋め、⚡ で ChatGPT・Claude・Gemini などの入力欄に入れる Chrome 拡張です。会議まわりでは、次のコマンドが使えます。</p>
+    <ul>
+      <li><strong>【マネージャー】定例会議のアジェンダ</strong>：会議の目的や時間から、進め方つきの議題を作ります（有料プラン。14日間の無料お試しで使えます）。</li>
+      <li><strong>【議事録】決定事項＆ToDo抽出</strong>：前回の議事録から、決まったことと宿題を表にします（無料版の「おすすめ」で使えます）。</li>
+    </ul>
+    <p>AI Prompt side bar で書いた内容は、弊社のサーバーには送られません。ただし、⚡ で入れた内容は、送り先のAIのサービスに渡ります。社外秘や個人の名前を含む議事録は、会社のルールで使ってよいとされているAIにだけ入れてください。</p>
+
+    <h2>3. 前回の宿題を見る（1分）</h2>
+    <p>前回の議事録の「だれが・何を・いつまでに」を、開始前に見ておきます。終わっていない宿題があれば、議題の最初に「前回の宿題の確認（3分）」を足します。これだけで、同じ話をくり返すことが減ります。</p>
+    <p>宿題が議事録の中に埋もれていて見つけにくいなら、議事録の書き方を見直す合図です。決まったことと宿題を分けて書く理由は、議事メモレックのブログの「<a href="https://gijimemorec.liquid-block.com/blog/gijiroku-kettei-action" target="_blank" rel="noopener">決定事項とアクションアイテムの違い</a>」がわかりやすいです。</p>
+
+    <h2>4. 録音の同意と準備（1分）</h2>
+    <p>録音は、始める前に<strong>参加者の同意</strong>を取ります。たとえば、次のように言います。</p>
+    <div class="blog-callout"><p>「議事録を作るために、この会議を録音してもよいでしょうか。録音は議事録づくりにだけ使います。」</p></div>
+    <p>社外の人がいる会議や、人事の話をする会議では、録音しないほうがよい場面もあります。法律の考え方と、ビジネス上の判断の分け方は「<a href="https://gijimemorec.liquid-block.com/blog/kaigi-rokuon-doui" target="_blank" rel="noopener">会議の録音に相手の同意は必要か</a>」がくわしいです。</p>
+    <p>準備のチェックは2つです。</p>
+    <ul>
+      <li><strong>マイクの位置</strong>：話す人に近い場所へ。パソコンのキーボードの音を拾いにくい位置にします。</li>
+      <li><strong>通知を切る</strong>：スマホやパソコンの通知音が録音に入らないようにします。</li>
+    </ul>
+    <p>録音から議事録を作るなら、<a href="https://gijimemorec.liquid-block.com/" target="_blank" rel="noopener">議事メモレック</a>が使えます。会議を録音（または録音ファイルをアップロード）すると、AIが文字起こし・要約・やることリスト・話者分離までを作ります。登録は不要で、月額の料金もありません。1回180円（税込）からで、5分までの録音は無料です。音声は、お支払いの前に削除されます。</p>
+
+    <h2>会議が終わったら（1分）</h2>
+    <p>終わったあとの1分も決めておくと、次の会議の5分が楽になります。</p>
+    <ol>
+      <li>資料のタブは、グループの <strong>■</strong> でまとめて閉じます。閉じても保存は残るので、次回も ▶ で開けます。</li>
+      <li>議事録ができたら、そのページを会議のグループに保存します。次の会議の「前回の議事録」になります。</li>
+      <li>宿題は、議事録からだれが・何を・いつまでに、の表にして共有します。</li>
+    </ol>
+    <div class="blog-callout"><p>💡 <strong>サイドパネルを2つ使うとき。</strong>Chrome のサイドパネルは、1つのウィンドウで一度に1つの拡張機能の画面しか出せません。LB TAB Layers（Alt+T）と LB AI Prompt side bar（Alt+A）はショートカットがぶつからないので、切り替えて使えます。両方を同時に見たいときは、AI Prompt side bar の ⧉（別のウィンドウで開く）を押して、外に出しておきます。なお、3つの道具の間でデータは受け渡されません。コピーして次の道具に渡すのは、人の手です。</p></div>
+
+    <h2>まとめ：5分は「探さない」ために使う</h2>
+    <p>会議の前の5分でやることは、どれも「あとで探さない」ための準備です。資料は1か所に、議題は3行に、宿題は表に、録音は同意を取ってから。まずは次の定例会議で、チェックリストを1回試してみてください。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 会議の準備は、何分前から始めればよいですか？</h3>
+    <p>5分あれば足ります。資料のタブを開く（1分）、議題を3行にする（2分）、前回の宿題を見る（1分）、録音の同意と準備（1分）の順です。資料を会議ごとにまとめて保存しておくと、最初の1分がほぼ要らなくなります。</p>
+
+    <h3>Q. 議題は、どのくらいの長さで書けばよいですか？</h3>
+    <p>目的・決めること・時間割の3行が目安です。決めることは多くて3つにします。決めることが書けない会議は、チャットでの共有で済む場合もあります。</p>
+
+    <h3>Q. 会議の録音には、参加者の同意が必要ですか？</h3>
+    <p>始める前に、目的を伝えて同意を取るのが安全です。社外の人がいる会議や人事の話をする会議では、録音しない判断もあります。考え方は議事メモレックのブログの「会議の録音に相手の同意は必要か」にまとめられています。</p>
+
+    <h3>Q. LB TAB Layers で ▶ を押したら、開いている会議のタブがもう1枚開きますか？</h3>
+    <p>開きません。▶ は、まだ開いていないページだけを開きます。会議のURLだけ先に開いていても、足りない資料だけが開きます。</p>
+
+    <h3>Q. 3つの道具は連携していますか？</h3>
+    <p>連携の機能はありません。議事録の文章をAIに渡すときも、資料のリンクを共有するときも、コピーして貼り付けます。そのぶん、それぞれの道具だけでも使えます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html&amp;text=%E4%BC%9A%E8%AD%B0%E3%81%AE%E5%89%8D%E3%81%AE5%E5%88%86%E3%81%A7%E6%95%B4%E3%81%88%E3%82%8B%EF%BC%9A%E8%B3%87%E6%96%99%E3%81%AE%E3%82%BF%E3%83%96%E3%83%BB%E8%AD%B0%E9%A1%8C%E3%83%BB%E9%8C%B2%E9%9F%B3%E3%82%92%E3%81%9D%E3%82%8D%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmeeting-prep-5-minutes.html&amp;title=%E4%BC%9A%E8%AD%B0%E3%81%AE%E5%89%8D%E3%81%AE5%E5%88%86%E3%81%A7%E6%95%B4%E3%81%88%E3%82%8B%EF%BC%9A%E8%B3%87%E6%96%99%E3%81%AE%E3%82%BF%E3%83%96%E3%83%BB%E8%AD%B0%E9%A1%8C%E3%83%BB%E9%8C%B2%E9%9F%B3%E3%82%92%E3%81%9D%E3%82%8D%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/meeting-prep-5-minutes.html" data-title="会議の前の5分で整える：資料のタブ・議題・録音をそろえる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>会議の資料は、▶ ひとつで。</h3><p>会議ごとのグループを作って ▶ を押すだけ。開いているページは二重に開きません。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=meeting-prep-5-minutes" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="web-meeting-tabs.html">Web会議の直前にもたつかない — 会議と資料のタブをワンクリックで揃える方法 <span>→</span></a><a href="one-click-open-tab-set.html">毎朝使うタブを1クリックでまとめて開く方法 <span>→</span></a><a href="bulk-close-bulk-open.html">タブを一括で消して、ブックマークを一括で開く <span>→</span></a><a href="feature-notes.html">【機能ガイド】メモ機能 — 保存したタブに「なぜ残したか」を書いておく <span>→</span></a><a href="chrome-side-panel-guide.html">Chrome サイドパネル活用ガイド <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">サイドパネルを使用する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
