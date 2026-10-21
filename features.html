@@ -115,14 +115,17 @@
           </div>
           <h2>絶対に消えない安心感<br>ブックマーク双方向自動同期</h2>
           <p>
-            他のタブ管理ツールと異なり、TAB Layersで保存したグループやタブは**すべてブラウザ純正の「ブックマーク」と自動同期**されます。<br>
+            他のタブ管理ツールと異なり、TAB Layersで保存したグループやタブは<strong>すべてブラウザ純正の「ブックマーク」と自動同期</strong>されます。<br>
             そのため、万が一この拡張機能を削除してしまったり、ブラウザが突然クラッシュしたり、PCが強制再起動したとしても、データが失われることは絶対にありません。
           </p>
           <ul class="detail-list">
             <li><i class="ti ti-circle-check"></i> 拡張機能を削除してもブックマークにそのまま残る</li>
             <li><i class="ti ti-circle-check"></i> 双方向同期：ブックマーク側を編集してもTAB Layersへ自動反映</li>
-            <li><i class="ti ti-circle-check"></i> サーバーを介さないためプライバシーも万全</li>
+            <li><i class="ti ti-circle-check"></i> データは当社のサーバーを介さず、ブラウザの中に保存されます</li>
           </ul>
+          <p style="font-size:0.85rem; opacity:0.8; margin-top:14px;">
+            ※ 拡張を削除しても残るのは、保存したタブ（リンク）とグループ（フォルダ）です。メモ・ステップタスク・設定は拡張の中に保存されます。設定の「エクスポート」で、いつでもバックアップできます。
+          </p>
         </div>
         <div class="detail-visual">
           <img src="tab-persistence-one.jpg" alt="ブックマーク同期のイメージ" style="max-width:440px;">
@@ -362,6 +365,9 @@
               <li><i class="ti ti-circle-check"></i> 小さい画面では、コンパクト表示（設定の「表示の密度」で、自動・標準・コンパクトから選べます）</li>
             </ul>
           </div>
+          <div class="detail-visual">
+            <img src="features-layout.png" alt="画面レイアウトの切り替え（統合表示）のイメージ" style="max-width:340px;" loading="lazy">
+          </div>
         </div>
       </div>
     </div>
@@ -371,7 +377,7 @@
   <section style="padding:100px 0; border-top:1px solid var(--border);">
     <div class="container">
       <div class="detail-grid">
-        <div class="detail-section" id="notes">
+        <div class="detail-section reverse" id="notes">
           <div class="detail-info">
             <div class="detail-icon-box">
               <i class="ti ti-notes"></i>
@@ -386,6 +392,9 @@
               <li><i class="ti ti-circle-check"></i> ページ上の文字を選んで右クリック →「選んだ文字をメモに追加」。そのページにひもづいたメモに足されます</li>
               <li><i class="ti ti-circle-check"></i> メモの検索と、設定の「エクスポート」でのバックアップ（メモも含まれます）</li>
             </ul>
+          </div>
+          <div class="detail-visual">
+            <img src="features-notes.png" alt="ページにひもづけたメモとチェックリストのイメージ" style="max-width:340px;" loading="lazy">
           </div>
         </div>
       </div>
@@ -412,6 +421,9 @@
               <li><i class="ti ti-circle-check"></i> 「Googleカレンダーに追加」：予定の作成画面を開くだけ。ログインや許可は要りません</li>
             </ul>
           </div>
+          <div class="detail-visual">
+            <img src="features-step-tasks.png" alt="ステップタスクの画面（今日・今週の完了数と作業工程）のイメージ" style="max-width:340px;" loading="lazy">
+          </div>
         </div>
       </div>
     </div>
@@ -421,7 +433,7 @@
   <section style="padding:100px 0; border-top:1px solid var(--border);">
     <div class="container">
       <div class="detail-grid">
-        <div class="detail-section" id="folder-view">
+        <div class="detail-section reverse" id="folder-view">
           <div class="detail-info">
             <div class="detail-icon-box">
               <i class="ti ti-folders"></i>
@@ -436,6 +448,9 @@
               <li><i class="ti ti-circle-check"></i> ドラッグで、タブをフォルダへ、フォルダをフォルダへ。ブックマークのフォルダにも反映されます</li>
               <li><i class="ti ti-circle-check"></i> ホイールクリックで、タブは裏で開き、フォルダは中のタブを全部開きます。全部開いているときは、逆に全部閉じます（保存したタブは残ります）</li>
             </ul>
+          </div>
+          <div class="detail-visual">
+            <img src="features-folder-view.png" alt="フォルダ表示（サムネイルで並ぶフォルダとパンくず）のイメージ" style="max-width:340px;" loading="lazy">
           </div>
         </div>
       </div>
@@ -461,6 +476,9 @@
               <li><i class="ti ti-circle-check"></i> 同じURLがほかのグループにもあるときは、確認が出ます</li>
               <li><i class="ti ti-circle-check"></i> サムネイル表示に切り替えられます。サムネイルは、設定でオンにしたときだけ撮り、メール・銀行・ログインなどは撮りません。画像は端末内にだけ保存されます</li>
             </ul>
+          </div>
+          <div class="detail-visual">
+            <img src="features-tabs-view.png" alt="「タブ」表示でタブを選んでグループへ入れるイメージ" style="max-width:340px;" loading="lazy">
           </div>
         </div>
       </div>
@@ -583,8 +601,28 @@
             </tr>
             <tr>
               <td>★ランク＆タグ</td>
-              <td><span class="t-no">✗</span></td>
-              <td class="highlight-col"><span class="t-yes">✓</span> (重要度★5段階＋自由タグ)</td>
+              <td>10個まで</td>
+              <td class="highlight-col"><strong>無制限</strong> (重要度★5段階＋自由タグ)</td>
+            </tr>
+            <tr>
+              <td>メモ・チェックリスト（ページにひもづけ）</td>
+              <td><span class="t-yes">✓</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>画面レイアウトの切り替え</td>
+              <td><span class="t-yes">✓</span></td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>フォルダ表示 <small>(v2.11.0・近日配信)</small></td>
+              <td><span class="t-yes">✓</span> (グループ数・階層は上限あり)</td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>ステップタスク（作業工程・ひな形34種） <small>(v2.11.0・近日配信)</small></td>
+              <td>お試し期間中のみ</td>
+              <td class="highlight-col"><span class="t-yes">✓</span></td>
             </tr>
             <tr class="price-row">
               <td>料金</td>
