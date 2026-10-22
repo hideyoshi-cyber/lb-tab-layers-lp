@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Check Chrome Memory Usage Per Tab (and What to Do About It) | LB TAB Layers Blog</title>
+  <meta name="description" content="See how much memory each Chrome tab uses with Task Manager (Shift+Esc), read the numbers correctly, and free memory without losing the tabs you need.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/chrome-memory-saving.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html">
+  <meta property="og:title" content="How to check Chrome memory usage per tab"><meta property="og:description" content="Use Chrome’s Task Manager to see which tabs use the most memory, read the numbers correctly, and free memory safely."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-10-23T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="How to check Chrome memory usage per tab"><meta name="twitter:description" content="Use Chrome’s Task Manager to see which tabs use the most memory, read the numbers correctly, and free memory safely."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Memory usage per tab","item":"https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"How to check how much memory each Chrome tab uses — Task Manager, hover cards, Memory Saver, and what to do next","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-23","image":"https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I see how much memory each tab uses in Chrome?","acceptedAnswer":{"@type":"Answer","text":"Open Chrome’s Task Manager with Shift+Esc on Windows (on Mac: ⋮ menu → More tools → Task manager) and sort by the Memory footprint column."}},{"@type":"Question","name":"Why does one Task Manager row list several tabs?","acceptedAnswer":{"@type":"Answer","text":"Chrome sometimes runs tabs from the same site in one shared process. The memory shown is for all of those tabs together."}},{"@type":"Question","name":"Is it safe to click End process?","acceptedAnswer":{"@type":"Answer","text":"It is safe for Chrome, but the page stops immediately and anything you typed and didn’t save is lost. The tab reloads when you click it. Closing the tab is usually simpler."}},{"@type":"Question","name":"Does Memory Saver fix high memory use?","acceptedAnswer":{"@type":"Answer","text":"It frees memory from tabs you haven’t used for a while, which helps a lot. But the tabs stay in your tab bar. Saving tabs to groups and closing them frees memory and clears the tab bar."}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Check Chrome memory usage per tab","step":[{"@type":"HowToStep","position":1,"name":"Open Task Manager","text":"Press Shift+Esc on Windows, or open the ⋮ menu → More tools → Task manager on Mac."},{"@type":"HowToStep","position":2,"name":"Sort by memory","text":"Click the Memory footprint column header so the heaviest tabs and extensions are at the top."},{"@type":"HowToStep","position":3,"name":"Free memory","text":"Close tabs you don’t need, turn off unused extensions, and save tabs you will need later to a group before closing them."}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">v2.8.71</a><a href="./">Blog</a><a href="../../blog/chrome-memory-saving.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>How to check Chrome memory usage per tab (and what to do about it)</h1><p class="blog-meta"><time datetime="2026-10-23">Oct 23, 2026</time> · Liquid Block Inc. · 6 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-memory-speedup.webp" alt="Checking memory used by browser tabs" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-memory-usage-tabs.html&amp;text=How%20to%20check%20how%20much%20memory%20each%20Chrome%20tab%20uses%20%E2%80%94%20Task%20Manager%2C%20hover%20cards%2C%20Memory%20Saver%2C%20and%20what%20to%20do%20next" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-memory-usage-tabs.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-memory-usage-tabs.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">Open Chrome’s own <strong>Task Manager</strong> with <strong>Shift+Esc</strong> on Windows (on Mac: ⋮ menu → More tools → Task manager) and click the <strong>Memory footprint</strong> column to sort tabs by memory. The heaviest tabs rise to the top. Close or end the ones you don’t need — and save the ones you will need later before you close them.</p>
+
+    <h2>Step 1: Open Chrome’s Task Manager</h2>
+    <ul>
+      <li><strong>Windows and Linux:</strong> press <strong>Shift+Esc</strong> while a Chrome window is in front.</li>
+      <li><strong>Mac:</strong> open the ⋮ menu → <strong>More tools</strong> → <strong>Task manager</strong>. You can also find it in the <strong>Window</strong> menu in the menu bar.</li>
+    </ul>
+    <p>This is Chrome’s own task manager, not the one in Windows or macOS. The system tools only show a long list of “Google Chrome” or “Google Chrome Helper” processes with no names. Chrome’s version tells you which tab or extension each one belongs to.</p>
+
+    <h2>Step 2: Sort by memory</h2>
+    <p>Click the <strong>Memory footprint</strong> column header. Click again to switch between highest-first and lowest-first. Right-click any column header to add or remove columns, such as CPU or Network.</p>
+
+    <h2>Step 3: Read the list correctly</h2>
+    <table>
+      <thead><tr><th>Row starts with</th><th>What it is</th></tr></thead>
+      <tbody>
+        <tr><td>Tab:</td><td>A web page you have open</td></tr>
+        <tr><td>Extension:</td><td>An installed extension running in the background</td></tr>
+        <tr><td>Subframe:</td><td>Content from another site embedded in a page, such as an ad or a video player</td></tr>
+        <tr><td>Browser</td><td>Chrome itself — tabs bar, menus, settings</td></tr>
+        <tr><td>GPU Process</td><td>Drawing the screen; grows with video and graphics</td></tr>
+        <tr><td>Utility: / Service worker:</td><td>Background helpers for network, audio, and sites</td></tr>
+      </tbody>
+    </table>
+    <p>Three things often confuse people:</p>
+    <ul>
+      <li><strong>Several tabs can share one process.</strong> Tabs from the same site are sometimes grouped together, so the memory shown belongs to all of them at once.</li>
+      <li><strong>The numbers move.</strong> A page keeps using more memory the longer it stays open, especially web apps with live feeds, chats or dashboards. Check again after a few minutes.</li>
+      <li><strong>Big is not always bad.</strong> A simple article may use tens of megabytes, while a web app — mail, documents, design tools, video — can use hundreds. What matters is whether you still need it.</li>
+    </ul>
+
+    <h2>Step 4: Free memory from the heavy ones</h2>
+    <p>Select a row and click <strong>End process</strong> to stop it at once. For a tab, the page shows an error and reloads when you click it; anything you typed and didn’t save is lost. Usually it is simpler to close the tab itself.</p>
+    <p>If an <strong>extension</strong> is near the top and you rarely use it, turn it off in <code>chrome://extensions</code>.</p>
+
+    <h2>Other ways to see memory per tab</h2>
+    <h3>Tab hover cards</h3>
+    <p>In recent versions of Chrome, hovering over a tab can show its memory usage in the small card that pops up. If you don’t see it, look in Chrome’s settings for the tab hover card options — the switch has moved between versions.</p>
+
+    <h3>chrome://discards</h3>
+    <p>Type <code>chrome://discards</code> in the address bar for a technical table of every tab, whether Chrome has put it to sleep, and how likely it is to be discarded next. It is a page meant for developers, but it is safe to look at.</p>
+
+    <h2>How much memory is too much?</h2>
+    <p>The numbers in Chrome’s Task Manager only matter compared with how much memory your computer has and what else is running. To see the whole picture:</p>
+    <ul>
+      <li><strong>Windows:</strong> open the Windows Task Manager (Ctrl+Shift+Esc), go to the <strong>Performance</strong> tab and look at <strong>Memory</strong>. If it stays near full while you work, things will feel slow.</li>
+      <li><strong>Mac:</strong> open <strong>Activity Monitor</strong>, choose the <strong>Memory</strong> tab and look at the <strong>Memory Pressure</strong> graph at the bottom. Green is fine; yellow or red means the Mac is short of memory.</li>
+    </ul>
+    <p>If overall memory is fine, a few heavy tabs are not a problem — leave them. If it is often full, Chrome is usually the easiest place to win memory back, because tabs are easy to close and reopen.</p>
+
+    <h2>Let Chrome free memory for you: Memory Saver</h2>
+    <p>Go to <strong>Settings → Performance</strong> and turn on <strong>Memory Saver</strong>. Chrome then frees memory from tabs you haven’t used for a while. The tab stays in your tab bar and reloads when you click it. Recent versions let you choose how quickly this happens, and you can list sites that should always stay active — useful for a music player or a page you are filling in.</p>
+    <p>Memory Saver helps the computer, but not you: the tabs are still in your tab bar, still competing for your attention. A hundred sleeping tabs are still a hundred tabs to look through.</p>
+
+    <h2>The lasting fix: fewer open tabs, nothing lost</h2>
+    <p>Look at your Task Manager list again and ask, for each heavy tab: am I using this right now? Usually the answer is “no, but I’ll need it later.” That is the tab to save and close.</p>
+    <p>LB TAB Layers is built for exactly that. It sits in Chrome’s side panel (<strong>Alt+T</strong>, or Option+T on Mac), and every group you make is saved as a Chrome bookmark folder.</p>
+    <ul>
+      <li>Put the tabs for each project in a group — drag them in from <strong>Solo Tabs</strong>, or right-click and choose <strong>Save to Folder</strong>.</li>
+      <li>Press <strong>■</strong> on a group you aren’t using. Its tabs close and their memory is freed. They stay saved.</li>
+      <li>Press <strong>▶</strong> when you need the project again. All its tabs open at once.</li>
+    </ul>
+    <p>Unlike a sleeping tab, a closed tab uses no memory at all, and it is no longer in your tab bar. Unlike a plain close, it is still one click away.</p>
+    <table>
+      <thead><tr><th>Method</th><th>Memory</th><th>Tab bar</th><th>Can you get it back?</th></tr></thead>
+      <tbody>
+        <tr><td>End process</td><td>Freed</td><td>Tab stays, shows an error</td><td>Reload</td></tr>
+        <tr><td>Memory Saver</td><td>Mostly freed</td><td>Tab stays</td><td>Click it</td></tr>
+        <tr><td>Close the tab</td><td>Freed</td><td>Gone</td><td>Only from history</td></tr>
+        <tr><td>■ on an LB TAB Layers group</td><td>Freed</td><td>Gone</td><td>▶ on the group, any time</td></tr>
+      </tbody>
+    </table>
+    <p>For a broader checklist, see <a href="too-many-tabs-open-chrome.html">too many tabs open in Chrome?</a>, and for the daily routine, <a href="close-all-tabs-chrome-shortcut.html">how to close all tabs in Chrome</a>.</p>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. How do I see how much memory each tab uses in Chrome?</h3>
+    <p>Open Chrome’s Task Manager with Shift+Esc on Windows (on Mac: ⋮ menu → More tools → Task manager) and sort by the Memory footprint column.</p>
+
+    <h3>Q. Why does one Task Manager row list several tabs?</h3>
+    <p>Chrome sometimes runs tabs from the same site in one shared process. The memory shown is for all of those tabs together.</p>
+
+    <h3>Q. Is it safe to click End process?</h3>
+    <p>It is safe for Chrome, but the page stops immediately and anything you typed and didn’t save is lost. The tab reloads when you click it. Closing the tab is usually simpler.</p>
+
+    <h3>Q. Does Memory Saver fix high memory use?</h3>
+    <p>It frees memory from tabs you haven’t used for a while, which helps a lot. But the tabs stay in your tab bar. Saving tabs to groups and closing them frees memory and clears the tab bar.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-memory-usage-tabs.html&amp;text=How%20to%20check%20how%20much%20memory%20each%20Chrome%20tab%20uses%20%E2%80%94%20Task%20Manager%2C%20hover%20cards%2C%20Memory%20Saver%2C%20and%20what%20to%20do%20next" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-memory-usage-tabs.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-memory-usage-tabs.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/chrome-memory-usage-tabs.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Free the memory. Keep the tabs.</h3><p>Close a whole project with ■, bring it back with ▶. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog_en&amp;utm_campaign=chrome-memory-usage-tabs" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="too-many-tabs-open-chrome.html">Too many tabs open in Chrome? <span>→</span></a><a href="bulk-close-bulk-open.html">Close all at once, open all at once <span>→</span></a><a href="close-all-tabs-chrome-shortcut.html">Close all tabs in Chrome <span>→</span></a><a href="feature-groups-subgroups.html">Groups and subgroups <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】メモ＆チェックリストの使い方 — 8色・ピン留め・Markdownコピー | LB TAB Layers Blog</title>
+  <meta name="description" content="v2.9.0で加わったカード型のメモ＆チェックリストの使い方。Enterで項目を足す、完了を下にまとめる、8色とピン留めで分ける、Markdownコピーと.txt保存まで。保存先と注意点も説明します。">
+  <meta name="keywords" content="サイドパネル メモ,Chrome メモ 拡張機能,チェックリスト 拡張機能,カード型 メモ 拡張機能,Chrome ToDo チェックリスト,LB TAB Layers メモ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html">
+  <meta property="og:title" content="【機能ガイド】メモ＆チェックリスト — 8色・ピン留め・Markdownコピー"><meta property="og:description" content="サイドパネルでカード型のメモとチェックリスト。自動保存、8色、ピン留め、Markdownコピーの使い方と注意点。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-23T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="【機能ガイド】メモ＆チェックリスト — 8色・ピン留め・Markdownコピー"><meta name="twitter:description" content="サイドパネルでカード型のメモとチェックリスト。自動保存、8色、ピン留め、Markdownコピーの使い方と注意点。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"メモ＆チェックリスト","item":"https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】メモ＆チェックリストの使い方 — 8色・ピン留め・Markdownコピー","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-23","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"メモ＆チェックリストは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。無料版でも、メモの作成・チェックリスト・背景色・ピン留め・コピー・.txt 保存まで使えます。切替バーや統合レイアウトも無料です（下の欄の「本日の履歴」は PRO版とトライアル中の機能です）。"}},{"@type":"Question","name":"メモはほかのパソコンやスマートフォンと同期されますか？","acceptedAnswer":{"@type":"Answer","text":"同期されません。メモはこのパソコンの Chrome の中に保存されます。同じ Chrome で開いている別のウィンドウのサイドパネルや別窓には反映されます。ほかの端末で見たいときは、コピーしてメールやチャットに貼るか、.txt で保存してください。"}},{"@type":"Question","name":"拡張機能を削除するとメモはどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"メモも削除されます。グループに保存したタブは Chrome のブックマークとして残りますが、メモはブックマークとは別に保存されているためです。「エクスポート (JSON)」にもメモは含まれないので、残したいメモはコピーか .txt 保存で控えておいてください。"}},{"@type":"Question","name":"削除したメモを元に戻せますか？","acceptedAnswer":{"@type":"Answer","text":"戻せません。ゴミ箱や元に戻す機能はありません。削除の前に「メモ「タイトル」を削除しますか？」と確認が出ます。最後の1枚は、削除するとカードが残って中身が空になります。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"LB TAB Layers でチェックリストのメモを作る","step":[{"@type":"HowToStep","position":1,"name":"パネルを開く","text":"ツールバーの LB TAB Layers のアイコンか、Alt+T（Mac は Option+T）でパネルを開きます。"},{"@type":"HowToStep","position":2,"name":"「メモ」を押す","text":"上部のモードが「タブ」のとき、その下の切替バーで「メモ」を押します。"},{"@type":"HowToStep","position":3,"name":"チェックリストを作る","text":"「チェックリスト」を押して1行目を入力し、Enter で次の行へ進みます。"},{"@type":"HowToStep","position":4,"name":"終わった項目にチェック","text":"チェックを入れると「完了したアイテム」に移ります。入力は自動で保存されます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>メモ＆チェックリスト<br>ページの横で書いて、自動で保存</h1><p class="blog-meta"><time datetime="2026-10-23">2026.10.23</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="サイドパネルでカード型のメモとチェックリストを使う" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%208%E8%89%B2%E3%83%BB%E3%83%94%E3%83%B3%E7%95%99%E3%82%81%E3%83%BBMarkdown%E3%82%B3%E3%83%94%E3%83%BC" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%208%E8%89%B2%E3%83%BB%E3%83%94%E3%83%B3%E7%95%99%E3%82%81%E3%83%BBMarkdown%E3%82%B3%E3%83%94%E3%83%BC" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html" data-title="【機能ガイド】メモ＆チェックリストの使い方 — 8色・ピン留め・Markdownコピー" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB TAB Layers v2.9.0 から、サイドパネルにカード型の「メモ」が加わりました。</strong>上部の切替バーで「メモ」を押し、「メモを入力…」でテキストのメモ、「チェックリスト」でチェックボックス付きのリストを作ります。入力は自動で保存され、カードごとに8種類の背景色とピン留めで見分けられます。Markdown 形式のコピーと .txt 保存もでき、無料版で使えます。</p>
+
+    <p>v2.9.0 で、LB TAB Layers のサイドパネルに<strong>カード型のメモ</strong>が加わりました。思いついたことを書きとめるテキストのメモと、チェックボックスで消していくチェックリストの2種類を、ページを見ながらその場で書けます。</p>
+    <p>以前からある「<a href="feature-notes.html">メモ機能</a>」は、保存したタブ1つずつに「なぜ残したか」を書いておく<strong>ひとことメモ</strong>です。今回のメモは、タブとは別に、カードを何枚でも並べて使う<strong>メモ帳</strong>です。この記事では、こちらの使い方をまとめます。</p>
+    <div class="blog-callout"><p>💡 見た目は Google Keep のような「カードを並べる」形ですが、Google Keep と連携するものではなく、Google の機能でもありません。メモは LB TAB Layers の中に保存されます。</p></div>
+
+    <h2>Chrome の標準機能でメモを書くには</h2>
+    <p>Chrome のサイドパネルには、リーディング リスト・ブックマーク・履歴・リーディング モード・Google レンズなどを表示できます。ただ、Chrome ヘルプで案内されている標準の項目には、<strong>メモを書く機能はありません</strong>。</p>
+    <p>そのため、ページを見ながらメモを取るときは、メモアプリを別のタブやウィンドウで開いて行き来するか、サイドパネルに対応した拡張機能を使うことになります。LB TAB Layers のメモは後者で、タブの整理と同じパネルの中で書けるのが特長です。</p>
+
+    <h2>メモを開く場所は2つ</h2>
+    <p>LB TAB Layers を開き（ツールバーのアイコン、または Alt+T。Mac は Option+T）、上部のモードが「タブ」になっていることを確かめます。その下に「タブ」「ブックマーク」「統合」「メモ」の4つのボタンが並んだ<strong>切替バー</strong>があります。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>開き方</th><th>見え方</th><th>向いている場面</th></tr></thead><tbody>
+    <tr><td>切替バーの「メモ」</td><td>パネルの高さいっぱいにメモだけを表示</td><td>メモをたくさん書く・読み返す</td></tr>
+    <tr><td>切替バーの「統合」→ 下の欄の「メモ」</td><td>上にグループ一覧、下にメモ</td><td>保存したページを見ながら書く</td></tr>
+    </tbody></table></div>
+    <p>「メモ」ボタンの数字は、いまあるメモの枚数です。4つのボタンは左右にドラッグして並べ替えられるので、よく使う「メモ」を左端に置いておくこともできます。</p>
+    <p>ヘッダー右上（時計アイコンの右隣）のボタンから「表示方法を選択」のメニューを開き、「独立ウィンドウ（別窓）で開く」「新しいタブで開く」を選んだときも、同じメモが表示されます。</p>
+
+    <h2>はじめて開いたとき</h2>
+    <p>最初は「クイックメモ」という名前のチェックリストが1枚できています。そのまま1行目に書き始めてかまいません。メモはいつも1枚以上ある状態になっていて、最後の1枚を削除すると、カードは残って中身が空になります。</p>
+
+    <h2>メモを作る</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>「＋ メモを入力…」でテキストのメモ</h3><p>自由に書けるテキストのカードが一覧の先頭（ピン留めしたメモがあるときは、その下）にでき、そのまま入力できます。改行も使えます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>「☑ チェックリスト」でリスト</h3><p>チェックボックス付きのカードが同じように先頭にでき、1行目に入力できる状態になります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>タイトルを付ける</h3><p>カードの一番上の「メモのタイトル」に名前を入れておくと、あとで見分けやすくなります。タイトルは、コピーしたときの見出しや、.txt で保存したときのファイル名にもなります。</p></div></div>
+
+    <h2>チェックリストの操作</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>操作</th><th>動き</th></tr></thead><tbody>
+    <tr><td>項目を入力して Enter</td><td>すぐ下に新しい行ができ、続けて入力できる</td></tr>
+    <tr><td>空の行で Backspace</td><td>その行を消して、前の行の末尾に戻る</td></tr>
+    <tr><td>「＋ リスト項目を追加…」</td><td>リストの最後に行を足す</td></tr>
+    <tr><td>行の右の ×（項目を削除）</td><td>その項目を消す（行にマウスを乗せると表示）</td></tr>
+    <tr><td>チェックを入れる</td><td>カードの下の「完了したアイテム (N)」に移り、打ち消し線とグレーで表示</td></tr>
+    <tr><td>チェックを外す</td><td>元のリストに戻る</td></tr>
+    </tbody></table></div>
+    <p>「完了したアイテム」の見出しを押すと、終わった項目を隠したり、もう一度表示したりできます。開いているか閉じているかは、メモごとに覚えています。</p>
+    <p>日本語入力で変換を確定するときの Enter では、行は増えません。確定したあとにもう一度 Enter を押すと、次の行に進みます。</p>
+
+    <h2>カードのボタン</h2>
+    <p>カードの右上にピン、下に5つのボタンがあります。どれもマウスを乗せると名前が出ます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>ボタン</th><th>できること</th></tr></thead><tbody>
+    <tr><td>ピン「メモを上部に固定」（右上）</td><td>一覧の上の「固定済み」にまとめる。もう一度押すと外れる</td></tr>
+    <tr><td>チェックボックスを表示/非表示</td><td>テキストのメモとチェックリストを切り替える</td></tr>
+    <tr><td>背景色を変更</td><td>8つの色からカードの色を選ぶ</td></tr>
+    <tr><td>コピー</td><td>Markdown 形式のテキストでクリップボードへ</td></tr>
+    <tr><td>テキスト保存 (.txt)</td><td>テキストファイルとしてダウンロード</td></tr>
+    <tr><td>このメモを削除</td><td>確認のあとでカードを消す</td></tr>
+    </tbody></table></div>
+
+    <h3>ピン留め — よく見るメモを上に</h3>
+    <p>ピンを押したメモは、一覧の上の「固定済み」にまとまり、ほかのメモは「その他」の下に並びます。新しく作ったメモは上に入るので、「今日の ToDo」のように毎日見るメモはピンで留めておくと、下に埋もれません。なお、並び順を変えられるのはピンの有無だけで、カードをドラッグして順番を変えることはできません。</p>
+
+    <h3>8色の背景 — カードを色で見分ける</h3>
+    <p>パレットのボタンを押すと、8つの丸が出ます。標準（テーマの色）のほか、赤・オレンジ・黄・黄緑・青緑・青・紫の淡い7色です。色の名前は表示されないので、丸を見て選びます。カードの色は、使っているテーマの色になじむ淡さで表示されます。</p>
+    <ul>
+      <li>赤：急ぎ・今日中</li>
+      <li>黄：調べもの</li>
+      <li>青：会議のメモ</li>
+      <li>標準：そのほか</li>
+    </ul>
+    <p>のように決めておくと、パネルを開いたときに、どのメモかを色で見分けられます。</p>
+
+    <h3>テキストとチェックリストを切り替える</h3>
+    <p>「チェックボックスを表示/非表示」を押すと、同じカードのままテキストとリストを行き来できます。</p>
+    <ul>
+      <li><strong>テキスト → リスト</strong>：1行が1項目になります。空の行は省かれます。行の頭が「- [x]」「☑」「✓」の行はチェック済みになり、「・」「*」「- [ ]」「☐」などの記号は取り除かれます。ほかのアプリで書いた箇条書きを貼り付けてから押すと、1行ずつのチェックリストになります（「-」や「•」だけで始まる行は、記号が残ります）。</li>
+      <li><strong>リスト → テキスト</strong>：項目の文字が改行でつながります。<strong>チェックの状態は残りません</strong>（完了した項目も、印のない行になります）。もう一度リストに戻すと、すべて未チェックで始まります。</li>
+    </ul>
+
+    <h3>Markdown 形式でコピー・.txt で保存</h3>
+    <p>「コピー」を押すと、次のような形でクリップボードに入ります。チャットやメール、Markdown が使えるノートアプリにそのまま貼れます。</p>
+    <div class="blog-callout"><p><strong>コピーされるテキストの例：</strong></p>
+<pre style="white-space:pre-wrap;margin:0;font-size:0.85rem;">### 定例の宿題
+- [x] 見積の最新版を共有
+- [ ] 来週の日程を調整
+- [ ] 議事録を送る</pre></div>
+    <ul>
+      <li>タイトルは「### タイトル」の見出しになります</li>
+      <li>チェックリストは「- [ ] 項目」「- [x] 完了した項目」になります（完了した項目も、元の並び順のまま入ります）</li>
+      <li>テキストのメモは、書いた文章がそのまま入ります</li>
+    </ul>
+    <p>「テキスト保存 (.txt)」は、同じ内容を「タイトル.txt」という名前のファイルでダウンロードします（タイトルが空なら note.txt）。保存先は Chrome のダウンロードの設定に従います。</p>
+
+    <h2>保存のしくみと、気をつけること</h2>
+    <p>保存ボタンはありません。文字を入力すると少しあとに自動で保存され、上のバーの右端に「✓ 自動保存済み」が少しのあいだ表示されます。チェック・ピン・色の変更・追加・削除は、押したときにすぐ保存されます。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>こんなとき</th><th>メモは</th></tr></thead><tbody>
+    <tr><td>パネルを閉じる・Chrome を再起動する</td><td>残ります</td></tr>
+    <tr><td>同じ Chrome の別のウィンドウのサイドパネル・別窓・タブ表示</td><td>同じメモが表示され、書き換えも反映されます</td></tr>
+    <tr><td>別のパソコン・スマートフォン</td><td>同期されません</td></tr>
+    <tr><td>設定の「エクスポート (JSON)」</td><td>含まれません（書き出されるのはグループだけ）</td></tr>
+    <tr><td>拡張機能を削除する</td><td>メモも消えます</td></tr>
+    </tbody></table></div>
+    <p>メモは、このパソコンの Chrome の中（拡張機能の保存領域）に保存されます。グループに保存したタブは Chrome のブックマークになるので、拡張機能を削除しても残りますが（→ <a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？</a>）、メモはブックマークとは別に保存されています。大事なメモは、コピーや .txt 保存で手元に控えておいてください。</p>
+    <ul>
+      <li>削除したメモを元に戻す機能（ゴミ箱）はありません。削除の前に確認が出るので、消してよいか確かめてから進めてください</li>
+      <li>同じメモを2つの画面で同時に書き換えると、あとから保存した方の内容になります</li>
+      <li>上の検索欄（「タブを検索…」）は、このメモの中までは探しません</li>
+      <li>メモの内容を当社に送ることはありません</li>
+    </ul>
+
+    <h2>ひとことメモとの使い分け</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>ひとことメモ（以前から）</th><th>カード型のメモ（v2.9.0）</th></tr></thead><tbody>
+    <tr><td>書く場所</td><td>保存したタブ1つずつ（右クリック →「メモを編集」）</td><td>切替バーの「メモ」、統合の下の欄の「メモ」</td></tr>
+    <tr><td>向いていること</td><td>「なぜこのページを残したか」</td><td>ToDo、調べもののメモ、会議の宿題</td></tr>
+    <tr><td>検索欄で探せるか</td><td>探せる</td><td>探せない</td></tr>
+    <tr><td>書き出し</td><td>グループの Markdown コピー・JSON エクスポートに入る</td><td>カードごとのコピー・.txt 保存</td></tr>
+    </tbody></table></div>
+
+    <h2>こんな使い方がおすすめ</h2>
+    <ul>
+      <li><strong>今日の ToDo</strong> — 朝に「今日」のチェックリストを作ってピン留め。終わったらチェックして、完了したアイテムにしまう</li>
+      <li><strong>調べもののメモ</strong> — ページを見ながら、わかったことをテキストのメモに。タイトルに調べものの名前を入れておく</li>
+      <li><strong>会議の宿題</strong> — 会議中に出た宿題をチェックリストに書き、終わったら「コピー」でチャットに貼る</li>
+      <li><strong>手順の確認</strong> — 設定の手順書を見ながら、やったことを1つずつチェック</li>
+    </ul>
+    <p>思いついたことを書きとめる場所がページのすぐ横にあると、「あとで書こう」と覚えておく必要がなくなります。覚えておくための頭を、目の前の仕事に使えます。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. メモ＆チェックリストは無料で使えますか？</h3>
+    <p>はい。無料版でも、メモの作成・チェックリスト・背景色・ピン留め・コピー・.txt 保存まで使えます。切替バーや統合レイアウトも無料です（下の欄の「本日の履歴」は PRO版とトライアル中の機能です）。</p>
+
+    <h3>Q. メモはほかのパソコンやスマートフォンと同期されますか？</h3>
+    <p>同期されません。メモはこのパソコンの Chrome の中に保存されます。同じ Chrome で開いている別のウィンドウのサイドパネルや別窓には反映されます。ほかの端末で見たいときは、コピーしてメールやチャットに貼るか、.txt で保存してください。</p>
+
+    <h3>Q. 拡張機能を削除するとメモはどうなりますか？</h3>
+    <p>メモも削除されます。グループに保存したタブは Chrome のブックマークとして残りますが、メモはブックマークとは別に保存されているためです。「エクスポート (JSON)」にもメモは含まれないので、残したいメモはコピーか .txt 保存で控えておいてください。</p>
+
+    <h3>Q. 削除したメモを元に戻せますか？</h3>
+    <p>戻せません。ゴミ箱や元に戻す機能はありません。削除の前に「メモ「タイトル」を削除しますか？」と確認が出ます。最後の1枚は、削除するとカードが残って中身が空になります。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%208%E8%89%B2%E3%83%BB%E3%83%94%E3%83%B3%E7%95%99%E3%82%81%E3%83%BBMarkdown%E3%82%B3%E3%83%94%E3%83%BC" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-keep-style-notepad.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E3%83%A1%E3%83%A2%EF%BC%86%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%20%E2%80%94%208%E8%89%B2%E3%83%BB%E3%83%94%E3%83%B3%E7%95%99%E3%82%81%E3%83%BBMarkdown%E3%82%B3%E3%83%94%E3%83%BC" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-keep-style-notepad.html" data-title="【機能ガイド】メモ＆チェックリストの使い方 — 8色・ピン留め・Markdownコピー" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>思いついたことは、ページの横に。</h3><p>メモ＆チェックリストは無料版で使えます。アカウント登録なし · タブの保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=feature-keep-style-notepad" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-notes.html">【機能ガイド】メモ機能 — 保存したタブに「なぜ残したか」を書いておく <span>→</span></a><a href="feature-panel-layout.html">【機能ガイド】画面レイアウト — グループと単独タブのエリアをリサイズ・折りたたみ <span>→</span></a><a href="feature-copy-markdown.html">【機能ガイド】Markdown形式でコピー — グループのリンク集を一発で共有 <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">Chrome サイドパネルを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/7343019?hl=ja&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">ページを後からオフラインで読む（リーディング リスト） — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
