@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>見つけたページを、すばやくグループに入れる5つの方法 — ドロップ・貼り付け・右クリック・ショートカット | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers でページをグループ（ブックマークのフォルダ）に入れる5つの方法をまとめました。アドレスバーのアイコンをドロップ、Ctrl+V で貼り付け、右クリック、Ctrl+Shift+S のとりあえず保存、開いているタブから選ぶ。使い分けと、保存直後の取り消しも解説します。">
+  <meta name="keywords" content="ブックマーク 追加 方法,URL 貼り付け 保存,ブックマーク ドラッグ,Chrome ブックマーク 簡単,ブックマーク 整理 続かない,あとで読む 保存">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html">
+  <meta property="og:title" content="見つけたページを、すばやくグループに入れる5つの方法"><meta property="og:description" content="ドロップ・貼り付け・右クリック・ショートカット・タブから選ぶ。使い分けのコツ。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-23T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="見つけたページを、すばやくグループに入れる5つの方法"><meta name="twitter:description" content="ドロップ・貼り付け・右クリック・ショートカット・タブから選ぶ。使い分けのコツ。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"ページをグループに入れる方法","item":"https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"見つけたページを、すばやくグループに入れる","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-23","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ドロップしても、入らないことがあります。","acceptedAnswer":{"@type":"Answer","text":"外から来たURL（アドレスバーのアイコン、ページ内のリンク）は、グループの行、またはフォルダ表示のフォルダのタイルに、ドロップしてください。ほかの場所に落とすと、入りません。この機能は、v2.12.0 から使えます。"}},{"@type":"Question","name":"貼り付けても、ダイアログが出ません。","acceptedAnswer":{"@type":"Answer","text":"検索欄やメモなどの入力欄にカーソルがあると、通常の貼り付けになります。パネルの空いているところを一度クリックしてから、Ctrl+V を押してください。または、「グループ」の見出しの右のクリップボードのアイコンから、開けます。"}},{"@type":"Question","name":"複数のURLを、まとめて入れられますか？","acceptedAnswer":{"@type":"Answer","text":"できます。1行に1つずつ並べて貼ると、まとめて入ります（一度に50件まで）。同じグループにすでにあるURLは、入れません。"}},{"@type":"Question","name":"入れたあとに、取り消せますか？","acceptedAnswer":{"@type":"Answer","text":"ドロップ・貼り付けで入れた直後と、保存したタブを別のグループへ移した直後は、画面の下の「元に戻す」で取り消せます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"URLを貼り付けて、グループに入れる","step":[{"@type":"HowToStep","position":1,"name":"URLをコピーする","text":"アドレスバー、またはチャットやメモの中のURLを、コピーします。"},{"@type":"HowToStep","position":2,"name":"貼り付けを開く","text":"サイドパネルの空いているところをクリックして、Ctrl+V を押します。または、「グループ」の見出しの右のクリップボードのアイコンを押します。"},{"@type":"HowToStep","position":3,"name":"入れ先を確認して追加する","text":"入れ先のグループを確かめて、「追加」を押します。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">使い方</span><h1>見つけたページを、<br>すばやくグループに入れる</h1><p class="blog-meta"><time datetime="2026-10-23">2026.10.23</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="見つけたページをグループに入れるイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html&amp;text=%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%80%81%E3%81%99%E3%81%B0%E3%82%84%E3%81%8F%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AB%E5%85%A5%E3%82%8C%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html&amp;title=%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%80%81%E3%81%99%E3%81%B0%E3%82%84%E3%81%8F%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AB%E5%85%A5%E3%82%8C%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html" data-title="見つけたページを、すばやくグループに入れる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>ブックマークは、「入れる手間」が小さいほど続きます。</strong>LB TAB Layers では、①アドレスバーのアイコンやリンクをグループにドロップ、②Ctrl+V でURLを貼り付け、③ページを右クリック、④Ctrl+Shift+S で「あとで整理」にとりあえず保存、⑤開いているタブから選んで「グループへ」、の5つで入れられます。入れたあとは、画面の下の「元に戻す」で取り消せます。①と②は v2.12.0 の新機能です。</p>
+
+    <p>ブックマークは、「入れる」手間が大きいと、だんだん使わなくなります。<strong>見つけた瞬間に、思いついた方法で、さっと入れられる</strong>ことが、続けるコツです。</p>
+    <p>LB TAB Layers には、ページをグループ（Chromeのブックマークのフォルダ）に入れる方法が、5つあります。この記事では、それぞれの使い方と、使い分けをまとめます。</p>
+
+    <h2>早見表</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>方法</th><th>向いている場面</th></tr></thead><tbody>
+    <tr><td><strong>1. ドロップ</strong>（v2.12.0）</td><td>いま見ているページ、またはページ内のリンクを、その場で入れたい</td></tr>
+    <tr><td><strong>2. 貼り付け</strong>（v2.12.0）</td><td>チャットやメモに書かれたURLを、まとめて入れたい</td></tr>
+    <tr><td><strong>3. 右クリック</strong></td><td>サイドパネルを開かずに、ページやリンクを入れたい</td></tr>
+    <tr><td><strong>4. Ctrl+Shift+S</strong></td><td>行き先を考えずに、とりあえず残したい</td></tr>
+    <tr><td><strong>5. タブから選ぶ</strong></td><td>開きっぱなしのタブを、まとめて整理したい</td></tr>
+    </tbody></table></div>
+
+    <h2>1. アドレスバーのアイコンやリンクを、グループにドロップする（v2.12.0）</h2>
+    <p>いま見ているページを入れたいときは、<strong>アドレスバーの左のアイコン</strong>（サイトのアイコンや、鍵のマーク）を、サイドパネルの<strong>グループの行</strong>へドラッグして、離します。ページ内のリンクも、同じようにドロップできます。</p>
+    <ul>
+      <li>「フォルダ表示」のときは、フォルダのタイルにドロップします（詳しくは「<a href="bookmark-folder-view.html">ブックマークを、エクスプローラーのようにたどる方法</a>」）</li>
+      <li>すでにそのグループにあるURLは、重ねて入れません。ほかのグループにも同じURLがあるときは、確認が1回出ます</li>
+      <li>ブックマークのフォルダにも、同じように作られます</li>
+    </ul>
+
+    <h2>2. URLを貼って追加する（v2.12.0）</h2>
+    <p>チャットやメモに書かれたURLは、<strong>コピーして、貼り付ける</strong>のが速いです。</p>
+    <ol>
+      <li>URLをコピーします</li>
+      <li>サイドパネルの上で、<strong>Ctrl+V</strong> を押します（Macは ⌘+V）。または、「グループ」の見出しの右にある、クリップボードのアイコン（「URLを貼って追加」）を押します</li>
+      <li>入れ先のグループを確認して、「追加」を押します</li>
+    </ol>
+    <ul>
+      <li>URLは、<strong>複数行でも</strong>貼れます（一度に50件まで）。文章の中のURLだけを、取り出します</li>
+      <li>入れ先は、開いているフォルダ → 同じサイトのタブが入っているグループ → 最近使ったグループ、の順で、自動で選ばれます</li>
+      <li>入力欄（検索欄やメモ）にカーソルがあるときは、通常の貼り付けになります。パネルの空いているところを一度クリックしてから、貼ってください</li>
+    </ul>
+
+    <h2>3. ページやリンクを、右クリックで入れる</h2>
+    <p>ページ上で右クリックして、「<strong>TAB Layers に保存</strong>」から、グループを選びます。リンクを右クリックすれば、そのリンク先を入れられます。サイドパネルを開いていなくても使えます。</p>
+    <p>v2.12.0 から、<strong>最近使ったグループ</strong>（最大3つ）が、メニューの先頭に出ます。よく使うグループへ、1クリックで入れられます。</p>
+
+    <h2>4. Ctrl+Shift+S で、とりあえず残す</h2>
+    <p>行き先を考える余裕がないときは、<strong>Ctrl+Shift+S</strong>（Macは ⌘+Shift+S）です。いま見ているページが、「<strong>📥 あとで整理</strong>」というグループに入ります。</p>
+    <p>あとで、そのグループを開いて、タブを選び、「<strong>グループへ</strong>」で、まとめて別のグループへ仕分けられます（v2.12.0 から、保存したタブも、まとめて移せるようになりました。ブックマークも一緒に動きます）。入れる時は雑に、整える時はまとめて、という流れです。</p>
+
+    <h2>5. 開いているタブから選ぶ</h2>
+    <p>開きっぱなしのタブは、「タブ」の画面で、行の左の<strong>丸いチェック</strong>を押して選び、下のバーの「<strong>グループへ</strong>」で、新しいグループか、すでにあるグループへ入れます。くわしくは「<a href="feature-ungrouped-tabs.html">【機能ガイド】単独タブ</a>」にまとめています。</p>
+
+    <h2>入れたあとの、安心の仕組み</h2>
+    <ul>
+      <li><strong>元に戻す：</strong>ドロップ・貼り付けで入れた直後と、保存したタブを移した直後は、画面の下に「元に戻す」が出ます</li>
+      <li><strong>重複の扱い：</strong>同じグループの中では、同じURLを重ねて入れません。別のグループにもあるときは、入れるかどうかを、まとめて1回だけ聞きます</li>
+      <li><strong>タイトルの取得：</strong>ドロップ・貼り付けでは、ページの名前が分からないことがあります。その場合は、いったん「サイトの名前＋パス」で入れて、あとからそのページのタイトルに、自動で差し替えます。取りに行くのは、あなたが入れたURLだけで、ログイン情報（Cookie）は送りません</li>
+    </ul>
+
+    <h2>おまけ：入れすぎ・開きすぎの前に、お知らせ</h2>
+    <p>v2.12.0 では、タブが増えすぎる前に、サイドパネルの上でお知らせします。開いているタブ（全ウィンドウ）が、<strong>15個以上で「忠告」、100個以上で「警告」</strong>です。「グループにまとめる」「表示中以外を閉じる」を、すすめます。数は設定で変えられ、オフにもできます。</p>
+    <p>また、設定でオンにしたときだけ、<strong>コピーしたURLがあるとお知らせ</strong>する機能もあります。この機能は、ブラウザの「クリップボードの読み取り」の許可が必要で、既定はオフです。URLがあるかを確かめるだけで、内容の保存も送信もしません。</p>
+
+    <h2>まとめ</h2>
+    <ul>
+      <li>入れる手間が小さいほど、ブックマークは続く</li>
+      <li>その場で：<strong>ドロップ</strong>、または、<strong>右クリック</strong></li>
+      <li>まとめて：<strong>Ctrl+V</strong> で貼り付け、または、<strong>タブから選ぶ</strong></li>
+      <li>とりあえず：<strong>Ctrl+Shift+S</strong> →あとで仕分け</li>
+      <li>入れたあとは、「元に戻す」で、安心</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. ドロップしても、入らないことがあります。</h3>
+    <p>外から来たURL（アドレスバーのアイコン、ページ内のリンク）は、グループの行、またはフォルダ表示のフォルダのタイルに、ドロップしてください。ほかの場所に落とすと、入りません。この機能は、v2.12.0 から使えます。</p>
+
+    <h3>Q. 貼り付けても、ダイアログが出ません。</h3>
+    <p>検索欄やメモなどの入力欄にカーソルがあると、通常の貼り付けになります。パネルの空いているところを一度クリックしてから、Ctrl+V を押してください。または、「グループ」の見出しの右のクリップボードのアイコンから、開けます。</p>
+
+    <h3>Q. 複数のURLを、まとめて入れられますか？</h3>
+    <p>できます。1行に1つずつ並べて貼ると、まとめて入ります（一度に50件まで）。同じグループにすでにあるURLは、入れません。</p>
+
+    <h3>Q. 入れたあとに、取り消せますか？</h3>
+    <p>ドロップ・貼り付けで入れた直後と、保存したタブを別のグループへ移した直後は、画面の下の「元に戻す」で取り消せます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html&amp;text=%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%80%81%E3%81%99%E3%81%B0%E3%82%84%E3%81%8F%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AB%E5%85%A5%E3%82%8C%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fadd-pages-to-groups-fast.html&amp;title=%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%80%81%E3%81%99%E3%81%B0%E3%82%84%E3%81%8F%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AB%E5%85%A5%E3%82%8C%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/add-pages-to-groups-fast.html" data-title="見つけたページを、すばやくグループに入れる" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>見つけた瞬間に、さっと入れる。</h3><p>ドロップ・貼り付け・右クリック・ショートカット。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=add-pages-to-groups-fast" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="bookmark-folder-view.html">ブックマークを、エクスプローラーのようにたどる方法 <span>→</span></a><a href="feature-ungrouped-tabs.html">【機能ガイド】単独タブ <span>→</span></a><a href="feature-save-tabs.html">タブを保存する3つの方法 <span>→</span></a><a href="bookmark-organization.html">Chromeのブックマークを整理する方法 <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
