@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Manager Extension Permissions Explained: What Each One Is For | LB TAB Layers Blog</title>
+  <meta name="description" content="What Chrome extension permissions mean, how to judge a tab manager by them, and an honest list of every permission LB TAB Layers asks for and why.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/chrome-extension-safety.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html">
+  <meta property="og:title" content="Tab manager extension permissions, explained"><meta property="og:description" content="What the install warnings mean, how to judge an extension by them, and why LB TAB Layers asks for each permission."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-10-25T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Tab manager extension permissions, explained"><meta name="twitter:description" content="What the install warnings mean, how to judge an extension by them, and why LB TAB Layers asks for each permission."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Extension permissions","item":"https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Tab manager extension permissions explained — what the install warnings mean, and why LB TAB Layers asks for each one","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-25","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a tab manager need access to all websites?","acceptedAnswer":{"@type":"Answer","text":"Usually for features that work inside the page, such as showing a sidebar over it or taking a screenshot of it. In LB TAB Layers, that access is used for the Overlay display mode, RSS feed detection, reading a page when you ask the AI about it, screenshots and dead-link checks."}},{"@type":"Question","name":"Does LB TAB Layers upload my tabs or browsing history?","acceptedAnswer":{"@type":"Answer","text":"No. Groups and saved tabs are stored as Chrome bookmarks, and Today’s History is read on your computer only. The license check sends a random install ID to our server, not your tabs."}},{"@type":"Question","name":"Can I limit which sites an extension can access?","acceptedAnswer":{"@type":"Answer","text":"Yes. Open chrome://extensions, click Details and change Site access to On click or On specific sites. Features that need page access, such as screenshots, may then stop working on other sites."}},{"@type":"Question","name":"Do I need a Google account connection to use LB TAB Layers?","acceptedAnswer":{"@type":"Answer","text":"No. There is no sign-up. The Google account connection is only for the optional Google Sheets sync in Settings."}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">v2.8.71</a><a href="./">Blog</a><a href="../../blog/chrome-extension-safety.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Guide</span><h1>Tab manager extension permissions explained: what each one is for</h1><p class="blog-meta"><time datetime="2026-10-25">Oct 25, 2026</time> · Liquid Block Inc. · 7 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-safety-update.webp" alt="Checking the permissions of a Chrome extension" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-extension-permissions-explained.html&amp;text=Tab%20manager%20extension%20permissions%20explained%20%E2%80%94%20what%20the%20install%20warnings%20mean%2C%20and%20why%20LB%20TAB%20Layers%20asks%20for%20each%20one" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-extension-permissions-explained.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-extension-permissions-explained.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">A permission is a promise about what an extension <strong>can</strong> do, not proof of what it does. Judge a tab manager by asking whether each permission has a <strong>clear reason tied to a feature you can see</strong>, and where your data goes. Below is every permission LB TAB Layers requests, with the feature that uses it.</p>
+
+    <p>When you add a tab manager to Chrome, a box pops up with warnings like “Read and change all your data on all websites” or “Read and change your browsing history.” It is supposed to make you stop and think. Most people click through. This article is about the moment in between: what those lines mean, and how to tell whether an extension really needs them.</p>
+
+    <h2>What a permission actually is</h2>
+    <p>Chrome extensions can’t touch your tabs, bookmarks or web pages unless they declare it in a file called the manifest. Chrome reads that file and turns the riskier entries into the warnings you see at install time. Two things follow from this:</p>
+    <ul>
+      <li><strong>A permission is a capability, not an action.</strong> “Can read your history” doesn’t mean the extension uploads your history. It means it is allowed to look.</li>
+      <li><strong>A tab manager needs more than you might expect.</strong> Listing your open tabs, saving them and reopening them already takes several permissions. That is normal. What matters is whether the rest have a reason.</li>
+    </ul>
+
+    <h2>Four questions to ask about any extension</h2>
+    <ol>
+      <li><strong>Does every permission match a feature I can see?</strong> If you can’t find the feature, ask why the permission is there.</li>
+      <li><strong>Where is my data stored?</strong> On your computer, in Chrome’s own storage such as bookmarks, or on the developer’s server?</li>
+      <li><strong>What leaves my computer, and when?</strong> A good privacy policy names the servers and says what is sent.</li>
+      <li><strong>Who makes it, and is it maintained?</strong> Check the developer name, the update date and the support contact on the Chrome Web Store page.</li>
+    </ol>
+
+    <h2>Every permission LB TAB Layers asks for</h2>
+    <p>Here is the full list from the manifest of the current version (v2.8.72), with the feature that uses each one. We checked each line against the code, not against a marketing sheet.</p>
+    <table>
+      <thead><tr><th>Permission</th><th>What LB TAB Layers uses it for</th></tr></thead>
+      <tbody>
+        <tr><td>tabs</td><td>Reads the title, address and icon of your open tabs to list them in the side panel, and opens or closes tabs when you press ▶ or ■ on a group.</td></tr>
+        <tr><td>tabGroups</td><td>Reads Chrome’s own tab groups (name and color) in the current window so the panel stays in step with them.</td></tr>
+        <tr><td>bookmarks</td><td>Saves every group as a Chrome bookmark folder and every saved tab as a bookmark. This is where your data lives.</td></tr>
+        <tr><td>storage</td><td>Keeps settings, the group list, the theme and the license status on your computer.</td></tr>
+        <tr><td>sidePanel</td><td>Shows the extension in Chrome’s side panel.</td></tr>
+        <tr><td>contextMenus</td><td>Adds <strong>Save to TAB Layers</strong> to the right-click menu on web pages.</td></tr>
+        <tr><td>history</td><td>Shows <strong>Today’s History</strong>: pages you visited since midnight, up to 200. It is a PRO feature (also in the free trial) and the list is read on your computer only.</td></tr>
+        <tr><td>alarms</td><td>Timers: a license check once a day, a bookmark sync check every five minutes, and the end of a Focus Timer session.</td></tr>
+        <tr><td>declarativeNetRequest</td><td>The <strong>Focus Timer</strong>. For 25 minutes, sites from the groups you marked are redirected to a page inside the extension that says the Focus Timer is on. The rules are removed when the timer ends.</td></tr>
+        <tr><td>downloads</td><td>Saves screenshots. Chrome’s Save As dialog opens every time, so you choose the file name and folder.</td></tr>
+        <tr><td>scripting</td><td>For a full-page screenshot, places a small helper script in the tab you are capturing so it can scroll the page.</td></tr>
+        <tr><td>identity</td><td>Optional Google Sheets sync in Settings. It is used only if you click to connect your Google account, and asks for access to spreadsheets and to files the extension creates.</td></tr>
+        <tr><td>Access to all sites</td><td>See below.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The big one: “Read and change all your data on all websites”</h2>
+    <p>This warning comes from host access to all sites. It is the line that worries people most, so here is exactly what LB TAB Layers does with it:</p>
+    <ul>
+      <li><strong>Overlay mode.</strong> A small script runs on ordinary web pages so the sidebar can slide in over the page when you choose the Overlay display mode (PRO, also in the trial).</li>
+      <li><strong>RSS feeds.</strong> The same script looks for feed links in the page header, so the panel can offer to follow a site.</li>
+      <li><strong>AI questions about a page.</strong> When you ask the AI sidebar about the page you are on, the script reads the page text or your selection — only at that moment.</li>
+      <li><strong>Screenshots and checks.</strong> Capturing a page and checking whether saved links still open both need access to those sites.</li>
+    </ul>
+    <p>Recording a tab uses Chrome’s own screen-sharing dialog, so you always pick what is recorded.</p>
+
+    <h2>What leaves your computer</h2>
+    <p>Your groups and tabs are stored in Chrome’s bookmarks, not on our server, and there is no account to create. These are the network requests the code makes:</p>
+    <ul>
+      <li><strong>License check:</strong> a random install ID is sent to our server (liquid-block.com) to confirm whether PRO is active. No name, no email, no tab data.</li>
+      <li><strong>AI:</strong> in the free version, AI features use the AI built into Chrome. If you add your own API key in PRO, requests go directly to the provider you chose.</li>
+      <li><strong>Search suggestions:</strong> while you type in the search box, the text is sent to Google’s suggestion service to show web suggestions.</li>
+      <li><strong>Weather in the clock:</strong> an approximate location based on your time zone (not GPS) is sent to a weather service.</li>
+      <li><strong>Link checks, feeds and thumbnails:</strong> requests go straight to the sites themselves.</li>
+      <li><strong>Feedback:</strong> only if you fill in and send the feedback form.</li>
+    </ul>
+    <p>The full details are in our <a href="../../privacy-policy.html">privacy policy</a>.</p>
+
+    <h2>How to check permissions yourself</h2>
+    <ol>
+      <li>Open <code>chrome://extensions</code> and click <strong>Details</strong> on any extension.</li>
+      <li>Read the <strong>Permissions</strong> list and the <strong>Site access</strong> setting.</li>
+      <li>If you only want an extension active on certain sites, change Site access to <strong>On specific sites</strong> or <strong>On click</strong>. Some features may stop working, which also tells you what the access was for.</li>
+    </ol>
+    <p>Nobody should install an extension on trust alone. If something on our list doesn’t make sense to you, the support address on the store page reaches the people who wrote the code. For where the data itself sits, see <a href="where-are-chrome-bookmarks-stored.html">where Chrome bookmarks are stored</a>.</p>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Why does a tab manager need access to all websites?</h3>
+    <p>Usually for features that work inside the page, such as showing a sidebar over it or taking a screenshot of it. In LB TAB Layers, that access is used for the Overlay display mode, RSS feed detection, reading a page when you ask the AI about it, screenshots and dead-link checks.</p>
+
+    <h3>Q. Does LB TAB Layers upload my tabs or browsing history?</h3>
+    <p>No. Groups and saved tabs are stored as Chrome bookmarks, and Today’s History is read on your computer only. The license check sends a random install ID to our server, not your tabs.</p>
+
+    <h3>Q. Can I limit which sites an extension can access?</h3>
+    <p>Yes. Open chrome://extensions, click Details and change Site access to On click or On specific sites. Features that need page access, such as screenshots, may then stop working on other sites.</p>
+
+    <h3>Q. Do I need a Google account connection to use LB TAB Layers?</h3>
+    <p>No. There is no sign-up. The Google account connection is only for the optional Google Sheets sync in Settings.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-extension-permissions-explained.html&amp;text=Tab%20manager%20extension%20permissions%20explained%20%E2%80%94%20what%20the%20install%20warnings%20mean%2C%20and%20why%20LB%20TAB%20Layers%20asks%20for%20each%20one" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-extension-permissions-explained.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fchrome-extension-permissions-explained.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/chrome-extension-permissions-explained.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>A tab manager you can check line by line.</h3><p>Your tabs stay in Chrome’s bookmarks. No account needed. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog_en&amp;utm_campaign=chrome-extension-permissions-explained" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="where-are-chrome-bookmarks-stored.html">Where Chrome bookmarks are stored <span>→</span></a><a href="all-features-guide.html">Every feature explained <span>→</span></a><a href="feature-right-click-menu.html">The right-click menu <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>

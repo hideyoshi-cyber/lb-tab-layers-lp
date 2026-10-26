@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>朝の10分で今日のToDoを決める — タブを開いて、昨日の宿題を集めて、AIと優先順位を整える | LB TAB Layers Blog</title>
+  <meta name="description" content="朝の10分で今日のToDoを決める手順です。毎朝のタブを開く、昨日の会議の宿題を集める、AIと優先順位を整える、今日の3つを残す。AIに任せすぎないコツと、LB TAB Layers・LB AI Prompt side bar・議事メモレックの使いどころを紹介します。">
+  <meta name="keywords" content="朝 ルーティン 仕事,今日のToDo 決め方,タスク 優先順位 決め方,ChatGPT タスク整理,朝 10分 仕事術,やることリスト 作り方">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html">
+  <meta property="og:title" content="朝の10分で、今日やることを決める"><meta property="og:description" content="タブを開く・昨日の宿題を集める・AIと優先順位を整える・残す。朝の10分を4つに分けて、今日の3つを決めます。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-25T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="朝の10分で、今日やることを決める"><meta name="twitter:description" content="タブを開く・昨日の宿題を集める・AIと優先順位を整える・残す。朝の10分を4つに分けて、今日の3つを決めます。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"朝の10分で今日のToDoを決める","item":"https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"朝の10分で今日のToDoを決める方法","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-25","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"朝のToDoは、いくつに絞ればよいですか？","acceptedAnswer":{"@type":"Answer","text":"3つが目安です。会議や急な依頼で時間は削られるので、3つ終われば十分な日にしておきます。早く終わったら、明日以降に回したものから選びます。"}},{"@type":"Question","name":"AIに優先順位を決めてもらってよいのですか？","acceptedAnswer":{"@type":"Answer","text":"並べ替えと理由の整理を頼み、最後に決めるのは自分にします。AIは、締め切りの裏にある事情や、相手との関係の細かいところまでは知りません。顧客名や個人の名前は伏せてから入れてください。"}},{"@type":"Question","name":"朝のタブをまとめて開くには、どうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"Chrome の起動時の設定、ブックマークのフォルダ、LB TAB Layers のグループの3つの方法があります。LB TAB Layers では ▶ を押すと、まだ開いていないページだけが開きます。"}},{"@type":"Question","name":"LB TAB Layers の「メモ」は、ブックマークに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"Chrome のブックマークにはメモ欄がないため、メモは拡張機能の側に保存されます。タブそのもの（グループ）は、Chrome のブックマークのフォルダとして保存されます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"朝の10分で今日のToDoを決める","step":[{"@type":"HowToStep","position":1,"name":"毎朝のタブを開く","text":"メール・カレンダー・チャット・タスク管理を、まとめて開きます。"},{"@type":"HowToStep","position":2,"name":"昨日の宿題を集める","text":"会議の宿題・メール・チャットで頼まれたことを、「何を・だれに・いつまでに」の箇条書きにします。"},{"@type":"HowToStep","position":3,"name":"AIと優先順位を整える","text":"箇条書きと今日使える時間をAIに渡し、今日やる3つと回してよいものを理由つきで出してもらい、自分で決めます。"},{"@type":"HowToStep","position":4,"name":"今日の3つを残す","text":"1日に何度も目に入る場所に、今日の3つを書きます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">仕事術</span><h1>朝の10分で、<br>今日やることを決める</h1><p class="blog-meta"><time datetime="2026-10-25">2026.10.25</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="朝、サイドパネルから毎日のタブを開いて、今日やることを決めるイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html&amp;text=%E6%9C%9D%E3%81%AE10%E5%88%86%E3%81%A7%E4%BB%8A%E6%97%A5%E3%81%AEToDo%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html&amp;title=%E6%9C%9D%E3%81%AE10%E5%88%86%E3%81%A7%E4%BB%8A%E6%97%A5%E3%81%AEToDo%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html" data-title="朝の10分で今日のToDoを決める方法" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>朝の10分は、「毎朝のタブを開く（2分）」「昨日の宿題を1か所に集める（2分）」「AIと優先順位を整える（4分）」「今日の3つを残す（2分）」に分けます。</strong>AIには並べ替えと理由の整理を頼み、最後に決めるのは自分です。顧客名や個人の名前は伏せてからAIに入れます。</p>
+
+    <p>朝、パソコンを開いて、まずメール。返信していると、チャットが来て、その対応をしているうちに昼になる。「今日は何をする日だったっけ」と思うのは、午後になってから。</p>
+    <p>そうならないように、<strong>始業の最初の10分で、今日やることを3つ決めます。</strong>この記事では、10分を4つに分けた手順を紹介します。</p>
+
+    <h2>10分の流れ</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>時間</th><th>やること</th><th>終わったときの状態</th></tr></thead><tbody>
+    <tr><td><strong>0〜2分</strong></td><td>毎朝のタブを開く</td><td>メール・カレンダー・チャット・タスク管理が開いている</td></tr>
+    <tr><td><strong>2〜4分</strong></td><td>昨日の宿題を1か所に集める</td><td>やることが1つのリストになっている</td></tr>
+    <tr><td><strong>4〜8分</strong></td><td>AIと優先順位を整える</td><td>今日やる3つと、やらないものが分かれている</td></tr>
+    <tr><td><strong>8〜10分</strong></td><td>今日の3つを残す</td><td>あとで見返せる場所に書いてある</td></tr>
+    </tbody></table></div>
+    <p>この10分の間は、<strong>メールに返信しません。</strong>読むのはよいのですが、返事は「今日やること」が決まってからにします。</p>
+
+    <h2>0〜2分：毎朝のタブを開く</h2>
+    <p>メール・カレンダー・チャット・タスク管理。毎朝開くページは、だいたい決まっています。1つずつ開かずに、まとめて開けるようにしておきます。</p>
+    <p>LB TAB Layers なら、「毎朝」のグループを作ってページを保存しておき、朝は Alt+T（Macは Option+T）で開いて <strong>▶</strong> を押すだけです。メールだけ先に開いていても、足りないページだけが開きます。Chrome の起動時の設定やブックマークのフォルダを使う方法との比べ方は、「<a href="one-click-open-tab-set.html">毎朝使うタブを1クリックでまとめて開く方法</a>」にまとめています。</p>
+    <p>ニュースサイトを入れる場合は、<strong>読む時間を決めてから</strong>にします。朝の10分の中で読み始めると、10分では終わりません。</p>
+
+    <h2>2〜4分：昨日の宿題を1か所に集める</h2>
+    <p>やることは、あちこちに散らばっています。</p>
+    <ul>
+      <li>昨日の会議で決まった宿題</li>
+      <li>メールで頼まれたこと</li>
+      <li>チャットで「あとでやります」と返したこと</li>
+      <li>タスク管理に入れたまま、期限が近いもの</li>
+    </ul>
+    <p>これを、<strong>1つの箇条書きに書き出します。</strong>1行に「何を・だれに・いつまでに」を入れます。わからない部分は空けておいてかまいません。</p>
+    <p>会議の宿題は、議事録から拾います。<a href="https://gijimemorec.liquid-block.com/" target="_blank" rel="noopener">議事メモレック</a>で会議を記録していれば、要約と一緒に「やることリスト」ができています。昨日の会議の分を開いて、自分の担当の行だけを写します。議事メモレックは登録不要・月額不要で、録音した会議から文字起こし・要約・やることリストを作ります（会議を録音するときは、参加者の同意を取ってから）。</p>
+
+    <h2>4〜8分：AIと優先順位を整える</h2>
+    <p>書き出したリストが10件を超えると、どれからやるかで迷います。ここでAIを使います。ただし、<strong>AIには「並べ替え」と「理由の整理」を頼み、決めるのは自分</strong>です。</p>
+    <h3>AIに渡すもの</h3>
+    <ul>
+      <li>さっき書き出した箇条書き</li>
+      <li>今日使える時間（会議を除いて何時間あるか）</li>
+      <li>動かせない締め切りと、今日の会議の予定</li>
+    </ul>
+    <h3>AIに頼むこと</h3>
+    <ul>
+      <li>今日やるべき3つと、その理由</li>
+      <li>明日以降に回してよいものと、その理由</li>
+      <li>だれかに確認しないと進まないもの</li>
+    </ul>
+    <p>答えを見て、違うと思ったら自分で入れ替えます。AIは、あなたの上司の機嫌や、取引先との関係の細かいところまでは知りません。<strong>顧客名・個人の名前・社外秘の内容は、伏せてから入れます。</strong>会社にAIの使い方のルールがあれば、それに従ってください。</p>
+    <p>この指示を毎朝書くのは手間なので、<a href="https://aipromptbar.liquid-block.com/" target="_blank" rel="noopener">LB AI Prompt side bar</a> を使うと楽になります。サイドパネル（Alt+A）でコマンドを選び、空欄を埋めて ⚡ を押すと、開いているAIの入力欄に入ります。</p>
+    <ul>
+      <li><strong>【マネージャー】タスクの優先順位付け</strong>：緊急度と重要度で並べ替えます（有料プラン。14日間の無料お試しで使えます）。</li>
+      <li><strong>【議事録】決定事項＆ToDo抽出</strong>：会議のメモから宿題を表にします（無料版の「おすすめ」で使えます）。</li>
+    </ul>
+    <p>AI Prompt side bar で書いた内容は弊社のサーバーには送られませんが、⚡ で入れた内容は、送り先のAIのサービスに渡ります。無料版でも使える「AIニュース」もありますが、朝の10分では開かず、昼休みなどに回すのがおすすめです。</p>
+
+    <h2>8〜10分：今日の3つを残す</h2>
+    <p>決めた3つは、<strong>1日に何度も目に入る場所</strong>に書きます。タスク管理のツール、手帳、付せん。どこでもかまいませんが、場所は1つにします。</p>
+    <p>LB TAB Layers を使っているなら、今日の3つに使うページを「今日」のグループに入れておく方法もあります。ページを右クリックして「TAB Layers に保存」から選べば保存できます。保存したタブは、サイドパネルで右クリックして「メモを編集」を選ぶと、「11時までに返信」のようなメモを付けられます。マウスを乗せると【メモ】として表示され、サイドパネルの検索でもメモの言葉で見つかります。</p>
+    <p>1日の終わりに、「今日」のグループの <strong>■</strong> でタブをまとめて閉じます。保存は残るので、終わらなかったものは明日の朝にそのまま開けます。</p>
+    <div class="blog-callout"><p>💡 <strong>サイドパネルを2つ使うとき。</strong>Chrome のサイドパネルは、1つのウィンドウで一度に1つの拡張機能の画面しか出せません。LB TAB Layers（Alt+T）と LB AI Prompt side bar（Alt+A）はショートカットがぶつからないので、切り替えて使えます。両方を同時に見たいときは、AI Prompt side bar の ⧉（別のウィンドウで開く）を押して、外に出しておきます。なお、3つの道具の間でデータは受け渡されません。コピーして次の道具に渡すのは、人の手です。</p></div>
+
+    <h2>続けるための3つのコツ</h2>
+    <ul>
+      <li><strong>10分を超えたら止める。</strong>完ぺきな計画より、3つが決まっていることのほうが大事です。</li>
+      <li><strong>金曜の朝は、来週の分も少し考える。</strong>月曜の朝の10分が軽くなります。</li>
+      <li><strong>3つのうち1つは、早めに終わる小さな仕事にする。</strong>午前中に1つ終わると、残りに手をつけやすくなります。</li>
+    </ul>
+    <p>まずは明日の朝、メールを開く前に、昨日の宿題を書き出すところから試してみてください。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 朝のToDoは、いくつに絞ればよいですか？</h3>
+    <p>3つが目安です。会議や急な依頼で時間は削られるので、3つ終われば十分な日にしておきます。早く終わったら、明日以降に回したものから選びます。</p>
+
+    <h3>Q. AIに優先順位を決めてもらってよいのですか？</h3>
+    <p>並べ替えと理由の整理を頼み、最後に決めるのは自分にします。AIは、締め切りの裏にある事情や、相手との関係の細かいところまでは知りません。顧客名や個人の名前は伏せてから入れてください。</p>
+
+    <h3>Q. 朝のタブをまとめて開くには、どうすればよいですか？</h3>
+    <p>Chrome の起動時の設定、ブックマークのフォルダ、LB TAB Layers のグループの3つの方法があります。LB TAB Layers では ▶ を押すと、まだ開いていないページだけが開きます。</p>
+
+    <h3>Q. LB TAB Layers の「メモ」は、ブックマークに保存されますか？</h3>
+    <p>Chrome のブックマークにはメモ欄がないため、メモは拡張機能の側に保存されます。タブそのもの（グループ）は、Chrome のブックマークのフォルダとして保存されます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html&amp;text=%E6%9C%9D%E3%81%AE10%E5%88%86%E3%81%A7%E4%BB%8A%E6%97%A5%E3%81%AEToDo%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fmorning-10-minutes-todo-ai.html&amp;title=%E6%9C%9D%E3%81%AE10%E5%88%86%E3%81%A7%E4%BB%8A%E6%97%A5%E3%81%AEToDo%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/morning-10-minutes-todo-ai.html" data-title="朝の10分で今日のToDoを決める方法" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>朝のタブは、▶ ひとつで。</h3><p>「毎朝」のグループを作って ▶ を押すだけ。開いているページは二重に開きません。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=morning-10-minutes-todo-ai" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="one-click-open-tab-set.html">毎朝使うタブを1クリックでまとめて開く方法 <span>→</span></a><a href="startup-peek-overlay.html">Chrome起動時にサイドバーを自動で開く方法 <span>→</span></a><a href="feature-notes.html">【機能ガイド】メモ機能 — 保存したタブに「なぜ残したか」を書いておく <span>→</span></a><a href="close-all-tabs-shortcut.html">Chrome でタブをまとめて閉じるショートカット <span>→</span></a><a href="remote-work-tab-management.html">リモートワークのタブ管理術 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">サイドパネルを使用する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

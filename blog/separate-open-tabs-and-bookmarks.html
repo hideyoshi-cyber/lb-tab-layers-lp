@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「開いているタブ」と「保存したブックマーク」が混ざって迷うときは — 2つの画面に分けて使い分ける | LB TAB Layers Blog</title>
+  <meta name="description" content="開いているタブと保存したブックマークが混ざって迷う人へ。Chrome 標準での見分け方と、LB TAB Layers の「タブ」「ブックマーク」の切り替えで、今やることと保存したものを分けて使う方法を説明します。">
+  <meta name="keywords" content="開いているタブ ブックマーク 違い,タブ ブックマーク 分ける,Chrome タブ 整理,サイドパネル タブ ブックマーク,タブ 管理 迷う,単独タブ">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html">
+  <meta property="og:title" content="「開いているタブ」と「保存したブックマーク」が混ざって迷うときは"><meta property="og:description" content="今やることと、置き場所が決まったもの。2つの画面に分けて、パネルを開くたびの迷いを減らす使い分け。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-26T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="「開いているタブ」と「保存したブックマーク」が混ざって迷うときは"><meta name="twitter:description" content="今やることと、置き場所が決まったもの。2つの画面に分けて、パネルを開くたびの迷いを減らす使い分け。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"開いているタブと保存したブックマークを分ける","item":"https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"「開いているタブ」と「保存したブックマーク」が混ざって迷うときは — 2つの画面に分けて使い分ける","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-26","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-assets.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"開いているのに「タブ」画面に出ないタブがあります。","acceptedAnswer":{"@type":"Answer","text":"どれかのグループに保存済みのタブと、Chrome のタブグループに入っているタブは、単独タブとしては並びません。保存済みのタブは「ブックマーク」画面のグループの中で探せます。また、一覧に並ぶのはパネルを開いているウィンドウのタブです。"}},{"@type":"Question","name":"「タブ」画面では保存先のグループが見えなくて不便では？","acceptedAnswer":{"@type":"Answer","text":"行のフォルダのアイコン（フォルダに保存）から保存先を選べます。タブをドラッグして「ブックマーク」ボタンに重ね、切り替わったグループの上で離す方法もあります。両方を同時に見たいときは「統合」に切り替えてください。"}},{"@type":"Question","name":"元の上下に並んだ画面に戻すには？","acceptedAnswer":{"@type":"Answer","text":"切替バーの「統合」を押します。「設定」→「表示とテーマ」→「表示要素」→「画面レイアウト」で「統合（上下分割）」を選んでも同じです。"}},{"@type":"Question","name":"「ブックマーク」ボタンの数字は何の数ですか？","acceptedAnswer":{"@type":"Answer","text":"グループの数です（サブグループを含み、アーカイブしたグループは除きます）。ブックマークの件数ではありません。"}},{"@type":"Question","name":"この切り替えは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、無料です。「タブ」画面の下にある「本日の履歴」だけは、PRO版とトライアル中に使える機能です。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"LB TAB Layers で開いているタブと保存したブックマークを分けて使う","step":[{"@type":"HowToStep","position":1,"name":"「タブ」画面を開く","text":"Alt+T（Macは Option+T）でパネルを開き、切替バーの「タブ」を押します。"},{"@type":"HowToStep","position":2,"name":"残す・閉じるを決める","text":"残したいタブは行のフォルダのアイコンから「フォルダに保存」でグループを選び、用が済んだタブは × で閉じます。"},{"@type":"HowToStep","position":3,"name":"ドラッグで保存する","text":"タブの行を「ブックマーク」ボタンに重ねて画面を切り替え、保存したいグループの上で離します。"},{"@type":"HowToStep","position":4,"name":"保存したものを開く","text":"「ブックマーク」を押し、グループの中のタブを開きます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">タブ管理のコツ</span><h1>開いているタブと<br>保存したブックマークを分ける</h1><p class="blog-meta"><time datetime="2026-10-26">2026.10.26</time> · Liquid Block Inc. · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-assets.webp" alt="開いているタブと保存したブックマークを分けて使う" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html&amp;text=%E3%80%8C%E9%96%8B%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%82%BF%E3%83%96%E3%80%8D%E3%81%A8%E3%80%8C%E4%BF%9D%E5%AD%98%E3%81%97%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%81%8C%E6%B7%B7%E3%81%96%E3%81%A3%E3%81%A6%E8%BF%B7%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%202%E3%81%A4%E3%81%AE%E7%94%BB%E9%9D%A2%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html&amp;title=%E3%80%8C%E9%96%8B%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%82%BF%E3%83%96%E3%80%8D%E3%81%A8%E3%80%8C%E4%BF%9D%E5%AD%98%E3%81%97%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%81%8C%E6%B7%B7%E3%81%96%E3%81%A3%E3%81%A6%E8%BF%B7%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%202%E3%81%A4%E3%81%AE%E7%94%BB%E9%9D%A2%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html" data-title="「開いているタブ」と「保存したブックマーク」が混ざって迷うときは — 2つの画面に分けて使い分ける" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>迷いを減らすには、「今開いているタブ」と「保存したブックマーク」を別々の画面で見るのが近道です。</strong>開いているタブは「これから判断するもの」、保存したものは「置き場所が決まったもの」と、役割が違うからです。Chrome では、開いているタブはタブバーとタブ検索、ブックマークはブックマークバーやブックマーク マネージャーと、場所が分かれています。LB TAB Layers v2.9.0 では、サイドパネルの切替バーの「タブ」と「ブックマーク」を押すだけで、この2つを1つのパネルの中で切り替えられます。</p>
+
+    <p>サイドパネルに、開いているタブも保存したタブも並んでいると、「このタブ、保存したっけ？」「これは今使っているもの？」と、見るたびに小さな判断が入ります。1回は数秒でも、1日に何十回も積み重なると、思った以上に頭が疲れます。</p>
+    <p>この記事では、2つを分けて見るとなぜ迷いが減るのか、Chrome の標準機能での見分け方、そして LB TAB Layers の「タブ」「ブックマーク」の切り替えを使った進め方を紹介します。</p>
+
+    <h2>迷う原因は、役割の違うものが同じ場所にあること</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>開いているタブ</th><th>保存したブックマーク</th></tr></thead><tbody>
+    <tr><td>役割</td><td>今使っている／まだ判断していない</td><td>置き場所が決まった／あとで使う</td></tr>
+    <tr><td>増え方</td><td>調べものや作業のたびに増える</td><td>自分で保存したときだけ増える</td></tr>
+    <tr><td>やること</td><td>保存する・閉じる・そのまま使う、を決める</td><td>必要なときに開く</td></tr>
+    </tbody></table></div>
+    <p>開いているタブは机の上に広げた書類、保存したブックマークは棚にしまったファイルのようなものです。机の上と棚の中身が1つのリストに混ざっていると、今やることを探すたびに、棚の中まで目に入ってしまいます。</p>
+
+    <h2>Chrome の標準機能で分けて見る方法</h2>
+    <p>Chrome でも、開いているタブとブックマークは別の場所で扱います。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>見たいもの</th><th>Chrome での見方</th></tr></thead><tbody>
+    <tr><td>開いているタブ</td><td>タブバー、タブ検索（Ctrl+Shift+A、Macは ⌘+Shift+A）</td></tr>
+    <tr><td>ブックマーク</td><td>ブックマークバー（Ctrl+Shift+B、Macは ⌘+Shift+B で表示／非表示）、サイドパネルの「ブックマーク」、ブックマーク マネージャー（Ctrl+Shift+O、Macは ⌘+Option+B）</td></tr>
+    </tbody></table></div>
+    <p>場所が分かれているので混ざることはありませんが、行き来するたびに別の画面を開くことになります。「開いているタブを1つ保存して、保存先のフォルダを確かめる」といった流れでは、タブバー、保存のダイアログ、ブックマークの画面と、順に移ることになります。</p>
+
+    <h2>LB TAB Layers では、切替バーの2つのボタンで分ける</h2>
+    <p>LB TAB Layers の v2.9.0 から、サイドパネルのグループ一覧の上に<strong>切替バー</strong>が付きました（上部のモードが「タブ」のときに表示されます）。この中の「タブ」と「ブックマーク」が、今回の使い分けの中心です。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>ボタン</th><th>画面に出るもの</th><th>ボタンの数字</th></tr></thead><tbody>
+    <tr><td><strong>タブ</strong></td><td>開いているタブのうち、どのグループにも保存していないもの（単独タブ）</td><td>単独タブの数</td></tr>
+    <tr><td><strong>ブックマーク</strong></td><td>保存したグループの一覧（中身は Chrome のブックマーク）</td><td>グループの数</td></tr>
+    </tbody></table></div>
+    <p>「タブ」画面に出るのは、<strong>まだどこにも保存していない開いているタブだけ</strong>です。グループに保存したタブはここには並ばず、「ブックマーク」画面のグループの中にあります。つまり「タブ」画面は、これから判断するものが集まる受け箱のような場所です。</p>
+    <div class="blog-callout"><p>💡 上部のモードの「タブ」と、切替バーの「タブ」は同じ名前ですが、別のボタンです。上部のモードを「タブ」にしたときに、その下に切替バーが出ます。</p></div>
+
+    <h2>使い分けの手順</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>「タブ」画面を開く</h3><p>Alt+T（Macは Option+T）でパネルを開き、切替バーの「タブ」を押します。開いているタブのうち、まだ保存していないものが並びます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>1つずつ「残す・閉じる」を決める</h3><p>残したいタブは、行にマウスを乗せて右側のフォルダのアイコン（フォルダに保存）を押し、「フォルダに保存」→ 保存先のグループを選びます（行の右クリックでも同じメニューが出ます）。用が済んだタブは、行の × で閉じます。今まさに使っているタブは、そのままで大丈夫です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>ドラッグで保存してもよい</h3><p>タブの行をつかんで切替バーの「ブックマーク」に重ねると、少しして「ブックマーク」画面に切り替わります。そのまま保存したいグループの上で離すと保存されます（ボタンの上で離しただけでは保存されません）。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>保存したものは「ブックマーク」画面から開く</h3><p>必要になったら「ブックマーク」を押し、グループの中のタブを開きます。グループの ▶（全タブを開く）で、まとめて開くこともできます。</p></div></div>
+    <p>保存してもタブは閉じません。保存すると「タブ」画面からは消えて、「タブ」ボタンの数字が1つ減ります。この数字を「まだ判断していないタブの数」として見ると、片付けの目安になります。</p>
+
+    <h2>1日の流れに当てはめると</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>タイミング</th><th>見る画面</th><th>やること</th></tr></thead><tbody>
+    <tr><td>仕事を始めるとき</td><td>ブックマーク</td><td>今日の案件のグループを開く</td></tr>
+    <tr><td>作業中</td><td>（必要なときだけ）タブ</td><td>調べもので増えたタブを、保存か閉じるかに分ける</td></tr>
+    <tr><td>一区切りついたとき</td><td>タブ</td><td>数字が増えていたら、まとめて片付ける</td></tr>
+    <tr><td>仕事を終えるとき</td><td>タブ → ブックマーク</td><td>残すものを保存してから閉じる</td></tr>
+    </tbody></table></div>
+    <p>開きっぱなしのタブをまとめて片付ける方法は、「<a href="feature-ungrouped-tabs.html">単独タブ — グループに入っていないタブを一括で片付ける</a>」も参考にしてください。v2.9.0 の変更点の全体は「<a href="v290-update.html">v2.9.0 アップデート</a>」にまとめています。</p>
+
+    <h2>2つを同時に見たいときは「統合」</h2>
+    <p>たくさんのタブを、いくつものグループに振り分けたいときは、上下に並べて見られる「統合」が便利です。上にグループ、下に単独タブが並ぶので、下のタブを上のグループへそのままドラッグできます。上下の境目をドラッグして広さを変えることもできます（リサイズと折りたたみは「統合」のときに使えます）。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>こんなとき</th><th>向いている画面</th></tr></thead><tbody>
+    <tr><td>開いているタブを落ち着いて片付けたい</td><td>タブ</td></tr>
+    <tr><td>保存したものから開きたい・探したい</td><td>ブックマーク</td></tr>
+    <tr><td>大量のタブをグループに振り分けたい</td><td>統合</td></tr>
+    <tr><td>作業のメモや ToDo を書きたい</td><td>メモ</td></tr>
+    </tbody></table></div>
+    <p>切替バーのボタンはドラッグで並びを変えられるので、いちばん使う画面を左端に置いておくと迷いにくくなります。今やることと、もう置き場所が決まったものを分けておくだけで、パネルを開くたびの小さな判断が減り、そのぶん目の前の仕事に頭を使えます。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 開いているのに「タブ」画面に出ないタブがあります。</h3>
+    <p>どれかのグループに保存済みのタブと、Chrome のタブグループに入っているタブは、単独タブとしては並びません。保存済みのタブは「ブックマーク」画面のグループの中で探せます。また、一覧に並ぶのはパネルを開いているウィンドウのタブです。</p>
+
+    <h3>Q. 「タブ」画面では保存先のグループが見えなくて不便では？</h3>
+    <p>行のフォルダのアイコン（フォルダに保存）から保存先を選べます。タブをドラッグして「ブックマーク」ボタンに重ね、切り替わったグループの上で離す方法もあります。両方を同時に見たいときは「統合」に切り替えてください。</p>
+
+    <h3>Q. 元の上下に並んだ画面に戻すには？</h3>
+    <p>切替バーの「統合」を押します。「設定」→「表示とテーマ」→「表示要素」→「画面レイアウト」で「統合（上下分割）」を選んでも同じです。</p>
+
+    <h3>Q. 「ブックマーク」ボタンの数字は何の数ですか？</h3>
+    <p>グループの数です（サブグループを含み、アーカイブしたグループは除きます）。ブックマークの件数ではありません。</p>
+
+    <h3>Q. この切り替えは無料で使えますか？</h3>
+    <p>はい、無料です。「タブ」画面の下にある「本日の履歴」だけは、PRO版とトライアル中に使える機能です。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html&amp;text=%E3%80%8C%E9%96%8B%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%82%BF%E3%83%96%E3%80%8D%E3%81%A8%E3%80%8C%E4%BF%9D%E5%AD%98%E3%81%97%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%81%8C%E6%B7%B7%E3%81%96%E3%81%A3%E3%81%A6%E8%BF%B7%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%202%E3%81%A4%E3%81%AE%E7%94%BB%E9%9D%A2%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fseparate-open-tabs-and-bookmarks.html&amp;title=%E3%80%8C%E9%96%8B%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%82%BF%E3%83%96%E3%80%8D%E3%81%A8%E3%80%8C%E4%BF%9D%E5%AD%98%E3%81%97%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%81%8C%E6%B7%B7%E3%81%96%E3%81%A3%E3%81%A6%E8%BF%B7%E3%81%86%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%202%E3%81%A4%E3%81%AE%E7%94%BB%E9%9D%A2%E3%81%AB%E5%88%86%E3%81%91%E3%81%A6%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/separate-open-tabs-and-bookmarks.html" data-title="「開いているタブ」と「保存したブックマーク」が混ざって迷うときは — 2つの画面に分けて使い分ける" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>今やることと、しまったものを分ける。</h3><p>「タブ」と「ブックマーク」をワンクリックで切り替え。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=separate-open-tabs-and-bookmarks" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="v290-update.html">v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブでの表示ほか <span>→</span></a><a href="feature-ungrouped-tabs.html">【機能ガイド】単独タブ — グループに入っていないタブを一括で片付ける <span>→</span></a><a href="feature-save-tabs.html">【機能ガイド】タブを保存する3つの方法 — ＋ボタン・ドラッグ・右クリック <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/2391819?hl=ja&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Chrome でタブを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/157179?hl=ja" target="_blank" rel="noopener">Chrome のキーボード ショートカット — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
