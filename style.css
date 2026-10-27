@@ -1889,6 +1889,8 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 .reduce-arrow { color: var(--accent); font-size: 1.2rem; font-weight: 600; }
 .reduce-after { color: var(--text); font-size: 1rem; font-weight: 600; line-height: 1.5; }
 #hero h1 .h1-phrase { display: inline-block; }
+/* 見出しが「タブやブックマークを探す時間を、」と長くなったので、右の画面イメージに食い込まない大きさにする（2026-10-27） */
+#hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.5rem); }
 .reduce-close { text-align: center; margin-top: 36px; font-size: 1.15rem; font-weight: 600; color: var(--text); }
 
 #philosophy { padding: 100px 0; }
