@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIのタブを開きすぎない — ChatGPT・Claude・Gemini の使い分けを決める5つのルール | LB TAB Layers Blog</title>
+  <meta name="description" content="ChatGPT・Claude・Gemini などAIのタブが増えすぎるのを防ぐ、使い分けの決め方です。用途ごとに担当のAIを決める、常に開くのは2つまで、開くときは既存のタブへ、残す会話は案件のグループへ、の5つのルールと道具の使い方を紹介します。">
+  <meta name="keywords" content="AI 使い分け,ChatGPT Claude Gemini 使い分け,AI タブ 増える,生成AI タブ 整理,AIチャット タブ 管理,生成AI 複数 使い方">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html">
+  <meta property="og:title" content="AIのタブを開きすぎない — 使い分けの決め方"><meta property="og:description" content="用途ごとに担当のAIを決めて、常に開くのは2つまで。AIのタブを増やさない5つのルール。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-10-28T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="AIのタブを開きすぎない — 使い分けの決め方"><meta name="twitter:description" content="用途ごとに担当のAIを決めて、常に開くのは2つまで。AIのタブを増やさない5つのルール。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"AIのタブを開きすぎない","item":"https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"AIのタブを開きすぎない：使い分けを決める5つのルール","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-28","image":"https://tablayers.liquid-block.com/blog/hero-ai-search.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ChatGPT・Claude・Gemini は、どう使い分ければよいですか？","acceptedAnswer":{"@type":"Answer","text":"用途ごとに担当を1つ決め、常に開いておくのはメインとサブの2つまでにします。どのAIが向いているかは版によって変わるので、自分の仕事の同じ指示で比べて決めるのが確かです。"}},{"@type":"Question","name":"AIの会話のタブを閉じると、会話は消えますか？","acceptedAnswer":{"@type":"Answer","text":"多くのAIでは、会話は履歴に残り、1つの会話に1つのURLがあります。残したい会話のURLをブックマークや LB TAB Layers のグループに保存しておけば、閉じてもあとで続きから開けます。"}},{"@type":"Question","name":"すでに開いているAIのタブに切り替えるには？","acceptedAnswer":{"@type":"Answer","text":"Chrome のタブの一覧の検索（Ctrl+Shift+A）で、AIの名前を入れて探せます。LB AI Prompt side bar の AIランチャーは、今のウィンドウにそのAIのタブがあれば、そのタブに切り替えます。"}},{"@type":"Question","name":"LB TAB Layers と LB AI Prompt side bar を同時に表示できますか？","acceptedAnswer":{"@type":"Answer","text":"Chrome のサイドパネルは、1つのウィンドウで一度に1つの拡張機能しか表示できません。AI Prompt side bar の ⧉（別のウィンドウで開く）を使うと、両方を同時に見られます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"AIのタブを開きすぎないための使い分けを決める","step":[{"@type":"HowToStep","position":1,"name":"用途を書き出す","text":"文章の下書き・調べもの・長い資料の要約・画像など、AIを使う用途を書き出します。"},{"@type":"HowToStep","position":2,"name":"担当のAIを決める","text":"用途ごとに担当を1つ決め、常に開いておくのはメインとサブの2つまでにします。"},{"@type":"HowToStep","position":3,"name":"開くときは既存のタブへ","text":"AIを開く前に、すでに開いているタブがないか探して、そちらに切り替えます。"},{"@type":"HowToStep","position":4,"name":"残す会話は案件のグループへ","text":"残したい会話のURLを、その仕事のグループに保存してから閉じます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">v2.8.71</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">活用テクニック</span><h1>AIのタブを開きすぎない<br>使い分けの決め方</h1><p class="blog-meta"><time datetime="2026-10-28">2026.10.28</time> · Liquid Block Inc. · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-ai-search.webp" alt="ChatGPT・Claude・Gemini などのAIのタブを、使い分けのルールで整理するイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html&amp;text=AI%E3%81%AE%E3%82%BF%E3%83%96%E3%82%92%E9%96%8B%E3%81%8D%E3%81%99%E3%81%8E%E3%81%AA%E3%81%84%EF%BC%9A%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html&amp;title=AI%E3%81%AE%E3%82%BF%E3%83%96%E3%82%92%E9%96%8B%E3%81%8D%E3%81%99%E3%81%8E%E3%81%AA%E3%81%84%EF%BC%9A%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html" data-title="AIのタブを開きすぎない：使い分けを決める5つのルール" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>AIのタブが増えるのは、「どのAIに聞くか」を毎回その場で決めているからです。</strong>用途ごとに担当のAIを決め、常に開いておくのはメインとサブの2つまでにします。AIを開くときはすでに開いているタブに切り替え、残したい会話は案件ごとのグループに保存してから閉じます。</p>
+
+    <p>ChatGPT、Claude、Gemini、Perplexity、画像のAI。気づくとタブバーの半分がAIになっていて、同じAIが2枚開いていることもあります。「さっきの会話はどのタブだったか」を探すうちに、聞きたかったことを忘れてしまう。</p>
+    <p>AIのタブが増える原因は、AIの数ではなく、<strong>使い分けが決まっていないこと</strong>です。この記事では、AIのタブを増やさないための5つのルールを紹介します。</p>
+
+    <h2>なぜAIのタブは増えるのか</h2>
+    <ul>
+      <li><strong>どのAIに聞くか、毎回迷う。</strong>迷ったまま、とりあえず別のAIも開いて聞いてみる。</li>
+      <li><strong>新しい話を、新しいタブで始める。</strong>前の会話を残したまま、もう1枚開く。</li>
+      <li><strong>会話を閉じるのが不安。</strong>閉じたら消える気がして、開いたままにする。</li>
+    </ul>
+    <p>3つとも、ルールを決めれば減らせます。</p>
+
+    <h2>ルール1：用途ごとに「担当のAI」を決める</h2>
+    <p>まず、自分がAIを使う用途を書き出して、用途ごとに担当を1つ決めます。次の表を、自分の言葉で埋めてみてください。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>用途</th><th>担当のAI</th><th>決めるときの観点</th></tr></thead><tbody>
+    <tr><td><strong>文章の下書き・推敲</strong></td><td>（メイン）</td><td>いちばんよく使う用途。会社で使ってよいAIか</td></tr>
+    <tr><td><strong>調べもの</strong></td><td>（サブ）</td><td>出典のリンクを示してくれるか</td></tr>
+    <tr><td><strong>長い資料の要約</strong></td><td>（メインかサブ）</td><td>長い文章やファイルを渡せるか</td></tr>
+    <tr><td><strong>画像・動画</strong></td><td>（必要なときだけ）</td><td>毎日使わないなら、常には開かない</td></tr>
+    </tbody></table></div>
+    <p>どのAIが何に向いているかは、版が変わるたびに変わります。<strong>人の評判より、自分の仕事で比べる</strong>のが確かです。同じ指示を複数のAIに出して比べるやり方は、LB AI Prompt side bar のブログの「<a href="https://aipromptbar.liquid-block.com/blog/compare-ai-with-same-prompt.html" target="_blank" rel="noopener">複数のAIを使い分ける：同じプロンプトで比べる方法</a>」が参考になります。比べるのは月に1回くらいで十分です。</p>
+
+    <h2>ルール2：常に開いておくのは2つまで</h2>
+    <p>担当を決めたら、<strong>常に開いておくのは、メインとサブの2つまで</strong>にします。画像のAIのように毎日は使わないものは、使うときだけ開いて、終わったら閉じます。</p>
+    <p>LB TAB Layers を使うなら、「AI」のグループにメインとサブのトップページを保存しておきます。朝に Alt+T で開いて <strong>▶</strong> を押せば2つがそろいます。すでに開いているときは、二重に開きません。</p>
+
+    <h2>ルール3：AIを開くときは「すでに開いているタブ」へ</h2>
+    <p>AIのタブが2枚になるのは、開いていることに気づかずに、もう一度開くからです。開く前に、すでに開いているタブがないか探す習慣をつけます。Chrome なら、タブの一覧の検索（Ctrl+Shift+A）で、AIの名前を入れると見つかります。</p>
+    <p><a href="https://aipromptbar.liquid-block.com/" target="_blank" rel="noopener">LB AI Prompt side bar</a> の「AIランチャー」は、この手間を省きます。サイドパネルの上に並んだAIのアイコンを押すと、<strong>今のウィンドウにそのAIのタブがあれば、そのタブに切り替わり</strong>、なければ新しいタブで開きます。AIへの指示（コマンド）を選んで ⚡ で入力欄に入れる拡張なので、「開く」と「指示を入れる」が同じ場所で済みます。くわしくは「<a href="https://aipromptbar.liquid-block.com/blog/ai-launcher-guide.html" target="_blank" rel="noopener">AIランチャーの使い方</a>」をどうぞ。</p>
+
+    <h2>ルール4：残したい会話は、案件のグループに保存してから閉じる</h2>
+    <p>ChatGPT・Claude・Gemini の会話は、多くの場合、1つの会話に1つのURLがあります。URLを残しておけば、タブを閉じても、あとで続きから開けます。</p>
+    <p>LB TAB Layers では、残したい会話のタブを、<strong>「AI」のグループではなく、その仕事のグループ</strong>に保存します。A社の提案書を相談した会話なら「A社 提案」のグループへ。サイドパネルで右クリックして「メモを編集」を選び、「構成案の3案目がよかった」のように一言書いておくと、あとで探すときに迷いません。保存したら、タブは閉じてかまいません。</p>
+    <p>会話の残し方と、案件が終わったあとの片付け方は「<a href="manage-ai-chat-tabs.html">ChatGPT・Gemini・Claude の会話タブを整理する</a>」にくわしく書いています。</p>
+
+    <h2>ルール5：会議の要約のために、AIのタブを増やさない</h2>
+    <p>AIのタブが増える場面の1つが、会議のあとです。文字起こしを貼って要約させ、宿題を抜き出させ、メールの下書きを作らせる。そのたびに新しい会話が増えます。</p>
+    <p>会議の録音から議事録を作るなら、<a href="https://gijimemorec.liquid-block.com/" target="_blank" rel="noopener">議事メモレック</a>のように、<strong>要約とやることリストまでを1回で作る道具</strong>を使うと、そのためにAIのタブを開く必要がなくなります。議事メモレックは登録不要・月額不要で、文字起こし・要約・やることリスト・話者分離までを作ります。音声はお支払いの前に削除されます。録音するときは、参加者の同意を取ってから始めてください。</p>
+    <p>そのうえでAIに頼みたいこと（お礼のメールなど）があれば、メインのAIの1つの会話にまとめます。会議の内容をAIに入れるときは、会社のルールで使ってよいとされているAIにだけ入れます。</p>
+    <div class="blog-callout"><p>💡 <strong>サイドパネルを2つ使うとき。</strong>Chrome のサイドパネルは、1つのウィンドウで一度に1つの拡張機能の画面しか出せません。LB TAB Layers（Alt+T）と LB AI Prompt side bar（Alt+A）はショートカットがぶつからないので、切り替えて使えます。両方を同時に見たいときは、AI Prompt side bar の ⧉（別のウィンドウで開く）を押して、外に出しておきます。なお、3つの道具の間でデータは受け渡されません。コピーして次の道具に渡すのは、人の手です。</p></div>
+
+    <h2>週に1回、AIのタブを見直す</h2>
+    <p>ルールを決めても、少しずつタブは増えます。週に1回、次の3つを確かめます。</p>
+    <ul>
+      <li>この1週間、1回も使わなかったAIのタブはないか → 閉じる</li>
+      <li>同じAIが2枚開いていないか → 残したい会話を保存して、1枚にする</li>
+      <li>担当のAIを変えたほうがよい用途はないか → 表を書き直す</li>
+    </ul>
+    <p>AIの数が増えても、用途ごとの担当が決まっていれば、タブは増えません。まずはルール1の表を、今日の仕事で埋めてみてください。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. ChatGPT・Claude・Gemini は、どう使い分ければよいですか？</h3>
+    <p>用途ごとに担当を1つ決め、常に開いておくのはメインとサブの2つまでにします。どのAIが向いているかは版によって変わるので、自分の仕事の同じ指示で比べて決めるのが確かです。</p>
+
+    <h3>Q. AIの会話のタブを閉じると、会話は消えますか？</h3>
+    <p>多くのAIでは、会話は履歴に残り、1つの会話に1つのURLがあります。残したい会話のURLをブックマークや LB TAB Layers のグループに保存しておけば、閉じてもあとで続きから開けます。</p>
+
+    <h3>Q. すでに開いているAIのタブに切り替えるには？</h3>
+    <p>Chrome のタブの一覧の検索（Ctrl+Shift+A）で、AIの名前を入れて探せます。LB AI Prompt side bar の AIランチャーは、今のウィンドウにそのAIのタブがあれば、そのタブに切り替えます。</p>
+
+    <h3>Q. LB TAB Layers と LB AI Prompt side bar を同時に表示できますか？</h3>
+    <p>Chrome のサイドパネルは、1つのウィンドウで一度に1つの拡張機能しか表示できません。AI Prompt side bar の ⧉（別のウィンドウで開く）を使うと、両方を同時に見られます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html&amp;text=AI%E3%81%AE%E3%82%BF%E3%83%96%E3%82%92%E9%96%8B%E3%81%8D%E3%81%99%E3%81%8E%E3%81%AA%E3%81%84%EF%BC%9A%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftoo-many-ai-tabs.html&amp;title=AI%E3%81%AE%E3%82%BF%E3%83%96%E3%82%92%E9%96%8B%E3%81%8D%E3%81%99%E3%81%8E%E3%81%AA%E3%81%84%EF%BC%9A%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/too-many-ai-tabs.html" data-title="AIのタブを開きすぎない：使い分けを決める5つのルール" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>AIの会話は、案件ごとに残して閉じる。</h3><p>会話のタブをグループに保存して ■ で閉じても、▶ で続きから開けます。アカウント登録なし · 保存先は Chrome のブックマーク · 3か月すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=too-many-ai-tabs" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="manage-ai-chat-tabs.html">ChatGPT・Gemini・Claude の会話タブを整理する — 案件ごとに残して、あとで続きから <span>→</span></a><a href="gemini-thread-organize.html">Geminiのスレッドをフォルダ整理できない問題 — 5つの代替アプローチ <span>→</span></a><a href="ai-tools-bookmark-collection.html">生成AIリンク集をブックマークでまとめる — ChatGPT・Claude・Geminiを一元管理 <span>→</span></a><a href="chrome-tab-too-many.html">Chromeのタブを開きすぎて重いときの対策5つ <span>→</span></a><a href="ai-prompt-side-bar-release.html">姉妹拡張「LB AI Prompt side bar」を公開しました <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/2391819?hl=ja&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Chrome でタブを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">サイドパネルを使用する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
