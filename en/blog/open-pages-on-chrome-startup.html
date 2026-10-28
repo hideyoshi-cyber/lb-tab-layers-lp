@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Open Specific Pages When Chrome Starts (and a More Flexible Way) | LB TAB Layers Blog</title>
+  <meta name="description" content="Set Chrome to open specific pages every time it starts, step by step — plus the limits of the built-in setting and a more flexible way to open your daily tabs.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/chrome-startup-settings.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html">
+  <meta property="og:title" content="How to open specific pages when Chrome starts"><meta property="og:description" content="The built-in startup setting step by step, where it falls short, and a more flexible way to open your daily tabs."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-10-29T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="How to open specific pages when Chrome starts"><meta name="twitter:description" content="The built-in startup setting step by step, where it falls short, and a more flexible way to open your daily tabs."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-productivity-work.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Open pages on startup","item":"https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"How to open specific pages on Chrome startup — the built-in setting, its limits, and a more flexible morning routine","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-10-29","image":"https://tablayers.liquid-block.com/blog/hero-productivity-work.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I make Chrome open specific pages when it starts?","acceptedAnswer":{"@type":"Answer","text":"Go to Settings → On startup, choose Open a specific page or set of pages, then click Add a new page for each one, or Use current pages to add the tabs you have open."}},{"@type":"Question","name":"Why doesn’t Chrome open my startup pages?","acceptedAnswer":{"@type":"Answer","text":"Usually because Chrome never fully closed: it may keep running in the background on Windows, and on Mac closing the window doesn’t quit the app. Other causes are a setting managed by your organization or an extension that changes the startup page."}},{"@type":"Question","name":"Can I have different startup pages for different days?","acceptedAnswer":{"@type":"Answer","text":"Not with the built-in setting, which allows one list. Saving each set of pages as a group in LB TAB Layers lets you open whichever set you need with one click."}},{"@type":"Question","name":"Can I open specific pages and also continue where I left off?","acceptedAnswer":{"@type":"Answer","text":"No, Chrome lets you choose only one startup option. A common workaround is to continue where you left off and keep your daily set as a group you open when needed."}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"How to open specific pages when Chrome starts","step":[{"@type":"HowToStep","position":1,"name":"Open the startup settings","text":"Open chrome://settings/onStartup, or go to Settings → On startup."},{"@type":"HowToStep","position":2,"name":"Choose specific pages","text":"Select Open a specific page or set of pages."},{"@type":"HowToStep","position":3,"name":"Add your pages","text":"Click Add a new page and paste each address, or click Use current pages to add the tabs you have open."},{"@type":"HowToStep","position":4,"name":"Restart Chrome","text":"Quit Chrome completely and open it again to check that the pages open."}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">v2.8.71</a><a href="./">Blog</a><a href="../../blog/chrome-startup-settings.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>How to open specific pages when Chrome starts (and a more flexible way)</h1><p class="blog-meta"><time datetime="2026-10-29">Oct 29, 2026</time> · Liquid Block Inc. · 5 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-productivity-work.webp" alt="Chrome opening a set of pages at startup" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fopen-pages-on-chrome-startup.html&amp;text=How%20to%20open%20specific%20pages%20on%20Chrome%20startup%20%E2%80%94%20the%20built-in%20setting%2C%20its%20limits%2C%20and%20a%20more%20flexible%20morning%20routine" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fopen-pages-on-chrome-startup.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fopen-pages-on-chrome-startup.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">Go to <strong>Settings → On startup</strong>, choose <strong>Open a specific page or set of pages</strong>, and add the pages you want — or click <strong>Use current pages</strong>. Chrome will open them every time it starts. If your daily set changes by day or project, save each set as a group and open it with one click instead.</p>
+
+    <p>Mail, calendar, the team chat, the project board. If you open the same pages every morning, Chrome can do it for you. Here is how to set it up, where the built-in option runs out, and what to do when one fixed set isn’t enough.</p>
+
+    <h2>Chrome’s three startup options</h2>
+    <p>Open the ⋮ menu → <strong>Settings</strong> → <strong>On startup</strong> (or type <code>chrome://settings/onStartup</code>). You will see three choices:</p>
+    <table>
+      <thead><tr><th>Option</th><th>What happens when Chrome starts</th><th>Good for</th></tr></thead>
+      <tbody>
+        <tr><td>Open the New Tab page</td><td>A single blank new tab</td><td>A clean start every time</td></tr>
+        <tr><td>Continue where you left off</td><td>The tabs and windows you had open last time</td><td>Picking up yesterday’s work</td></tr>
+        <tr><td>Open a specific page or set of pages</td><td>The same list of pages, every time</td><td>A fixed daily routine</td></tr>
+      </tbody>
+    </table>
+    <p>You can only pick one. That matters later.</p>
+
+    <h2>How to open specific pages on startup</h2>
+    <ol>
+      <li>Open <code>chrome://settings/onStartup</code>.</li>
+      <li>Select <strong>Open a specific page or set of pages</strong>.</li>
+      <li>Click <strong>Add a new page</strong> and paste an address. Repeat for each page.</li>
+      <li>Or open all the pages you want in tabs first, then click <strong>Use current pages</strong> to add them in one go.</li>
+      <li>Close Chrome completely and open it again to check.</li>
+    </ol>
+    <p>To change the list later, click the ⋮ next to a page to edit or remove it.</p>
+
+    <h2>Startup pages vs. the home page</h2>
+    <p>These two are easy to mix up. <strong>Startup pages</strong> open automatically when Chrome starts. The <strong>home page</strong> is what opens when you click the house-shaped Home button next to the address bar. The Home button is hidden by default; turn it on under Settings → <strong>Appearance</strong> → <strong>Show home button</strong>, and choose what it opens there.</p>
+    <p>A common setup is to put your most important page on both: it opens at launch, and the Home button takes you back to it during the day.</p>
+
+    <h2>Which pages belong on the list?</h2>
+    <p>Keep the list short. Every page on it loads at the same moment, which slows down the start, and a page you rarely use becomes one more tab to close. A good test: if you would open the page on at least four days out of five, it belongs. If not, it belongs in a set you open on demand (more on that below).</p>
+
+    <h2>Things that can get in the way</h2>
+    <ul>
+      <li><strong>Chrome never really closed.</strong> On Windows, Chrome may keep running in the background, and on Mac closing the last window doesn’t quit the app. Startup pages only open on a real start. Quit Chrome from the menu (on Mac, Chrome → Quit Google Chrome).</li>
+      <li><strong>The setting is managed.</strong> On a work or school computer, the startup pages may be set by your organization. Chrome shows a note when a setting is managed.</li>
+      <li><strong>An extension took over.</strong> Some extensions change the startup page. If your list keeps changing, check <code>chrome://extensions</code>.</li>
+      <li><strong>Several profiles.</strong> Each Chrome profile has its own startup setting.</li>
+    </ul>
+
+    <h2>Where the built-in setting falls short</h2>
+    <ul>
+      <li><strong>One list for every day.</strong> Monday’s planning pages and Friday’s report pages can’t be separate.</li>
+      <li><strong>It replaces “continue where you left off.”</strong> If you choose specific pages, Chrome won’t bring back yesterday’s tabs. (For that side of things, see <a href="reopen-closed-tabs-chrome.html">how to reopen closed tabs</a>.)</li>
+      <li><strong>Only at launch.</strong> If Chrome is already open, there is no button to open the set again.</li>
+      <li><strong>All or nothing.</strong> Every page on the list opens, even on days you don’t need them.</li>
+    </ul>
+
+    <h2>A more flexible way: daily sets as groups</h2>
+    <p>Instead of one fixed list, keep each routine as a group in LB TAB Layers and open it when you need it:</p>
+    <ol>
+      <li><strong>Make a “Morning” group.</strong> Open your daily pages, then drag them from Solo Tabs into the group. If you are starting fresh, the presets include a ready-made Morning Routine group you can edit.</li>
+      <li><strong>Make other sets the same way</strong> — “Monday planning,” “Client A,” “Month-end report.”</li>
+      <li><strong>Open a set with one click.</strong> Press <strong>▶</strong> on a group, or click the group name, to open all of its tabs at once.</li>
+      <li><strong>Close it when you are done.</strong> Press <strong>■</strong> and the tabs close but stay saved.</li>
+    </ol>
+    <p>Because each group is a Chrome bookmark folder, your sets sync to other computers with your bookmarks and survive restarts and updates. Press <strong>Alt+T</strong> (Option+T on Mac) to open the panel from anywhere. For opening many links in one go, see <a href="open-multiple-tabs-at-once.html">how to open multiple tabs at once</a>.</p>
+
+    <h2>Combine the two</h2>
+    <p>A setup that works for many people:</p>
+    <ul>
+      <li>Set Chrome to <strong>Open a specific page or set of pages</strong> with only the one or two pages you truly open every day, like mail and calendar.</li>
+      <li>Keep everything else as groups and open them with ▶ when the day calls for it.</li>
+    </ul>
+    <p>Chrome starts quickly because it only loads a couple of pages, and the rest of your routine is one click away instead of twenty. On a slow morning you open one group; on a busy Monday you open three. The decision about what to load moves from a settings page you set up once to the moment you actually need the tabs.</p>
+    <p>If you want the panel itself in front of you at launch, LB TAB Layers has a <strong>Startup Display</strong> setting with <strong>Off</strong>, <strong>Peek</strong> and <strong>Always open</strong>. With Peek, the sidebar slides out once on the first web page you open after Chrome starts, then tucks away — a reminder that your groups are there. It works in the Overlay display mode, which is a PRO feature (included in the free trial), and not on the new tab page or chrome:// pages.</p>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. How do I make Chrome open specific pages when it starts?</h3>
+    <p>Go to Settings → On startup, choose Open a specific page or set of pages, then click Add a new page for each one, or Use current pages to add the tabs you have open.</p>
+
+    <h3>Q. Why doesn’t Chrome open my startup pages?</h3>
+    <p>Usually because Chrome never fully closed: it may keep running in the background on Windows, and on Mac closing the window doesn’t quit the app. Other causes are a setting managed by your organization or an extension that changes the startup page.</p>
+
+    <h3>Q. Can I have different startup pages for different days?</h3>
+    <p>Not with the built-in setting, which allows one list. Saving each set of pages as a group in LB TAB Layers lets you open whichever set you need with one click.</p>
+
+    <h3>Q. Can I open specific pages and also continue where I left off?</h3>
+    <p>No, Chrome lets you choose only one startup option. A common workaround is to continue where you left off and keep your daily set as a group you open when needed.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fopen-pages-on-chrome-startup.html&amp;text=How%20to%20open%20specific%20pages%20on%20Chrome%20startup%20%E2%80%94%20the%20built-in%20setting%2C%20its%20limits%2C%20and%20a%20more%20flexible%20morning%20routine" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fopen-pages-on-chrome-startup.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fopen-pages-on-chrome-startup.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/open-pages-on-chrome-startup.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>A routine for every morning, not just one.</h3><p>Save each set of pages as a group and open it in one click. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog_en&amp;utm_campaign=open-pages-on-chrome-startup" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="open-multiple-tabs-at-once.html">Open multiple tabs at once <span>→</span></a><a href="reopen-closed-tabs-chrome.html">How to reopen closed tabs in Chrome <span>→</span></a><a href="bulk-close-bulk-open.html">Close all at once, open all at once <span>→</span></a><a href="extension-shortcut-keys.html">Chrome extension keyboard shortcuts <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>
