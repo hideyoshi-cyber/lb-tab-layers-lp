@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Your Tab Manager in Its Own Window (or as a Browser Tab) | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome’s side panel lives inside one browser window. LB TAB Layers can also open as its own window or as a tab, which helps on a second monitor. Free.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/standalone-window-tab-manager.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html">
+  <meta property="og:title" content="A tab manager in its own window"><meta property="og:description" content="Put your groups and open tabs in a small window on a second monitor, or in a full tab on a laptop. How to set it up, and what to know."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-03T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="A tab manager in its own window"><meta name="twitter:description" content="Put your groups and open tabs in a small window on a second monitor, or in a full tab on a laptop. How to set it up, and what to know."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Standalone window and tab view","item":"https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"How to open a Chrome tab manager in its own window or a browser tab, for second monitors and small screens","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-03","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I open Chrome’s side panel in a separate window?","acceptedAnswer":{"@type":"Answer","text":"Google’s help describes resizing the side panel and moving it to the left or right, and the panel stays inside its browser window. LB TAB Layers can open in a standalone window instead: click the Display Method button in its header and choose Open in Standalone Window."}},{"@type":"Question","name":"Does the standalone window stay on top of other windows?","acceptedAnswer":{"@type":"Answer","text":"No. It behaves like a normal window. Put it on a second monitor or beside your browser so the browser does not cover it."}},{"@type":"Question","name":"Are the standalone window and tab view free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Fixed, Window and Tab are free. Overlay mode and the full-screen dashboard are PRO features, and every feature is unlocked during the 3-month free trial."}},{"@type":"Question","name":"Which browser window do my groups open in?","acceptedAnswer":{"@type":"Answer","text":"Your regular browser window, not the standalone window. If you have more than one browser window open, the standalone window works with the first one in Chrome’s list while you use it, which may not be the one you used last. With several browser windows, the side panel in each window is the simpler choice."}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Open LB TAB Layers in a standalone window","step":[{"@type":"HowToStep","position":1,"name":"Open the panel","text":"Press Alt+T or click the LB TAB Layers icon in the toolbar."},{"@type":"HowToStep","position":2,"name":"Open the Display Method menu","text":"Click the button to the right of the clock icon in the panel header."},{"@type":"HowToStep","position":3,"name":"Choose a standalone window","text":"Click Open in Standalone Window. A small window opens."},{"@type":"HowToStep","position":4,"name":"Place it","text":"Drag the window to a second monitor or beside your browser and resize it. It opens at that size next time."},{"@type":"HowToStep","position":5,"name":"Make it the default (optional)","text":"In Settings, Display and Theme, Sidebar Mode, set Sidebar Display Mode to Window."}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">v2.8.71</a><a href="./">Blog</a><a href="../../blog/standalone-window-tab-manager.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>Use your tab manager in its own window, or as a browser tab</h1><p class="blog-meta"><time datetime="2026-11-03">Nov 3, 2026</time> · Liquid Block Inc. · 7 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-bookmarks-panel.webp" alt="A floating panel listing saved bookmark folders" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-manager-in-standalone-window.html&amp;text=How%20to%20open%20a%20Chrome%20tab%20manager%20in%20its%20own%20window%20or%20a%20browser%20tab%2C%20for%20second%20monitors%20and%20small%20screens" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-manager-in-standalone-window.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-manager-in-standalone-window.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">Chrome’s side panel is part of the window it opens in: you can resize it or move it to the left or right, but it takes width from the page. LB TAB Layers 2.9.0 adds two more ways to open it. Click the <strong>Display Method</strong> button in the panel header and choose <strong>Open in Standalone Window</strong> (a small window you can put anywhere, such as on a second monitor) or <strong>Open in New Tab</strong>. To make either one the default for the toolbar icon and Alt+T, go to <strong>Settings → Display &amp; Theme → Sidebar Mode → Sidebar Display Mode</strong> and choose <strong>Window</strong> or <strong>Tab</strong>. Both are free.</p>
+
+    <p>A side panel is great until the page needs the room: a wide spreadsheet, a design file, a video call with screen sharing. On a laptop, every pixel the panel takes is a pixel the page loses. On a desk with two monitors, you may simply want the list on one screen and the work on the other.</p>
+
+    <h2>What Chrome itself lets you do</h2>
+    <p>Chrome gives you a few controls over its side panel, all described in Google’s help pages:</p>
+    <ul>
+      <li><strong>Resize it</strong> by dragging its edge.</li>
+      <li><strong>Move it to the left or right</strong> in <strong>Settings → Appearance → Side panel</strong>.</li>
+      <li><strong>Close it</strong> when you need the space, and open it again later.</li>
+    </ul>
+    <p>Each Chrome window has its own side panel, and the panel stays inside that window. If what you want is a tab list that sits on a different screen from the page, you need something that can open in a window of its own.</p>
+
+    <h2>Four ways to open LB TAB Layers</h2>
+    <div class="blog-table-wrap"><table class="blog-table">
+      <thead><tr><th>Way</th><th>What it is</th><th>Good for</th><th>Plan</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Fixed</strong></td><td>Chrome’s standard side panel</td><td>Everyday use, one screen</td><td>Free</td></tr>
+        <tr><td><strong>Window</strong></td><td>A standalone window with no tab strip or address bar</td><td>Second monitors, keeping the page full width</td><td>Free</td></tr>
+        <tr><td><strong>Tab</strong></td><td>The panel as a page in a normal browser tab</td><td>Small laptop screens, big clean-ups</td><td>Free</td></tr>
+        <tr><td><strong>Overlay</strong></td><td>A sidebar that slides over the page</td><td>Quick look without resizing the page</td><td>PRO and trial</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Open it in a standalone window</h2>
+    <ol>
+      <li>Open LB TAB Layers as usual (Alt+T or the toolbar icon).</li>
+      <li>In the panel header, click the button just to the right of the clock icon. Its icon is a square with an arrow pointing out. The <strong>Display Method</strong> menu opens.</li>
+      <li>Choose <strong>Open in Standalone Window</strong> (“Floating mini-window you can place anywhere”).</li>
+      <li>A small window opens, 400 × 740 pixels the first time. Drag it to your second monitor or beside your browser, and resize it to taste. It remembers the size and opens at that size next time.</li>
+    </ol>
+    <p>If the window is already open, choosing it again normally brings that window to the front rather than opening another one. It behaves like any other window: it does not stay on top, so place it where your browser won’t cover it.</p>
+
+    <h2>Open it as a browser tab</h2>
+    <p>From the same menu, choose <strong>Open in New Tab</strong> (“View spaciously as a browser tab”). The panel opens as a centered page, up to 720 pixels wide, in a normal tab. If that tab is already open, Chrome switches to it instead of opening another.</p>
+    <p>Tip for laptops: right-click that tab and choose <strong>Pin</strong> in Chrome’s tab menu. It moves to the left end of the tab strip, and if it is your only pinned tab, <strong>Ctrl+1</strong> (⌘+1 on Mac) jumps straight to it. This is a regular tab; it does not replace Chrome’s New Tab page.</p>
+    <p>The third item, <strong>Open Full-Screen Dashboard</strong>, opens the large two-column dashboard. It is a PRO feature, available to everyone during the 3-month trial.</p>
+
+    <h2>Make it the default</h2>
+    <p>The menu opens a window or tab once and leaves your settings alone. To make the toolbar icon and Alt+T open LB TAB Layers this way every time:</p>
+    <ol>
+      <li>Click the gear icon (<strong>Settings</strong>) in the panel header.</li>
+      <li>Open the <strong>Display &amp; Theme</strong> tab and find the <strong>Sidebar Mode</strong> section.</li>
+      <li>Under <strong>Sidebar Display Mode</strong>, choose <strong>Fixed</strong>, <strong>Overlay</strong>, <strong>Window</strong> or <strong>Tab</strong>.</li>
+    </ol>
+    <p>With <strong>Window</strong> or <strong>Tab</strong> selected, the icon and Alt+T open the window or tab, or bring it to the front if it is already open; pressing them again does not close it. <strong>Overlay</strong> is a PRO feature. If Alt+T does nothing, another extension may be using it; you can change the shortcut at <code>chrome://extensions/shortcuts</code>.</p>
+
+    <h2>How it works with your browser tabs</h2>
+    <p>A standalone window is a window of its own, so LB TAB Layers looks past it to your regular browser window:</p>
+    <ul>
+      <li>The <strong>Solo Tabs</strong> list shows the open tabs of your browser window, not the standalone window itself.</li>
+      <li><strong>▶</strong> on a group, and opening a saved tab, open the pages in your browser window.</li>
+      <li>If you have more than one browser window open, the standalone window works with the first one in Chrome’s list while you are using it, which may not be the one you used last. With several browser windows, the side panel in each window is the simpler choice.</li>
+      <li>Your groups, settings and notes are the same in every view and update as you work.</li>
+    </ul>
+    <div class="blog-callout"><p><strong>A tip:</strong> a few actions are designed around the window the panel sits in, so they work best from the side panel: <strong>Close all tabs except active</strong> in the Solo Tabs <strong>More actions</strong> menu (from a standalone window, the page you are looking at in the browser does not count as “active” and would be closed too if it is one of your Solo Tabs), screenshots in the <strong>Shots</strong> mode, and reading the current page in the <strong>AI</strong> mode.</p></div>
+
+    <h2>A setup for two monitors</h2>
+    <ul>
+      <li>Main monitor: your browser, full width.</li>
+      <li>Second monitor: LB TAB Layers in a standalone window, tall and narrow.</li>
+      <li>In the window, choose <strong>Combined</strong> in the view bar to see your groups and Solo Tabs together, or <strong>Notes</strong> to take <a href="notes-checklists-chrome-side-panel.html">notes and checklists</a> during a call.</li>
+    </ul>
+
+    <h2>A setup for a small laptop screen</h2>
+    <ul>
+      <li>Set <strong>Sidebar Display Mode</strong> to <strong>Tab</strong> and pin the tab, as above.</li>
+      <li>Work in your pages at full width, and press <strong>Ctrl+1</strong> when you need your groups.</li>
+      <li>In the tab view, the <strong>Split</strong> layout gives each list the full height: <strong>Tabs</strong> for what is open, <strong>Bookmarks</strong> for what you saved.</li>
+    </ul>
+    <p>If you mostly stay on one screen, the standard side panel is still the quickest. For tips on that, see <a href="chrome-side-panel-tab-manager.html">a tab manager in Chrome’s side panel</a>.</p>
+
+    <h2>Chrome’s official help</h2>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/13156494?hl=en" target="_blank" rel="noopener">Manage Chrome side panel — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/2391819?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Manage tabs in Chrome — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Chrome keyboard shortcuts — Google Chrome Help</a></li>
+    </ul>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Can I open Chrome’s side panel in a separate window?</h3>
+    <p>Google’s help describes resizing the side panel and moving it to the left or right, and the panel stays inside its browser window. LB TAB Layers can open in a standalone window instead: click the Display Method button in its header and choose Open in Standalone Window.</p>
+
+    <h3>Q. Does the standalone window stay on top of other windows?</h3>
+    <p>No. It behaves like a normal window. Put it on a second monitor or beside your browser so the browser does not cover it.</p>
+
+    <h3>Q. Are the standalone window and tab view free?</h3>
+    <p>Yes. Fixed, Window and Tab are free. Overlay mode and the full-screen dashboard are PRO features, and every feature is unlocked during the 3-month free trial.</p>
+
+    <h3>Q. Which browser window do my groups open in?</h3>
+    <p>Your regular browser window, not the standalone window. If you have more than one browser window open, the standalone window works with the first one in Chrome’s list while you use it, which may not be the one you used last. With several browser windows, the side panel in each window is the simpler choice.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-manager-in-standalone-window.html&amp;text=How%20to%20open%20a%20Chrome%20tab%20manager%20in%20its%20own%20window%20or%20a%20browser%20tab%2C%20for%20second%20monitors%20and%20small%20screens" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-manager-in-standalone-window.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ftab-manager-in-standalone-window.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/tab-manager-in-standalone-window.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Your tabs, on whichever screen you like.</h3><p>Side panel, standalone window or a full tab: all free in LB TAB Layers. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog_en&amp;utm_campaign=tab-manager-in-standalone-window" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="v290-update.html">What’s new in 2.9.0 <span>→</span></a><a href="chrome-side-panel-tab-manager.html">A tab manager in Chrome’s side panel <span>→</span></a><a href="open-multiple-tabs-at-once.html">Open multiple tabs at once <span>→</span></a><a href="feature-dashboard.html">The dashboard <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>
