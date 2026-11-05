@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Import Your OneTab List into Chrome Bookmarks | LB TAB Layers Blog</title>
+  <meta name="description" content="OneTab exports plain text, while Chrome imports bookmark files. Paste the text into LB TAB Layers and each block becomes a subgroup of Chrome bookmarks.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/switch-from-onetab-to-bookmarks.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html">
+  <meta property="og:title" content="Import your OneTab list into Chrome bookmarks"><meta property="og:description" content="Copy from OneTab’s Export / Import URLs, paste, import. Every tab becomes a Chrome bookmark, grouped the way your OneTab list was."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-05T00:00:00+09:00"><meta property="article:author" content="Liquid Block Inc.">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Import your OneTab list into Chrome bookmarks"><meta name="twitter:description" content="Copy from OneTab’s Export / Import URLs, paste, import. Every tab becomes a Chrome bookmark, grouped the way your OneTab list was."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Import OneTab to bookmarks","item":"https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Move your OneTab list into Chrome bookmarks: paste the exported text once and get one subgroup per OneTab block","inLanguage":"en","author":{"@type":"Organization","name":"Liquid Block Inc."},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-05","image":"https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can Chrome import OneTab’s exported list directly?","acceptedAnswer":{"@type":"Answer","text":"Chrome’s Import bookmarks and settings reads bookmarks from other browsers or from a bookmarks HTML file. OneTab exports plain text (URL | title), so use a tool that reads that text, such as Switch from OneTab in LB TAB Layers, or restore each OneTab block and bookmark the tabs with Ctrl+Shift+D."}},{"@type":"Question","name":"Does the import keep my OneTab group names?","acceptedAnswer":{"@type":"Answer","text":"No. OneTab’s exported text does not include group names, so each block becomes a numbered subgroup such as Group 1 (24). You can rename them afterwards by double-clicking the name."}},{"@type":"Question","name":"Is there a limit on how many tabs I can import?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed limit. Large lists take a little longer, and a progress counter updates every 50 tabs. In the free version, imported groups and subgroups count toward the 5-group limit after the 3-month trial."}},{"@type":"Question","name":"Will importing change my OneTab list?","acceptedAnswer":{"@type":"Answer","text":"No. LB TAB Layers reads the text you paste and does not touch OneTab. Keep a copy of the exported text as a backup anyway."}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Import a OneTab list into Chrome bookmarks with LB TAB Layers","step":[{"@type":"HowToStep","position":1,"name":"Copy from OneTab","text":"In OneTab, open Export / Import URLs and copy all of the text."},{"@type":"HowToStep","position":2,"name":"Open Switch from OneTab","text":"In LB TAB Layers, open Settings, then the Data and Sync tab, and under Get started / switch click Switch from OneTab."},{"@type":"HowToStep","position":3,"name":"Paste and name","text":"Paste the text, check the preview line, and keep or change the name in Group to import into."},{"@type":"HowToStep","position":4,"name":"Import","text":"Press Import. Each tab is saved as a Chrome bookmark, with one subgroup per OneTab block."},{"@type":"HowToStep","position":5,"name":"Tidy up","text":"Rename the numbered subgroups and move the tabs you need into your project groups."}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">What's New</a><a href="./">Blog</a><a href="../../blog/switch-from-onetab-to-bookmarks.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>How to import your OneTab list into Chrome bookmarks</h1><p class="blog-meta"><time datetime="2026-11-05">Nov 5, 2026</time> · Liquid Block Inc. · 7 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-extensions-comparison.webp" alt="Moving saved tabs from one tab manager to another" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fimport-onetab-to-chrome-bookmarks.html&amp;text=Move%20your%20OneTab%20list%20into%20Chrome%20bookmarks%3A%20paste%20the%20exported%20text%20once%20and%20get%20one%20subgroup%20per%20OneTab%20block" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fimport-onetab-to-chrome-bookmarks.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fimport-onetab-to-chrome-bookmarks.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">In OneTab, open <strong>Export / Import URLs</strong> and copy all of the text. Then, in LB TAB Layers 2.9.0, go to <strong>Settings → Data &amp; Sync → Get started / switch → Switch from OneTab</strong>, paste the text and press <strong>Import</strong>. Every tab is saved as an ordinary <strong>Chrome bookmark</strong>, and each block of your OneTab list becomes a subgroup inside one group (called <strong>From OneTab</strong> unless you rename it). Importing is free and needs no account. Keep a copy of the exported text as a backup.</p>
+
+    <p>OneTab is a quick way to clear the tab bar. Over months, though, its list can grow long, and some people want those links in Chrome’s own bookmarks too, where they sync with Chrome, stay in place if you change extensions, and can be sorted by project.</p>
+    <p>This guide covers the move itself. If you are still deciding, our <a href="onetab-alternative.html">OneTab alternative</a> article compares the two approaches.</p>
+
+    <h2>Why not import it straight into Chrome?</h2>
+    <p>Chrome’s <strong>Import bookmarks and settings</strong> brings in bookmarks from another browser or from a bookmarks HTML file. OneTab’s export is plain text, one tab per line in the form <strong>URL | title</strong>, with a blank line between blocks. That is a different format, so Chrome’s importer is not the right tool for it.</p>
+    <p>The manual route in Chrome is to open the tabs of one OneTab block in a window of their own, press <strong>Ctrl+Shift+D</strong> (⌘+Shift+D on Mac) to save all open tabs in that window as bookmarks in a new folder, and repeat for each block. That is fine for two or three blocks and slow for twenty.</p>
+
+    <h2>Before you start: keep a backup</h2>
+    <p>Paste OneTab’s exported text into a plain text file and save it. Importing does not change anything in OneTab, since LB TAB Layers just reads the text you paste, but a backup costs nothing.</p>
+
+    <h2>Step by step</h2>
+    <ol>
+      <li><strong>Copy from OneTab.</strong> Open OneTab’s page, choose <strong>Export / Import URLs</strong>, and copy all of the exported text.</li>
+      <li><strong>Open the import screen.</strong> Open LB TAB Layers (Alt+T), click the gear icon (<strong>Settings</strong>), open the <strong>Data &amp; Sync</strong> tab, and under <strong>Get started / switch</strong> click <strong>Switch from OneTab</strong>.</li>
+      <li><strong>Paste.</strong> Paste the text into the box. A line underneath shows what will happen, for example “Will import 120 tabs in 6 groups”.</li>
+      <li><strong>Name the group.</strong> In <strong>Group to import into</strong>, keep <strong>From OneTab</strong> or type a name such as “OneTab archive”.</li>
+      <li><strong>Import.</strong> Press <strong>Import</strong>. Large lists show progress (“Importing… 50 / 120”). When it finishes you will see “Imported 120 tabs”.</li>
+      <li><strong>Check the result.</strong> Open the <strong>Bookmarks</strong> screen (or the group list in the Combined layout). The new group is at the bottom, with subgroups named <strong>Group 1 (24)</strong>, <strong>Group 2 (9)</strong> and so on.</li>
+    </ol>
+    <p>If some links were already saved in another of your groups, the message adds how many, for example “(18 of them were already saved in another group)”. They are imported anyway, so nothing goes missing; you can tidy them up later.</p>
+
+    <h2>What the import keeps, and what it doesn’t</h2>
+    <div class="blog-table-wrap"><table class="blog-table">
+      <thead><tr><th>In your OneTab list</th><th>After importing</th></tr></thead>
+      <tbody>
+        <tr><td>URL and title</td><td>Kept. A line without a title uses the URL as its title.</td></tr>
+        <tr><td>Blocks (separated by blank lines)</td><td>One subgroup per block. If the text has a single block, its tabs go straight into the group.</td></tr>
+        <tr><td>Names you gave OneTab groups</td><td>Not in the exported text, so subgroups are numbered instead: Group 1 (24), Group 2 (9)…</td></tr>
+        <tr><td>Stars, locks, dates</td><td>Not imported. The import reads URLs and titles.</td></tr>
+        <tr><td>Lines that are not web addresses</td><td>Skipped. Lines must start with http:// or https://.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Where your tabs end up</h2>
+    <p>Each tab becomes a real Chrome bookmark. In Chrome’s Bookmark Manager you will find them under <strong>LB TAB Layers → From OneTab → Group 1 (24)</strong> and so on. Because they are ordinary bookmarks:</p>
+    <ul>
+      <li>they sync to your other computers if Chrome sync is on for bookmarks,</li>
+      <li>you can export them from Chrome’s Bookmark Manager like any other bookmarks,</li>
+      <li>they stay in Chrome if you remove LB TAB Layers.</li>
+    </ul>
+
+    <h2>Tidy up after importing</h2>
+    <ul>
+      <li><strong>Rename</strong> the numbered subgroups: double-click a group name and type, for example “Holiday ideas” or “Client A research”.</li>
+      <li><strong>Review a block</strong> with ▶ to open its tabs, and ■ to close them again; they stay saved.</li>
+      <li><strong>Move</strong> tabs into your project groups by dragging them, and remove what you no longer need.</li>
+      <li><strong>Search</strong> the panel to find a link you remember by a word in its title or address.</li>
+    </ul>
+    <p>Seeing open tabs and saved groups on separate screens can make this clean-up easier; see <a href="separate-open-tabs-and-bookmarks.html">open tabs vs. bookmarks</a>.</p>
+
+    <h2>The free version and the 5-group limit</h2>
+    <p>Importing is free, and it is not stopped by the number of groups you have. But the imported group and each of its subgroups count as groups. The free version includes up to 5 groups, subgroups included.</p>
+    <ul>
+      <li>During the 3-month free trial, and with PRO, you can use every group.</li>
+      <li>After the trial, in the free version, the first five groups in your list stay available and the others show “This group is locked”. Imported groups are added at the bottom of the list, so if you already have several groups they are likely to be among the locked ones.</li>
+      <li>Locked or not, the tabs remain Chrome bookmarks, so you can still open them from Chrome’s bookmarks.</li>
+    </ul>
+    <p>If you want to stay on the free version, use the trial to move the links you still need into a few groups and let the rest go. PRO is a one-time $9.99.</p>
+
+    <h2>About your data</h2>
+    <p>The import runs on your computer, and nothing is sent to Liquid Block. The imported tabs are Chrome bookmarks, so if Chrome sync is on, Chrome syncs them to your Google account like your other bookmarks. Site icons in the panel come from the favicons Chrome already stores on your computer.</p>
+
+    <h2>Chrome’s official help</h2>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/96816?hl=en" target="_blank" rel="noopener">Import Chrome bookmarks &amp; settings — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/188842?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Create, find and edit bookmarks in Chrome — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/185277?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Sign in to Chrome — Google Chrome Help</a></li>
+    </ul>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Can Chrome import OneTab’s exported list directly?</h3>
+    <p>Chrome’s Import bookmarks and settings reads bookmarks from other browsers or from a bookmarks HTML file. OneTab exports plain text (URL | title), so use a tool that reads that text, such as Switch from OneTab in LB TAB Layers, or restore each OneTab block and bookmark the tabs with Ctrl+Shift+D.</p>
+
+    <h3>Q. Does the import keep my OneTab group names?</h3>
+    <p>No. OneTab’s exported text does not include group names, so each block becomes a numbered subgroup such as Group 1 (24). You can rename them afterwards by double-clicking the name.</p>
+
+    <h3>Q. Is there a limit on how many tabs I can import?</h3>
+    <p>There is no fixed limit. Large lists take a little longer, and a progress counter updates every 50 tabs. In the free version, imported groups and subgroups count toward the 5-group limit after the 3-month trial.</p>
+
+    <h3>Q. Will importing change my OneTab list?</h3>
+    <p>No. LB TAB Layers reads the text you paste and does not touch OneTab. Keep a copy of the exported text as a backup anyway.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fimport-onetab-to-chrome-bookmarks.html&amp;text=Move%20your%20OneTab%20list%20into%20Chrome%20bookmarks%3A%20paste%20the%20exported%20text%20once%20and%20get%20one%20subgroup%20per%20OneTab%20block" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fimport-onetab-to-chrome-bookmarks.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fimport-onetab-to-chrome-bookmarks.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/import-onetab-to-chrome-bookmarks.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Your OneTab list, as real bookmarks.</h3><p>Paste once and get groups saved as Chrome bookmarks. Try every feature free for 3 months.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_import-onetab-to-chrome-bookmarks" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="onetab-alternative.html">A OneTab alternative <span>→</span></a><a href="v290-update.html">What’s new in 2.9.0 <span>→</span></a><a href="separate-open-tabs-and-bookmarks.html">Open tabs vs. bookmarks on separate screens <span>→</span></a><a href="feature-groups-subgroups.html">Groups and subgroups <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>
