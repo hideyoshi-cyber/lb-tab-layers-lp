@@ -286,10 +286,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tablayers.liquid-block.com/zh/quick-start.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/ko/features.html</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/ko/quick-start.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Blog Posts -->
@@ -1087,6 +1099,12 @@
   </url>
   <url>
     <loc>https://tablayers.liquid-block.com/blog/how-to-use-tab-layers.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/en/blog/quick-start.html</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
