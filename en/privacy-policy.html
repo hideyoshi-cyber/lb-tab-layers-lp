@@ -191,11 +191,11 @@
       <li><strong>Side panel</strong> (sidePanel permission): Shows the tab management UI in Chrome's side panel</li>
       <li><strong>Site blocking</strong> (declarativeNetRequest permission): During Focus Mode, redirects sites the user has specified to a block page. The block rules are created locally and are not sent outside</li>
       <li><strong>Google account connection</strong> (identity permission): Used only when the user uses the spreadsheet integration, to access Google Sheets with the user's Google account</li>
-      <li><strong>Downloads</strong> (downloads permission): Used to save screenshots and recordings as files to a location the user chooses. A screen for choosing where to save appears each time a file is saved</li>
+      <li><strong>Downloads</strong> (downloads permission): Used to save screenshots and recordings as files to a location the user chooses. A screen for choosing where to save appears each time a file is saved. It is also used to save the images the user selects in "Images on this page" to an "LB-images" folder inside the Downloads folder (no save dialog appears for this). The browser fetches the images just as it does when the page is opened, and nothing is sent to us</li>
       <li><strong>Reading the clipboard</strong> (clipboardRead permission, optional): The browser asks for this permission only when the user turns on "Let me know if I have copied a URL" in Settings. It is used only to check whether a URL has been copied; the content is not saved or sent</li>
       <li><strong>Right-click menu</strong> (contextMenus permission): Used to show "Save to TAB Layers" in the right-click menu for web pages and links, and to save to the group the user picks</li>
-      <li><strong>Adding processing to pages</strong> (scripting permission): Used, when the user performs the action, to take a full-page screenshot (scrolling down to the bottom while capturing) and to record with automatic scrolling. It is also used, when the user selects "Add to note" from the right-click menu, to read the selected text and put it into a note</li>
-      <li><strong>Access to all sites</strong> (host permission): Used for the overlay sidebar, taking screenshots and thumbnails, automatic detection of RSS feeds, dead-link checks, attaching page text to the AI sidebar, linking notes to pages, and the badges that show unread counts for email and chat (by reading the number in the page title). The content of pages is never sent to us</li>
+      <li><strong>Adding processing to pages</strong> (scripting permission): Used, when the user performs the action, to take a full-page screenshot (scrolling down to the bottom while capturing) and to record with automatic scrolling. It is also used, when the user selects "Add to note" from the right-click menu, to read the selected text and put it into a note. In addition, only when the user performs the action, it is used to show an image's size and list the images on a page (reading where the images are and how large they are), to insert a note into an input field on the page, to change the volume of video or audio and put a video into a small window from "Now playing", and to collect and copy the URLs of the videos listed on a YouTube page. Nothing that is read is sent to us</li>
+      <li><strong>Access to all sites</strong> (host permission): Used for the overlay sidebar, taking screenshots and thumbnails, automatic detection of RSS feeds, dead-link checks, attaching page text to the AI sidebar, linking notes to pages, and the badges that show unread counts for email and chat (by reading the number in the page title), for showing whether a page is already saved, and for checking the file size of images. The content of pages is never sent to us</li>
     </ul>
 
     <h2>2. Where Data Is Stored</h2>
@@ -291,7 +291,7 @@
     Website: <a href="https://www.liquid-block.com" target="_blank" rel="noopener">https://www.liquid-block.com</a></p>
 
     <div class="policy-footer">
-      <p>Last updated: November 4, 2026</p>
+      <p>Last updated: November 6, 2026</p>
       <p>© 2026 Liquid Block Inc. All rights reserved.</p>
     </div>
   </main>
