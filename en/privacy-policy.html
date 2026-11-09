@@ -201,8 +201,9 @@
     <h2>2. Where Data Is Stored</h2>
     <div class="info-card">
       <h4>Your data is stored inside the browser you use</h4>
-      <p>Usage data such as the user's tab structure, group settings, theme settings, notes and Step Tasks (tasks for work steps, and templates) is <strong>stored inside the user's browser</strong> through <code>chrome.storage.local</code> and Chrome's bookmark feature.</p>
+      <p>Usage data such as the user's tab structure, group settings, theme settings (including the colors of an original theme), notes, Step Tasks (tasks for work steps, and templates) and feature-badge records is <strong>stored inside the user's browser</strong> through <code>chrome.storage.local</code> and Chrome's bookmark feature.</p>
       <p>Page thumbnail images are saved only when the user turns them on in Settings (off by default), as small, shrunk-down images of the screens of pages the user has viewed, and only inside the browser the user uses. Pages such as email, banking and card, login and payment, and chat are never captured from the start. The user can add sites not to capture in Settings (when a site is added, any already-saved images that match it are also deleted). Images are not sent outside. Screenshots and recordings are saved as files on the user's PC when the user chooses to save them.</p>
+      <p>So they can be found in search, the URLs and titles of recently closed tabs (up to 50) are stored only inside the browser the user uses. Tabs in incognito windows are not recorded. Nothing is sent outside. When importing a file exported from another browser or extension (HTML, CSV, TXT), the file is read only inside the user's browser.</p>
       <p>Only the following two things reach our servers.</p>
       <ul>
         <li>The extension's installation ID (a randomly generated, anonymous identifier), for license verification</li>
@@ -273,6 +274,12 @@
     <h3>3-14. Survey when uninstalling</h3>
     <p>When the Extension is uninstalled, a survey page on our site (tablayers.liquid-block.com) opens. The URL that opens the page contains only the extension version, the number of days since installation, and the display language. Answering the survey is optional. Only if the user answers, the reasons they chose, the text they entered, and the version and other items above are sent to us through Google Forms (Google LLC). Names, email addresses, browsing history and bookmark contents are not sent.</p>
 
+    <h3>3-15. Adding to NotebookLM (optional; only when the user agrees)</h3>
+    <p>The feature that adds pages and YouTube videos directly to a NotebookLM notebook works only after the user agrees to the explanation shown the first time. After that, the URLs of the pages or videos the user chooses, and the name of the target notebook (or the name of a new one), are sent directly to Google NotebookLM (notebook.google.com / notebooklm.google.com) using the user's own Google sign-in. To show the list of notebooks, the extension reads notebook names and source counts from NotebookLM. Nothing passes through our servers, and the extension does not store passwords or sign-in information. Consent can be withdrawn at any time in Settings. Without consent, the extension only copies the URLs and opens NotebookLM; nothing is sent.</p>
+
+    <h3>3-16. Sharing to social media (only when the user presses a button)</h3>
+    <p>Only when the user presses the X, Threads, Bluesky, Facebook or LinkedIn button (for example in the memo window), that service's post screen opens in the user's own browser, pre-filled with the text the user wrote and the page URL. The user decides whether to post. Nothing is sent to our servers.</p>
+
     <h2>4. Sharing with Third Parties</h2>
     <p>The Extension does not provide, sell or share users' data with third parties. For payment processing, Stripe's privacy policy applies.</p>
 
@@ -297,7 +304,7 @@
     Website: <a href="https://www.liquid-block.com" target="_blank" rel="noopener">https://www.liquid-block.com</a></p>
 
     <div class="policy-footer">
-      <p>Last updated: November 6, 2026</p>
+      <p>Last updated: November 9, 2026</p>
       <p>© 2026 Liquid Block Inc. All rights reserved.</p>
     </div>
   </main>
