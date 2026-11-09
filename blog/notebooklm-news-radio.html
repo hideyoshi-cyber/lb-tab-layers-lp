@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「あとで読む」が積読になる人へ — RSSのニュースをNotebookLMで“自分だけの通勤ラジオ”にする方法 | LB TAB Layers Blog</title>
+  <meta name="description" content="「あとで読む」に入れた記事が積読になる人へ。RSS で集めたニュースをいったんブックマークのグループにまとめ、NotebookLM の音声解説（Audio Overview）で会話形式の音声にして、通勤時間に聴く手順を紹介します。">
+  <meta name="keywords" content="あとで読む 積読,NotebookLM 使い方 ニュース,NotebookLM 音声解説,情報収集 通勤時間,RSS まとめ読み">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html">
+  <meta property="og:title" content="「あとで読む」を、通勤で聴くラジオに変える"><meta property="og:description" content="ためたニュースを NotebookLM の音声解説で“自分だけのラジオ”に。読む時間を探すのをやめる方法。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-09T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="「あとで読む」を、通勤で聴くラジオに変える"><meta name="twitter:description" content="ためたニュースを NotebookLM の音声解説で“自分だけのラジオ”に。読む時間を探すのをやめる方法。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"ニュースをNotebookLMで通勤ラジオに","item":"https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"「あとで読む」が積読になる人へ：ニュースをNotebookLMで通勤ラジオにする","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html"},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-09","image":"https://tablayers.liquid-block.com/blog/hero-memory-speedup.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"NotebookLM の音声解説は日本語でも作れますか？","acceptedAnswer":{"@type":"Answer","text":"作れます。追加したソースをもとに、2人が話し合う会話形式の音声を作る機能で、日本語にも対応しています。"}},{"@type":"Question","name":"NotebookLM にニュースの記事を入れるには？","acceptedAnswer":{"@type":"Answer","text":"ノートブックの「ソースを追加」から「ウェブサイト」を選び、記事の URL を貼ります。動画は「YouTube」から URL を入れられます。ページによっては読み込めないこともあります。"}},{"@type":"Question","name":"LB TAB Layers から NotebookLM に自動で送れますか？","acceptedAnswer":{"@type":"Answer","text":"自動では送りません。配信中の 3.0.1 では、記事の URL を1つずつコピーして貼ります。審査中の 3.0.2 で、選んだタブの URL をまとめてコピーして NotebookLM を開く機能が加わります（PRO・お試し中は使えます）。"}},{"@type":"Question","name":"「あとで読む」がたまらないようにするには？","acceptedAnswer":{"@type":"Answer","text":"読む時間を新しく作ろうとせず、通勤などすでにある時間に「聴く」で片付けます。ためる場所を1つのグループに決め、毎週作り直すとたまりません。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"ためたニュースを NotebookLM で通勤ラジオにする","step":[{"@type":"HowToStep","position":1,"name":"ニュースを集める","text":"RSS でよく見るサイトの新着を1か所に集めます。"},{"@type":"HowToStep","position":2,"name":"グループにまとめる","text":"聴きたい記事を5〜10本、1つのグループに保存します。"},{"@type":"HowToStep","position":3,"name":"NotebookLM に入れる","text":"NotebookLM の「ソースを追加」→「ウェブサイト」に記事の URL を貼ります。"},{"@type":"HowToStep","position":4,"name":"音声解説を聴く","text":"音声解説を作り、通勤や移動の時間に聴きます。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../index.html#themes">テーマ</a><a href="../index.html#whats-new">新機能</a><a href="../blog/">Blog</a></div><a href="../index.html#cta-main" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">仕事術</span><h1>「あとで読む」を、<br>通勤で聴くラジオに変える</h1><p class="blog-meta"><time datetime="2026-11-09">2026.11.09</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 8分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-memory-speedup.webp" alt="ためたニュースの記事を NotebookLM で音声にして、通勤中に聴くイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html&amp;text=%E3%80%8C%E3%81%82%E3%81%A8%E3%81%A7%E8%AA%AD%E3%82%80%E3%80%8D%E3%81%8C%E7%A9%8D%E8%AA%AD%E3%81%AB%E3%81%AA%E3%82%8B%E4%BA%BA%E3%81%B8%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92NotebookLM%E3%81%A7%E9%80%9A%E5%8B%A4%E3%83%A9%E3%82%B8%E3%82%AA%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html&amp;title=%E3%80%8C%E3%81%82%E3%81%A8%E3%81%A7%E8%AA%AD%E3%82%80%E3%80%8D%E3%81%8C%E7%A9%8D%E8%AA%AD%E3%81%AB%E3%81%AA%E3%82%8B%E4%BA%BA%E3%81%B8%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92NotebookLM%E3%81%A7%E9%80%9A%E5%8B%A4%E3%83%A9%E3%82%B8%E3%82%AA%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html" data-title="「あとで読む」が積読になる人へ：ニュースをNotebookLMで通勤ラジオにする" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>「あとで読む」が積読になるのは、読む時間を「どこかで作る」前提になっているからです。</strong>読む時間を探すのをやめて、すでにある通勤の時間に「聴く」に変えます。ニュースはいったんブックマークのグループにまとめ、その URL を NotebookLM の「ソースを追加」に入れて音声解説（Audio Overview）を作ると、会話形式の“自分だけのニュースラジオ”になります。</p>
+
+    <p>気になる記事を「あとで読む」に入れる。メモアプリに URL を貼る。そうして入れた記事は、週末になっても読まれず、気づけば数十件。開くと疲れるので、また閉じる。<strong>積読（つんどく）</strong>は、本だけの話ではありません。</p>
+    <p>この記事では、ためたニュースを NotebookLM で音声にして、<strong>通勤の時間に聴く</strong>方法を紹介します。読む時間を新しく作るのではなく、すでにある時間に置き換えるやり方です。</p>
+
+    <h2>答え：読む時間を探さず、「聴く」に置き換える</h2>
+    <p>積読を減らすいちばんの近道は、<strong>読む時間を作ろうとしないこと</strong>です。「あとで読む」の「あと」は、たいてい来ません。代わりに、毎日かならずある時間を使います。</p>
+    <ul>
+      <li><strong>通勤・移動の時間</strong>：目と手はふさがっていても、耳は空いています</li>
+      <li><strong>家事や散歩の時間</strong>：画面を見なくてよい作業と相性がよいです</li>
+      <li><strong>昼休みの後半</strong>：短い音声なら、1本聴き終えられます</li>
+    </ul>
+    <p>そのための道具が、Google の <strong>NotebookLM</strong> です。追加した資料（ソース）をもとに、<strong>「音声解説（Audio Overview）」</strong>という、2人が話し合う会話形式の音声を作れます。日本語にも対応しています。ニュースの記事をソースにすれば、自分が選んだ記事だけを話題にした“自分だけのラジオ”になります。</p>
+
+    <aside class="blog-mid-cta" aria-label="LB TAB Layers の紹介">
+      <img src="qs-7-open.webp" alt="グループの ▶ で開くと Chrome のタブグループになり、■ でまとめて閉じる" loading="lazy" width="360" height="720">
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">タブを仕事ごとにまとめて、<strong>▶ で開いて ■ で閉じる</strong>。</p>
+        <p class="blog-mid-cta-text">LB TAB Layers は、開いているタブを仕事ごとに Chrome のブックマークへ保存し、▶ ひとつで同じ名前・色のタブグループとして開き直せる、サイドパネルの拡張機能です。閉じても消えません。</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=notebooklm-news-radio&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
+      </div>
+    </aside>
+
+    <h2>なぜ「あとで読む」は積読になるのか</h2>
+    <h3>入れる場所と、読む場所がちがう</h3>
+    <p>記事を入れるのは一瞬ですが、読むには机とまとまった時間が必要です。入れる手間と読む手間の差が大きいほど、たまる一方になります。</p>
+    <h3>入れたものが、整理されないまま混ざる</h3>
+    <p>仕事の資料、買いたい物、気になるニュース。1つの場所にすべて入れると、あとで見たときに「どれから読むか」を考えるだけで疲れます。<strong>選ぶ手間が、読む気をなくさせます。</strong></p>
+    <h3>「全部読まなきゃ」と思っている</h3>
+    <p>ためた記事は、全部を同じ深さで読む必要はありません。要点を聞いて、気になったものだけ元の記事を開けば十分です。音声で要点をつかむのは、この「ふるい分け」に向いています。</p>
+
+    <h2>【実体験】Keep に入れ続けたら、整理できなくなった</h2>
+    <p>私たちは神戸の映像制作の会社です。仕事がら、業界のニュースや技術の記事を毎日のように目にします。以前は、気になった記事を Google Keep などのメモアプリに入れ続けていました。</p>
+    <p>ところが、入れ続けるほど<strong>整理できなくなりました</strong>。メモの中に URL が埋もれ、どれが読んだ記事で、どれがまだなのかもわからない。結局、ほとんど読まないままでした。</p>
+    <p>そこでやり方を変えました。</p>
+    <ol>
+      <li>ニュースは RSS で集めて、気になった記事を<strong>いったんブックマークのグループにまとめる</strong></li>
+      <li>そのグループの記事を、まとめて <strong>NotebookLM</strong> に入れる</li>
+      <li>音声解説を作って、<strong>通勤のあいだに聴く</strong></li>
+    </ol>
+    <p>こうすると、ためた記事が「通勤に聴ける自分だけのニュースラジオ」になります。ポイントは、メモアプリに直接ためずに、<strong>一度ブックマークにまとめる</strong>ことでした。まとめる場所が決まると、「今週聴くもの」がひと目でわかります。</p>
+
+    <h2>通勤ラジオを作る4つの手順</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>ニュースを1か所で受け取る（RSS）</h3><p>よく見るニュースサイトを、RSS（サイトの新着を受け取るしくみ）で1か所に集めます。サイトを1つずつ見に行かずに済むので、集める手間が減ります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>聴きたい記事を、グループにまとめる</h3><p>新着の中から、聴きたい記事だけを1つのグループ（フォルダ）に入れます。目安は<strong>1回のラジオで5〜10本</strong>くらい。テーマが近い記事をまとめると、話がつながって聴きやすくなります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>NotebookLM の「ソースを追加」に入れる</h3><p>NotebookLM でノートブックを作り、「ソースを追加」から「ウェブサイト」を選んで記事の URL を貼ります。動画の解説なら「YouTube」から URL を入れられます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>音声解説を作って、通勤で聴く</h3><p>ソースがそろったら、音声解説を作ります。できた音声を、通勤の電車や移動の時間に聴きます。気になった話題があれば、あとで元の記事だけを開きます。</p></div></div>
+    <p>NotebookLM は、ページによっては中身を読み込めないことがあります。会員限定の記事などは、うまく入らない場合があると考えておいてください。また、音声は AI がまとめたものなので、<strong>仕事で使う数字や固有名詞は、元の記事で確かめます</strong>。</p>
+
+    <h2>LB TAB Layers で、集める・まとめるを楽にする</h2>
+    <p>ここからは、私たちが作った Chrome 拡張「LB TAB Layers」を使ったやり方です。手順1と2を、サイドパネルの中で済ませられます。</p>
+    <h3>RSS フォルダで、新着を受け取る</h3>
+    <p>グループを作るときに「RSSフィードフォルダとして扱う」にチェックすると、そのグループは RSS フォルダになります。フィードを登録して RSS のボタンを押すと、新着の記事が新しい順に、画像つきのカードで並びます。くわしくは「<a href="feature-rss-reader.html">【機能ガイド】RSSリーダー</a>」をどうぞ。</p>
+    <h3>聴きたい記事を「今週のラジオ」グループに保存する</h3>
+    <p>カードを押すと、記事が新しいタブで開きます。聴きたい記事は、ページを右クリックして「TAB Layers に保存」から、「今週のラジオ」のようなグループを選んで保存します。保存先は Chrome のブックマークなので、拡張を消しても残ります。</p>
+    <h3>NotebookLM へ入れる（今の版と、次の版）</h3>
+    <p>正直にお伝えすると、いまストアで配信している <strong>3.0.1 には、保存した記事の URL をまとめてコピーするボタンはありません</strong>。今は次のように入れます。</p>
+    <ol>
+      <li>グループの <strong>▶</strong> で、保存した記事をまとめて開く</li>
+      <li>記事のタブを1つずつ開いて URL をコピーし、NotebookLM の「ソースを追加」→「ウェブサイト」に貼る</li>
+    </ol>
+    <p>現在ストアの審査中の <strong>3.0.2</strong> では、<strong>選んだタブの URL をまとめてコピーして、NotebookLM を開く</strong>機能が加わります。開いた NotebookLM の「ソースを追加」に貼るだけになります（PRO の機能ですが、お試し中は使えます）。NotebookLM へ自動で送る機能ではなく、コピーと貼り付けは手で行います。</p>
+    <h3>聴き終えたら、グループを片付ける</h3>
+    <p>聴き終えた週のグループは、■ でタブをまとめて閉じます。残しておきたい記事だけ別のグループに移し、あとは消してかまいません。毎週「今週のラジオ」を作り直すと、積読がたまりません。</p>
+
+    <h2>音声に向く記事、向かない記事</h2>
+    <p>すべての記事が、聴いてわかりやすいわけではありません。選ぶときは、次の表を目安にしてください。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>向いている</th><th>向いていない</th></tr></thead><tbody>
+    <tr><td>業界の動きや、新しいサービスの発表</td><td>細かい数字の表が中心の記事</td></tr>
+    <tr><td>同じ話題を、いくつかのメディアが書いた記事</td><td>図や画面の説明がないとわからない手順の記事</td></tr>
+    <tr><td>考え方や意見が書かれたコラム</td><td>正確さが大事な契約や法律の記事</td></tr>
+    </tbody></table></div>
+    <p>同じ話題を別々のサイトが書いた記事を3本ほど入れると、音声の中で見方のちがいが話題になり、1本だけ読むより全体がつかみやすくなります。反対に、数字や手順が大事な記事は、音声で要点だけ聞いて、必要なら元の記事を目で読みます。</p>
+
+    <h2>続けるためのコツ</h2>
+    <ul>
+      <li><strong>1回で入れすぎない。</strong>記事が多すぎると、音声が長くなり、話題もばらけます</li>
+      <li><strong>テーマで分ける。</strong>「業界ニュース」「AI の話題」のように、ノートブックを分けると聴きやすくなります</li>
+      <li><strong>聴いたら、ひとことメモ。</strong>気になった話題を1行残すと、あとで元の記事に戻れます</li>
+    </ul>
+    <p>まずは、いま「あとで読む」にたまっている記事から5本を選んで、1本目のラジオを作ってみてください。読めなかった記事が、明日の通勤の30分で片付くかもしれません。</p>
+    
+    <div class="blog-callout"><p>🎬 <strong>記事を集めたあとの操作も、動く画面で見られます。</strong>パネルを開く、保存したタブを開く、閉じたタブを履歴から戻す、ページにひもづけたメモ、ピンバーまで。ブラウザとパネルの動きをそのまま見られる <a href="operation-guide.html">操作ガイド（動く画面で見る10の操作）</a> にまとめています。入れたばかりの方は <a href="quick-start.html">クイックチュートリアル（5分）</a> からどうぞ。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. NotebookLM の音声解説は日本語でも作れますか？</h3>
+    <p>作れます。追加したソースをもとに、2人が話し合う会話形式の音声を作る機能で、日本語にも対応しています。</p>
+
+    <h3>Q. NotebookLM にニュースの記事を入れるには？</h3>
+    <p>ノートブックの「ソースを追加」から「ウェブサイト」を選び、記事の URL を貼ります。動画は「YouTube」から URL を入れられます。ページによっては読み込めないこともあります。</p>
+
+    <h3>Q. LB TAB Layers から NotebookLM に自動で送れますか？</h3>
+    <p>自動では送りません。配信中の 3.0.1 では、記事の URL を1つずつコピーして貼ります。審査中の 3.0.2 で、選んだタブの URL をまとめてコピーして NotebookLM を開く機能が加わります（PRO・お試し中は使えます）。</p>
+
+    <h3>Q. 「あとで読む」がたまらないようにするには？</h3>
+    <p>読む時間を新しく作ろうとせず、通勤などすでにある時間に「聴く」で片付けます。ためる場所を1つのグループに決め、毎週作り直すとたまりません。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html&amp;text=%E3%80%8C%E3%81%82%E3%81%A8%E3%81%A7%E8%AA%AD%E3%82%80%E3%80%8D%E3%81%8C%E7%A9%8D%E8%AA%AD%E3%81%AB%E3%81%AA%E3%82%8B%E4%BA%BA%E3%81%B8%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92NotebookLM%E3%81%A7%E9%80%9A%E5%8B%A4%E3%83%A9%E3%82%B8%E3%82%AA%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fnotebooklm-news-radio.html&amp;title=%E3%80%8C%E3%81%82%E3%81%A8%E3%81%A7%E8%AA%AD%E3%82%80%E3%80%8D%E3%81%8C%E7%A9%8D%E8%AA%AD%E3%81%AB%E3%81%AA%E3%82%8B%E4%BA%BA%E3%81%B8%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92NotebookLM%E3%81%A7%E9%80%9A%E5%8B%A4%E3%83%A9%E3%82%B8%E3%82%AA%E3%81%AB%E3%81%99%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/notebooklm-news-radio.html" data-title="「あとで読む」が積読になる人へ：ニュースをNotebookLMで通勤ラジオにする" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>ためる場所を、ブックマークのグループに。</h3><p>RSS で集めて、聴きたい記事だけをグループへ。アカウント登録なし · 保存先は Chrome のブックマーク · 90日すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=notebooklm-news-radio" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-rss-reader.html">【機能ガイド】RSSリーダー — RSSフォルダの新着記事を画像つきカードで読む <span>→</span></a><a href="feature-rss-presets-detect.html">【機能ガイド】おすすめRSSフィードと自動検出 — フィードURLを探さずに登録する <span>→</span></a><a href="tab-hoarding-psychology.html">タブを閉じられない心理学 — デジタルホーディングの解消法 <span>→</span></a><a href="bookmarks-assets-tabs-resources.html">ブックマークは資産、タブは資源 — 管理を怠ると時間が溶ける <span>→</span></a><a href="reduce-searching-time-3-habits.html">「探す時間」を減らす3つの習慣 — タブ・議事録・AIへの指示 <span>→</span></a><a href="sns-neta-gire-bookmark.html">SNSのネタ切れは「即シェア」が原因？ブックマークをネタ帳に <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

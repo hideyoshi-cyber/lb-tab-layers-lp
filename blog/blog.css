@@ -481,3 +481,7 @@
 .blog-mid-cta-btn:hover { filter: brightness(1.08); }
 .blog-mid-cta-link { font-size: .9rem; font-weight: 600; color: var(--accent, #4A60D1) !important; }
 @media (max-width: 560px) { .blog-mid-cta { gap: 14px; padding: 14px; align-items: flex-start; } .blog-mid-cta img { width: 84px; } }
+
+/* 書き手の表示（2026-11-09）：執筆：蔡本 英賛（株式会社リキッドブロック 代表）／開発：LB開発チーム */
+.blog-meta .blog-author { white-space: nowrap; }
+.blog-meta .blog-author a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
