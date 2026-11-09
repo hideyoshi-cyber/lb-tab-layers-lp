@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Sync Chrome Bookmarks Between Computers (and Fix It When It Doesn’t Work) | LB TAB Layers Blog</title>
+  <meta name="description" content="Get the same Chrome bookmarks on every computer: sign in, save bookmarks to your Google Account, fix common sync problems, and know what does not sync.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/chrome-bookmarks-sync-guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html">
+  <meta property="og:title" content="How to sync Chrome bookmarks between computers"><meta property="og:description" content="Sign in to Chrome, choose to save bookmarks in your Google Account, and fix the usual problems: local-only bookmarks, the wrong profile, duplicates."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-10T00:00:00+09:00"><meta property="article:author" content="Hideyoshi Saimoto">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="How to sync Chrome bookmarks between computers"><meta name="twitter:description" content="Sign in to Chrome, choose to save bookmarks in your Google Account, and fix the usual problems: local-only bookmarks, the wrong profile, duplicates."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Sync bookmarks","item":"https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Sync Chrome bookmarks between computers: sign in, choose what to save, and fix the common problems","inLanguage":"en","author":{"@type":"Person","name":"Hideyoshi Saimoto","alternateName":"蔡本 英賛","jobTitle":"CEO, Liquid Block Inc.","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/en/about.html"},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-10","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need to turn on sync to get my bookmarks on another computer?","acceptedAnswer":{"@type":"Answer","text":"In recent Chrome versions, signing in to Chrome is enough, as long as Bookmarks is on in the list of what is saved to your Google Account. Older versions call this Turn on sync."}},{"@type":"Question","name":"Why are some of my bookmarks missing on my other computer?","acceptedAnswer":{"@type":"Answer","text":"They were probably made while you were signed out, so they are saved on that computer only. Save them to your account from the profile menu, or check that both computers use the same Google Account and Chrome profile."}},{"@type":"Question","name":"Do LB TAB Layers groups sync between computers?","acceptedAnswer":{"@type":"Answer","text":"The groups and the pages in them do, because they are Chrome bookmark folders. Install the extension on the other computer and open the panel, and the groups are rebuilt from those folders. Colors, icons, notes, Steps and settings stay on each computer; use Export (JSON) and Import (JSON) in Settings to move them."}},{"@type":"Question","name":"Is bookmark sync a backup?","acceptedAnswer":{"@type":"Answer","text":"No. Deletions sync too, so a bookmark you delete on one computer disappears everywhere. Export your bookmarks to an HTML file from the bookmark manager now and then if you want a real backup."}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../index.html#themes">Themes</a><a href="../index.html#whats-new">What's New</a><a href="./">Blog</a><a href="../../blog/chrome-bookmarks-sync-guide.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>Sync Chrome bookmarks<br>between computers</h1><p class="blog-meta"><time datetime="2026-11-10">Nov 10, 2026</time> · <span class="blog-author">By <a href="../about.html">Hideyoshi Saimoto</a>, CEO of Liquid Block Inc.</span> · 7 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-bookmarks-panel.webp" alt="A bookmarks panel with nested project folders" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fsync-chrome-bookmarks-between-computers.html&amp;text=Sync%20Chrome%20bookmarks%20between%20computers%3A%20sign%20in%2C%20choose%20what%20to%20save%2C%20and%20fix%20the%20common%20problems" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fsync-chrome-bookmarks-between-computers.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fsync-chrome-bookmarks-between-computers.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer">To get the same bookmarks on two computers, <strong>sign in to Chrome with the same Google Account on both</strong> and make sure <strong>Bookmarks</strong> is one of the things saved to your account (Settings → You and Google → your account name). Bookmarks you made before signing in may stay on that computer only until you choose to save them to your account. Because LB TAB Layers keeps your groups as ordinary Chrome bookmark folders, <strong>your groups and the pages in them travel the same way</strong>. Notes, Steps and settings kept inside the extension do not; move those with <strong>Export (JSON)</strong> and <strong>Import (JSON)</strong>.</p>
+
+    <p>You save a page at the office, sit down at your laptop in the evening, and it isn’t there. Chrome can keep your bookmarks the same on every computer, but only when a few settings line up. This guide covers how it works, how to set it up, what to check when it doesn’t work, and what happens to your saved tab groups if you use LB TAB Layers.</p>
+
+    <h2>How Chrome bookmark sync works</h2>
+    <p>Chrome itself does the syncing. When you sign in to Chrome with a Google Account, new bookmarks are saved in that account, and every other computer (and phone) signed in to Chrome with the same account gets them too. Changes go both ways: add, rename, move or delete a bookmark on one computer and the others follow, usually within a few seconds to a few minutes once they are online.</p>
+    <p>Three things matter:</p>
+    <ul>
+      <li><strong>The same Google Account</strong> on every computer, signed in to <em>Chrome</em> (not just to Gmail in a tab).</li>
+      <li><strong>Bookmarks turned on</strong> in the list of what Chrome saves to your account.</li>
+      <li><strong>The same Chrome profile</strong>. Each Chrome profile has its own bookmarks, so a work profile and a personal profile never share them.</li>
+    </ul>
+    <p>Google also notes a limit of about 100,000 bookmarks per account. Few people get near it, but very large imported collections can.</p>
+
+    <aside class="blog-mid-cta" aria-label="About LB TAB Layers">
+      <img src="../../blog/qs-7-open-en.webp" alt="Hover over a group: ▶ opens it as a Chrome tab group, ■ closes it all" loading="lazy" width="360" height="720">
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">Keep tabs by project. <strong>Open with ▶, close with ■.</strong></p>
+        <p class="blog-mid-cta-text">LB TAB Layers saves your open tabs by project as Chrome bookmarks, and reopens them with one click as a Chrome tab group with the same name and color. Closing them never loses them.</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_sync-chrome-bookmarks-between-computers&amp;utm_content=mid">Add to Chrome — free</a><a class="blog-mid-cta-link" href="operation-guide.html">See it in action →</a></div>
+      </div>
+    </aside>
+
+    <h2>Set it up, step by step</h2>
+    <p>Google has changed these screens several times. Older versions of Chrome say <strong>Turn on sync</strong>; recent versions simply ask you to <strong>sign in to Chrome</strong> and then let you choose what to save. The labels below follow Google’s current help pages, so your version may word them a little differently.</p>
+    <ol>
+      <li><strong>Sign in to Chrome.</strong> Click your profile picture at the top right of Chrome and choose <strong>Sign in to Chrome</strong>, then enter your Google Account details. If you see <strong>Turn on sync</strong> instead, use that.</li>
+      <li><strong>Check that bookmarks are included.</strong> Open the Chrome menu (⋮) → <strong>Settings</strong> → <strong>You and Google</strong> and select your account name. Make sure <strong>Bookmarks</strong> is on in the list of what is saved to your account. (In older versions: <strong>Sync and Google services</strong> → <strong>Manage what you sync</strong>.)</li>
+      <li><strong>Save bookmarks that are only on this computer.</strong> Bookmarks you made while signed out may be kept on the device only. If the profile menu offers something like <strong>Save x items in Account</strong>, use it to move them into your account.</li>
+      <li><strong>Repeat on the other computer</strong> with the same Google Account, then give it a minute. Open the bookmark manager (Ctrl+Shift+O, or ⌘+Option+B on a Mac) to check.</li>
+    </ol>
+    <div class="blog-callout"><p>💡 If you don’t want to sign in on a computer (a shared or locked-down work machine, for example), you can still copy bookmarks by hand: in the bookmark manager, use ⋮ → <strong>Export bookmarks</strong> to save an HTML file, and <strong>Import bookmarks</strong> on the other computer. This is a one-time copy, not a sync.</p></div>
+
+    <h2>When bookmarks don’t sync: what to check</h2>
+    <div class="blog-table-wrap"><table class="blog-table">
+      <thead><tr><th>What you see</th><th>Likely cause</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr><td>Nothing from the other computer shows up</td><td>Different Google Account, or signed in to a website but not to Chrome</td><td>Click your profile picture and check the account shown there on both computers.</td></tr>
+        <tr><td>Some old bookmarks are missing on the other computer</td><td>They were made while signed out and are saved on that device only</td><td>On the computer that has them, look for the option to save local items to your account.</td></tr>
+        <tr><td>Bookmarks sync, but not the ones you expected</td><td>You are in a different Chrome profile</td><td>Check the profile picture. Each profile has its own bookmarks.</td></tr>
+        <tr><td>Chrome asks for a passphrase or shows a sync error</td><td>A sync passphrase was set, or you need to sign in again</td><td>Enter the passphrase on this computer, or sign out and back in. A very old Chrome version can also cause trouble, so update Chrome.</td></tr>
+        <tr><td>The same bookmarks appear twice</td><td>Local bookmarks and account bookmarks were merged, or a backup was imported on top</td><td>Clean them up once in the bookmark manager. The change will then sync everywhere.</td></tr>
+        <tr><td>Changes appear late</td><td>The other computer was offline or asleep</td><td>Bring it online and open Chrome. It catches up on its own.</td></tr>
+      </tbody>
+    </table></div>
+    <p>One warning: because sync works both ways, <strong>deleting a bookmark on one computer deletes it everywhere</strong>. Sync is not a backup. If your bookmarks matter, export them to an HTML file from time to time.</p>
+
+    <h2>Synced bookmarks and your saved tab groups</h2>
+    <p>Chrome’s own tab groups are about the tabs you have open now. Bookmarks are what you keep for later. LB TAB Layers connects the two: <strong>each group you make is a Chrome bookmark folder</strong>, kept inside a folder called <strong>LB TAB Layers</strong> in your bookmarks, and each saved tab is an ordinary bookmark in it. (If you are curious where that lives on disk, see <a href="where-are-chrome-bookmarks-stored.html">where Chrome bookmarks are stored</a>.)</p>
+    <figure style="margin:1.2rem auto 1.8rem;text-align:center;"><img src="../../blog/guide-g04-save-menu-en.webp" alt="Right-click a tab → Save to Folder → choose a group. The tab is saved as a Chrome bookmark" loading="lazy" width="960" height="600" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 28px rgba(33,37,41,.14);"><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">Right-click a tab → Save to Folder → choose a group. The tab is saved as a Chrome bookmark</figcaption></figure>
+    <p>That has a useful side effect. <strong>Your groups ride on Chrome’s bookmark sync</strong> with nothing extra to set up:</p>
+    <ul>
+      <li>Save tabs to a group on your desktop, and the folder and its bookmarks reach your laptop through Chrome.</li>
+      <li>Install LB TAB Layers on the laptop too, open the panel with <strong>Alt+T</strong>, and it builds your groups from those folders. Hover over a group and click <strong>▶</strong> to open it as a Chrome tab group; <strong>■</strong> closes it again.</li>
+      <li>On your phone, the same pages show up as regular bookmarks in Chrome, inside the LB TAB Layers folder.</li>
+    </ul>
+    <figure style="margin:1.2rem auto 1.8rem;text-align:center;"><img src="../../blog/guide-g03-tab-group-en.webp" alt="▶ opens a saved group as a Chrome tab group with the same name and color. ■ closes it" loading="lazy" width="960" height="600" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 28px rgba(33,37,41,.14);"><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">▶ opens a saved group as a Chrome tab group with the same name and color. ■ closes it</figcaption></figure>
+    <p>A few honest details:</p>
+    <ul>
+      <li><strong>Colors and icons are set per computer.</strong> The folder and the pages come across through Chrome, but a group’s color and icon live inside the extension, so a group rebuilt on the second computer may start with a different color. You can change it with “…” → <strong>Edit (name, icon, color)</strong>.</li>
+      <li><strong>Sign in first, then open the panel.</strong> If you used LB TAB Layers on the second computer before signing in to Chrome, you can end up with two folders named LB TAB Layers in the bookmark manager. Move the group folders into one of them and delete the empty one; the panel will pick up the one that is left.</li>
+      <li><strong>Deleting syncs too.</strong> When you delete a tab or a group in the panel, it moves to a trash folder inside your bookmarks, and you get 8 seconds to click <strong>Undo</strong>. Once synced, the deletion reaches your other computers as well.</li>
+    </ul>
+
+    <h2>What Chrome bookmark sync does not carry</h2>
+    <p>Only the bookmark folders and bookmarks travel with Chrome. <strong>Data kept inside the extension stays on each computer</strong>, including:</p>
+    <ul>
+      <li>Your <strong>Notes</strong> and checklists</li>
+      <li>Your <strong>Steps</strong> tasks, their goals and your own templates</li>
+      <li>The extension’s settings, such as the theme and layout, and each group’s color and icon</li>
+    </ul>
+    <p>To move these to another computer, open <strong>Settings</strong> in the panel → <strong>Data &amp; Sync</strong> → <strong>Data Management</strong> and click <strong>Export (JSON)</strong>. The file contains your group list (names, colors, icons and saved tabs), your notes, and your Steps tasks, Steps settings and templates. On the other computer, use <strong>Import (JSON)</strong> in the same place. Two things to know: importing <strong>replaces</strong> the group list on that computer rather than adding to it, and display settings such as the theme are not in the file, so set those again by hand.</p>
+    <div class="blog-callout"><p>🔒 <strong>Saved tabs are Chrome bookmarks, so they stay even if you remove the extension.</strong> LB TAB Layers has no account of its own and does not upload your bookmarks anywhere. Syncing is done by Chrome, with your Google Account.</p></div>
+
+    <h2>Chrome’s official help</h2>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/165139?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Get your bookmarks, passwords, and more on all your devices — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/185277?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Sign in to Chrome — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/96816?hl=en" target="_blank" rel="noopener">Import Chrome bookmarks &amp; settings — Google Chrome Help</a></li>
+    </ul>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Do I need to turn on sync to get my bookmarks on another computer?</h3>
+    <p>In recent Chrome versions, signing in to Chrome is enough, as long as Bookmarks is on in the list of what is saved to your Google Account. Older versions call this Turn on sync.</p>
+
+    <h3>Q. Why are some of my bookmarks missing on my other computer?</h3>
+    <p>They were probably made while you were signed out, so they are saved on that computer only. Save them to your account from the profile menu, or check that both computers use the same Google Account and Chrome profile.</p>
+
+    <h3>Q. Do LB TAB Layers groups sync between computers?</h3>
+    <p>The groups and the pages in them do, because they are Chrome bookmark folders. Install the extension on the other computer and open the panel, and the groups are rebuilt from those folders. Colors, icons, notes, Steps and settings stay on each computer; use Export (JSON) and Import (JSON) in Settings to move them.</p>
+
+    <h3>Q. Is bookmark sync a backup?</h3>
+    <p>No. Deletions sync too, so a bookmark you delete on one computer disappears everywhere. Export your bookmarks to an HTML file from the bookmark manager now and then if you want a real backup.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fsync-chrome-bookmarks-between-computers.html&amp;text=Sync%20Chrome%20bookmarks%20between%20computers%3A%20sign%20in%2C%20choose%20what%20to%20save%2C%20and%20fix%20the%20common%20problems" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fsync-chrome-bookmarks-between-computers.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fsync-chrome-bookmarks-between-computers.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/sync-chrome-bookmarks-between-computers.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Your tab groups, on every computer you sign in to.</h3><p>LB TAB Layers saves tabs by project as Chrome bookmarks, so Chrome sync carries them for you. No account needed · Free plan with 5 groups · Every feature free for 90 days</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_sync-chrome-bookmarks-between-computers" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="where-are-chrome-bookmarks-stored.html">Where Chrome bookmarks are stored <span>→</span></a><a href="organize-bookmarks-chrome.html">Organize your Chrome bookmarks <span>→</span></a><a href="save-all-open-tabs-chrome.html">Save all open tabs in Chrome <span>→</span></a><a href="quick-start.html">Quick start: the basics in 5 minutes <span>→</span></a><a href="show-all-bookmarks-in-chrome-side-panel.html">All bookmarks in Chrome’s side panel <span>→</span></a><a href="chrome-tabs-disappeared-after-restart.html">Tabs gone after a Chrome restart <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>
