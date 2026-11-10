@@ -203,6 +203,7 @@
       <h4>Your data is stored inside the browser you use</h4>
       <p>Usage data such as the user's tab structure, group settings, theme settings (including the colors of an original theme), notes, Step Tasks (tasks for work steps, and templates) and feature-badge records is <strong>stored inside the user's browser</strong> through <code>chrome.storage.local</code> and Chrome's bookmark feature.</p>
       <p>Page thumbnail images are saved only when the user turns them on in Settings (off by default), as small, shrunk-down images of the screens of pages the user has viewed, and only inside the browser the user uses. Pages such as email, banking and card, login and payment, and chat are never captured from the start. The user can add sites not to capture in Settings (when a site is added, any already-saved images that match it are also deleted). Images are not sent outside. Screenshots and recordings are saved as files on the user's PC when the user chooses to save them.</p>
+      <p>Screenshots and revision notes (captured images, the notes written on them, a video's playback position and title, and the page URL) are stored inside the browser the user uses (the Extension's storage) so they are not lost when the side panel is closed. When capturing a moment of a video, the Extension reads only the video's position and size on the page, its playback position and its title; anything shown on top of the video is hidden only at the moment of capture and restored right away. When the user opens a video file from their computer, it is played only inside the browser and is never uploaded. None of this is sent externally.</p>
       <p>So they can be found in search, the URLs and titles of recently closed tabs (up to 50) are stored only inside the browser the user uses. Tabs in incognito windows are not recorded. Nothing is sent outside. When importing a file exported from another browser or extension (HTML, CSV, TXT), the file is read only inside the user's browser.</p>
       <p>Only the following two things reach our servers.</p>
       <ul>
@@ -284,7 +285,7 @@
     <p>The Extension does not provide, sell or share users' data with third parties. For payment processing, Stripe's privacy policy applies.</p>
 
     <h2>5. Deleting Data</h2>
-    <p>When the Extension is uninstalled, all data in the Extension's storage (groups and tabs, notes, step tasks, today's history, thumbnails, settings such as the theme, and the license check result) is deleted automatically.</p>
+    <p>When the Extension is uninstalled, all data in the Extension's storage (groups and tabs, notes, step tasks, today's history, thumbnails, screenshots and revision notes, settings such as the theme, and the license check result) is deleted automatically.</p>
     <p>The following are kept because they live outside the Extension. You can delete them yourself at any time.</p>
     <ul>
       <li>Groups and tabs saved to Chrome bookmarks (the "LB TAB Layers" folder, including its trash): delete them from Chrome's bookmarks</li>
@@ -304,7 +305,7 @@
     Website: <a href="https://www.liquid-block.com" target="_blank" rel="noopener">https://www.liquid-block.com</a></p>
 
     <div class="policy-footer">
-      <p>Last updated: November 9, 2026</p>
+      <p>Last updated: November 10, 2026</p>
       <p>© 2026 Liquid Block Inc. All rights reserved.</p>
     </div>
   </main>
