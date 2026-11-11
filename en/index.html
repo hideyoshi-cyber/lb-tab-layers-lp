@@ -45,8 +45,17 @@
       "applicationCategory": "BrowserApplication",
       "downloadUrl": "https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej",
       "softwareVersion": "3.0.3",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Core features are free. PRO plan available as a one-time purchase." },
-      "author": { "@type": "Organization", "name": "Liquid Block Inc.", "url": "https://www.liquid-block.com" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Core features are free. PRO plan available as a one-time purchase."
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      },
       "description": "Close tabs without losing them. Auto-save tabs as Chrome bookmarks. Your data survives restarts, crashes, and even extension removal.",
       "browserRequirements": "Google Chrome 114+ (Edge version coming soon)",
       "featureList": [
@@ -67,24 +76,56 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "What happens to my data if I uninstall the extension?", "acceptedAnswer": { "@type": "Answer", "text": "Your tabs are saved as Chrome bookmarks, so they remain even after uninstalling. When you reinstall, your groups and tabs are restored. Note: theme, color, and tag settings are stored locally and will be reset." } },
-        { "@type": "Question", "name": "Is PRO a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No, it's a one-time purchase of $9.99. Pay once, use forever." } },
-        { "@type": "Question", "name": "Which browsers are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Google Chrome 114+ and Microsoft Edge on Windows, Mac, Linux, and ChromeOS." } },
-        { "@type": "Question", "name": "Is my data sent to external servers?", "acceptedAnswer": { "@type": "Answer", "text": "Tab and group data is stored locally in your browser's bookmarks. Only an anonymous ID is used for license verification. Some external services are used for favicon display and search assistance." } },
-        { "@type": "Question", "name": "Can I restore tabs after a PC restart?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tabs managed by LB TAB Layers are saved as Chrome bookmarks, so they can be restored with one click from the side panel after any restart, crash, or forced shutdown." } },
-        { "@type": "Question", "name": "What's the difference between Free and PRO?", "acceptedAnswer": { "@type": "Answer", "text": "Free includes basic tab management and bookmark saving. PRO (one-time purchase) unlocks all 40 themes, AI search, focus timer, and more." } }
+        {
+          "@type": "Question",
+          "name": "Is it free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Saving, searching, and opening or closing everything at once are free. For the first 3 months, you can try every feature. PRO is a one-time purchase, with no monthly fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my current bookmarks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You keep using them as they are. Bring your Chrome bookmarks in as-is and organize them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my data if I remove it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Saved tabs remain as Chrome bookmarks. Settings such as themes and colors are deleted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which browsers does it work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It works with Google Chrome (114 or later), on Windows, Mac, Linux, and ChromeOS. The Edge version is in preparation."
+          }
+        }
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "LB TAB Layers", "item": "https://tablayers.liquid-block.com/en/" }]
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "LB TAB Layers",
+          "item": "https://tablayers.liquid-block.com/en/"
+        }
+      ]
     }
   ]
   </script>
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
   <header id="site-header">
     <nav class="nav-container">
       <a href="index.html" class="logo" aria-label="LB TAB Layers Home">
@@ -92,9 +133,9 @@
         <span class="logo-text">TAB Layers</span>
       </a>
       <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#themes">Themes</a>
-        <a href="#whats-new">What's New</a>
+        <a href="features.html">Features</a>
+        <a href="features.html#themes">Themes</a>
+        <a href="updates.html">What's New</a>
         <a href="#faq">FAQ</a>
         <a href="blog/">Blog</a>
         <a href="../" title="日本語">🌐 JA</a>
@@ -103,793 +144,294 @@
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
   <section id="hero">
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Chrome Extension — Free (Edge version coming soon)
-        </div>
+        <div class="hero-badge"><span class="badge-dot"></span>Chrome extension — Free (Edge version coming)</div>
         <h1>
-          Less time hunting for tabs and bookmarks.<br>
+          <span class="h1-phrase">Less time hunting for</span> <span class="h1-phrase">tabs and bookmarks.</span><br>
           <strong>More time to think.</strong>
         </h1>
         <p class="hero-sub">
-          <strong>Manage your bookmarks and tabs together, in one panel.</strong><br>
-          Save work tabs by project, open or close in one click.<br>
-          Stored as Chrome bookmarks — never lost.<br>
-          Open it anytime with <strong>Alt+T</strong>.
+          <strong>Manage bookmarks and tabs together, on one screen.</strong><br>
+          Tabs are “now.” Bookmarks are your “drawer.”<br>
+          Put work tabs away by project, and open them all at once.
         </p>
         <div class="hero-actions" id="cta-main">
-          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=en_top" class="btn btn-primary" id="hero-cta-chrome">
-            Add to Chrome
-          </a>
-          <a href="#" class="btn btn-ghost" id="hero-cta-edge">
-            Add to Edge
-            <span class="badge-soon">Coming Soon</span>
-          </a>
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=en_hero" class="btn btn-primary" id="hero-cta-chrome">Add to Chrome</a>
+          <a href="blog/quick-start.html" class="btn btn-ghost">See how to get started</a>
         </div>
-        <p class="hero-note">Open instantly with Alt+T · Project groups · Open/close all · Fuzzy search · Bookmark sync · One-time purchase · Chrome (Edge coming soon)</p>
+        <p class="hero-note">Open it anytime with Alt+T.</p>
       </div>
       <div class="hero-visual">
         <div class="hero-screenshot-wrapper">
-          <img src="../WebLBtaLayers.png" alt="LB TAB Layers Side Panel (Warm Theme)" class="hero-screenshot-img" loading="eager" width="354" height="1191">
-          <div class="hero-screenshot-badge">Warm Theme</div>
+          <img src="../img/en/app-hero.webp" alt="The LB TAB Layers side panel, showing a group for each project and the tabs open now" class="hero-screenshot-img" loading="eager" width="420" height="1180">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== VIDEO INTRO ===== -->
+  <!-- ===== 2. 15秒 ===== -->
   <section id="video-intro">
     <div class="container">
-      <div class="feature-header">
-        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch</span>
-        <h2>LB TAB Layers <span class="text-gradient">15-Second Spot</span></h2>
-        <p>Find any tab, instantly.</p>
-      </div>
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="feature-header" style="margin-top:56px;">
-        <h2>See it <span class="text-gradient">in action</span></h2>
-        <p>Managing bookmarks and tabs together in the sidebar (Japanese UI).</p>
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/YeEdM_l6fMk" title="LB TAB Layers walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers 15-second ad: “Found it”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHAT IS EXTENSION ===== -->
-  <section id="about-extension">
-    <div class="section-glow"></div>
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.jpg" alt="So many tabs! Where is that bookmark?" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Where was<br>that page?</h2>
+          <ul>
+            <li><b>Left open</b><span>It feels like closing it means losing it. So it stays open.</span></li>
+            <li><b>Hunting around</b><span>A sea of tabs. Five minutes, ten minutes, every day.</span></li>
+            <li><b>All gone</b><span>Chrome got slow, you restarted, and the tabs were gone.</span></li>
+          </ul>
+          <p>Your hands are busy, but the work isn’t moving.<br>We take that time away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
     <div class="container">
       <div class="feature-header">
-        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>What is a Browser Extension?</span>
-        <h2>A mini app that <span class="text-gradient">supercharges your browser.</span></h2>
-        <p>Never heard of extensions? Don't worry — it's as easy as installing an app on your phone.</p>
+        <h2>On your desk, <span class="text-gradient">only what you’re doing now.</span></h2>
+        <p>Things for later go in the drawer.</p>
       </div>
-      <div class="ext-explain-grid">
-        <div class="ext-explain-card">
-          <div class="ext-explain-num">01</div>
-          <h4>One-Click Install</h4>
-          <p>No complex setup or PC restart needed. Just click "Add to Chrome" and it's ready in seconds.</p>
+
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">Now</div>
+          <div class="nd-what">Tabs</div>
+          <div class="nd-say">What you’re working on right now.</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
         </div>
-        <div class="ext-explain-card">
-          <div class="ext-explain-num">02</div>
-          <h4>Always-On Side Panel</h4>
-          <p>Once installed, a slim panel appears on the side of your browser. Manage tabs without interrupting your workflow.</p>
-        </div>
-        <div class="ext-explain-card">
-          <div class="ext-explain-num">03</div>
-          <h4>Free, Safe & Easy to Try</h4>
-          <p>Distributed through the official Chrome Web Store by Google. Secure, trustworthy, and removable with one click anytime.</p>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right"></i>Put away</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">Drawer</div>
+          <div class="nd-what">Bookmarks</div>
+          <div class="nd-say">What you’ll use again later.</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">Client A project</div>
+            <div class="drawer-row in">Documents</div>
+            <div class="drawer-row">Read later</div>
+          </div>
         </div>
       </div>
-      <div class="ext-explain-visual">
-        <img src="../tab-layer-preview.png" alt="LB TAB Layers Side Panel Preview" class="ext-explain-img" loading="lazy" width="640" height="400">
+
+      <p class="nd-close">Things to do, and things to keep.<br>Just separating them clears your head.</p>
+
+      <figure class="app-shot">
+        <img src="../img/en/app-panel.webp" alt="LB TAB Layers on the right side of the browser. The tabs for the project “Client A commercial renewal” sit together as one set" loading="lazy" width="1280" height="800">
+        <figcaption>Always this screen, beside your browser. Tabs gather by project.</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded"></i><b>Put away</b><p>Close finished tabs all at once.</p></div>
+        <div class="verb"><i class="ti ti-player-play"></i><b>Take out</b><p>Open a project’s tabs all at once.</p></div>
+        <div class="verb"><i class="ti ti-search"></i><b>Find</b><p>Type a few letters and the page turns up.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PAIN POINTS ===== -->
-  <section id="pain-points">
-    <div class="section-glow"></div>
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
     <div class="container">
-      <div class="pain-grid">
-        <div class="pain-card">
-          <div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="10.01"/><line x1="10" y1="10" x2="10" y2="10.01"/><line x1="14" y1="10" x2="14" y2="10.01"/><line x1="18" y1="10" x2="18" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/></svg></div>
-          <h3>100 Tabs Always Open</h3>
-          <p>"If I close it, I'll lose it"<br>So nothing gets closed.<br>Your PC slows to a crawl.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-          <h3>"Where was that page?"</h3>
-          <p>Searching through a sea of tabs<br>every single day.<br>5 minutes, 10 minutes, wasted.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#EF4444" stroke-width="2"/></svg></div>
-          <h3>All Lost After Restart</h3>
-          <p>PC too slow → restart →<br>all tabs gone →<br>30 minutes to recover.</p>
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.jpg" alt="Tabs and bookmarks in one place" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Tabs and bookmarks,<br><span class="text-gradient">in one place.</span></h2>
+          <p>The same screen, always beside your browser.<br>Bookmarks on top, current tabs below.<br>No going back and forth. You see everything.</p>
+          <p>Press Alt+T to open it from any page.</p>
         </div>
       </div>
-      <div class="pain-solution">
-        <div class="solution-arrow">↓</div>
-        <p class="solution-text">LB TAB Layers <strong>breaks this vicious cycle.</strong></p>
-        <div class="solution-visual">
-          <img src="../tab-bookmarks-one.jpg" alt="Tabs and bookmarks unified" class="solution-img" loading="lazy" width="640" height="400">
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.jpg" alt="Tabs close all at once. They are saved as bookmarks, so nothing is lost" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Close them.<br><span class="text-gradient">They stay.</span></h2>
+          <p>Tabs are put away into Chrome bookmarks.</p>
+          <ul>
+            <li><span>Restart your computer. They stay.</span></li>
+            <li><span>Chrome crashes. They stay.</span></li>
+            <li><span>Remove this extension. They stay.</span></li>
+          </ul>
+          <p>So you can close tabs without worry.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== LESS BUSYWORK ===== -->
-  <section id="less-busywork">
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
     <div class="container">
       <div class="feature-header">
-        <span class="feature-tag">Less busywork</span>
-        <h2>Cut the work that <span class="text-gradient">doesn't need thinking.</span></h2>
-        <p>Each takes only seconds — but you repeat them dozens of times a day.</p>
+        <h2>Cut the work that <span class="text-gradient">doesn’t need thinking.</span></h2>
+        <p>Each takes a few seconds. But you do it dozens of times a day.</p>
       </div>
       <div class="reduce-list">
-        <div class="reduce-row"><div class="reduce-before">Reopening yesterday's tabs every morning</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">One ▶ opens the whole project</div></div>
-        <div class="reduce-row"><div class="reduce-before">Deciding where to save, every time</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Right-click a page and pick the project's group</div></div>
-        <div class="reduce-row"><div class="reduce-before">Building the same folders for each project</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Folder presets create the whole structure</div></div>
-        <div class="reduce-row"><div class="reduce-before">Hunting for that one page</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Fuzzy search with an alias dictionary</div></div>
-        <div class="reduce-row"><div class="reduce-before">Closing finished tabs one by one</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">■ closes them all; saved tabs stay saved</div></div>
-        <div class="reduce-row"><div class="reduce-before">Screenshotting pages for a report</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Capture a whole group into PowerPoint</div></div>
-        <div class="reduce-row"><div class="reduce-before">Comparing what matters, over and over</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Star ranks show only this week's priorities</div></div>
+        <div class="reduce-row"><div class="reduce-before">Reopening yesterday’s tabs every morning</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">One ▶ opens all of a project’s tabs</div></div>
+        <div class="reduce-row"><div class="reduce-before">Deciding where to put it, every time you save</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Right-click and pick the project</div></div>
+        <div class="reduce-row"><div class="reduce-before">Hunting around for that one page</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">A few letters are enough to find it</div></div>
+        <div class="reduce-row"><div class="reduce-before">Closing finished tabs one by one</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">■ closes them all. Saved ones stay</div></div>
+        <div class="reduce-row"><div class="reduce-before">Making the same folders for every project</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Build the whole structure at once from a template</div></div>
+        <div class="reduce-row"><div class="reduce-before">Capturing screens one by one for a report</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Capture them together, straight into PowerPoint</div></div>
+        <div class="reduce-row"><div class="reduce-before">Pausing the video to write revisions in another window</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Pause, write right there, Enter</div></div>
       </div>
       <p class="reduce-close">Spend the time you get back on thinking.</p>
     </div>
   </section>
 
-  <!-- ===== KEY FEATURE: PERSISTENCE ===== -->
-  <section id="persistence" class="feature-showcase">
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../img/en/app-review.webp" alt="The revision notes screen. Pause the video and write in the field below. Notes line up on the right with their timecodes" loading="lazy" width="1280" height="760"></div>
+        <div>
+          <h2>Revision notes,<br><span class="text-gradient">right on a YouTube video.</span></h2>
+          <p>No need to upload the video again. Write on the one you are watching in your browser: YouTube, Vimeo, Google Drive, or a video embedded in a web page.</p>
+          <ul>
+            <li><span>Pause, write, Enter. Playback continues.</span></li>
+            <li><span>You can also draw numbers and lines on the picture.</span></li>
+            <li><span>Notes go on a sheet with timecodes. Hand it over as a PDF or PowerPoint.</span></li>
+          </ul>
+          <p>Made by a video production studio, for our own revision rounds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
     <div class="container">
       <div class="feature-header">
-        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Persistence</span>
-        <h2>Close them.<br><span class="text-gradient">They stay.</span></h2>
-        <p>Tabs are saved as Chrome bookmarks.<br>So they never disappear, no matter what.</p>
+        <h2>Keep using it, <span class="text-gradient">and you’ll get there.</span></h2>
+        <p>At first, tabs and bookmarks are enough.<br>When you need more, it’s right next door.</p>
       </div>
-      <div class="persist-grid">
-        <div class="persist-card">
-          <div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
-          <h4>PC restarts?</h4>
-          <p>Bookmarks survive.</p>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/en/app-memo.webp" alt="The Notes screen. Write notes and checklists next to the page you are viewing" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">Think</div>
+            <div class="path-tiles">
+              <a class="tile" href="features.html"><i class="ti ti-note"></i><div><b>Notes</b><span>Write it down the moment it comes to you.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-list-check"></i><div><b>Steps</b><span>What to do, in order. Check each one off when it’s done.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-star"></i><div><b>★ Rank</b><span>See only what matters this week.</span></div></a>
+            </div>
+          </div>
         </div>
-        <div class="persist-card">
-          <div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-          <h4>Chrome crashes?</h4>
-          <p>Bookmarks survive.</p>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/en/app-board.webp" alt="The Board screen. Every project laid out as a card" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">Look over</div>
+            <div class="path-tiles">
+              <a class="tile" href="features.html"><i class="ti ti-layout-dashboard"></i><div><b>Dashboard</b><span>Everything, on one big page.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-layout-kanban"></i><div><b>Board</b><span>Lay out your projects as cards.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-photo"></i><div><b>Thumbnails</b><span>Remember by how it looks.</span></div></a>
+            </div>
+          </div>
         </div>
-        <div class="persist-card">
-          <div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
-          <h4>Extension removed?</h4>
-          <p>Bookmarks survive.</p>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/en/app-review.webp" alt="A revision sheet. For each scene, the playback position and numbered notes" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">Share</div>
+            <div class="path-tiles">
+              <a class="tile" href="features.html"><i class="ti ti-message-2-exclamation"></i><div><b>Revision notes</b><span>Write while you watch, then hand it over.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-camera"></i><div><b>Screenshots</b><span>Capture, and it goes straight into your document.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-copy"></i><div><b>Copy together</b><span>Select, and hand it to a person or an AI.</span></div></a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="persist-compare">
-        <div class="compare-bad">
-          <h4>❌ Other Tab Managers</h4>
-          <p>Store in proprietary storage →<br>Uninstall = <strong>all data lost</strong></p>
-        </div>
-        <div class="compare-good">
-          <h4>✅ LB TAB Layers</h4>
-          <p>Saved as Chrome bookmarks →<br><strong>Data survives everything</strong></p>
-        </div>
-      </div>
-      <div class="persist-visual">
-        <img src="../tab-persistence-one.jpg" alt="Planning docs, online tools, and AI tabs — all saved" class="persist-img" loading="lazy" width="640" height="400">
-      </div>
+
+      <p class="medal"><i class="ti ti-medal"></i>The more you use it, the more medals you earn. There’s a small celebration for each first, too.</p>
+      <p class="path-more"><a href="features.html">See all features →</a></p>
     </div>
   </section>
 
-  <!-- ===== FEATURES ===== -->
-  <section id="features">
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
     <div class="container">
-      <div class="feature-header">
-        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Key Features</span>
-        <h2>Everything, <span class="text-gradient">right here.</span></h2>
+      <div class="feature-header"><h2>On your work computer, too.</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off"></i><b>No sign-up</b><p>Install it and start using it right away.</p></div>
+        <div><i class="ti ti-device-laptop"></i><b>Your data stays with you</b><p>It’s saved in your own Chrome bookmarks.</p></div>
+        <div><i class="ti ti-credit-card-off"></i><b>No monthly fee</b><p>Start free. If you like it, buy it once.</p></div>
       </div>
-      <div class="features-grid">
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h3>Layer-Based Tab Management</h3><p>Group by project, client, or topic.<br>One-click restore for the whole group.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.81-.13 2.65-.36.3-.08.5-.32.54-.63.07-.54.45-.98.98-1.11.23-.06.47-.07.71-.03.29.05.57-.1.68-.37.37-.87.58-1.83.58-2.83 0-5.5-4.5-10-10-10z"/></svg></div><div><h3>40 Color Themes</h3><p>Minimal, dark, pop, and more.<br>Customize to match your mood or workflow.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6a2 2 0 0 1 2 2v14l-5-3-5 3V6a2 2 0 0 1 2-2z"/></svg></div><div><h3>Two-Way Bookmark Sync</h3><p>Tab data stored as native Chrome bookmarks.<br>Survives extension removal and PC restarts.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="6" y1="18" x2="18" y2="18"/></svg></div><div><h3>AI Tab Search</h3><p>Search with Chrome Built-in AI / Gemini / OpenAI / Claude for semantic matching.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="3"/><path d="M5 12l7-7 7 7"/><rect x="4" y="19" width="16" height="2" rx="1"/></svg></div><div><h3>Bumper Pin Bar</h3><p>Pin up to 10 frequently used sites.<br>Auto favicon fetch & collapsible toggle.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><h3>★ Star Ranking</h3><p>Assign ★1–★5 importance<br>to groups and individual tabs.<br>Sort and filter by priority.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div><div><h3>#Tag Cross-Classification</h3><p>Add custom tags to any tab.<br>Filter across folders with tag-based views.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><div><h3>Dashboard</h3><p>Full-screen view of all groups.<br>Drag & drop to reorganize.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div><div><h3>Bulk Tab Close</h3><p>Close all tabs in a group at once.<br>Free up memory instantly.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="9" x2="9" y2="21"/></svg></div><div><h3>Bulk Tab Grouping</h3><p>Select multiple tabs and<br>group them with one click.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M9 9l6 6"/><path d="M15 9l-6 6"/></svg></div><div><h3>Duplicate Tab Cleanup</h3><p>Auto-detect same-URL tabs.<br>Clean up with one click.</p></div></div>
-        <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/></svg></div><div><h3>Full-Screen Bookmark Manager</h3><p>View all existing bookmarks.<br>Drag or select folders to import<br>into TAB Layers.</p></div></div>
-      </div>
-      <div class="features-visual">
-        <img src="../tab-features-one.jpg" alt="Tabs closed in bulk — but bookmarks keep them safe" class="features-img" loading="lazy" width="640" height="400">
-      </div>
-      <div style="text-align: center; margin-top: 48px;">
-        <a href="../features.html" class="btn btn-ghost" style="border-color: var(--accent); color: var(--accent); font-weight: 600;">See all features & how to use &rarr;</a>
-      </div>
+      <p class="safe-link"><a href="privacy-policy.html">Privacy Policy →</a></p>
     </div>
   </section>
 
-  <!-- ===== THEMES ===== -->
-  <section id="themes">
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
     <div class="container">
-      <div class="feature-header">
-        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="15.5" r="2.5"/><circle cx="8.5" cy="15.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.82-.12 2.67-.35"/></svg>40 Themes</span>
-        <h2>Your ideal <span class="text-gradient">workspace.</span></h2>
-        <p>From minimal to dark. Beautiful in any lighting.</p>
-      </div>
-      <div class="theme-showcase">
-        <div class="theme-card" style="--t-bg:#F8F9FA;--t-hbg:#fff;--t-ac:#FF6B6B;--t-t1:#2B303A;--t-t2:#5C6370;--t-t3:#8A94A6;--t-sbg:#ECEFEF;--t-zb:#ECEFEF;--t-ib:#fff;--t-bd:rgba(43,48,58,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Liquid Warm</span></div>
-        <div class="theme-card" style="--t-bg:#EAFAF1;--t-hbg:#fff;--t-ac:#2ECC71;--t-t1:#145A32;--t-t2:#2ECC71;--t-t3:#58D68D;--t-sbg:#D5F5E3;--t-zb:#D5F5E3;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(46,204,113,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Pastel Mint</span></div>
-        <div class="theme-card" style="--t-bg:#FDEDEC;--t-hbg:#fff;--t-ac:#E74C3C;--t-t1:#641E16;--t-t2:#E74C3C;--t-t3:#F1948A;--t-sbg:#FADBD8;--t-zb:#FADBD8;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(231,76,60,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Pastel Rose</span></div>
-        <div class="theme-card" style="--t-bg:#FAF6F0;--t-hbg:#FAF6F0;--t-ac:#7EA172;--t-t1:#3E4A3B;--t-t2:#6B7A68;--t-t3:#9AA896;--t-sbg:#fff;--t-zb:#F0E5DC;--t-ib:rgba(250,246,240,0.7);--t-bd:rgba(110,125,104,0.1)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Nordic Cozy</span></div>
-        <div class="theme-card" style="--t-bg:#0F1115;--t-hbg:#0F1115;--t-ac:#A5C9EB;--t-t1:#F3F4F6;--t-t2:#9CA3AF;--t-t3:#6B7280;--t-sbg:rgba(255,255,255,0.03);--t-zb:rgba(255,255,255,0.04);--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Elegant Glass</span></div>
-        <div class="theme-card" style="--t-bg:#09090B;--t-hbg:#09090B;--t-ac:#E11D48;--t-t1:#F4F4F5;--t-t2:#A1A1AA;--t-t3:#71717A;--t-sbg:rgba(255,255,255,0.03);--t-zb:#18181B;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Cyberpunk</span></div>
-        <div class="theme-card" style="--t-bg:#F4F6F9;--t-hbg:#F4F6F9;--t-ac:#4EA8DE;--t-t1:#073B4C;--t-t2:#118AB2;--t-t3:#83C5BE;--t-sbg:#fff;--t-zb:#FFFDF0;--t-ib:#fff;--t-bd:#073B4C"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Toy</span></div>
-        <div class="theme-card" style="--t-bg:#121212;--t-hbg:#121212;--t-ac:#D4AF37;--t-t1:#F0E6D2;--t-t2:#D4AF37;--t-t3:#8A753C;--t-sbg:#1C1C1C;--t-zb:#1C1C1C;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(212,175,55,0.15)"><div class="theme-mini-ui"><div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div><div class="tmu-search"></div><div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div><div class="tmu-tab"></div><div class="tmu-tab tmu-tab-active"></div><div class="tmu-tab"></div><div class="tmu-spacer"></div><div class="tmu-membar"><div class="tmu-memfill"></div></div></div><span class="theme-name">Royal Gold</span></div>
-      </div>
-      <p class="theme-more">+ 32 more themes</p>
-    </div>
-  </section>
-
-  <!-- ===== VS CHROME BUILT-IN ===== -->
-  <section id="vs-builtin">
-    <div class="container">
-      <div class="feature-header">
-        <span class="feature-tag">vs. Chrome built-in</span>
-        <h2>What it does better than <span class="text-gradient">Chrome's built-in tools.</span></h2>
-        <p>It saves to the same Chrome bookmarks you already use — the built-in tools keep working, LB TAB Layers just fills the gaps.</p>
-      </div>
-      <div class="builtin-list">
-        <div class="builtin-row builtin-head" aria-hidden="true"><div></div><div>Chrome built-in</div><div>LB TAB Layers</div></div>
-        <div class="builtin-row"><div class="builtin-key">Tab groups</div><div class="builtin-std"><span class="builtin-label">Chrome built-in</span>Name and color tabs; a closed group stays saved and reopens from the bookmarks bar. But no groups inside groups</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>Subgroups, Archive for finished projects, presets that build a structure in one click, and notes and stars on each tab</div></div>
-        <div class="builtin-row"><div class="builtin-key">Bookmarks</div><div class="builtin-std"><span class="builtin-label">Chrome built-in</span>You can "Open all" in a folder, but not close them all or see which are open</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>Open everything with ▶, close everything with ■, and see open and saved tabs in one list</div></div>
-        <div class="builtin-row"><div class="builtin-key">Bookmark cleanup</div><div class="builtin-std"><span class="builtin-label">Chrome built-in</span>No way to find duplicates or dead links</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>Finds duplicates across all bookmarks and checks dead links, then cleans them up in bulk</div></div>
-        <div class="builtin-row"><div class="builtin-key">Search</div><div class="builtin-std"><span class="builtin-label">Chrome built-in</span>Only the exact text you type. Tabs and bookmarks are searched separately</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>Searches saved tabs, open tabs and today's history (PRO) together, with fuzzy matching</div></div>
-        <div class="builtin-row"><div class="builtin-key">Saving and tidying</div><div class="builtin-std"><span class="builtin-label">Chrome built-in</span>Save one page at a time with the star; unsaved tabs pile up</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>Right-click to save into a group. Close all unsaved tabs, or auto-group them by site</div></div>
-        <div class="builtin-row"><div class="builtin-key">Screenshots</div><div class="builtin-std"><span class="builtin-label">Chrome built-in</span>No way to capture many pages at once</div><div class="builtin-lb"><span class="builtin-label">LB TAB Layers</span>Capture a whole group and export as ZIP or PowerPoint (with a cover and contents slide)</div></div>
-      </div>
-      <p class="builtin-close">Because it saves where Chrome does, your data stays in Chrome even if you stop using LB TAB Layers.</p>
-    </div>
-  </section>
-
-  <!-- ===== COMPETITOR COMPARISON ===== -->
-  <section id="compare">
-    <div class="container">
-      <div class="feature-header">
-        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Compare</span>
-        <h2>Why <strong>LB TAB Layers</strong>?</h2>
-        <p>Compare where your data lives and what you need to get started — the difference is clear.</p>
-      </div>
-      <div class="compare-table-wrap">
-        <table class="compare-table" id="compare-table">
-          <thead><tr>
-            <th class="feature-col">Feature</th>
-            <th class="highlight-col">LB TAB Layers</th>
-            <th>OneTab</th><th>Workona</th><th>Session Buddy</th><th>Toby</th><th>Chrome Built-in</th>
-          </tr></thead>
-          <tbody>
-            <tr>
-              <td>Where saved tabs live</td>
-              <td class="highlight-col"><strong>Your Chrome bookmarks</strong></td>
-              <td>Inside the extension</td>
-              <td>Cloud (account)</td>
-              <td>Inside the extension</td>
-              <td>Cloud (account)</td>
-              <td>Bookmarks</td>
-            </tr>
-            <tr>
-              <td>If you uninstall the extension</td>
-              <td class="highlight-col"><strong>Kept as bookmarks</strong></td>
-              <td>Data inside the extension is removed (unless exported first)</td>
-              <td>Kept in your account</td>
-              <td>Data inside the extension is removed (unless exported first)</td>
-              <td>Kept in your account</td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <td>Account required</td>
-              <td class="highlight-col"><strong>No</strong></td>
-              <td>No</td>
-              <td>Yes</td>
-              <td>No</td>
-              <td>Yes</td>
-              <td>No</td>
-            </tr>
-            <tr>
-              <td>Open and saved tabs in one view</td>
-              <td class="highlight-col"><strong>Together in the side panel</strong></td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-              <td>Separate (tab search and bookmarks)</td>
-            </tr>
-            <tr>
-              <td>Price</td>
-              <td class="highlight-col"><strong>Free / PRO one-time $9.99</strong></td>
-              <td>Free</td>
-              <td>Paid plans are subscriptions</td>
-              <td>Free</td>
-              <td>Free plan; paid plans are subscriptions</td>
-              <td>Free</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">* Based on each service's official website as of September 2026. Features and prices may change. "—" means not applicable. See each service's page above for a detailed comparison.</p>
-    </div>
-  </section>
-
-  <!-- ===== PRIVACY ===== -->
-  <section id="privacy">
-    <div class="container">
-      <div class="privacy-card">
-        <h2><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-4px;margin-right:6px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Safe to use on a work computer</h2>
-        <p style="text-align:center;color:var(--text-secondary);max-width:640px;margin:-6px auto 28px;line-height:1.7">LB TAB Layers is made by <strong>Liquid Block Inc.</strong>, a video and motion graphics studio in Kobe, Japan. Here is exactly who we are and what happens to your data.</p>
-        <div class="privacy-grid">
-          <div class="privacy-item">
-            <h4>A real company behind it</h4>
-            <p>Liquid Block Inc., Kobe, Japan.<br>Questions? <a href="mailto:info@liquid-block.com" style="color:var(--accent)">info@liquid-block.com</a></p>
-          </div>
-          <div class="privacy-item">
-            <h4>Every permission explained</h4>
-            <p>Why the extension asks for each permission, in plain words.<br><a href="blog/chrome-extension-permissions-explained.html" style="font-size:0.85rem;color:var(--accent)">Read the explanation →</a></p>
-          </div>
-          <div class="privacy-item">
-            <h4>No account needed</h4>
-            <p>Install and start right away.<br>No email sign-up.</p>
-          </div>
-          <div class="privacy-item">
-            <h4>Local Storage</h4>
-            <p>Tabs and groups are stored<br>in your Chrome bookmarks only.<br>Nothing is stored on our servers.<br><a href="privacy-policy.html" style="font-size:0.85rem;color:var(--accent)">Privacy Policy →</a></p>
-          </div>
-          <div class="privacy-item">
-            <h4>Sync off, this computer only</h4>
-            <p>With Chrome bookmark sync turned off, your data stays on that computer only.</p>
-          </div>
-          <div class="privacy-item">
-            <h4>Anonymous Auth</h4>
-            <p>Only an anonymous ID is used for license verification. No personal information collected.</p>
-          </div>
-          <div class="privacy-item">
-            <h4>External AI only when you use it</h4>
-            <p>Data goes to an external AI service only if you use one, directly with your own API key.</p>
-          </div>
-          <div class="privacy-item">
-            <h4>Secure payments, one-time</h4>
-            <p>Card details are processed by Stripe and never touch our servers. No subscription or renewal.</p>
-          </div>
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.jpg" alt="Tabs of reference material for a proposal, tabs of online tools, and lots of AI tabs" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Take back<br>the time to create.</h2>
+          <p>Liquid Block is a studio that makes video and motion graphics. Reference material for proposals, online tools, lots of AI. On a production floor, tabs pile up.</p>
+          <p>Searching, reopening, rebuilding. We didn’t want that work taking our time to think, <strong style="color:var(--text)">so we made this for ourselves.</strong></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== BOOKMARK ASSETS ===== -->
-  <section id="bookmark-assets">
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
     <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">BOOKMARK ASSETS</div>
-        <h2>A bookmark pays off <span class="text-gradient">only when you put it to work.</span></h2>
-        <p class="cs-sub">Easy to save, easy to find, easy to open.</p>
-        <p class="cs-sub" style="margin-top:6px;">The more you bookmark, the harder it is to find anything. LB TAB Layers organizes the bookmarks you already have by project and makes them easy to pull back out.</p>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-download" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Easy to save</h4>
-              <p>Right-click a page or link, press Ctrl+Shift+S to save first and sort later, or select open tabs and group them at once. v2.12.0 adds dropping the address-bar icon or a link, and pasting URLs.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-search" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Easy to find</h4>
-              <p>Open instantly with Alt+T. Fuzzy search that understands Japanese, star ratings and tags, thumbnails and a folder view help you pull things out by sight, too.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-folders" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Easy to open</h4>
-              <p>Open or close a whole project in one click. Spot duplicates and dead links and tidy them up. Everything is stored as Chrome bookmarks, so it stays even if you remove the extension.</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:24px; font-size:0.85rem;">Some features (Dashboard, broken-link check) are PRO. Every feature is free for the first 3 months.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v3.0.3 NEW FEATURES ===== -->
-  <section id="whats-new-303">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v3.0.3</div>
-        <h2>v3.0.3 — <span class="text-gradient">One extension instead of many.</span></h2>
-        <p class="cs-sub">Your existing bookmarks become your workspace. Everything that naturally grows out of tab and bookmark management, in one place.</p>
-        <figure style="margin:20px auto 8px;max-width:640px;"><img src="../blog/feat-board.webp" alt="The board on the dashboard: every group as a card" loading="lazy" width="1400" height="820" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 28px rgba(33,37,41,.14);"></figure>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-bookmarks" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Turn your bookmark folders into groups</h4>
-              <p>Just pick the folders you use. Nothing is deleted, and you can move them back anytime.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-pencil" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Live pen (free)</h4>
-              <p>Draw on the page to point things out in online meetings. It fades away after a moment (Alt+Shift+D).</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-layout-sidebar-right-collapse" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Slim favicon rail (free)</h4>
-              <p>A thin column of tab icons at the edge of the page, so big screens stay wide.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-volume" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Control playing tabs from the panel</h4>
-              <p>Volume, playback position and pause. Move videos into a mini window and keep working.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-award" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Badges that guide you</h4>
-              <p>A small celebration the first time you use a feature, and a “Next:” hint for what to try.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-language" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Now in 15 languages</h4>
-              <p>Seven more languages, including Italian, Dutch, Polish, Turkish, Russian, Simplified Chinese and Hindi.</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:28px;"><a href="features.html#v303">See what’s new in 3.0.3 →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v3.0.1 NEW FEATURES ===== -->
-  <section id="whats-new">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v3.0.1</div>
-        <h2>v3.0.1 — <span class="text-gradient">Open, close, and never lose your place.</span></h2>
-        <p class="cs-sub">Tabs are “now”, bookmarks are “later”. Open a project with ▶ and put it away with ■.</p>
-        <figure style="margin:20px auto 8px;max-width:640px;"><img src="../blog/qs-7-open-en.webp" alt="Hover over a group: ▶ opens it as a Chrome tab group, ■ closes it all" loading="lazy" width="960" height="600" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 28px rgba(33,37,41,.14);"></figure>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-player-play" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>▶ opens a Chrome tab group</h4>
-              <p>Tabs opened with ▶ are gathered into a Chrome tab group with the same name and color as your group. ■ closes that tab group.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-layout-sidebar-right" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Switch views from the side column</h4>
-              <p>Tabs, Bookmarks, History, Notes and Steps sit in a column at the edge of the panel, so the list gets the full height.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-plus" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>“+ New Group” and “Add current tab”</h4>
-              <p>Create a group at the top of the list, and save the tab you are on with the button at the bottom. Just pick a group.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-pin" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>“Add to pin bar” from the right-click menu</h4>
-              <p>Right-click a tab or bookmark to keep the sites you use every day on the pin bar.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-arrow-back-up" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Deleted by mistake? Undo it</h4>
-              <p>Deleting a group or a saved tab moves it to the trash, with an 8-second “Undo”.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-school" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>A short animated guide for new users</h4>
-              <p>A five-minute quick start opens when you install (English, Japanese, Korean and Chinese).</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:28px;"><a href="blog/quick-start.html">Read the quick start →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v2.13.0 NEW FEATURES ===== -->
-  <section id="whats-new-2130">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v2.13.0</div>
-        <h2>v2.13.0 — <span class="text-gradient">Arrange it your way.</span></h2>
-        <p class="cs-sub">Your tab order and your mode switcher, just where you want them.</p>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-arrows-sort" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Reorder tabs by dragging</h4>
-              <p>Drag open tabs in the side panel to reorder them. The browser’s tab strip follows.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-layout-sidebar-right" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Mode switcher at the edge</h4>
-              <p>Put it in a column on the left edge if the panel is on the left, or the right edge if it is on the right (choose it in Settings). It can collapse into a slim icon column.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-keyboard" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>See your shortcut</h4>
-              <p>The shortcut (such as Alt+T) now shows next to the logo. Click it to open Chrome’s shortcut settings if another app is in the way.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-browser" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>The window stays when you close the last tab</h4>
-              <p>Closing the last tab opens a new one first, so the Chrome window doesn’t vanish.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-copy-off" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Easier bookmark cleanup</h4>
-              <p>The “Delete all duplicates” bar stays on screen while you scroll. A Stop button is available while it runs, and closing it mid-run no longer gets it stuck.</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:28px;"><a href="features.html#tab-reorder">Read the full feature guide →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v2.12.0 NEW FEATURES ===== -->
-  <section id="whats-new-2120">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v2.12.0</div>
-        <h2>v2.12.0 — <span class="text-gradient">Easy to save, find and open.</span></h2>
-        <p class="cs-sub">Get a page into a group the moment you think of it — and a heads-up before your tabs pile up.</p>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-click" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Drop to save</h4>
-              <p>Drag the address-bar icon or any link onto a group. Folder-view folders accept drops too.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-clipboard-plus" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Paste URLs to add</h4>
-              <p>Ctrl+V adds one or many URLs (several lines are fine). The group with the same site is picked for you.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-history" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Recently used groups first</h4>
-              <p>They lead the list wherever you choose a group — paste, “To group”, right-click. Undo is right there after saving.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-arrows-move" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Sort “Sort later” in bulk</h4>
-              <p>Select saved tabs and move them to another group at once. The bookmarks move with them.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-alert-triangle" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>A notice when many tabs are open</h4>
-              <p>Advice at 15+ tabs, a warning at 100+, with “Group them” and “Close the others” (adjustable in Settings).</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-clipboard-check" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Copied-URL notice (optional)</h4>
-              <p>Turn it on in Settings and you’ll be told when a URL is copied, so you can paste it into a group.</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:28px;"><a href="features.html#quick-add">Read the full feature guide →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v2.11.0 NEW FEATURES ===== -->
-  <section id="whats-new-2110">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">NEW IN v2.11.0</div>
-        <h2>v2.11.0 — <span class="text-gradient">See your work’s progress, too.</span></h2>
-        <p class="cs-sub">Step Tasks + folder view + bulk actions in the Tabs view + thumbnails + a welcome screen built around how you work.</p>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-list-check" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Step Tasks</h4>
-              <p>Split work into steps — a task counts only when every step is done. See today’s and this week’s finished tasks, and link them to a project (group). PRO (available during the trial).</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-template" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>34 work-process templates</h4>
-              <p>Proposals, meeting minutes, monthly reports and more. Choose the number of steps, time and date. Save your own templates, or add a task to Google Calendar.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-folders" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Folder view</h4>
-              <p>Browse your saved groups like a file explorer. Drag to move, use the mouse back/forward buttons, and middle-click a folder to open all its tabs at once.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-checkbox" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Group tabs in bulk from the Tabs view</h4>
-              <p>Every open tab, just like the browser’s tab strip. Select several and add them to a new or existing group. Saved tabs appear dimmed.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-layout-grid" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Thumbnail view (optional)</h4>
-              <p>Only when you turn it on, a small picture of each tab you visit is kept on your computer. Mail, banking and login pages are never captured, and nothing is sent out.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-compass" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>A welcome screen built around how you work</h4>
-              <p>Answer “How do you want to use it?” and your first groups and notes are set up for you.</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:28px;"><a href="features.html">Read the full feature guide →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v2.9 / v2.10 RECENT UPDATES ===== -->
-  <section id="recent-updates">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">NOW AVAILABLE</div>
-        <h2>v2.9 – v2.10 — <span class="text-gradient">Notes, and layouts that fit how you work.</span></h2>
-        <p class="cs-sub">New notes and layout features already in the store (free to use).</p>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-notes" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Notes & checklists</h4>
-              <p>Free-form notes and checklists in their own full-height view. Colors and pinning included.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-layout-columns" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Switchable layouts</h4>
-              <p>Give Tabs, Bookmarks or Notes the whole panel, or split it top and bottom with the Combined view — one click either way.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-link" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Notes linked to pages</h4>
-              <p>Link a note to the current page (or site) and it opens right up the next time you visit. Select text on a page and right-click to add it to a note.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-layout-list" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Compact display</h4>
-              <p>Choose Auto, Normal or Compact display density to fit smaller screens.</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-search" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>Note search & backup</h4>
-              <p>Search your notes, and they are included in the Export backup in Settings.</p>
-            </div>
-          </div>
-        </div>
-        <p class="cs-sub" style="margin-top:28px;"><a href="features.html">Read the full feature guide →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section id="faq">
-    <div class="container">
-      <div class="feature-header"><h2>Frequently Asked Questions</h2></div>
+      <div class="feature-header"><h2>FAQ</h2></div>
       <div class="faq-list">
-        <details class="faq-item" id="faq-1"><summary>What happens to my data if I uninstall the extension?</summary><p>Your tabs remain as Chrome bookmarks, so your links are preserved even after uninstalling. When you reinstall, your groups and tabs are restored.<br><small>※ Theme, color, and tag settings are stored locally and will be reset on removal.</small></p></details>
-        <details class="faq-item" id="faq-2"><summary>Is PRO a subscription?</summary><p>No, it's a one-time purchase of $9.99. Pay once, use forever.</p></details>
-        <details class="faq-item" id="faq-3"><summary>Which browsers are supported?</summary><p>Google Chrome 114+ and Microsoft Edge (Windows / Mac / Linux / ChromeOS).</p></details>
-        <details class="faq-item" id="faq-4"><summary>Is my data sent to external servers?</summary><p>Tab and group data is stored locally in your browser. Only an anonymous ID is used for license verification. Some external services are used for favicon display and search. <a href="privacy-policy.html" style="color:var(--accent)">See our Privacy Policy →</a></p></details>
-        <details class="faq-item" id="faq-5"><summary>Can I restore tabs after a PC restart?</summary><p>Yes. Tabs managed by LB TAB Layers are saved as Chrome bookmarks, so they can be restored with one click from the side panel after any restart, crash, or forced shutdown.</p></details>
-        <details class="faq-item" id="faq-6"><summary>What's the difference between Free and PRO?</summary><p>Free includes basic tab management and bookmark saving. PRO (one-time purchase) unlocks all 40 themes, AI search, focus timer, and all features.</p></details>
-      </div>
-      <div class="faq-visual">
-        <img src="../tab-faq-one.jpg" alt="So many tabs! Where are my bookmarks?" class="faq-img" loading="lazy" width="640" height="400">
+        <details class="faq-item">
+          <summary>Is it free to use?</summary>
+          <p>Yes. Saving, searching, and opening or closing everything at once are free. For the first 3 months, you can try every feature. PRO is a one-time purchase, with no monthly fee.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens to my current bookmarks?</summary>
+          <p>You keep using them as they are. Bring your Chrome bookmarks in as-is and organize them.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens to my data if I remove it?</summary>
+          <p>Saved tabs remain as Chrome bookmarks. Settings such as themes and colors are deleted.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which browsers does it work with?</summary>
+          <p>It works with Google Chrome (114 or later), on Windows, Mac, Linux, and ChromeOS. The Edge version is in preparation.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- ===== PHILOSOPHY ===== -->
-  <section id="philosophy">
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
     <div class="container">
-      <div class="philosophy-card">
-        <span class="feature-tag">Our thinking</span>
-        <h2>Get your making time back.</h2>
-        <p>Liquid Block is a video and motion graphics studio.<br>In production, the work that needs no thinking — hunting for references, reopening tabs, rebuilding the same folders — slowly eats the time we need to think.</p>
-        <p>We built LB TAB Layers for ourselves, to cut that repetition.<br>Fewer clicks, more time to think.<br>The time spent thinking turns into experience, and comes back to the world as better work.</p>
-        <p><strong>That is what productivity means to us.</strong></p>
+      <h2>Start with <span class="text-gradient">tabs and bookmarks.</span></h2>
+      <p class="d-lead">Install it and start using it right away.</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=en_final" class="btn btn-primary btn-large" id="cta-final-chrome">Add to Chrome for free</a>
+      </div>
+      <div class="last-links">
+        <a href="blog/quick-start.html">Get Started</a>
+        <a href="features.html">Features</a>
+        <a href="updates.html">What’s New</a>
+        <a href="compare.html">How It Compares</a>
+        <a href="blog/">Blog</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FINAL CTA ===== -->
-  <section id="final-cta">
-    <div class="section-glow"></div>
-    <div class="container cta-flex-container">
-      <div class="cta-content">
-        <h2>End the tab chaos,<br><span class="text-gradient">starting today.</span></h2>
-        <p>No more 100 tabs open at all times.</p>
-        <div class="hero-actions">
-          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=en_top" class="btn btn-primary btn-large" id="cta-final-chrome">Add to Chrome — Free</a>
-          <a href="#" class="btn btn-ghost btn-large" id="cta-final-edge">Add to Edge <span class="badge-soon">Coming Soon</span></a>
-        </div>
-      </div>
-      <div class="cta-image-wrapper">
-        <img src="../WebLBtaLayers.png" alt="" class="cta-bg-img" aria-hidden="true" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
   <footer id="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -915,7 +457,6 @@
       </div>
     </div>
   </footer>
-
   <script src="../script.js"></script>
 </body>
 </html>

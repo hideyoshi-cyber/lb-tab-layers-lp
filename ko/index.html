@@ -25,77 +25,334 @@
   <script type="application/ld+json">
   [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LB TAB Layers","operatingSystem":"Chrome","applicationCategory":"BrowserApplication","downloadUrl":"https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej","softwareVersion":"3.0.3","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"기본 기능은 무료입니다. PRO 플랜은 일회성 구매입니다."},"author":{"@type":"Organization","name":"Liquid Block Inc."},"description":"탭을 닫아도 사라지지 않습니다. Chrome 북마크로 자동 저장되는 레이어형 탭 관리 확장 프로그램."},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/ko/"}]}]
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "무료로 쓸 수 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네. 저장, 검색, 한꺼번에 열기·닫기는 무료로 쓸 수 있습니다. 처음 3개월은 모든 기능을 써 볼 수 있습니다. PRO는 한 번만 구매하면 되고, 월정액은 없습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "지금 있는 북마크는 어떻게 되나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "그대로 쓸 수 있습니다. Chrome 북마크를 그대로 가져와서 정리할 수 있습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "삭제하면 데이터는 어떻게 되나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "저장한 탭은 Chrome 북마크로 남습니다. 테마나 색상 같은 설정은 사라집니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "어떤 브라우저에서 쓸 수 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Chrome(114 이상)에서 쓸 수 있습니다. Windows·Mac·Linux·ChromeOS를 지원합니다. Edge 버전은 준비 중입니다."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header id="site-header"><nav class="nav-container"><a href="index.html" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="#features">기능</a><a href="#themes">테마</a><a href="../en/#whats-new">새 기능</a><a href="#faq">FAQ</a><a href="../en/">🌐 EN</a></div><a href="#cta-main" class="nav-cta">무료로 시작</a></nav></header>
+  <header id="site-header"><nav class="nav-container"><a href="index.html" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="features.html">기능</a><a href="features.html">테마</a><a href="../en/#whats-new">새 기능</a><a href="#faq">FAQ</a><a href="../en/">🌐 EN</a></div><a href="#cta-main" class="nav-cta">무료로 시작</a></nav></header>
 
-  <section id="hero"><div class="hero-glow"></div><div class="hero-container"><div class="hero-content">
-    <div class="hero-badge"><span class="badge-dot"></span>Chrome / Edge 확장 프로그램 — 무료</div>
-    <h1>탭을 닫아도<br><strong>사라지지 않습니다.</strong></h1>
-    <p class="hero-sub">Chrome 북마크로 자동 저장.<br>레이어형 탭 관리.<br>재시작, 충돌, 확장 삭제 후에도<br>데이터는 그대로 남아있습니다.</p>
-    <div class="hero-actions" id="cta-main"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=ko_top" class="btn btn-primary" id="hero-cta-chrome">Chrome에 추가</a><a href="#" class="btn btn-ghost" id="hero-cta-edge">Edge에 추가 <span class="badge-soon">준비 중</span></a></div>
-    <p class="hero-note">40테마 · 알림 배지 · 1,000단어 퍼지 검색 · 핀 바 · 북마크 동기화 · Chrome 지원(Edge 준비 중)</p>
-  </div><div class="hero-visual"><div class="hero-screenshot-wrapper"><img src="../WebLBtaLayers.png" alt="LB TAB Layers 사이드 패널 (Warm 테마)" class="hero-screenshot-img" loading="eager" width="354" height="1191"><div class="hero-screenshot-badge">Warm 테마</div></div></div></div></section>
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span>Chrome 확장 프로그램 — 무료 (Edge 버전은 준비 중)</div>
+        <h1>
+          <span class="h1-phrase">탭과 북마크를</span> <span class="h1-phrase">찾는 시간을,</span><br>
+          <strong>생각하는 시간으로.</strong>
+        </h1>
+        <p class="hero-sub">
+          <strong>북마크와 탭을 한 화면에서 함께 관리합니다.</strong><br>
+          탭은 '지금'. 북마크는 '서랍'.<br>
+          업무 탭을 프로젝트별로 넣어 두고, 한꺼번에 엽니다.
+        </p>
+        <div class="hero-actions" id="cta-main">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=ko_hero" class="btn btn-primary" id="hero-cta-chrome">Chrome에 추가</a>
+          <a href="quick-start.html" class="btn btn-ghost">시작하는 방법 보기</a>
+        </div>
+        <p class="hero-note">Alt+T로 언제든 열 수 있습니다.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot-wrapper">
+          <img src="../img/ko/app-hero.webp" alt="LB TAB Layers의 사이드 패널. 프로젝트별 그룹과 지금 열려 있는 탭이 나란히 보인다" class="hero-screenshot-img" loading="eager" width="420" height="1180">
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="about-extension"><div class="section-glow"></div><div class="container"><div class="feature-header">
-    <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>브라우저 확장 프로그램이란?</span>
-    <h2>브라우저를 강력하게 업그레이드하는<br><span class="text-gradient">「미니 앱」입니다.</span></h2>
-    <p>확장 프로그램을 잘 모르시나요? 걱정 마세요 — 스마트폰에 앱을 설치하는 것만큼 간단합니다.</p>
-  </div>
-  <div class="ext-explain-grid">
-    <div class="ext-explain-card"><div class="ext-explain-num">01</div><h4>원클릭 설치</h4><p>복잡한 설치나 PC 재시작이 필요 없습니다. 「Chrome에 추가」 버튼을 누르면 몇 초 만에 완료.</p></div>
-    <div class="ext-explain-card"><div class="ext-explain-num">02</div><h4>사이드 패널 상주</h4><p>설치 후 브라우저 옆에 슬림한 조작 패널이 나타납니다. 작업을 방해하지 않으면서 항상 탭 관리를 지원합니다.</p></div>
-    <div class="ext-explain-card"><div class="ext-explain-num">03</div><h4>무료, 안전, 바로 사용 가능</h4><p>Google 공식 Chrome 웹 스토어에서 배포됩니다. 보안적으로 안심. 언제든 버튼 하나로 삭제 가능합니다.</p></div>
-  </div>
-  <div class="ext-explain-visual"><img src="../tab-layer-preview.png" alt="LB TAB Layers 사이드 패널 미리보기" class="ext-explain-img" loading="lazy" width="640" height="400"></div></div></section>
+  <!-- ===== 2. 15秒 ===== -->
+  <section id="video-intro">
+    <div class="container">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers 15초 광고 '찾았다' 편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
-  <section id="pain-points"><div class="section-glow"></div><div class="container"><div class="pain-grid">
-    <div class="pain-card"><div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div><h3>탭 100개 항상 열어둠</h3><p>"닫으면 돌아갈 수 없어"<br>그래서 닫지 못합니다.<br>PC가 점점 느려집니다.</p></div>
-    <div class="pain-card"><div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>"그 페이지 어디 있지?"</h3><p>매일 탭의 바다에서 검색.<br>5분, 10분, 매일 낭비.</p></div>
-    <div class="pain-card"><div class="pain-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3>재시작 후 전부 사라짐</h3><p>PC가 느려서 재시작 →<br>모든 탭 사라짐 →<br>30분 동안 복구.</p></div>
-  </div>
-  <div class="pain-solution"><div class="solution-arrow">↓</div><p class="solution-text">LB TAB Layers가 <strong>이 악순환을 끊습니다.</strong></p><div class="solution-visual"><img src="../tab-bookmarks-one.jpg" alt="탭과 북마크를 하나로" class="solution-img" loading="lazy" width="640" height="400"></div></div></div></section>
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.jpg" alt="탭이 너무 많아! 북마크는 어디 있지?" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>그 페이지,<br>어디 있더라.</h2>
+          <ul>
+            <li><b>계속 열어 둔다</b><span>닫으면 다시 못 찾을 것 같아서, 닫지 못합니다.</span></li>
+            <li><b>찾아 헤맨다</b><span>탭의 바다에서 매일 5분, 10분.</span></li>
+            <li><b>전부 사라진다</b><span>느려져서 재시작했더니, 탭이 없습니다.</span></li>
+          </ul>
+          <p>손은 움직이는데, 일은 나아가지 않습니다.<br>그런 시간을 없애 드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="persistence" class="feature-showcase"><div class="container"><div class="feature-header">
-    <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>영구 보존</span>
-    <h2>닫아도,<br><span class="text-gradient">사라지지 않습니다.</span></h2>
-    <p>탭은 Chrome 북마크로 저장됩니다.<br>그래서 무슨 일이 있어도 사라지지 않습니다.</p>
-  </div>
-  <div class="persist-grid">
-    <div class="persist-card"><div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div><h4>PC를 재시작해도</h4><p>북마크이기 때문에 사라지지 않습니다</p></div>
-    <div class="persist-card"><div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h4>Chrome이 충돌해도</h4><p>북마크이기 때문에 사라지지 않습니다</p></div>
-    <div class="persist-card"><div class="persist-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><h4>확장을 삭제해도</h4><p>북마크이기 때문에 사라지지 않습니다</p></div>
-  </div>
-  <div class="persist-compare"><div class="compare-bad"><h4>❌ 다른 탭 관리 도구</h4><p>자체 스토리지에 저장 →<br>삭제하면 <strong>모든 데이터 소실</strong></p></div><div class="compare-good"><h4>✅ LB TAB Layers</h4><p>Chrome 북마크로 저장 →<br><strong>무슨 일이 있어도 보존</strong></p></div></div>
-  <div class="persist-visual"><img src="../tab-persistence-one.jpg" alt="기획서·온라인 도구·AI 탭 — 전부 저장" class="persist-img" loading="lazy" width="640" height="400"></div></div></section>
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
+    <div class="container">
+      <div class="feature-header">
+        <h2>책상 위에는, <span class="text-gradient">지금 할 일만.</span></h2>
+        <p>나중에 쓸 것은 서랍으로.</p>
+      </div>
 
-  <section id="features"><div class="container"><div class="feature-header">
-    <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:4px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>주요 기능</span>
-    <h2>모든 것이, <span class="text-gradient">여기에.</span></h2>
-  </div>
-  <div class="features-grid">
-    <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h3>레이어형 탭 관리</h3><p>프로젝트·클라이언트·용도별로<br>그룹화. 원클릭으로 일괄 복원.</p></div></div>
-    <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/></svg></div><div><h3>40가지 컬러 테마</h3><p>미니멀, 다크, 팝 등.<br>기분에 맞게 아름답게 커스터마이즈.</p></div></div>
-    <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9 4h6a2 2 0 0 1 2 2v14l-5-3-5 3V6a2 2 0 0 1 2-2z"/></svg></div><div><h3>북마크 양방향 동기화</h3><p>탭 정보는 Chrome 북마크에 저장.<br>확장 삭제 후에도 데이터 보존.</p></div></div>
-    <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/></svg></div><div><h3>AI 탭 검색</h3><p>Gemini / OpenAI / Claude로<br>의미론적 스마트 검색.</p></div></div>
-    <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><line x1="12" y1="17" x2="12" y2="3"/><path d="M5 12l7-7 7 7"/><rect x="4" y="19" width="16" height="2" rx="1"/></svg></div><div><h3>범퍼 핀 바</h3><p>자주 사용하는 사이트를 최대 10개 상주.<br>파비콘 자동 가져오기.</p></div></div>
-    <div class="feat-card"><div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><h3>★ 중요도 랭킹</h3><p>그룹과 탭에 ★1~★5 설정.<br>우선순위별 정렬 및 필터.</p></div></div>
-  </div>
-  <div class="features-visual"><img src="../tab-features-one.jpg" alt="탭 일괄 닫기 — 하지만 북마크로 안전하게" class="features-img" loading="lazy" width="640" height="400"></div></div></section>
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">지금</div>
+          <div class="nd-what">탭</div>
+          <div class="nd-say">지금 손을 움직이고 있는 것.</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
+        </div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right"></i>넣기</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">서랍</div>
+          <div class="nd-what">북마크</div>
+          <div class="nd-say">나중에 다시 쓸 것.</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">A사 프로젝트</div>
+            <div class="drawer-row in">자료</div>
+            <div class="drawer-row">나중에 읽기</div>
+          </div>
+        </div>
+      </div>
 
-  <section id="faq"><div class="container"><div class="feature-header"><h2>자주 묻는 질문</h2></div>
-  <div class="faq-list">
-    <details class="faq-item"><summary>확장을 삭제하면 데이터는 어떻게 되나요?</summary><p>탭은 Chrome 북마크로 남으므로 확장을 삭제해도 링크는 사라지지 않습니다. 재설치하면 그룹과 탭이 복원됩니다.<br><small>※ 테마·색상·태그 설정은 로컬 저장이므로 삭제 시 초기화됩니다.</small></p></details>
-    <details class="faq-item"><summary>PRO는 구독인가요?</summary><p>아닙니다. 일회성 구매입니다. 가격은 $9.99입니다. 한 번 결제하면 영구적으로 사용 가능합니다.</p></details>
-    <details class="faq-item"><summary>어떤 브라우저에서 사용할 수 있나요?</summary><p>Google Chrome 114 이상, Microsoft Edge (Windows / Mac / Linux / ChromeOS).</p></details>
-    <details class="faq-item"><summary>PC 재시작 후 탭을 복원할 수 있나요?</summary><p>네. LB TAB Layers로 관리한 탭은 Chrome 북마크로 저장되어 있으므로, 재시작·충돌·강제 종료 후에도 사이드 패널에서 원클릭으로 복원 가능합니다.</p></details>
-  </div></div></section>
+      <p class="nd-close">할 일과, 간직해 둘 것.<br>나누기만 해도 머리가 가벼워집니다.</p>
 
-  <section id="final-cta"><div class="section-glow"></div><div class="container cta-flex-container"><div class="cta-content">
-    <h2>탭 혼란을,<br><span class="text-gradient">오늘 끝내세요.</span></h2>
-    <p>100개의 탭을 항상 열어두는 날들은 이제 끝.</p>
-    <div class="hero-actions"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=ko_top" class="btn btn-primary btn-large" id="cta-final-chrome">Chrome에 무료로 추가</a></div>
-  </div><div class="cta-image-wrapper"><img src="../WebLBtaLayers.png" alt="" class="cta-bg-img" aria-hidden="true" loading="lazy"></div></div></section>
+      <figure class="app-shot">
+        <img src="../img/ko/app-panel.webp" alt="브라우저 오른쪽에 LB TAB Layers. 프로젝트 'A사 CM 리뉴얼'의 탭이 한 묶음으로 나란히 보인다" loading="lazy" width="1280" height="800">
+        <figcaption>브라우저 옆에 언제나 이 화면. 프로젝트별로 탭이 정리됩니다.</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded"></i><b>넣기</b><p>끝난 탭을 한꺼번에 닫습니다.</p></div>
+        <div class="verb"><i class="ti ti-player-play"></i><b>꺼내기</b><p>프로젝트의 탭을 한꺼번에 엽니다.</p></div>
+        <div class="verb"><i class="ti ti-search"></i><b>찾기</b><p>몇 글자만 입력하면, 그 페이지가 나옵니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.jpg" alt="탭과 북마크를 하나로" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>탭과 북마크를,<br><span class="text-gradient">하나로.</span></h2>
+          <p>브라우저 옆에 언제나 같은 화면.<br>위에는 북마크, 아래에는 지금의 탭.<br>왔다 갔다 하지 않아도 전부 보입니다.</p>
+          <p>Alt+T를 누르면 어느 페이지에서든 열립니다.</p>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.jpg" alt="탭이 한꺼번에 사라진다. 하지만 북마크로 저장되어 사라지지 않으니 안심" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>닫아도,<br><span class="text-gradient">사라지지 않습니다.</span></h2>
+          <p>넣어 두는 곳은 Chrome 북마크입니다.</p>
+          <ul>
+            <li><span>컴퓨터를 재시작해도, 남습니다.</span></li>
+            <li><span>Chrome이 꺼져도, 남습니다.</span></li>
+            <li><span>이 확장 프로그램을 삭제해도, 남습니다.</span></li>
+          </ul>
+          <p>그래서 안심하고 닫을 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
+    <div class="container">
+      <div class="feature-header">
+        <h2>생각할 필요 없는 작업을, <span class="text-gradient">줄입니다.</span></h2>
+        <p>한 번은 몇십 초. 하지만 매일 수십 번씩 하고 있습니다.</p>
+      </div>
+      <div class="reduce-list">
+        <div class="reduce-row"><div class="reduce-before">매일 아침, 어제의 탭을 다시 연다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">▶ 하나로 프로젝트의 탭이 한꺼번에 열린다</div></div>
+        <div class="reduce-row"><div class="reduce-before">저장할 때마다 둘 곳을 고민한다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">우클릭해서 프로젝트를 고르기만 하면 된다</div></div>
+        <div class="reduce-row"><div class="reduce-before">그 페이지를 찾아 헤맨다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">몇 글자만으로 찾을 수 있다</div></div>
+        <div class="reduce-row"><div class="reduce-before">끝난 탭을 하나씩 닫는다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">■ 로 한꺼번에 닫는다. 저장한 것은 남는다</div></div>
+        <div class="reduce-row"><div class="reduce-before">프로젝트마다 같은 폴더를 만든다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">템플릿으로 구성까지 한 번에 만든다</div></div>
+        <div class="reduce-row"><div class="reduce-before">보고 자료용으로 화면을 한 장씩 캡처한다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">한꺼번에 캡처해서 PowerPoint로</div></div>
+        <div class="reduce-row"><div class="reduce-before">동영상을 멈추고, 다른 화면에 수정 사항을 적는다</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">멈추고, 그 자리에서 적고, Enter</div></div>
+      </div>
+      <p class="reduce-close">아낀 시간은 생각하는 데 써 주세요.</p>
+    </div>
+  </section>
+
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../img/ko/app-review.webp" alt="수정 지시 화면. 동영상을 멈추고 아래 칸에 적는다. 오른쪽에 지시가 시각과 함께 나열된다" loading="lazy" width="1280" height="760"></div>
+        <div>
+          <h2>YouTube 동영상에,<br><span class="text-gradient">그대로 수정 지시.</span></h2>
+          <p>동영상을 다시 올리지 않아도, 브라우저에서 보고 있는 그 동영상에 적을 수 있습니다. YouTube, Vimeo, Google Drive, 웹 페이지에 삽입된 동영상.</p>
+          <ul>
+            <li><span>멈추고, 적고, Enter. 재생은 이어집니다.</span></li>
+            <li><span>화면 위에 번호나 선도 그릴 수 있습니다.</span></li>
+            <li><span>지시는 시각이 붙은 시트로. PDF나 PowerPoint로 전달할 수 있습니다.</span></li>
+          </ul>
+          <p>영상을 만드는 회사가, 자신들의 수정 작업을 위해 만들었습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
+    <div class="container">
+      <div class="feature-header">
+        <h2>쓰다 보면, <span class="text-gradient">닿게 됩니다.</span></h2>
+        <p>처음에는 탭과 북마크만으로 충분합니다.<br>필요해지면, 바로 옆에 있습니다.</p>
+      </div>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/ko/app-memo.webp" alt="메모 화면. 보고 있는 페이지 옆에서 메모나 체크리스트를 쓸 수 있다" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">생각하기</div>
+            <div class="path-tiles">
+              <a class="tile" href="features.html"><i class="ti ti-note"></i><div><b>메모</b><span>떠오르면, 그 자리에서 적습니다.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-list-check"></i><div><b>스텝</b><span>할 일을 순서대로. 끝나면 체크.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-star"></i><div><b>★ 랭크</b><span>이번 주, 중요한 것만 봅니다.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/ko/app-board.webp" alt="보드 화면. 모든 프로젝트가 카드로 나열된다" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">둘러보기</div>
+            <div class="path-tiles">
+              <a class="tile" href="features.html"><i class="ti ti-layout-dashboard"></i><div><b>대시보드</b><span>전부를, 커다란 한 장으로.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-layout-kanban"></i><div><b>보드</b><span>프로젝트를 카드로 나열합니다.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-photo"></i><div><b>썸네일</b><span>모습을 보고, 떠올립니다.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/ko/app-review.webp" alt="지시 시트. 장면별로 재생 위치와 번호가 붙은 지시가 나열된다" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">전달하기</div>
+            <div class="path-tiles">
+              <a class="tile" href="features.html"><i class="ti ti-message-2-exclamation"></i><div><b>수정 지시</b><span>동영상을 보면서 적고, 사람에게 전달합니다.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-camera"></i><div><b>스크린샷</b><span>캡처해서, 그대로 자료로.</span></div></a>
+              <a class="tile" href="features.html"><i class="ti ti-copy"></i><div><b>한꺼번에 복사</b><span>골라서, 사람이나 AI에게 전달합니다.</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="medal"><i class="ti ti-medal"></i>쓸수록 메달이 쌓입니다. 처음 해 보는 조작에는 작은 축하도 있습니다.</p>
+      <p class="path-more"><a href="features.html">기능 모두 보기 →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
+    <div class="container">
+      <div class="feature-header"><h2>회사 컴퓨터에서도.</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off"></i><b>가입은 필요 없습니다</b><p>설치하면 바로 쓸 수 있습니다.</p></div>
+        <div><i class="ti ti-device-laptop"></i><b>데이터는 내 곁에</b><p>저장되는 곳은 당신의 Chrome 북마크입니다.</p></div>
+        <div><i class="ti ti-credit-card-off"></i><b>월정액은 없습니다</b><p>무료로 시작하고, 마음에 들면 한 번 구매로.</p></div>
+      </div>
+      <p class="safe-link"><a href="../en/privacy-policy.html">개인정보처리방침 →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.jpg" alt="기획서 자료 탭, 온라인 도구 탭, 수많은 AI 탭" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>만드는 시간을,<br>되찾습니다.</h2>
+          <p>Liquid Block은 영상과 모션 그래픽을 만드는 회사입니다. 기획서 자료, 온라인 도구, 수많은 AI. 제작 현장은 탭으로 넘쳐납니다.</p>
+          <p>찾고, 다시 열고, 다시 만들고. 그런 작업에 생각하는 시간을 빼앗기고 싶지 않아서, <strong style="color:var(--text)">우리 자신을 위해 만들었습니다.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
+    <div class="container">
+      <div class="feature-header"><h2>자주 묻는 질문</h2></div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>무료로 쓸 수 있나요?</summary>
+          <p>네. 저장, 검색, 한꺼번에 열기·닫기는 무료로 쓸 수 있습니다. 처음 3개월은 모든 기능을 써 볼 수 있습니다. PRO는 한 번만 구매하면 되고, 월정액은 없습니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>지금 있는 북마크는 어떻게 되나요?</summary>
+          <p>그대로 쓸 수 있습니다. Chrome 북마크를 그대로 가져와서 정리할 수 있습니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>삭제하면 데이터는 어떻게 되나요?</summary>
+          <p>저장한 탭은 Chrome 북마크로 남습니다. 테마나 색상 같은 설정은 사라집니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>어떤 브라우저에서 쓸 수 있나요?</summary>
+          <p>Google Chrome(114 이상)에서 쓸 수 있습니다. Windows·Mac·Linux·ChromeOS를 지원합니다. Edge 버전은 준비 중입니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
+    <div class="container">
+      <h2>우선은, <span class="text-gradient">탭과 북마크부터.</span></h2>
+      <p class="d-lead">설치하면 바로 쓸 수 있습니다.</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=ko_final" class="btn btn-primary btn-large" id="cta-final-chrome">Chrome에 무료로 추가</a>
+      </div>
+      <div class="last-links">
+        <a href="quick-start.html">시작하는 방법</a>
+        <a href="features.html">기능 소개</a>
+      </div>
+    </div>
+  </section>
 
   <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>영상 & 모션 그래픽스 제작<br>일본 고베 본사</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="#">LB TAB Layers</a><a href="https://aipromptbar.liquid-block.com/ko/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">회사 소개</a><a href="../privacy-policy.html">개인정보처리방침</a><a href="mailto:info@liquid-block.com">문의하기</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
   <script src="../script.js"></script>

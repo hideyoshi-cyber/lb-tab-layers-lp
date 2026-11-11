@@ -26,9 +26,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LB TAB Layers","operatingSystem":"Chrome","applicationCategory":"BrowserApplication","inLanguage":"es","softwareVersion":"3.0.3","description":"Panel lateral de Chrome: guarda tus pestañas por proyecto como marcadores de Chrome y las reabre en un clic como grupo de pestañas. De Liquid Block Inc., Japón.","url":"https://tablayers.liquid-block.com/es/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Liquid Block Inc.","url":"https://www.liquid-block.com"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Es gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí. El plan gratuito te permite crear hasta 5 grupos. Todas las funciones PRO son gratis durante 90 días desde la instalación. PRO es un pago único, no una suscripción."}},{"@type":"Question","name":"¿Qué pasa con mis pestañas si desinstalo la extensión?","acceptedAnswer":{"@type":"Answer","text":"Las pestañas que guardaste se quedan en tus marcadores de Chrome, en carpetas con el nombre de tus grupos. Los datos que están dentro de la extensión, como las notas, se borran, así que expórtalos antes desde Configuración."}},{"@type":"Question","name":"¿La extensión está en mi idioma?","acceptedAnswer":{"@type":"Answer","text":"Sí. Las pantallas de la extensión están en 15 idiomas, entre ellos inglés, japonés, coreano, chino (tradicional y simplificado), alemán, francés, español, portugués, italiano, neerlandés, polaco, turco, ruso e hindi."}},{"@type":"Question","name":"¿Qué navegadores admite?","acceptedAnswer":{"@type":"Answer","text":"Google Chrome 114 o posterior en Windows, Mac, Linux y ChromeOS."}}]}]
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome",
+      "applicationCategory": "BrowserApplication",
+      "inLanguage": "es",
+      "softwareVersion": "3.0.3",
+      "description": "Panel lateral de Chrome: guarda tus pestañas por proyecto como marcadores de Chrome y las reabre en un clic como grupo de pestañas. De Liquid Block Inc., Japón.",
+      "url": "https://tablayers.liquid-block.com/es/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Se puede usar gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Guardar, buscar y abrir o cerrar todo a la vez son gratis. Durante los primeros 3 meses puedes probar todas las funciones. PRO es un pago único, sin cuota mensual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mis marcadores actuales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los sigues usando tal cual. Puedes traer tus marcadores de Chrome como están y ordenarlos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si la quito, ¿qué pasa con mis datos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las pestañas guardadas se quedan como marcadores de Chrome. Los ajustes, como el tema o los colores, se borran."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué navegadores funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En Google Chrome (114 o posterior). Compatible con Windows, Mac, Linux y ChromeOS. La versión para Edge está en preparación."
+          }
+        }
+      ]
+    }
+  ]
   </script>
   <style>
     .il-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
@@ -46,8 +107,8 @@
     <nav class="nav-container">
       <a href="index.html" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a>
       <div class="nav-links">
-        <a href="#how">Cómo funciona</a>
-        <a href="#trust">Privacidad</a>
+        <a href="quick-start.html">Cómo funciona</a>
+        <a href="#privacy">Privacidad</a>
         <a href="#faq">Preguntas</a>
         <a href="quick-start.html">Inicio rápido</a>
         <a href="../en/" title="English">🌐 EN</a>
@@ -60,66 +121,285 @@
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-badge"><span class="badge-dot"></span>Extensión de Chrome · Empieza gratis</div>
-        <h1>Las pestañas son «ahora».<br><strong>Los marcadores son «después».</strong></h1>
-        <p class="hero-sub">Guarda por proyecto las pestañas con las que estás trabajando, como marcadores de Chrome. Ábrelas todas con ▶ como un grupo de pestañas de Chrome y ciérralas todas con ■. Abre el panel cuando quieras con Alt+T.</p>
+        <div class="hero-badge"><span class="badge-dot"></span>Extensión de Chrome — gratis (versión para Edge en preparación)</div>
+        <h1>
+          <span class="h1-phrase">El tiempo que pasas buscando</span> <span class="h1-phrase">pestañas y marcadores,</span><br>
+          <strong>úsalo para pensar.</strong>
+        </h1>
+        <p class="hero-sub">
+          <strong>Pestañas y marcadores, juntos en una sola pantalla.</strong><br>
+          Las pestañas son «ahora». Los marcadores son tu «cajón».<br>
+          Guarda las pestañas de trabajo por proyecto y ábrelas todas a la vez.
+        </p>
         <div class="hero-actions" id="cta-main">
-          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_top" class="btn btn-primary">Añadir a Chrome — gratis</a>
-          <a href="quick-start.html" class="btn btn-ghost">Ver el inicio rápido de 5 minutos →</a>
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_hero" class="btn btn-primary" id="hero-cta-chrome">Añadir a Chrome</a>
+          <a href="quick-start.html" class="btn btn-ghost">Ver cómo empezar</a>
+        </div>
+        <p class="hero-note">Ábrelo cuando quieras con Alt+T.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot-wrapper">
+          <img src="../img/es/app-hero.webp" alt="El panel lateral de LB TAB Layers. Se ven los grupos de cada proyecto y las pestañas abiertas ahora" class="hero-screenshot-img" loading="eager" width="420" height="1180">
         </div>
       </div>
-      <div class="hero-visual"><img class="il-hero-img" src="../blog/qs-7-open-es.webp" alt="Pasa el ratón sobre un grupo: ▶ lo abre como grupo de pestañas de Chrome, ■ lo cierra todo" width="360" height="720"></div>
     </div>
   </section>
 
-  <section id="how" style="padding:90px 0;">
+  <!-- ===== 2. 15秒 ===== -->
+  <section id="video-intro">
     <div class="container">
-      <div class="feature-header"><h2>Cómo funciona</h2></div>
-      <div class="il-steps">
-        <div class="il-step"><img src="../blog/qs-3-save-es.webp" alt="Reúne" loading="lazy" width="360" height="720"><h3>1. Reúne</h3><p>Haz clic en «+ Nuevo grupo» y crea un grupo para cada proyecto. Guarda la pestaña en la que estás con «Agregar pestaña actual».</p></div>
-        <div class="il-step"><img src="../blog/qs-7-open-es.webp" alt="Abre con ▶" loading="lazy" width="360" height="720"><h3>2. Abre con ▶</h3><p>Pasa el ratón sobre un grupo y haz clic en ▶. Todas las pestañas guardadas se abren como un grupo de pestañas de Chrome con el mismo nombre y color.</p></div>
-        <div class="il-step"><img src="../blog/qs-5-search-es.webp" alt="Vuelve a encontrarlo" loading="lazy" width="360" height="720"><h3>3. Vuelve a encontrarlo</h3><p>Un solo cuadro de búsqueda revisa tus pestañas abiertas, tus pestañas guardadas y el historial de hoy. No pasa nada si te equivocas en alguna letra.</p></div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="Anuncio de 15 segundos de LB TAB Layers: «Lo encontré»" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
-  <section id="trust">
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
     <div class="container">
-      <div class="privacy-card">
-        <h2>Quién la hace y adónde van tus datos</h2>
-        <p class="il-lead">LB TAB Layers la hace Liquid Block Inc., un estudio de vídeo y motion graphics en Kobe, Japón.</p>
-        <div class="privacy-grid">
-          <div class="privacy-item"><h4>Una empresa real</h4><p>Liquid Block Inc., Kobe, Japón. Puedes escribirnos a info@liquid-block.com.</p></div>
-          <div class="privacy-item"><h4>Guardado como marcadores de Chrome</h4><p>Tus grupos son carpetas de marcadores de Chrome. Se quedan aunque quites la extensión.</p></div>
-          <div class="privacy-item"><h4>Se queda en tu navegador</h4><p>Las pestañas, los grupos y las notas se guardan en tu navegador y en tus marcadores de Chrome. Solo un ID de licencia anónimo llega a nuestro servidor.</p></div>
-          <div class="privacy-item"><h4>Sin cuenta</h4><p>Instálala y empieza. Sin registro y sin correo electrónico.</p></div>
-          <div class="privacy-item"><h4>Deshacer al borrar</h4><p>Los grupos y pestañas que borras van primero a una papelera de marcadores, y tienes 8 segundos para pulsar «Deshacer».</p></div>
-          <div class="privacy-item"><h4>Cada permiso, explicado</h4><p>Nuestra política de privacidad explica para qué se usa cada permiso.</p></div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.jpg" alt="Cuántas pestañas. ¿Y dónde están los marcadores?" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Esa página,<br>¿dónde estaba?</h2>
+          <ul>
+            <li><b>Siempre abiertas</b><span>Sientes que, si las cierras, no podrás volver. Y no las cierras.</span></li>
+            <li><b>Buscar y buscar</b><span>En un mar de pestañas, 5 o 10 minutos cada día.</span></li>
+            <li><b>Todo desaparece</b><span>Iba lento, reiniciaste, y las pestañas ya no están.</span></li>
+          </ul>
+          <p>Las manos se mueven, pero el trabajo no avanza.<br>Ese tiempo, lo quitamos.</p>
         </div>
-        <p style="text-align:center;margin-top:22px"><a href="../en/privacy-policy.html" style="color:var(--accent);font-weight:600">Leer la política de privacidad (en inglés) →</a></p>
       </div>
     </div>
   </section>
 
-  <section id="faq">
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Sobre la mesa, <span class="text-gradient">solo lo de ahora.</span></h2>
+        <p>Lo que usarás después, al cajón.</p>
+      </div>
+
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">Ahora</div>
+          <div class="nd-what">Pestañas</div>
+          <div class="nd-say">Lo que tienes entre manos ahora.</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
+        </div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right"></i>Guardar</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">Cajón</div>
+          <div class="nd-what">Marcadores</div>
+          <div class="nd-say">Lo que volverás a usar después.</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">Proyecto del cliente A</div>
+            <div class="drawer-row in">Documentos</div>
+            <div class="drawer-row">Leer después</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="nd-close">Lo que hay que hacer y lo que hay que guardar.<br>Solo con separarlos, la cabeza se aligera.</p>
+
+      <figure class="app-shot">
+        <img src="../img/es/app-panel.webp" alt="LB TAB Layers a la derecha del navegador. Las pestañas del proyecto «Cliente A: renovación del anuncio» aparecen juntas" loading="lazy" width="1280" height="800">
+        <figcaption>Siempre esta pantalla al lado del navegador. Las pestañas se agrupan por proyecto.</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded"></i><b>Guardar</b><p>Cierra de una vez las pestañas que ya terminaste.</p></div>
+        <div class="verb"><i class="ti ti-player-play"></i><b>Sacar</b><p>Abre de una vez las pestañas de un proyecto.</p></div>
+        <div class="verb"><i class="ti ti-search"></i><b>Encontrar</b><p>Escribes unas letras y la página aparece.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.jpg" alt="Pestañas y marcadores en uno" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Pestañas y marcadores,<br><span class="text-gradient">en uno.</span></h2>
+          <p>Siempre la misma pantalla al lado del navegador.<br>Arriba, los marcadores. Abajo, las pestañas de ahora.<br>Lo ves todo sin ir de un lado a otro.</p>
+          <p>Pulsa Alt+T y se abre desde cualquier página.</p>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.jpg" alt="Las pestañas se cierran todas a la vez. Pero quedan como marcadores, así que no se pierden" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Aunque las cierres,<br><span class="text-gradient">no se pierden.</span></h2>
+          <p>Se guardan en los marcadores de Chrome.</p>
+          <ul>
+            <li><span>Si reinicias el ordenador, siguen ahí.</span></li>
+            <li><span>Si Chrome se cierra de golpe, siguen ahí.</span></li>
+            <li><span>Si quitas esta extensión, siguen ahí.</span></li>
+          </ul>
+          <p>Por eso puedes cerrarlas con tranquilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Menos tareas <span class="text-gradient">que no piden pensar.</span></h2>
+        <p>Cada una lleva unos segundos. Pero las haces decenas de veces al día.</p>
+      </div>
+      <div class="reduce-list">
+        <div class="reduce-row"><div class="reduce-before">Cada mañana, volver a abrir las pestañas de ayer</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Un ▶ y se abren todas las pestañas del proyecto</div></div>
+        <div class="reduce-row"><div class="reduce-before">Cada vez que guardas, pensar dónde ponerlo</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Clic derecho y eliges el proyecto. Nada más</div></div>
+        <div class="reduce-row"><div class="reduce-before">Buscar esa página por todas partes</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Unas letras bastan para encontrarla</div></div>
+        <div class="reduce-row"><div class="reduce-before">Cerrar una a una las pestañas que ya terminaste</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Ciérralas todas con ■. Lo guardado se queda</div></div>
+        <div class="reduce-row"><div class="reduce-before">Crear las mismas carpetas en cada proyecto</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Desde una plantilla, toda la estructura de una vez</div></div>
+        <div class="reduce-row"><div class="reduce-before">Capturar las pantallas una a una para un informe</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Captúralas todas y pásalas a PowerPoint</div></div>
+        <div class="reduce-row"><div class="reduce-before">Parar el vídeo y escribir la corrección en otra pantalla</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Paras, escribes ahí mismo y Enter</div></div>
+      </div>
+      <p class="reduce-close">Usa el tiempo que ganas para pensar.</p>
+    </div>
+  </section>
+
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../img/es/app-review.webp" alt="La pantalla de indicaciones de corrección. Paras el vídeo y escribes en el campo de abajo. A la derecha se ordenan las indicaciones con su minuto" loading="lazy" width="1280" height="760"></div>
+        <div>
+          <h2>Indicaciones de corrección,<br><span class="text-gradient">directamente sobre el vídeo de YouTube.</span></h2>
+          <p>No hace falta volver a subir el vídeo: escribes sobre el mismo que estás viendo en el navegador. YouTube, Vimeo, Google Drive y vídeos insertados en páginas web.</p>
+          <ul>
+            <li><span>Paras, escribes y Enter. La reproducción sigue.</span></li>
+            <li><span>También puedes poner números y líneas sobre la imagen.</span></li>
+            <li><span>Las indicaciones van a una hoja con el minuto de cada una. Puedes entregarla en PDF o PowerPoint.</span></li>
+          </ul>
+          <p>Lo hizo un estudio de vídeo para sus propias idas y vueltas de correcciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Con el uso, <span class="text-gradient">acabas llegando.</span></h2>
+        <p>Al principio, con las pestañas y los marcadores es suficiente.<br>Cuando lo necesites, está justo al lado.</p>
+      </div>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/es/app-memo.webp" alt="La pantalla de notas. Puedes escribir notas y listas de tareas al lado de la página que estás viendo" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">Pensar</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-note"></i><div><b>Notas</b><span>Si se te ocurre algo, lo escribes ahí mismo.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-list-check"></i><div><b>Pasos</b><span>Lo que hay que hacer, en orden. Al terminar, lo marcas.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-star"></i><div><b>Rango ★</b><span>Mira solo lo importante de esta semana.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/es/app-board.webp" alt="La pantalla del tablero. Todos los proyectos aparecen como tarjetas" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">Ver el conjunto</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard"></i><div><b>Panel</b><span>Todo, en una sola hoja grande.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban"></i><div><b>Tablero</b><span>Tus proyectos, en tarjetas.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-photo"></i><div><b>Miniaturas</b><span>Lo recuerdas al verlo.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/es/app-review.webp" alt="La hoja de indicaciones. En cada escena aparecen el punto de reproducción y las indicaciones numeradas" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">Comunicar</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation"></i><div><b>Indicaciones de corrección</b><span>Las escribes mientras ves el vídeo y se las pasas a alguien.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-camera"></i><div><b>Capturas</b><span>Capturas y va directo al documento.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-copy"></i><div><b>Copiar todo junto</b><span>Eliges y se lo pasas a una persona o a una IA.</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="medal"><i class="ti ti-medal"></i>Cuanto más lo usas, más medallas juntas. Y una pequeña celebración la primera vez que haces algo.</p>
+      <p class="path-more"><a href="../en/features.html">Ver todas las funciones →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
+    <div class="container">
+      <div class="feature-header"><h2>También en el ordenador del trabajo.</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off"></i><b>Sin registro</b><p>Lo instalas y lo usas enseguida.</p></div>
+        <div><i class="ti ti-device-laptop"></i><b>Tus datos, contigo</b><p>Se guardan en los marcadores de tu Chrome.</p></div>
+        <div><i class="ti ti-credit-card-off"></i><b>Sin cuota mensual</b><p>Empieza gratis y, si te gusta, cómpralo con un pago único.</p></div>
+      </div>
+      <p class="safe-link"><a href="../en/privacy-policy.html">Política de privacidad →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.jpg" alt="Pestañas con documentos de la propuesta, pestañas de herramientas en línea y muchas pestañas de IA" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Recupera el tiempo<br>para crear.</h2>
+          <p>Liquid Block es un estudio de vídeo y motion graphics. Documentos para las propuestas, herramientas en línea, muchas IA. En producción, las pestañas se desbordan.</p>
+          <p>Buscar, volver a abrir, volver a hacer. No queríamos que esas tareas nos quitaran tiempo para pensar, <strong style="color:var(--text)">así que lo hicimos para nosotros.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
     <div class="container">
       <div class="feature-header"><h2>Preguntas frecuentes</h2></div>
       <div class="faq-list">
-        <details class="faq-item" id="faq-1"><summary>¿Es gratis?</summary><p>Sí. El plan gratuito te permite crear hasta 5 grupos. Todas las funciones PRO son gratis durante 90 días desde la instalación. PRO es un pago único, no una suscripción.</p></details>
-        <details class="faq-item" id="faq-2"><summary>¿Qué pasa con mis pestañas si desinstalo la extensión?</summary><p>Las pestañas que guardaste se quedan en tus marcadores de Chrome, en carpetas con el nombre de tus grupos. Los datos que están dentro de la extensión, como las notas, se borran, así que expórtalos antes desde Configuración.</p></details>
-        <details class="faq-item" id="faq-3"><summary>¿La extensión está en mi idioma?</summary><p>Sí. Las pantallas de la extensión están en 15 idiomas, entre ellos inglés, japonés, coreano, chino (tradicional y simplificado), alemán, francés, español, portugués, italiano, neerlandés, polaco, turco, ruso e hindi.</p></details>
-        <details class="faq-item" id="faq-4"><summary>¿Qué navegadores admite?</summary><p>Google Chrome 114 o posterior en Windows, Mac, Linux y ChromeOS.</p></details>
+        <details class="faq-item">
+          <summary>¿Se puede usar gratis?</summary>
+          <p>Sí. Guardar, buscar y abrir o cerrar todo a la vez son gratis. Durante los primeros 3 meses puedes probar todas las funciones. PRO es un pago único, sin cuota mensual.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué pasa con mis marcadores actuales?</summary>
+          <p>Los sigues usando tal cual. Puedes traer tus marcadores de Chrome como están y ordenarlos.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Si la quito, ¿qué pasa con mis datos?</summary>
+          <p>Las pestañas guardadas se quedan como marcadores de Chrome. Los ajustes, como el tema o los colores, se borran.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿En qué navegadores funciona?</summary>
+          <p>En Google Chrome (114 o posterior). Compatible con Windows, Mac, Linux y ChromeOS. La versión para Edge está en preparación.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="final-cta" style="padding:110px 0;">
-    <div class="section-glow"></div>
-    <div class="container cta-flex-container"><div class="cta-content">
-      <h2>Empieza con un solo proyecto.</h2>
-      <p>Abre el panel con Alt+T, guarda la pestaña en la que estás y prueba ▶ y ■.</p>
-      <div class="hero-actions"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_final" class="btn btn-primary btn-large">Añadir a Chrome — gratis</a></div>
-    </div></div>
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
+    <div class="container">
+      <h2>Para empezar, <span class="text-gradient">las pestañas y los marcadores.</span></h2>
+      <p class="d-lead">Lo instalas y lo usas enseguida.</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_final" class="btn btn-primary btn-large" id="cta-final-chrome">Añadir a Chrome gratis</a>
+      </div>
+      <div class="last-links">
+        <a href="quick-start.html">Cómo empezar</a>
+        <a href="../en/features.html">Funciones</a>
+      </div>
+    </div>
   </section>
 
   <footer id="site-footer">

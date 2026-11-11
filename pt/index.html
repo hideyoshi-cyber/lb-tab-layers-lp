@@ -26,9 +26,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LB TAB Layers","operatingSystem":"Chrome","applicationCategory":"BrowserApplication","inLanguage":"pt-BR","softwareVersion":"3.0.3","description":"Um painel lateral do Chrome que salva suas abas por projeto como favoritos do Chrome e as reabre com um clique como grupo de abas. Da Liquid Block Inc., Japão.","url":"https://tablayers.liquid-block.com/pt/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Liquid Block Inc.","url":"https://www.liquid-block.com"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"É grátis?","acceptedAnswer":{"@type":"Answer","text":"Sim. O plano gratuito permite criar até 5 grupos. Todos os recursos PRO ficam liberados de graça por 90 dias após a instalação. O PRO é uma compra única, não uma assinatura."}},{"@type":"Question","name":"O que acontece com minhas abas se eu desinstalar a extensão?","acceptedAnswer":{"@type":"Answer","text":"As abas que você salvou continuam nos seus favoritos do Chrome, em pastas com o nome dos seus grupos. Os dados guardados dentro da extensão, como as notas, são apagados, então exporte-os antes em Configurações."}},{"@type":"Question","name":"A extensão está disponível no meu idioma?","acceptedAnswer":{"@type":"Answer","text":"Sim. As telas da extensão estão disponíveis em 15 idiomas, entre eles inglês, japonês, coreano, chinês (tradicional e simplificado), alemão, francês, espanhol, português, italiano, holandês, polonês, turco, russo e hindi."}},{"@type":"Question","name":"Quais navegadores são compatíveis?","acceptedAnswer":{"@type":"Answer","text":"Google Chrome 114 ou mais recente no Windows, Mac, Linux e ChromeOS."}}]}]
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome",
+      "applicationCategory": "BrowserApplication",
+      "inLanguage": "pt-BR",
+      "softwareVersion": "3.0.3",
+      "description": "Um painel lateral do Chrome que salva suas abas por projeto como favoritos do Chrome e as reabre com um clique como grupo de abas. Da Liquid Block Inc., Japão.",
+      "url": "https://tablayers.liquid-block.com/pt/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Dá para usar de graça?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Salvar, pesquisar e abrir ou fechar tudo de uma vez são gratuitos. Nos primeiros 3 meses, você pode experimentar todos os recursos. O PRO é uma compra única, sem mensalidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece com os meus favoritos atuais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Continuam funcionando. Você pode trazer os favoritos do Chrome como estão e organizá-los."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se eu remover a extensão, o que acontece com os dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As abas salvas continuam como favoritos do Chrome. Configurações como tema e cores são apagadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Em quais navegadores funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funciona no Google Chrome (114 ou mais recente). Compatível com Windows, Mac, Linux e ChromeOS. A versão para Edge está em preparação."
+          }
+        }
+      ]
+    }
+  ]
   </script>
   <style>
     .il-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
@@ -46,8 +107,8 @@
     <nav class="nav-container">
       <a href="index.html" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a>
       <div class="nav-links">
-        <a href="#how">Como funciona</a>
-        <a href="#trust">Privacidade</a>
+        <a href="quick-start.html">Como funciona</a>
+        <a href="#privacy">Privacidade</a>
         <a href="#faq">Perguntas</a>
         <a href="quick-start.html">Início rápido</a>
         <a href="../en/" title="English">🌐 EN</a>
@@ -60,66 +121,285 @@
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-badge"><span class="badge-dot"></span>Extensão do Chrome · Comece grátis</div>
-        <h1>Abas são o “agora”.<br><strong>Favoritos são o “depois”.</strong></h1>
-        <p class="hero-sub">Salve por projeto as abas em que você está trabalhando, como favoritos do Chrome. Abra todas com ▶ como um grupo de abas do Chrome e feche todas com ■. Abra o painel quando quiser com Alt+T.</p>
+        <div class="hero-badge"><span class="badge-dot"></span>Extensão do Chrome — grátis (versão para Edge em preparação)</div>
+        <h1>
+          <span class="h1-phrase">Menos tempo procurando</span> <span class="h1-phrase">abas e favoritos,</span><br>
+          <strong>mais tempo para pensar.</strong>
+        </h1>
+        <p class="hero-sub">
+          <strong>Gerencie favoritos e abas juntos, em uma única tela.</strong><br>
+          Abas são o “agora”. Favoritos são a “gaveta”.<br>
+          Guarde as abas de trabalho por projeto e abra todas de uma vez.
+        </p>
         <div class="hero-actions" id="cta-main">
-          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=pt_top" class="btn btn-primary">Adicionar ao Chrome — grátis</a>
-          <a href="quick-start.html" class="btn btn-ghost">Ver o início rápido de 5 minutos →</a>
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=pt_hero" class="btn btn-primary" id="hero-cta-chrome">Adicionar ao Chrome</a>
+          <a href="quick-start.html" class="btn btn-ghost">Ver como começar</a>
+        </div>
+        <p class="hero-note">Abra quando quiser com Alt+T.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot-wrapper">
+          <img src="../img/pt/app-hero.webp" alt="Painel lateral do LB TAB Layers. Os grupos de cada projeto e as abas abertas agora aparecem juntos" class="hero-screenshot-img" loading="eager" width="420" height="1180">
         </div>
       </div>
-      <div class="hero-visual"><img class="il-hero-img" src="../blog/qs-7-open-pt.webp" alt="Passe o mouse sobre um grupo: ▶ abre como grupo de abas do Chrome, ■ fecha tudo" width="360" height="720"></div>
     </div>
   </section>
 
-  <section id="how" style="padding:90px 0;">
+  <!-- ===== 2. 15秒 ===== -->
+  <section id="video-intro">
     <div class="container">
-      <div class="feature-header"><h2>Como funciona</h2></div>
-      <div class="il-steps">
-        <div class="il-step"><img src="../blog/qs-3-save-pt.webp" alt="Reúna" loading="lazy" width="360" height="720"><h3>1. Reúna</h3><p>Clique em “+ Novo grupo” e crie um grupo para cada projeto. Salve a aba em que você está com “Adicionar aba atual”.</p></div>
-        <div class="il-step"><img src="../blog/qs-7-open-pt.webp" alt="Abra com ▶" loading="lazy" width="360" height="720"><h3>2. Abra com ▶</h3><p>Passe o mouse sobre um grupo e clique em ▶. Todas as abas salvas abrem como um grupo de abas do Chrome, com o mesmo nome e a mesma cor.</p></div>
-        <div class="il-step"><img src="../blog/qs-5-search-pt.webp" alt="Encontre de novo" loading="lazy" width="360" height="720"><h3>3. Encontre de novo</h3><p>Uma única caixa de pesquisa procura nas suas abas abertas, nas abas salvas e no histórico de hoje. Pequenos erros de digitação não atrapalham.</p></div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers — anúncio de 15 segundos: “Achei”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
-  <section id="trust">
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
     <div class="container">
-      <div class="privacy-card">
-        <h2>Quem faz e para onde vão os seus dados</h2>
-        <p class="il-lead">O LB TAB Layers é feito pela Liquid Block Inc., um estúdio de vídeo e motion graphics em Kobe, no Japão.</p>
-        <div class="privacy-grid">
-          <div class="privacy-item"><h4>Uma empresa de verdade</h4><p>Liquid Block Inc., Kobe, Japão. Fale com a gente em info@liquid-block.com.</p></div>
-          <div class="privacy-item"><h4>Salvo como favoritos do Chrome</h4><p>Seus grupos são pastas de favoritos do Chrome. Eles continuam lá mesmo se você remover a extensão.</p></div>
-          <div class="privacy-item"><h4>Fica no seu navegador</h4><p>Abas, grupos e notas ficam no seu navegador e nos seus favoritos do Chrome. Só um ID de licença anônimo chega ao nosso servidor.</p></div>
-          <div class="privacy-item"><h4>Sem conta</h4><p>É só instalar e começar. Sem cadastro, sem e-mail.</p></div>
-          <div class="privacy-item"><h4>Desfazer ao excluir</h4><p>Grupos e abas excluídos vão primeiro para uma lixeira de favoritos, e você tem 8 segundos para clicar em “Desfazer”.</p></div>
-          <div class="privacy-item"><h4>Cada permissão explicada</h4><p>Nossa política de privacidade explica para que serve cada permissão.</p></div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.jpg" alt="Tantas abas! Cadê os favoritos?" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Aquela página,<br>onde estava mesmo?</h2>
+          <ul>
+            <li><b>Sempre abertas</b><span>Você não fecha, com medo de não conseguir voltar.</span></li>
+            <li><b>Procurar por toda parte</b><span>No mar de abas, 5 ou 10 minutos todo dia.</span></li>
+            <li><b>Tudo some</b><span>Ficou pesado, você reiniciou, e as abas sumiram.</span></li>
+          </ul>
+          <p>As mãos trabalham, mas o trabalho não anda.<br>Vamos acabar com esse tempo perdido.</p>
         </div>
-        <p style="text-align:center;margin-top:22px"><a href="../en/privacy-policy.html" style="color:var(--accent);font-weight:600">Ler a política de privacidade (em inglês) →</a></p>
       </div>
     </div>
   </section>
 
-  <section id="faq">
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Na mesa, <span class="text-gradient">só o que é para agora.</span></h2>
+        <p>O que fica para depois vai para a gaveta.</p>
+      </div>
+
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">Agora</div>
+          <div class="nd-what">Abas</div>
+          <div class="nd-say">O que você está fazendo agora.</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
+        </div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right"></i>Guardar</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">Gaveta</div>
+          <div class="nd-what">Favoritos</div>
+          <div class="nd-say">O que você vai usar de novo depois.</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">Projeto do Cliente A</div>
+            <div class="drawer-row in">Documentos</div>
+            <div class="drawer-row">Ler depois</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="nd-close">O que fazer e o que guardar.<br>Só de separar, a cabeça fica mais leve.</p>
+
+      <figure class="app-shot">
+        <img src="../img/pt/app-panel.webp" alt="LB TAB Layers à direita do navegador. As abas do projeto “Cliente A – Renovação do comercial” aparecem juntas, em um só grupo" loading="lazy" width="1280" height="800">
+        <figcaption>Ao lado do navegador, sempre esta tela. As abas ficam reunidas por projeto.</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded"></i><b>Guardar</b><p>Feche de uma vez as abas que já terminou.</p></div>
+        <div class="verb"><i class="ti ti-player-play"></i><b>Tirar</b><p>Abra de uma vez as abas do projeto.</p></div>
+        <div class="verb"><i class="ti ti-search"></i><b>Encontrar</b><p>Digite algumas letras e a página aparece.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.jpg" alt="Abas e favoritos em um só lugar" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Abas e favoritos,<br><span class="text-gradient">em um só lugar.</span></h2>
+          <p>Ao lado do navegador, sempre a mesma tela.<br>Em cima, os favoritos. Embaixo, as abas de agora.<br>Dá para ver tudo, sem ir e voltar.</p>
+          <p>Pressione Alt+T e ele abre em qualquer página.</p>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.jpg" alt="As abas somem todas de uma vez. Mas, salvas como favoritos, não se perdem" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Mesmo fechando,<br><span class="text-gradient">nada se perde.</span></h2>
+          <p>Tudo é guardado nos favoritos do Chrome.</p>
+          <ul>
+            <li><span>Se você reiniciar o computador, continua lá.</span></li>
+            <li><span>Se o Chrome travar, continua lá.</span></li>
+            <li><span>Se você remover esta extensão, continua lá.</span></li>
+          </ul>
+          <p>Por isso, você pode fechar sem medo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Menos tarefas <span class="text-gradient">que não exigem pensar.</span></h2>
+        <p>Cada uma leva poucos segundos. Mas você faz isso dezenas de vezes por dia.</p>
+      </div>
+      <div class="reduce-list">
+        <div class="reduce-row"><div class="reduce-before">Toda manhã, reabrir as abas de ontem</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Um ▶ abre todas as abas do projeto</div></div>
+        <div class="reduce-row"><div class="reduce-before">Pensar onde guardar a cada vez que salva</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Clique com o botão direito e escolha o projeto</div></div>
+        <div class="reduce-row"><div class="reduce-before">Procurar aquela página por toda parte</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Algumas letras bastam para encontrar</div></div>
+        <div class="reduce-row"><div class="reduce-before">Fechar uma a uma as abas que terminou</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">■ fecha todas de uma vez. O que foi salvo continua lá</div></div>
+        <div class="reduce-row"><div class="reduce-before">Criar as mesmas pastas a cada projeto</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Crie a estrutura inteira de uma vez, a partir de um modelo</div></div>
+        <div class="reduce-row"><div class="reduce-before">Capturar a tela uma a uma para o relatório</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Capture tudo de uma vez e leve para o PowerPoint</div></div>
+        <div class="reduce-row"><div class="reduce-before">Pausar o vídeo e escrever a revisão em outra tela</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Pause, escreva ali mesmo e aperte Enter</div></div>
+      </div>
+      <p class="reduce-close">Use o tempo que sobrou para pensar.</p>
+    </div>
+  </section>
+
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../img/pt/app-review.webp" alt="Tela de instruções de revisão. Pause o vídeo e escreva no campo abaixo. À direita, as instruções aparecem com o tempo do vídeo" loading="lazy" width="1280" height="760"></div>
+        <div>
+          <h2>No vídeo do YouTube,<br><span class="text-gradient">instruções de revisão ali mesmo.</span></h2>
+          <p>Não precisa enviar o vídeo de novo: você escreve no vídeo que está vendo no navegador. YouTube, Vimeo, Google Drive e vídeos incorporados em páginas da web.</p>
+          <ul>
+            <li><span>Pause, escreva, Enter. A reprodução continua.</span></li>
+            <li><span>Você também pode desenhar números e linhas sobre a imagem.</span></li>
+            <li><span>As instruções vão para uma folha, cada uma com o seu tempo. Você entrega em PDF ou PowerPoint.</span></li>
+          </ul>
+          <p>Uma produtora de vídeo criou isto para as suas próprias idas e vindas de revisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Com o uso, <span class="text-gradient">você chega lá.</span></h2>
+        <p>No começo, abas e favoritos já bastam.<br>Quando você precisar, está logo ao lado.</p>
+      </div>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/pt/app-memo.webp" alt="Tela de notas. Ao lado da página que você está vendo, dá para escrever notas e listas de tarefas" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">Pensar</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-note"></i><div><b>Notas</b><span>Teve uma ideia? Escreva na hora.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-list-check"></i><div><b>Etapas</b><span>O que fazer, em ordem. Terminou, marque.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-star"></i><div><b>Classificação ★</b><span>Veja só o que importa nesta semana.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/pt/app-board.webp" alt="Tela do quadro. Todos os projetos aparecem como cartões" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">Ver o todo</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard"></i><div><b>Painel</b><span>Tudo em uma só tela grande.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban"></i><div><b>Quadro</b><span>Organize os projetos em cartões.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-photo"></i><div><b>Miniaturas</b><span>Lembre pelo visual.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/pt/app-review.webp" alt="Folha de revisão. Para cada cena, aparecem a posição no vídeo e as instruções numeradas" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">Comunicar</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation"></i><div><b>Instruções de revisão</b><span>Escreva enquanto assiste ao vídeo e entregue a alguém.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-camera"></i><div><b>Capturas de tela</b><span>Capture e use direto no documento.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-copy"></i><div><b>Copiar tudo junto</b><span>Selecione e passe para pessoas ou para uma IA.</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="medal"><i class="ti ti-medal"></i>Quanto mais você usa, mais medalhas ganha. Na primeira vez de cada ação, uma pequena comemoração.</p>
+      <p class="path-more"><a href="../en/features.html">Ver todos os recursos →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
+    <div class="container">
+      <div class="feature-header"><h2>Também no computador da empresa.</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off"></i><b>Sem cadastro</b><p>Instalou, já pode usar.</p></div>
+        <div><i class="ti ti-device-laptop"></i><b>Os dados ficam com você</b><p>Tudo é salvo nos favoritos do seu Chrome.</p></div>
+        <div><i class="ti ti-credit-card-off"></i><b>Sem mensalidade</b><p>Comece grátis e, se gostar, compre uma única vez.</p></div>
+      </div>
+      <p class="safe-link"><a href="../en/privacy-policy.html">Política de privacidade →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.jpg" alt="Abas de material para propostas, abas de ferramentas online e muitas abas de IA" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>O tempo de criar,<br>de volta.</h2>
+          <p>A Liquid Block é uma empresa que faz vídeo e motion graphics. Material para propostas, ferramentas online, muitas IAs. No dia a dia da produção, as abas transbordam.</p>
+          <p>Procurar, reabrir, refazer. Não queríamos perder tempo de pensar com essas tarefas. Por isso, <strong style="color:var(--text)">criamos isto para nós mesmos.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
     <div class="container">
       <div class="feature-header"><h2>Perguntas frequentes</h2></div>
       <div class="faq-list">
-        <details class="faq-item" id="faq-1"><summary>É grátis?</summary><p>Sim. O plano gratuito permite criar até 5 grupos. Todos os recursos PRO ficam liberados de graça por 90 dias após a instalação. O PRO é uma compra única, não uma assinatura.</p></details>
-        <details class="faq-item" id="faq-2"><summary>O que acontece com minhas abas se eu desinstalar a extensão?</summary><p>As abas que você salvou continuam nos seus favoritos do Chrome, em pastas com o nome dos seus grupos. Os dados guardados dentro da extensão, como as notas, são apagados, então exporte-os antes em Configurações.</p></details>
-        <details class="faq-item" id="faq-3"><summary>A extensão está disponível no meu idioma?</summary><p>Sim. As telas da extensão estão disponíveis em 15 idiomas, entre eles inglês, japonês, coreano, chinês (tradicional e simplificado), alemão, francês, espanhol, português, italiano, holandês, polonês, turco, russo e hindi.</p></details>
-        <details class="faq-item" id="faq-4"><summary>Quais navegadores são compatíveis?</summary><p>Google Chrome 114 ou mais recente no Windows, Mac, Linux e ChromeOS.</p></details>
+        <details class="faq-item">
+          <summary>Dá para usar de graça?</summary>
+          <p>Sim. Salvar, pesquisar e abrir ou fechar tudo de uma vez são gratuitos. Nos primeiros 3 meses, você pode experimentar todos os recursos. O PRO é uma compra única, sem mensalidade.</p>
+        </details>
+        <details class="faq-item">
+          <summary>O que acontece com os meus favoritos atuais?</summary>
+          <p>Continuam funcionando. Você pode trazer os favoritos do Chrome como estão e organizá-los.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Se eu remover a extensão, o que acontece com os dados?</summary>
+          <p>As abas salvas continuam como favoritos do Chrome. Configurações como tema e cores são apagadas.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Em quais navegadores funciona?</summary>
+          <p>Funciona no Google Chrome (114 ou mais recente). Compatível com Windows, Mac, Linux e ChromeOS. A versão para Edge está em preparação.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="final-cta" style="padding:110px 0;">
-    <div class="section-glow"></div>
-    <div class="container cta-flex-container"><div class="cta-content">
-      <h2>Comece com um projeto.</h2>
-      <p>Abra o painel com Alt+T, salve a aba em que você está e experimente ▶ e ■.</p>
-      <div class="hero-actions"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=pt_final" class="btn btn-primary btn-large">Adicionar ao Chrome — grátis</a></div>
-    </div></div>
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
+    <div class="container">
+      <h2>Para começar, <span class="text-gradient">abas e favoritos.</span></h2>
+      <p class="d-lead">Instalou, já pode usar.</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=pt_final" class="btn btn-primary btn-large" id="cta-final-chrome">Adicionar ao Chrome grátis</a>
+      </div>
+      <div class="last-links">
+        <a href="quick-start.html">Início rápido</a>
+        <a href="../en/features.html">Recursos</a>
+      </div>
+    </div>
   </section>
 
   <footer id="site-footer">

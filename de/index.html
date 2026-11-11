@@ -26,9 +26,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LB TAB Layers","operatingSystem":"Chrome","applicationCategory":"BrowserApplication","inLanguage":"de","softwareVersion":"3.0.3","description":"Chrome-Seitenbereich, der deine Tabs nach Projekt als Chrome-Lesezeichen speichert und per Klick als Chrome-Tab-Gruppe öffnet. Von Liquid Block Inc., Japan.","url":"https://tablayers.liquid-block.com/de/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Liquid Block Inc.","url":"https://www.liquid-block.com"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ist es kostenlos?","acceptedAnswer":{"@type":"Answer","text":"Ja. Mit dem kostenlosen Plan kannst du bis zu 5 Gruppen anlegen. Alle PRO-Funktionen sind nach der Installation 90 Tage lang kostenlos. PRO ist ein einmaliger Kauf, kein Abo."}},{"@type":"Question","name":"Was passiert mit meinen Tabs, wenn ich die Erweiterung deinstalliere?","acceptedAnswer":{"@type":"Answer","text":"Deine gespeicherten Tabs bleiben in deinen Chrome-Lesezeichen, in Ordnern mit den Namen deiner Gruppen. Daten innerhalb der Erweiterung, zum Beispiel Notizen, werden gelöscht. Exportiere sie also vorher in den Einstellungen."}},{"@type":"Question","name":"Gibt es die Erweiterung in meiner Sprache?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die Oberfläche der Erweiterung gibt es auf 15 Sprachen, darunter Englisch, Japanisch, Koreanisch, Chinesisch (traditionell und vereinfacht), Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Niederländisch, Polnisch, Türkisch, Russisch und Hindi."}},{"@type":"Question","name":"Welche Browser werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"Google Chrome ab Version 114 unter Windows, Mac, Linux und ChromeOS."}}]}]
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome",
+      "applicationCategory": "BrowserApplication",
+      "inLanguage": "de",
+      "softwareVersion": "3.0.3",
+      "description": "Chrome-Seitenbereich, der deine Tabs nach Projekt als Chrome-Lesezeichen speichert und per Klick als Chrome-Tab-Gruppe öffnet. Von Liquid Block Inc., Japan.",
+      "url": "https://tablayers.liquid-block.com/de/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ist es kostenlos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Speichern, Suchen und gemeinsames Öffnen und Schließen sind kostenlos. In den ersten 3 Monaten kannst du alle Funktionen ausprobieren. PRO ist ein einmaliger Kauf, ohne Monatsgebühr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit meinen jetzigen Lesezeichen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Du nutzt sie einfach weiter. Deine Chrome-Lesezeichen lassen sich direkt übernehmen und ordnen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit meinen Daten, wenn ich die Erweiterung entferne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gespeicherte Tabs bleiben als Chrome-Lesezeichen erhalten. Einstellungen wie Design und Farben werden gelöscht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Browser werden unterstützt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Chrome (ab Version 114) unter Windows, Mac, Linux und ChromeOS. Die Edge-Version ist in Vorbereitung."
+          }
+        }
+      ]
+    }
+  ]
   </script>
   <style>
     .il-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
@@ -46,8 +107,8 @@
     <nav class="nav-container">
       <a href="index.html" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a>
       <div class="nav-links">
-        <a href="#how">So funktioniert’s</a>
-        <a href="#trust">Datenschutz</a>
+        <a href="quick-start.html">So funktioniert’s</a>
+        <a href="#privacy">Datenschutz</a>
         <a href="#faq">FAQ</a>
         <a href="quick-start.html">Schnellstart</a>
         <a href="../en/" title="English">🌐 EN</a>
@@ -60,66 +121,285 @@
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-badge"><span class="badge-dot"></span>Chrome-Erweiterung · Kostenlos starten</div>
-        <h1>Tabs sind „jetzt“.<br><strong>Lesezeichen sind „später“.</strong></h1>
-        <p class="hero-sub">Speichere die Tabs, an denen du gerade arbeitest, nach Projekt als Chrome-Lesezeichen. Öffne sie mit ▶ alle zusammen als Chrome-Tab-Gruppe und schließe sie mit ■ wieder alle. Mit Alt+T öffnest du den Bereich jederzeit.</p>
+        <div class="hero-badge"><span class="badge-dot"></span>Chrome-Erweiterung — kostenlos (Edge-Version in Vorbereitung)</div>
+        <h1>
+          <span class="h1-phrase">Statt Tabs und Lesezeichen</span> <span class="h1-phrase">zu suchen:</span><br>
+          <strong>Zeit zum Denken.</strong>
+        </h1>
+        <p class="hero-sub">
+          <strong>Lesezeichen und Tabs zusammen in einer Ansicht.</strong><br>
+          Tabs sind „jetzt“. Lesezeichen sind die „Schublade“.<br>
+          Räum deine Arbeits-Tabs nach Projekt weg und öffne sie alle auf einmal.
+        </p>
         <div class="hero-actions" id="cta-main">
-          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_top" class="btn btn-primary">Kostenlos zu Chrome hinzufügen</a>
-          <a href="quick-start.html" class="btn btn-ghost">Zum 5-Minuten-Schnellstart →</a>
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_hero" class="btn btn-primary" id="hero-cta-chrome">Zu Chrome hinzufügen</a>
+          <a href="quick-start.html" class="btn btn-ghost">So fängst du an</a>
+        </div>
+        <p class="hero-note">Mit Alt+T jederzeit zur Hand.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot-wrapper">
+          <img src="../img/de/app-hero.webp" alt="Die Seitenleiste von LB TAB Layers. Gruppen für jedes Projekt, daneben die gerade offenen Tabs" class="hero-screenshot-img" loading="eager" width="420" height="1180">
         </div>
       </div>
-      <div class="hero-visual"><img class="il-hero-img" src="../blog/qs-7-open-de.webp" alt="Maus über eine Gruppe: ▶ öffnet sie als Chrome-Tab-Gruppe, ■ schließt alles" width="360" height="720"></div>
     </div>
   </section>
 
-  <section id="how" style="padding:90px 0;">
+  <!-- ===== 2. 15秒 ===== -->
+  <section id="video-intro">
     <div class="container">
-      <div class="feature-header"><h2>So funktioniert’s</h2></div>
-      <div class="il-steps">
-        <div class="il-step"><img src="../blog/qs-3-save-de.webp" alt="Sammeln" loading="lazy" width="360" height="720"><h3>1. Sammeln</h3><p>Klicke auf „+ Neue Gruppe“ und lege für jedes Projekt eine Gruppe an. Den Tab, auf dem du gerade bist, speicherst du mit „Aktuellen Tab hinzufügen“.</p></div>
-        <div class="il-step"><img src="../blog/qs-7-open-de.webp" alt="Mit ▶ öffnen" loading="lazy" width="360" height="720"><h3>2. Mit ▶ öffnen</h3><p>Fahre mit der Maus über eine Gruppe und klicke auf ▶. Alle gespeicherten Tabs öffnen sich als Chrome-Tab-Gruppe mit demselben Namen und derselben Farbe.</p></div>
-        <div class="il-step"><img src="../blog/qs-5-search-de.webp" alt="Wiederfinden" loading="lazy" width="360" height="720"><h3>3. Wiederfinden</h3><p>Ein einziges Suchfeld durchsucht deine offenen Tabs, deine gespeicherten Tabs und den heutigen Verlauf. Kleine Tippfehler sind kein Problem.</p></div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers 15-Sekunden-Spot: „Gefunden“" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
-  <section id="trust">
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
     <div class="container">
-      <div class="privacy-card">
-        <h2>Wer dahintersteht und wohin deine Daten gehen</h2>
-        <p class="il-lead">LB TAB Layers kommt von Liquid Block Inc., einem Studio für Video und Motion Graphics in Kobe, Japan.</p>
-        <div class="privacy-grid">
-          <div class="privacy-item"><h4>Ein echtes Unternehmen</h4><p>Liquid Block Inc., Kobe, Japan. Du erreichst uns unter info@liquid-block.com.</p></div>
-          <div class="privacy-item"><h4>Als Chrome-Lesezeichen gespeichert</h4><p>Deine Gruppen sind Lesezeichenordner in Chrome. Sie bleiben erhalten, auch wenn du die Erweiterung entfernst.</p></div>
-          <div class="privacy-item"><h4>Bleibt in deinem Browser</h4><p>Tabs, Gruppen und Notizen liegen in deinem Browser und in deinen Chrome-Lesezeichen. Nur eine anonyme Lizenz-ID erreicht unseren Server.</p></div>
-          <div class="privacy-item"><h4>Kein Konto nötig</h4><p>Installieren und loslegen. Keine Registrierung, keine E-Mail-Adresse.</p></div>
-          <div class="privacy-item"><h4>Rückgängig beim Löschen</h4><p>Gelöschte Gruppen und Tabs landen zuerst in einem Lesezeichen-Papierkorb, und du kannst 8 Sekunden lang „Rückgängig“ klicken.</p></div>
-          <div class="privacy-item"><h4>Jede Berechtigung erklärt</h4><p>In unserer Datenschutzerklärung steht, wofür jede Berechtigung genutzt wird.</p></div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.jpg" alt="So viele Tabs! Wo sind die Lesezeichen?" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Diese eine Seite,<br>wo war die noch?</h2>
+          <ul>
+            <li><b>Alles bleibt offen</b><span>Du schließt nichts, weil du fürchtest, nicht zurückzufinden.</span></li>
+            <li><b>Ewiges Suchen</b><span>Jeden Tag 5, 10 Minuten im Tab-Meer.</span></li>
+            <li><b>Alles weg</b><span>Neustart, weil alles lahmt, und die Tabs sind weg.</span></li>
+          </ul>
+          <p>Die Hände sind beschäftigt, aber die Arbeit kommt nicht voran.<br>Mit dieser Zeit ist Schluss.</p>
         </div>
-        <p style="text-align:center;margin-top:22px"><a href="../en/privacy-policy.html" style="color:var(--accent);font-weight:600">Datenschutzerklärung lesen (Englisch) →</a></p>
       </div>
     </div>
   </section>
 
-  <section id="faq">
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Auf dem Schreibtisch <span class="text-gradient">nur, was jetzt dran ist.</span></h2>
+        <p>Was du später brauchst, kommt in die Schublade.</p>
+      </div>
+
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">Jetzt</div>
+          <div class="nd-what">Tabs</div>
+          <div class="nd-say">Woran du gerade arbeitest.</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
+        </div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right"></i>Wegräumen</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">Schublade</div>
+          <div class="nd-what">Lesezeichen</div>
+          <div class="nd-say">Was du später wieder brauchst.</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">Projekt Kunde A</div>
+            <div class="drawer-row in">Unterlagen</div>
+            <div class="drawer-row">Später lesen</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="nd-close">Was zu tun ist und was du aufhebst.<br>Schon das Trennen macht den Kopf frei.</p>
+
+      <figure class="app-shot">
+        <img src="../img/de/app-panel.webp" alt="LB TAB Layers rechts im Browser. Die Tabs des Projekts „Kunde A – Relaunch Werbespot“ stehen als ein Block zusammen" loading="lazy" width="1280" height="800">
+        <figcaption>Immer neben dem Browser. Die Tabs sind nach Projekt gebündelt.</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded"></i><b>Wegräumen</b><p>Erledigte Tabs alle auf einmal schließen.</p></div>
+        <div class="verb"><i class="ti ti-player-play"></i><b>Hervorholen</b><p>Die Tabs eines Projekts alle auf einmal öffnen.</p></div>
+        <div class="verb"><i class="ti ti-search"></i><b>Finden</b><p>Ein paar Buchstaben, und die Seite taucht auf.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.jpg" alt="Tabs und Lesezeichen in einem" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Tabs und Lesezeichen<br><span class="text-gradient">in einem.</span></h2>
+          <p>Immer dieselbe Ansicht neben dem Browser.<br>Oben die Lesezeichen, unten die aktuellen Tabs.<br>Du siehst alles, ohne hin und her zu wechseln.</p>
+          <p>Mit Alt+T öffnest du sie von jeder Seite aus.</p>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.jpg" alt="Die Tabs verschwinden alle auf einmal. Als Lesezeichen gehen sie aber nicht verloren" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Geschlossen,<br><span class="text-gradient">aber nicht weg.</span></h2>
+          <p>Weggeräumt wird in die Chrome-Lesezeichen.</p>
+          <ul>
+            <li><span>Der Computer startet neu: noch da.</span></li>
+            <li><span>Chrome stürzt ab: noch da.</span></li>
+            <li><span>Du entfernst diese Erweiterung: noch da.</span></li>
+          </ul>
+          <p>Deshalb kannst du beruhigt schließen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Weniger Handgriffe, <span class="text-gradient">die kein Denken brauchen.</span></h2>
+        <p>Einmal dauert es Sekunden. Aber du machst es Dutzende Male am Tag.</p>
+      </div>
+      <div class="reduce-list">
+        <div class="reduce-row"><div class="reduce-before">Jeden Morgen die Tabs von gestern neu öffnen</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Ein ▶ öffnet alle Tabs des Projekts</div></div>
+        <div class="reduce-row"><div class="reduce-before">Bei jedem Speichern überlegen, wohin damit</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Rechtsklick, Projekt wählen, fertig</div></div>
+        <div class="reduce-row"><div class="reduce-before">Nach dieser einen Seite suchen</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Ein paar Buchstaben reichen, um sie zu finden</div></div>
+        <div class="reduce-row"><div class="reduce-before">Erledigte Tabs einzeln schließen</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Mit ■ alle schließen. Gespeichertes bleibt</div></div>
+        <div class="reduce-row"><div class="reduce-before">Für jedes Projekt dieselben Ordner anlegen</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Aus einer Vorlage die ganze Struktur auf einmal</div></div>
+        <div class="reduce-row"><div class="reduce-before">Für den Bericht Seite für Seite einzeln aufnehmen</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Alle auf einmal aufnehmen, ab in PowerPoint</div></div>
+        <div class="reduce-row"><div class="reduce-before">Video anhalten und Korrekturen woanders notieren</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Anhalten, direkt dort schreiben, Enter</div></div>
+      </div>
+      <p class="reduce-close">Nutz die gewonnene Zeit zum Denken.</p>
+    </div>
+  </section>
+
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../img/de/app-review.webp" alt="Die Ansicht für Korrekturhinweise. Video anhalten und ins Feld darunter schreiben. Rechts stehen die Hinweise mit Zeitangabe" loading="lazy" width="1280" height="760"></div>
+        <div>
+          <h2>Direkt am YouTube-Video:<br><span class="text-gradient">Korrekturhinweise.</span></h2>
+          <p>Du musst das Video nicht neu hochladen. Schreib direkt an das Video, das du im Browser ansiehst: YouTube, Vimeo, Google Drive oder in Webseiten eingebettete Videos.</p>
+          <ul>
+            <li><span>Anhalten, schreiben, Enter. Die Wiedergabe läuft weiter.</span></li>
+            <li><span>Auch Nummern und Linien kannst du ins Bild zeichnen.</span></li>
+            <li><span>Die Hinweise landen mit Zeitangabe auf einem Bogen. Weitergeben als PDF oder PowerPoint.</span></li>
+          </ul>
+          <p>Entwickelt von einem Videostudio, für die eigenen Korrekturschleifen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Mit der Zeit <span class="text-gradient">entdeckst du mehr.</span></h2>
+        <p>Am Anfang reichen Tabs und Lesezeichen völlig.<br>Wenn du mehr brauchst, liegt es gleich nebenan.</p>
+      </div>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/de/app-memo.webp" alt="Die Notizen-Ansicht. Neben der Seite, die du ansiehst, schreibst du Notizen und Checklisten" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">Denken</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-note"></i><div><b>Notizen</b><span>Einfall? Gleich aufschreiben.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-list-check"></i><div><b>Schritte</b><span>Aufgaben der Reihe nach. Erledigt? Abhaken.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-star"></i><div><b>★ Rang</b><span>Diese Woche nur das Wichtige sehen.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/de/app-board.webp" alt="Die Board-Ansicht. Alle Projekte liegen als Karten nebeneinander" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">Überblicken</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard"></i><div><b>Dashboard</b><span>Alles auf einem großen Blatt.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban"></i><div><b>Board</b><span>Projekte als Karten anordnen.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-photo"></i><div><b>Vorschaubilder</b><span>Am Aussehen wiedererkennen.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/de/app-review.webp" alt="Ein Korrekturbogen. Pro Szene stehen Wiedergabeposition und nummerierte Hinweise" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">Mitteilen</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation"></i><div><b>Korrekturhinweise</b><span>Beim Ansehen des Videos schreiben und weitergeben.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-camera"></i><div><b>Screenshots</b><span>Aufnehmen und direkt in die Unterlagen.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-copy"></i><div><b>Gesammelt kopieren</b><span>Auswählen und an Menschen oder KI weitergeben.</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="medal"><i class="ti ti-medal"></i>Je mehr du es nutzt, desto mehr Medaillen sammelst du. Beim ersten Mal gibt es auch eine kleine Feier.</p>
+      <p class="path-more"><a href="../en/features.html">Alle Funktionen ansehen →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
+    <div class="container">
+      <div class="feature-header"><h2>Auch auf dem Firmenrechner.</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off"></i><b>Keine Registrierung</b><p>Installieren und gleich loslegen.</p></div>
+        <div><i class="ti ti-device-laptop"></i><b>Deine Daten bleiben bei dir</b><p>Gespeichert wird in deinen Chrome-Lesezeichen.</p></div>
+        <div><i class="ti ti-credit-card-off"></i><b>Keine Monatsgebühr</b><p>Kostenlos starten und, wenn es dir gefällt, einmalig kaufen.</p></div>
+      </div>
+      <p class="safe-link"><a href="../en/privacy-policy.html">Datenschutzerklärung →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.jpg" alt="Tabs mit Unterlagen fürs Konzept, Tabs mit Online-Tools, viele KI-Tabs" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Die Zeit zum Gestalten<br>zurückholen.</h2>
+          <p>Liquid Block ist ein Studio für Video und Motion Graphics. Unterlagen fürs Konzept, Online-Tools, viele KIs: In der Produktion quellen die Tabs über.</p>
+          <p>Suchen, neu öffnen, neu anlegen. Damit uns das keine Zeit zum Denken nimmt, <strong style="color:var(--text)">haben wir es für uns selbst gebaut.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
     <div class="container">
       <div class="feature-header"><h2>Häufige Fragen</h2></div>
       <div class="faq-list">
-        <details class="faq-item" id="faq-1"><summary>Ist es kostenlos?</summary><p>Ja. Mit dem kostenlosen Plan kannst du bis zu 5 Gruppen anlegen. Alle PRO-Funktionen sind nach der Installation 90 Tage lang kostenlos. PRO ist ein einmaliger Kauf, kein Abo.</p></details>
-        <details class="faq-item" id="faq-2"><summary>Was passiert mit meinen Tabs, wenn ich die Erweiterung deinstalliere?</summary><p>Deine gespeicherten Tabs bleiben in deinen Chrome-Lesezeichen, in Ordnern mit den Namen deiner Gruppen. Daten innerhalb der Erweiterung, zum Beispiel Notizen, werden gelöscht. Exportiere sie also vorher in den Einstellungen.</p></details>
-        <details class="faq-item" id="faq-3"><summary>Gibt es die Erweiterung in meiner Sprache?</summary><p>Ja. Die Oberfläche der Erweiterung gibt es auf 15 Sprachen, darunter Englisch, Japanisch, Koreanisch, Chinesisch (traditionell und vereinfacht), Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Niederländisch, Polnisch, Türkisch, Russisch und Hindi.</p></details>
-        <details class="faq-item" id="faq-4"><summary>Welche Browser werden unterstützt?</summary><p>Google Chrome ab Version 114 unter Windows, Mac, Linux und ChromeOS.</p></details>
+        <details class="faq-item">
+          <summary>Ist es kostenlos?</summary>
+          <p>Ja. Speichern, Suchen und gemeinsames Öffnen und Schließen sind kostenlos. In den ersten 3 Monaten kannst du alle Funktionen ausprobieren. PRO ist ein einmaliger Kauf, ohne Monatsgebühr.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Was passiert mit meinen jetzigen Lesezeichen?</summary>
+          <p>Du nutzt sie einfach weiter. Deine Chrome-Lesezeichen lassen sich direkt übernehmen und ordnen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Was passiert mit meinen Daten, wenn ich die Erweiterung entferne?</summary>
+          <p>Gespeicherte Tabs bleiben als Chrome-Lesezeichen erhalten. Einstellungen wie Design und Farben werden gelöscht.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Welche Browser werden unterstützt?</summary>
+          <p>Google Chrome (ab Version 114) unter Windows, Mac, Linux und ChromeOS. Die Edge-Version ist in Vorbereitung.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="final-cta" style="padding:110px 0;">
-    <div class="section-glow"></div>
-    <div class="container cta-flex-container"><div class="cta-content">
-      <h2>Fang mit einem Projekt an.</h2>
-      <p>Öffne den Bereich mit Alt+T, speichere den Tab, auf dem du gerade bist, und probiere ▶ und ■ aus.</p>
-      <div class="hero-actions"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_final" class="btn btn-primary btn-large">Kostenlos zu Chrome hinzufügen</a></div>
-    </div></div>
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
+    <div class="container">
+      <h2>Fang einfach an: <span class="text-gradient">mit Tabs und Lesezeichen.</span></h2>
+      <p class="d-lead">Installieren und gleich loslegen.</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_final" class="btn btn-primary btn-large" id="cta-final-chrome">Kostenlos zu Chrome hinzufügen</a>
+      </div>
+      <div class="last-links">
+        <a href="quick-start.html">Schnellstart</a>
+        <a href="../en/features.html">Funktionen</a>
+      </div>
+    </div>
   </section>
 
   <footer id="site-footer">
