@@ -54,7 +54,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
   <header id="site-header">
     <nav class="nav-container">
       <a href="index.html" class="logo" aria-label="LB TAB Layers Home">
@@ -62,918 +61,233 @@
         <span class="logo-text">TAB Layers</span>
       </a>
       <div class="nav-links">
-        <a href="features.html" class="active" style="color:var(--text); background:rgba(0,0,0,0.04)">機能一覧</a>
-        <a href="index.html#themes">テーマ</a>
-        <a href="index.html#whats-new">新機能</a>
+        <a href="features.html">機能紹介</a>
+        <a href="blog/quick-start.html">はじめかた</a>
         <a href="blog/">Blog</a>
+        <a href="en/" title="English">🌐 EN</a>
       </div>
-      <a href="index.html#cta-main" class="nav-cta">無料で始める</a>
+      <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=nav" class="nav-cta">無料で始める</a>
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="features-hero">
-    <div class="hero-glow"></div>
+  <section class="fhero">
     <div class="container">
-      <span class="feature-tag">全機能紹介</span>
-      <h1>ブラウジングを革新する<br><span class="text-gradient">TAB Layersのテクノロジー。</span></h1>
-      <p>日常の作業スピードとブラウザの快適性を圧倒的に高める、洗練された機能をご紹介します。<br>タブの整理から、メモ・作業工程まで。案件ごとに、サイドパネルひとつで進められます。</p>
+      <h1>できること、<span class="text-gradient">ぜんぶ。</span></h1>
+      <p>まずは、タブとブックマーク。<br>あとは、必要になったときに。</p>
+      <div class="fnav"><a href="#start">はじめに</a><a href="#think">考える</a><a href="#see">見わたす</a><a href="#tell">伝える</a><a href="#fit">自分好みに</a><a href="#themes">テーマ</a><a href="#compare-plans">無料と PRO</a></div>
     </div>
   </section>
 
-  <!-- ===== v3.0.3 ===== -->
-  <section id="v303" style="padding:100px 0 40px; border-top:1px solid var(--border); background:var(--bg-white);">
+  <section class="d-section white" id="start">
+    <div class="container">
+      <div class="fhead"><div class="fkey">はじめに</div><h2>タブとブックマーク</h2><p>まずは、ここだけで十分です。</p></div>
+        <figure class="fshot"><img src="img/app-panel.webp" alt="ブラウザの右に LB TAB Layers。案件のタブが、ひとまとまりで並んでいる" loading="lazy" width="1280" height="800"></figure>
+        <div class="fgrid">
+          <a class="fcard" href="blog/feature-groups-subgroups.html"><i class="ti ti-folders" aria-hidden="true"></i><b>グループ</b><p>仕事ごとに、タブをまとめる。▶ で開いて、■ で閉じる。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-save-tabs.html"><i class="ti ti-plus" aria-hidden="true"></i><b>保存する</b><p>今のタブを追加、まとめて選ぶ、右クリック。3つの入れ方。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-bookmark-sync.html"><i class="ti ti-bookmarks" aria-hidden="true"></i><b>ブックマークに残る</b><p>しまう先は Chrome のブックマーク。拡張機能を消しても残ります。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-fuzzy-search.html"><i class="ti ti-search" aria-hidden="true"></i><b>あいまい検索</b><p>「めーる」で Gmail。ひらがなでも、ローマ字でも。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-ungrouped-tabs.html"><i class="ti ti-browser" aria-hidden="true"></i><b>単独タブ</b><p>案件に入れていないタブを、まとめて片付ける。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-today-history.html"><i class="ti ti-history" aria-hidden="true"></i><b>履歴</b><p>見たページを、パネルから開き直す。</p><span class="more">くわしく →</span></a>
+        </div>
+    </div>
+  </section>
+
+  <section class="d-section" id="think">
+    <div class="container">
+      <div class="fhead"><div class="fkey">考える</div><h2>頭の中を、外に出す</h2><p>書いておけば、覚えていなくていい。</p></div>
+        <figure class="fshot"><img src="img/app-memo.webp" alt="メモの画面。見ているページのとなりで、チェックリストを書いている" loading="lazy" width="880" height="660"></figure>
+        <div class="fgrid">
+          <a class="fcard" href="blog/feature-notes.html"><i class="ti ti-note" aria-hidden="true"></i><b>メモ</b><p>ページのとなりで書く。チェックリストにもなります。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-step-tasks.html"><i class="ti ti-list-check" aria-hidden="true"></i><b>ステップ</b><p>仕事を工程に分けて、終わりが見える形に。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-star-rank-tags.html"><i class="ti ti-star" aria-hidden="true"></i><b>★ランクとタグ</b><p>大事な案件とタブを、目立たせる。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-focus-timer.html"><i class="ti ti-clock" aria-hidden="true"></i><b>フォーカスタイマー</b><p>25分間、気が散るサイトを開けなくする。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-ai-sidebar.html"><i class="ti ti-sparkles" aria-hidden="true"></i><b>AI サイドバー</b><p>見ているページを添えて、要約や質問。</p><span class="more">くわしく →</span></a>
+        </div>
+    </div>
+  </section>
+
+  <section class="d-section white" id="see">
+    <div class="container">
+      <div class="fhead"><div class="fkey">見わたす</div><h2>ぜんぶを、一枚で</h2><p>たまってきたら、大きな画面で。</p></div>
+        <figure class="fshot"><img src="img/app-board.webp" alt="ボードの画面。すべての案件がカードで並ぶ" loading="lazy" width="1400" height="820"></figure>
+        <div class="fgrid">
+          <a class="fcard" href="blog/feature-dashboard.html"><i class="ti ti-layout-dashboard" aria-hidden="true"></i><b>ダッシュボード</b><p>大きな画面で、グループとブックマークを整理。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-board.html"><i class="ti ti-layout-kanban" aria-hidden="true"></i><b>ボード</b><p>すべての案件を、カードで一覧に。タブはドラッグでしまう。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/dashboard-library-view.html"><i class="ti ti-photo" aria-hidden="true"></i><b>サムネイル</b><p>名前を忘れても、見た目で見つかる。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-bookmark-dedup.html"><i class="ti ti-copy-off" aria-hidden="true"></i><b>重複の整理</b><p>同じページのブックマークを、まとめて片付ける。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-dead-link-check.html"><i class="ti ti-link-off" aria-hidden="true"></i><b>リンク切れチェック</b><p>開けなくなったブックマークを見つける。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-archive.html"><i class="ti ti-archive" aria-hidden="true"></i><b>アーカイブ</b><p>終わった案件を、消さずにしまう。</p><span class="more">くわしく →</span></a>
+        </div>
+    </div>
+  </section>
+
+  <section class="d-section" id="tell">
+    <div class="container">
+      <div class="fhead"><div class="fkey">伝える</div><h2>人に渡す</h2><p>見たもの、考えたことを、そのまま渡せる形に。</p></div>
+        <figure class="fshot"><img src="img/app-review.webp" alt="修正指示の画面。動画を止めて、下の欄に書く。右に、指示が時刻つきで並ぶ" loading="lazy" width="1280" height="760"></figure>
+        <div class="fgrid">
+          <a class="fcard" href="blog/feature-revision-notes.html"><i class="ti ti-message-2-exclamation" aria-hidden="true"></i><b>修正指示</b><p>YouTube や Vimeo の動画に、そのまま書く。止めて、書いて、Enter。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-bulk-screenshot.html"><i class="ti ti-camera" aria-hidden="true"></i><b>スクショ</b><p>案件のページをまとめて撮って、ZIP や PowerPoint に。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-copy-markdown.html"><i class="ti ti-markdown" aria-hidden="true"></i><b>Markdown でコピー</b><p>案件のリンク集を、一度で共有。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/send-tabs-to-notebooklm.html"><i class="ti ti-notebook" aria-hidden="true"></i><b>NotebookLM に送る</b><p>選んだタブを、そのままノートブックへ。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-live-pen.html"><i class="ti ti-pencil" aria-hidden="true"></i><b>消えるペン</b><p>画面共有で、「ここです」が伝わる。</p><span class="more">くわしく →</span></a>
+        </div>
+    </div>
+  </section>
+
+  <section class="d-section white" id="fit">
+    <div class="container">
+      <div class="fhead"><div class="fkey">自分好みに</div><h2>手になじませる</h2><p>毎日使うものだから。</p></div>
+        <div class="fgrid">
+          <a class="fcard" href="blog/how-to-change-theme.html"><i class="ti ti-palette" aria-hidden="true"></i><b>テーマ</b><p>40種類の配色から選ぶ。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-sidebar-mode.html"><i class="ti ti-layout-sidebar-right" aria-hidden="true"></i><b>表示モード</b><p>固定・重ねる・別窓・タブ。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-panel-layout.html"><i class="ti ti-layout-rows" aria-hidden="true"></i><b>画面レイアウト</b><p>見たいものだけを、広く見る。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-pin-bar-clock.html"><i class="ti ti-pin" aria-hidden="true"></i><b>ピンバーと時計</b><p>よく使うサイトを、いつも上に。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/notification-badge-guide.html"><i class="ti ti-bell" aria-hidden="true"></i><b>通知バッジ</b><p>Gmail や Slack の未読を、開かずに確認。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-rss-reader.html"><i class="ti ti-rss" aria-hidden="true"></i><b>RSS リーダー</b><p>新着記事を、画像つきのカードで。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/feature-split-view.html"><i class="ti ti-columns-2" aria-hidden="true"></i><b>スプリット</b><p>2つのページを、左右に並べて開く。</p><span class="more">くわしく →</span></a>
+          <a class="fcard" href="blog/extension-shortcut-keys.html"><i class="ti ti-keyboard" aria-hidden="true"></i><b>ショートカット</b><p>Alt+T で開く。キーは変えられます。</p><span class="more">くわしく →</span></a>
+        </div>
+    </div>
+  </section>
+
+  <section id="themes">
     <div class="container">
       <div class="feature-header">
-        <span class="feature-tag">NEW IN v3.0.3</span>
-        <h2>拡張を何個も入れなくていい。</h2>
-        <p>拡張は、入れるほど重くなりやすい。<br>だから、タブとブックマークから<br>自然につながる機能を、1つにまとめました。</p>
+        <span class="feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="15.5" r="2.5"/><circle cx="8.5" cy="15.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.82-.12 2.67-.35"/></svg>40 テーマ</span>
+        <h2>あなた好みの<span class="text-gradient">ワークスペース。</span></h2>
+        <p>ミニマルからダークまで。暗くても明るくても美しい。</p>
       </div>
-      <div class="compare-table-wrap" style="max-width:860px;margin:0 auto;">
-        <table class="compare-table">
-          <thead><tr><th class="feature-col">タブ・ブックマークで、すること</th><th>そこから必要になったもの</th></tr></thead>
-          <tbody>
-            <tr><td>今あるブックマークを使う</td><td>フォルダをそのままグループにする取り込み</td></tr>
-            <tr><td>動画や音の出るタブを開いている</td><td>再生中の欄（音量・再生位置・小窓）</td></tr>
-            <tr><td>ページを保存する</td><td>ページやグループにひもづくメモ、NotebookLM・AI へ渡す</td></tr>
-            <tr><td>仕事ごとにグループを作る</td><td>ステップタスク（お祝い・アーカイブ・振り返り）</td></tr>
-            <tr><td>見ているページを人に見せる</td><td>スクリーンショットと修正指示書、消えるペン</td></tr>
-            <tr><td>たくさんのタブを行き来する</td><td>ファビコンだけの細い列、最近閉じたタブの検索</td></tr>
-          </tbody>
-        </table>
+      <div class="theme-showcase">
+        <!-- Liquid Warm (看板テーマ) -->
+        <div class="theme-card" style="--t-bg:#F8F9FA;--t-hbg:#fff;--t-ac:#FF6B6B;--t-t1:#2B303A;--t-t2:#5C6370;--t-t3:#8A94A6;--t-sbg:#ECEFEF;--t-zb:#ECEFEF;--t-ib:#fff;--t-bd:rgba(43,48,58,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Liquid Warm</span>
+        </div>
+        <!-- Pastel Mint -->
+        <div class="theme-card" style="--t-bg:#EAFAF1;--t-hbg:#fff;--t-ac:#2ECC71;--t-t1:#145A32;--t-t2:#2ECC71;--t-t3:#58D68D;--t-sbg:#D5F5E3;--t-zb:#D5F5E3;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(46,204,113,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Pastel Mint</span>
+        </div>
+        <!-- Pastel Rose -->
+        <div class="theme-card" style="--t-bg:#FDEDEC;--t-hbg:#fff;--t-ac:#E74C3C;--t-t1:#641E16;--t-t2:#E74C3C;--t-t3:#F1948A;--t-sbg:#FADBD8;--t-zb:#FADBD8;--t-ib:rgba(255,255,255,0.85);--t-bd:rgba(231,76,60,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Pastel Rose</span>
+        </div>
+        <!-- Nordic Cozy -->
+        <div class="theme-card" style="--t-bg:#FAF6F0;--t-hbg:#FAF6F0;--t-ac:#7EA172;--t-t1:#3E4A3B;--t-t2:#6B7A68;--t-t3:#9AA896;--t-sbg:#fff;--t-zb:#F0E5DC;--t-ib:rgba(250,246,240,0.7);--t-bd:rgba(110,125,104,0.1)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Nordic Cozy</span>
+        </div>
+        <!-- Elegant Glass (ダーク) -->
+        <div class="theme-card" style="--t-bg:#0F1115;--t-hbg:#0F1115;--t-ac:#A5C9EB;--t-t1:#F3F4F6;--t-t2:#9CA3AF;--t-t3:#6B7280;--t-sbg:rgba(255,255,255,0.03);--t-zb:rgba(255,255,255,0.04);--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Elegant Glass</span>
+        </div>
+        <!-- Cyberpunk (ダーク) -->
+        <div class="theme-card" style="--t-bg:#09090B;--t-hbg:#09090B;--t-ac:#E11D48;--t-t1:#F4F4F5;--t-t2:#A1A1AA;--t-t3:#71717A;--t-sbg:rgba(255,255,255,0.03);--t-zb:#18181B;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(255,255,255,0.08)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Cyberpunk</span>
+        </div>
+        <!-- Toy (ポップ・個性派) -->
+        <div class="theme-card" style="--t-bg:#F4F6F9;--t-hbg:#F4F6F9;--t-ac:#4EA8DE;--t-t1:#073B4C;--t-t2:#118AB2;--t-t3:#83C5BE;--t-sbg:#fff;--t-zb:#FFFDF0;--t-ib:#fff;--t-bd:#073B4C">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Toy</span>
+        </div>
+        <!-- Royal Gold (ラグジュアリー) -->
+        <div class="theme-card" style="--t-bg:#121212;--t-hbg:#121212;--t-ac:#D4AF37;--t-t1:#F0E6D2;--t-t2:#D4AF37;--t-t3:#8A753C;--t-sbg:#1C1C1C;--t-zb:#1C1C1C;--t-ib:rgba(255,255,255,0.03);--t-bd:rgba(212,175,55,0.15)">
+          <div class="theme-mini-ui">
+            <div class="tmu-header"><span class="tmu-logo"></span><span class="tmu-title"></span><span class="tmu-dots"></span></div>
+            <div class="tmu-search"></div>
+            <div class="tmu-folder"><span class="tmu-folder-icon"></span><span class="tmu-folder-name"></span></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-tab tmu-tab-active"></div>
+            <div class="tmu-tab"></div>
+            <div class="tmu-spacer"></div>
+            <div class="tmu-membar"><div class="tmu-memfill"></div></div>
+          </div>
+          <span class="theme-name">Royal Gold</span>
+        </div>
       </div>
-      <p style="text-align:center;margin-top:24px;"><a href="blog/v303-development-story.html" style="color:var(--accent);font-weight:600;">3.0.3 を作った1日（開発ストーリー）を読む →</a></p>
+      <p class="theme-more">+ 他 32 テーマ</p>
     </div>
   </section>
 
-  <!-- bm-import (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
+  <section class="d-section" id="start-guides">
     <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="bm-import">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-bookmarks"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">無料</span>
-            <h2>今のブックマークが、<br>そのまま仕事の机に。</h2>
-            <p>
-              Chrome に前からあるブックマークのフォルダを選ぶだけで、TAB Layers のグループになります。新しく何かを作らなくても、入れたその日から使えます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> よく使うフォルダにチェックを入れて移す（まずは10個が目安）</li>
-              <li><i class="ti ti-circle-check"></i> ブックマークは消えません。「元の場所に戻す」でいつでも戻せます</li>
-              <li><i class="ti ti-circle-check"></i> 大画面でも、Chrome のブックマークフォルダを右クリックしてフォルダごと移せます</li>
-              <li><i class="ti ti-circle-check"></i> ほかのブラウザや拡張から書き出したファイル（HTML・CSV・TXT）も取り込めます</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/qs-0-import.webp" alt="よく使うフォルダにチェックを入れ、了承のチェックのあとに移す" style="max-width:640px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
+      <div class="fhead"><div class="fkey">つづける</div><h2>少しずつ、覚えられる</h2><p>ぜんぶを、いちどに覚えなくて大丈夫です。</p></div>
+      <div class="guides">
+        <a class="guide" href="blog/quick-start.html"><i class="ti ti-player-play" aria-hidden="true"></i><div><b>はじめかた</b><span>最初の5分で覚える、基本の操作。</span></div></a>
+        <a class="guide" href="blog/all-features-guide.html"><i class="ti ti-book-2" aria-hidden="true"></i><div><b>全機能ガイド</b><span>モード別に、すべての使い方。</span></div></a>
       </div>
+      <p class="medal"><i class="ti ti-medal" aria-hidden="true"></i>使うほど、メダルがたまります。はじめての操作には、小さなお祝いも。</p>
     </div>
   </section>
 
-  <!-- board (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="board">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-layout-board"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">PRO（お試し中は使えます）</span>
-            <h2>大画面で、<br>すべてのグループを一覧に。</h2>
-            <p>
-              大画面（ダッシュボード）の「ボード」で、すべてのグループをカードで並べて見られます。右の「開いているタブ」をカードへドラッグするだけで保存できます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> カードの ▶ で、そのグループをまとめて開く</li>
-              <li><i class="ti ti-circle-check"></i> 「＋ 新しいグループ」へタブを落とすと、その場でグループができる</li>
-              <li><i class="ti ti-circle-check"></i> 「まとめて新しいグループに保存」で、今のタブを一度にしまえる</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/feat-board.webp" alt="大画面のボード。グループがカードで並び、右の開いているタブをドラッグで入れられる" style="max-width:640px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- live-pen (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="live-pen">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-pencil"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">無料</span>
-            <h2>画面共有で、<br>「ここです」が伝わる。</h2>
-            <p>
-              オンライン打合せで画面を見せながら、ページの上に丸や線をその場で書けます。消えるペンは、書き終えて少しすると消えます。レーザーポインターの代わりに使えます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> Alt+Shift+D、ページの右クリック、パネルの上のボタンで出す</li>
-              <li><i class="ti ti-circle-check"></i> 「残るペン」に切り替えると、「すべて消す」まで残る</li>
-              <li><i class="ti ti-circle-check"></i> 「ページを操作」で、ペンを止めて下のページ（動画の再生ボタンなど）を触れる</li>
-              <li><i class="ti ti-circle-check"></i> 書いた内容は、保存も送信もしません</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/feat-live-pen.webp" alt="見ているページの上に、丸と矢印を書いて伝える" style="max-width:640px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- mini-rail (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="mini-rail">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-layout-sidebar-right-collapse"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">無料</span>
-            <h2>大きな画面は、<br>細い列で広く使う。</h2>
-            <p>
-              ページの端に、ファビコン（サイトの小さな絵）だけを並べた細い列を出せます。押すとそのタブへ移り、いちばん上からサイドパネルも開けます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> ピン留めしたサイトと、開いているタブが並ぶ</li>
-              <li><i class="ti ti-circle-check"></i> ‹ で、ほぼ見えない細さに畳める（マウスを乗せると出る）</li>
-              <li><i class="ti ti-circle-check"></i> 設定でオンにしたときだけ出ます（最初はオフ）。ページの内容は読みません</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/feat-mini-rail.webp" alt="ページの右端に、ファビコンだけの細い列が並ぶ" style="max-width:640px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- media (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="media">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-volume"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">PRO（お試し中は使えます）</span>
-            <h2>鳴っているタブを、<br>開かずに操作する。</h2>
-            <p>
-              音や動画が流れているタブを、パネルの「再生中」の欄から操作できます。そのタブを開いて触る必要はありません。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 再生位置のバー・再生と一時停止・タブごとの音量（YouTube のプレイヤーとも合います）</li>
-              <li><i class="ti ti-circle-check"></i> 音だけのページでも、再生位置のバーが出る</li>
-              <li><i class="ti ti-circle-check"></i> 動画のタブを小さな窓に移して、ほかの作業をしながら見る（元に戻すもできる）</li>
-              <li><i class="ti ti-circle-check"></i> 「小窓で並べて開く」で、SNS などを横に並べて見る</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/feat-media.webp" alt="再生中の欄。再生位置・一時停止・音量をパネルから" style="max-width:480px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- images (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="images">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-photo"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">PRO（お試し中は使えます）</span>
-            <h2>ページの画像を、<br>大きさつきで一覧に。</h2>
-            <p>
-              「このページの画像」で、見ているページの画像を大きさ（ピクセル）・種類つきで並べ、選んでまとめて保存できます。画像を右クリックして、大きさだけ見ることもできます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 幅で絞り込み・種類で絞り込み・並べ替え</li>
-              <li><i class="ti ti-circle-check"></i> 選んだ画像をまとめて保存（ダウンロードの LB-images フォルダへ）</li>
-              <li><i class="ti ti-circle-check"></i> スクリーンショットに矢印・文字・番号ピンを書き込み、番号つきの修正指示書を PDF・PowerPoint で書き出す</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/feat-images.webp" alt="このページの画像を、大きさと種類つきで一覧にする" style="max-width:640px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- badges (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="badges">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-award"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">無料</span>
-            <h2>使いながら、<br>少しずつ覚えられる。</h2>
-            <p>
-              機能を初めて使うと、小さなお祝いとバッジ。「次は：○○［試す］」で、次の機能の場所へ案内します。全部を最初に覚えなくて大丈夫です。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 銅はすぐ使う機能、銀は使ってほしい機能、金はなかなか使わない機能</li>
-              <li><i class="ti ti-circle-check"></i> ブックマークの数（10〜1000個）や、開いたタブの数（100〜10000）の節目にも</li>
-              <li><i class="ti ti-circle-check"></i> ステップタスクの完了数や、続けた日数のメダルも</li>
-              <li><i class="ti ti-circle-check"></i> すでに使っている人には、お祝いを出しません（バッジ帳で出すこともできます）</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/feat-badges.webp" alt="できることバッジ。グレーのものは「試す」でその場所へ案内" style="max-width:380px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- steps-archive (v3.0.3) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="steps-archive">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-archive"></i>
-            </div>
-            <span class="feature-tag" style="display:inline-block;align-self:flex-start;width:auto;margin-bottom:10px;">PRO（お試し中は使えます）</span>
-            <h2>終わった仕事は、<br>祝って、しまって、振り返る。</h2>
-            <p>
-              ステップタスクを終えると、小さなお祝いが出ます。終わったタスクは小さくたたまれ、日付ごとのアーカイブに移せます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> タスクごとに振り返りのメモを残せる</li>
-              <li><i class="ti ti-circle-check"></i> アーカイブは日付ごとに並び、Markdown・CSV で書き出せる</li>
-              <li><i class="ti ti-circle-check"></i> 1つのメモを、ページとグループの両方にひもづけられる（グループの見出しにメモの印）</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/guide-g09-steps.webp" alt="ステップタスク。工程にチェックを入れて進める" style="max-width:560px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== v3.0.3 そのほか ===== -->
-  <section style="padding:80px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="coming-soon-card">
-        <div class="cs-glow"></div>
-        <div class="cs-badge">ほかにも v3.0.3 で</div>
-        <h2>小さな「探す」「しまう」を、もっと減らす。</h2>
-        <div class="cs-features">
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-circle-check" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>保存済みが分かる</h4>
-              <p>保存したページを開くと、拡張のアイコンに ✓。パネルにも「保存済み：グループ名」（PRO）</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-search" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>保存先を文字で探す</h4>
-              <p>「現在のタブを追加」で保存先を検索、よく使うものは ☆ で固定（PRO）</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-copy" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>選んでコピー・AI に渡す</h4>
-              <p>URL・Markdown・CSV・HTML で書き出し。題名・URL・メモを AI に貼りやすい形でコピー（PRO）</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-notebook" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>NotebookLM に直接追加</h4>
-              <p>ページや YouTube を、自分のノートブックへ（試験的・PRO）</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-message-share" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>メモを入力欄・SNS へ</h4>
-              <p>入力欄の右クリックでメモを入れる。X・Threads・Bluesky などの投稿画面にメモと URL を（PRO）</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-history" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>最近閉じたタブ・1週間の履歴</h4>
-              <p>検索から最近閉じたタブ（最大50件・この PC の中だけ）。履歴は1週間を日ごとに</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-stack-2" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>バンクと「2段で見る」</h4>
-              <p>グループを最大10個のバンクに分け、Alt+1〜0 で切り替え。2段で見ると、選んだグループだけを下に</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-folder" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>PC のフォルダを記録</h4>
-              <p>グループに、PC やネットワークのフォルダのパスを残す。押すとパスをコピー</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-palette" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>オリジナルのテーマ</h4>
-              <p>背景・文字・アクセントの3色で、自分だけの色に。読みやすさも自動でチェック（PRO）</p>
-            </div>
-          </div>
-          <div class="cs-item">
-            <span class="cs-icon"><i class="ti ti-language" style="font-size:24px;color:var(--accent);"></i></span>
-            <div>
-              <h4>15言語</h4>
-              <p>イタリア語・オランダ語・ポーランド語・トルコ語・ロシア語・簡体字中国語・ヒンディー語を追加</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DETAIL FEATURES LIST ===== -->
-  <section class="container">
-    <div class="detail-grid">
-      
-      <!-- 1. レイヤー型タブ管理 -->
-      <div class="detail-section" id="layer-management">
-        <div class="detail-info">
-          <div class="detail-icon-box">
-            <i class="ti ti-layers-intersect"></i>
-          </div>
-          <h2>仕事の文脈を切り替える<br>「レイヤー型」タブ整理</h2>
-          <p>
-            複数のプロジェクトやクライアント、作業用途（リサーチ、経理、SNSなど）ごとにタブを「レイヤーグループ」として整理・管理できます。<br>
-            ワンクリックでグループ内のすべてのタブを一括で開き、作業が終わったら一瞬で閉じてメモリを解放します。
-          </p>
-          <ul class="detail-list">
-            <li><i class="ti ti-circle-check"></i> 複数タブの一括復元＆一括消去</li>
-            <li><i class="ti ti-circle-check"></i> ドラッグ＆ドロップによる直感的な並び替え</li>
-            <li><i class="ti ti-circle-check"></i> サブグループ（フォルダの階層化）に完全対応</li>
-          </ul>
-        </div>
-        <div class="detail-visual">
-          <img src="blog/guide-g03-tab-group.webp" alt="グループの ▶ で開くと、同じ名前・同じ色の Chrome のタブグループにまとまり、■ でまとめて閉じる" style="max-width:560px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-        </div>
-      </div>
-
-      <!-- 2. ブックマーク自動保存 -->
-      <div class="detail-section reverse" id="persistence">
-        <div class="detail-info">
-          <div class="detail-icon-box">
-            <i class="ti ti-shield-lock"></i>
-          </div>
-          <h2>拡張を消しても残る安心感<br>Chrome のブックマークと自動で同期</h2>
-          <p>
-            他のタブ管理ツールと異なり、TAB Layersで保存したグループやタブは<strong>すべてブラウザ純正の「ブックマーク」と自動同期</strong>されます。<br>
-            そのため、この拡張機能を削除しても、ブラウザが突然クラッシュしても、グループとタブはブックマークに残ります。Chrome の同期をオンにしていれば、別のパソコンにも出てきます（メモやステップタスクは、このパソコンの中に保存されます）。
-          </p>
-          <ul class="detail-list">
-            <li><i class="ti ti-circle-check"></i> 拡張機能を削除してもブックマークにそのまま残る</li>
-            <li><i class="ti ti-circle-check"></i> 双方向同期：ブックマーク側を編集してもTAB Layersへ自動反映</li>
-            <li><i class="ti ti-circle-check"></i> データは当社のサーバーを介さず、ブラウザの中に保存されます</li>
-          </ul>
-          <p style="font-size:0.85rem; opacity:0.8; margin-top:14px;">
-            ※ 拡張を削除しても残るのは、保存したタブ（リンク）とグループ（フォルダ）です。メモ・ステップタスク・設定は拡張の中に保存されます。設定の「エクスポート」で、いつでもバックアップできます。
-          </p>
-        </div>
-        <div class="detail-visual">
-          <img src="tab-persistence-one.jpg" alt="ブックマーク同期のイメージ" style="max-width:440px;">
-        </div>
-      </div>
-
-
-      <!-- 5. AIタブ検索 -->
-      <div class="detail-section" id="ai-search">
-        <div class="detail-info">
-          <div class="detail-icon-box">
-            <i class="ti ti-wand"></i>
-          </div>
-          <h2>意味で探す・ページを要約する<br>AIアシスタント機能（Beta）</h2>
-          <p>
-            Chromeの内蔵AI（Gemini Nano）や、お持ちのAPIキー（Gemini / OpenAI / Claude）を接続することで、高度なAI検索機能がアンロックされます。<br>
-            「出張で使えそうなホテル」「来週のミーティング資料」といった抽象的な言葉でタブを検索できます。AIサイドバーでは、見ているページを添付して要約や質問ができます。
-          </p>
-          <ul class="detail-list">
-            <li><i class="ti ti-circle-check"></i> セマンティック検索：URLやタイトルに含まれない意味を汲み取って検索</li>
-            <li><i class="ti ti-circle-check"></i> AIサイドバー：見ているページを添付して要約・質問（Chrome内蔵AIならAPIキー不要）</li>
-            <li><i class="ti ti-circle-check"></i> プライバシー配慮：APIキーを使う通信は当社サーバーを経由せず、各AIサービスへ直接送られます。Chrome内蔵AIならPCの中で処理されます</li>
-          </ul>
-        </div>
-        <div class="detail-visual">
-          <img src="tab-ai-preview.png" alt="AIアシスタント機能のイメージ" style="max-width:340px;">
-        </div>
-      </div>
-
-      <!-- 5b. ★ランク機能 -->
-      <div class="detail-section reverse" id="star-rating">
-        <div class="detail-info">
-          <div class="detail-icon-box">
-            <i class="ti ti-star"></i>
-          </div>
-          <h2>大事なものほど、目立たせる<br>★ランク（重要度）機能</h2>
-          <p>
-            グループ（フォルダ）にも、個々のタブにも、★1〜★5の重要度ランクを付けることができます。<br>
-            重要なプロジェクトやよく参照するリファレンスページに★を付けておけば、数十個のグループやタブの中からでも一瞬で見つけ出せます。ダッシュボードでは★の高い順にソートすることもでき、優先度管理がさらに捗ります。
-          </p>
-          <ul class="detail-list">
-            <li><i class="ti ti-circle-check"></i> グループ単位・タブ単位の両方に★1〜★5のランク付けが可能</li>
-            <li><i class="ti ti-circle-check"></i> ワンクリックで開くポップアップピッカーで素早くランク変更</li>
-            <li><i class="ti ti-circle-check"></i> ダッシュボードで★ランク順のソート・フィルタリングに対応</li>
-          </ul>
-        </div>
-        <div class="detail-visual">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:32px 24px;background:var(--bg-white);border-radius:var(--radius-lg);border:1px solid var(--border);">
-            <div style="font-size:48px;line-height:1;letter-spacing:4px;color:#F59E0B;">★★★★☆</div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:6px 14px;background:rgba(245,158,11,0.1);border-radius:20px;font-size:13px;font-weight:600;color:#92400E;">★4 重要プロジェクト</span>
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:6px 14px;background:rgba(245,158,11,0.1);border-radius:20px;font-size:13px;font-weight:600;color:#92400E;">★5 最重要リファレンス</span>
-            </div>
-            <p style="font-size:12px;color:var(--text-muted);margin:0;">サイドパネル・ダッシュボードの両方で使えます</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5c. タグ機能 -->
-      <div class="detail-section" id="tag-system">
-        <div class="detail-info">
-          <div class="detail-icon-box">
-            <i class="ti ti-tag"></i>
-          </div>
-          <h2>横断的に見つかる<br>#タグで自由に分類</h2>
-          <p>
-            フォルダの階層だけでは足りない分類ニーズに応えるのが「タグ」機能です。<br>
-            個々のタブに #デザイン、#参考資料、#要確認 などの自由なタグを複数付けることができ、フォルダをまたいで同じタグのタブを横断的にフィルタリングできます。ダッシュボードのサイドバーにはタグ一覧が自動生成され、クリックひとつで該当タブだけを一覧表示します。
-          </p>
-          <ul class="detail-list">
-            <li><i class="ti ti-circle-check"></i> タブに複数タグの付与・削除が自由自在</li>
-            <li><i class="ti ti-circle-check"></i> ダッシュボードでタグ別の一覧フィルタリング</li>
-            <li><i class="ti ti-circle-check"></i> ブックマークの整理画面でもタグ付け可能</li>
-          </ul>
-        </div>
-        <div class="detail-visual">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:32px 24px;background:var(--bg-white);border-radius:var(--radius-lg);border:1px solid var(--border);">
-            <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(139,92,246,0.12));border-radius:20px;font-size:13px;font-weight:600;color:#4338CA;">#デザイン <span style="opacity:0.6;font-size:10px;">12</span></span>
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:linear-gradient(135deg,rgba(16,185,129,0.12),rgba(52,211,153,0.12));border-radius:20px;font-size:13px;font-weight:600;color:#065F46;">#参考資料 <span style="opacity:0.6;font-size:10px;">8</span></span>
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:linear-gradient(135deg,rgba(239,68,68,0.12),rgba(248,113,113,0.12));border-radius:20px;font-size:13px;font-weight:600;color:#991B1B;">#要確認 <span style="opacity:0.6;font-size:10px;">3</span></span>
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:linear-gradient(135deg,rgba(245,158,11,0.12),rgba(251,191,36,0.12));border-radius:20px;font-size:13px;font-weight:600;color:#92400E;">#クライアントA <span style="opacity:0.6;font-size:10px;">5</span></span>
-              <span style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:linear-gradient(135deg,rgba(6,182,212,0.12),rgba(34,211,238,0.12));border-radius:20px;font-size:13px;font-weight:600;color:#155E75;">#ツール <span style="opacity:0.6;font-size:10px;">7</span></span>
-            </div>
-            <p style="font-size:12px;color:var(--text-muted);margin:0;">タグをクリックすると、全フォルダを横断して該当タブだけを表示</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6. 大画面ダッシュボード -->
-      <div class="detail-section reverse" id="dashboard-organizer">
-        <div class="detail-info">
-          <div class="detail-icon-box">
-            <i class="ti ti-layout-dashboard"></i>
-          </div>
-          <h2>大画面でスマートに整理整頓<br>既存ブックマークの分類・移行</h2>
-          <p>
-            ブラウザのサイドパネルだけでなく、広い画面で一覧できる専用の「ダッシュボード」機能を搭載。<br>
-            既存のブラウザのブックマークをすべて一覧表示し、クリックやドロップダウンのフォルダ選択から、TAB Layersのグループフォルダへ直感的に分類・移行することができます。増えすぎたブックマークの整理が劇的にスピードアップします。
-          </p>
-          <ul class="detail-list">
-            <li><i class="ti ti-circle-check"></i> 既存のブックマークバーやその他ブックマークのスマートな一括整理</li>
-            <li><i class="ti ti-circle-check"></i> フォルダ選択リストによる、目的のレイヤーフォルダへの素早い移行</li>
-            <li><i class="ti ti-circle-check"></i> 広い作業画面を活用した、複数タブやグループの並列整理・タグ付け</li>
-          </ul>
-        </div>
-        <div class="detail-visual">
-          <img src="tab-dashboard-preview.png" alt="ダッシュボード整理のイメージ" style="max-width:440px;">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 7. タブUI統合 (v2.8.62) -->
-  <section style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="tab-ui-integration">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-layout-bottombar"></i>
-            </div>
-            <h2>2つを1つに。<br>タブUI統合</h2>
-            <p>
-              v2.8.62で「単独タブ」と「本日の履歴」を1行のタブバーに統合しました。<br>
-              Chrome風のデザインでアクティブタブにはアクセントカラーの下線と背景ハイライトを適用。ヘッダー1行分の画面スペースを節約し、より多くのタブを一度に表示できます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> Chrome風タブバーで直感的な切り替え</li>
-              <li><i class="ti ti-circle-check"></i> ワンクリック折りたたみシェブロンで省スペース</li>
-              <li><i class="ti ti-circle-check"></i> タブ切り替え時のレイアウトシフトなし</li>
-              <li><i class="ti ti-circle-check"></i> タイマーにテキストラベル追加で視認性向上</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="features-tabbar.png" alt="単独タブ・本日の履歴・メモ・ステップを1行にまとめたタブバー" style="max-width:420px; width:100%;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. 起動時のチラ見せ (v2.8.71) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="startup-peek">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-eye"></i>
-            </div>
-            <h2>起動したことが、<br>ひと目でわかる。</h2>
-            <p>
-              v2.8.71 で「起動時の表示」を追加しました。<br>
-              Chromeを起動して最初に開いたWebページで、サイドバーがスッと出てスッと収納される「チラ見せ」。拡張機能を入れたのに存在を忘れてしまう、を防ぎます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> OFF／チラ見せ／常に開く の3択（既定はチラ見せ）</li>
-              <li><i class="ti ti-circle-check"></i> 出ている間に触れれば、収納せずにそのまま使える</li>
-              <li><i class="ti ti-circle-check"></i> 起動後1回だけ。ページ移動のたびに出てこない</li>
-              <li><i class="ti ti-circle-check"></i> 新しいタブ画面でも、アイコンの緑「ON」バッジで起動をお知らせ</li>
-            </ul>
-            <p style="font-size:0.9rem;"><a href="blog/startup-peek-overlay.html">設定方法を詳しく見る →</a></p>
-          </div>
-          <div class="detail-visual">
-            <img src="features-peek.png" alt="Chrome起動後、最初のページでサイドバーがスッと出るイメージ" style="max-width:520px; width:100%;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. サムネイル付きライブラリ表示 (v2.8.71) -->
-  <section style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="library-view">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-layout-grid"></i>
-            </div>
-            <h2>名前を忘れても、<br>見た目で見つかる。</h2>
-            <p>
-              v2.8.71 から、ダッシュボードで保存したタブをページのサムネイル付きカードで一覧できます。<br>
-              サムネイルの保存数は31枚から1,442枚へ。サムネイルは設定でオンにしたときだけ撮り、メール・銀行・ログインなどのページは撮りません。画像はお使いのPCの中だけに保存され、外部には送信されません。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 16:10のカードに、ページ上部を潰さず切り出して表示</li>
-              <li><i class="ti ti-circle-check"></i> 右クリック「サムネイルを更新」で古い絵を撮り直し</li>
-              <li><i class="ti ti-circle-check"></i> フォルダプリセットは作成前にプレビュー、作成後8秒間は取り消し可能</li>
-              <li><i class="ti ti-circle-check"></i> はじめてガイドは7ステップに刷新、ヘルプからいつでも再生</li>
-            </ul>
-            <p style="font-size:0.9rem;"><a href="blog/dashboard-library-view.html">ライブラリ表示の使い方 →</a></p>
-          </div>
-          <div class="detail-visual">
-            <img src="features-library.png" alt="ダッシュボードのサムネイル付きライブラリ表示" style="max-width:520px; width:100%;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- quick-launch -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="quick-launch">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-keyboard"></i>
-            </div>
-            <h2>思いついたら、<br>すぐ開く。</h2>
-            <p>
-              インストールすれば、すぐに使えます。キーボードのショートカットで、サイドパネルを一瞬で開けます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> <strong>Alt+T</strong>（Macは Option+T）で、サイドパネルを開く</li>
-              <li><i class="ti ti-circle-check"></i> <strong>Ctrl+Shift+S</strong>（Macは Command+Shift+S）で、いまのページを「あとで整理」にすぐ保存</li>
-              <li><i class="ti ti-circle-check"></i> ショートカットは、Chrome の「拡張機能のショートカット」画面（chrome://extensions/shortcuts）で、好きなキーに変えられます</li>
-              <li><i class="ti ti-circle-check"></i> ツールバーのアイコンを押しても、同じように開きます</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/guide-g01-open-panel.webp" alt="Alt+T でサイドパネルを開く。ツールバーのアイコンでも開け閉めできる" style="max-width:560px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- layout-switch (v2.9.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="layout-switch">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-layout-columns"></i>
-            </div>
-            <h2>見たいものだけを、<br>広く見る。</h2>
-            <p>
-              v2.9.0 から、サイドパネルの上のバーで、画面の見せ方をワンクリックで切り替えられます。無料でお使いいただけます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 「タブ」「ブックマーク」「メモ」を、それぞれ全高で広く表示（切り分け）</li>
-              <li><i class="ti ti-circle-check"></i> 「統合」では、上にグループ、下にタブ・履歴・メモを、1画面で上下に分けて表示</li>
-              <li><i class="ti ti-circle-check"></i> バーのボタンは、ドラッグして順番を入れ替えられます</li>
-              <li><i class="ti ti-circle-check"></i> 小さい画面では、コンパクト表示（設定の「表示の密度」で、自動・標準・コンパクトから選べます）</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="features-layout.png" alt="画面レイアウトの切り替え（統合表示）のイメージ" style="max-width:340px;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- notes (v2.9.0 / v2.10.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="notes">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-notes"></i>
-            </div>
-            <h2>サイドパネルに、<br>メモを置く。</h2>
-            <p>
-              v2.9.0 で追加した、Google Keep 風のメモとチェックリストです。v2.10.0 で、ページとのひもづけと検索が加わりました。無料でお使いいただけます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 自由に書けるメモと、チェックリスト。色分けとピン留めもできます</li>
-              <li><i class="ti ti-circle-check"></i> 「このページのメモ」：メモを、いまのページ（またはサイト全体）にひもづけて、同じページを開いたときにすぐ開けます</li>
-              <li><i class="ti ti-circle-check"></i> ページ上の文字を選んで右クリック →「選んだ文字をメモに追加」。そのページにひもづいたメモに足されます</li>
-              <li><i class="ti ti-circle-check"></i> メモの検索と、設定の「エクスポート」でのバックアップ（メモも含まれます）</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/guide-g08-page-note.webp" alt="リンクのボタンで、見ているページにひもづけたメモを作る" style="max-width:560px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- step-tasks (v2.11.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="step-tasks">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-list-check"></i>
-            </div>
-            <h2>終わりが見える仕事は、<br>進みも見える。</h2>
-            <p>
-              v2.11.0 で、「ステップタスク」を追加しました。仕事を作業工程に分けて、全部の工程が終わってはじめて1つと数えます。PRO機能ですが、試用期間中は使えます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 今日・今週（月〜日）の完了数を表示。目標は、1日3〜4・週15〜20（設定で変えられます）</li>
-              <li><i class="ti ti-circle-check"></i> 日付と開始時間は任意。案件（グループ）につなげると、グループの見出しにタスク数が出ます</li>
-              <li><i class="ti ti-circle-check"></i> 「作業工程から作る」：ホワイトカラー向けのひな形34種。自分のひな形も保存・書き出しできます</li>
-              <li><i class="ti ti-circle-check"></i> 「Googleカレンダーに追加」：予定の作成画面を開くだけ。ログインや許可は要りません</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/guide-g09-steps.webp" alt="「作業工程から作る」でひな形を選び、工程にチェックを入れて進める" style="max-width:560px; width:100%; border-radius:12px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- folder-view (v2.11.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="folder-view">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-folders"></i>
-            </div>
-            <h2>保存したグループを、<br>フォルダとしてたどる。</h2>
-            <p>
-              v2.11.0 で、「フォルダ表示」を追加しました。「ブックマーク」の表示を、エクスプローラーのように変えられます。今までのリスト表示にも、いつでも戻せます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> フォルダをタップして中へ、パンくず（ホーム › A社 › 会議）で戻る。マウスの戻る／進むボタンにも対応</li>
-              <li><i class="ti ti-circle-check"></i> タブは80×80のサムネイルで並びます（画像がないときはサイトのアイコン）</li>
-              <li><i class="ti ti-circle-check"></i> ドラッグで、タブをフォルダへ、フォルダをフォルダへ。ブックマークのフォルダにも反映されます</li>
-              <li><i class="ti ti-circle-check"></i> ホイールクリックで、タブは裏で開き、フォルダは中のタブを全部開きます。全部開いているときは、逆に全部閉じます（保存したタブは残ります）</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="features-folder-view.png" alt="フォルダ表示（サムネイルで並ぶフォルダとパンくず）のイメージ" style="max-width:340px;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- tab-reorder (v2.13.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="tab-reorder">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-arrows-sort"></i>
-            </div>
-            <h2>開いているタブを、<br>ドラッグで並べ替え。</h2>
-            <p>
-              v2.13.0 から、サイドパネルの中でタブの順番を入れ替えられます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 「タブ」の画面（リスト・サムネイル）と、統合レイアウトの「単独タブ」で、行をほかの行の上へドラッグして離す</li>
-              <li><i class="ti ti-circle-check"></i> 行の上半分に重ねると「その前」、下半分に重ねると「その後ろ」。入る位置に、青い線が出ます</li>
-              <li><i class="ti ti-circle-check"></i> <strong>ブラウザ上部のタブの並びも、同じに変わります</strong>（グループへのドロップは、これまでどおり）</li>
-              <li><i class="ti ti-circle-check"></i> 最後のタブを閉じるときは、先に新しいタブを開くので、<strong>Chrome のウィンドウが消えません</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- mode-rail (v2.13.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="mode-rail">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-layout-sidebar-right"></i>
-            </div>
-            <h2>モード切替を、<br>端に縦に置く。</h2>
-            <p>
-              v2.13.0 から、モード切替（タブ／整理／スクショ／AI／DB）を、サイドパネルの端に縦に置けます。v3.0.1 からは、タブ／ブックマーク／履歴／メモ／ステップの切り替えもこの列に入り、新しく入れた方はこの縦の列で始まります（これまで使っている方は、設定で選べます）。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> サイドパネルが左なら左端、右なら右端に出ます（Chrome の設定に合わせます。オーバーレイ表示では、表示している側）</li>
-              <li><i class="ti ti-circle-check"></i> 列の下の「縮める」で、アイコンだけの細い列に畳めます。「タブ」の右上には、開いているタブの数（15個でオレンジ、100個で赤）</li>
-              <li><i class="ti ti-circle-check"></i> ヘッダーの道具ボタン（集中タイマー・表示方法・密度・ヘルプ・設定）も、列の下に移ります</li>
-              <li><i class="ti ti-circle-check"></i> ロゴの右に、パネルを開くショートカット（Alt+T など）を表示。押すと Chrome のショートカット設定が開きます。サイドパネルの左右は、Chrome の設定（デザイン → サイドパネルの位置）で変えられます</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/qs-1-tabs.webp" alt="右の縦の列で、タブ・ブックマーク・履歴・メモ・ステップを切り替える" style="max-width:300px; width:100%; border-radius:14px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- quick-add (v2.12.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="quick-add">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-clipboard-plus"></i>
-            </div>
-            <h2>見つけた瞬間に、<br>さっと入れる。</h2>
-            <p>
-              v2.12.0 で、ページをグループに入れる方法が増えました。思いついた方法で、すぐ入れられます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> <strong>ドロップ：</strong>アドレスバーのアイコンや、ページ内のリンクを、グループの行（またはフォルダ表示のフォルダ）にドラッグ＆ドロップ</li>
-              <li><i class="ti ti-circle-check"></i> <strong>貼り付け：</strong>Ctrl+V、または「グループ」の見出しの右のボタンで、URL（複数行・50件まで）をまとめて追加。入れ先は、開いているフォルダ → 同じサイトのグループ → 最近使ったグループ の順で、自動で選びます</li>
-              <li><i class="ti ti-circle-check"></i> <strong>最近使ったグループ</strong>を、入れ先の一覧（貼り付け・「グループへ」・タブの右クリック・ブラウザの右クリック）の先頭に表示</li>
-              <li><i class="ti ti-circle-check"></i> 保存した直後は「<strong>元に戻す</strong>」。「あとで整理」に貯めた保存済みのタブも、選んで「グループへ」でまとめて仕分け</li>
-              <li><i class="ti ti-circle-check"></i> <strong>タブが多いときのお知らせ：</strong>15個以上で忠告、100個以上で警告（数は設定で変更・オフもできます）</li>
-              <li><i class="ti ti-circle-check"></i> <strong>コピーしたURLのお知らせ（任意）：</strong>設定でオンにし、クリップボードの読み取りを許可したときだけ。URLがあるかを見るだけで、内容の保存・送信はしません</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/qs-3-save.webp" alt="v3.0.1：パネルの下の「現在のタブを追加」から、保存先のグループを選ぶ" style="max-width:300px; width:100%; border-radius:14px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- tabs-view (v2.11.0) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="tabs-view">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-checkbox"></i>
-            </div>
-            <h2>開いているタブを、<br>まとめてグループへ。</h2>
-            <p>
-              v2.11.0 から、「タブ」表示は、ブラウザ上部と同じ、開いているタブをすべて出します。保存済みのタブは薄く表示されます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 行の左の丸いチェックで複数選び、「グループへ」で、新規または既存のグループへ入れます</li>
-              <li><i class="ti ti-circle-check"></i> 新規グループは、名前・色・アイコン・説明を決めて作れます</li>
-              <li><i class="ti ti-circle-check"></i> 同じURLがほかのグループにもあるときは、確認が出ます</li>
-              <li><i class="ti ti-circle-check"></i> サムネイル表示に切り替えられます。サムネイルは、設定でオンにしたときだけ撮り、メール・銀行・ログインなどは撮りません。画像は端末内にだけ保存されます</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="blog/qs-6-select.webp" alt="タブの左の○で選んで、「グループへ」から保存先を選ぶ" style="max-width:300px; width:100%; border-radius:14px; box-shadow:0 8px 28px rgba(33,37,41,.14);" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- multi-select (v2.8.71) -->
-  <section style="padding:100px 0; border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section reverse" id="multi-select">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-checkbox"></i>
-            </div>
-            <h2>まとめて選んで、<br>まとめて片付ける。</h2>
-            <p>
-              v2.8.71 から、保存したタブを複数まとめて選べます。<br>Webページの右クリックからも、グループへ直接保存できます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> タブの行を長押し、またはツールバーの選択ボタンで複数選択</li>
-              <li><i class="ti ti-circle-check"></i> 選んだタブにまとめて★ランク・閉じる・ゴミ箱へ</li>
-              <li><i class="ti ti-circle-check"></i> ゴミ箱は30日間保持。直後なら「元に戻す」で元の場所へ</li>
-              <li><i class="ti ti-circle-check"></i> ページやリンクを右クリック →「TAB Layers に保存」→ グループを選ぶだけ</li>
-            </ul>
-          </div>
-          <div class="detail-visual">
-            <img src="features-multiselect.png" alt="保存したタブを複数選んで、ランク・閉じる・ゴミ箱へ" style="max-width:340px; width:100%;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- full-page-capture (v2.8.71) -->
-  <section style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="detail-grid">
-        <div class="detail-section" id="full-page-capture">
-          <div class="detail-info">
-            <div class="detail-icon-box">
-              <i class="ti ti-video"></i>
-            </div>
-            <h2>ページを丸ごと、<br>画像にも動画にも。</h2>
-            <p>
-              v2.8.71 から、スクショモードでページ全体の撮影と、ページの録画ができます。
-            </p>
-            <ul class="detail-list">
-              <li><i class="ti ti-circle-check"></i> 「ページ全体」で下までスクロールして縦長の1枚に。グループ一括にも対応</li>
-              <li><i class="ti ti-circle-check"></i> 読み込み後の待ち時間を1〜5秒で調整。PowerPointには表紙と目次</li>
-              <li><i class="ti ti-circle-check"></i> 録画は「自動スクロール」（遅い／普通／速い）と「操作を録る」（最長10分）</li>
-              <li><i class="ti ti-circle-check"></i> 動画はMP4で保存（使えない環境ではWebM）</li>
-            </ul>
-            <p style="font-size:0.9rem;"><a href="blog/feature-bulk-screenshot.html">スクリーンショット機能の使い方 →</a></p>
-          </div>
-          <div class="detail-visual">
-            <img src="features-capture.png" alt="スクショモードの画面（見えている範囲／ページ全体）" style="max-width:340px; width:100%;" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PRO VS FREE ===== -->
   <section id="compare-plans" style="padding:100px 0; background:var(--bg-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="feature-header">
@@ -1117,46 +431,11 @@
     </div>
   </section>
 
-  <!-- ===== FINAL CTA ===== -->
-  <section id="final-cta" style="padding:120px 0;">
-    <div class="section-glow"></div>
-    <div class="container cta-flex-container">
-      <div class="cta-content">
-        <div style="margin-bottom: 36px; display: flex; justify-content: center;">
-          <img src="tab-bookmarks-one.jpg" alt="タブとブックマークをひとつに" style="max-width: 480px; width: 100%; border-radius: var(--radius-lg); box-shadow: 0 12px 36px rgba(0,0,0,0.06); border: 1px solid var(--border);">
-        </div>
-        <h2>あなたのブラウザを、<br><span class="text-gradient">極上の作業空間へ。</span></h2>
-        <p>TAB Layersを導入して、増えすぎたタブのストレスから解放されましょう。</p>
-        <div class="hero-actions">
-          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=features" class="btn btn-primary btn-large">
-            Chrome に無料で追加
-          </a>
-          <a href="index.html" class="btn btn-ghost btn-large">
-            トップページへ戻る
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VS COMPARISONS ===== -->
-  <section class="vs-others" style="padding-top: 80px;">
+  <section class="d-section last">
     <div class="container">
-      <div class="feature-header">
-        <span class="feature-tag">徹底比較</span>
-        <h2>他のツールとの<span class="text-gradient">違いを知る。</span></h2>
-        <p>人気のChrome拡張機能と比べて、TAB Layersの強みを確認してください。</p>
-      </div>
-      <div class="vs-others-grid">
-        <a href="vs-onetab.html" class="vs-others-link">vs OneTab<span class="arrow">→</span></a>
-        <a href="vs-infinity-newtab.html" class="vs-others-link">vs Infinity New Tab<span class="arrow">→</span></a>
-        <a href="vs-custom-newtab.html" class="vs-others-link">vs Custom New Tab<span class="arrow">→</span></a>
-        <a href="vs-tab-session-manager.html" class="vs-others-link">vs Tab Session Manager<span class="arrow">→</span></a>
-        <a href="vs-tab-wrangler.html" class="vs-others-link">vs Tab Wrangler<span class="arrow">→</span></a>
-        <a href="vs-tab-suspender.html" class="vs-others-link">vs Tab Suspender<span class="arrow">→</span></a>
-        <a href="vs-workona.html" class="vs-others-link">vs Workona<span class="arrow">→</span></a>
-        <a href="vs-session-buddy.html" class="vs-others-link">vs Session Buddy<span class="arrow">→</span></a>
-        <a href="vs-toby.html" class="vs-others-link">vs Toby<span class="arrow">→</span></a>
+      <h2>まずは、<span class="text-gradient">タブとブックマークから。</span></h2>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=features_final" class="btn btn-primary btn-large">Chrome に無料で追加</a>
       </div>
     </div>
   </section>
@@ -1168,11 +447,22 @@
         <div class="footer-brand">
           <img src="liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64">
           <p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p>
+          <div class="social-share">
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2F&text=LB%20TAB%20Layers%20%E2%80%94%20%E3%82%BF%E3%83%96%E3%82%92%E9%96%89%E3%81%98%E3%81%A6%E3%82%82%E6%B6%88%E3%81%88%E3%81%AA%E3%81%84%E3%80%82Chrome%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD" target="_blank" rel="noopener" class="share-btn" aria-label="Xでシェア">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2F" target="_blank" rel="noopener" class="share-btn" aria-label="Facebookでシェア">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2F" target="_blank" rel="noopener" class="share-btn" aria-label="LINEでシェア">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer-links">
           <h4>Products</h4>
           <a href="https://www.liquid-block.com/video-pool">Video Pool</a>
-          <a href="index.html">LB TAB Layers</a>
+          <a href="#">LB TAB Layers</a>
           <a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a>
         </div>
         <div class="footer-links">
@@ -1187,5 +477,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -485,3 +485,7 @@
 /* 書き手の表示（2026-11-09）：執筆：蔡本 英賛（株式会社リキッドブロック 代表）／開発：LB開発チーム */
 .blog-meta .blog-author { white-space: nowrap; }
 .blog-meta .blog-author a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* 機能ガイドの最後の箱：入れていない人向けの小さなリンク（2026-11-11） */
+.blog-cta-box .blog-cta-sub { margin: 14px 0 0; font-size: .86rem; opacity: .85; }
+.blog-cta-box .blog-cta-sub a { text-decoration: underline; }
