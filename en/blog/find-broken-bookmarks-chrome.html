@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Find Broken Bookmarks in Chrome (Dead Links That No Longer Open) | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome has no built-in dead link checker. Here is how to find broken bookmarks by hand, and how to scan them automatically and clean them up safely.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/feature-dead-link-check.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html">
+  <meta property="og:title" content="How to find broken bookmarks in Chrome"><meta property="og:description" content="Chrome won’t tell you which bookmarks are dead. Check them by hand, or scan them automatically, then move the confirmed ones to a trash folder."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-11T00:00:00+09:00"><meta property="article:author" content="Hideyoshi Saimoto">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="How to find broken bookmarks in Chrome"><meta name="twitter:description" content="Chrome won’t tell you which bookmarks are dead. Check them by hand, or scan them automatically, then move the confirmed ones to a trash folder."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Find broken bookmarks","item":"https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Find broken bookmarks in Chrome: manual ways, and an automatic link check that sorts “confirmed” from “could not check”","inLanguage":"en","author":{"@type":"Person","name":"Hideyoshi Saimoto","alternateName":"蔡本 英賛","jobTitle":"CEO, Liquid Block Inc.","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/en/about.html"},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-11","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can Chrome find broken bookmarks on its own?","acceptedAnswer":{"@type":"Answer","text":"No. Chrome’s bookmark manager can search, sort and delete bookmarks, but it does not check whether pages still exist. You need to check by hand or use an extension or a link-checking tool."}},{"@type":"Question","name":"Why are some links listed as “unknown” instead of broken?","acceptedAnswer":{"@type":"Answer","text":"The site did not give a clear answer: it timed out, returned a server error, refused the automated request, or the domain could not be reached. These may be temporary, so they are never removed automatically. Open them yourself to decide."}},{"@type":"Question","name":"Can I undo after removing broken links?","acceptedAnswer":{"@type":"Answer","text":"From the dashboard, yes: the bookmarks go to a trash folder in your bookmarks and stay there for 30 days, so you can drag them back. Deleting from Clean mode removes them from Chrome right away and cannot be undone."}},{"@type":"Question","name":"Is the broken link check free?","acceptedAnswer":{"@type":"Answer","text":"The check in Clean mode is free. The dashboard check is part of PRO, and every PRO feature is free during the first 90 days after you install."}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../features.html#themes">Themes</a><a href="../updates.html">What's New</a><a href="./">Blog</a><a href="../../blog/feature-dead-link-check.html" title="日本語">🌐 JA</a></div><a href="../index.html#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>Find broken bookmarks<br>in Chrome</h1><p class="blog-meta"><time datetime="2026-11-11">Nov 11, 2026</time> · <span class="blog-author">By <a href="../about.html">Hideyoshi Saimoto</a>, CEO of Liquid Block Inc.</span> · 6 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-safety-update.webp" alt="A browser screen running a scan and showing the results" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ffind-broken-bookmarks-chrome.html&amp;text=Find%20broken%20bookmarks%20in%20Chrome%3A%20manual%20ways%2C%20and%20an%20automatic%20link%20check%20that%20sorts%20%E2%80%9Cconfirmed%E2%80%9D%20from%20%E2%80%9Ccould%20not%20check%E2%80%9D" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ffind-broken-bookmarks-chrome.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ffind-broken-bookmarks-chrome.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome has no built-in way to find dead bookmarks.</strong> You can check them by hand (open a folder’s bookmarks and see which pages fail), or use a tool that visits each address for you. LB TAB Layers has two link checks: one in <strong>Clean</strong> mode that scans all your Chrome bookmarks, and <strong>Check Broken Links</strong> in the dashboard, which scans your saved groups, separates <strong>confirmed broken (404 / 410)</strong> links from ones it <strong>could not check</strong>, and moves the ones you choose to a trash folder instead of deleting them.</p>
+
+    <p>Bookmarks age. Sites move, articles get taken down, small services shut down. After a few years, a good share of an old bookmark collection may lead nowhere, and you only find out when you need one of them. This guide shows how to find those dead links in Chrome, by hand and automatically, and how to clean them up without throwing away bookmarks that still work.</p>
+
+    <h2>Does Chrome have a broken link checker?</h2>
+    <p>No. Chrome’s bookmark manager (Ctrl+Shift+O, or ⌘+Option+B on a Mac) lets you search, sort, move and delete bookmarks, but it never checks whether the pages still exist. There is no setting or flag for it either. To find dead bookmarks you either check them yourself or use a tool that does it for you.</p>
+
+    <aside class="blog-mid-cta" aria-label="About LB TAB Layers">
+      <img src="../../blog/qs-7-open-en.webp" alt="Hover over a group: ▶ opens it as a Chrome tab group, ■ closes it all" loading="lazy" width="360" height="720">
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">Keep tabs by project. <strong>Open with ▶, close with ■.</strong></p>
+        <p class="blog-mid-cta-text">LB TAB Layers saves your open tabs by project as Chrome bookmarks, and reopens them with one click as a Chrome tab group with the same name and color. Closing them never loses them.</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_find-broken-bookmarks-chrome&amp;utm_content=mid">Add to Chrome — free</a><a class="blog-mid-cta-link" href="operation-guide.html">See it in action →</a></div>
+      </div>
+    </aside>
+
+    <h2>Manual ways to find dead bookmarks</h2>
+    <p>These work without installing anything. They are fine for a few dozen bookmarks and tiring for a few thousand.</p>
+    <ol>
+      <li><strong>Open a folder at a time.</strong> In the bookmark manager, right-click a folder and choose <strong>Open all</strong> (the exact wording depends on your Chrome version). Go through the tabs and delete the bookmarks whose pages show “404”, “Page not found” or a browser error. Do a small folder at a time; Chrome asks before opening a large number of tabs.</li>
+      <li><strong>Look for obviously old ones first.</strong> Search the bookmark manager for services you know have closed, or for old domains your company no longer uses. Removing those first makes the rest quicker.</li>
+      <li><strong>Export and use a link checker.</strong> In the bookmark manager, ⋮ → <strong>Export bookmarks</strong> saves an HTML file with every address. You can feed that file to a link-checking tool. Be aware that this hands your whole bookmark list to that tool, so pick one you trust, ideally one that runs on your own computer.</li>
+    </ol>
+    <p>Whichever way you choose, <strong>don’t delete on a single failure</strong>. A site can be down for an hour, block an unusual request, or need you to sign in. A page that fails today may open fine tomorrow.</p>
+
+    <h2>Check broken links automatically with LB TAB Layers</h2>
+    <p>LB TAB Layers is a side panel for Chrome (open it with <strong>Alt+T</strong>) that keeps your tabs in groups saved as Chrome bookmarks. It has two link checks. Both ask each site directly from your browser; nothing goes through our servers.</p>
+    <div class="blog-table-wrap"><table class="blog-table">
+      <thead><tr><th></th><th>Clean mode</th><th>Dashboard: Check Broken Links</th></tr></thead>
+      <tbody>
+        <tr><td><strong>What it scans</strong></td><td>All your Chrome bookmarks</td><td>The tabs saved in your groups, plus everything inside the LB TAB Layers bookmark folder</td></tr>
+        <tr><td><strong>What it reports</strong></td><td>Confirmed broken links (404 / 410) only</td><td>Confirmed broken (404 / 410), and a separate list of links it could not check</td></tr>
+        <tr><td><strong>Removing</strong></td><td>Deletes from Chrome bookmarks right away. This cannot be undone</td><td>Moves the ones you select to a trash folder in your bookmarks; deleted automatically after 30 days</td></tr>
+        <tr><td><strong>Plan</strong></td><td>Free</td><td>PRO (free during the 90-day trial)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Clean mode: scan every bookmark</h3>
+    <ol>
+      <li>In the panel, click <strong>Clean</strong> in the mode bar at the top.</li>
+      <li>Click <strong>Check broken links</strong>. A progress bar shows how many bookmarks have been checked. You can stop it at any time.</li>
+      <li>When it finishes, you see the number of broken links and a list with the error for each (for example “404 Not Found”).</li>
+      <li>Remove them one by one with the × button, or all at once with <strong>Delete all</strong>.</li>
+    </ol>
+    <p>Deleting here removes the bookmarks from Chrome for good, so look through the list before you click <strong>Delete all</strong>. If you are signed in to Chrome, the deletion also reaches your other computers.</p>
+
+    <h3>Dashboard: confirmed vs. could not check</h3>
+    <ol>
+      <li>Open the dashboard (<strong>DB</strong> in the mode bar) and click <strong>Check Broken Links</strong>.</li>
+      <li>The results come in two lists: <strong>Confirmed broken (404 / 410)</strong>, and <strong>Unknown (timeout / server error)</strong>.</li>
+      <li>Tick the confirmed ones you want to remove (or select them all) and move them to the trash. You are asked to confirm first.</li>
+    </ol>
+    <p>The trash is a folder inside your LB TAB Layers bookmarks. Anything moved there stays for 30 days, so if you change your mind, drag it back out in the bookmark manager. Links in the “unknown” list have no checkbox on purpose: open them yourself and decide.</p>
+
+    <h2>How the check decides, and its limits</h2>
+    <p>For each address, the extension first sends a light request that asks only for the page’s status. If the site does not accept that kind of request, it loads the page normally instead. Then:</p>
+    <ul>
+      <li><strong>404 (not found) or 410 (gone)</strong>: counted as broken. This is the only result treated as confirmed.</li>
+      <li><strong>The page loads, or redirects somewhere</strong>: counted as fine.</li>
+      <li><strong>401 or 403 (sign-in needed or access refused)</strong>: counted as fine, because the page exists and is just protected. Many sites answer this way to automated checks.</li>
+      <li><strong>Timeout, network error, server error (5xx) or any other code</strong>: “could not check”. The dashboard lists these as Unknown; Clean mode leaves them out of its list.</li>
+    </ul>
+    <p>That design avoids deleting good bookmarks, but it means some dead ones slip through:</p>
+    <ul>
+      <li><strong>Some sites block automated checks</strong> or answer them differently than a browser tab. Those end up as “could not check”, or are counted as fine.</li>
+      <li><strong>A domain that no longer exists</strong> shows up as a network error, so it lands in “could not check”, not in confirmed.</li>
+      <li><strong>“Soft” 404s are missed.</strong> Some sites show a “page not found” message but report success, or redirect every old address to their home page. The check sees a working page.</li>
+      <li>Internal addresses such as <code>chrome://</code> pages and local files are skipped.</li>
+    </ul>
+    <p>So treat the result as a shortlist, not a verdict: remove the confirmed ones, and open the “could not check” ones yourself when you have a minute. Once the dead links are gone, sorting what is left gets much easier; see <a href="organize-bookmarks-chrome.html">how to organize your Chrome bookmarks</a>, and the <a href="feature-dashboard.html">dashboard guide</a> for more about the dashboard.</p>
+
+    <div class="blog-callout"><p>🔒 <strong>Your saved tabs are Chrome bookmarks, so they stay even if you remove the extension.</strong> When you delete a tab or group in the panel itself, it goes to the same bookmark trash, with 8 seconds to click <strong>Undo</strong>.</p></div>
+
+    <h2>Chrome’s official help</h2>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/188842?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Create, find and edit bookmarks in Chrome — Google Chrome Help</a></li>
+      <li><a href="https://support.google.com/chrome/answer/96816?hl=en" target="_blank" rel="noopener">Import Chrome bookmarks &amp; settings — Google Chrome Help</a></li>
+    </ul>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Can Chrome find broken bookmarks on its own?</h3>
+    <p>No. Chrome’s bookmark manager can search, sort and delete bookmarks, but it does not check whether pages still exist. You need to check by hand or use an extension or a link-checking tool.</p>
+
+    <h3>Q. Why are some links listed as “unknown” instead of broken?</h3>
+    <p>The site did not give a clear answer: it timed out, returned a server error, refused the automated request, or the domain could not be reached. These may be temporary, so they are never removed automatically. Open them yourself to decide.</p>
+
+    <h3>Q. Can I undo after removing broken links?</h3>
+    <p>From the dashboard, yes: the bookmarks go to a trash folder in your bookmarks and stay there for 30 days, so you can drag them back. Deleting from Clean mode removes them from Chrome right away and cannot be undone.</p>
+
+    <h3>Q. Is the broken link check free?</h3>
+    <p>The check in Clean mode is free. The dashboard check is part of PRO, and every PRO feature is free during the first 90 days after you install.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ffind-broken-bookmarks-chrome.html&amp;text=Find%20broken%20bookmarks%20in%20Chrome%3A%20manual%20ways%2C%20and%20an%20automatic%20link%20check%20that%20sorts%20%E2%80%9Cconfirmed%E2%80%9D%20from%20%E2%80%9Ccould%20not%20check%E2%80%9D" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ffind-broken-bookmarks-chrome.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Ffind-broken-bookmarks-chrome.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/find-broken-bookmarks-chrome.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <div class="blog-video"><p class="blog-video-title">▶ See it in action</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="Play the LB TAB Layers walkthrough video"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers walkthrough" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">Managing bookmarks and tabs together in the sidebar. (The video shows the Japanese UI.)</p></div>
+    <div class="blog-cta-box"><h3>Keep the bookmarks that still work.</h3><p>Find dead links, move them to a trash folder, and keep the rest organized by project. No account needed · Saved as Chrome bookmarks · Every feature free for 90 days</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_find-broken-bookmarks-chrome" class="btn">Add to Chrome — it's free →</a></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="organize-bookmarks-chrome.html">Organize your Chrome bookmarks <span>→</span></a><a href="feature-dashboard.html">The dashboard <span>→</span></a><a href="where-are-chrome-bookmarks-stored.html">Where Chrome bookmarks are stored <span>→</span></a><a href="feature-save-tabs.html">Save tabs as Chrome bookmarks <span>→</span></a><a href="sync-chrome-bookmarks-between-computers.html">Sync Chrome bookmarks between computers <span>→</span></a><a href="show-all-bookmarks-in-chrome-side-panel.html">All bookmarks in Chrome’s side panel <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">About Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>
