@@ -122,6 +122,9 @@
       // 検索語があるときは関連度順、ないときは元の並び（新しい順）
       var order = terms.length ? shown.sort(function (a, b) { return b.sc - a.sc; }).map(function (o) { return o.c; }) : originalOrder;
       order.forEach(function (c) { grid.appendChild(c); });
+      // 検索・絞り込み中は、上に固定した親記事の枠を隠す
+      var pinned = document.querySelector('.blog-pinned');
+      if (pinned) pinned.hidden = !!(terms.length || activeTag);
 
       if (status) {
         if (!terms.length && !activeTag) status.textContent = '';
