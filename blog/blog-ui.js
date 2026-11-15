@@ -57,6 +57,7 @@
     var originalOrder = cards.slice();
     var entries = {};   // href -> { t, g, k, d, x }（正規化済み）
     var activeTag = '';
+    var tagsOpen = false;   // スマホでは、カテゴリを最初の数個だけ見せて「もっと見る」で開く（2026-11-15）
 
     // カード自体の文字も検索対象にする（インデックスが読めない環境でも動くように）
     cards.forEach(function (c) {
@@ -91,6 +92,22 @@
       };
       mk('すべて', '', cards.length);
       tags.forEach(function (g) { mk(g, g, counts[g]); });
+      // スマホ用：最初の 5 個（すべて＋多い順に 4 つ）より後ろは、閉じているあいだ隠す（CSS で 600px 以下のときだけ効く）
+      var SHOW = 5;
+      var chips = tagWrap.querySelectorAll('.blog-tag-chip');
+      var activeIdx = -1;
+      for (var i = 0; i < chips.length; i++) { if (i >= SHOW) chips[i].classList.add('extra'); if (chips[i].classList.contains('active')) activeIdx = i; }
+      if (activeIdx >= SHOW) tagsOpen = true;
+      if (chips.length > SHOW) {
+        var more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'blog-tag-chip blog-tag-more';
+        more.textContent = tagsOpen ? '閉じる ▴' : 'もっと見る（' + (chips.length - SHOW) + '） ▾';
+        more.setAttribute('aria-expanded', tagsOpen ? 'true' : 'false');
+        more.addEventListener('click', function () { tagsOpen = !tagsOpen; buildTags(); });
+        tagWrap.appendChild(more);
+      }
+      tagWrap.classList.toggle('is-collapsed', !tagsOpen);
     }
 
     function score(e, terms) {
