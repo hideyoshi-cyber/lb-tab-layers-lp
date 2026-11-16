@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chrome サイドパネル活用ガイド — 知られざる生産性ツール | LB TAB Layers Blog</title>
-  <meta name="description" content="Chromeのサイドパネル機能を知っていますか？ブラウジングしながらタブ管理・ブックマーク・リーディングリストにアクセスできる便利機能を徹底解説。">
+  <meta name="description" content="Chrome サイドパネルの使い方を手順つきで解説。開き方・ピン留めして固定する方法・左側への変更・表示されないときの確認順に加え、標準機能と拡張機能の使い分け、画面が狭いときの工夫、ショートカットの設定までまとめました。">
   <meta name="keywords" content="Chrome サイドパネル,サイドパネル 使い方,Chrome 便利機能,Chrome 生産性,サイドバー Chrome">
   <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html">
   <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html">
@@ -11,18 +11,18 @@
   <meta property="og:title" content="Chrome サイドパネル活用ガイド"><meta property="og:description" content="Chromeのサイドパネル機能を徹底解説。知られざる生産性ツール。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Chrome サイドパネル活用ガイド"><meta name="twitter:description" content="Chromeのサイドパネルの使い方を徹底解説。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
   <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"サイドパネル活用ガイド","item":"https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome サイドパネル活用ガイド","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html"},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-07","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html"}]
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"サイドパネル活用ガイド","item":"https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome サイドパネル活用ガイド","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html"},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-07-07","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html","dateModified":"2026-11-16"}]
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chromeのサイドパネルとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"ページの横（右側か左側）に開いて使えるパネルです。ブックマーク、リーディングリスト、対応拡張機能をメインページを離れずに操作できます。"}},{"@type":"Question","name":"サイドパネルを常に表示（固定）する方法は？","acceptedAnswer":{"@type":"Answer","text":"Chrome右上の「サイドパネルを表示」アイコン（正方形が重なったようなマーク）をクリックし、パネル上部の「ピン留め（固定）」アイコンをクリックすると常に表示された状態になります。パネルの位置は設定から「左」または「右」に変更可能です。"}},{"@type":"Question","name":"サイドパネルを左側に変更するには？","acceptedAnswer":{"@type":"Answer","text":"Chrome右上のメニュー（︙）→「設定」→「デザイン」→「サイドパネル」の項目で「左側に表示」を選択します。"}},{"@type":"Question","name":"サイドパネルのショートカットキーは？","acceptedAnswer":{"@type":"Answer","text":"Chromeの標準機能にはサイドパネルを直接開閉する専用のショートカットキーはありません。代わりにF10キーでツールバーにフォーカスし矢印キーで操作するか、サイドパネル対応拡張機能をインストールしてchrome://extensions/shortcutsから独自のキーを割り当てることができます。"}},{"@type":"Question","name":"Chromeのブックマークが使いにくいときの改善方法は？","acceptedAnswer":{"@type":"Answer","text":"3つの改善方法があります：(1) サイドパネルで「すべてのブックマーク」をツリー表示にする (2) LB TAB Layersなどの拡張機能でAI検索やフォルダ管理を強化する (3) アドレスバーに@bookmarksと入力してブックマーク内を検索する。"}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chromeのサイドパネルとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"ページの横（右側か左側）に開いて使えるパネルです。ブックマーク、リーディングリスト、対応拡張機能をメインページを離れずに操作できます。"}},{"@type":"Question","name":"サイドパネルを常に表示（固定）する方法は？","acceptedAnswer":{"@type":"Answer","text":"Chrome右上の「サイドパネルを表示」アイコン（正方形が重なったようなマーク）をクリックし、パネル上部の「ピン留め（固定）」アイコンをクリックすると常に表示された状態になります。パネルの位置は設定から「左」または「右」に変更可能です。"}},{"@type":"Question","name":"サイドパネルを左側に変更するには？","acceptedAnswer":{"@type":"Answer","text":"Chrome右上のメニュー（︙）→「設定」→「デザイン」→「サイドパネル」の項目で「左側に表示」を選択します。"}},{"@type":"Question","name":"サイドパネルのショートカットキーは？","acceptedAnswer":{"@type":"Answer","text":"Chromeの標準機能にはサイドパネルを直接開閉する専用のショートカットキーはありません。代わりにF10キーでツールバーにフォーカスし矢印キーで操作するか、サイドパネル対応拡張機能をインストールしてchrome://extensions/shortcutsから独自のキーを割り当てることができます。"}},{"@type":"Question","name":"Chromeのブックマークが使いにくいときの改善方法は？","acceptedAnswer":{"@type":"Answer","text":"3つの改善方法があります：(1) サイドパネルで「すべてのブックマーク」をツリー表示にする (2) LB TAB Layersなどの拡張機能でAI検索やフォルダ管理を強化する (3) アドレスバーに@bookmarksと入力してブックマーク内を検索する。"}},{"@type":"Question","name":"サイドパネルとポップアップは、どう違いますか？","acceptedAnswer":{"@type":"Answer","text":"ポップアップは、クリックで開き、別の場所をクリックすると閉じます。サイドパネルは、閉じるまで表示が続き、ページを見ながら並行して操作できます。長く使うものはサイドパネル、一度きりの操作はポップアップが向いています。"}},{"@type":"Question","name":"サイドパネルを開くと、ページが狭くなって見づらいです。","acceptedAnswer":{"@type":"Answer","text":"パネルの境目をドラッグして幅を狭くするか、使わないときは閉じます。LB TAB Layers なら、設定の表示モードを「オーバーレイ」にすると、ページの上に重ねて出し入れできます。"}},{"@type":"Question","name":"拡張機能のサイドパネルが動かないとき、最初に何を確かめますか？","acceptedAnswer":{"@type":"Answer","text":"拡張機能が chrome://extensions でオンか、Chrome が最新か、ショートカットが割り当てられているか、の順に確かめます。普通のウェブページで、もう一度開いてみるのも有効です。"}}]}
   </script>
 </head>
 <body>
-  <header id="site-header"><nav class="nav-container"><a href="../index.html" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
 
   <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>Chrome サイドパネル<br>活用ガイド<br>知られざる生産性ツール</h1><p class="blog-meta"><time datetime="2026-07-07">2026.07.07</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 5分</p></div></section>
 
@@ -110,6 +110,112 @@
     </ul>
     <p>LB TAB Layersなどのサイドパネル対応拡張機能を使う場合、<strong>chrome://extensions/shortcuts</strong> から独自のキーボードショートカットを割り当てることもできます。</p>
 
+    <!--書き足し-->
+    <h2>標準のサイドパネルと拡張機能のサイドパネル：どう使い分けるか</h2>
+    <p><strong>「ブックマークや履歴を横で見たいだけなら標準、毎日の作業の置き場にしたいなら拡張機能」が、使い分けの目安です。</strong>どちらもページの横に出ますが、役割が違います。</p>
+    <div class="blog-table-wrap">
+    <table class="blog-table">
+    <thead>
+    <tr><th>知りたいこと</th><th>標準のサイドパネル</th><th>拡張機能のサイドパネル</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>向いている使い方</td><td>ブックマーク・リーディングリスト・履歴を、ちょっと見る</td><td>タブ管理・メモ・検索など、作業中ずっと使うもの</td></tr>
+    <tr><td>追加の準備</td><td>不要</td><td>拡張機能を入れる</td></tr>
+    <tr><td>できること</td><td>見る・開く</td><td>拡張機能ごとに違う（保存・整理・メモなど）</td></tr>
+    <tr><td>迷ったとき</td><td>まず標準で試す</td><td>標準で足りなくなってから入れる</td></tr>
+    </tbody>
+    </table>
+    </div>
+
+    <h2>標準のサイドパネルで、最初にしておく設定</h2>
+    <p>使い始める前に、次の3つを決めておくと、迷いません。</p>
+    <ol>
+    <li><strong>よく使うパネルをツールバーに固定する</strong>：ブックマーク・履歴など、1日に何度も開くものだけを固定します（全部固定すると、ツールバーが埋まります）</li>
+    <li><strong>パネルの位置（左か右）を決める</strong>：右利きでマウスを右に置くなら、ページを邪魔しにくいのは「右」が多いです。左側で見たい人は、Chrome の設定の「デザイン」から変えられます</li>
+    <li><strong>幅の基準を決める</strong>：ページの文字が読める幅を残したうえで、パネルの文字が読める最小の幅にします</li>
+    </ol>
+
+    <h2>サイドパネルが向く作業・向かない作業</h2>
+    <ul>
+    <li><strong>向く</strong>：ページを見ながらメモを取る／資料を見比べながら書く／タブの一覧を見ながら移動する／参考ページを探しながら作業する</li>
+    <li><strong>向かない</strong>：画面が狭いノート PC でページを大きく見たいとき／一度きりの短い操作（この場合はポップアップのほうが邪魔になりません）</li>
+    </ul>
+    <p>パネルを開くと、その分ページの表示幅が狭くなります。ページが窮屈に感じたら、次の対策を使います。</p>
+
+    <h2>画面が狭いときの工夫</h2>
+    <ol>
+    <li><strong>パネルの幅を調整する</strong>：パネルの境目をドラッグして、必要な分だけにします</li>
+    <li><strong>使わないときは閉じる</strong>：作業の区切りでパネルを閉じれば、ページが広くなります</li>
+    <li><strong>LB TAB Layers なら、表示方法を変える</strong>：設定の表示モードを「オーバーレイ」にすると、ページの上に重ねて、必要なときだけ出し入れできます。「別窓」「タブ」で開く方法もあります（違いは<a href="feature-sidebar-mode.html">表示モードの解説</a>に詳しく書いています）</li>
+    </ol>
+
+    <h2>出ないときに確かめる順番</h2>
+    <p>サイドパネルが出ないときは、手前から順に確かめます。</p>
+    <div class="blog-step">
+    <span class="blog-num">1</span>
+    <div class="blog-step-body">
+    <h3>押しているのは、パネルのボタンか？</h3>
+    <p>拡張機能のボタンと、標準のサイドパネルのボタンは別です。標準のパネルは Chrome の ︙ メニューから、拡張機能はツールバーのパズルのアイコンから開きます。</p>
+    </div>
+    </div>
+    <div class="blog-step">
+    <span class="blog-num">2</span>
+    <div class="blog-step-body">
+    <h3>拡張機能が、オンになっているか？</h3>
+    <p><code>chrome://extensions</code> で、その拡張機能のスイッチがオンになっているか確かめます。</p>
+    </div>
+    </div>
+    <div class="blog-step">
+    <span class="blog-num">3</span>
+    <div class="blog-step-body">
+    <h3>ショートカットが、割り当てられているか？</h3>
+    <p>他の拡張機能や Chrome と同じキーだと、割り当てられないことがあります。<code>chrome://extensions/shortcuts</code> で、設定を確かめます（LB TAB Layers の初期設定は Alt+T です）。</p>
+    </div>
+    </div>
+    <div class="blog-step">
+    <span class="blog-num">4</span>
+    <div class="blog-step-body">
+    <h3>開いているページの種類は、対応しているか？</h3>
+    <p>Chrome の設定画面など、特別なページでは、開けなかったり、動かない機能があったりします。普通のウェブページを開いた状態で、もう一度試します。</p>
+    </div>
+    </div>
+    <div class="blog-step">
+    <span class="blog-num">5</span>
+    <div class="blog-step-body">
+    <h3>Chrome を最新にして、再起動する</h3>
+    <p>拡張機能のサイドパネルは、比較的新しい仕組みです。Chrome が古いと動かないことがあります。更新して再起動してから、もう一度試します。</p>
+    </div>
+    </div>
+
+    <h2>【実体験】タブを「横に名前で並べる」と、何が変わるか</h2>
+    <p>映像制作の会社の私たちは、参考映像や資料のタブを何十個も開きます。ブラウザ上部のタブ列は、数が増えると名前が読めません。そこで、サイドパネルに縦に並べたところ、<strong>終わったタブが何なのか、ひと目で分かる</strong>ようになりました。開いているタブも、ふだんの20〜40個から、15個以内に減りました（作っている私たちの場合）。</p>
+    <p>サイドパネルの良さは、「ページを見たまま、横で整理できる」ことです。ページを切り替えずに済むので、作業の流れが切れません。</p>
+
+    <h2>職種別：サイドパネルの使いどころ</h2>
+    <ul>
+    <li><strong>営業・事務</strong>：顧客の管理画面を見ながら、横でメモや資料のリンクを開く。→ <a href="tab-management-for-sales.html">営業向けのタブ管理</a></li>
+    <li><strong>デザイナー・映像制作</strong>：参考ページを横に並べ、制作の画面を大きく使う。→ <a href="tab-management-for-designers.html">デザイナー向けのタブ管理</a></li>
+    <li><strong>エンジニア</strong>：ドキュメントや Issue を横に置いたまま、コードやコンソールを見る。→ <a href="tab-management-for-engineers.html">エンジニア向けのタブ管理</a></li>
+    <li><strong>学生</strong>：レポートを書きながら、参考ページを横から開く。→ <a href="tab-management-for-students.html">学生向けのタブ管理</a></li>
+    </ul>
+
+    <h2>サイドパネルでよくある失敗</h2>
+    <ul>
+    <li><strong>パネルを広げすぎる</strong>：ページが狭くなり、結局閉じてしまいます。まず細めで始めます</li>
+    <li><strong>標準と拡張の両方を同時に使おうとする</strong>：用途が重なると、どちらも使わなくなります。1つに決めてから増やします</li>
+    <li><strong>ショートカットを設定していない</strong>：毎回マウスで開くと、面倒になって使わなくなります。使うパネルは、キーでも開けるようにします</li>
+    <li><strong>拡張機能を入れすぎる</strong>：パネルが増えて探しにくくなります。毎日使うものだけに絞ります</li>
+    </ul>
+
+    <h2>まず何をする？（今日の5分）</h2>
+    <ol>
+    <li>標準のサイドパネルで、ブックマークと履歴を開いてみる</li>
+    <li>ツールバーに固定して、1回で開けるようにする</li>
+    <li>パネルの幅を、ページが見づらくならない程度に調整する</li>
+    <li>標準で足りないと感じたら、拡張機能を1つだけ試す</li>
+    </ol>
+    <p>開き方・閉じ方・左側へ表示する方法は<a href="chrome-sidebar-guide.html">Chrome のサイドバー完全ガイド</a>、ショートカットの設定は<a href="extension-shortcut-keys.html">拡張機能のショートカットキー</a>にまとめています。</p>
+
     <h2>Chromeのブックマークが使いにくい場合の改善方法</h2>
     <p>Chromeの標準のブックマーク管理（Ctrl+Shift+O）が使いにくいと感じる場合、<strong>「サイドパネル」の活用や「拡張機能」の導入で劇的に使いやすく</strong>なります。</p>
     <h3>1. サイドパネルで「常にツリー表示」にする</h3>
@@ -122,11 +228,30 @@
     <h3>3. アドレスバー（オムニボックス）から検索</h3>
     <p>アドレスバーに <strong>@bookmarks</strong>（または @b）と入力して「Tab」キーを押し、検索したいサイトのキーワードを入力すると、ブックマークの中から瞬時に目的のページを探し出せます。</p>
 
+    <h2>よくある質問</h2>
+    <h3>Q. Chromeのサイドパネルとは何ですか？</h3>
+    <p>ページの横（右側か左側）に開いて使えるパネルです。ブックマーク、リーディングリスト、対応拡張機能をメインページを離れずに操作できます。</p>
+    <h3>Q. サイドパネルを常に表示（固定）する方法は？</h3>
+    <p>Chrome右上の「サイドパネルを表示」アイコン（正方形が重なったようなマーク）をクリックし、パネル上部の「ピン留め（固定）」アイコンをクリックすると常に表示された状態になります。パネルの位置は設定から「左」または「右」に変更可能です。</p>
+    <h3>Q. サイドパネルを左側に変更するには？</h3>
+    <p>Chrome右上のメニュー（︙）→「設定」→「デザイン」→「サイドパネル」の項目で「左側に表示」を選択します。</p>
+    <h3>Q. サイドパネルのショートカットキーは？</h3>
+    <p>Chromeの標準機能にはサイドパネルを直接開閉する専用のショートカットキーはありません。代わりにF10キーでツールバーにフォーカスし矢印キーで操作するか、サイドパネル対応拡張機能をインストールしてchrome://extensions/shortcutsから独自のキーを割り当てることができます。</p>
+    <h3>Q. Chromeのブックマークが使いにくいときの改善方法は？</h3>
+    <p>3つの改善方法があります：(1) サイドパネルで「すべてのブックマーク」をツリー表示にする (2) LB TAB Layersなどの拡張機能でAI検索やフォルダ管理を強化する (3) アドレスバーに@bookmarksと入力してブックマーク内を検索する。</p>
+    <h3>Q. サイドパネルとポップアップは、どう違いますか？</h3>
+    <p>ポップアップは、クリックで開き、別の場所をクリックすると閉じます。サイドパネルは、閉じるまで表示が続き、ページを見ながら並行して操作できます。長く使うものはサイドパネル、一度きりの操作はポップアップが向いています。</p>
+    <h3>Q. サイドパネルを開くと、ページが狭くなって見づらいです。</h3>
+    <p>パネルの境目をドラッグして幅を狭くするか、使わないときは閉じます。LB TAB Layers なら、設定の表示モードを「オーバーレイ」にすると、ページの上に重ねて出し入れできます。</p>
+    <h3>Q. 拡張機能のサイドパネルが動かないとき、最初に何を確かめますか？</h3>
+    <p>拡張機能が chrome://extensions でオンか、Chrome が最新か、ショートカットが割り当てられているか、の順に確かめます。普通のウェブページで、もう一度開いてみるのも有効です。</p>
+
     <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-side-panel-guide.html&amp;text=Chrome%20%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E6%B4%BB%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-side-panel-guide.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-side-panel-guide.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-side-panel-guide.html&amp;title=Chrome%20%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E6%B4%BB%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/chrome-side-panel-guide.html" data-title="Chrome サイドパネル活用ガイド" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
     <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
     <div class="blog-cta-box"><h3>サイドパネルでタブ管理。</h3><p>常駐型サイドパネル · ドラッグ＆ドロップ · AI検索 · 40テーマ · 無料</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=chrome-side-panel-guide" class="btn">Chrome に無料で追加 →</a></div>
 
     <div class="blog-related"><h3>関連記事</h3><a href="best-tab-extensions-2026.html">【2026年版】Chrome タブ管理拡張おすすめ5選 <span>→</span></a><a href="chrome-side-panel-bookmarks.html">サイドパネルとブックマーク管理の革新 <span>→</span></a><a href="bookmark-organization.html">ブックマーク整理術：フォルダ管理の限界と次世代の方法 <span>→</span></a><a href="tab-bookmark-management-guide.html">タブとブックマークの管理｜完全ガイド <span>→</span></a></div>
+    <!--cluster--><div class="blog-related blog-cluster"><h3>上位のガイド</h3><a href="tab-bookmark-management-guide.html">Chromeのタブ管理の基本 <span>→</span></a></div><div class="blog-related blog-cluster"><h3>このテーマの記事：Chrome のサイドパネル・画面</h3><a href="chrome-sidebar-guide.html">Chrome のサイドバー（サイドパネル）完全ガイド <span>→</span></a><a href="why-both-split-and-combined-layout.html">なぜ「切り分け」と「統合」の両方を選べるようにしたのか <span>→</span></a><a href="reorder-tabs-and-side-rail.html">サイドパネルでタブを並べ替える／モード切替を端に縦に置く <span>→</span></a><a href="standalone-window-tab-manager.html">タブ管理を別窓（独立ウィンドウ）で使うメリット <span>→</span></a><a href="feature-sidebar-mode.html">【機能ガイド】表示モード <span>→</span></a><a href="feature-display-settings.html">【機能ガイド】表示のカスタマイズ <span>→</span></a><a href="how-to-change-theme.html">LB TAB Layersのテーマを変更する方法 <span>→</span></a><a href="feature-panel-layout.html">【機能ガイド】画面レイアウト <span>→</span></a></div>
 
     
     <div class="blog-related">
@@ -143,7 +268,7 @@
 
   <div class="mobile-pc-banner"><button class="mobile-pc-banner-close" aria-label="閉じる">✕</button><div class="mobile-pc-banner-inner"><div class="mobile-pc-banner-title"><span>🖥</span> PC用のChrome拡張機能です</div><div class="mobile-pc-banner-buttons"><a class="mobile-pc-btn btn-mail" href="mailto:?subject=LB%20TAB%20Layers%20%E2%80%94%20PC%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&body=%E3%80%90LB%20TAB%20Layers%E3%80%91%0AChrome%E3%82%BF%E3%83%96%E7%AE%A1%E7%90%86%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%88%E7%84%A1%E6%96%99%EF%BC%89%0A%0Ahttps%3A%2F%2Fchromewebstore.google.com%2Fdetail%2Flb-tab-layers%2Fgcniamnnhmkppdlfejcmncjbabaamjej%3Futm_source%3Dblog%26utm_campaign%3Dchrome-side-panel-guide%26utm_content%3Dmail">📧 メールで送る</a><button class="mobile-pc-btn btn-bookmark">⭐ ブックマーク保存</button></div><div class="mobile-pc-bookmark-guide">Chromeの右上 <strong>⋮</strong> → <strong>☆</strong> でこのページをブックマーク追加。<br>同じGoogleアカウントのPCに自動同期されます。</div></div></div>
 
-  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="../index.html">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://www.liquid-block.com">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
   <script src="../script.js"></script>
   <script src="blog-ui.js" defer></script>
 </body>

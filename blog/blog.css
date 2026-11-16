@@ -507,3 +507,6 @@
 .blog-pinned-sub a { color: var(--accent); text-decoration: none; font-size: 14px; }
 .blog-pinned-sub a:hover { text-decoration: underline; }
 @media (max-width: 600px) { .blog-pinned { padding: 18px 16px; } .blog-pinned-main h2 { font-size: 19px; } }
+/* 公開のとき lp/blog/blog.css の末尾に足す（英語記事の「See it in action」画像） */
+.blog-shots { display: grid; gap: .75rem; }
+.blog-shots img { width: 100%; height: auto; border-radius: var(--radius-lg, 12px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
