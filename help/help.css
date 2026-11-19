@@ -73,6 +73,9 @@
 .uc-text span { flex: 1 1 320px; }
 .uc-flow img { display: block; width: 100%; height: auto; margin-top: 10px; border-radius: 10px; border: 1px solid var(--border-strong); background: #f2f2f2; }
 .uc-flow img.panel { max-width: 380px; }
+.uc-walk { margin: 16px 0 0; }
+.uc-walk img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-strong); background: #f2f2f2; }
+.uc-walk figcaption { margin-top: 8px; color: var(--text-tertiary); font-size: 0.9rem; }
 .uc-before { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 22px; }
 .uc-before figure { margin: 0; background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; }
 .uc-before img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border-strong); }
