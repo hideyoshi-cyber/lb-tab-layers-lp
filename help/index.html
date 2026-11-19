@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ヘルプ（使い方） | LB TAB Layers</title>
+  <meta name="description" content="LB TAB Layers の使い方。タブの片づけ、ブックマークとグループ、メモ、ステップタスク、修正指示、スクリーンショットなど、機能ごとに、動く画像と説明でご案内します。">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/help/">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ヘルプ（使い方） | LB TAB Layers">
+  <meta property="og:description" content="LB TAB Layers の使い方。タブの片づけ、ブックマークとグループ、メモ、ステップタスク、修正指示、スクリーンショットなど、機能ごとに、動く画像と説明でご案内します。">
+  <meta property="og:url" content="https://tablayers.liquid-block.com/help/">
+  <meta property="og:image" content="https://tablayers.liquid-block.com/chrome-store-screenshot.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="help.css">
+</head>
+<body>
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home">
+        <img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45">
+        <span class="logo-text">TAB Layers</span>
+      </a>
+      <div class="nav-links">
+        <a href="../features.html">機能紹介</a>
+        <a href="../blog/quick-start.html">はじめかた</a>
+        <a href="index.html">ヘルプ</a>
+        <a href="../blog/">Blog</a>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=help" class="nav-cta">無料で始める</a>
+    </nav>
+  </header>
+
+  <section class="subhero">
+    <div class="container">
+      <h1>使い方の<span class="text-gradient">ヘルプ</span></h1>
+      <p>やりたいことから探せます。機能ごとに、動く画像と説明があります。</p>
+      <div class="help-search">
+        <i class="ti ti-search" aria-hidden="true"></i>
+        <input id="help-q" type="search" placeholder="やりたいことを入力（例：タブをまとめる、PDF、メモ）" autocomplete="off" aria-label="ヘルプを探す">
+      </div>
+      <div id="help-results" class="help-results" hidden></div>
+    </div>
+  </section>
+  <section class="qbody">
+    <div class="container">
+      <div class="help-cats">
+        <a class="help-cat" href="open.html">
+          <i class="ti ti-layout-sidebar-right" aria-hidden="true"></i>
+          <b>開く・画面の見かた</b>
+          <span>はじめて使う人。まず、どこに何があるかを知りたい人に。</span>
+          <em>13 項目</em>
+        </a>
+        <a class="help-cat" href="tabs.html">
+          <i class="ti ti-browser" aria-hidden="true"></i>
+          <b>タブを片づける</b>
+          <span>タブが 20 個を超えてしまう人。調べものが多い人に。</span>
+          <em>15 項目</em>
+        </a>
+        <a class="help-cat" href="bookmarks.html">
+          <i class="ti ti-bookmarks" aria-hidden="true"></i>
+          <b>ブックマークとグループ</b>
+          <span>よく使うページを、案件ごとにしまっておきたい人に。</span>
+          <em>25 項目</em>
+        </a>
+        <a class="help-cat" href="notes.html">
+          <i class="ti ti-note" aria-hidden="true"></i>
+          <b>メモ</b>
+          <span>「あのページで何を考えたか」を、忘れたくない人。思いついたら、すぐ書いておきたい人に。</span>
+          <em>10 項目</em>
+        </a>
+        <a class="help-cat" href="steps.html">
+          <i class="ti ti-list-check" aria-hidden="true"></i>
+          <b>ステップタスク <span class="help-pro">PRO</span></b>
+          <span>段取りの多い仕事を、抜けなく進めたい人。今日どこまでやったかを、数で見たい人に。</span>
+          <em>9 項目</em>
+        </a>
+        <a class="help-cat" href="review.html">
+          <i class="ti ti-message-2" aria-hidden="true"></i>
+          <b>修正指示 <span class="help-pro">PRO</span></b>
+          <span>映像やデザインを確認して、修正のお願いを出す人。受け取った修正を、迷わず直したい人に。</span>
+          <em>12 項目</em>
+        </a>
+        <a class="help-cat" href="capture.html">
+          <i class="ti ti-camera" aria-hidden="true"></i>
+          <b>スクショ・画像</b>
+          <span>画面を見せて説明する人。手順書や、サイトの一覧の資料を作る人に。</span>
+          <em>8 項目</em>
+        </a>
+        <a class="help-cat" href="share.html">
+          <i class="ti ti-share" aria-hidden="true"></i>
+          <b>人に渡す</b>
+          <span>まとめたものを、人に渡したい人に。</span>
+          <em>7 項目</em>
+        </a>
+        <a class="help-cat" href="dashboard.html">
+          <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+          <b>見わたす（ダッシュボード・整理）</b>
+          <span>たまったグループを、大きな画面で見わたしたい人に。</span>
+          <em>10 項目</em>
+        </a>
+        <a class="help-cat" href="tools.html">
+          <i class="ti ti-clock" aria-hidden="true"></i>
+          <b>集中・そのほかの道具</b>
+          <span>集中したいとき。ちょっとした道具がほしいときに。</span>
+          <em>7 項目</em>
+        </a>
+        <a class="help-cat" href="look.html">
+          <i class="ti ti-palette" aria-hidden="true"></i>
+          <b>自分好みに</b>
+          <span>見た目を、自分の使いやすい形にしたい人に。</span>
+          <em>5 項目</em>
+        </a>
+        <a class="help-cat" href="start.html">
+          <i class="ti ti-flag" aria-hidden="true"></i>
+          <b>はじめる・続ける</b>
+          <span>入れたばかりの人。ほかの道具から乗り換える人に。</span>
+          <em>10 項目</em>
+        </a>
+      </div>
+      <div class="qmore">
+        <b>はじめての方へ</b>
+        <p>入れてから最初の 5 分でやることは、<a href="../blog/quick-start.html">はじめかた</a> にまとめています。料金やデータの扱いは、<a href="../faq.html">よくある質問</a> をご覧ください。</p>
+      </div>
+    </div>
+  </section>
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64">
+          <p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p>
+        </div>
+        <div class="footer-links">
+          <h4>ヘルプ</h4>
+          <a href="open.html">開く・画面の見かた</a><a href="tabs.html">タブを片づける</a><a href="bookmarks.html">ブックマークとグループ</a><a href="notes.html">メモ</a><a href="steps.html">ステップタスク</a><a href="review.html">修正指示</a>
+        </div>
+        <div class="footer-links">
+          <h4>&nbsp;</h4>
+          <a href="capture.html">スクショ・画像</a><a href="share.html">人に渡す</a><a href="dashboard.html">見わたす（ダッシュボード・整理）</a><a href="tools.html">集中・そのほかの道具</a><a href="look.html">自分好みに</a><a href="start.html">はじめる・続ける</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="https://tablayers.liquid-block.com/about.html">会社概要</a>
+          <a href="../privacy-policy.html">プライバシーポリシー</a>
+          <a href="../faq.html">よくある質問</a>
+          <a href="mailto:info@liquid-block.com">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Block Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+  <script src="help-search.js"></script>
+  <script src="help.js"></script>
+</body>
+</html>
