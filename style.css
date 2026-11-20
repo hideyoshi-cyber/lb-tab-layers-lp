@@ -2140,3 +2140,15 @@ a.fcard:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,
 .subhero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
 .subhero p { color: var(--text-secondary); font-size: 1.1rem; margin-top: 18px; }
 @media (max-width: 560px) { .subhero { padding: 120px 0 24px; } }
+
+/* 書き出せる形式のアイコン（PowerPoint・PDF・ZIP）。公式ロゴではなく、ファイルの形のアイコンに見慣れた色 */
+.fmt-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.fmt { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 10px; border-radius: 12px; background: var(--bg-white); border: 1px solid var(--border); font-weight: 600; font-size: 0.95rem; color: var(--text); line-height: 1; }
+.fmt i { font-size: 1.7rem; }
+.fmt.fmt-ppt i, .fcard .fmt.fmt-ppt i, i.fmt-ppt { color: #C43E1C; }
+.fmt.fmt-pdf i, .fcard .fmt.fmt-pdf i { color: #D7261E; }
+.fmt.fmt-zip i, .fcard .fmt.fmt-zip i { color: #6B6F76; }
+.fmt-row.small { gap: 6px; margin-top: 12px; }
+.fmt-row.small .fmt { padding: 5px 10px 5px 7px; font-size: 0.82rem; border-radius: 10px; gap: 5px; }
+.fmt-row.small .fmt i { font-size: 1.25rem; }
+i.fmt-i { font-size: 1.15em; vertical-align: -0.18em; margin: 0 2px; }
