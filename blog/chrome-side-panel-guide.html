@@ -42,14 +42,15 @@
     <p>サイドパネルは、ページの<strong>横（右側か左側）に開くパネル</strong>です。メインのWebページを表示しながら、横にブックマーク・リーディングリスト・拡張機能のUIを表示できます。</p>
     <p>ツールバーのアイコンや、右上の「︙」メニューから開きます。よく使うパネル（ブックマーク・リーディング リスト・履歴など）は、ツールバーに固定すると1回で開けます。</p>
 
-    <aside class="blog-mid-cta" aria-label="LB TAB Layers の紹介">
-      <img src="qs-7-open.webp" alt="グループの ▶ で開くと Chrome のタブグループになり、■ でまとめて閉じる" loading="lazy" width="360" height="720">
+    <aside class="blog-mid-cta has-video" aria-label="LB TAB Layers の紹介">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../img/hero-demo-m.webp" width="720" height="720" aria-label="実際の画面。■ で今やらない案件のタブをしまい、▶ で次の案件のタブをまとめて開く"><source src="../img/hero-demo-m.mp4" type="video/mp4"></video>
       <div class="blog-mid-cta-body">
         <p class="blog-mid-cta-lead">サイドパネルを、<strong>タブとブックマークの置き場</strong>に。</p>
         <p class="blog-mid-cta-text">LB TAB Layers は、Alt+T で開くサイドパネルの拡張機能です。開いているタブを仕事ごとにブックマークへ保存し、▶ でまとめて開いて ■ でまとめて閉じられます。</p>
         <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=chrome-side-panel-guide&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
       </div>
     </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
 
     <h2>標準機能でできること</h2>
     <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>ブックマーク</h3><p>サイドパネルにブックマークを表示。メインページを見ながら、ブックマークをクリックして新しいタブを開けます。</p></div></div>

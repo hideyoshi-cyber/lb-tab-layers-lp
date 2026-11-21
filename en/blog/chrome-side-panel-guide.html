@@ -43,14 +43,15 @@
     <p>A narrow panel that opens next to the page you’re viewing, so you can use something else without leaving the page. It can show:</p>
     <ul><li>Bookmarks</li><li>Reading list</li><li>History</li><li>Google Lens</li><li>Reading mode</li><li>Extensions that support the side panel</li></ul>
 
-    <aside class="blog-mid-cta" aria-label="About LB TAB Layers">
-      <img src="../../blog/qs-7-open-en.webp" alt="Hover over a group: ▶ opens it as a Chrome tab group, ■ closes it all" loading="lazy" width="360" height="720">
+    <aside class="blog-mid-cta has-video" aria-label="About LB TAB Layers">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../../img/en/hero-demo-m.webp" width="720" height="720" aria-label="The real screen: ■ puts the tabs of a project away, and ▶ opens the next project in one click"><source src="../../img/en/hero-demo-m.mp4" type="video/mp4"></video>
       <div class="blog-mid-cta-body">
         <p class="blog-mid-cta-lead">Keep tabs by project. <strong>Open with ▶, close with ■.</strong></p>
         <p class="blog-mid-cta-text">LB TAB Layers saves your open tabs by project as Chrome bookmarks, and reopens them with one click as a Chrome tab group with the same name and color. Closing them never loses them.</p>
         <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_chrome-side-panel-guide&amp;utm_content=mid">Add to Chrome — free</a><a class="blog-mid-cta-link" href="operation-guide.html">See it in action →</a></div>
       </div>
     </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
 
     <h2>A bit of history: Chrome is the browser that dropped the sidebar</h2>
     <p>Side panels are an old idea. Internet Explorer could show favorites and history at the side, and Firefox and Opera opened bookmarks and history in a sidebar too. When Chrome launched in 2008, it shipped with just tabs and an address bar. One of its design principles was “Content, not Chrome” — give the screen to the page, not to the browser’s frame — and the sidebar didn’t make the cut.</p>

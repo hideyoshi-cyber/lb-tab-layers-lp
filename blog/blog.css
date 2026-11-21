@@ -103,6 +103,20 @@
 }
 .blog-table td { color: var(--text-secondary); }
 .blog-table tr:last-child td { border-bottom: none; }
+/* 包みのない表（.blog-table-wrap に入っていない <table>。英語の記事など・2026-11-21）：見た目を上の表とそろえ、スマホでページ全体が横にはみ出さないようにする */
+.blog-content table:not(.blog-table) {
+  display: block; max-width: 100%; overflow-x: auto;
+  border-collapse: collapse; font-size: 0.9rem; margin: 24px 0;
+  border: 1px solid var(--border); border-radius: var(--radius);
+}
+.blog-content table:not(.blog-table) th, .blog-content table:not(.blog-table) td {
+  padding: 10px 14px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--border); overflow-wrap: anywhere;
+}
+.blog-content table:not(.blog-table) th { font-weight: 700; color: var(--text-primary); background: var(--bg-secondary, rgba(0,0,0,.03)); }
+.blog-content table:not(.blog-table) td { color: var(--text-secondary); }
+.blog-content table:not(.blog-table) tr:last-child td { border-bottom: none; }
+.blog-content table:not(.blog-table) td:first-child, .blog-content table:not(.blog-table) th:first-child { overflow-wrap: normal; }
 
 .blog-num {
   display: inline-flex;
@@ -486,6 +500,9 @@
 .blog-mid-cta-btn:hover { filter: brightness(1.08); }
 .blog-mid-cta-link { font-size: .9rem; font-weight: 600; color: var(--accent, #4A60D1) !important; }
 @media (max-width: 560px) { .blog-mid-cta { gap: 14px; padding: 14px; align-items: flex-start; } .blog-mid-cta img { width: 84px; } }
+/* 途中の入口の動画版（2026-11-21）：止まった画像の代わりに、■ でしまう・▶ で開く の短い動画。PC は左に正方形、スマホは上に幅いっぱい */
+.blog-mid-cta-video { display: block; width: 240px; height: auto; aspect-ratio: 1 / 1; flex: none; border-radius: 12px; box-shadow: 0 6px 18px rgba(33,37,41,.14); background: #e9ecf5; margin: 0 !important; }
+@media (max-width: 640px) { .blog-mid-cta.has-video { flex-direction: column; align-items: stretch; } .blog-mid-cta.has-video .blog-mid-cta-video { width: 100%; } }
 
 /* 書き手の表示（2026-11-09）：執筆：蔡本 英賛（株式会社リキッドブロック 代表）／開発：LB開発チーム */
 .blog-meta .blog-author { white-space: nowrap; }
