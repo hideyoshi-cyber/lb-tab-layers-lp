@@ -2220,8 +2220,9 @@ i.fmt-i { font-size: 1.15em; vertical-align: -0.18em; margin: 0 2px; }
 }
 
 /* 英語の最初の画面：見出しの 1 行が長いので、列に収まる大きさに */
-@media (min-width: 980px) { html[lang="en"] #hero.hero-v2 h1 { font-size: min(2.1rem, 2.9vw); } }
-@media (max-width: 768px) { html[lang="en"] #hero.hero-v2 h1 { font-size: min(2rem, 7.4vw); } }
+/* LATIN-H1 */
+@media (min-width: 980px) { html:is([lang="en"], [lang="de"], [lang="es"], [lang="fr"], [lang="pt-BR"]) #hero.hero-v2 h1 { font-size: min(2.1rem, 2.9vw); } }
+@media (max-width: 768px) { html:is([lang="en"], [lang="de"], [lang="es"], [lang="fr"], [lang="pt-BR"]) #hero.hero-v2 h1 { font-size: min(2rem, 7.4vw); } }
 
 /* ===== 2026-11-21：「動画の修正指示」の節を、動く画面に（class="story story-video" の付いた節だけ） ===== */
 .story.story-video { max-width: 1120px; grid-template-columns: 1.4fr 1fr; gap: 48px; }

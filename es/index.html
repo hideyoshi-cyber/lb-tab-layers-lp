@@ -117,7 +117,7 @@
     </nav>
   </header>
 
-  <section id="hero">
+  <section id="hero" class="hero-v2">
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
@@ -131,19 +131,46 @@
           Las pestañas son «ahora». Los marcadores son tu «cajón».<br>
           Guarda las pestañas de trabajo por proyecto y ábrelas todas a la vez.
         </p>
+      </div>
+      <div class="hero-cta">
         <div class="hero-actions" id="cta-main">
           <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_hero" class="btn btn-primary" id="hero-cta-chrome">Añadir a Chrome</a>
           <a href="quick-start.html" class="btn btn-ghost">Ver cómo empezar</a>
         </div>
         <p class="hero-note">Ábrelo cuando quieras con Alt+T.</p>
       </div>
-      <div class="hero-visual">
-        <div class="hero-screenshot-wrapper">
-          <img src="../img/es/app-hero.webp" alt="El panel lateral de LB TAB Layers. Se ven los grupos de cada proyecto y las pestañas abiertas ahora" class="hero-screenshot-img" loading="eager" width="420" height="1180">
-        </div>
+      <div class="hero-demo">
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="../img/es/hero-demo.webp" width="1280" height="832" aria-label="La pantalla real. Hay tres proyectos abiertos a la vez, 11 pestañas en total. Con ■ guardas los proyectos en los que no estás trabajando y con ▶ abres de una vez el siguiente"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">Los proyectos se acumulan y ya tienes 11 pestañas.</p>
+        <p class="hero-demo-sub">Es la pantalla real: LB TAB Layers a la derecha de Chrome.</p>
       </div>
     </div>
   </section>
+  <script>
+  /* Vídeo de portada: archivo de escritorio o de móvil según el ancho. Con movimiento reducido queda en pausa y muestra los controles. La línea de abajo sigue la escena. */
+  (function () {
+    var v = document.getElementById('hero-demo-video'), cap = document.getElementById('hero-demo-cap');
+    if (!v) return;
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (small) { v.poster = '../img/es/hero-demo-m.webp'; v.width = 720; v.height = 720; }
+    v.src = small ? '../img/es/hero-demo-m.mp4' : '../img/es/hero-demo.mp4';
+    if (calm) { v.controls = true; v.loop = false; }
+    else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    var CAPS = [
+      [0, 'Los proyectos se acumulan y ya tienes 11 pestañas.'],
+      [2.2, 'Lo que no toca ahora, lo guardas con ■.'],
+      [9.2, 'Solo queda el proyecto de hoy.'],
+      [12.2, 'El siguiente proyecto se abre con un ▶.']
+    ];
+    var last = '';
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, s = CAPS[0][1];
+      for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
+      if (s !== last) { last = s; cap.classList.add('is-out'); setTimeout(function () { cap.textContent = s; cap.classList.remove('is-out'); }, 180); }
+    });
+  })();
+  </script>
 
   <!-- ===== 2. 15秒 ===== -->
   <section id="video-intro">
@@ -244,6 +271,31 @@
           <p>Por eso puedes cerrarlas con tranquilidad.</p>
         </div>
       </div>
+      <div class="voices">
+        <p class="voices-eyebrow">De las reseñas de Chrome Web Store (traducidas del japonés)</p>
+        <div class="voices-grid">
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>Me parece práctico para reunir los sitios que solo uso un tiempo en el trabajo. <b>Me gusta poder cerrar un grupo entero de una vez.</b> Mucho más cómodo que ir guardando marcadores uno a uno.</blockquote>
+            <figcaption>Ayu</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>Antes, sin darme cuenta, acababa con una cantidad enorme de pestañas y me costaba encontrar la página que quería. <b>La interfaz se entiende bien; creo que hasta quien no es de ordenar puede usarla sin esfuerzo.</b></blockquote>
+            <figcaption>Koji</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>«Con tantas pestañas el PC va lento», pensaba, y aun así lo dejaba estar. Puede que esta sea la solución. <b>Ordenar en carpetas deja una sensación de limpieza muy agradable.</b></blockquote>
+            <figcaption>yuto matsuoka</figcaption>
+          </figure>
+        </div>
+        <p class="voices-link"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej/reviews">Leer las reseñas en Chrome Web Store →</a></p>
+      </div>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_mid_solved" class="btn btn-primary" id="cta-mid-solved">Añadir a Chrome gratis</a>
+        <span class="mid-cta-note">Sin registro · todas las funciones gratis durante 30 días</span>
+      </div>
     </div>
   </section>
 
@@ -264,14 +316,21 @@
         <div class="reduce-row"><div class="reduce-before">Parar el vídeo y escribir la corrección en otra pantalla</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Paras, escribes ahí mismo y Enter</div></div>
       </div>
       <p class="reduce-close">Usa el tiempo que ganas para pensar.</p>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=es_mid_reduce" class="btn btn-primary" id="cta-mid-reduce">Añadir a Chrome gratis</a>
+        <span class="mid-cta-note">Sin registro · todas las funciones gratis durante 30 días</span>
+      </div>
     </div>
   </section>
 
   <!-- ===== 動画の修正指示 ===== -->
   <section class="d-section" id="review">
     <div class="container">
-      <div class="story">
-        <div class="story-img"><img src="../img/es/app-review.webp" alt="La pantalla de indicaciones de corrección. Paras el vídeo y escribes en el campo de abajo. A la derecha se ordenan las indicaciones con su minuto" loading="lazy" width="1280" height="760"></div>
+      <div class="story story-video">
+        <div class="story-img">
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" poster="../img/es/review-demo.webp" width="1024" height="782" aria-label="La pantalla real. Paras el vídeo, escribes en el campo de abajo y guardas con Enter; la reproducción continúa. Después se colocan indicaciones numeradas sobre el fotograma en pausa. Al final se abre la hoja con las indicaciones y su minuto"></video>
+          <p class="story-video-note">Aquí, con un archivo de vídeo de tu ordenador. En YouTube funciona igual.</p>
+        </div>
         <div>
           <h2>Indicaciones de corrección,<br><span class="text-gradient">directamente sobre el vídeo de YouTube.</span></h2>
           <p>No hace falta volver a subir el vídeo: escribes sobre el mismo que estás viendo en el navegador. YouTube, Vimeo, Google Drive y vídeos insertados en páginas web.</p>
@@ -280,11 +339,41 @@
             <li><span>También puedes poner números y líneas sobre la imagen.</span></li>
             <li><span>Las indicaciones van a una hoja con el minuto de cada una. Puedes entregarla en PDF o PowerPoint.</span></li>
           </ul>
+          <div class="fmt-row" aria-label="Formatos de exportación"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf" aria-hidden="true"></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt" aria-hidden="true"></i>PowerPoint</span></div>
           <p>Lo hizo un estudio de vídeo para sus propias idas y vueltas de correcciones.</p>
         </div>
       </div>
     </div>
   </section>
+  <script>
+  (function () {
+    var v = document.getElementById('review-demo-video');
+    if (!v) return;
+    var lis = document.querySelectorAll('#review .story-video li');
+    var MARKS = [0,7.62,19.55];
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var src = small ? '../img/es/review-demo-m.mp4' : '../img/es/review-demo.mp4';
+    if (small) v.poster = '../img/es/review-demo-m.webp';
+    function mark() {
+      var k = -1, i;
+      if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
+      for (i = 0; i < lis.length; i++) lis[i].classList.toggle('is-on', i === k);
+    }
+    v.addEventListener('timeupdate', mark);
+    v.addEventListener('pause', mark);
+    if (calm) { v.controls = true; v.loop = false; v.src = src; return; }
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    if (!('IntersectionObserver' in window)) { v.src = src; play(); return; }
+    var loaded = false;
+    new IntersectionObserver(function (es) {
+      for (var i = 0; i < es.length; i++) {
+        if (es[i].isIntersecting) { if (!loaded) { v.src = src; loaded = true; } play(); }
+        else if (loaded) v.pause();
+      }
+    }, { rootMargin: '240px 0px' }).observe(v);
+  })();
+  </script>
 
   <!-- ===== 4. 使っているうちに、行き着く ===== -->
   <section class="d-section white" id="path">

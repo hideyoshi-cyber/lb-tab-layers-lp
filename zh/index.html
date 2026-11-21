@@ -69,7 +69,7 @@
 <body>
   <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/zh/" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="features.html">功能</a><a href="features.html">主题</a><a href="../en/#whats-new">新功能</a><a href="#faq">FAQ</a><a href="../en/">🌐 EN</a></div><a href="#cta-main" class="nav-cta">免费开始</a></nav></header>
 
-  <section id="hero">
+  <section id="hero" class="hero-v2">
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
@@ -83,19 +83,46 @@
           标签页是“现在”，书签是“抽屉”。<br>
           把工作用的标签页按项目收起来，再一次全部打开。
         </p>
+      </div>
+      <div class="hero-cta">
         <div class="hero-actions" id="cta-main">
           <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zh_hero" class="btn btn-primary" id="hero-cta-chrome">添加到 Chrome</a>
           <a href="quick-start.html" class="btn btn-ghost">查看上手方法</a>
         </div>
         <p class="hero-note">按 Alt+T，随时打开。</p>
       </div>
-      <div class="hero-visual">
-        <div class="hero-screenshot-wrapper">
-          <img src="../img/zh/app-hero.webp" alt="LB TAB Layers 的侧边栏。按项目划分的群组和当前打开的标签页排在一起" class="hero-screenshot-img" loading="eager" width="420" height="1180">
-        </div>
+      <div class="hero-demo">
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="../img/zh/hero-demo.webp" width="1280" height="832" aria-label="实际画面。三个项目同时打开，共 11 个标签页。用 ■ 收起现在不做的项目，用 ▶ 一次打开下一个项目"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">项目一多，标签页就有 11 个。</p>
+        <p class="hero-demo-sub">这是实际画面（Chrome 右侧是 LB TAB Layers）。</p>
       </div>
     </div>
   </section>
+  <script>
+  /* 首屏视频：按屏幕宽度选择电脑版或手机版文件。在“减少动态效果”的设置下保持暂停并显示控制按钮。下面的一行文字随场景切换。 */
+  (function () {
+    var v = document.getElementById('hero-demo-video'), cap = document.getElementById('hero-demo-cap');
+    if (!v) return;
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (small) { v.poster = '../img/zh/hero-demo-m.webp'; v.width = 720; v.height = 720; }
+    v.src = small ? '../img/zh/hero-demo-m.mp4' : '../img/zh/hero-demo.mp4';
+    if (calm) { v.controls = true; v.loop = false; }
+    else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    var CAPS = [
+      [0, '项目一多，标签页就有 11 个。'],
+      [2.2, '现在不做的项目，用 ■ 收起来。'],
+      [9.2, '留下的只有今天的项目。'],
+      [12.2, '下一个项目，点一下 ▶ 就打开。']
+    ];
+    var last = '';
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, s = CAPS[0][1];
+      for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
+      if (s !== last) { last = s; cap.classList.add('is-out'); setTimeout(function () { cap.textContent = s; cap.classList.remove('is-out'); }, 180); }
+    });
+  })();
+  </script>
 
   <!-- ===== 2. 15秒 ===== -->
   <section id="video-intro">
@@ -196,6 +223,31 @@
           <p>所以，可以放心地关掉。</p>
         </div>
       </div>
+      <div class="voices">
+        <p class="voices-eyebrow">来自 Chrome 应用商店的评价（译自日语）</p>
+        <div class="voices-grid">
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 星">★★★★★</div>
+            <blockquote>工作中临时要用的网站可以归在一起，觉得很方便。<b>能按分组一次关掉，这点很好。</b>比一个一个添加书签轻松多了。</blockquote>
+            <figcaption>Ayu</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 星">★★★★★</div>
+            <blockquote>以前不知不觉就开了多得离谱的标签页，找想看的页面很费劲。<b>界面一看就懂，不擅长整理的人也能轻松使用。</b></blockquote>
+            <figcaption>Koji</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 星">★★★★★</div>
+            <blockquote>一直想着“标签页开太多电脑会变慢”，却放着没管，这也许就是解决办法。<b>分到文件夹里的过程，心情也跟着清爽，很舒服。</b></blockquote>
+            <figcaption>yuto matsuoka</figcaption>
+          </figure>
+        </div>
+        <p class="voices-link"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej/reviews">在 Chrome 应用商店查看评价 →</a></p>
+      </div>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zh_mid_solved" class="btn btn-primary" id="cta-mid-solved">免费添加到 Chrome</a>
+        <span class="mid-cta-note">无需注册 · 30 天内全部功能免费</span>
+      </div>
     </div>
   </section>
 
@@ -216,14 +268,21 @@
         <div class="reduce-row"><div class="reduce-before">暂停视频，到另一个画面写修改意见</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">暂停，当场写下，按 Enter</div></div>
       </div>
       <p class="reduce-close">省下来的时间，请用来思考。</p>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zh_mid_reduce" class="btn btn-primary" id="cta-mid-reduce">免费添加到 Chrome</a>
+        <span class="mid-cta-note">无需注册 · 30 天内全部功能免费</span>
+      </div>
     </div>
   </section>
 
   <!-- ===== 動画の修正指示 ===== -->
   <section class="d-section" id="review">
     <div class="container">
-      <div class="story">
-        <div class="story-img"><img src="../img/zh/app-review.webp" alt="修改意见的画面。暂停视频，在下方的输入栏填写。右侧排列着带时间的各条意见" loading="lazy" width="1280" height="760"></div>
+      <div class="story story-video">
+        <div class="story-img">
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" poster="../img/zh/review-demo.webp" width="1024" height="782" aria-label="实际画面。暂停视频，在下方输入栏填写，按 Enter 保存后继续播放。接着，在暂停的画面上加编号填写。最后，打开按时间排列各条意见的表"></video>
+          <p class="story-video-note">这是打开电脑里的视频文件时的画面。在 YouTube 上也是同样的流程。</p>
+        </div>
         <div>
           <h2>在 YouTube 视频上，<br><span class="text-gradient">直接写修改意见。</span></h2>
           <p>不用重新上传视频，直接写在浏览器里正在看的视频上。支持 YouTube、Vimeo、Google Drive，以及嵌入网页的视频。</p>
@@ -232,11 +291,41 @@
             <li><span>还可以在画面上标编号、画线。</span></li>
             <li><span>意见会整理成带时间的意见表，可以用 PDF 或 PowerPoint 交给对方。</span></li>
           </ul>
+          <div class="fmt-row" aria-label="导出格式"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf" aria-hidden="true"></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt" aria-hidden="true"></i>PowerPoint</span></div>
           <p>这是一家做影像的公司，为了自己的修改沟通而做的。</p>
         </div>
       </div>
     </div>
   </section>
+  <script>
+  (function () {
+    var v = document.getElementById('review-demo-video');
+    if (!v) return;
+    var lis = document.querySelectorAll('#review .story-video li');
+    var MARKS = [0,7.47,19.16];
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var src = small ? '../img/zh/review-demo-m.mp4' : '../img/zh/review-demo.mp4';
+    if (small) v.poster = '../img/zh/review-demo-m.webp';
+    function mark() {
+      var k = -1, i;
+      if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
+      for (i = 0; i < lis.length; i++) lis[i].classList.toggle('is-on', i === k);
+    }
+    v.addEventListener('timeupdate', mark);
+    v.addEventListener('pause', mark);
+    if (calm) { v.controls = true; v.loop = false; v.src = src; return; }
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    if (!('IntersectionObserver' in window)) { v.src = src; play(); return; }
+    var loaded = false;
+    new IntersectionObserver(function (es) {
+      for (var i = 0; i < es.length; i++) {
+        if (es[i].isIntersecting) { if (!loaded) { v.src = src; loaded = true; } play(); }
+        else if (loaded) v.pause();
+      }
+    }, { rootMargin: '240px 0px' }).observe(v);
+  })();
+  </script>
 
   <!-- ===== 4. 使っているうちに、行き着く ===== -->
   <section class="d-section white" id="path">

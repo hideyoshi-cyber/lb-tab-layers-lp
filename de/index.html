@@ -117,7 +117,7 @@
     </nav>
   </header>
 
-  <section id="hero">
+  <section id="hero" class="hero-v2">
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
@@ -131,19 +131,46 @@
           Tabs sind „jetzt“. Lesezeichen sind die „Schublade“.<br>
           Räum deine Arbeits-Tabs nach Projekt weg und öffne sie alle auf einmal.
         </p>
+      </div>
+      <div class="hero-cta">
         <div class="hero-actions" id="cta-main">
           <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_hero" class="btn btn-primary" id="hero-cta-chrome">Zu Chrome hinzufügen</a>
           <a href="quick-start.html" class="btn btn-ghost">So fängst du an</a>
         </div>
         <p class="hero-note">Mit Alt+T jederzeit zur Hand.</p>
       </div>
-      <div class="hero-visual">
-        <div class="hero-screenshot-wrapper">
-          <img src="../img/de/app-hero.webp" alt="Die Seitenleiste von LB TAB Layers. Gruppen für jedes Projekt, daneben die gerade offenen Tabs" class="hero-screenshot-img" loading="eager" width="420" height="1180">
-        </div>
+      <div class="hero-demo">
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="../img/de/hero-demo.webp" width="1280" height="832" aria-label="Die echte Ansicht. Drei Projekte sind gleichzeitig offen, insgesamt 11 Tabs. Mit ■ räumst du die Projekte weg, an denen du gerade nicht arbeitest, und mit ▶ öffnest du das nächste Projekt auf einmal"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">Projekte häufen sich – schon sind es 11 Tabs.</p>
+        <p class="hero-demo-sub">Das ist die echte Ansicht: LB TAB Layers rechts in Chrome.</p>
       </div>
     </div>
   </section>
+  <script>
+  /* Hero-Video: je nach Breite die Desktop- oder Mobil-Datei. Bei reduzierter Bewegung bleibt es angehalten und zeigt die Bedienelemente. Die Zeile darunter folgt der Szene. */
+  (function () {
+    var v = document.getElementById('hero-demo-video'), cap = document.getElementById('hero-demo-cap');
+    if (!v) return;
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (small) { v.poster = '../img/de/hero-demo-m.webp'; v.width = 720; v.height = 720; }
+    v.src = small ? '../img/de/hero-demo-m.mp4' : '../img/de/hero-demo.mp4';
+    if (calm) { v.controls = true; v.loop = false; }
+    else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    var CAPS = [
+      [0, 'Projekte häufen sich – schon sind es 11 Tabs.'],
+      [2.2, 'Was gerade nicht dran ist, räumst du mit ■ weg.'],
+      [9.2, 'Übrig bleibt nur das Projekt von heute.'],
+      [12.2, 'Das nächste Projekt öffnest du mit einem ▶.']
+    ];
+    var last = '';
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, s = CAPS[0][1];
+      for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
+      if (s !== last) { last = s; cap.classList.add('is-out'); setTimeout(function () { cap.textContent = s; cap.classList.remove('is-out'); }, 180); }
+    });
+  })();
+  </script>
 
   <!-- ===== 2. 15秒 ===== -->
   <section id="video-intro">
@@ -244,6 +271,31 @@
           <p>Deshalb kannst du beruhigt schließen.</p>
         </div>
       </div>
+      <div class="voices">
+        <p class="voices-eyebrow">Aus Rezensionen im Chrome Web Store (aus dem Japanischen übersetzt)</p>
+        <div class="voices-grid">
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 Sterne">★★★★★</div>
+            <blockquote>Praktisch, um Seiten zu bündeln, die ich bei der Arbeit nur vorübergehend brauche. <b>Gut, dass ich eine ganze Gruppe auf einmal wegräumen kann.</b> Viel bequemer, als jedes Lesezeichen einzeln anzulegen.</blockquote>
+            <figcaption>Ayu</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 Sterne">★★★★★</div>
+            <blockquote>Früher hatte ich, ehe ich mich versah, unglaublich viele Tabs offen und suchte mühsam nach der Seite, die ich brauchte. <b>Die Oberfläche ist leicht verständlich – auch wer nicht gern aufräumt, kommt damit entspannt zurecht.</b></blockquote>
+            <figcaption>Koji</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 Sterne">★★★★★</div>
+            <blockquote>„Zu viele Tabs machen den PC langsam“, dachte ich immer – und ließ es trotzdem so. Das hier könnte die Lösung sein. <b>Das Sortieren in Ordner fühlt sich aufgeräumt und richtig gut an.</b></blockquote>
+            <figcaption>yuto matsuoka</figcaption>
+          </figure>
+        </div>
+        <p class="voices-link"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej/reviews">Rezensionen im Chrome Web Store lesen →</a></p>
+      </div>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_mid_solved" class="btn btn-primary" id="cta-mid-solved">Kostenlos zu Chrome hinzufügen</a>
+        <span class="mid-cta-note">Ohne Anmeldung · 30 Tage alle Funktionen kostenlos</span>
+      </div>
     </div>
   </section>
 
@@ -264,14 +316,21 @@
         <div class="reduce-row"><div class="reduce-before">Video anhalten und Korrekturen woanders notieren</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Anhalten, direkt dort schreiben, Enter</div></div>
       </div>
       <p class="reduce-close">Nutz die gewonnene Zeit zum Denken.</p>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=de_mid_reduce" class="btn btn-primary" id="cta-mid-reduce">Kostenlos zu Chrome hinzufügen</a>
+        <span class="mid-cta-note">Ohne Anmeldung · 30 Tage alle Funktionen kostenlos</span>
+      </div>
     </div>
   </section>
 
   <!-- ===== 動画の修正指示 ===== -->
   <section class="d-section" id="review">
     <div class="container">
-      <div class="story">
-        <div class="story-img"><img src="../img/de/app-review.webp" alt="Die Ansicht für Korrekturhinweise. Video anhalten und ins Feld darunter schreiben. Rechts stehen die Hinweise mit Zeitangabe" loading="lazy" width="1280" height="760"></div>
+      <div class="story story-video">
+        <div class="story-img">
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" poster="../img/de/review-demo.webp" width="1024" height="782" aria-label="Die echte Ansicht. Video anhalten, ins Feld darunter schreiben und mit Enter speichern – die Wiedergabe läuft weiter. Danach werden nummerierte Hinweise ins angehaltene Bild gesetzt. Zum Schluss öffnet sich der Bogen mit den Hinweisen samt Zeitangabe"></video>
+          <p class="story-video-note">Hier mit einer Videodatei vom eigenen Rechner. Auf YouTube geht es genauso.</p>
+        </div>
         <div>
           <h2>Direkt am YouTube-Video:<br><span class="text-gradient">Korrekturhinweise.</span></h2>
           <p>Du musst das Video nicht neu hochladen. Schreib direkt an das Video, das du im Browser ansiehst: YouTube, Vimeo, Google Drive oder in Webseiten eingebettete Videos.</p>
@@ -280,11 +339,41 @@
             <li><span>Auch Nummern und Linien kannst du ins Bild zeichnen.</span></li>
             <li><span>Die Hinweise landen mit Zeitangabe auf einem Bogen. Weitergeben als PDF oder PowerPoint.</span></li>
           </ul>
+          <div class="fmt-row" aria-label="Exportformate"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf" aria-hidden="true"></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt" aria-hidden="true"></i>PowerPoint</span></div>
           <p>Entwickelt von einem Videostudio, für die eigenen Korrekturschleifen.</p>
         </div>
       </div>
     </div>
   </section>
+  <script>
+  (function () {
+    var v = document.getElementById('review-demo-video');
+    if (!v) return;
+    var lis = document.querySelectorAll('#review .story-video li');
+    var MARKS = [0,7.4,18.79];
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var src = small ? '../img/de/review-demo-m.mp4' : '../img/de/review-demo.mp4';
+    if (small) v.poster = '../img/de/review-demo-m.webp';
+    function mark() {
+      var k = -1, i;
+      if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
+      for (i = 0; i < lis.length; i++) lis[i].classList.toggle('is-on', i === k);
+    }
+    v.addEventListener('timeupdate', mark);
+    v.addEventListener('pause', mark);
+    if (calm) { v.controls = true; v.loop = false; v.src = src; return; }
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    if (!('IntersectionObserver' in window)) { v.src = src; play(); return; }
+    var loaded = false;
+    new IntersectionObserver(function (es) {
+      for (var i = 0; i < es.length; i++) {
+        if (es[i].isIntersecting) { if (!loaded) { v.src = src; loaded = true; } play(); }
+        else if (loaded) v.pause();
+      }
+    }, { rootMargin: '240px 0px' }).observe(v);
+  })();
+  </script>
 
   <!-- ===== 4. 使っているうちに、行き着く ===== -->
   <section class="d-section white" id="path">
