@@ -1560,10 +1560,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tablayers.liquid-block.com/hi/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/hi/quick-start.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/id/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tablayers.liquid-block.com/id/quick-start.html</loc>
@@ -1572,10 +1584,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tablayers.liquid-block.com/it/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/it/quick-start.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/nl/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tablayers.liquid-block.com/nl/quick-start.html</loc>
@@ -1584,10 +1608,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tablayers.liquid-block.com/pl/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/pl/quick-start.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/ru/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tablayers.liquid-block.com/ru/quick-start.html</loc>
@@ -1596,10 +1632,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tablayers.liquid-block.com/tr/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/tr/quick-start.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/vi/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tablayers.liquid-block.com/vi/quick-start.html</loc>
@@ -1708,5 +1756,23 @@
     <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/pt-pt/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/zh-tw/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/es-419/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

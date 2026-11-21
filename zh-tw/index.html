@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LB TAB Layers — 依專案整理分頁。用 ▶ 開啟，用 ■ 關閉。</title>
+  <meta name="description" content="Chrome 側邊面板擴充功能：把分頁依專案存成 Chrome 書籤，按一下就以 Chrome 分頁群組開啟。由日本 Liquid Block Inc. 開發。">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/zh-tw/">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/">
+  <link rel="alternate" hreflang="ko" href="https://tablayers.liquid-block.com/ko/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tablayers.liquid-block.com/zh/">
+  <link rel="alternate" hreflang="de" href="https://tablayers.liquid-block.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://tablayers.liquid-block.com/fr/">
+  <link rel="alternate" hreflang="es" href="https://tablayers.liquid-block.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tablayers.liquid-block.com/pt/">
+  <link rel="alternate" hreflang="it" href="https://tablayers.liquid-block.com/it/">
+  <link rel="alternate" hreflang="nl" href="https://tablayers.liquid-block.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://tablayers.liquid-block.com/pl/">
+  <link rel="alternate" hreflang="tr" href="https://tablayers.liquid-block.com/tr/">
+  <link rel="alternate" hreflang="ru" href="https://tablayers.liquid-block.com/ru/">
+  <link rel="alternate" hreflang="hi" href="https://tablayers.liquid-block.com/hi/">
+  <link rel="alternate" hreflang="id" href="https://tablayers.liquid-block.com/id/">
+  <link rel="alternate" hreflang="vi" href="https://tablayers.liquid-block.com/vi/">
+  <link rel="alternate" hreflang="es-419" href="https://tablayers.liquid-block.com/es-419/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tablayers.liquid-block.com/pt-pt/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://tablayers.liquid-block.com/zh-tw/">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/">
+  <meta property="og:title" content="LB TAB Layers — 依專案整理分頁。用 ▶ 開啟，用 ■ 關閉。">
+  <meta property="og:description" content="Chrome 側邊面板擴充功能：把分頁依專案存成 Chrome 書籤，按一下就以 Chrome 分頁群組開啟。由日本 Liquid Block Inc. 開發。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tablayers.liquid-block.com/zh-tw/">
+  <meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-quick-start-en.webp">
+  <meta property="og:site_name" content="LB TAB Layers">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;600;700;800&amp;display=swap"></noscript>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preload" as="image" href="../img/zh-tw/hero-demo-m.webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="../img/zh-tw/hero-demo.webp" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome",
+      "applicationCategory": "BrowserApplication",
+      "inLanguage": "zh-Hant",
+      "softwareVersion": "3.0.3",
+      "description": "Chrome 側邊面板擴充功能：把分頁依專案存成 Chrome 書籤，按一下就以 Chrome 分頁群組開啟。由日本 Liquid Block Inc. 開發。",
+      "url": "https://tablayers.liquid-block.com/zh-tw/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "可以免費使用嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。儲存、搜尋、一次全部開啟和關閉，都可以免費使用。前 30 天可以試用所有功能。PRO 是一次買斷，沒有月費。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "現有的書籤會怎麼樣？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以照常使用。Chrome 的書籤可以直接匯入並整理。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "移除擴充功能後，資料會怎麼樣？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "儲存的分頁會以 Chrome 書籤的形式留下。主題、顏色等設定會消失。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支援哪些瀏覽器？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可在 Google Chrome（114 以上版本）使用，支援 Windows、Mac、Linux 和 ChromeOS。Edge 版正在準備中。"
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+  <style>
+    .il-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+    .il-step{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:20px;padding:22px;text-align:center}
+    .il-step img{width:100%;max-width:220px;border-radius:12px;box-shadow:0 8px 24px rgba(33,37,41,.14);margin:0 auto 16px;display:block}
+    .il-step h3{font-size:1.15rem;margin:0 0 8px}
+    .il-step p{font-size:.95rem;color:var(--text-secondary);line-height:1.7;margin:0}
+    .il-lead{text-align:center;color:var(--text-secondary);max-width:680px;margin:-6px auto 28px;line-height:1.7}
+    .il-hero-img{width:100%;max-width:300px;border-radius:16px;box-shadow:0 18px 44px rgba(17,24,39,.18)}
+    @media (max-width:820px){.il-steps{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="https://tablayers.liquid-block.com/zh-tw/" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a>
+      <div class="nav-links">
+        <a href="../zh/quick-start.html">使用方式</a>
+        <a href="#privacy">隱私</a>
+        <a href="#faq">FAQ</a>
+        <a href="../zh/quick-start.html">快速入門</a>
+        <a href="../en/" title="English">🌐 EN</a>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zhtw_nav" class="nav-cta">加到 Chrome</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <section id="hero" class="hero-v2">
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span>Chrome 擴充功能 — 免費（Edge 版準備中）</div>
+        <h1>
+          <span class="h1-phrase">找分頁、找書籤的時間，</span> <span class="h1-phrase">省下來，</span><br>
+          <strong>留給思考。</strong>
+        </h1>
+        <p class="hero-sub">
+          <strong>書籤和分頁，都在同一個畫面裡。</strong><br>
+          分頁是「現在」，書籤是「抽屜」。<br>
+          把工作用的分頁依專案收起來，再一次全部開啟。
+        </p>
+      </div>
+      <div class="hero-cta">
+        <div class="hero-actions" id="cta-main">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zhtw_hero" class="btn btn-primary" id="hero-cta-chrome">加到 Chrome</a>
+          <a href="../zh/quick-start.html" class="btn btn-ghost">看看怎麼開始</a>
+        </div>
+        <p class="hero-note">按 Alt+T，隨時開啟。</p>
+      </div>
+      <div class="hero-demo">
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" width="1280" height="832" aria-label="實際畫面。三個專案同時開著，共 11 個分頁。用 ■ 把現在不做的專案收起來，用 ▶ 一次開啟下一個專案"><track kind="captions" src="../img/zh-tw/hero-demo.vtt" srclang="zh-Hant" label="繁體中文"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">專案一多，分頁就有 11 個。</p>
+        <p class="hero-demo-sub">這是實際畫面：Chrome 右側就是 LB TAB Layers。</p>
+      </div>
+    </div>
+  </section>
+  <script>
+  /* Hero video: pick the desktop or mobile file by width. With reduced motion, keep it paused and show the controls. The line below follows the scene. */
+  (function () {
+    var v = document.getElementById('hero-demo-video'), cap = document.getElementById('hero-demo-cap');
+    if (!v) return;
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    v.poster = small ? '../img/zh-tw/hero-demo-m.webp' : '../img/zh-tw/hero-demo.webp';
+    if (small) { v.width = 720; v.height = 720; }
+    v.src = small ? '../img/zh-tw/hero-demo-m.mp4' : '../img/zh-tw/hero-demo.mp4';
+    if (calm) { v.controls = true; v.loop = false; }
+    else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    var CAPS = [
+      [0, '專案一多，分頁就有 11 個。'],
+      [2.2, '現在不做的，用 ■ 收起來。'],
+      [9.2, '留下的只有今天的專案。'],
+      [12.2, '下一個專案，按一下 ▶ 就開啟。']
+    ];
+    var last = '';
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, s = CAPS[0][1];
+      for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
+      if (s !== last) { last = s; cap.classList.add('is-out'); setTimeout(function () { cap.textContent = s; cap.classList.remove('is-out'); }, 180); }
+    });
+  })();
+  </script>
+
+  <!-- ===== 2. 15秒 ===== -->
+  <section id="video-intro">
+    <div class="container">
+      <div class="video-wrapper">
+        <button type="button" class="yt-lite" data-yt="wa_n6lakFpM" aria-label="LB TAB Layers 15 秒廣告「找到了」篇"><img src="../img/cm-15s.webp" alt="" loading="lazy" width="960" height="540"><span class="yt-play" aria-hidden="true"></span></button>
+        <script>
+        (function () {
+          var b = document.querySelector('.yt-lite'); if (!b) return;
+          b.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+            f.title = b.getAttribute('aria-label');
+            f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            f.referrerPolicy = 'strict-origin-when-cross-origin'; f.allowFullscreen = true;
+            b.replaceWith(f); f.focus();
+          });
+        })();
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.webp" alt="分頁這麼多！書籤在哪裡？" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>那個網頁，<br>到底在哪裡？</h2>
+          <ul>
+            <li><b>一直開著</b><span>怕關了就找不回來，所以不敢關。</span></li>
+            <li><b>找個不停</b><span>每天花 5 分鐘、10 分鐘，在分頁海裡找。</span></li>
+            <li><b>全部不見</b><span>電腦變慢，重新啟動後，分頁全沒了。</span></li>
+          </ul>
+          <p>手一直在忙，工作卻沒有進展。<br>這種時間，不用再花了。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
+    <div class="container">
+      <div class="feature-header">
+        <h2>書桌上， <span class="text-gradient">只放現在要做的事。</span></h2>
+        <p>之後要用的，收進抽屜。</p>
+      </div>
+
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">現在</div>
+          <div class="nd-what">分頁</div>
+          <div class="nd-say">現在手上正在做的事。</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
+        </div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></i>收起來</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">抽屜</div>
+          <div class="nd-what">書籤</div>
+          <div class="nd-say">之後還會再用的東西。</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">客戶 A 專案</div>
+            <div class="drawer-row in">資料</div>
+            <div class="drawer-row">稍後閱讀</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="nd-close">要做的事，和要留著的東西。<br>光是分開，腦袋就輕鬆了。</p>
+
+      <figure class="app-shot">
+        <img src="../img/zh-tw/app-panel.webp" alt="瀏覽器右側是 LB TAB Layers。專案「客戶 A 廣告改版」的分頁排成一組" loading="lazy" width="1280" height="800">
+        <figcaption>一直在瀏覽器旁邊。分頁依專案整理在一起。</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" /></svg></i><b>收起來</b><p>把用完的分頁一次全部關閉。</p></div>
+        <div class="verb"><i class="ti ti-player-play tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 4v16l13 -8l-13 -8" /></svg></i><b>拿出來</b><p>把專案的分頁一次全部開啟。</p></div>
+        <div class="verb"><i class="ti ti-search tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></svg></i><b>找到</b><p>輸入幾個字，網頁就出現。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.webp" alt="分頁和書籤合而為一" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>分頁和書籤，<br><span class="text-gradient">合而為一。</span></h2>
+          <p>瀏覽器旁邊，一直是同一個畫面。<br>上面是書籤，下面是目前的分頁。<br>不用來回切換，全部都看得到。</p>
+          <p>按 Alt+T，在任何網頁都能開啟。</p>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.webp" alt="分頁一次全部關掉。但已存成書籤，不會不見" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>關掉了，<br><span class="text-gradient">也不會不見。</span></h2>
+          <p>收起來的地方，就是 Chrome 書籤。</p>
+          <ul>
+            <li><span>電腦重新啟動了，還在。</span></li>
+            <li><span>Chrome 當掉了，還在。</span></li>
+            <li><span>把這個擴充功能移除了，還在。</span></li>
+          </ul>
+          <p>所以，可以放心關掉。</p>
+        </div>
+      </div>
+      <div class="voices">
+        <p class="voices-eyebrow">來自 Chrome Web Store 的評論（譯自日文）</p>
+        <div class="voices-grid">
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 顆星">★★★★★</div>
+            <blockquote>工作上暫時會用到的網站可以整理在一起，覺得很方便。 <b>可以整個群組一次關掉，這點很棒。</b> 比一個一個加書籤輕鬆多了。</blockquote>
+            <figcaption>Ayu</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 顆星">★★★★★</div>
+            <blockquote>以前不知不覺就開了多到誇張的分頁，要找想看的網頁很辛苦。 <b>介面很好懂，我覺得不擅長整理的人也能輕鬆使用。</b></blockquote>
+            <figcaption>Koji</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 顆星">★★★★★</div>
+            <blockquote>總想著「分頁開太多，電腦會變慢」，卻一直放著不管。這個也許就是解決辦法。 <b>把東西分進資料夾，心情也跟著清爽，感覺很好。</b></blockquote>
+            <figcaption>yuto matsuoka</figcaption>
+          </figure>
+        </div>
+        <p class="voices-link"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej/reviews">在 Chrome Web Store 看評論 →</a></p>
+      </div>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zhtw_mid_solved" class="btn btn-primary" id="cta-mid-solved">免費加到 Chrome</a>
+        <span class="mid-cta-note">不需註冊帳號 · 30 天內所有功能免費</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
+    <div class="container">
+      <div class="feature-header">
+        <h2>不用動腦的操作， <span class="text-gradient">少一點。</span></h2>
+        <p>每次只要幾秒。可是一天要做幾十次。</p>
+      </div>
+      <div class="reduce-list">
+        <div class="reduce-row"><div class="reduce-before">每天早上，重新開啟昨天的分頁</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">按一下 ▶，專案的分頁全部開啟</div></div>
+        <div class="reduce-row"><div class="reduce-before">每次儲存，都要想放哪裡</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">按右鍵，選專案就好</div></div>
+        <div class="reduce-row"><div class="reduce-before">到處找那個網頁</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">輸入幾個字就找得到</div></div>
+        <div class="reduce-row"><div class="reduce-before">把用完的分頁一個一個關掉</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">用 ■ 一次全部關閉。儲存的會留下</div></div>
+        <div class="reduce-row"><div class="reduce-before">每接一個專案，都要建一樣的資料夾</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">用範本，連同結構一次建好</div></div>
+        <div class="reduce-row"><div class="reduce-before">為了做報告，一頁一頁截圖</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">一次全部截好，直接放進 PowerPoint</div></div>
+        <div class="reduce-row"><div class="reduce-before">暫停影片，到別的地方寫修改內容</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">暫停，當場寫下，按 Enter</div></div>
+      </div>
+      <p class="reduce-close">省下來的時間，就用來思考吧。</p>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zhtw_mid_reduce" class="btn btn-primary" id="cta-mid-reduce">免費加到 Chrome</a>
+        <span class="mid-cta-note">不需註冊帳號 · 30 天內所有功能免費</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story story-video">
+        <div class="story-img">
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" width="1024" height="782" aria-label="實際畫面。暫停影片，在下方的輸入欄寫字，按 Enter 儲存後繼續播放。接著，在暫停的畫面上加上附編號的指示。最後開啟指示表，上面列著附時間的各項指示"><track kind="captions" src="../img/zh-tw/review-demo.vtt" srclang="zh-Hant" label="繁體中文"></video>
+          <p class="story-video-note">這是開啟電腦裡的影片檔時的畫面。在 YouTube 上也是一樣的操作。</p>
+        </div>
+        <div>
+          <h2>在 YouTube 影片上，<br><span class="text-gradient">直接寫修改指示。</span></h2>
+          <p>不用重新上傳影片，直接寫在瀏覽器裡正在看的影片上。支援 YouTube、Vimeo、Google Drive，以及嵌入網頁的影片。</p>
+          <ul>
+            <li><span>暫停，寫下，按 Enter。影片繼續播放。</span></li>
+            <li><span>還可以在畫面上標編號、畫線。</span></li>
+            <li><span>指示會連同時間整理成一張指示表，可以用 PDF 或 PowerPoint 交給對方。</span></li>
+          </ul>
+          <div class="fmt-row" aria-label="匯出格式"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /> <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M17 18h2" /> <path d="M20 15h-3v6" /> <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" /></svg></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M11 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M16.5 15h3" /> <path d="M18 15v6" /> <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /></svg></i>PowerPoint</span></div>
+          <p>這是一家影像製作公司，為了自己的修改溝通而做的。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  (function () {
+    var v = document.getElementById('review-demo-video');
+    if (!v) return;
+    var lis = document.querySelectorAll('#review .story-video li');
+    var MARKS = [0,6.58,18.02];
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var src = small ? '../img/zh-tw/review-demo-m.mp4' : '../img/zh-tw/review-demo.mp4';
+    var poster = small ? '../img/zh-tw/review-demo-m.webp' : '../img/zh-tw/review-demo.webp';
+    function mark() {
+      var k = -1, i;
+      if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
+      for (i = 0; i < lis.length; i++) lis[i].classList.toggle('is-on', i === k);
+    }
+    v.addEventListener('timeupdate', mark);
+    v.addEventListener('pause', mark);
+    if (calm) { v.controls = true; v.loop = false; v.poster = poster; v.src = src; return; }
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    if (!('IntersectionObserver' in window)) { v.poster = poster; v.src = src; play(); return; }
+    var loaded = false;
+    new IntersectionObserver(function (es) {
+      for (var i = 0; i < es.length; i++) {
+        if (es[i].isIntersecting) { if (!loaded) { v.poster = poster; v.src = src; loaded = true; } play(); }
+        else if (loaded) v.pause();
+      }
+    }, { rootMargin: '240px 0px' }).observe(v);
+  })();
+  </script>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
+    <div class="container">
+      <div class="feature-header">
+        <h2>用著用著， <span class="text-gradient">就會發現更多。</span></h2>
+        <p>一開始，只用分頁和書籤就夠了。<br>需要更多的時候，它就在旁邊。</p>
+      </div>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/zh-tw/app-memo.webp" alt="備忘錄畫面。在正在看的網頁旁邊，寫備忘錄和檢查清單" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">思考</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-note tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M13 20l7 -7" /> <path d="M13 20v-6a1 1 0 0 1 1 -1h6v-7a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7" /></svg></i><div><b>備忘錄</b><span>想到了，就馬上寫下來。</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-list-check tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5" /> <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" /> <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" /> <path d="M11 6l9 0" /> <path d="M11 12l9 0" /> <path d="M11 18l9 0" /></svg></i><div><b>步驟</b><span>要做的事，照順序來。做完就打勾。</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-star tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg></i><div><b>★ 評等</b><span>只看這週重要的東西。</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/zh-tw/app-board.webp" alt="看板畫面。所有專案以卡片並排" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">綜觀</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" /> <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /> <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" /> <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /></svg></i><div><b>儀表板</b><span>所有內容，攤開在一大張畫面上。</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 4l6 0" /> <path d="M14 4l6 0" /> <path d="M4 10a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2l0 -8" /> <path d="M14 10a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2l0 -2" /></svg></i><div><b>看板</b><span>把專案排成卡片。</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-photo tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></i><div><b>縮圖</b><span>看外觀就認得出來。</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/zh-tw/app-review.webp" alt="修改指示的指示表。每個場景列出播放位置和附編號的指示" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">傳達</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 9h8" /> <path d="M8 13h6" /> <path d="M15 18l-3 3l-3 -3h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5" /> <path d="M19 16v3" /> <path d="M19 22v.01" /></svg></i><div><b>修改指示</b><span>邊看影片邊寫，再交給對方。</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-camera tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /> <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg></i><div><b>螢幕截圖</b><span>截下來，直接放進資料。</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-copy tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></i><div><b>整批複製</b><span>選好，交給人或 AI。</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="medal"><i class="ti ti-medal tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 4v3m-4 -3v6m8 -6v6" /> <path d="M12 18.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5l-3 -1.5" /></svg></i>用得越多，獎牌累積越多。第一次操作時，還有小小的慶祝。</p>
+      <p class="path-more"><a href="../en/features.html">查看所有功能 →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
+    <div class="container">
+      <div class="feature-header"><h2>公司的電腦也能用。</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8.18 8.189a4.01 4.01 0 0 0 2.616 2.627m3.507 -.545a4 4 0 1 0 -5.59 -5.552" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h4c.412 0 .81 .062 1.183 .178m2.633 2.618c.12 .38 .184 .785 .184 1.204v2" /> <path d="M3 3l18 18" /></svg></i><b>不需註冊</b><p>安裝後馬上就能用。</p></div>
+        <div><i class="ti ti-device-laptop tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 19l18 0" /> <path d="M5 7a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1l0 -8" /></svg></i><b>資料留在你手邊</b><p>儲存的位置，就是你的 Chrome 書籤。</p></div>
+        <div><i class="ti ti-credit-card-off tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 3l18 18" /> <path d="M9 5h9a3 3 0 0 1 3 3v8a3 3 0 0 1 -.128 .87" /> <path d="M18.87 18.872a3 3 0 0 1 -.87 .128h-12a3 3 0 0 1 -3 -3v-8c0 -1.352 .894 -2.495 2.124 -2.87" /> <path d="M3 11l8 0" /> <path d="M15 11l6 0" /> <path d="M7 15l.01 0" /> <path d="M11 15l2 0" /></svg></i><b>沒有月費</b><p>免費開始，喜歡的話再一次買斷。</p></div>
+      </div>
+      <p class="safe-link"><a href="../en/privacy-policy.html">隱私權政策 →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.webp" alt="企劃用的資料分頁、線上工具分頁、一大堆 AI 分頁" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>把創作的時間，<br>拿回來。</h2>
+          <p>Liquid Block 是一家製作影片和動態圖像的工作室。企劃用的資料、線上工具、各式各樣的 AI。在製作現場，分頁多到滿出來。</p>
+          <p>尋找、重新開啟、重新製作。不想讓這些事占掉思考的時間， <strong style="color:var(--text)">所以我們為自己做了這個工具。</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
+    <div class="container">
+      <div class="feature-header"><h2>常見問題</h2></div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>可以免費使用嗎？</summary>
+          <p>可以。儲存、搜尋、一次全部開啟和關閉，都可以免費使用。前 30 天可以試用所有功能。PRO 是一次買斷，沒有月費。</p>
+        </details>
+        <details class="faq-item">
+          <summary>現有的書籤會怎麼樣？</summary>
+          <p>可以照常使用。Chrome 的書籤可以直接匯入並整理。</p>
+        </details>
+        <details class="faq-item">
+          <summary>移除擴充功能後，資料會怎麼樣？</summary>
+          <p>儲存的分頁會以 Chrome 書籤的形式留下。主題、顏色等設定會消失。</p>
+        </details>
+        <details class="faq-item">
+          <summary>支援哪些瀏覽器？</summary>
+          <p>可在 Google Chrome（114 以上版本）使用，支援 Windows、Mac、Linux 和 ChromeOS。Edge 版正在準備中。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
+    <div class="container">
+      <h2>先從這裡開始： <span class="text-gradient">分頁和書籤。</span></h2>
+      <p class="d-lead">安裝後馬上就能用。</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=zhtw_final" class="btn btn-primary btn-large" id="cta-final-chrome">免費加到 Chrome</a>
+      </div>
+      <div class="last-links">
+        <a href="../zh/quick-start.html">快速入門</a>
+        <a href="../en/features.html">功能</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>影片與動態圖像製作<br>日本神戶</p></div>
+        <div class="footer-links"><h3 class="footer-h">LB TAB Layers</h3><a href="../zh/quick-start.html">快速入門</a><a href="../en/blog/operation-guide.html">Guide (English)</a><a href="../en/">English</a><a href="../">日本語</a></div>
+        <div class="footer-links"><h3 class="footer-h">Liquid Block</h3><a href="https://www.liquid-block.com">liquid-block.com</a><a href="../en/privacy-policy.html">隱私權政策</a><a href="mailto:info@liquid-block.com">聯絡我們</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

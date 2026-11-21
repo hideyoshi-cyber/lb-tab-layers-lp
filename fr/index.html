@@ -14,6 +14,17 @@
   <link rel="alternate" hreflang="fr" href="https://tablayers.liquid-block.com/fr/">
   <link rel="alternate" hreflang="es" href="https://tablayers.liquid-block.com/es/">
   <link rel="alternate" hreflang="pt-BR" href="https://tablayers.liquid-block.com/pt/">
+  <link rel="alternate" hreflang="it" href="https://tablayers.liquid-block.com/it/">
+  <link rel="alternate" hreflang="nl" href="https://tablayers.liquid-block.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://tablayers.liquid-block.com/pl/">
+  <link rel="alternate" hreflang="tr" href="https://tablayers.liquid-block.com/tr/">
+  <link rel="alternate" hreflang="ru" href="https://tablayers.liquid-block.com/ru/">
+  <link rel="alternate" hreflang="hi" href="https://tablayers.liquid-block.com/hi/">
+  <link rel="alternate" hreflang="id" href="https://tablayers.liquid-block.com/id/">
+  <link rel="alternate" hreflang="vi" href="https://tablayers.liquid-block.com/vi/">
+  <link rel="alternate" hreflang="es-419" href="https://tablayers.liquid-block.com/es-419/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tablayers.liquid-block.com/pt-pt/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://tablayers.liquid-block.com/zh-tw/">
   <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/">
   <meta property="og:title" content="LB TAB Layers — Rangez vos onglets par projet. Ouvrez avec ▶, fermez avec ■.">
   <meta property="og:description" content="Un panneau latéral Chrome qui enregistre vos onglets par projet en favoris Chrome et les rouvre d’un clic en groupe d’onglets. Par Liquid Block Inc., Japon.">
@@ -24,9 +35,11 @@
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;600;700;800&amp;display=swap"></noscript>
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
+  <link rel="preload" as="image" href="../img/fr/hero-demo-m.webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="../img/fr/hero-demo.webp" media="(min-width: 769px)" fetchpriority="high">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
   [
@@ -117,6 +130,8 @@
     </nav>
   </header>
 
+  <main id="main">
+
   <section id="hero" class="hero-v2">
     <div class="hero-glow"></div>
     <div class="hero-container">
@@ -140,7 +155,7 @@
         <p class="hero-note">Alt+T l’ouvre à tout moment.</p>
       </div>
       <div class="hero-demo">
-        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="../img/fr/hero-demo.webp" width="1280" height="832" aria-label="L’écran réel. Trois projets sont ouverts en même temps, soit 11 onglets. Avec ■, vous rangez les projets sur lesquels vous ne travaillez pas ; avec ▶, vous ouvrez le projet suivant d’un coup"></video>
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" width="1280" height="832" aria-label="L’écran réel. Trois projets sont ouverts en même temps, soit 11 onglets. Avec ■, vous rangez les projets sur lesquels vous ne travaillez pas ; avec ▶, vous ouvrez le projet suivant d’un coup"><track kind="captions" src="../img/fr/hero-demo.vtt" srclang="fr" label="Français"></video>
         <p class="hero-demo-cap" id="hero-demo-cap">Les projets s’accumulent : déjà 11 onglets.</p>
         <p class="hero-demo-sub">C’est l’écran réel : LB TAB Layers à droite de Chrome.</p>
       </div>
@@ -153,7 +168,8 @@
     if (!v) return;
     var small = window.matchMedia('(max-width: 768px)').matches;
     var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (small) { v.poster = '../img/fr/hero-demo-m.webp'; v.width = 720; v.height = 720; }
+    v.poster = small ? '../img/fr/hero-demo-m.webp' : '../img/fr/hero-demo.webp';
+    if (small) { v.width = 720; v.height = 720; }
     v.src = small ? '../img/fr/hero-demo-m.mp4' : '../img/fr/hero-demo.mp4';
     if (calm) { v.controls = true; v.loop = false; }
     else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
@@ -176,7 +192,20 @@
   <section id="video-intro">
     <div class="container">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/wa_n6lakFpM" title="LB TAB Layers, pub de 15 secondes : « Trouvé »" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <button type="button" class="yt-lite" data-yt="wa_n6lakFpM" aria-label="LB TAB Layers, pub de 15 secondes : « Trouvé »"><img src="../img/cm-15s.webp" alt="" loading="lazy" width="960" height="540"><span class="yt-play" aria-hidden="true"></span></button>
+        <script>
+        (function () {
+          var b = document.querySelector('.yt-lite'); if (!b) return;
+          b.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+            f.title = b.getAttribute('aria-label');
+            f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            f.referrerPolicy = 'strict-origin-when-cross-origin'; f.allowFullscreen = true;
+            b.replaceWith(f); f.focus();
+          });
+        })();
+        </script>
       </div>
     </div>
   </section>
@@ -185,7 +214,7 @@
   <section class="d-section" id="pain">
     <div class="container">
       <div class="story">
-        <div class="story-img"><img src="../tab-faq-one.jpg" alt="Des onglets partout ! Où sont les favoris ?" loading="lazy" width="640" height="400"></div>
+        <div class="story-img"><img src="../tab-faq-one.webp" alt="Des onglets partout ! Où sont les favoris ?" loading="lazy" width="640" height="400"></div>
         <div>
           <h2>Cette page,<br>elle était où, déjà ?</h2>
           <ul>
@@ -219,7 +248,7 @@
             <div class="tabchip go" style="--c:#EC4899"></div>
           </div>
         </div>
-        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right"></i>Ranger</div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></i>Ranger</div>
         <div class="nd-card nd-later">
           <div class="nd-word">Tiroir</div>
           <div class="nd-what">Favoris</div>
@@ -240,9 +269,9 @@
       </figure>
 
       <div class="verbs">
-        <div class="verb"><i class="ti ti-square-rounded"></i><b>Ranger</b><p>Fermez d’un coup les onglets dont vous avez fini.</p></div>
-        <div class="verb"><i class="ti ti-player-play"></i><b>Ressortir</b><p>Rouvrez d’un coup les onglets d’un projet.</p></div>
-        <div class="verb"><i class="ti ti-search"></i><b>Retrouver</b><p>Tapez quelques lettres, et la page apparaît.</p></div>
+        <div class="verb"><i class="ti ti-square-rounded tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" /></svg></i><b>Ranger</b><p>Fermez d’un coup les onglets dont vous avez fini.</p></div>
+        <div class="verb"><i class="ti ti-player-play tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 4v16l13 -8l-13 -8" /></svg></i><b>Ressortir</b><p>Rouvrez d’un coup les onglets d’un projet.</p></div>
+        <div class="verb"><i class="ti ti-search tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></svg></i><b>Retrouver</b><p>Tapez quelques lettres, et la page apparaît.</p></div>
       </div>
     </div>
   </section>
@@ -251,7 +280,7 @@
   <section class="d-section" id="solved">
     <div class="container">
       <div class="story rev">
-        <div class="story-img"><img src="../tab-bookmarks-one.jpg" alt="Onglets et favoris réunis" loading="lazy" width="640" height="400"></div>
+        <div class="story-img"><img src="../tab-bookmarks-one.webp" alt="Onglets et favoris réunis" loading="lazy" width="640" height="400"></div>
         <div>
           <h2>Onglets et favoris,<br><span class="text-gradient">réunis.</span></h2>
           <p>Toujours le même écran, à côté du navigateur.<br>En haut les favoris, en bas les onglets ouverts.<br>Tout est visible, sans allers-retours.</p>
@@ -259,7 +288,7 @@
         </div>
       </div>
       <div class="story">
-        <div class="story-img"><img src="../tab-features-one.jpg" alt="Les onglets se ferment tous d’un coup. Mais enregistrés en favoris, ils ne sont pas perdus" loading="lazy" width="640" height="400"></div>
+        <div class="story-img"><img src="../tab-features-one.webp" alt="Les onglets se ferment tous d’un coup. Mais enregistrés en favoris, ils ne sont pas perdus" loading="lazy" width="640" height="400"></div>
         <div>
           <h2>Fermés,<br><span class="text-gradient">mais pas perdus.</span></h2>
           <p>Vos onglets sont rangés dans les favoris de Chrome.</p>
@@ -328,7 +357,7 @@
     <div class="container">
       <div class="story story-video">
         <div class="story-img">
-          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" poster="../img/fr/review-demo.webp" width="1024" height="782" aria-label="L’écran réel. Mettez la vidéo en pause, écrivez dans le champ du bas et enregistrez avec Entrée : la lecture continue. Ensuite, des consignes numérotées sont posées sur l’image en pause. Enfin, la fiche s’ouvre avec les consignes et leur minutage"></video>
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" width="1024" height="782" aria-label="L’écran réel. Mettez la vidéo en pause, écrivez dans le champ du bas et enregistrez avec Entrée : la lecture continue. Ensuite, des consignes numérotées sont posées sur l’image en pause. Enfin, la fiche s’ouvre avec les consignes et leur minutage"><track kind="captions" src="../img/fr/review-demo.vtt" srclang="fr" label="Français"></video>
           <p class="story-video-note">Ici, avec un fichier vidéo de votre ordinateur. Sur YouTube, c’est pareil.</p>
         </div>
         <div>
@@ -339,7 +368,7 @@
             <li><span>Vous pouvez aussi tracer des numéros et des traits sur l’image.</span></li>
             <li><span>Les consignes sont réunies sur une fiche, avec leur minutage. À transmettre en PDF ou en PowerPoint.</span></li>
           </ul>
-          <div class="fmt-row" aria-label="Formats d’export"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf" aria-hidden="true"></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt" aria-hidden="true"></i>PowerPoint</span></div>
+          <div class="fmt-row" aria-label="Formats d’export"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /> <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M17 18h2" /> <path d="M20 15h-3v6" /> <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" /></svg></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M11 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M16.5 15h3" /> <path d="M18 15v6" /> <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /></svg></i>PowerPoint</span></div>
           <p>Conçu par un studio de vidéo, pour ses propres échanges de corrections.</p>
         </div>
       </div>
@@ -354,7 +383,7 @@
     var small = window.matchMedia('(max-width: 768px)').matches;
     var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var src = small ? '../img/fr/review-demo-m.mp4' : '../img/fr/review-demo.mp4';
-    if (small) v.poster = '../img/fr/review-demo-m.webp';
+    var poster = small ? '../img/fr/review-demo-m.webp' : '../img/fr/review-demo.webp';
     function mark() {
       var k = -1, i;
       if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
@@ -362,13 +391,13 @@
     }
     v.addEventListener('timeupdate', mark);
     v.addEventListener('pause', mark);
-    if (calm) { v.controls = true; v.loop = false; v.src = src; return; }
+    if (calm) { v.controls = true; v.loop = false; v.poster = poster; v.src = src; return; }
     function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
-    if (!('IntersectionObserver' in window)) { v.src = src; play(); return; }
+    if (!('IntersectionObserver' in window)) { v.poster = poster; v.src = src; play(); return; }
     var loaded = false;
     new IntersectionObserver(function (es) {
       for (var i = 0; i < es.length; i++) {
-        if (es[i].isIntersecting) { if (!loaded) { v.src = src; loaded = true; } play(); }
+        if (es[i].isIntersecting) { if (!loaded) { v.poster = poster; v.src = src; loaded = true; } play(); }
         else if (loaded) v.pause();
       }
     }, { rootMargin: '240px 0px' }).observe(v);
@@ -389,9 +418,9 @@
           <div>
             <div class="path-key">Réfléchir</div>
             <div class="path-tiles">
-              <a class="tile" href="../en/features.html"><i class="ti ti-note"></i><div><b>Notes</b><span>Une idée ? Notez-la sur place.</span></div></a>
-              <a class="tile" href="../en/features.html"><i class="ti ti-list-check"></i><div><b>Étapes</b><span>Vos tâches, dans l’ordre. Cochez quand c’est fait.</span></div></a>
-              <a class="tile" href="../en/features.html"><i class="ti ti-star"></i><div><b>Rang ★</b><span>Ne voyez que l’essentiel de la semaine.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-note tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M13 20l7 -7" /> <path d="M13 20v-6a1 1 0 0 1 1 -1h6v-7a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7" /></svg></i><div><b>Notes</b><span>Une idée ? Notez-la sur place.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-list-check tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5" /> <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" /> <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" /> <path d="M11 6l9 0" /> <path d="M11 12l9 0" /> <path d="M11 18l9 0" /></svg></i><div><b>Étapes</b><span>Vos tâches, dans l’ordre. Cochez quand c’est fait.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-star tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg></i><div><b>Rang ★</b><span>Ne voyez que l’essentiel de la semaine.</span></div></a>
             </div>
           </div>
         </div>
@@ -400,9 +429,9 @@
           <div>
             <div class="path-key">Vue d’ensemble</div>
             <div class="path-tiles">
-              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard"></i><div><b>Tableau de bord</b><span>Tout, sur une seule grande page.</span></div></a>
-              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban"></i><div><b>Tableau</b><span>Alignez vos projets sous forme de cartes.</span></div></a>
-              <a class="tile" href="../en/features.html"><i class="ti ti-photo"></i><div><b>Miniatures</b><span>Reconnaissez les pages d’un coup d’œil.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" /> <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /> <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" /> <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /></svg></i><div><b>Tableau de bord</b><span>Tout, sur une seule grande page.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 4l6 0" /> <path d="M14 4l6 0" /> <path d="M4 10a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2l0 -8" /> <path d="M14 10a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2l0 -2" /></svg></i><div><b>Tableau</b><span>Alignez vos projets sous forme de cartes.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-photo tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></i><div><b>Miniatures</b><span>Reconnaissez les pages d’un coup d’œil.</span></div></a>
             </div>
           </div>
         </div>
@@ -411,15 +440,15 @@
           <div>
             <div class="path-key">Transmettre</div>
             <div class="path-tiles">
-              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation"></i><div><b>Consignes de correction</b><span>Écrivez en regardant la vidéo, puis transmettez.</span></div></a>
-              <a class="tile" href="../en/features.html"><i class="ti ti-camera"></i><div><b>Captures</b><span>Capturez, et c’est prêt pour vos documents.</span></div></a>
-              <a class="tile" href="../en/features.html"><i class="ti ti-copy"></i><div><b>Copie groupée</b><span>Sélectionnez, puis transmettez à une personne ou à une IA.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 9h8" /> <path d="M8 13h6" /> <path d="M15 18l-3 3l-3 -3h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5" /> <path d="M19 16v3" /> <path d="M19 22v.01" /></svg></i><div><b>Consignes de correction</b><span>Écrivez en regardant la vidéo, puis transmettez.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-camera tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /> <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg></i><div><b>Captures</b><span>Capturez, et c’est prêt pour vos documents.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-copy tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></i><div><b>Copie groupée</b><span>Sélectionnez, puis transmettez à une personne ou à une IA.</span></div></a>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="medal"><i class="ti ti-medal"></i>Plus vous l’utilisez, plus vous gagnez de médailles. Et une petite fête pour chaque première fois.</p>
+      <p class="medal"><i class="ti ti-medal tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 4v3m-4 -3v6m8 -6v6" /> <path d="M12 18.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5l-3 -1.5" /></svg></i>Plus vous l’utilisez, plus vous gagnez de médailles. Et une petite fête pour chaque première fois.</p>
       <p class="path-more"><a href="../en/features.html">Voir toutes les fonctionnalités →</a></p>
     </div>
   </section>
@@ -429,9 +458,9 @@
     <div class="container">
       <div class="feature-header"><h2>Même sur l’ordinateur du bureau.</h2></div>
       <div class="safe">
-        <div><i class="ti ti-user-off"></i><b>Aucune inscription</b><p>Installez, et utilisez tout de suite.</p></div>
-        <div><i class="ti ti-device-laptop"></i><b>Vos données restent chez vous</b><p>Tout est enregistré dans les favoris de votre Chrome.</p></div>
-        <div><i class="ti ti-credit-card-off"></i><b>Pas d’abonnement mensuel</b><p>Commencez gratuitement. Si cela vous plaît, un achat unique suffit.</p></div>
+        <div><i class="ti ti-user-off tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8.18 8.189a4.01 4.01 0 0 0 2.616 2.627m3.507 -.545a4 4 0 1 0 -5.59 -5.552" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h4c.412 0 .81 .062 1.183 .178m2.633 2.618c.12 .38 .184 .785 .184 1.204v2" /> <path d="M3 3l18 18" /></svg></i><b>Aucune inscription</b><p>Installez, et utilisez tout de suite.</p></div>
+        <div><i class="ti ti-device-laptop tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 19l18 0" /> <path d="M5 7a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1l0 -8" /></svg></i><b>Vos données restent chez vous</b><p>Tout est enregistré dans les favoris de votre Chrome.</p></div>
+        <div><i class="ti ti-credit-card-off tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 3l18 18" /> <path d="M9 5h9a3 3 0 0 1 3 3v8a3 3 0 0 1 -.128 .87" /> <path d="M18.87 18.872a3 3 0 0 1 -.87 .128h-12a3 3 0 0 1 -3 -3v-8c0 -1.352 .894 -2.495 2.124 -2.87" /> <path d="M3 11l8 0" /> <path d="M15 11l6 0" /> <path d="M7 15l.01 0" /> <path d="M11 15l2 0" /></svg></i><b>Pas d’abonnement mensuel</b><p>Commencez gratuitement. Si cela vous plaît, un achat unique suffit.</p></div>
       </div>
       <p class="safe-link"><a href="../en/privacy-policy.html">Politique de confidentialité →</a></p>
     </div>
@@ -441,7 +470,7 @@
   <section class="d-section white" id="philosophy">
     <div class="container">
       <div class="story rev">
-        <div class="story-img"><img src="../tab-persistence-one.jpg" alt="Onglets de documents pour un dossier de présentation, onglets d’outils en ligne et nombreux onglets d’IA" loading="lazy" width="640" height="400"></div>
+        <div class="story-img"><img src="../tab-persistence-one.webp" alt="Onglets de documents pour un dossier de présentation, onglets d’outils en ligne et nombreux onglets d’IA" loading="lazy" width="640" height="400"></div>
         <div>
           <h2>Le temps de créer,<br>retrouvé.</h2>
           <p>Liquid Block est un studio de vidéo et de motion design. Documents pour les présentations, outils en ligne, IA en tout genre : en production, les onglets débordent.</p>
@@ -491,12 +520,14 @@
     </div>
   </section>
 
+  </main>
+
   <footer id="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Production vidéo et motion design<br>Kobe, Japon</p></div>
-        <div class="footer-links"><h4>LB TAB Layers</h4><a href="quick-start.html">Démarrage rapide</a><a href="../en/blog/operation-guide.html">Guide (English)</a><a href="../en/">English</a><a href="../">日本語</a></div>
-        <div class="footer-links"><h4>Liquid Block</h4><a href="https://www.liquid-block.com">liquid-block.com</a><a href="../en/privacy-policy.html">Politique de confidentialité</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div>
+        <div class="footer-links"><h3 class="footer-h">LB TAB Layers</h3><a href="quick-start.html">Démarrage rapide</a><a href="../en/blog/operation-guide.html">Guide (English)</a><a href="../en/">English</a><a href="../">日本語</a></div>
+        <div class="footer-links"><h3 class="footer-h">Liquid Block</h3><a href="https://www.liquid-block.com">liquid-block.com</a><a href="../en/privacy-policy.html">Politique de confidentialité</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div>
       </div>
       <div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div>
     </div>

@@ -12,8 +12,8 @@
   --border-strong: rgba(0, 0, 0, 0.12);
   --text: #383C44;
   --text-secondary: #6E6E73;
-  --text-tertiary: #86868B;
-  --text-quaternary: #AEAEB2;
+  --text-tertiary: #707075;   /* 2026-11-21：#86868B では、明るい灰色の背景で文字の読みやすさ（コントラスト 4.5）が足りなかった */
+  --text-quaternary: #707075; /* 同上（もとは #AEAEB2） */
   --accent: #4A60D1;
   --accent-soft: rgba(74, 96, 209, 0.08);
   --radius: 16px;
@@ -1124,7 +1124,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   border-color: var(--text);
   transform: translateY(-2px);
 }
-.footer-links h4 {
+.footer-links h4, .footer-links .footer-h {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -2195,7 +2195,7 @@ i.fmt-i { font-size: 1.15em; vertical-align: -0.18em; margin: 0 2px; }
 .voices-eyebrow { text-align: center; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.04em; margin-bottom: 20px; }
 .voices-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .voice { margin: 0; background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px; }
-.voice-stars { color: #F5B301; font-size: 0.95rem; letter-spacing: 2px; }
+.voice-stars { color: #946200; font-size: 0.95rem; letter-spacing: 2px; }
 .voice blockquote { margin: 0; font-size: 0.98rem; line-height: 1.8; color: var(--text-secondary); flex: 1; }
 .voice blockquote b { color: var(--text); font-weight: 700; }
 .voice figcaption { font-size: 0.88rem; color: var(--text-tertiary); }
@@ -2221,8 +2221,8 @@ i.fmt-i { font-size: 1.15em; vertical-align: -0.18em; margin: 0 2px; }
 
 /* 英語の最初の画面：見出しの 1 行が長いので、列に収まる大きさに */
 /* LATIN-H1 */
-@media (min-width: 980px) { html:is([lang="en"], [lang="de"], [lang="es"], [lang="fr"], [lang="pt-BR"]) #hero.hero-v2 h1 { font-size: min(2.1rem, 2.9vw); } }
-@media (max-width: 768px) { html:is([lang="en"], [lang="de"], [lang="es"], [lang="fr"], [lang="pt-BR"]) #hero.hero-v2 h1 { font-size: min(2rem, 7.4vw); } }
+@media (min-width: 980px) { html:not([lang="ja"]):not([lang="ko"]):not([lang^="zh"]) #hero.hero-v2 h1 { font-size: min(2.1rem, 2.9vw); } }
+@media (max-width: 768px) { html:not([lang="ja"]):not([lang="ko"]):not([lang^="zh"]) #hero.hero-v2 h1 { font-size: min(2rem, 7.4vw); } }
 
 /* ===== 2026-11-21：「動画の修正指示」の節を、動く画面に（class="story story-video" の付いた節だけ） ===== */
 .story.story-video { max-width: 1120px; grid-template-columns: 1.4fr 1fr; gap: 48px; }
@@ -2235,3 +2235,22 @@ html[lang="en"] .story-video-el { aspect-ratio: 1024 / 808; }
 .story.story-video li.is-on span { color: var(--text); }
 @media (max-width: 900px) { .story.story-video { grid-template-columns: 1fr; gap: 24px; } }
 @media (prefers-reduced-motion: reduce) { .story.story-video li, .story.story-video li span { transition: none; } }
+
+/* ヒンディー語・ベトナム語：文字の上下に付く記号が重ならないよう、見出しの行間を広げる（2026-11-21） */
+html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3 { line-height: 1.45; letter-spacing: 0; }
+html[lang="vi"] h1, html[lang="vi"] h2, html[lang="vi"] h3 { line-height: 1.3; }
+
+/* 機能紹介のテーマ：実際のサイドパネルの写真（2026-11-21） */
+.theme-shot { display: block; width: 100%; height: auto; aspect-ratio: 720 / 952; border-radius: 10px; border: 1px solid var(--border); }
+
+/* ===== 2026-11-21：トップを軽く ===== */
+/* アイコン：文字ではなく、埋め込んだ SVG（大きさは今までどおり font-size で決まる） */
+.tis { display: inline-block; font-style: normal; line-height: 1; vertical-align: -0.125em; }
+.tis > svg { display: block; width: 1em; height: 1em; }
+/* 15 秒 CM：押すまでは表紙の画像だけ */
+.video-wrapper .yt-lite { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: #000; cursor: pointer; }
+.yt-lite img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.yt-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%); border-radius: 14px; background: rgba(23, 23, 23, 0.82); transition: background 0.2s ease; }
+.yt-play::after { content: ''; position: absolute; left: 27px; top: 14px; border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #fff; }
+.yt-lite:hover .yt-play, .yt-lite:focus-visible .yt-play { background: #f00; }
+.yt-lite:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }

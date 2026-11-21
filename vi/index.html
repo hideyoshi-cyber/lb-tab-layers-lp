@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LB TAB Layers — Sắp xếp thẻ theo dự án. Mở bằng ▶, đóng bằng ■.</title>
+  <meta name="description" content="Bảng điều khiển bên của Chrome, lưu các thẻ theo từng dự án thành dấu trang Chrome và mở lại thành nhóm thẻ Chrome chỉ bằng một cú nhấp. Của Liquid Block Inc., Nhật Bản.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/vi/">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/">
+  <link rel="alternate" hreflang="ko" href="https://tablayers.liquid-block.com/ko/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tablayers.liquid-block.com/zh/">
+  <link rel="alternate" hreflang="de" href="https://tablayers.liquid-block.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://tablayers.liquid-block.com/fr/">
+  <link rel="alternate" hreflang="es" href="https://tablayers.liquid-block.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tablayers.liquid-block.com/pt/">
+  <link rel="alternate" hreflang="it" href="https://tablayers.liquid-block.com/it/">
+  <link rel="alternate" hreflang="nl" href="https://tablayers.liquid-block.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://tablayers.liquid-block.com/pl/">
+  <link rel="alternate" hreflang="tr" href="https://tablayers.liquid-block.com/tr/">
+  <link rel="alternate" hreflang="ru" href="https://tablayers.liquid-block.com/ru/">
+  <link rel="alternate" hreflang="hi" href="https://tablayers.liquid-block.com/hi/">
+  <link rel="alternate" hreflang="id" href="https://tablayers.liquid-block.com/id/">
+  <link rel="alternate" hreflang="vi" href="https://tablayers.liquid-block.com/vi/">
+  <link rel="alternate" hreflang="es-419" href="https://tablayers.liquid-block.com/es-419/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tablayers.liquid-block.com/pt-pt/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://tablayers.liquid-block.com/zh-tw/">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/">
+  <meta property="og:title" content="LB TAB Layers — Sắp xếp thẻ theo dự án. Mở bằng ▶, đóng bằng ■.">
+  <meta property="og:description" content="Bảng điều khiển bên của Chrome, lưu các thẻ theo từng dự án thành dấu trang Chrome và mở lại thành nhóm thẻ Chrome chỉ bằng một cú nhấp. Của Liquid Block Inc., Nhật Bản.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tablayers.liquid-block.com/vi/">
+  <meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-quick-start-en.webp">
+  <meta property="og:site_name" content="LB TAB Layers">
+  <meta property="og:locale" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;600;700;800&amp;display=swap"></noscript>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preload" as="image" href="../img/vi/hero-demo-m.webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="../img/vi/hero-demo.webp" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LB TAB Layers",
+      "operatingSystem": "Chrome",
+      "applicationCategory": "BrowserApplication",
+      "inLanguage": "vi",
+      "softwareVersion": "3.0.3",
+      "description": "Bảng điều khiển bên của Chrome, lưu các thẻ theo từng dự án thành dấu trang Chrome và mở lại thành nhóm thẻ Chrome chỉ bằng một cú nhấp. Của Liquid Block Inc., Nhật Bản.",
+      "url": "https://tablayers.liquid-block.com/vi/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Liquid Block Inc.",
+        "url": "https://www.liquid-block.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Có miễn phí không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. Lưu, tìm kiếm, mở và đóng tất cả cùng lúc đều miễn phí. Trong 30 ngày đầu, bạn có thể dùng thử mọi tính năng. PRO là mua một lần, không có phí hằng tháng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dấu trang hiện có của tôi sẽ ra sao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bạn cứ dùng tiếp như cũ. Dấu trang Chrome của bạn có thể đưa vào nguyên vẹn rồi sắp xếp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Nếu tôi gỡ tiện ích, dữ liệu của tôi sẽ ra sao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Các thẻ đã lưu vẫn còn dưới dạng dấu trang Chrome. Các cài đặt như giao diện và màu sắc sẽ bị xóa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hỗ trợ những trình duyệt nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Chrome (phiên bản 114 trở lên) trên Windows, Mac, Linux và ChromeOS. Bản cho Edge đang được chuẩn bị."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+  <style>
+    .il-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+    .il-step{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:20px;padding:22px;text-align:center}
+    .il-step img{width:100%;max-width:220px;border-radius:12px;box-shadow:0 8px 24px rgba(33,37,41,.14);margin:0 auto 16px;display:block}
+    .il-step h3{font-size:1.15rem;margin:0 0 8px}
+    .il-step p{font-size:.95rem;color:var(--text-secondary);line-height:1.7;margin:0}
+    .il-lead{text-align:center;color:var(--text-secondary);max-width:680px;margin:-6px auto 28px;line-height:1.7}
+    .il-hero-img{width:100%;max-width:300px;border-radius:16px;box-shadow:0 18px 44px rgba(17,24,39,.18)}
+    @media (max-width:820px){.il-steps{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="https://tablayers.liquid-block.com/vi/" class="logo" aria-label="LB TAB Layers"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a>
+      <div class="nav-links">
+        <a href="quick-start.html">Cách dùng</a>
+        <a href="#privacy">Quyền riêng tư</a>
+        <a href="#faq">FAQ</a>
+        <a href="quick-start.html">Bắt đầu nhanh</a>
+        <a href="../en/" title="English">🌐 EN</a>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=vi_nav" class="nav-cta">Thêm vào Chrome</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <section id="hero" class="hero-v2">
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span>Tiện ích Chrome — miễn phí (bản cho Edge đang chuẩn bị)</div>
+        <h1>
+          <span class="h1-phrase">Bớt thời gian tìm</span> <span class="h1-phrase">thẻ và dấu trang.</span><br>
+          <strong>Thêm thời gian để suy nghĩ.</strong>
+        </h1>
+        <p class="hero-sub">
+          <strong>Quản lý dấu trang và thẻ cùng nhau, trên một màn hình.</strong><br>
+          Thẻ là “bây giờ”. Dấu trang là “ngăn kéo”.<br>
+          Cất các thẻ công việc theo từng dự án, rồi mở lại tất cả cùng lúc.
+        </p>
+      </div>
+      <div class="hero-cta">
+        <div class="hero-actions" id="cta-main">
+          <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=vi_hero" class="btn btn-primary" id="hero-cta-chrome">Thêm vào Chrome</a>
+          <a href="quick-start.html" class="btn btn-ghost">Xem cách bắt đầu</a>
+        </div>
+        <p class="hero-note">Mở bất cứ lúc nào bằng Alt+T.</p>
+      </div>
+      <div class="hero-demo">
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" width="1280" height="832" aria-label="Màn hình thật. Ba dự án đang mở cùng lúc, tổng cộng 11 thẻ. Nhấp ■ để cất những dự án bạn chưa làm tới, rồi nhấp ▶ để mở dự án tiếp theo trong một lần"><track kind="captions" src="../img/vi/hero-demo.vtt" srclang="vi" label="Tiếng Việt"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">Dự án dồn lại, và bạn đã có 11 thẻ.</p>
+        <p class="hero-demo-sub">Đây là màn hình thật: LB TAB Layers ở bên phải Chrome.</p>
+      </div>
+    </div>
+  </section>
+  <script>
+  /* Hero video: pick the desktop or mobile file by width. With reduced motion, keep it paused and show the controls. The line below follows the scene. */
+  (function () {
+    var v = document.getElementById('hero-demo-video'), cap = document.getElementById('hero-demo-cap');
+    if (!v) return;
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    v.poster = small ? '../img/vi/hero-demo-m.webp' : '../img/vi/hero-demo.webp';
+    if (small) { v.width = 720; v.height = 720; }
+    v.src = small ? '../img/vi/hero-demo-m.mp4' : '../img/vi/hero-demo.mp4';
+    if (calm) { v.controls = true; v.loop = false; }
+    else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    var CAPS = [
+      [0, 'Dự án dồn lại, và bạn đã có 11 thẻ.'],
+      [2.2, 'Thứ chưa làm tới thì cất đi bằng ■.'],
+      [9.2, 'Chỉ còn lại dự án của hôm nay.'],
+      [12.2, 'Mở dự án tiếp theo chỉ bằng một ▶.']
+    ];
+    var last = '';
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, s = CAPS[0][1];
+      for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
+      if (s !== last) { last = s; cap.classList.add('is-out'); setTimeout(function () { cap.textContent = s; cap.classList.remove('is-out'); }, 180); }
+    });
+  })();
+  </script>
+
+  <!-- ===== 2. 15秒 ===== -->
+  <section id="video-intro">
+    <div class="container">
+      <div class="video-wrapper">
+        <button type="button" class="yt-lite" data-yt="wa_n6lakFpM" aria-label="LB TAB Layers – quảng cáo 15 giây: “Tìm thấy rồi”"><img src="../img/cm-15s.webp" alt="" loading="lazy" width="960" height="540"><span class="yt-play" aria-hidden="true"></span></button>
+        <script>
+        (function () {
+          var b = document.querySelector('.yt-lite'); if (!b) return;
+          b.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+            f.title = b.getAttribute('aria-label');
+            f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            f.referrerPolicy = 'strict-origin-when-cross-origin'; f.allowFullscreen = true;
+            b.replaceWith(f); f.focus();
+          });
+        })();
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 困りごと ===== -->
+  <section class="d-section" id="pain">
+    <div class="container">
+      <div class="story">
+        <div class="story-img"><img src="../tab-faq-one.webp" alt="Nhiều thẻ quá! Dấu trang ở đâu rồi?" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Trang đó,<br>ở đâu ấy nhỉ?</h2>
+          <ul>
+            <li><b>Cứ để mở</b><span>Bạn không đóng thẻ nào, vì sợ không tìm lại được.</span></li>
+            <li><b>Tìm mãi</b><span>Mỗi ngày mất 5, 10 phút giữa một biển thẻ.</span></li>
+            <li><b>Mất hết</b><span>Máy chậm, bạn khởi động lại, và các thẻ biến mất.</span></li>
+          </ul>
+          <p>Tay thì bận, mà việc không tiến.<br>Khoảng thời gian đó sẽ không còn nữa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. 今 と 引き出し（ここが主役） ===== -->
+  <section class="d-section white" id="now-and-drawer">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Trên bàn làm việc, <span class="text-gradient">chỉ có việc đang làm.</span></h2>
+        <p>Thứ để dùng sau thì cho vào ngăn kéo.</p>
+      </div>
+
+      <div class="nd">
+        <div class="nd-card nd-now">
+          <div class="nd-word">Bây giờ</div>
+          <div class="nd-what">Thẻ</div>
+          <div class="nd-say">Việc bạn đang làm lúc này.</div>
+          <div class="desk" aria-hidden="true">
+            <div class="tabchip" style="--c:#F59E0B"></div>
+            <div class="tabchip on" style="--c:#4A60D1"></div>
+            <div class="tabchip" style="--c:#22C55E"></div>
+            <div class="tabchip go" style="--c:#EC4899"></div>
+          </div>
+        </div>
+        <div class="nd-arrow" aria-hidden="true"><i class="ti ti-arrow-right tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></i>Cất đi</div>
+        <div class="nd-card nd-later">
+          <div class="nd-word">Ngăn kéo</div>
+          <div class="nd-what">Dấu trang</div>
+          <div class="nd-say">Thứ bạn sẽ dùng lại sau.</div>
+          <div class="drawer" aria-hidden="true">
+            <div class="drawer-row">Dự án khách hàng A</div>
+            <div class="drawer-row in">Tài liệu</div>
+            <div class="drawer-row">Đọc sau</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="nd-close">Việc cần làm, và thứ cần giữ.<br>Chỉ cần tách riêng ra là đầu óc đã nhẹ hẳn.</p>
+
+      <figure class="app-shot">
+        <img src="../img/vi/app-panel.webp" alt="LB TAB Layers ở bên phải trình duyệt. Các thẻ của dự án “Khách hàng A – Làm mới quảng cáo” nằm cùng nhau thành một cụm" loading="lazy" width="1280" height="800">
+        <figcaption>Luôn ở bên cạnh trình duyệt. Các thẻ được gom theo từng dự án.</figcaption>
+      </figure>
+
+      <div class="verbs">
+        <div class="verb"><i class="ti ti-square-rounded tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" /></svg></i><b>Cất đi</b><p>Đóng tất cả các thẻ đã xong cùng lúc.</p></div>
+        <div class="verb"><i class="ti ti-player-play tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 4v16l13 -8l-13 -8" /></svg></i><b>Lấy ra</b><p>Mở tất cả các thẻ của một dự án cùng lúc.</p></div>
+        <div class="verb"><i class="ti ti-search tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></svg></i><b>Tìm</b><p>Gõ vài chữ là trang hiện ra.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決（写真） ===== -->
+  <section class="d-section" id="solved">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-bookmarks-one.webp" alt="Thẻ và dấu trang ở cùng một chỗ" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Thẻ và dấu trang,<br><span class="text-gradient">ở cùng một chỗ.</span></h2>
+          <p>Luôn là màn hình ấy, ngay cạnh trình duyệt.<br>Dấu trang ở trên, các thẻ đang mở ở dưới.<br>Bạn thấy hết mọi thứ mà không phải chuyển qua chuyển lại.</p>
+          <p>Nhấn Alt+T để mở từ bất kỳ trang nào.</p>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-img"><img src="../tab-features-one.webp" alt="Các thẻ đóng lại tất cả cùng lúc. Nhưng đã lưu thành dấu trang nên không mất" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Đóng rồi,<br><span class="text-gradient">vẫn không mất.</span></h2>
+          <p>Thẻ được cất vào dấu trang của Chrome.</p>
+          <ul>
+            <li><span>Máy tính khởi động lại: vẫn còn.</span></li>
+            <li><span>Chrome gặp sự cố: vẫn còn.</span></li>
+            <li><span>Bạn gỡ tiện ích này: vẫn còn.</span></li>
+          </ul>
+          <p>Vì vậy bạn có thể yên tâm đóng thẻ.</p>
+        </div>
+      </div>
+      <div class="voices">
+        <p class="voices-eyebrow">Trích từ các bài đánh giá trên Chrome Web Store (dịch từ tiếng Nhật)</p>
+        <div class="voices-grid">
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 sao">★★★★★</div>
+            <blockquote>Tôi thấy rất tiện vì gom được những trang chỉ dùng tạm thời trong công việc. <b>Tôi thích ở chỗ có thể dọn cả một nhóm trong một lần.</b> Nhẹ nhàng hơn nhiều so với việc lưu từng dấu trang một.</blockquote>
+            <figcaption>Ayu</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 sao">★★★★★</div>
+            <blockquote>Trước đây, chẳng mấy chốc tôi đã mở cả đống thẻ, và tìm trang mình cần thật vất vả. <b>Giao diện dễ hiểu, nên tôi nghĩ người không giỏi sắp xếp cũng dùng được thoải mái.</b></blockquote>
+            <figcaption>Koji</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5 sao">★★★★★</div>
+            <blockquote>Tôi vẫn nghĩ “mở nhiều thẻ quá thì máy sẽ chậm” mà cứ để mặc đó. Đây có lẽ là lời giải. <b>Việc chia vào các thư mục cho cảm giác gọn gàng và rất dễ chịu.</b></blockquote>
+            <figcaption>yuto matsuoka</figcaption>
+          </figure>
+        </div>
+        <p class="voices-link"><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej/reviews">Đọc các bài đánh giá trên Chrome Web Store →</a></p>
+      </div>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=vi_mid_solved" class="btn btn-primary" id="cta-mid-solved">Thêm vào Chrome miễn phí</a>
+        <span class="mid-cta-note">Không cần đăng ký · Miễn phí mọi tính năng trong 30 ngày</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 減る作業 ===== -->
+  <section class="d-section white" id="less-busywork-d">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Bớt đi những việc <span class="text-gradient">không cần suy nghĩ.</span></h2>
+        <p>Mỗi lần chỉ mất vài giây. Nhưng bạn làm việc đó hàng chục lần mỗi ngày.</p>
+      </div>
+      <div class="reduce-list">
+        <div class="reduce-row"><div class="reduce-before">Sáng nào cũng mở lại các thẻ của hôm qua</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Một ▶ mở tất cả thẻ của dự án</div></div>
+        <div class="reduce-row"><div class="reduce-before">Mỗi lần lưu lại phải nghĩ xem để ở đâu</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Nhấp chuột phải, chọn dự án, xong</div></div>
+        <div class="reduce-row"><div class="reduce-before">Lục tìm đúng cái trang đó</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Gõ vài chữ là tìm thấy</div></div>
+        <div class="reduce-row"><div class="reduce-before">Đóng từng thẻ đã xong, từng cái một</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Đóng tất cả bằng ■. Thứ đã lưu vẫn còn</div></div>
+        <div class="reduce-row"><div class="reduce-before">Dự án nào cũng tạo lại những thư mục giống nhau</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Từ một mẫu, tạo cả cấu trúc trong một lần</div></div>
+        <div class="reduce-row"><div class="reduce-before">Chụp từng màn hình một để làm báo cáo</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Chụp tất cả cùng lúc, đưa thẳng vào PowerPoint</div></div>
+        <div class="reduce-row"><div class="reduce-before">Tạm dừng video rồi ghi chỉnh sửa ở một nơi khác</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">Tạm dừng, viết ngay tại đó, Enter</div></div>
+      </div>
+      <p class="reduce-close">Hãy dùng thời gian có lại để suy nghĩ.</p>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=vi_mid_reduce" class="btn btn-primary" id="cta-mid-reduce">Thêm vào Chrome miễn phí</a>
+        <span class="mid-cta-note">Không cần đăng ký · Miễn phí mọi tính năng trong 30 ngày</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 動画の修正指示 ===== -->
+  <section class="d-section" id="review">
+    <div class="container">
+      <div class="story story-video">
+        <div class="story-img">
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" width="1024" height="782" aria-label="Màn hình thật. Tạm dừng video, viết vào ô bên dưới rồi nhấn Enter để lưu – video tiếp tục phát. Sau đó, các ghi chú có đánh số được đặt lên khung hình đang dừng. Cuối cùng, bảng chỉnh sửa mở ra với các ghi chú kèm mã thời gian"><track kind="captions" src="../img/vi/review-demo.vtt" srclang="vi" label="Tiếng Việt"></video>
+          <p class="story-video-note">Ở đây dùng một tệp video trên máy tính. Trên YouTube cũng làm y như vậy.</p>
+        </div>
+        <div>
+          <h2>Ngay trên video YouTube:<br><span class="text-gradient">ghi chú chỉnh sửa.</span></h2>
+          <p>Bạn không cần tải video lên lại. Viết thẳng lên video bạn đang xem trong trình duyệt: YouTube, Vimeo, Google Drive hoặc video nhúng trong trang web.</p>
+          <ul>
+            <li><span>Tạm dừng, viết, Enter. Video tiếp tục phát.</span></li>
+            <li><span>Bạn cũng có thể vẽ số và đường kẻ lên hình.</span></li>
+            <li><span>Các ghi chú được đưa vào một bảng, kèm mã thời gian. Gửi đi dưới dạng PDF hoặc PowerPoint.</span></li>
+          </ul>
+          <div class="fmt-row" aria-label="Định dạng xuất"><span class="fmt fmt-pdf"><i class="ti ti-file-type-pdf tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /> <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M17 18h2" /> <path d="M20 15h-3v6" /> <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" /></svg></i>PDF</span><span class="fmt fmt-ppt"><i class="ti ti-file-type-ppt tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M11 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" /> <path d="M16.5 15h3" /> <path d="M18 15v6" /> <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /></svg></i>PowerPoint</span></div>
+          <p>Do một studio sản xuất video làm ra, cho chính các vòng chỉnh sửa của mình.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  (function () {
+    var v = document.getElementById('review-demo-video');
+    if (!v) return;
+    var lis = document.querySelectorAll('#review .story-video li');
+    var MARKS = [0,6.82,18.16];
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var src = small ? '../img/vi/review-demo-m.mp4' : '../img/vi/review-demo.mp4';
+    var poster = small ? '../img/vi/review-demo-m.webp' : '../img/vi/review-demo.webp';
+    function mark() {
+      var k = -1, i;
+      if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
+      for (i = 0; i < lis.length; i++) lis[i].classList.toggle('is-on', i === k);
+    }
+    v.addEventListener('timeupdate', mark);
+    v.addEventListener('pause', mark);
+    if (calm) { v.controls = true; v.loop = false; v.poster = poster; v.src = src; return; }
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    if (!('IntersectionObserver' in window)) { v.poster = poster; v.src = src; play(); return; }
+    var loaded = false;
+    new IntersectionObserver(function (es) {
+      for (var i = 0; i < es.length; i++) {
+        if (es[i].isIntersecting) { if (!loaded) { v.poster = poster; v.src = src; loaded = true; } play(); }
+        else if (loaded) v.pause();
+      }
+    }, { rootMargin: '240px 0px' }).observe(v);
+  })();
+  </script>
+
+  <!-- ===== 4. 使っているうちに、行き着く ===== -->
+  <section class="d-section white" id="path">
+    <div class="container">
+      <div class="feature-header">
+        <h2>Cứ dùng dần, <span class="text-gradient">bạn sẽ khám phá thêm.</span></h2>
+        <p>Lúc đầu, chỉ thẻ và dấu trang là đủ.<br>Khi cần thêm, mọi thứ ở ngay bên cạnh.</p>
+      </div>
+
+      <div class="path">
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/vi/app-memo.webp" alt="Màn hình Ghi chú. Bạn viết ghi chú và danh sách kiểm ngay bên cạnh trang đang xem" loading="lazy" width="880" height="660"></div>
+          <div>
+            <div class="path-key">Suy nghĩ</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-note tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M13 20l7 -7" /> <path d="M13 20v-6a1 1 0 0 1 1 -1h6v-7a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7" /></svg></i><div><b>Ghi chú</b><span>Nảy ra ý gì? Ghi lại ngay.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-list-check tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5" /> <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" /> <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" /> <path d="M11 6l9 0" /> <path d="M11 12l9 0" /> <path d="M11 18l9 0" /></svg></i><div><b>Bước</b><span>Việc cần làm, theo thứ tự. Xong việc nào, đánh dấu việc đó.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-star tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245" /></svg></i><div><b>★ Xếp hạng</b><span>Tuần này chỉ xem những gì quan trọng.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row rev">
+          <div class="path-shot"><img src="../img/vi/app-board.webp" alt="Màn hình Bảng. Mọi dự án nằm cạnh nhau, mỗi dự án một tấm thẻ" loading="lazy" width="1400" height="820"></div>
+          <div>
+            <div class="path-key">Nhìn bao quát</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-dashboard tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" /> <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /> <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" /> <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" /></svg></i><div><b>Bảng tổng quan</b><span>Mọi thứ trên một trang lớn.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-layout-kanban tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 4l6 0" /> <path d="M14 4l6 0" /> <path d="M4 10a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2l0 -8" /> <path d="M14 10a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2l0 -2" /></svg></i><div><b>Bảng</b><span>Xếp các dự án thành từng tấm thẻ.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-photo tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M15 8h.01" /> <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12" /> <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /> <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg></i><div><b>Hình thu nhỏ</b><span>Nhìn hình là nhận ra.</span></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="path-row">
+          <div class="path-shot"><img src="../img/vi/app-review.webp" alt="Một bảng chỉnh sửa. Mỗi cảnh có vị trí phát và các ghi chú có đánh số" loading="lazy" width="1280" height="760"></div>
+          <div>
+            <div class="path-key">Truyền đạt</div>
+            <div class="path-tiles">
+              <a class="tile" href="../en/features.html"><i class="ti ti-message-2-exclamation tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 9h8" /> <path d="M8 13h6" /> <path d="M15 18l-3 3l-3 -3h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5" /> <path d="M19 16v3" /> <path d="M19 22v.01" /></svg></i><div><b>Ghi chú chỉnh sửa</b><span>Vừa xem video vừa viết, rồi gửi đi.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-camera tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /> <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg></i><div><b>Ảnh chụp màn hình</b><span>Chụp rồi đưa thẳng vào tài liệu.</span></div></a>
+              <a class="tile" href="../en/features.html"><i class="ti ti-copy tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></i><div><b>Sao chép cùng lúc</b><span>Chọn rồi chuyển cho người khác hoặc cho AI.</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="medal"><i class="ti ti-medal tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 4v3m-4 -3v6m8 -6v6" /> <path d="M12 18.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5l-3 -1.5" /></svg></i>Càng dùng, bạn càng có thêm huy chương. Lần đầu làm được việc gì cũng có một màn chúc mừng nhỏ.</p>
+      <p class="path-more"><a href="../en/features.html">Xem tất cả tính năng →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== 5. 安心 ===== -->
+  <section class="d-section" id="privacy">
+    <div class="container">
+      <div class="feature-header"><h2>Dùng được cả trên máy tính công ty.</h2></div>
+      <div class="safe">
+        <div><i class="ti ti-user-off tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8.18 8.189a4.01 4.01 0 0 0 2.616 2.627m3.507 -.545a4 4 0 1 0 -5.59 -5.552" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h4c.412 0 .81 .062 1.183 .178m2.633 2.618c.12 .38 .184 .785 .184 1.204v2" /> <path d="M3 3l18 18" /></svg></i><b>Không cần đăng ký</b><p>Cài xong là dùng được ngay.</p></div>
+        <div><i class="ti ti-device-laptop tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 19l18 0" /> <path d="M5 7a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1l0 -8" /></svg></i><b>Dữ liệu ở lại với bạn</b><p>Mọi thứ được lưu trong dấu trang Chrome của chính bạn.</p></div>
+        <div><i class="ti ti-credit-card-off tis" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 3l18 18" /> <path d="M9 5h9a3 3 0 0 1 3 3v8a3 3 0 0 1 -.128 .87" /> <path d="M18.87 18.872a3 3 0 0 1 -.87 .128h-12a3 3 0 0 1 -3 -3v-8c0 -1.352 .894 -2.495 2.124 -2.87" /> <path d="M3 11l8 0" /> <path d="M15 11l6 0" /> <path d="M7 15l.01 0" /> <path d="M11 15l2 0" /></svg></i><b>Không có phí hằng tháng</b><p>Bắt đầu miễn phí. Nếu thích, bạn chỉ cần mua một lần.</p></div>
+      </div>
+      <p class="safe-link"><a href="../en/privacy-policy.html">Chính sách quyền riêng tư →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== つくった人 ===== -->
+  <section class="d-section white" id="philosophy">
+    <div class="container">
+      <div class="story rev">
+        <div class="story-img"><img src="../tab-persistence-one.webp" alt="Các thẻ tài liệu cho bản đề xuất, các thẻ công cụ trực tuyến, rất nhiều thẻ AI" loading="lazy" width="640" height="400"></div>
+        <div>
+          <h2>Lấy lại<br>thời gian để sáng tạo.</h2>
+          <p>Liquid Block là một studio làm video và đồ họa chuyển động. Tài liệu cho bản đề xuất, công cụ trực tuyến, rất nhiều AI: trong lúc sản xuất, thẻ cứ thế tràn ra.</p>
+          <p>Tìm, mở lại, tạo lại. Không muốn những việc đó lấy mất thời gian suy nghĩ, <strong style="color:var(--text)">chúng tôi đã làm ra công cụ này cho chính mình.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== よくある質問（4つだけ・閉じた状態） ===== -->
+  <section class="d-section" id="faq">
+    <div class="container">
+      <div class="feature-header"><h2>Câu hỏi thường gặp</h2></div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Có miễn phí không?</summary>
+          <p>Có. Lưu, tìm kiếm, mở và đóng tất cả cùng lúc đều miễn phí. Trong 30 ngày đầu, bạn có thể dùng thử mọi tính năng. PRO là mua một lần, không có phí hằng tháng.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Dấu trang hiện có của tôi sẽ ra sao?</summary>
+          <p>Bạn cứ dùng tiếp như cũ. Dấu trang Chrome của bạn có thể đưa vào nguyên vẹn rồi sắp xếp.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Nếu tôi gỡ tiện ích, dữ liệu của tôi sẽ ra sao?</summary>
+          <p>Các thẻ đã lưu vẫn còn dưới dạng dấu trang Chrome. Các cài đặt như giao diện và màu sắc sẽ bị xóa.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hỗ trợ những trình duyệt nào?</summary>
+          <p>Google Chrome (phiên bản 114 trở lên) trên Windows, Mac, Linux và ChromeOS. Bản cho Edge đang được chuẩn bị.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. はじめる ===== -->
+  <section class="d-section white last" id="final">
+    <div class="container">
+      <h2>Hãy bắt đầu <span class="text-gradient">từ thẻ và dấu trang.</span></h2>
+      <p class="d-lead">Cài xong là dùng được ngay.</p>
+      <div class="hero-actions">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=vi_final" class="btn btn-primary btn-large" id="cta-final-chrome">Thêm vào Chrome miễn phí</a>
+      </div>
+      <div class="last-links">
+        <a href="quick-start.html">Bắt đầu nhanh</a>
+        <a href="../en/features.html">Tính năng</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Sản xuất video và đồ họa chuyển động<br>Kobe, Nhật Bản</p></div>
+        <div class="footer-links"><h3 class="footer-h">LB TAB Layers</h3><a href="quick-start.html">Bắt đầu nhanh</a><a href="../en/blog/operation-guide.html">Guide (English)</a><a href="../en/">English</a><a href="../">日本語</a></div>
+        <div class="footer-links"><h3 class="footer-h">Liquid Block</h3><a href="https://www.liquid-block.com">liquid-block.com</a><a href="../en/privacy-policy.html">Chính sách quyền riêng tư</a><a href="mailto:info@liquid-block.com">Liên hệ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
