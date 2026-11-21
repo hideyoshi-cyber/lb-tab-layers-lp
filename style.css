@@ -2222,3 +2222,15 @@ i.fmt-i { font-size: 1.15em; vertical-align: -0.18em; margin: 0 2px; }
 /* 英語の最初の画面：見出しの 1 行が長いので、列に収まる大きさに */
 @media (min-width: 980px) { html[lang="en"] #hero.hero-v2 h1 { font-size: min(2.1rem, 2.9vw); } }
 @media (max-width: 768px) { html[lang="en"] #hero.hero-v2 h1 { font-size: min(2rem, 7.4vw); } }
+
+/* ===== 2026-11-21：「動画の修正指示」の節を、動く画面に（class="story story-video" の付いた節だけ） ===== */
+.story.story-video { max-width: 1120px; grid-template-columns: 1.4fr 1fr; gap: 48px; }
+.story-video-el { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 782; background: #eef1ef; border-radius: 18px; box-shadow: 0 16px 48px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05); }
+html[lang="en"] .story-video-el { aspect-ratio: 1024 / 808; }
+.story .story-video-note { margin-top: 12px; font-size: 0.84rem; line-height: 1.6; color: var(--text-secondary); text-align: center; text-wrap: balance; }
+.story.story-video li { padding: 7px 12px; margin: -7px -12px; border-radius: 10px; transition: background-color 0.25s ease; }
+.story.story-video li span { transition: color 0.25s ease; }
+.story.story-video li.is-on { background-color: var(--accent-soft); }
+.story.story-video li.is-on span { color: var(--text); }
+@media (max-width: 900px) { .story.story-video { grid-template-columns: 1fr; gap: 24px; } }
+@media (prefers-reduced-motion: reduce) { .story.story-video li, .story.story-video li span { transition: none; } }

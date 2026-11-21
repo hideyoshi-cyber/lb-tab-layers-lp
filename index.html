@@ -383,8 +383,11 @@
   <!-- ===== 動画の修正指示 ===== -->
   <section class="d-section" id="review">
     <div class="container">
-      <div class="story">
-        <div class="story-img"><img src="img/app-review.webp" alt="修正指示の画面。動画を止めて、下の欄に書く。右に、指示が時刻つきで並ぶ" loading="lazy" width="1280" height="760"></div>
+      <div class="story story-video">
+        <div class="story-img">
+          <video id="review-demo-video" class="story-video-el" muted loop playsinline preload="none" poster="img/review-demo.webp" width="1024" height="782" aria-label="実際の画面。動画を止めて下の欄に書き、Enter で保存すると再生が続く。次に、止めた絵の上に番号を付けて書く。最後に、指示が時刻つきで並んだシートを開く"></video>
+          <p class="story-video-note">手元の動画ファイルでの画面です。YouTube でも、同じ流れで書けます。</p>
+        </div>
         <div>
           <h2>YouTube の動画に、<br><span class="text-gradient">そのまま修正指示。</span></h2>
           <p>動画を上げ直さなくても、ブラウザで見ているその動画に書けます。YouTube、Vimeo、Google ドライブ、Web ページに埋め込まれた動画。</p>
@@ -399,6 +402,36 @@
       </div>
     </div>
   </section>
+  <script>
+  /* 修正指示の動画：近くまで来たら読み込んで再生し、見えなくなったら止める。右の 3 行は、いまの場面に合わせて濃くする。動きを減らす設定では、止めたまま操作ボタンを出す。 */
+  (function () {
+    var v = document.getElementById('review-demo-video');
+    if (!v) return;
+    var lis = document.querySelectorAll('#review .story-video li');
+    var MARKS = [0,6.83,16.96];
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var src = small ? 'img/review-demo-m.mp4' : 'img/review-demo.mp4';
+    if (small) v.poster = 'img/review-demo-m.webp';
+    function mark() {
+      var k = -1, i;
+      if (!v.paused) for (i = 0; i < MARKS.length; i++) if (v.currentTime >= MARKS[i]) k = i;
+      for (i = 0; i < lis.length; i++) lis[i].classList.toggle('is-on', i === k);
+    }
+    v.addEventListener('timeupdate', mark);
+    v.addEventListener('pause', mark);
+    if (calm) { v.controls = true; v.loop = false; v.src = src; return; }
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    if (!('IntersectionObserver' in window)) { v.src = src; play(); return; }
+    var loaded = false;
+    new IntersectionObserver(function (es) {
+      for (var i = 0; i < es.length; i++) {
+        if (es[i].isIntersecting) { if (!loaded) { v.src = src; loaded = true; } play(); }
+        else if (loaded) v.pause();
+      }
+    }, { rootMargin: '240px 0px' }).observe(v);
+  })();
+  </script>
 
   <!-- ===== 4. 使っているうちに、行き着く ===== -->
   <section class="d-section white" id="path">
