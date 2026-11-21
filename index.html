@@ -197,8 +197,8 @@
         <p class="hero-note">Alt+T で、いつでも開けます。</p>
       </div>
       <div class="hero-demo">
-        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="img/hero-demo.webp" width="1280" height="720" aria-label="実際の画面。案件が3つ重なってタブが12本あるところから、■ で今やらない案件をしまい、▶ で次の案件をまとめて開く"></video>
-        <p class="hero-demo-cap" id="hero-demo-cap">案件が重なると、タブは 12 本。</p>
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="img/hero-demo.webp" width="1280" height="832" aria-label="実際の画面。案件が3つ重なってタブが11本あるところから、■ で今やらない案件をしまい、▶ で次の案件をまとめて開く"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">案件が重なると、タブは 11 本。</p>
         <p class="hero-demo-sub">実際の画面です（Chrome の右に LB TAB Layers）。</p>
       </div>
     </div>
@@ -210,16 +210,15 @@
     if (!v) return;
     var small = window.matchMedia('(max-width: 768px)').matches;
     var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (small) { v.poster = 'img/hero-demo-m.webp'; v.width = 660; v.height = 660; }
+    if (small) { v.poster = 'img/hero-demo-m.webp'; v.width = 720; v.height = 720; }
     v.src = small ? 'img/hero-demo-m.mp4' : 'img/hero-demo.mp4';
     if (calm) { v.controls = true; v.loop = false; }
     else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
     var CAPS = [
-      [0, '案件が重なると、タブは 12 本。'],
+      [0, '案件が重なると、タブは 11 本。'],
       [2.2, '今やらない案件は、■ でしまう。'],
-      [7.4, '残るのは、今日の案件だけ。'],
-      [9.6, '終わったら、■ でまとめて閉じる。ブックマークは残ります。'],
-      [13.4, '次の案件は、▶ ひとつで。']
+      [9.2, '残るのは、今日の案件だけ。'],
+      [12.2, '次の案件は、▶ ひとつで開く。']
     ];
     var last = '';
     v.addEventListener('timeupdate', function () {
