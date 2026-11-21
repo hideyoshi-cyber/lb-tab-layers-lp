@@ -174,7 +174,7 @@
   </header>
 
   <!-- ===== 1. 一言 ===== -->
-  <section id="hero">
+  <section id="hero" class="hero-v2">
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
@@ -224,7 +224,7 @@
     v.addEventListener('timeupdate', function () {
       var t = v.currentTime, s = CAPS[0][1];
       for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
-      if (s !== last) { last = s; cap.textContent = s; }
+      if (s !== last) { last = s; cap.classList.add('is-out'); setTimeout(function () { cap.textContent = s; cap.classList.remove('is-out'); }, 180); }
     });
   })();
   </script>
