@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a tab manager need access to all websites?","acceptedAnswer":{"@type":"Answer","text":"Usually for features that work inside the page, such as showing a sidebar over it or taking a screenshot of it. In LB TAB Layers, that access is used for the Overlay display mode, RSS feed detection, reading a page when you ask the AI about it, screenshots and dead-link checks."}},{"@type":"Question","name":"Does LB TAB Layers upload my tabs or browsing history?","acceptedAnswer":{"@type":"Answer","text":"No. Groups and saved tabs are stored as Chrome bookmarks, and Today’s History is read on your computer only. The license check sends a random install ID to our server, not your tabs."}},{"@type":"Question","name":"Can I limit which sites an extension can access?","acceptedAnswer":{"@type":"Answer","text":"Yes. Open chrome://extensions, click Details and change Site access to On click or On specific sites. Features that need page access, such as screenshots, may then stop working on other sites."}},{"@type":"Question","name":"Do I need a Google account connection to use LB TAB Layers?","acceptedAnswer":{"@type":"Answer","text":"No. There is no sign-up. The Google account connection is only for the optional Google Sheets sync in Settings."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a tab manager need access to all websites?","acceptedAnswer":{"@type":"Answer","text":"Usually for features that work inside the page, such as showing a sidebar over it or taking a screenshot of it. In LB TAB Layers, that access is used for the Overlay display mode, RSS feed detection, reading a page when you ask the AI about it, screenshots and dead-link checks."}},{"@type":"Question","name":"Does LB TAB Layers upload my tabs or browsing history?","acceptedAnswer":{"@type":"Answer","text":"No. Groups and saved tabs are stored as Chrome bookmarks, and History (7 days) is read on your computer only. The license check sends a random install ID to our server, not your tabs."}},{"@type":"Question","name":"Can I limit which sites an extension can access?","acceptedAnswer":{"@type":"Answer","text":"Yes. Open chrome://extensions, click Details and change Site access to On click or On specific sites. Features that need page access, such as screenshots, may then stop working on other sites."}},{"@type":"Question","name":"Do I need a Google account connection to use LB TAB Layers?","acceptedAnswer":{"@type":"Answer","text":"No. There is no sign-up. The Google account connection is only for the optional Google Sheets sync in Settings."}}]}
   </script>
 </head>
 <body>
@@ -70,7 +70,7 @@
         <tr><td>storage</td><td>Keeps settings, the group list, the theme and the license status on your computer.</td></tr>
         <tr><td>sidePanel</td><td>Shows the extension in Chrome’s side panel.</td></tr>
         <tr><td>contextMenus</td><td>Adds <strong>Save to TAB Layers</strong> to the right-click menu on web pages.</td></tr>
-        <tr><td>history</td><td>Shows <strong>Today’s History</strong>: pages you visited since midnight, up to 200. It is a PRO feature (also in the free trial) and the list is read on your computer only.</td></tr>
+        <tr><td>history</td><td>Shows <strong>History (7 days)</strong>: pages you visited in the last 7 days, day by day. It is a PRO feature (also in the free trial) and the list is read on your computer only.</td></tr>
         <tr><td>alarms</td><td>Timers: a license check once a day, a bookmark sync check every five minutes, and the end of a Focus Timer session.</td></tr>
         <tr><td>declarativeNetRequest</td><td>The <strong>Focus Timer</strong>. For 25 minutes, sites from the groups you marked are redirected to a page inside the extension that says the Focus Timer is on. The rules are removed when the timer ends.</td></tr>
         <tr><td>downloads</td><td>Saves screenshots. Chrome’s Save As dialog opens every time, so you choose the file name and folder.</td></tr>
@@ -117,7 +117,7 @@
     <p>Usually for features that work inside the page, such as showing a sidebar over it or taking a screenshot of it. In LB TAB Layers, that access is used for the Overlay display mode, RSS feed detection, reading a page when you ask the AI about it, screenshots and dead-link checks.</p>
 
     <h3>Q. Does LB TAB Layers upload my tabs or browsing history?</h3>
-    <p>No. Groups and saved tabs are stored as Chrome bookmarks, and Today’s History is read on your computer only. The license check sends a random install ID to our server, not your tabs.</p>
+    <p>No. Groups and saved tabs are stored as Chrome bookmarks, and History (7 days) is read on your computer only. The license check sends a random install ID to our server, not your tabs.</p>
 
     <h3>Q. Can I limit which sites an extension can access?</h3>
     <p>Yes. Open chrome://extensions, click Details and change Site access to On click or On specific sites. Features that need page access, such as screenshots, may then stop working on other sites.</p>
