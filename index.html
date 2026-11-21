@@ -184,23 +184,51 @@
           <strong>考える時間に。</strong>
         </h1>
         <p class="hero-sub">
-          <strong>ブックマークとタブを、ひとつの画面で同時に管理。</strong><br>
-          タブは「今」。ブックマークは「引き出し」。<br>
-          仕事のタブを案件ごとにしまって、まとめて開く。
+          <strong><span class="ph">ブックマークとタブを、</span><span class="ph">ひとつの画面で同時に管理。</span></strong><br>
+          <span class="ph">タブは「今」。</span><span class="ph">ブックマークは「引き出し」。</span><br class="br-m">
+          <span class="ph">仕事のタブを案件ごとにしまって、</span><span class="ph">まとめて開く。</span>
         </p>
+      </div>
+      <div class="hero-cta">
         <div class="hero-actions" id="cta-main">
           <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=hero" class="btn btn-primary" id="hero-cta-chrome">Chrome に追加</a>
           <a href="blog/quick-start.html" class="btn btn-ghost">はじめかたを見る</a>
         </div>
         <p class="hero-note">Alt+T で、いつでも開けます。</p>
       </div>
-      <div class="hero-visual">
-        <div class="hero-screenshot-wrapper">
-          <img src="img/app-hero.webp" alt="LB TAB Layers のサイドパネル。案件ごとのグループと、今開いているタブが並ぶ" class="hero-screenshot-img" loading="eager" width="420" height="1180">
-        </div>
+      <div class="hero-demo">
+        <video id="hero-demo-video" class="hero-demo-video" muted loop playsinline preload="metadata" poster="img/hero-demo.webp" width="1280" height="720" aria-label="実際の画面。案件が3つ重なってタブが12本あるところから、■ で今やらない案件をしまい、▶ で次の案件をまとめて開く"></video>
+        <p class="hero-demo-cap" id="hero-demo-cap">案件が重なると、タブは 12 本。</p>
+        <p class="hero-demo-sub">実際の画面です（Chrome の右に LB TAB Layers）。</p>
       </div>
     </div>
   </section>
+  <script>
+  /* 最初の画面の動画：画面の幅で PC 用／スマホ用を選ぶ。動きを減らす設定の人には、止めたまま操作ボタンを出す。下の一言は、動画の場面に合わせて変える */
+  (function () {
+    var v = document.getElementById('hero-demo-video'), cap = document.getElementById('hero-demo-cap');
+    if (!v) return;
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (small) { v.poster = 'img/hero-demo-m.webp'; v.width = 660; v.height = 660; }
+    v.src = small ? 'img/hero-demo-m.mp4' : 'img/hero-demo.mp4';
+    if (calm) { v.controls = true; v.loop = false; }
+    else { v.autoplay = true; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+    var CAPS = [
+      [0, '案件が重なると、タブは 12 本。'],
+      [2.2, '今やらない案件は、■ でしまう。'],
+      [7.4, '残るのは、今日の案件だけ。'],
+      [9.6, '終わったら、■ でまとめて閉じる。ブックマークは残ります。'],
+      [13.4, '次の案件は、▶ ひとつで。']
+    ];
+    var last = '';
+    v.addEventListener('timeupdate', function () {
+      var t = v.currentTime, s = CAPS[0][1];
+      for (var i = 0; i < CAPS.length; i++) if (t >= CAPS[i][0]) s = CAPS[i][1];
+      if (s !== last) { last = s; cap.textContent = s; }
+    });
+  })();
+  </script>
 
   <!-- ===== 2. 15秒 ===== -->
   <section id="video-intro">
@@ -301,6 +329,31 @@
           <p>だから、安心して閉じられます。</p>
         </div>
       </div>
+      <div class="voices">
+        <p class="voices-eyebrow">Chrome ウェブストアのレビューより</p>
+        <div class="voices-grid">
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5つ星">★★★★★</div>
+            <blockquote>仕事で一時的に使うサイトなどをまとめておけるのが便利だと思った。<b>グループでまとめて消せるのがいい。</b>ブックマークをいちいち登録するよりはずっと楽。</blockquote>
+            <figcaption>鮎 さん</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5つ星">★★★★★</div>
+            <blockquote>今まで気が付けばとんでもない数のタブが増えていって、見たいページを探すのに苦労していました。<b>UIがわかりやすくて整理が苦手な人でも気楽に使えると思います。</b></blockquote>
+            <figcaption>こーじ さん</figcaption>
+          </figure>
+          <figure class="voice">
+            <div class="voice-stars" aria-label="5つ星">★★★★★</div>
+            <blockquote>タブ増やしすぎるとPC遅くなるしな〜と思いつつ放置してた問題の解決策になるかも。<b>フォルダー分けする作業が気分的にもスッキリして気持ちがいい。</b></blockquote>
+            <figcaption>yuto matsuoka さん</figcaption>
+          </figure>
+        </div>
+        <p class="voices-link"><a href="blog/user-reviews.html">ユーザーの声をもっと読む →</a></p>
+      </div>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=mid_solved" class="btn btn-primary" id="cta-mid-solved">Chrome に無料で追加</a>
+        <span class="mid-cta-note">登録なし · 30日はすべての機能を無料で</span>
+      </div>
     </div>
   </section>
 
@@ -321,6 +374,10 @@
         <div class="reduce-row"><div class="reduce-before">動画を止めて、別の画面に修正を書く</div><div class="reduce-arrow" aria-hidden="true">→</div><div class="reduce-after">止めて、その場で書いて、Enter</div></div>
       </div>
       <p class="reduce-close">浮いた時間を、考えることに使ってください。</p>
+      <div class="mid-cta">
+        <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=lp&amp;utm_campaign=mid_reduce" class="btn btn-primary" id="cta-mid-reduce">Chrome に無料で追加</a>
+        <span class="mid-cta-note">登録なし · 30日はすべての機能を無料で</span>
+      </div>
     </div>
   </section>
 
