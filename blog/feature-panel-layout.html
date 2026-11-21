@@ -3,72 +3,73 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える | LB TAB Layers Blog</title>
-  <meta name="description" content="LB TAB Layers v2.9.0の画面レイアウトを解説。切替バーの「タブ」「ブックマーク」「統合」「メモ」で画面を切り替え、ドラッグで並べ替え。切り分け表示でのタブの保存と、統合表示のリサイズ・折りたたみも紹介。">
+  <meta name="description" content="LB TAB Layersの画面レイアウトを解説。右の列の「タブ」「ブックマーク」「履歴」「メモ」「ステップ」で画面を切り替え、「切り分け」と「統合」はボタンで選ぶ。切り分け表示でのタブの保存と、統合表示のリサイズ・折りたたみも紹介。">
   <meta name="keywords" content="サイドパネル レイアウト,タブ ブックマーク 切り替え,サイドパネル 画面 切り替え,パネル 折りたたみ,グループ 一覧 広げる,LB TAB Layers 画面">
   <link rel="canonical" href="https://tablayers.liquid-block.com/blog/feature-panel-layout.html">
   <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/feature-panel-layout.html">
   <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/feature-panel-layout.html">
-  <meta property="og:title" content="【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える"><meta property="og:description" content="LB TAB Layers v2.9.0の画面レイアウトを解説。切替バーの「タブ」「ブックマーク」「統合」「メモ」で画面を切り替え、ドラッグ"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-panel-layout.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
-  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:modified_time" content="2026-10-19T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える"><meta name="twitter:description" content="LB TAB Layers v2.9.0の画面レイアウトを解説。切替バーの「タブ」「ブックマーク」「統合」「メモ」で画面を切り替え、ドラッグ"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <meta property="og:title" content="【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える"><meta property="og:description" content="LB TAB Layersの画面レイアウトを解説。右の列で画面を切り替え、「切り分け」と「統合」はボタンで選ぶ。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/feature-panel-layout.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-24T00:00:00+09:00"><meta property="article:modified_time" content="2026-11-21T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える"><meta name="twitter:description" content="LB TAB Layersの画面レイアウトを解説。右の列で画面を切り替え、「切り分け」と「統合」はボタンで選ぶ。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
   <script type="application/ld+json">
-  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"画面レイアウト","item":"https://tablayers.liquid-block.com/blog/feature-panel-layout.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","dateModified":"2026-10-19","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-panel-layout.html"}]
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"画面レイアウト","item":"https://tablayers.liquid-block.com/blog/feature-panel-layout.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-09-24","dateModified":"2026-11-21","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/feature-panel-layout.html"}]
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"タブとブックマーク（グループ）を1画面で同時に見たい。","acceptedAnswer":{"@type":"Answer","text":"切替バーの「統合」を押すと、上にグループ一覧、下に単独タブを並べた表示になります。設定の「表示とテーマ」→「表示要素」→「画面レイアウト」で「統合（上下分割）」を選んでも同じです。"}},{"@type":"Question","name":"グループ一覧のエリアを広くするには？","acceptedAnswer":{"@type":"Answer","text":"切替バーの「ブックマーク」を押すと、グループ一覧が画面いっぱいに表示されます。統合レイアウトのままなら、境目のハンドルを下へドラッグするか、下部のタブバー右端のボタンで下部エリアを折りたたみます。"}},{"@type":"Question","name":"切り分けレイアウトで、タブをグループに保存するには？","acceptedAnswer":{"@type":"Answer","text":"単独タブをドラッグして切替バーの「ブックマーク」に重ね、画面が切り替わったら保存したいグループの上でドロップします。行にマウスを乗せると出る「フォルダに保存」のボタンや、右クリックの「フォルダに保存」からも保存できます。"}},{"@type":"Question","name":"リサイズした広さは保存されますか？","acceptedAnswer":{"@type":"Answer","text":"はい。統合レイアウトで変更した比率は保存され、次に開いたときも同じ広さで表示されます。切替バーで選んだ画面やボタンの並び順も保存されます。"}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"タブとブックマーク（グループ）を1画面で同時に見たい。","acceptedAnswer":{"@type":"Answer","text":"レイアウト切り替えボタンを押すと、上にグループ一覧、下に単独タブを並べた表示になります。設定の「見た目」→「画面の並び」→「画面レイアウト」で「統合（上下分割）」を選んでも同じです。"}},{"@type":"Question","name":"グループ一覧のエリアを広くするには？","acceptedAnswer":{"@type":"Answer","text":"右の列の「ブックマーク」を押すと、グループ一覧が画面いっぱいに表示されます。統合レイアウトのままなら、境目のハンドルを下へドラッグするか、下部のタブバー右端のボタンで下部エリアを折りたたみます。"}},{"@type":"Question","name":"切り分けレイアウトで、タブをグループに保存するには？","acceptedAnswer":{"@type":"Answer","text":"行にマウスを乗せると出る「フォルダに保存」のボタンか、右クリックの「フォルダに保存」から、保存先のグループを選びます。統合レイアウトにすれば、単独タブをグループの上へドラッグして保存することもできます。"}},{"@type":"Question","name":"リサイズした広さは保存されますか？","acceptedAnswer":{"@type":"Answer","text":"はい。統合レイアウトで変更した比率は保存され、次に開いたときも同じ広さで表示されます。右の列で選んだ画面も保存されます。"}}]}
   </script>
 </head>
 <body>
   <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
 
-  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>画面レイアウト<br>切替バーで画面を切り替える</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time>（<time datetime="2026-10-19">2026.10.19</time> 更新） · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 6分</p></div></section>
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>画面レイアウト<br>切替バーで画面を切り替える</h1><p class="blog-meta"><time datetime="2026-09-24">2026.09.24</time>（<time datetime="2026-11-21">2026.11.21</time> 更新） · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 6分</p></div></section>
 
   <article class="blog-content">
     <img src="hero-bookmarks-panel.webp" alt="切替バーで「タブ」「ブックマーク」「統合」「メモ」を切り替える" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
     <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%20%E2%80%94%20%E5%88%87%E6%9B%BF%E3%83%90%E3%83%BC%E3%81%A7%E3%80%8C%E3%82%BF%E3%83%96%E3%80%8D%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%80%8C%E3%83%A1%E3%83%A2%E3%80%8D%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%20%E2%80%94%20%E5%88%87%E6%9B%BF%E3%83%90%E3%83%BC%E3%81%A7%E3%80%8C%E3%82%BF%E3%83%96%E3%80%8D%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%80%8C%E3%83%A1%E3%83%A2%E3%80%8D%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-panel-layout.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-panel-layout.html" data-title="【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
 
-    <p class="ai-answer"><strong>v2.9.0 から、サイドパネルのグループ一覧の上に「タブ」「ブックマーク」「統合」「メモ」の切替バーが加わりました。</strong>「タブ」は開いている単独タブ、「ブックマーク」は保存したグループ、「メモ」はメモ＆チェックリストを、それぞれ画面いっぱいに表示します（切り分けレイアウト）。「統合」はグループ一覧と単独タブを上下に並べる従来の表示で、境目をドラッグして広さを変えたり、下のエリアを折りたたんだりできます。</p>
+    <p class="ai-answer"><strong>サイドパネルの画面は、右の縦の列で切り替えます。</strong>「タブ」は開いている単独タブ、「ブックマーク」は保存したグループ、「履歴」はこの1週間に見たページ、「メモ」はメモ＆チェックリスト、「ステップ」はステップタスクを、それぞれ画面いっぱいに表示します（切り分けレイアウト）。グループ一覧と単独タブを上下に並べる「統合」は、レイアウト切り替えボタンか設定で選びます。統合では、境目をドラッグして広さを変えたり、下のエリアを折りたたんだりできます。</p>
 
     <h2>サイドパネルの構成</h2>
     <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>場所</th><th>内容</th></tr></thead><tbody>
-    <tr><td>上部</td><td>モードバー、アイコン、検索、ピンバー</td></tr>
-    <tr><td>切替バー（v2.9.0）</td><td>「タブ」「ブックマーク」「統合」「メモ」の切り替え</td></tr>
+    <tr><td>上部</td><td>アイコン（レイアウト切り替えなど）、検索、ピンバー</td></tr>
+    <tr><td>右の縦の列</td><td>「タブ」「ブックマーク」「履歴」「メモ」「ステップ」の切り替えと、整理・スクショ・修正・AI・DB の道具。下に、表示方法・表示の密度・設定などのボタン</td></tr>
+    <tr><td>グループ一覧の上</td><td>📦 アーカイブ（アーカイブがあるときだけ）</td></tr>
     <tr><td>中央</td><td>グループ一覧（「統合」と「ブックマーク」で表示）</td></tr>
-    <tr><td>下部</td><td>「単独タブ」「本日の履歴」「メモ」を切り替えるタブバー（「統合」と「タブ」で表示）</td></tr>
-    <tr><td>最下部</td><td>📦 アーカイブ（アーカイブがあるときだけ）</td></tr>
+    <tr><td>下部</td><td>「単独タブ」「履歴（1週間）」などを切り替えるタブバー（「統合」と「タブ」で表示）</td></tr>
     </tbody></table></div>
 
-    <h2>切替バーの4つのボタン</h2>
-    <p>切替バーは、上部のモードが「タブ」のときに表示されます（「整理」「スクショ」「AI」「DB」のモードでは表示されません）。</p>
+    <h2>右の列の5つの画面</h2>
+    <p>右の列の上の5つが「画面」、区切りの下の「整理」「スクショ」「修正」「AI」「DB」が「道具」です。道具を開いているときに上の5つを押すと、その画面に戻ります。</p>
     <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>ボタン</th><th>表示される内容</th><th>ボタンの数字</th></tr></thead><tbody>
-    <tr><td>タブ</td><td>開いているタブのうち、Chromeのタブグループに入っておらず、どのグループにも保存していない「<a href="feature-ungrouped-tabs.html">単独タブ</a>」を画面いっぱいに表示。下部のタブで「本日の履歴」（PRO版・トライアル中）や「メモ」にも切り替えられる</td><td>単独タブの数</td></tr>
+    <tr><td>タブ</td><td>開いているタブのうち、Chromeのタブグループに入っておらず、どのグループにも保存していない「<a href="feature-ungrouped-tabs.html">単独タブ</a>」を画面いっぱいに表示</td><td>開いているタブの数（多いとオレンジ・赤）</td></tr>
     <tr><td>ブックマーク</td><td>保存したグループの一覧を画面いっぱいに表示</td><td>グループの数（サブグループを含み、アーカイブは除く）</td></tr>
-    <tr><td>統合</td><td>上にグループ一覧、下に「単独タブ／本日の履歴／メモ」を並べる従来の表示</td><td>—</td></tr>
+    <tr><td>履歴</td><td>この1週間に見たページを、日ごとに表示（PRO版・トライアル中）</td><td>ページの数</td></tr>
     <tr><td>メモ</td><td><a href="feature-notes.html">メモ＆チェックリスト</a>を画面いっぱいに表示</td><td>メモの枚数</td></tr>
+    <tr><td>ステップ</td><td><a href="feature-step-tasks.html">ステップタスク</a>を画面いっぱいに表示</td><td>今日、完了したタスクの数</td></tr>
     </tbody></table></div>
-    <p>「タブ」「ブックマーク」「メモ」のどれかを選んでいる状態を<strong>切り分けレイアウト</strong>、「統合」を<strong>統合レイアウト</strong>と呼びます。選んだ画面は保存され、次に開いたときも同じ画面から始まります。</p>
+    <p>右の列の画面のどれかを選んでいる状態を<strong>切り分けレイアウト</strong>、グループ一覧と単独タブを上下に並べる表示を<strong>統合レイアウト</strong>と呼びます。統合レイアウトは、レイアウト切り替えボタンか設定で選びます（下の「レイアウトを切り替える方法」）。統合のときに右の列の画面を押すと、切り分けレイアウトに戻ります。選んだ画面は保存され、次に開いたときも同じ画面から始まります。</p>
     <p>v2.9.0 に更新した方は、これまでどおり統合レイアウトで始まります。新しくインストールした方は、切り分けレイアウトの「タブ」画面から始まります。</p>
-    <p>更新した方には、切替バーのすぐ上に「新しい「切り分けレイアウト」が選べるようになりました」というお知らせが出ます。「試してみる」を押すと、切り分けレイアウトの「タブ」画面に切り替わります。お知らせは「試してみる」か「×」を押すまで表示され、押したあとは出なくなります。</p>
+    <p>更新した方には、パネルの上のほうに「新しい「切り分けレイアウト」が選べるようになりました」というお知らせが出ます。「試してみる」を押すと、切り分けレイアウトの「タブ」画面に切り替わります。お知らせは「試してみる」か「×」を押すまで表示され、押したあとは出なくなります。</p>
 
-    <h2>ボタンの順番を並び替える</h2>
-    <p>4つのボタンは、左右にドラッグすると順番を入れ替えられます（「タブ」「ブックマーク」「メモ」にマウスを乗せると「クリックで表示切替・ドラッグで順番を並び替え」と表示されます）。よく使う画面を左に置いておくと便利です。並び順は保存され、別窓など同時に開いているほかの画面にも反映されます。</p>
+    <h2>右の列を縮める・上に並べる</h2>
+    <p>右の列の下の「縮める」を押すと、アイコンだけの細い列になります（名前は、アイコンにマウスを乗せると出ます）。列を上の横並びにしたいときは、設定の「見た目」→「画面の並び」→「モード切替の位置」で「上に横並び」を選びます。画面の並び順は、上からタブ・ブックマーク・履歴・メモ・ステップで決まっていて、入れ替えはできません。</p>
 
     <h2>切り分けレイアウトで、タブをグループに保存する</h2>
     <p>切り分けレイアウトでは「タブ」画面と「ブックマーク」画面が分かれているので、単独タブをグループに保存するときは次のどれかを使います。保存したタブは、Chromeのブックマークになります。</p>
     <ul>
-      <li><strong>「ブックマーク」に重ねてからドロップ</strong> — 「タブ」画面の単独タブをドラッグして、切替バーの「ブックマーク」に重ねると、すぐに「ブックマーク」画面に切り替わります。そのまま保存したいグループの上でドロップします。「ブックマーク」ボタンの上で離した場合は、画面が切り替わるだけで保存はされません。</li>
+      <li><strong>統合レイアウトでドラッグ</strong> — レイアウト切り替えボタンで統合レイアウトにすると、下の単独タブを、上のグループの上へそのままドラッグして保存できます。</li>
       <li><strong>行のボタンから</strong> — 単独タブの行にマウスを乗せると、右側にフォルダのボタン（「フォルダに保存」）が出ます。押して「フォルダに保存」を選ぶとグループの一覧が出るので、保存先を選びます。</li>
       <li><strong>右クリックから</strong> — 単独タブを右クリックして「フォルダに保存」から保存先を選んでも、同じように保存できます。</li>
     </ul>
 
-    <h2>レイアウトを切り替えるほかの方法</h2>
+    <h2>レイアウトを切り替える方法</h2>
     <ul>
-      <li><strong>アイコンから</strong> — モードバーのすぐ下に並ぶアイコンのうち、左端のレイアウト切り替えボタンで、切り分けと統合を切り替えます</li>
-      <li><strong>設定から</strong> — 「設定」→「表示とテーマ」→「表示要素」の「画面レイアウト」で、「切り分け（タブ / ブックマーク）」か「統合（上下分割）」を選びます</li>
+      <li><strong>アイコンから</strong> — 検索欄の上に並ぶアイコンの左端（グループ一覧が出ているときは、「グループ」の見出しの右）にあるレイアウト切り替えボタンで、切り分けと統合を切り替えます</li>
+      <li><strong>設定から</strong> — 「設定」→「見た目」→「画面の並び」の「画面レイアウト」で、「切り分け（タブ / ブックマーク）」か「統合（上下分割）」を選びます</li>
     </ul>
     <figure style="margin:1.2rem auto 1.8rem;text-align:center;"><img src="../help/gif/A-05.gif" alt="左端のレイアウト切り替えボタンを押すと、切り分けと統合が切り替わる" loading="lazy" width="960" height="540" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 28px rgba(33,37,41,.14);"><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">左端のレイアウト切り替えボタンを押すと、切り分けと統合が切り替わる</figcaption></figure>
     <p>切り分けレイアウトで「新しいグループ」のボタンを押すと、自動で「ブックマーク」画面に切り替わります。</p>
@@ -77,7 +78,7 @@
     <p>リサイズと折りたたみは、統合レイアウトのときに使えます。グループ一覧と下部エリアの境目にある<strong>リサイズハンドル</strong>を上下にドラッグします。変えた比率は保存され、次に開いたときも同じ広さで表示されます。</p>
 
     <h2>下部エリアを折りたたむ（統合レイアウト）</h2>
-    <p>下部のタブバー右端のボタン（シェブロン）を押すと、単独タブ・本日の履歴・メモのエリアが折りたたまれ、タブバーだけの表示になります。もう一度押すと元に戻ります。<strong>グループ一覧を広く使いたいとき</strong>に便利です。</p>
+    <p>下部のタブバー右端のボタン（シェブロン）を押すと、単独タブ・履歴（1週間）・メモ・ステップのエリアが折りたたまれ、タブバーだけの表示になります。もう一度押すと元に戻ります。<strong>グループ一覧を広く使いたいとき</strong>に便利です。</p>
 
     <h2>おすすめの使い分け</h2>
     <ul>
@@ -85,23 +86,23 @@
       <li><strong>作業中</strong> — 「ブックマーク」でグループ一覧だけを見る（統合なら下部を折りたたむ）</li>
       <li><strong>タブを片付けたいとき</strong> — 「タブ」で開いているタブだけを見て、保存するか閉じるかを決める</li>
       <li><strong>メモを取りながら</strong> — 「統合」で下部のタブを「メモ」にして、グループを見ながら書く</li>
-      <li><strong>探しもの</strong> — 「本日の履歴」に切り替えて、さっき閉じたページを探す（PRO版・トライアル中）</li>
+      <li><strong>探しもの</strong> — 右の列の「履歴」で、さっき閉じたページを探す（PRO版・トライアル中）</li>
     </ul>
 
 
     <h2>よくある質問</h2>
 
     <h3>Q. タブとブックマーク（グループ）を1画面で同時に見たい。</h3>
-    <p>切替バーの「統合」を押すと、上にグループ一覧、下に単独タブを並べた表示になります。設定の「表示とテーマ」→「表示要素」→「画面レイアウト」で「統合（上下分割）」を選んでも同じです。</p>
+    <p>レイアウト切り替えボタンを押すと、上にグループ一覧、下に単独タブを並べた表示になります。設定の「見た目」→「画面の並び」→「画面レイアウト」で「統合（上下分割）」を選んでも同じです。</p>
 
     <h3>Q. グループ一覧のエリアを広くするには？</h3>
-    <p>切替バーの「ブックマーク」を押すと、グループ一覧が画面いっぱいに表示されます。統合レイアウトのままなら、境目のハンドルを下へドラッグするか、下部のタブバー右端のボタンで下部エリアを折りたたみます。</p>
+    <p>右の列の「ブックマーク」を押すと、グループ一覧が画面いっぱいに表示されます。統合レイアウトのままなら、境目のハンドルを下へドラッグするか、下部のタブバー右端のボタンで下部エリアを折りたたみます。</p>
 
     <h3>Q. 切り分けレイアウトで、タブをグループに保存するには？</h3>
-    <p>単独タブをドラッグして切替バーの「ブックマーク」に重ね、画面が切り替わったら保存したいグループの上でドロップします。行にマウスを乗せると出る「フォルダに保存」のボタンや、右クリックの「フォルダに保存」からも保存できます。</p>
+    <p>行にマウスを乗せると出る「フォルダに保存」のボタンか、右クリックの「フォルダに保存」から、保存先のグループを選びます。統合レイアウトにすれば、単独タブをグループの上へドラッグして保存することもできます。</p>
 
     <h3>Q. リサイズした広さは保存されますか？</h3>
-    <p>はい。統合レイアウトで変更した比率は保存され、次に開いたときも同じ広さで表示されます。切替バーで選んだ画面やボタンの並び順も保存されます。</p>
+    <p>はい。統合レイアウトで変更した比率は保存され、次に開いたときも同じ広さで表示されます。右の列で選んだ画面も保存されます。</p>
 
     <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%20%E2%80%94%20%E5%88%87%E6%9B%BF%E3%83%90%E3%83%BC%E3%81%A7%E3%80%8C%E3%82%BF%E3%83%96%E3%80%8D%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%80%8C%E3%83%A1%E3%83%A2%E3%80%8D%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffeature-panel-layout.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E7%94%BB%E9%9D%A2%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%20%E2%80%94%20%E5%88%87%E6%9B%BF%E3%83%90%E3%83%BC%E3%81%A7%E3%80%8C%E3%82%BF%E3%83%96%E3%80%8D%E3%80%8C%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8D%E3%80%8C%E3%83%A1%E3%83%A2%E3%80%8D%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/feature-panel-layout.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/feature-panel-layout.html" data-title="【機能ガイド】画面レイアウト — 切替バーで「タブ」「ブックマーク」「メモ」を切り替える" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
     <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
