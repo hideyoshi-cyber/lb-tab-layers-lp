@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&display=swap');
+/* 日本語の見出しの書体（LINE Seed JP）は、各ページの <head> で読み込む（2026-11-21。ここで @import すると表示が止まる） */
 /* ===== LB TAB Layers LP 窶・Light Minimal (Apple-inspired sizing) ===== */
 
 /* ---------- RESET & BASE ---------- */
