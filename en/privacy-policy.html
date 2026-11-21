@@ -186,7 +186,7 @@
       <li><strong>Tab group information</strong> (tabGroups permission): Gets the state of Chrome's tab groups and uses it for display</li>
       <li><strong>Bookmark information</strong> (bookmarks permission): Syncs the tabs in the groups the user has saved to bookmarks. For duplicate detection and dead-link checks, it reads all of the user's Chrome bookmarks when the user performs those actions</li>
       <li><strong>Local storage</strong> (storage permission): Saves the user's settings (theme, group structure, notes, etc.) inside the browser</li>
-      <li><strong>Browsing history</strong> (history permission): Used for the feature that lists today's browsing history in the side panel (PRO version only) and for suggesting frequently used sites. For suggestions, the history of the last 14 days is tallied only on this computer and is not sent outside</li>
+      <li><strong>Browsing history</strong> (history permission): Used for the feature that lists the browsing history of the last 7 days in the side panel ("History (7 days)", PRO version only) and for suggesting frequently used sites. The Extension reads the history that Chrome has recorded each time it is needed and does not store it. For suggestions, the history of the last 14 days is tallied only on this computer and is not sent outside</li>
       <li><strong>Favicons</strong> (favicon permission): Shows, next to saved pages, pins and frequently used sites, the site icons that Chrome has stored on this computer. They are not sent to any external service</li>
       <li><strong>Alarms</strong> (alarms permission): Used for the periodic license check (once a day), the check for syncing with bookmarks (every 5 minutes), and managing the end time of the focus timer</li>
       <li><strong>Side panel</strong> (sidePanel permission): Shows the tab management UI in Chrome's side panel</li>
@@ -289,7 +289,7 @@
     <p>The Extension does not provide, sell or share users' data with third parties. For payment processing, Stripe's privacy policy applies.</p>
 
     <h2>5. Deleting Data</h2>
-    <p>When the Extension is uninstalled, all data in the Extension's storage (groups and tabs, notes, step tasks, today's history, thumbnails, screenshots and revision notes, settings such as the theme, and the license check result) is deleted automatically.</p>
+    <p>When the Extension is uninstalled, all data in the Extension's storage (groups and tabs, notes, step tasks, thumbnails, screenshots and revision notes, settings such as the theme, and the license check result) is deleted automatically.</p>
     <p>The following are kept because they live outside the Extension. You can delete them yourself at any time.</p>
     <ul>
       <li>Groups and tabs saved to Chrome bookmarks (the "LB TAB Layers" folder, including its trash): delete them from Chrome's bookmarks</li>
@@ -309,7 +309,7 @@
     Website: <a href="https://www.liquid-block.com" target="_blank" rel="noopener">https://www.liquid-block.com</a></p>
 
     <div class="policy-footer">
-      <p>Last updated: November 11, 2026</p>
+      <p>Last updated: November 21, 2026</p>
       <p>© 2026 Liquid Block Inc. All rights reserved.</p>
     </div>
   </main>
