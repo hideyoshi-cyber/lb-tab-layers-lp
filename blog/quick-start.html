@@ -73,6 +73,20 @@
 
     <div class="blog-callout"><p>💡 フォルダを選んで、そのままグループとして移すこともできます。設定の「データ」→「ブックマーク」か、大画面の上の<strong>「ブックマークを取り込む」</strong>から開きます。ほかのブラウザや拡張機能から書き出したファイル（HTML・CSV・TXT）も、そこから入れられます。使い慣れたころには、元のブックマークを 1 つのフォルダにまとめて片づける案内も出ます（消しません。いつでも元に戻せます）。</p></div>
 
+    <h2 id="overlay">サイドパネルが邪魔なときは：ページに重ねる「オーバーレイ」</h2>
+    <p>サイドパネルは Chrome の横に並ぶので、画面の狭い PC ではページが狭くなります。そんなときは、パネルを<strong>ページの上に重ねて出す「オーバーレイ」</strong>に切り替えられます。ふだんはページの端に小さな「＋」があるだけで、使うときだけ開きます。</p>
+    <figure style="margin:1.4rem auto;max-width:480px;text-align:center;"><video class="qs-video" muted loop playsinline preload="none" data-poster="qs-overlay.webp" width="720" height="734" aria-label="設定で「オーバーレイ」を選び、ページの端の「＋」にマウスを乗せると、パネルがページの上に重なって出る" style="display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);background:#e9ecf5;"><source src="qs-overlay.mp4" type="video/mp4"></video><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">設定で「オーバーレイ」を選び、ページの端の「＋」にマウスを乗せると開く</figcaption></figure>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>設定 › 使い方 › 表示のしかた で「オーバーレイ」を選ぶ</h3><p>設定は、右の列のいちばん下の歯車から開きます。位置（左・右）、幅、ボタンの位置、起動時の表示（チラ見せなど）も、ここで選べます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>サイドパネルを閉じる</h3><p>Alt+T か、パネルの右上の × で閉じます。開いていたページで「＋」が出ないときは、ページを読み込み直してください。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>ページの端の「＋」にマウスを乗せる</h3><p>パネルがページの上に重なって出ます。ページのほうへマウスを戻すと、閉じます。</p></div></div>
+
+    <p><strong>オーバーレイで使えるのは、基本の機能です。</strong>タブとブックマークの管理（保存・▶ で開く・■ で閉じる・検索）、メモ、ステップタスクが使えます。<strong>動画やページの修正指示は、サイドパネルで使います。</strong>使うときは Alt+T でサイドパネルを開いてください。オーバーレイは PRO の機能です（お試しの 30 日間は使えます）。</p>
+
+    <div class="blog-callout"><p>💡 <strong>サイドパネルの外でも開けます。</strong>右の列の下の「表示方法を選択」から、<strong>新しいタブ</strong>や<strong>独立ウィンドウ（別窓）</strong>で開けます。ノート PC では 1 つのタブで広く、モニターが 2 台なら別窓を隣の画面に、といった使い方ができます。</p></div>
+    <figure style="margin:1.4rem auto;max-width:640px;text-align:center;"><video class="qs-video" muted loop playsinline preload="none" data-poster="qs-display.webp" width="960" height="540" aria-label="右の列の下の「表示方法を選択」から「新しいタブで開く」を選ぶと、パネルが 1 つのタブいっぱいに開く" style="display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);background:#e9ecf5;"><source src="qs-display.mp4" type="video/mp4"></video><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">「表示方法を選択」→「新しいタブで開く」で、パネルを 1 つのタブいっぱいに</figcaption></figure>
+    <script>(function(){var vs=document.querySelectorAll('.qs-video');if(!vs.length)return;var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);vs.forEach(function(v){if(!('IntersectionObserver' in window)){v.poster=v.getAttribute('data-poster');v.controls=true;return;}new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);});})();</script>
+
     <h2>1. 画面の見方</h2>
     <p>パネルの端に、縦の列が並んでいます。上から<strong>「タブ」「ブックマーク」「履歴」「メモ」「ステップ」</strong>。押すと、その画面に切り替わります。アイコンの右上の数字は、開いているタブの数・グループの数などです。</p>
     <ul>
