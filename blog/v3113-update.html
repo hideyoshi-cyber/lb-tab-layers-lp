@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v3.1.13 アップデート — 今のブックマークをコピーして始める・「→ 最初の案件」・元のブックマークの片づけ | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers v3.1.13 の変更点。今のブックマークをコピーして始める（元はそのまま）、「→ 最初の案件」で 1 つ移すはじめの 3 ステップ、元のブックマークの片づけ（消さない・元に戻せる）、たくさんのタブを開く前の確かめ、お祝いの表示の直しなどをまとめました。">
+  <meta name="keywords" content="LB TAB Layers v3.1.13,Chrome拡張 アップデート,ブックマーク コピー,ブックマーク 整理 始め方,ブックマークバー 片づけ,タブ管理 サイドパネル">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/v3113-update.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/v3113-update.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/v3113-update.html">
+  <meta property="og:title" content="v3.1.13 アップデート — 今のブックマークをコピーして始める"><meta property="og:description" content="今のブックマークをコピーして並べる（元はそのまま）。「→ 最初の案件」で 1 つ移して、▶ で開いて ■ で閉じる。慣れたころに、元のブックマークを片づける案内も。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/v3113-update.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-v3113-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-22T00:00:00+09:00"><meta property="article:author" content="株式会社リキッドブロック LB開発チーム">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="v3.1.13 アップデート — 今のブックマークをコピーして始める"><meta name="twitter:description" content="今のブックマークをコピーして並べる（元はそのまま）。「→ 最初の案件」で 1 つ移して、▶ で開いて ■ で閉じる。慣れたころに、元のブックマークを片づける案内も。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-v3113-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"v3.1.13 アップデート","item":"https://tablayers.liquid-block.com/blog/v3113-update.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"v3.1.13 アップデート — 今のブックマークをコピーして始める・「→ 最初の案件」・元のブックマークの片づけ","author":{"@type":"Organization","name":"株式会社リキッドブロック LB開発チーム","url":"https://tablayers.liquid-block.com/about.html#team","parentOrganization":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"}},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-22","image":"https://tablayers.liquid-block.com/blog/hero-v3113-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/v3113-update.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"コピーして始めると、元のブックマークは消えますか？","acceptedAnswer":{"@type":"Answer","text":"消えません。元のブックマークは動かさず、そのまま残ります。コピーは Chrome のブックマークの「LB TAB Layers」フォルダの中に「今のブックマーク（日付 コピー）」としてまとまります。"}},{"@type":"Question","name":"同じブックマークが 2 つになりませんか？","acceptedAnswer":{"@type":"Answer","text":"なります。元のブックマークとコピーの両方が Chrome に残ります。使い慣れたころに、元のブックマークを 1 つのフォルダにまとめる案内が出るので、そこで片づけられます（消さずに移すだけで、いつでも元に戻せます）。"}},{"@type":"Question","name":"置き場は、無料版のグループの数に入りますか？","acceptedAnswer":{"@type":"Answer","text":"入りません。無料版はグループ 5 つまでですが、置き場とその中のサブグループは数えません。置き場から自分のグループへ移したものだけが数に入ります。"}},{"@type":"Question","name":"片づけの案内は、いつ出ますか？","acceptedAnswer":{"@type":"Answer","text":"コピーしてから 7 日以上たち、そのあと 3 日以上使い、置き場から 10 件以上を仕分けたときに、1 回だけ出ます。待たずに片づけたいときは、置き場を右クリックして「元のブックマークを片づける…」を選んでください。"}},{"@type":"Question","name":"新しい機能は無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"コピーして始める流れ、はじめの 3 ステップ、元のブックマークの片づけ、タブを開く前の確かめは、無料版で使えます。数が多いときにすすめるダッシュボードは、PRO版とトライアル中の機能です。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">アップデート</span><h1>v3.1.13 アップデート<br>今のブックマークから、すぐ始める。</h1><p class="blog-meta"><time datetime="2026-11-22">2026.11.22</time> · <span class="blog-author">開発：<a href="../about.html#team">LB開発チーム</a>（株式会社リキッドブロック）</span> · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-v3113-update.webp" alt="LB TAB Layers v3.1.13 の画面。左：今のブックマークをコピーする前の確かめ。右：コピーしたあと、行の「→ 最初の案件」でよく使うページを移す" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html&amp;text=v3.1.13%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E4%BB%8A%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E5%A7%8B%E3%82%81%E3%82%8B%E3%83%BB%E3%80%8C%E2%86%92%20%E6%9C%80%E5%88%9D%E3%81%AE%E6%A1%88%E4%BB%B6%E3%80%8D%E3%83%BB%E5%85%83%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%AE%E7%89%87%E3%81%A5%E3%81%91" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html&amp;title=v3.1.13%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E4%BB%8A%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E5%A7%8B%E3%82%81%E3%82%8B%E3%83%BB%E3%80%8C%E2%86%92%20%E6%9C%80%E5%88%9D%E3%81%AE%E6%A1%88%E4%BB%B6%E3%80%8D%E3%83%BB%E5%85%83%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%AE%E7%89%87%E3%81%A5%E3%81%91" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/v3113-update.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/v3113-update.html" data-title="v3.1.13 アップデート — 今のブックマークをコピーして始める・「→ 最初の案件」・元のブックマークの片づけ" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>LB TAB Layers v3.1.13 の主な変更は、①入れた直後に今のブックマークをコピーして始められる（元のブックマークはそのまま）、②はじめの 3 ステップが「→ 最初の案件」で 1 つ移す → ▶ → ■ になった、③使い慣れたころに、元のブックマークを 1 つのフォルダに片づける案内が出る（消さない・いつでも元に戻せる）、の 3 つです。</strong>ほかに、たくさんのタブをまとめて開く前の確かめ、お祝いの表示が下のボタンや知らせに重ならないようにする直し、イタリア語・トルコ語・オランダ語の言い方を Chrome に合わせる直しを行いました。</p>
+
+    <p>LB TAB Layers の <strong>v3.1.13</strong> を、Chrome ウェブストアで配信しています。今回のテーマは<strong>「今のブックマークから、すぐ始める」</strong>です。入れた直後の画面が空っぽだと、何から手をつければいいか分かりにくい。そこで、いつも使っているブックマークをそのまま並べて、そこから整理を始められるようにしました。</p>
+    <p>Chrome は拡張機能を自動で更新するので、ほとんどの方は何もしなくても新しい版になります。すぐに更新したいときは、<code>chrome://extensions</code> を開き、右上の<strong>デベロッパー モード</strong>をオンにして<strong>「更新」</strong>を押してください。LB TAB Layers の欄に版の番号が出ます。</p>
+
+    <h2>v3.1.13 の変更点一覧</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>変更</th><th>内容</th><th>プラン</th></tr></thead><tbody>
+    <tr><td>今のブックマークをコピーして始める</td><td>入れた直後の「今のブックマークから始める（おすすめ）」で、Chrome のブックマークをコピーして並べる。元のブックマークは動かさない</td><td>無料</td></tr>
+    <tr><td>はじめの 3 ステップ</td><td>コピーから始めた人は「1 つ移す → ▶ で開く → ■ でしまう」。行の「→ 最初の案件」を押すだけで移せる</td><td>無料</td></tr>
+    <tr><td>数が多いときの仕分け</td><td>コピーしたブックマークが 200 件以上なら、大きな画面（ダッシュボード）での仕分けをすすめる</td><td>PRO版／トライアル中</td></tr>
+    <tr><td>元のブックマークの片づけ</td><td>使い慣れたころに、元のブックマークを 1 つのフォルダにまとめる案内。消さない・いつでも元に戻せる</td><td>無料</td></tr>
+    <tr><td>たくさんのタブを開く前の確かめ</td><td>▶ で 20 個より多いタブを開くときは、開く前に数を確かめる</td><td>無料</td></tr>
+    <tr><td>お祝いの表示</td><td>下の「現在のタブを追加」や知らせに重ならないように。はじめの 3 ステップの途中は、別のことをすすめない</td><td>無料</td></tr>
+    <tr><td>言葉の直し</td><td>イタリア語・トルコ語・オランダ語の「ブックマーク」の言い方を、Chrome の画面に合わせた</td><td>無料</td></tr>
+    </tbody></table></div>
+
+    <h2>① 今のブックマークを、コピーして始める</h2>
+    <p>入れた直後に出る「どんなときに使いたいですか？」の、いちばん上の<strong>「今のブックマークから始める（おすすめ）」</strong>を押すと、コピーするブックマークの数が出ます。<strong>「OK」</strong>を押すと、Chrome のブックマークがコピーされて、サイドパネルに並びます。</p>
+    <figure style="margin:1.4rem auto;max-width:320px;text-align:center;"><img src="qs-0-import.webp" alt="コピーする前に、件数と「元のブックマークはそのまま」を確かめる" loading="lazy" width="360" height="720" style="width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);"><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">コピーする前に、件数と「元のブックマークはそのまま」を確かめる</figcaption></figure>
+    <ul>
+      <li><strong>元のブックマークは動かしません。</strong>ブックマークバーもフォルダも、そのままです。「入れたらブックマークが消えた」ということは起きません</li>
+      <li>コピーしたものは、Chrome のブックマークの「LB TAB Layers」フォルダの中に、<strong>「今のブックマーク（日付 コピー）」</strong>という置き場としてまとまります</li>
+      <li>ブックマークバーなどのいちばん上の階層のフォルダは、置き場の中のサブグループになります。それより深いフォルダの中身は、そのサブグループにまとめて入ります（グループは 2 段までのため）</li>
+      <li>ブックマークレット（<code>javascript:</code> で始まるもの）は、タブで開けないのでコピーしません</li>
+      <li><strong>置き場は、無料版のグループの数（5 つまで）に数えません。</strong>置き場から自分のグループへ移したものだけが数に入ります</li>
+      <li>数が多くても、多くは数秒で終わります。途中の「やめる」で止めることもでき、そこまでのコピーは残ります</li>
+    </ul>
+
+    <h2>② はじめの 3 ステップは「1 つ移す → ▶ → ■」</h2>
+    <p>コピーから始めた人には、上に<strong>「はじめの3ステップ」</strong>のカードが出ます。</p>
+    <ol>
+      <li><strong>よく使うものを 1 つ、案件のグループへ移す</strong> — 置き場の行の右に出る<strong>「→ 最初の案件」</strong>を押すだけです。行の左の ⋮⋮ をつかんでドラッグしたり、右クリックの「グループに移動」を使ったりしても移せます</li>
+      <li><strong>そのグループを ▶ でまとめて開く</strong></li>
+      <li><strong>■ で、まとめてしまう</strong></li>
+    </ol>
+    <figure style="margin:1.4rem auto;max-width:320px;text-align:center;"><img src="qs-0-groups.webp" alt="置き場の行の右の「→ 最初の案件」を押すと、そのページが移る" loading="lazy" width="360" height="720" style="width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);"><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">置き場の行の右の「→ 最初の案件」を押すと、そのページが移る</figcaption></figure>
+    <p>「→ 最初の案件」のボタンは、① のあいだだけ出ます。1 つ移すと消えて、② に進みます。ボタンが出ているあいだは、行の右端の小さなボタン（★など）を隠して、押し間違えないようにしています。</p>
+    <p>コピーしたブックマークが <strong>200 件以上</strong>あるときは、カードに「大きな画面（ダッシュボード）で仕分ける」ボタンも出ます。ボードなら、カードからカードへドラッグして、たくさんのページをまとめて仕分けられます（ダッシュボードは PRO版／トライアル中の機能です）。</p>
+
+    <h2>③ 元のブックマークを、1 つのフォルダに片づける</h2>
+    <p>コピーして始めると、Chrome の中には元のブックマークとコピーの両方が残ります。使い慣れて、元のブックマークを見なくなったころに、置き場の上に次のような案内が<strong>1 回だけ</strong>出ます。</p>
+    <figure style="margin:1.4rem auto;max-width:380px;text-align:center;"><img src="v3113-tidy-card.webp" alt="「ブックマークバーをすっきりさせますか？」の案内。まとめる・あとで・しない" loading="lazy" width="368" height="116" style="width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);"><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">「ブックマークバーをすっきりさせますか？」の案内</figcaption></figure>
+    <ul>
+      <li><strong>すぐには出しません。</strong>コピーしてから 7 日以上たち、そのあと 3 日以上使い、置き場から 10 件以上を仕分けたときに出ます。入れてすぐ「元を片づけますか？」と聞かれると、不安になるためです</li>
+      <li><strong>消しません。</strong>「まとめる」を押すと、ブックマークバーと「その他のブックマーク」にあるものを、「その他のブックマーク」の中の<strong>「片づけたブックマーク（日付）」</strong>というフォルダへ移すだけです。LB TAB Layers のフォルダは動かしません</li>
+      <li><strong>いつでも元に戻せます。</strong>まとめた直後の知らせの「元に戻す」か、置き場の右クリックの「片づけたブックマークを元に戻す」で、元の場所と順番に戻ります</li>
+      <li>「あとで」を押すと 14 日後にもう一度、「しない」を押すともう出ません。待たずに片づけたいときは、置き場の右クリックの<strong>「元のブックマークを片づける…」</strong>からできます</li>
+    </ul>
+
+    <h2>④ そのほかの直し</h2>
+    <ul>
+      <li><strong>たくさんのタブを開く前の確かめ</strong> — グループの ▶ で 20 個より多いタブを開くときは、「○個のタブを開きます。よろしいですか？」と確かめてから開きます。大きなフォルダを押してしまっても、一度にたくさん開いて Chrome が重くなることを防げます</li>
+      <li><strong>お祝いの表示</strong> — 機能を初めて使ったときのお祝いが、下の「現在のタブを追加」や知らせに重なって、大事な案内が読めないことがありました。お祝いは一番下、知らせはその上に出るようにしました。はじめの 3 ステップの途中は、お祝いで別のことをすすめないようにしています</li>
+      <li><strong>コピーしただけでは、メダルを取らない</strong> — コピーしたブックマークの数で「ブックマーク 100 個」などのメダルが一度に出ていたのを直しました。置き場から自分のグループへ移した分だけを数えます</li>
+      <li><strong>長い知らせが切れない</strong> — 「元に戻す」が付いた知らせの文が長いとき、途中で切れていたのを、折り返すようにしました</li>
+      <li><strong>言葉の直し</strong> — イタリア語・トルコ語・オランダ語で、「ブックマーク」の言い方を Chrome 自身の画面に合わせました（イタリア語 preferiti・トルコ語 yer işaretleri・オランダ語 bookmarks）</li>
+    </ul>
+
+    <h2>いま使っている方へ</h2>
+    <p>いつもの画面やグループは、そのままです。コピーして始める流れは、入れた直後の歓迎画面からの始め方です。すでにグループを作っている方の画面が変わることはありません。</p>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. コピーして始めると、元のブックマークは消えますか？</h3>
+    <p>消えません。元のブックマークは動かさず、そのまま残ります。コピーは Chrome のブックマークの「LB TAB Layers」フォルダの中に「今のブックマーク（日付 コピー）」としてまとまります。</p>
+
+    <h3>Q. 同じブックマークが 2 つになりませんか？</h3>
+    <p>なります。元のブックマークとコピーの両方が Chrome に残ります。使い慣れたころに、元のブックマークを 1 つのフォルダにまとめる案内が出るので、そこで片づけられます（消さずに移すだけで、いつでも元に戻せます）。</p>
+
+    <h3>Q. 置き場は、無料版のグループの数に入りますか？</h3>
+    <p>入りません。無料版はグループ 5 つまでですが、置き場とその中のサブグループは数えません。置き場から自分のグループへ移したものだけが数に入ります。</p>
+
+    <h3>Q. 片づけの案内は、いつ出ますか？</h3>
+    <p>コピーしてから 7 日以上たち、そのあと 3 日以上使い、置き場から 10 件以上を仕分けたときに、1 回だけ出ます。待たずに片づけたいときは、置き場を右クリックして「元のブックマークを片づける…」を選んでください。</p>
+
+    <h3>Q. 新しい機能は無料で使えますか？</h3>
+    <p>コピーして始める流れ、はじめの 3 ステップ、元のブックマークの片づけ、タブを開く前の確かめは、無料版で使えます。数が多いときにすすめるダッシュボードは、PRO版とトライアル中の機能です。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html&amp;text=v3.1.13%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E4%BB%8A%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E5%A7%8B%E3%82%81%E3%82%8B%E3%83%BB%E3%80%8C%E2%86%92%20%E6%9C%80%E5%88%9D%E3%81%AE%E6%A1%88%E4%BB%B6%E3%80%8D%E3%83%BB%E5%85%83%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%AE%E7%89%87%E3%81%A5%E3%81%91" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fv3113-update.html&amp;title=v3.1.13%20%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%20%E2%80%94%20%E4%BB%8A%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E5%A7%8B%E3%82%81%E3%82%8B%E3%83%BB%E3%80%8C%E2%86%92%20%E6%9C%80%E5%88%9D%E3%81%AE%E6%A1%88%E4%BB%B6%E3%80%8D%E3%83%BB%E5%85%83%E3%81%AE%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%AE%E7%89%87%E3%81%A5%E3%81%91" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/v3113-update.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/v3113-update.html" data-title="v3.1.13 アップデート — 今のブックマークをコピーして始める・「→ 最初の案件」・元のブックマークの片づけ" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>今のブックマークから、すぐ始める。</h3><p>元のブックマークはそのまま、コピーして並べるだけ。アカウント登録なし · 保存先は Chrome のブックマーク · 30日間すべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=v3113-update" class="btn">Chrome に無料で追加 →</a></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="quick-start.html">LB TAB Layers クイックチュートリアル — 最初の5分で覚える基本操作と、便利な管理のしかた <span>→</span></a><a href="too-many-bookmarks.html">ブックマークが多すぎて整理できない人へ — 数百件を片付ける4ステップ <span>→</span></a><a href="free-vs-pro.html">LB TAB Layers 無料版とPRO版の違い — 30日のお試しと、終わったあとに使えること <span>→</span></a><a href="v290-update.html">v2.9.0 アップデート — 選べる画面レイアウト・メモ＆チェックリスト・別窓とタブ表示 <span>→</span></a><a href="bugfix-v2872.html">不具合のお知らせと修正（v2.8.72）— 右クリック保存・プレビュー <span>→</span></a><a href="v2867-update.html">v2.8.71 アップデート — 複数選択・右クリック保存・ページ全体のスクショと録画 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/188842?hl=ja" target="_blank" rel="noopener">Chrome でブックマークを作成、表示、編集する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">Chrome サイドパネルを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/187443?hl=ja" target="_blank" rel="noopener">拡張機能をインストールして管理する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
