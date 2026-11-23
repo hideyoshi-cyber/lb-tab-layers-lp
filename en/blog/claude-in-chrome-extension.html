@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>Claude in Chrome Extension: Setup, Plans, Safety | LB TAB Layers Blog</title>
+  <meta name="description" content="Claude in Chrome is Anthropic’s extension that lets Claude read pages, click, type and fill forms. Plans, install steps, approval modes and safety tips.">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html">
+  <meta property="og:title" content="Claude in Chrome: install it, plans, and safety"><meta property="og:description" content="Anthropic’s Chrome extension lets Claude read the page, click, type and fill forms. Which plans include it, how to install it, and safety advice to read first."><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-24T00:00:00+09:00"><meta property="article:author" content="Hideyoshi Saimoto">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Claude in Chrome: install it, plans, and safety"><meta name="twitter:description" content="Anthropic’s Chrome extension lets Claude read the page, click, type and fill forms. Which plans include it, how to install it, and safety advice to read first."><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/en/blog/"},{"@type":"ListItem","position":3,"name":"Claude in Chrome","item":"https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Claude in Chrome: what the Claude extension for Chrome does, how to install it, which plans include it, and what to check before you let it act","inLanguage":"en","author":{"@type":"Person","name":"Hideyoshi Saimoto","alternateName":"蔡本 英賛","jobTitle":"CEO, Liquid Block Inc.","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/en/about.html","description":"24 years in video production. In 2012 he founded Liquid Block Inc. in Kobe, Japan, where he creates CG, VFX and motion graphics for TV commercials, corporate films, trade shows, museums, Expo 2025 Osaka exhibits and projection mapping (clients include Panasonic, Kobayashi Pharmaceutical and Daiwa House). He teaches After Effects compositing and an introduction to film and video at Kobe Koyo Design & Technology College (Kobe Tech), and previously taught at Vantan Game Academy. He has won the visual effects award twice at The 48 Hour Film Project Osaka, an international short film competition partnered with the Cannes Film Festival Short Film Corner, and took third place and an award in the graphics category of the Hyogo Prefectural Art Exhibition.","knowsAbout":["Video production","CG","VFX","Motion graphics","After Effects","Compositing"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-24","image":"https://tablayers.liquid-block.com/blog/hero-ai-search.webp","mainEntityOfPage":"https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../favicon.png"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../blog/blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Claude in Chrome free?","acceptedAnswer":{"@type":"Answer","text":"Anthropic’s pages say it is available on paid plans (Pro, Max, Ultra, Team and Enterprise), and the comparison table on the pricing page shows “No” for the Free plan (as of November 2026). Prices change, so check Anthropic’s pricing page."}},{"@type":"Question","name":"Does Claude in Chrome work in Edge, Brave or on my phone?","acceptedAnswer":{"@type":"Answer","text":"The help center and the Chrome Web Store listing say it is not supported on other Chromium-based browsers or on mobile devices. The Claude Code documentation says its Chrome integration works with Google Chrome and Microsoft Edge and also detects the extension in other Chromium-based browsers, but for everyday use in the side panel, plan on Google Chrome."}},{"@type":"Question","name":"I installed it but can’t sign in. What should I check?","acceptedAnswer":{"@type":"Answer","text":"Anthropic’s troubleshooting page suggests confirming that your paid plan is active, asking your admin whether the extension is enabled if you are on Team or Enterprise, clearing your browser cache and cookies for claude.ai, and signing out of your Claude account and back in."}},{"@type":"Question","name":"Can Claude in Chrome make purchases or handle my bank account?","acceptedAnswer":{"@type":"Answer","text":"The permissions guide lists purchases and financial transactions among the actions Claude won’t take, whatever permissions you give. The product page also says purchases, financial actions and anything you can’t undo wait for you. Anthropic strongly advises against using it to manage financial accounts or investments."}},{"@type":"Question","name":"What is the difference between “Manually approve” and “Automatically approve”?","acceptedAnswer":{"@type":"Answer","text":"In “Manually approve,” Claude asks before each action. In “Automatically approve,” Claude keeps working, reviews each action for safety, blocks anything it judges unsafe and pauses to ask you when needed. The new (Cowork) side panel starts in “Automatically approve,” and it keeps whichever mode you switch to."}},{"@type":"Question","name":"What can Claude see while it works?","acceptedAnswer":{"@type":"Answer","text":"Claude takes screenshots of the tabs it is working in, so whatever is visible in those tabs becomes part of the conversation, and side panel sessions are saved to your history. Anthropic recommends not opening the side panel on pages showing information you don’t want stored, and using a separate browser profile without access to sensitive accounts."}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/en/" class="logo" aria-label="LB TAB Layers Home"><img src="../../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">Features</a><a href="../features.html#themes">Themes</a><a href="../updates.html">What's New</a><a href="./">Blog</a><a href="../../blog/claude-in-chrome-extension-guide.html" title="日本語">🌐 JA</a></div><a href="https://tablayers.liquid-block.com/en/#cta-main" class="nav-cta">Get Started Free</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">How-to</span><h1>Claude in Chrome extension<br>how to install it, who can use it, and what to check first</h1><p class="blog-meta"><time datetime="2026-11-24">Nov 24, 2026</time> · <span class="blog-author">By <a href="../about.html">Hideyoshi Saimoto</a>, CEO of Liquid Block Inc.</span> · 11 min read</p></div></section>
+
+  <article class="blog-content">
+    <img src="../../blog/hero-ai-search.webp" alt="Illustration of a browser window with an AI search bar linked to research tabs and project folders" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="Share this article"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fclaude-in-chrome-extension.html&amp;text=Claude%20in%20Chrome%3A%20what%20the%20Claude%20extension%20for%20Chrome%20does%2C%20how%20to%20install%20it%2C%20which%20plans%20include%20it%2C%20and%20what%20to%20check%20before%20you%20let%20it%20act" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fclaude-in-chrome-extension.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fclaude-in-chrome-extension.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+
+    <p class="ai-answer"><strong>Claude in Chrome is Anthropic’s browser extension for Google Chrome.</strong> Claude reads the page you have open, then clicks, types, navigates and fills in forms to work through a task with you. It is available on <strong>paid plans (Pro, Max, Ultra, Team and Enterprise)</strong> and runs in <strong>Google Chrome</strong>; Anthropic says other Chromium-based browsers and mobile devices are not supported (as of November 2026). To install it, click <strong>Add to Chrome</strong> on its Chrome Web Store page and sign in with your Claude account. Anthropic strongly advises against using it for financial accounts, legal documents, medical information or work accounts with sensitive data.</p>
+
+    <p>“Claude in Chrome” is the Chrome extension from Anthropic, the company that makes Claude. The difference from a regular chat is that <strong>Claude doesn’t just answer — it can work on the page for you</strong>: reading it, clicking, typing and filling in forms.</p>
+    <p>This guide covers what it does, who can use it, how to install it and what to check before you let it act. Everything here comes from Anthropic’s own pages (the product page, the help center, the pricing page and the Chrome Web Store listing), <strong>checked on November 23, 2026</strong>. Plans and requirements change, so look at the official pages listed near the end before you install.</p>
+
+    <h2>What Claude in Chrome is</h2>
+    <p>Anthropic’s help center describes Claude in Chrome as a browser extension that lets Claude read, click and navigate websites alongside you. The product page puts it this way: Claude reads the page you’re signed in to, then clicks, types and fills forms <strong>while you decide what happens next</strong>.</p>
+    <p>You can direct it from three places:</p>
+    <ul>
+      <li><strong>The Chrome side panel</strong> — for work on the page in front of you. Click the Claude icon in the Chrome toolbar and the panel opens next to the page; it stays visible while you browse</li>
+      <li><strong>The Claude desktop app (Mac or Windows)</strong> — when the browser is one step in a longer job that also touches your files and other tools. In the app, it is turned on under <strong>Settings → Customize → Connectors → Claude in Chrome → Configure</strong>, and it is off by default in each conversation, so you switch it on from the Connectors drop-down in the chat</li>
+      <li><strong>Claude Code</strong> — for developers testing the site they are building</li>
+    </ul>
+    <p>In the Chrome Web Store, the extension is listed simply as <strong>“Claude”</strong>, and its overview starts with “Claude in Chrome.” The listing carries the badge “Created by the owner of the listed website,” and the developer is Anthropic. If you have seen it called “Claude for Chrome” or “the Claude Chrome extension,” this is the same extension.</p>
+    <h3>The side panel now works like the rest of Claude</h3>
+    <p>According to the help center, on Max, Ultra and Team plans, on Pro as the rollout reaches you, and on Enterprise where an admin has turned it on, the side panel runs as a Claude Cowork session — the same Claude you use on desktop, web and mobile. Side panel conversations are saved to your history and can be picked up on the web, in the desktop app or on mobile, and your skills, plugins and connectors work there too. If you prefer the previous panel, click the three dots (⋮) at the top right of the panel and choose <strong>“Switch back to classic.”</strong> Recorded workflows are available only in the classic side panel.</p>
+    <div class="blog-callout"><p>💡 The help center also mentions a browser built into the Claude desktop app, with nothing to install, rolling out gradually. This article is about the extension you add to your own Chrome.</p></div>
+
+    <aside class="blog-mid-cta has-video" aria-label="About LB TAB Layers">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../../img/en/hero-demo-m.webp" width="720" height="720" aria-label="The real screen: ■ puts the tabs of a project away, and ▶ opens the next project in one click"><source src="../../img/en/hero-demo-m.mp4" type="video/mp4"></video>
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">Keep tabs by project. <strong>Open with ▶, close with ■.</strong></p>
+        <p class="blog-mid-cta-text">LB TAB Layers saves your open tabs by project as Chrome bookmarks, and reopens them with one click as a Chrome tab group with the same name and color. Closing them never loses them.</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_claude-in-chrome-extension&amp;utm_content=mid">Add to Chrome — free</a><a class="blog-mid-cta-link" href="operation-guide.html">See it in action →</a></div>
+      </div>
+    </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
+
+    <h2>Who can use it: plans and requirements (November 2026)</h2>
+    <p>The short version: <strong>if you are on a paid Claude plan and use Google Chrome on a computer, you can install it.</strong> With a work account, your admin’s settings also matter.</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>Item</th><th>What Anthropic’s pages say</th></tr></thead><tbody>
+      <tr><td>Plans</td><td>Paid plans: Pro, Max, Ultra, Team and Enterprise. The comparison table on the pricing page shows “No” for Free</td></tr>
+      <tr><td>Browser</td><td>Google Chrome. The help center and the Store listing say it is not supported on other Chromium-based browsers or on mobile devices</td></tr>
+      <tr><td>Account</td><td>Sign in with your Claude account</td></tr>
+      <tr><td>Team and Enterprise</td><td>Admins decide whether the extension is enabled for the organization and can restrict sites with allowlists and blocklists. On Enterprise, the new side panel needs an owner to enable Claude in Chrome and Cowork in the cloud; until then, the classic side panel is used</td></tr>
+      <tr><td>Usage</td><td>It counts against the same plan limits as Claude and Claude Code. Browser work is more compute-intensive than regular chats, so expect it to use more of your limit, and long-running tasks can use more still</td></tr>
+    </tbody></table></div>
+    <p>One nuance for developers: the Claude Code documentation says its Chrome integration works with Google Chrome and Microsoft Edge, and that Claude Code also detects the extension in other Chromium-based browsers such as Brave, Arc, Vivaldi and Opera (it isn’t supported in WSL). For everyday use in the side panel, plan on Google Chrome, as the help center and the Store listing say.</p>
+    <p>Plan prices aren’t listed here because they change. Check Anthropic’s pricing page for the current details.</p>
+
+    <h2>How to install Claude in Chrome</h2>
+    <p>These are the steps from Anthropic’s help center, with the button names Chrome shows.</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Open the “Claude” listing in the Chrome Web Store</h3><p>Use Google Chrome. The <strong>Add to Chrome</strong> button on Anthropic’s product page (<a href="https://claude.com/claude-in-chrome" target="_blank" rel="noopener">claude.com/claude-in-chrome</a>) takes you straight to the right listing. On the listing, check that the developer is Anthropic.</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>Click “Add to Chrome”</h3><p>Chrome shows the permissions the extension needs. To approve them, click <strong>Add extension</strong>.</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>Sign in with your Claude account</h3><p>When prompted, sign in with the Claude account that has your paid plan.</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>Pin it to the toolbar</h3><p>Click the puzzle-piece <strong>Extensions</strong> icon, then the pin (thumbtack) next to “Claude.” The Claude icon now sits in your Chrome toolbar.</p></div></div>
+    <div class="blog-step"><span class="blog-num">5</span><div class="blog-step-body"><h3>Grant permissions and open the side panel</h3><p>Grant the permissions Claude asks for, then click the Claude icon in the toolbar. The side panel opens next to the page; describe what you want to get done.</p></div></div>
+
+    <h3>The permissions it asks for</h3>
+    <p>The help center lists every permission the extension requests and why. The main ones:</p>
+    <ul>
+      <li><strong>scripting</strong> — to read the text on web pages</li>
+      <li><strong>debugger</strong> — to actually control the browser: clicking buttons, typing text and taking screenshots</li>
+      <li><strong>tabs</strong> — to open, close and switch between tabs while it works</li>
+      <li><strong>tabGroups</strong> — to put the tabs Claude opens into a separate group with a different color, so you can tell them apart from your own</li>
+      <li><strong>alarms</strong> — to run scheduled tasks at the times you choose</li>
+      <li><strong>downloads</strong> — to download files from websites and open them when you ask it to</li>
+      <li><strong>notifications</strong> — to let you know when a task is finished or needs you</li>
+    </ul>
+    <p>It’s worth reading the full list before you install. If you want a general way to judge what an extension asks for, see <a href="chrome-extension-permissions-explained.html">what each permission a tab manager extension requests is for</a>.</p>
+
+    <h3>If it won’t install or doesn’t work</h3>
+    <p>Anthropic’s troubleshooting page suggests these checks:</p>
+    <ul>
+      <li><strong>Won’t install or sign in</strong> — confirm your paid plan is active; on Team or Enterprise, ask your admin whether the extension is enabled; clear your browser cache and cookies for claude.ai; sign out of your Claude account and back in</li>
+      <li><strong>Actions don’t work correctly</strong> — update Chrome to the latest version; turn off other extensions that might interfere with the page; refresh the page and start the task again</li>
+      <li><strong>Claude can’t see the page</strong> — refresh, make sure the extension is enabled, and check that you have granted permission for the current site. Pages with heavy JavaScript may need a moment to load</li>
+      <li><strong>Claude can’t open a site</strong> — the site may need your permission, may be in a category blocked by default, or may be restricted by your admin</li>
+    </ul>
+
+    <h2>What Claude in Chrome can do</h2>
+    <p>The main capabilities described on the help center and the product page:</p>
+    <ul>
+      <li><strong>Read and act on pages</strong> — read, click, type, navigate and fill in forms</li>
+      <li><strong>Work across several tabs</strong> — drag tabs into Claude’s tab group, and Claude can view and work with all of them at once</li>
+      <li><strong>Scheduled tasks</strong> — run browser tasks daily, weekly, monthly or annually, set from the clock icon at the top right of the panel</li>
+      <li><strong>Background work</strong> — Claude keeps working when you switch tabs, as long as Chrome is open. Turn on notifications to hear when it needs permission or finishes</li>
+      <li><strong>Shortcuts</strong> — save a prompt that works well as a shortcut and call it up by typing “/” in the chat</li>
+      <li><strong>Show, don’t describe</strong> — upload an image or capture a screenshot of part of the screen to point Claude to the exact button or field</li>
+      <li><strong>Familiar apps</strong> — the help center says Claude has built-in knowledge of Slack, Google Calendar, Gmail, Google Docs and GitHub, so short requests like “schedule a meeting” work without step-by-step instructions</li>
+      <li><strong>For developers</strong> — Claude can read console output (errors, network requests and DOM state), and with Claude Code you get a build, test and fix loop in the browser</li>
+    </ul>
+    <p>For the side panel, the help center suggests in-the-moment tasks such as:</p>
+    <ul>
+      <li>Summarizing or comparing what’s open across your tabs</li>
+      <li>Pulling details off a page into a note, a document or a form</li>
+      <li>Walking through a task on a site step by step while you watch</li>
+    </ul>
+
+    <h2>Approval modes: decide how much Claude does on its own</h2>
+    <p>How often should Claude stop and ask you? The permissions guide describes three modes, chosen from the drop-down menu on the chat input.</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>Mode</th><th>What happens</th></tr></thead><tbody>
+      <tr><td>Manually approve (Manual)</td><td>Formerly “Ask before acting.” Claude asks before each action, and you choose <strong>Allow all for this website</strong>, <strong>Allow this time only</strong> or <strong>Deny</strong>. In the classic side panel, Claude first shows a plan that you approve with <strong>Approve plan</strong> or send back with <strong>Make changes</strong></td></tr>
+      <tr><td>Automatically approve (Auto)</td><td>Claude keeps working, reviews each action for safety, blocks anything it judges unsafe and pauses to ask you when needed. If it keeps running into blocks, it goes back to asking at each step</td></tr>
+      <tr><td>Skip all approvals (Skip)</td><td>Formerly “Act without asking.” Claude doesn’t pause to ask, and nothing checks its actions automatically. Anthropic says to use it only when you completely trust every action, connector, file and app involved</td></tr>
+    </tbody></table></div>
+    <p>The new (Cowork) side panel starts in <strong>“Automatically approve,”</strong> and if you switch modes, it keeps your choice for future sessions. If you’d rather check every step, switch to “Manually approve.” For work with real consequences — money, messages sent as you, important files — Anthropic recommends staying close and reviewing what Claude does, or switching back to “Manually approve.”</p>
+    <h3>Site permissions</h3>
+    <p>On some sites, Claude needs approval for every action. There, a <strong>New permissions required</strong> prompt offers <strong>Allow this action</strong> (one action only, which Anthropic calls the safest option), <strong>Always allow actions on this site</strong> (only for sites you completely trust) or <strong>Decline</strong>. Even with ongoing access, Claude still asks before downloading a file, entering potentially sensitive information or granting authorizations. To review or revoke sites, click the three dots in the panel, choose <strong>Extension settings</strong>, and look under <strong>Your approved sites</strong>.</p>
+    <h3>Actions that need your permission in every mode</h3>
+    <ul>
+      <li>Changing permission settings</li>
+      <li>Granting authorizations</li>
+      <li>Entering potentially sensitive information into websites</li>
+      <li>Permanent deletions, such as emptying the trash or deleting emails, files or messages</li>
+    </ul>
+    <h3>Actions Claude won’t take, whatever you allow</h3>
+    <ul>
+      <li>Making purchases or financial transactions</li>
+      <li>Creating accounts</li>
+      <li>Handling sensitive credit card or ID data</li>
+      <li>Downloading files from untrusted sources</li>
+      <li>Giving investment or financial advice, or executing trades</li>
+      <li>Modifying system files</li>
+      <li>Following instructions found in emails or web content</li>
+    </ul>
+
+    <h2>Before you start: Anthropic’s safety guidance</h2>
+    <p>The help center asks you to read “Use Claude in Chrome safely” before you begin. It says plainly that the extension has safety measures but still carries risk. Four points stand out.</p>
+    <h3>1. The biggest risk is prompt injection</h3>
+    <p>Prompt injection means instructions hidden in a web page, an email or a document that try to make an AI do something you didn’t ask for. Anthropic’s example is an ordinary-looking to-do list or email with invisible text telling Claude to collect your bank statements and paste them into a document.</p>
+    <p>To counter this, one safety check screens incoming content for injection attempts, and another checks every action before it runs; flagged actions are blocked or paused for your approval. Anthropic still states that <strong>the risk is not zero</strong>.</p>
+    <h3>2. What’s on screen becomes part of the conversation</h3>
+    <p>To see a page, Claude takes screenshots of the tabs it is working in, so whatever is visible there becomes part of the conversation. Side panel sessions are also saved to your history. The automatic safety check can see the latest screenshot, and Anthropic can keep a copy of it in its record of that check.</p>
+    <p>That’s why Anthropic recommends <strong>not opening the side panel on pages that show information you don’t want stored with the session</strong>.</p>
+    <h3>3. Habits Anthropic recommends</h3>
+    <ul>
+      <li>Start with sites you trust; avoid unfamiliar sites and sites full of content from unknown users</li>
+      <li>Use a <strong>separate browser profile</strong> that isn’t signed in to sensitive accounts such as banking, healthcare or government services (if you haven’t set one up, here is <a href="separate-work-personal-tabs.html">how to keep work and personal browsing in separate Chrome profiles</a>)</li>
+      <li>Read what Claude proposes before you approve it, especially on sites you haven’t used it on before</li>
+      <li>Start with simple tasks like research or filling in a form</li>
+      <li>Write specific prompts so Claude doesn’t do things you didn’t intend</li>
+      <li>If Claude suddenly talks about something unrelated, opens unexpected sites or asks for sensitive information, stop the task right away and report it through the in-chat feedback</li>
+    </ul>
+    <h3>4. What Anthropic strongly advises against</h3>
+    <ul>
+      <li>Managing financial accounts or investments</li>
+      <li>Handling legal documents or contracts</li>
+      <li>Processing medical or health information</li>
+      <li>Using work accounts with sensitive company data</li>
+      <li>Using sites that contain other people’s personal information</li>
+    </ul>
+    <p>The product page adds: avoid banking, health records and anything involving credentials. Claude can’t access adult content sites or known pirated content sites, and it asks for permission before accessing financial sites (the troubleshooting page lists financial services, banking, investment platforms and cryptocurrency exchanges among the categories blocked by default).</p>
+    <p>One more point that matters: Anthropic states that <strong>you remain responsible for the actions Claude takes on your behalf</strong> — content published and messages sent, purchases or financial transactions, data accessed or changed, and following each site’s terms of service, including any limits on automated access.</p>
+
+    <h2>Checklist before you install</h2>
+    <ul>
+      <li>You are on a paid plan (Pro, Max, Ultra, Team or Enterprise)</li>
+      <li>You use Google Chrome on a computer</li>
+      <li>For a work account: your admin has enabled it, and your company’s rules allow it</li>
+      <li>You have read Anthropic’s “Use Claude in Chrome safely” page</li>
+      <li>You have a separate Chrome profile that isn’t signed in to your important accounts</li>
+      <li>Your first task is a simple one on a site you trust</li>
+      <li>You have chosen an approval mode — “Manually approve” is a calm way to start</li>
+    </ul>
+
+    <h2>Anthropic’s official pages</h2>
+    <ul>
+      <li><a href="https://claude.com/claude-in-chrome" target="_blank" rel="noopener">Claude in Chrome — product page</a></li>
+      <li><a href="https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome" target="_blank" rel="noopener">Get started with Claude in Chrome — Claude Help Center</a></li>
+      <li><a href="https://support.claude.com/en/articles/12902428-use-claude-in-chrome-safely" target="_blank" rel="noopener">Use Claude in Chrome safely — Claude Help Center</a></li>
+      <li><a href="https://support.claude.com/en/articles/12902446-claude-in-chrome-permissions-guide" target="_blank" rel="noopener">Claude in Chrome permissions guide — Claude Help Center</a></li>
+      <li><a href="https://support.claude.com/en/articles/12902405-claude-in-chrome-troubleshooting" target="_blank" rel="noopener">Claude in Chrome troubleshooting — Claude Help Center</a></li>
+      <li><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn" target="_blank" rel="noopener">Claude — Chrome Web Store listing</a></li>
+      <li><a href="https://claude.com/pricing" target="_blank" rel="noopener">Plans &amp; pricing — Claude</a></li>
+      <li><a href="https://code.claude.com/docs/en/chrome" target="_blank" rel="noopener">Use Claude Code with Chrome — Claude Code Docs</a></li>
+    </ul>
+
+    <h2>After the task: put leftover tabs away by project</h2>
+    <p>Last, a word on tidying up once you’re using it. According to the help center, Claude opens, closes and switches tabs as it works, and <strong>the tabs it opens are gathered in a separate tab group with a different color</strong>.</p>
+    <p>After a research or comparison task, some of those tabs may still be open. Sorting them into two piles keeps things clear:</p>
+    <ul>
+      <li><strong>Pages you’ll want again</strong> — bookmark them, then close them. Use a folder named for the job, such as “Client A quote” or “Moving house”</li>
+      <li><strong>Pages you’re done with</strong> — just close them. Anthropic’s troubleshooting page also suggests closing unnecessary tabs when things slow down</li>
+    </ul>
+    <p>Chrome’s tab groups are good for what is open right now; for sets of pages you close and come back to later, see <a href="chrome-tab-groups-vs-tab-manager.html">Chrome tab groups vs. a tab manager extension</a>.</p>
+    <p><strong>LB TAB Layers</strong>, the extension behind this blog, does this “put it away by project” step in the Chrome side panel. It saves your open tabs as project groups in Chrome bookmarks, opens a whole group with ▶ and closes it with ■. Closing doesn’t delete anything — the bookmarks stay.</p>
+    <ul>
+      <li>In the Tabs view, <strong>Select tabs to put into a folder</strong> lets you pick only the tabs you want to keep and put them into a project group</li>
+      <li><strong>Group all into a new group</strong> gathers the tabs you haven’t saved yet into one group</li>
+      <li>For pages you’ll file later, press Ctrl+Shift+S to drop them into <strong>📥 Sort later</strong></li>
+    </ul>
+    <p>It’s free to add to Chrome (the free version holds up to 5 groups). If your tab bar is already overflowing, see <a href="too-many-tabs-open-chrome.html">how to fix too many open tabs in Chrome without losing anything</a>.</p>
+    <div class="blog-callout"><p>LB TAB Layers is a separate product made by a different company from Anthropic. It is not integrated with Claude in Chrome and is not endorsed by Anthropic. We mention it as a tool for putting away, by project, the tabs left over after you hand a task to an AI.</p></div>
+
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Q. Is Claude in Chrome free?</h3>
+    <p>Anthropic’s pages say it is available on paid plans (Pro, Max, Ultra, Team and Enterprise), and the comparison table on the pricing page shows “No” for the Free plan (as of November 2026). Prices change, so check Anthropic’s pricing page.</p>
+
+    <h3>Q. Does Claude in Chrome work in Edge, Brave or on my phone?</h3>
+    <p>The help center and the Chrome Web Store listing say it is not supported on other Chromium-based browsers or on mobile devices. The Claude Code documentation says its Chrome integration works with Google Chrome and Microsoft Edge and also detects the extension in other Chromium-based browsers, but for everyday use in the side panel, plan on Google Chrome.</p>
+
+    <h3>Q. I installed it but can’t sign in. What should I check?</h3>
+    <p>Anthropic’s troubleshooting page suggests confirming that your paid plan is active, asking your admin whether the extension is enabled if you are on Team or Enterprise, clearing your browser cache and cookies for claude.ai, and signing out of your Claude account and back in.</p>
+
+    <h3>Q. Can Claude in Chrome make purchases or handle my bank account?</h3>
+    <p>The permissions guide lists purchases and financial transactions among the actions Claude won’t take, whatever permissions you give. The product page also says purchases, financial actions and anything you can’t undo wait for you. Anthropic strongly advises against using it to manage financial accounts or investments.</p>
+
+    <h3>Q. What is the difference between “Manually approve” and “Automatically approve”?</h3>
+    <p>In “Manually approve,” Claude asks before each action. In “Automatically approve,” Claude keeps working, reviews each action for safety, blocks anything it judges unsafe and pauses to ask you when needed. The new (Cowork) side panel starts in “Automatically approve,” and it keeps whichever mode you switch to.</p>
+
+    <h3>Q. What can Claude see while it works?</h3>
+    <p>Claude takes screenshots of the tabs it is working in, so whatever is visible in those tabs becomes part of the conversation, and side panel sessions are saved to your history. Anthropic recommends not opening the side panel on pages showing information you don’t want stored, and using a separate browser profile without access to sensitive accounts.</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="Share this article"><p class="blog-share-title">Found this useful? Share it.</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fclaude-in-chrome-extension.html&amp;text=Claude%20in%20Chrome%3A%20what%20the%20Claude%20extension%20for%20Chrome%20does%2C%20how%20to%20install%20it%2C%20which%20plans%20include%20it%2C%20and%20what%20to%20check%20before%20you%20let%20it%20act" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">Post</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fclaude-in-chrome-extension.html" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">Share</span></a><a class="bshare-btn bshare-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fen%2Fblog%2Fclaude-in-chrome-extension.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="bshare-label">Share</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html" aria-label="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">Copy link</span></button></div></div>
+    <!-- 記事下部の操作イメージ動画（再生の切り替えは blog/blog-ui.js、見た目は blog/blog.css） -->
+    <!-- 英語UIの画面（日本語UIの動画の代わり。英語UIの動画ができたら戻す） -->
+    <div class="blog-video"><p class="blog-video-title">See it in action</p><div class="blog-shots"><img src="../img/en-ui-1.png" alt="LB TAB Layers side panel with groups saved by project" loading="lazy" width="1280" height="800"><img src="../img/en-ui-3.png" alt="Closing a group without losing it: saved tabs stay in Chrome bookmarks" loading="lazy" width="1280" height="800"><img src="../img/en-ui-5.png" alt="LB TAB Layers features overview" loading="lazy" width="1280" height="800"></div></div>
+    <div class="blog-cta-box"><h3>After Claude finishes, keep the tabs by project.</h3><p>Put the pages you want to keep into groups, open them with ▶ and close them with ■. No account needed, saved as Chrome bookmarks.</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=en_claude-in-chrome-extension" class="btn">Add to Chrome — it's free →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>About the author: Hideyoshi Saimoto</strong>, CEO of Liquid Block Inc.</p><p>24 years in video production. In 2012 he founded Liquid Block Inc. in Kobe, Japan, where he creates CG, VFX and motion graphics for TV commercials, corporate films, trade shows, museums, Expo 2025 Osaka exhibits and projection mapping (clients include Panasonic, Kobayashi Pharmaceutical and Daiwa House). He teaches After Effects compositing and an introduction to film and video at Kobe Koyo Design &amp; Technology College (Kobe Tech), and previously taught at Vantan Game Academy. He has won the visual effects award twice at The 48 Hour Film Project Osaka, an international short film competition partnered with the Cannes Film Festival Short Film Corner, and took third place and an award in the graphics category of the Hyogo Prefectural Art Exhibition. This blog is based on how we actually work every day.</p><p><a href="../about.html#author">About us</a> · <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box_en" target="_blank" rel="noopener">Our video work (Liquid Block)</a></p></div>
+
+    <div class="blog-related"><h3>Related articles</h3><a href="chrome-tab-groups-vs-tab-manager.html">Chrome tab groups vs. a tab manager extension <span>→</span></a><a href="separate-work-personal-tabs.html">How to separate work and personal tabs in Chrome <span>→</span></a><a href="chrome-extension-permissions-explained.html">Tab manager extension permissions explained <span>→</span></a><a href="too-many-tabs-open-chrome.html">Too many tabs open in Chrome? How to fix it <span>→</span></a><a href="export-import-chrome-bookmarks.html">Export and import bookmarks <span>→</span></a><a href="chrome-vertical-tabs.html">Chrome vertical tabs: on, off, and what they don’t do <span>→</span></a></div>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>Video &amp; Motion Graphics Production<br>Based in Kobe, Japan</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/en/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">MemoRec</a><a href="https://aipromptbar.liquid-block.com/en/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/en/about.html">About Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="mailto:info@liquid-block.com">Contact</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X (@LBTabLayers)</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../../script.js"></script>
+  <script src="../../blog/blog-ui.js" defer></script>
+</body>
+</html>

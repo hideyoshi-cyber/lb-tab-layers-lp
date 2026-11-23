@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>Chrome のゼロデイ脆弱性、アップデートの方法｜再起動でタブは消える？ | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome の脆弱性（ゼロデイ）の修正が出たときのアップデート手順と版の確かめ方、再起動で開いていたタブが戻るか、戻らないときの探し方を、Google の公式ヘルプと Chrome Releases（2026 年 11 月）で確かめてまとめました。">
+  <meta name="keywords" content="chrome ゼロデイ,google chrome ゼロデイ,chrome 脆弱性 アップデート,chrome に重大なゼロデイ脆弱性,chrome アップデート 方法,chrome アップデート 再起動 タブ,chrome 再起動 タブ 消える,chrome バージョン 確認,CVE-2026-125350">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html">
+  <meta property="og:title" content="Chrome のゼロデイ脆弱性、アップデートの方法と再起動のあとのタブ"><meta property="og:description" content="アップデートの手順、再起動で開いていたタブは戻るか、戻らないときの探し方。2026 年 11 月の発表（CVE-2026-125350）も公式の情報で。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-24T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Chrome のゼロデイ脆弱性、アップデートの方法と再起動のあとのタブ"><meta name="twitter:description" content="アップデートの手順、再起動で開いていたタブは戻るか、戻らないときの探し方。2026 年 11 月の発表（CVE-2026-125350）も公式の情報で。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Chrome の脆弱性とアップデートの方法","item":"https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome のゼロデイ脆弱性、アップデートの方法｜再起動でタブは消える？","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-24","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chrome のアップデートで再起動すると、開いているタブは消えますか？","acceptedAnswer":{"@type":"Answer","text":"Google Chrome ヘルプによると、そのとき開いていたタブやウィンドウは、再起動したときに自動的に表示されます。ただし、シークレット ウィンドウは表示されません。見当たらないときは、Ctrl + Shift + T（Mac は ⌘ + Shift + T）か、履歴（Ctrl + H、Mac は ⌘ + Y）で探します。"}},{"@type":"Question","name":"再起動しないと、どうなりますか？","acceptedAnswer":{"@type":"Answer","text":"更新は、Chrome を再起動したときに適用されます。［後で］を選んだ場合も、次に Chrome を再起動したときに適用されます。ふだんの自動更新も、Chrome を閉じて次に開くまでの間に行われます。悪用するコードが出回っている脆弱性の修正のときは、早めに再起動して最新の版にしておくと安心です。"}},{"@type":"Question","name":"自動で更新されるなら、何もしなくていいですか？","acceptedAnswer":{"@type":"Answer","text":"Chrome は自動で更新されますが、Chrome Releases によると、新しい版は数日から数週間かけて順に配られます。また、Chrome を閉じずに開いたままにしていると、更新が保留中のまま待っていることがあります。右上の ︙ →［ヘルプ］→［Google Chrome について］を開くと、その場で更新があるかどうかが確かめられます。"}},{"@type":"Question","name":"会社のパソコンで、Chrome を更新できません。","acceptedAnswer":{"@type":"Answer","text":"Google Chrome ヘルプには、「更新できませんでした: 更新は管理者によって無効になっています」というエラーが出ることがある、と書かれています。自分で更新の手順を行う権限がないときは、パソコンの管理者に Chrome の更新を頼むように案内されています。"}},{"@type":"Question","name":"ニュースの「ゼロデイ」は、Google の発表のどこに書かれていますか？","acceptedAnswer":{"@type":"Answer","text":"「ゼロデイ」という言葉は、Google の発表には出てきません。Chrome Releases の 2026 年 11 月 9 日（米国時間）の「Stable Channel Update for Desktop」に、CVE-2026-125350 を悪用するコードが実際に出回っていることを Google が把握している、と書かれています。修正が入った版は、Windows・Mac が 157.0.8103.50/.51、Linux が 157.0.8103.50 です。"}},{"@type":"Question","name":"スマホの Chrome も更新したほうがいいですか？","acceptedAnswer":{"@type":"Answer","text":"スマホの Chrome も、ストアの設定に沿って自動で更新されます。手で確かめるときは、Android は Play ストアの［アプリとデバイスの管理］、iPhone・iPad は App Store のプロフィールの［利用可能なアップデート］から更新します。11 月 9 日の発表では、Android 版 157.0.8103.50 に、特に断りがない限りパソコン版と同じセキュリティの修正が入っている、と書かれています。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">セキュリティ</span><h1>Chrome のゼロデイ脆弱性<br>アップデートの方法と、再起動のあとのタブ</h1><p class="blog-meta"><time datetime="2026-11-24">2026.11.24</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="ブラウザの画面に盾と鍵のマークが重なり、セキュリティの更新が済んだことを表すイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html&amp;text=Chrome%20%E3%81%AE%E3%82%BC%E3%83%AD%E3%83%87%E3%82%A4%E8%84%86%E5%BC%B1%E6%80%A7%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95%EF%BD%9C%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%A7%E3%82%BF%E3%83%96%E3%81%AF%E6%B6%88%E3%81%88%E3%82%8B%EF%BC%9F" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html&amp;title=Chrome%20%E3%81%AE%E3%82%BC%E3%83%AD%E3%83%87%E3%82%A4%E8%84%86%E5%BC%B1%E6%80%A7%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95%EF%BD%9C%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%A7%E3%82%BF%E3%83%96%E3%81%AF%E6%B6%88%E3%81%88%E3%82%8B%EF%BC%9F" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html" data-title="Chrome のゼロデイ脆弱性、アップデートの方法｜再起動でタブは消える？" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome に脆弱性の修正が出たら、まず Chrome を最新の版にします。右上の ︙（その他）→［ヘルプ］→［Google Chrome について］を開き、［再起動］が出ていたら押します。</strong>［再起動］が出ていなければ、いまの版が最新です。Google Chrome ヘルプによると、そのとき開いていたタブやウィンドウは、再起動したときに自動的に表示されます（シークレット ウィンドウは表示されません）。見当たらないときは、Ctrl + Shift + T（Mac は ⌘ + Shift + T）か、履歴（Ctrl + H）で探します。</p>
+
+    <p>「Chrome に重大なゼロデイ脆弱性」「アップデートを推奨」。そんなニュースを見て Chrome を更新しようとしたら、［再起動］のボタンが出てきた。押したら、いま開いているタブが全部消えてしまわないか。この記事は、そんなときのための手順をまとめたものです。</p>
+    <p>更新の手順と再起動のあとのことは日本語の Google Chrome ヘルプで、今回のニュースの中身は Google の Chrome のリリース情報（Chrome Releases）で、2026 年 11 月 23 日に確かめた内容だけを書いています。</p>
+
+    <h2>Chrome を最新にする手順（パソコン）</h2>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>︙ →［ヘルプ］→［Google Chrome について］を開く</h3><p>Chrome の右上の ︙（その他）を押し、［ヘルプ］→［Google Chrome について］を選びます。このページを開くと、更新があるかどうかが確かめられます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>［再起動］を押す</h3><p>［再起動］を押すと、更新が適用されます。［再起動］が出ていなければ、いまの版が最新です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>すぐに再起動できないときは［後で］</h3><p>［後で］を選ぶと、次に Chrome を再起動したときに更新が適用されます。</p></div></div>
+    <div class="blog-callout"><p><strong>再起動しても、開いていたタブは戻ります。</strong>Google Chrome ヘルプによると、そのとき開いていたタブやウィンドウは、ブラウザを再起動したときに自動的に表示されます。ただし、シークレット ウィンドウは表示されません。シークレット ウィンドウで用事の途中なら、済ませてから再起動します。</p></div>
+    <p>パソコンの種類ごとに、ヘルプには次のことも書かれています。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>パソコン</th><th>ヘルプに書かれていること</th></tr></thead><tbody>
+    <tr><td>Windows</td><td>更新を適用するには、デスクトップで開いているすべての Chrome のウィンドウとタブを閉じてから、Chrome を再起動する</td></tr>
+    <tr><td>Mac</td><td>Chrome が［アプリケーション］フォルダに入っていれば、［Google Chrome について］の［すべてのユーザーに対して Chrome を自動的に更新］で、そのパソコンのすべてのユーザーの自動更新を設定できる</td></tr>
+    <tr><td>Linux</td><td>パッケージ マネージャで更新する</td></tr>
+    <tr><td>Chromebook</td><td>Chromebook のオペレーティング システム（OS）を更新する</td></tr>
+    </tbody></table></div>
+
+    <aside class="blog-mid-cta has-video" aria-label="LB TAB Layers の紹介">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../img/hero-demo-m.webp" width="720" height="720" aria-label="実際の画面。■ で今やらない案件のタブをしまい、▶ で次の案件のタブをまとめて開く"><source src="../img/hero-demo-m.mp4" type="video/mp4"></video>
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">タブを仕事ごとにまとめて、<strong>▶ で開いて ■ で閉じる</strong>。</p>
+        <p class="blog-mid-cta-text">LB TAB Layers は、開いているタブを仕事ごとに Chrome のブックマークへ保存し、▶ ひとつで同じ名前・色のタブグループとして開き直せる、サイドパネルの拡張機能です。閉じても消えません。</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=chrome-update-zero-day&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
+      </div>
+    </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
+
+    <h2>2026 年 11 月のニュース：Google の発表で確かめたこと</h2>
+    <div class="blog-callout"><p><strong>2026 年 11 月 9 日（米国時間）の Chrome Releases の発表</strong>（2026 年 11 月 23 日に確かめた内容）</p>
+    <ul>
+      <li>パソコンの Chrome の安定版が、Windows・Mac は 157.0.8103.50/.51、Linux は 157.0.8103.50 に更新されました。セキュリティの修正は 9 件です</li>
+      <li>そのうちの <strong>CVE-2026-125350</strong>（重要度は High。XML を扱う部分の「Use after free」という種類の不具合）について、Google は、この脆弱性を悪用するコード（exploit）が実際に出回っていることを把握している、と書いています（原文は「Google is aware that an exploit for CVE-2026-125350 exists in the wild.」）</li>
+      <li>新しい版は、数日から数週間かけて順に配られます</li>
+      <li>Android 版も同じ日に 157.0.8103.50 が出ていて、特に断りがない限り、対応するパソコン版と同じセキュリティの修正を含む、と書かれています</li>
+      <li>そのあとも、11 月 11 日に 157.0.8103.78/.79（Linux は 157.0.8103.78）、11 月 17 日に Chrome 158（Windows・Mac は 158.0.8127.36/.37、Linux は 158.0.8127.36）が、安定版として出ています</li>
+    </ul>
+    <p>Google の発表に「ゼロデイ」という言葉は出てきません。書かれているのは、上の「悪用するコードが出回っている」という一文です。11 月 23 日までに出ていた 11 月の Chrome Releases の投稿で、この一文があったのは CVE-2026-125350 の 1 件でした。発表には、多くの利用者に修正が行き渡るまで、不具合の詳しい内容へのアクセスを制限することがある、とも書かれています。</p></div>
+    <p>どの版なら大丈夫かを番号で見比べるより、［Google Chrome について］を開いて、［再起動］が出なくなるまで更新するのが確かです。</p>
+
+    <h2>いまの版の確かめ方と、自動更新のしくみ</h2>
+    <h3>版の番号を見る</h3>
+    <p>［Google Chrome について］のページで、「Google Chrome」という見出しの下に出ている番号が、いまの版です。</p>
+    <p>アドレスバーに <code>chrome://settings/help</code> と入力して Enter キーを押しても、設定の［Chrome について］のページが開き、同じように版の番号が出ます（2026 年 11 月 23 日に、当社のパソコンの Chrome 157 で確かめました）。</p>
+
+    <h3>ふだんは自動で更新される。ただし、適用されるのは開き直したとき</h3>
+    <p>Google Chrome ヘルプによると、Chrome は、最新のセキュリティ アップデートで利用者を守るために、新しい版が出たときに自動で更新できるようになっています。更新はふつう、Chrome を閉じて次に開くまでの間に、裏（バックグラウンド）で行われます。</p>
+    <p>そのため、Chrome を閉じずに何日も開いたままにしていると、更新が「保留中」のまま待っていることがあります。脆弱性のニュースを見たら、自動に任せきりにせず、［Google Chrome について］を一度開いて確かめると安心です。</p>
+
+    <h3>右上に保留中の更新が出ていたら</h3>
+    <p>Google の Chrome の公式サイト（「更新方法」のページ）によると、しばらく Chrome を閉じていないと、画面の右上（プロフィールの写真の横）に、保留中の更新が表示されることがあります。Chrome を閉じて開き直すと、自動的に更新されます。すぐに適用したいときは、その表示の右にある ︙（3 つの点）を押して、いちばん上の項目を選びます。</p>
+    <p>表示の色や言葉までは、公式の説明に書かれていません。見分けがつかないときは、［Google Chrome について］を開けば、更新が待っているかどうかがわかります。</p>
+
+    <h2>再起動のあと、タブが戻らなかったとき</h2>
+    <p>再起動のあとにタブが見当たらないときは、新しいタブをあれこれ開く前に、次の順に試します。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Ctrl + Shift + T を押す</h3><p>Google Chrome ヘルプでは「閉じたタブを閉じた順序で再び開く」ショートカットです。Mac は ⌘ + Shift + T です。押すたびに、閉じた順にさかのぼって開きます（→「<a href="reopen-closed-tab-shortcut.html">閉じたタブを戻すショートカット Ctrl+Shift+T</a>」）。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>履歴から探す</h3><p>右上の ︙ →［履歴］→［履歴］を開きます。Ctrl + H（Mac は ⌘ + Y）でも開けます。過去 90 日間に開いたページが並ぶので、上の検索バーに、サイトの名前や題名の一部を入れて探します。シークレット モードで見たページは、履歴に残りません。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>次からは［起動時］の設定を確かめる</h3><p>︙ →［設定］→ 左側の［起動時］で［前回開いていたページを開く］を選ぶと、Chrome を開いたときに、前回終了したときに開いていたページがもう一度開きます。選べるのは［新しいタブ ページを開く］［前回開いていたページを開く］［特定のページまたはページセットを開く］の 3 つです（Chrome 157 の画面の表記）。くわしくは「<a href="chrome-startup-settings.html">Chrome 起動時の設定ガイド</a>」をどうぞ。</p></div></div>
+    <p>別のウィンドウやプロフィールを開いていないかなど、症状ごとの確かめ方は「<a href="tabs-lost-after-restart.html">Chrome を再起動したらタブが消えたときは</a>」に、戻すための方法を並べたものは「<a href="chrome-tab-restore.html">PC 再起動でタブが全部消えたときの復元方法</a>」にまとめています。</p>
+
+    <h2>スマホ（Android・iPhone）の Chrome を更新する</h2>
+    <p>スマホの Chrome は、アプリのストアの設定に沿って自動で更新されます。手で確かめるときは、次の手順です（Google Chrome ヘルプの手順）。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>端末</th><th>更新のしかた</th><th>版を見る場所</th></tr></thead><tbody>
+    <tr><td>Android</td><td>Play ストア アプリ → 右上のプロフィール アイコン →［アプリとデバイスの管理］→［アップデート利用可能］で Chrome を探す →［更新］</td><td>Chrome の ︙ →［設定］→［Chrome について］</td></tr>
+    <tr><td>iPhone・iPad</td><td>App Store → 右上のプロフィール →［利用可能なアップデート］まで下にスクロールして Chrome を探す →［アップデート］</td><td>Chrome のその他アイコン →［設定］→［Google Chrome］</td></tr>
+    </tbody></table></div>
+    <p>ヘルプに書かれている動作環境は、Android 10 以降、iOS 18 以降です。11 月 9 日の発表では、Android 版にもパソコン版と同じセキュリティの修正が入っていると書かれています。iPhone・iPad 版の 11 月の発表には、CVE-2026-125350 についての記載はありませんでした。</p>
+
+    <h2>再起動の前に、タブを「閉じても残る場所」に置いておく</h2>
+    <p>ヘルプのとおり、再起動しても、開いていたタブは戻ります。それでも、仕事で何十ものタブを開いているときは、消えない場所に残してから押すと、落ち着いて再起動できます。</p>
+    <p>Chrome だけでもできます。Ctrl + Shift + D（Mac は ⌘ + Shift + D）を押すと、開いているすべてのタブを、ブックマークの新しいフォルダに保存できます。</p>
+    <p>案件ごとに分けて残したいときは、私たちが自分たちの仕事のために作った Chrome 拡張「LB TAB Layers」も使えます。</p>
+    <ul>
+      <li><strong>残す</strong>：サイドパネルのグループの ＋ ボタン（今見ているタブを追加）を押すか、サイドパネルに並んでいる開いているタブを、グループへドラッグ＆ドロップします。残すタブは自分で選びます（開いているタブを全部、自動で保存する機能ではありません）</li>
+      <li><strong>残る場所</strong>：Chrome のブックマーク（「LB TAB Layers」フォルダの中）です。Chrome を再起動しても、タブを閉じても、ブックマークに残ります</li>
+      <li><strong>戻す</strong>：再起動のあと、Alt + T（Mac は Option + T）でパネルを開き、グループの ▶ を押すと、保存したタブがまとめて開きます。使い終わったら、グループの ■ でまとめて閉じられます</li>
+    </ul>
+    <p>ブックマークに残るのは、ページの題名とアドレスです。入力途中のフォームの内容は戻らないので、書きかけのものは、再起動の前に保存か送信を済ませておきます。</p>
+
+    <h2>まとめ</h2>
+    <ul>
+      <li><strong>脆弱性の修正が出たら</strong>：︙ →［ヘルプ］→［Google Chrome について］→［再起動］。［再起動］が出なければ、いまの版が最新</li>
+      <li><strong>再起動とタブ</strong>：開いていたタブとウィンドウは、再起動したときに自動的に表示される（シークレット ウィンドウは除く）</li>
+      <li><strong>戻らなかったら</strong>：Ctrl + Shift + T → 履歴（Ctrl + H）→ 次からは［起動時］→［前回開いていたページを開く］</li>
+      <li><strong>自動更新</strong>：ふだんは自動で更新されるが、適用されるのは Chrome を開き直したとき。ニュースを見たら［Google Chrome について］で確かめる</li>
+      <li><strong>2026 年 11 月のニュース</strong>：11 月 9 日（米国時間）の 157.0.8103.50/.51 で、悪用するコードが出回っている CVE-2026-125350 が修正された。そのあとも 11 月 17 日に Chrome 158 が出ている</li>
+      <li><strong>スマホ</strong>：Android は Play ストア、iPhone・iPad は App Store で更新する</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Chrome のアップデートで再起動すると、開いているタブは消えますか？</h3>
+    <p>Google Chrome ヘルプによると、そのとき開いていたタブやウィンドウは、再起動したときに自動的に表示されます。ただし、シークレット ウィンドウは表示されません。見当たらないときは、Ctrl + Shift + T（Mac は ⌘ + Shift + T）か、履歴（Ctrl + H、Mac は ⌘ + Y）で探します。</p>
+
+    <h3>Q. 再起動しないと、どうなりますか？</h3>
+    <p>更新は、Chrome を再起動したときに適用されます。［後で］を選んだ場合も、次に Chrome を再起動したときに適用されます。ふだんの自動更新も、Chrome を閉じて次に開くまでの間に行われます。悪用するコードが出回っている脆弱性の修正のときは、早めに再起動して最新の版にしておくと安心です。</p>
+
+    <h3>Q. 自動で更新されるなら、何もしなくていいですか？</h3>
+    <p>Chrome は自動で更新されますが、Chrome Releases によると、新しい版は数日から数週間かけて順に配られます。また、Chrome を閉じずに開いたままにしていると、更新が保留中のまま待っていることがあります。右上の ︙ →［ヘルプ］→［Google Chrome について］を開くと、その場で更新があるかどうかが確かめられます。</p>
+
+    <h3>Q. 会社のパソコンで、Chrome を更新できません。</h3>
+    <p>Google Chrome ヘルプには、「更新できませんでした: 更新は管理者によって無効になっています」というエラーが出ることがある、と書かれています。自分で更新の手順を行う権限がないときは、パソコンの管理者に Chrome の更新を頼むように案内されています。</p>
+
+    <h3>Q. ニュースの「ゼロデイ」は、Google の発表のどこに書かれていますか？</h3>
+    <p>「ゼロデイ」という言葉は、Google の発表には出てきません。Chrome Releases の 2026 年 11 月 9 日（米国時間）の「Stable Channel Update for Desktop」に、CVE-2026-125350 を悪用するコードが実際に出回っていることを Google が把握している、と書かれています。修正が入った版は、Windows・Mac が 157.0.8103.50/.51、Linux が 157.0.8103.50 です。</p>
+
+    <h3>Q. スマホの Chrome も更新したほうがいいですか？</h3>
+    <p>スマホの Chrome も、ストアの設定に沿って自動で更新されます。手で確かめるときは、Android は Play ストアの［アプリとデバイスの管理］、iPhone・iPad は App Store のプロフィールの［利用可能なアップデート］から更新します。11 月 9 日の発表では、Android 版 157.0.8103.50 に、特に断りがない限りパソコン版と同じセキュリティの修正が入っている、と書かれています。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html&amp;text=Chrome%20%E3%81%AE%E3%82%BC%E3%83%AD%E3%83%87%E3%82%A4%E8%84%86%E5%BC%B1%E6%80%A7%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95%EF%BD%9C%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%A7%E3%82%BF%E3%83%96%E3%81%AF%E6%B6%88%E3%81%88%E3%82%8B%EF%BC%9F" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-update-zero-day.html&amp;title=Chrome%20%E3%81%AE%E3%82%BC%E3%83%AD%E3%83%87%E3%82%A4%E8%84%86%E5%BC%B1%E6%80%A7%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95%EF%BD%9C%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%A7%E3%82%BF%E3%83%96%E3%81%AF%E6%B6%88%E3%81%88%E3%82%8B%EF%BC%9F" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/chrome-update-zero-day.html" data-title="Chrome のゼロデイ脆弱性、アップデートの方法｜再起動でタブは消える？" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>再起動の前に、タブを仕事ごとに残しておく。</h3><p>開いているタブを案件ごとに Chrome のブックマークへ保存し、再起動のあとは ▶ でまとめて開き直す。アカウント登録なし · 無料版はグループ 5 つまで · 入れてから 30 日はすべての機能を無料で</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=chrome-update-zero-day" class="btn">Chrome に無料で追加 →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="tabs-lost-after-restart.html">Chrome を再起動したらタブが消えた — 症状別に確かめる順番と、次から困らない準備 <span>→</span></a><a href="chrome-tab-restore.html">Chromeのタブが全部消えた時の復元方法｜まず Ctrl+Shift+T・戻らない時の4つの手順 <span>→</span></a><a href="reopen-closed-tab-shortcut.html">消したタブを戻す方法｜ショートカットは Ctrl+Shift+T（タブ復元） <span>→</span></a><a href="chrome-extension-safety.html">Chrome拡張機能の安全性 — 危険な拡張の見分け方と安全なタブ管理 <span>→</span></a><a href="tab-extension-permissions-safety.html">タブ管理拡張の権限の見方 — LB TAB Layers が使う権限と理由 <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？保存先の3タイプ <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/95414?hl=ja&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener">Google Chrome を更新する（パソコン）— Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/95414?hl=ja&co=GENIE.Platform%3DAndroid" target="_blank" rel="noopener">Google Chrome を更新する（Android スマートフォン、Android タブレット）— Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/95414?hl=ja&co=GENIE.Platform%3DiOS" target="_blank" rel="noopener">Google Chrome を更新する（iPhone と iPad）— Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/111996?hl=ja" target="_blank" rel="noopener">Chrome の更新に関する問題を解決する — Google Chrome ヘルプ</a>
+      <a href="https://www.google.com/intl/ja/chrome/update/" target="_blank" rel="noopener">更新方法 — Google Chrome（Google の公式サイト）</a>
+      <a href="https://support.google.com/chrome/answer/95314?hl=ja" target="_blank" rel="noopener">ホームページと起動ページを設定する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/157179?hl=ja" target="_blank" rel="noopener">Chrome のキーボード ショートカット — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/95589?hl=ja" target="_blank" rel="noopener">Chrome の閲覧履歴を確認、削除する — Google Chrome ヘルプ</a>
+      <a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html" target="_blank" rel="noopener">Stable Channel Update for Desktop（2026 年 11 月 9 日・CVE-2026-125350）— Chrome Releases</a>
+      <a href="https://chromereleases.googleblog.com/2026/11/chrome-for-android-update_01533302390.html" target="_blank" rel="noopener">Chrome for Android Update（2026 年 11 月 9 日・157.0.8103.50）— Chrome Releases</a>
+      <a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01744469280.html" target="_blank" rel="noopener">Stable Channel Update for Desktop（2026 年 11 月 11 日・157.0.8103.78/.79）— Chrome Releases</a>
+      <a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01699533288.html" target="_blank" rel="noopener">Stable Channel Update for Desktop（2026 年 11 月 17 日・Chrome 158）— Chrome Releases</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

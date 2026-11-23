@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できること | LB TAB Layers Blog</title>
+  <meta name="description" content="Claude in Chrome は、Claude がページを読み、クリックや入力で作業を進める Anthropic の Chrome 拡張機能。使えるプラン・対応ブラウザ・入れ方・できること・安全上の注意を、2026 年 11 月時点の公式ページで確かめました。">
+  <meta name="keywords" content="Claude in Chrome,Claude in Chrome 拡張機能,Claude 拡張機能,Claude Chrome 拡張機能 入れ方,Claude in Chrome 使い方,Claude in Chrome プラン,Claude in Chrome 安全">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html">
+  <link rel="alternate" hreflang="ja" href="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html">
+  <link rel="alternate" hreflang="en" href="https://tablayers.liquid-block.com/en/blog/claude-in-chrome-extension.html">
+  <meta property="og:title" content="Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できること"><meta property="og:description" content="Claude がページを読み、クリックや入力をして作業を進める Chrome 拡張機能。使えるプラン・入れ方・公式が書いている安全上の注意を、公式ページで確かめてまとめました。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-24T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できること"><meta name="twitter:description" content="Claude がページを読み、クリックや入力をして作業を進める Chrome 拡張機能。使えるプラン・入れ方・公式が書いている安全上の注意を、公式ページで確かめてまとめました。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-ai-search.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Claude in Chrome とは","item":"https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できることと、使う前に確かめること","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-24","image":"https://tablayers.liquid-block.com/blog/hero-ai-search.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Claude in Chrome は無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"公式ページには、有料プラン（Pro・Max・Ultra・Team・Enterprise）で使えると書かれています。料金ページの比較表でも、Free の欄は対象外になっています（2026 年 11 月時点）。料金は変わることがあるので、公式の料金ページで確かめてください。"}},{"@type":"Question","name":"Edge やスマートフォンでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"公式のヘルプと Chrome ウェブストアの掲載ページには、ほかの Chromium 系のブラウザとモバイル端末は対象外と書かれています。開発者向けの Claude Code の文書には、Claude Code とつなぐ場合は Microsoft Edge や、Brave・Arc・Vivaldi・Opera などほかの Chromium 系のブラウザでもつながるという記載がありますが、サイドパネルでふつうに使うなら Google Chrome で考えておくのが確実です。"}},{"@type":"Question","name":"入れたのに、サインインできません。","acceptedAnswer":{"@type":"Answer","text":"公式のトラブルシューティングでは、有料プランが有効か確かめる、Team・Enterprise なら管理者が拡張機能を有効にしているか聞く、claude.ai のキャッシュと Cookie を消す、サインアウトして入り直す、の順に確かめるよう書かれています。"}},{"@type":"Question","name":"買い物の購入や、銀行の手続きを任せられますか？","acceptedAnswer":{"@type":"Answer","text":"ヘルプの権限ガイドでは、購入やお金の取引は、許可にかかわらず Claude が行わない操作に挙げられています。製品ページには、購入やお金に関わる操作は使う人の確認を待つ、という書き方もあります。どちらにしても任せきりにする操作ではなく、金融の口座の管理に使うことは避けるよう強く勧められています。"}},{"@type":"Question","name":"LB TAB Layers は、Claude in Chrome と関係がありますか？","acceptedAnswer":{"@type":"Answer","text":"ありません。LB TAB Layers は Anthropic とは別の会社が作っている別の製品で、連携や公認の関係はありません。開いているタブを、案件ごとに Chrome のブックマークへ保存して、まとめて開いたり閉じたりするための拡張機能です。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>Claude in Chrome（拡張機能）とは<br>入れ方・条件・使う前に確かめること</h1><p class="blog-meta"><time datetime="2026-11-24">2026.11.24</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 9分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-ai-search.webp" alt="AI の検索窓と、フォルダに分かれたブラウザの画面のイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html&amp;text=Claude%20in%20Chrome%EF%BC%88%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%89%E3%81%A8%E3%81%AF%20%E2%80%94%20%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E4%BD%BF%E3%81%88%E3%82%8B%E3%83%97%E3%83%A9%E3%83%B3%E3%83%BB%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E3%80%81%E4%BD%BF%E3%81%86%E5%89%8D%E3%81%AB%E7%A2%BA%E3%81%8B%E3%82%81%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html&amp;title=Claude%20in%20Chrome%EF%BC%88%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%89%E3%81%A8%E3%81%AF%20%E2%80%94%20%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E4%BD%BF%E3%81%88%E3%82%8B%E3%83%97%E3%83%A9%E3%83%B3%E3%83%BB%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E3%80%81%E4%BD%BF%E3%81%86%E5%89%8D%E3%81%AB%E7%A2%BA%E3%81%8B%E3%82%81%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html" data-title="Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できることと、使う前に確かめること" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Claude in Chrome は、Anthropic が出している Chrome の拡張機能です。</strong>Claude が、いま開いているページを読み、クリック・入力・ページの移動・フォームの記入をして、作業を進めます。使えるのは<strong>有料プラン（Pro・Max・Ultra・Team・Enterprise）</strong>で、ブラウザは <strong>Google Chrome</strong> です（2026 年 11 月時点・公式ページによる）。入れ方は、Chrome ウェブストアで「Chrome に追加」を押して、Claude のアカウントでサインインします。公式は、銀行・医療・契約・仕事の機密などのページでは使わないよう、強く勧めています。</p>
+
+    <p>「Claude in Chrome」は、AI の Claude を作っている Anthropic の、Chrome の拡張機能です。チャットで答えをもらうだけでなく、<strong>ページの上で手を動かすところまで Claude に任せられる</strong>のが、ふつうのチャットとの違いです。</p>
+    <p>この記事では、何ができるのか・だれが使えるのか・どう入れるのか・使う前に何を確かめるのかを、Anthropic の公式ページ（製品ページ・ヘルプセンター・料金ページ・Chrome ウェブストアの掲載ページ）に書いてあることだけでまとめます。プランや条件は変わりやすいので、内容は <strong>2026 年 11 月 23 日に公式ページを開いて確かめたもの</strong>です。入れる前に、記事の最後に並べた公式ページも見てください。</p>
+
+    <h2>Claude in Chrome とは — ページを読んで、操作まで進める拡張機能</h2>
+    <p>公式のヘルプは Claude in Chrome を、Claude がウェブサイトを読み・クリックし・移動できるようにするブラウザ拡張機能、と説明しています。製品ページには、サインインしているページを Claude が読み、クリック・入力・フォームの記入をし、<strong>次にどうするかは使う人が決める</strong>、と書かれています。</p>
+    <p>使う場所は 3 つあります。</p>
+    <ul>
+      <li><strong>Chrome のサイドパネル</strong> — いま見ているページで作業するとき。ツールバーの Claude のアイコンを押すと、ページの横に開きます</li>
+      <li><strong>Claude のデスクトップアプリ（Mac・Windows）</strong> — ブラウザの操作が、パソコンの中のファイルやほかの道具も使う、長い仕事の一部であるとき</li>
+      <li><strong>Claude Code</strong> — 開発者が、作っているサイトをブラウザで確かめるとき</li>
+    </ul>
+    <p>Chrome ウェブストアでの名前は「Claude」で、説明の先頭に「Claude in Chrome」とあります。ストアのページには、claude.com の持ち主が作ったことを示す表示があり、デベロッパーの欄は Anthropic です。日本語のヘルプでは「Chrome用Claude」とも書かれています。どれも同じ拡張機能のことです。</p>
+    <div class="blog-callout"><p>💡 ヘルプには、Claude のデスクトップアプリに、拡張機能を入れなくても使える「組み込みのブラウザ」が順に加わっている、という記載もあります。この記事で扱うのは、自分の Chrome に入れる拡張機能のほうです。</p></div>
+
+    <aside class="blog-mid-cta has-video" aria-label="LB TAB Layers の紹介">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../img/hero-demo-m.webp" width="720" height="720" aria-label="実際の画面。■ で今やらない案件のタブをしまい、▶ で次の案件のタブをまとめて開く"><source src="../img/hero-demo-m.mp4" type="video/mp4"></video>
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">タブを仕事ごとにまとめて、<strong>▶ で開いて ■ で閉じる</strong>。</p>
+        <p class="blog-mid-cta-text">LB TAB Layers は、開いているタブを仕事ごとに Chrome のブックマークへ保存し、▶ ひとつで同じ名前・色のタブグループとして開き直せる、サイドパネルの拡張機能です。閉じても消えません。</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=claude-in-chrome-extension-guide&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
+      </div>
+    </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
+
+    <h2>使えるプランと条件（2026 年 11 月時点・公式ページによる）</h2>
+    <p>先に結論です。<strong>有料プランに入っていて、Google Chrome を使っていれば、入れて使えます。</strong>会社のアカウントの場合は、管理者が有効にしているかどうかも関わります。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>項目</th><th>公式ページに書いてあること</th></tr></thead><tbody>
+      <tr><td>使えるプラン</td><td>有料プラン（Pro・Max・Ultra・Team・Enterprise）。料金ページの比較表では、Free の欄は「No」</td></tr>
+      <tr><td>ブラウザ</td><td>Google Chrome。ヘルプとストアの掲載ページに、ほかの Chromium 系のブラウザとモバイル端末は対象外、とある</td></tr>
+      <tr><td>サインイン</td><td>Claude のアカウントでサインインする</td></tr>
+      <tr><td>会社のアカウント（Team・Enterprise）</td><td>拡張機能を使えるかどうかと、使えるサイトを、管理者が決められる。Enterprise では、新しい形のサイドパネルは、オーナーが有効にしてから使える</td></tr>
+      <tr><td>使った分の数え方</td><td>Claude や Claude Code と同じ、プランの利用上限に数えられる。ブラウザの操作はふつうのチャットより計算を多く使うので、上限を多めに使う、と書かれている</td></tr>
+    </tbody></table></div>
+    <p>ブラウザについては、開発者向けの Claude Code の文書に、Claude Code とつないで使う場合は Google Chrome と Microsoft Edge で動き、Brave・Arc・Vivaldi・Opera などほかの Chromium 系のブラウザでも拡張機能を見つけてつながる、という記載もあります（Windows の WSL は対象外）。サイドパネルでふつうに使うつもりなら、ヘルプとストアの記載どおり、Google Chrome で考えておくのが確実です。</p>
+    <p>それぞれのプランの料金は、この記事には書きません。変わることがあるので、公式の料金ページで確かめてください。</p>
+
+    <h2>入れ方 — Chrome ウェブストアで追加して、サインインする</h2>
+    <p>ヘルプに書かれている手順は、次のとおりです。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Google Chrome で、ストアの「Claude」のページを開く</h3><p>公式の製品ページ（<a href="https://claude.com/claude-in-chrome" target="_blank" rel="noopener">claude.com/claude-in-chrome</a>）の「Add to Chrome」から開くと、まちがえずにたどり着けます。ストアのページで、デベロッパーの欄が Anthropic になっていることを確かめます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>「Chrome に追加」を押す</h3><p>拡張機能が Chrome に入ります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>Claude のアカウントでサインインする</h3><p>求められたら、有料プランに入っている Claude のアカウントでサインインします。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>ツールバーにピン留めする</h3><p>パズルのアイコン（拡張機能）を押し、「Claude」の横のピンを押します。Chrome のツールバーに Claude のアイコンが出ます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">5</span><div class="blog-step-body"><h3>求められた権限を許可して、サイドパネルを開く</h3><p>ツールバーの Claude のアイコンを押すと、ページの横にサイドパネルが開きます。そこに、やりたいことを書きます。</p></div></div>
+
+    <h3>入れるときに求められる権限</h3>
+    <p>ヘルプには、求められる権限の一覧と、それぞれが何のために要るかが書かれています。おもなものは次のとおりです。入れる前に、一覧に目を通しておくと安心です。</p>
+    <ul>
+      <li><strong>debugger</strong> — ボタンを押す・文字を入れる・スクリーンショットを撮る、という操作そのもののため</li>
+      <li><strong>tabs</strong> — 作業のためにタブを開く・閉じる・切り替えるため</li>
+      <li><strong>tabGroups</strong> — Claude が開いたタブを、色の違う別のグループにまとめて、自分のタブと見分けられるようにするため</li>
+      <li><strong>downloads</strong> — 頼まれたときに、サイトからファイルをダウンロードして開くため</li>
+      <li><strong>notifications</strong> — 作業が終わったときや、使う人の操作が要るときに知らせるため</li>
+    </ul>
+
+    <h3>入らない・うまく動かないとき</h3>
+    <p>公式のトラブルシューティングには、次の確かめ方が書かれています。</p>
+    <ul>
+      <li><strong>入らない・サインインできない</strong> — 有料プランが有効か確かめる。Team・Enterprise なら、管理者が拡張機能を有効にしているか聞く。claude.ai のキャッシュと Cookie を消す。Claude のアカウントからサインアウトして、入り直す</li>
+      <li><strong>操作がうまくいかない</strong> — Chrome を最新の版にする。ページの操作のじゃまになりそうなほかの拡張機能を、いったん無効にしてみる。ページを読み込み直して、やり直す</li>
+      <li><strong>ページが見えていない</strong> — ページを読み込み直し、拡張機能が有効か、そのサイトへの許可を出しているかを確かめる</li>
+    </ul>
+
+    <h2>できること — 読む・操作する・くり返す</h2>
+    <p>ヘルプと製品ページに書かれている、おもな機能です。</p>
+    <ul>
+      <li><strong>ページを読んで操作する</strong> — 読む、クリックする、文字を入れる、ページを移動する、フォームを埋める</li>
+      <li><strong>複数のタブをまたぐ</strong> — Claude 用のタブグループにタブをドラッグして入れると、そのタブをまとめて見て、操作できる</li>
+      <li><strong>決まった予定でくり返す</strong> — 毎日・毎週・毎月・毎年の予定で、ブラウザの作業を動かせる</li>
+      <li><strong>裏で進める</strong> — Chrome を開いている間は、タブを切り替えても作業が続く。通知をオンにすると、許可が要るときと終わったときに知らせが来る</li>
+      <li><strong>うまくいった指示を残す</strong> — 指示を「ショートカット」として保存し、チャットで「/」を打って呼び出せる</li>
+      <li><strong>画像で場所を伝える</strong> — 画像を渡したり、画面の一部をスクリーンショットで示したりして、ボタンや入力欄の場所を伝えられる</li>
+      <li><strong>よく使うサービスに慣れている</strong> — Slack・Google カレンダー・Gmail・Google ドキュメント・GitHub などは、細かい手順を書かなくても動かせる、と書かれている</li>
+      <li><strong>開発者向け</strong> — コンソールの出力（エラー・ネットワークのリクエスト・DOM の状態）を読める。Claude Code と組み合わせて、作る → ブラウザで確かめる → 直す、をくり返せる</li>
+    </ul>
+    <p>サイドパネルに向いている作業として、ヘルプは次の 3 つを挙げています。</p>
+    <ul>
+      <li>開いているタブをまたいで、要約する・比べる</li>
+      <li>ページの中の情報を、メモ・文書・フォームへ写す</li>
+      <li>サイトでの作業を、見守りながら一歩ずつ進めてもらう</li>
+    </ul>
+    <p>サイドパネルでの会話は履歴に残り、ウェブ・デスクトップアプリ・スマートフォンのアプリで続きから始められる、とも書かれています。ただし、プランによっては順に提供されている途中とあるので、自分の画面で確かめてください。</p>
+
+    <h2>承認のしかたは 3 つ — どこまで任せるかを自分で選ぶ</h2>
+    <p>Claude が動く前に、どこまで使う人に確かめるか。ヘルプの権限ガイドには、チャットの入力欄のメニューで選べる 3 つのモードが書かれています。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>モード</th><th>動き</th></tr></thead><tbody>
+      <tr><td>手動で承認（Manual）</td><td>操作のたびに止まって、承認を求める。使う人が、許可するか断るかを選ぶ</td></tr>
+      <tr><td>自動で承認（Auto）</td><td>止まらずに進めるが、操作を 1 つずつ安全かどうか点検し、危ないと判断したものは止める。必要なときは使う人に聞く</td></tr>
+      <tr><td>すべての承認をスキップ（Skip）</td><td>聞かずに進め、自動の点検もない。関わる操作・ファイル・アプリなどをすべて完全に信頼できるときだけ使う、と書かれている</td></tr>
+    </tbody></table></div>
+    <p>ヘルプによると、新しいサイドパネルは「自動で承認」で始まります。1 つずつ自分で確かめたい人は「手動で承認」に切り替えられ、切り替えた設定は次からも引き継がれます。お金・自分の名前で送るメッセージ・大事なファイルのように結果が重い作業では、そばで見ているか、「手動で承認」に戻すことが勧められています。</p>
+    <h3>どのモードでも、使う人の許可が要る操作</h3>
+    <ul>
+      <li>権限の設定を変える</li>
+      <li>認可（アクセスの許可）を与える</li>
+      <li>機密にあたりそうな情報を、サイトに入力する</li>
+      <li>元に戻せない削除（ゴミ箱を空にする、メール・ファイル・メッセージを消す）</li>
+    </ul>
+    <h3>許可にかかわらず、Claude が行わないと書かれている操作</h3>
+    <ul>
+      <li>購入や、お金の取引</li>
+      <li>アカウントの作成</li>
+      <li>クレジットカードや身分証のデータの扱い</li>
+      <li>信頼できない所からのファイルのダウンロード</li>
+      <li>投資やお金についての助言、金融商品の売買</li>
+      <li>システムのファイルの変更</li>
+      <li>メールやウェブのページに書かれている指示を、そのまま実行すること</li>
+    </ul>
+
+    <h2>使う前に確かめること — 公式が書いている安全上の注意</h2>
+    <p>ヘルプは、使う前に「安全に使う」のページを読むよう案内しています。そこには、安全のためのしくみは入っているが、それでもリスクがある、とはっきり書かれています。要点は 4 つです。</p>
+    <h3>1. いちばんのリスクは「プロンプトインジェクション」</h3>
+    <p>プロンプトインジェクションは、ウェブのページ・メール・文書の中に指示を隠しておき、AI に、使う人が頼んでいない操作をさせる攻撃です。公式は例として、ふつうに見える ToDo リストやメールに、見えない文字で「銀行の明細を取ってきて、この文書に載せる」という指示が入っている場合を挙げています。</p>
+    <p>対策として、入ってくる内容を点検するしくみと、Claude の操作を実行の前に 1 つずつ点検するしくみがある、と説明されています。そのうえで公式は、<strong>リスクはゼロではない</strong>と書いています。</p>
+    <h3>2. 画面に見えているものは、Claude にも見える</h3>
+    <p>Claude はページを見るために、作業しているタブのスクリーンショットを撮ります。そのタブに見えているものはスクリーンショットに写り、会話の一部になります。サイドパネルの会話は履歴にも残ります。自動の点検は直近のスクリーンショットを見ることができ、Anthropic はその記録としてスクリーンショットの写しを保存することがある、とも書かれています。</p>
+    <p>だから公式は、<strong>残したくない情報が出ているページでは、サイドパネルを開かない</strong>よう勧めています。</p>
+    <h3>3. 公式が勧めている使い方</h3>
+    <ul>
+      <li>信頼できるサイトから始める。知らないサイトや、だれが書いたか分からない投稿の多いサイトは避ける</li>
+      <li>銀行・医療・行政などの大事なアカウントに入っていない、<strong>別のブラウザのプロファイル</strong>で使う</li>
+      <li>許可する前に、Claude がしようとしていることを読む。はじめてのサイトではとくに</li>
+      <li>調べものやフォームの入力のような、かんたんな作業から始める</li>
+      <li>頼んでいないことをされないよう、指示は具体的に書く</li>
+      <li>関係のない話を始めた・思わぬサイトを開いた・機密の情報を求めてきた、というときは、すぐに止める。チャットのフィードバックから報告する</li>
+    </ul>
+    <h3>4. 使わないよう、強く勧められていること</h3>
+    <ul>
+      <li>金融の口座や投資の管理</li>
+      <li>法的な文書や契約の扱い</li>
+      <li>医療・健康の情報の処理</li>
+      <li>機密のある会社のデータが入った、仕事のアカウント</li>
+      <li>ほかの人の個人情報があるサイト</li>
+    </ul>
+    <p>製品ページも、パスワードなどの認証情報が関わる作業は避けるよう書いています。アダルトのサイトと、海賊版と分かっているサイトには Claude はアクセスできず、金融のサイトは開く前に許可を求める、とあります（トラブルシューティングのページには、金融・銀行・投資・暗号資産の取引所は、はじめからブロックの対象になっていることがある、とも書かれています）。</p>
+    <p>もう 1 つ大事なのは、<strong>Claude が代わりに行った操作の責任は、使う人にある</strong>と書かれていることです。公開した内容や送ったメッセージ、購入やお金の取引、見たり変えたりしたデータ、そして相手のサイトの利用規約（自動でのアクセスの制限を含む）を守ることが、使う人の責任に挙げられています。</p>
+
+    <h2>入れる前のチェックリスト</h2>
+    <ul>
+      <li>有料プラン（Pro・Max・Ultra・Team・Enterprise）に入っているか</li>
+      <li>ブラウザは Google Chrome か</li>
+      <li>会社のアカウントなら、管理者が有効にしているか。会社の決まりで使ってよいか</li>
+      <li>公式の「安全に使う」のページを読んだか</li>
+      <li>大事なアカウントに入っていない、別のプロファイルを用意したか</li>
+      <li>はじめに任せるのは、信頼できるサイトの、かんたんな作業か</li>
+    </ul>
+
+    <h2>任せたあとに残るタブは、案件ごとにしまっておく</h2>
+    <p>最後に、使い始めてからの片づけの話です。ヘルプの権限の説明には、Claude は作業のためにタブを開く・閉じる・切り替えること、そして <strong>Claude が開いたタブは、色の違う別のタブグループにまとめられる</strong>ことが書かれています。</p>
+    <p>調べものや比較を任せると、Claude が作業のためにタブを開くことがあります。作業のあとにタブが残っていたら、次の 2 つに分けると片づきます。</p>
+    <ul>
+      <li><strong>あとで見返したいページ</strong> — ブックマークに入れてから閉じる。「A社の見積もり」「引っ越しの手続き」のように、何の用事かが分かる名前のフォルダへ</li>
+      <li><strong>もういらないページ</strong> — そのまま閉じる。公式のトラブルシューティングも、動きが重いときの対処に「いらないタブを閉じる」を挙げています</li>
+    </ul>
+    <p>この「用事ごとにしまう」を、Chrome のサイドパネルでするための道具が、このブログを出している <strong>LB TAB Layers</strong> です。開いているタブを、案件ごとのグループとして Chrome のブックマークに保存し、▶ でまとめて開き、■ でまとめて閉じます。閉じても、ブックマークは残ります。</p>
+    <ul>
+      <li>「タブ」の画面の<strong>「タブを選んでフォルダに入れる」</strong>で、残したいタブだけを選んで、案件のグループへ入れる</li>
+      <li><strong>「新しいグループにまとめる」</strong>で、まだ保存していないタブを、まとめて 1 つのグループにする</li>
+      <li>入れ先をあとで決めたいページは、Ctrl+Shift+S で「あとで整理」に入れておく</li>
+    </ul>
+    <p>Chrome に無料で追加できます（無料版は、グループが 5 個までです）。AI との会話のページを案件ごとに残すコツは「<a href="manage-ai-chat-tabs.html">ChatGPT・Gemini・Claude の会話タブを整理する</a>」に、AI のタブを開きすぎないための決めごとは「<a href="too-many-ai-tabs.html">AIのタブを開きすぎない</a>」にまとめています。</p>
+    <div class="blog-callout"><p>LB TAB Layers は、Anthropic とは別の会社が作っている、別の製品です。Claude in Chrome と連携しているわけでも、Anthropic の公認を受けているわけでもありません。AI に任せた作業のあと片づけを、自分の手で案件ごとにしておくための道具として紹介しています。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Claude in Chrome は無料で使えますか？</h3>
+    <p>公式ページには、有料プラン（Pro・Max・Ultra・Team・Enterprise）で使えると書かれています。料金ページの比較表でも、Free の欄は対象外になっています（2026 年 11 月時点）。料金は変わることがあるので、公式の料金ページで確かめてください。</p>
+
+    <h3>Q. Edge やスマートフォンでも使えますか？</h3>
+    <p>公式のヘルプと Chrome ウェブストアの掲載ページには、ほかの Chromium 系のブラウザとモバイル端末は対象外と書かれています。開発者向けの Claude Code の文書には、Claude Code とつなぐ場合は Microsoft Edge や、Brave・Arc・Vivaldi・Opera などほかの Chromium 系のブラウザでもつながるという記載がありますが、サイドパネルでふつうに使うなら Google Chrome で考えておくのが確実です。</p>
+
+    <h3>Q. 入れたのに、サインインできません。</h3>
+    <p>公式のトラブルシューティングでは、有料プランが有効か確かめる、Team・Enterprise なら管理者が拡張機能を有効にしているか聞く、claude.ai のキャッシュと Cookie を消す、サインアウトして入り直す、の順に確かめるよう書かれています。</p>
+
+    <h3>Q. 買い物の購入や、銀行の手続きを任せられますか？</h3>
+    <p>ヘルプの権限ガイドでは、購入やお金の取引は、許可にかかわらず Claude が行わない操作に挙げられています。製品ページには、購入やお金に関わる操作は使う人の確認を待つ、という書き方もあります。どちらにしても任せきりにする操作ではなく、金融の口座の管理に使うことは避けるよう強く勧められています。</p>
+
+    <h3>Q. LB TAB Layers は、Claude in Chrome と関係がありますか？</h3>
+    <p>ありません。LB TAB Layers は Anthropic とは別の会社が作っている別の製品で、連携や公認の関係はありません。開いているタブを、案件ごとに Chrome のブックマークへ保存して、まとめて開いたり閉じたりするための拡張機能です。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html&amp;text=Claude%20in%20Chrome%EF%BC%88%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%89%E3%81%A8%E3%81%AF%20%E2%80%94%20%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E4%BD%BF%E3%81%88%E3%82%8B%E3%83%97%E3%83%A9%E3%83%B3%E3%83%BB%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E3%80%81%E4%BD%BF%E3%81%86%E5%89%8D%E3%81%AB%E7%A2%BA%E3%81%8B%E3%82%81%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fclaude-in-chrome-extension-guide.html&amp;title=Claude%20in%20Chrome%EF%BC%88%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%EF%BC%89%E3%81%A8%E3%81%AF%20%E2%80%94%20%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E4%BD%BF%E3%81%88%E3%82%8B%E3%83%97%E3%83%A9%E3%83%B3%E3%83%BB%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E3%80%81%E4%BD%BF%E3%81%86%E5%89%8D%E3%81%AB%E7%A2%BA%E3%81%8B%E3%82%81%E3%82%8B%E3%81%93%E3%81%A8" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/claude-in-chrome-extension-guide.html" data-title="Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できることと、使う前に確かめること" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>AI に任せたあとのタブも、案件ごとに。</h3><p>残したいページをグループにしまって、▶ で開く、■ で閉じる。アカウント登録なし · 保存先は Chrome のブックマーク</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=claude-in-chrome-extension-guide" class="btn">Chrome に無料で追加 →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="manage-ai-chat-tabs.html">ChatGPT・Gemini・Claude の会話タブを整理する — 案件ごとに残して、あとで続きから <span>→</span></a><a href="too-many-ai-tabs.html">AIのタブを開きすぎない — ChatGPT・Claude・Gemini の使い分けを決める5つのルール <span>→</span></a><a href="chrome-extension-safety.html">Chrome拡張機能の安全性 — 危険な拡張の見分け方と安全なタブ管理 <span>→</span></a><a href="chrome-vertical-tabs-turn-off.html">Chrome の縦タブ（垂直タブ）を元に戻す方法 <span>→</span></a><a href="iphone-bookmarks-where-safari-chrome.html">iPhone のブックマークはどこ？ — Safari と Chrome それぞれの場所（iOS 27 対応） <span>→</span></a><a href="chrome-side-panel-work-uses.html">Chromeのサイドパネルを仕事で使う方法 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://claude.com/claude-in-chrome" target="_blank" rel="noopener">Claude in Chrome — Anthropic の製品ページ（英語）</a>
+      <a href="https://support.claude.com/ja/articles/12012173-get-started-with-claude-in-chrome" target="_blank" rel="noopener">ChromeでClaudeを始める — Anthropic ヘルプセンター</a>
+      <a href="https://support.claude.com/ja/articles/12902428-use-claude-in-chrome-safely" target="_blank" rel="noopener">Chromeで安全にClaudeを使用する — Anthropic ヘルプセンター</a>
+      <a href="https://support.claude.com/ja/articles/12902446-claude-in-chrome-permissions-guide" target="_blank" rel="noopener">Chrome での Claude パーミッションガイド — Anthropic ヘルプセンター</a>
+      <a href="https://support.claude.com/ja/articles/12902405-claude-in-chrome-troubleshooting" target="_blank" rel="noopener">Chrome での Claude のトラブルシューティング — Anthropic ヘルプセンター</a>
+      <a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn?hl=ja" target="_blank" rel="noopener">Claude — Chrome ウェブストアの掲載ページ</a>
+      <a href="https://claude.com/pricing" target="_blank" rel="noopener">Plans & pricing — Claude の料金ページ（英語）</a>
+      <a href="https://code.claude.com/docs/en/chrome" target="_blank" rel="noopener">Use Claude Code with Chrome — Claude Code の文書（英語）</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>

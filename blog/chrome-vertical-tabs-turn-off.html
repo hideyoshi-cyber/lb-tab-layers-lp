@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>Chrome の縦タブ（垂直タブ）を元に戻す方法 — 横に戻す・表示されない時・設定の場所 | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome の縦タブ（垂直タブ）を元に戻す・横に戻す方法と、「タブを縦方向に表示」が表示されない・出てこない時の確かめ方、設定の場所、左右どちらに出るかを、Google の公式ヘルプ（2026 年 11 月時点）の手順でまとめました。">
+  <meta name="keywords" content="chrome 縦タブ 戻す,chrome 縦タブ 元に戻す,chrome 垂直タブ 戻す,chrome タブ 縦 横に戻す,chrome 縦タブ 表示されない,chrome 縦タブ 出てこない,chrome 縦タブ 設定,chrome 縦タブ 右側,タブを横方向に表示">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html">
+  <meta property="og:title" content="Chrome の縦タブ（垂直タブ）を元に戻す方法"><meta property="og:description" content="横に戻す 5 つの入口、メニューに出てこない時の確かめ方、設定の場所、左右どちらに出るか。公式ヘルプの手順で。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-24T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Chrome の縦タブ（垂直タブ）を元に戻す方法"><meta name="twitter:description" content="横に戻す 5 つの入口、メニューに出てこない時の確かめ方、設定の場所、左右どちらに出るか。公式ヘルプの手順で。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Chrome の縦タブを元に戻す方法","item":"https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome の縦タブ（垂直タブ）を元に戻す方法 — 横に戻す・表示されない時・設定の場所","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-24","image":"https://tablayers.liquid-block.com/blog/hero-bookmarks-panel.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chrome の縦タブを元に戻す（横に戻す）には？","acceptedAnswer":{"@type":"Answer","text":"縦に並んだタブか、タブバーの空白を右クリックして［タブを横方向に表示］を選びます。設定からなら、［設定］→［デザイン］→［タブの位置］で［横］を選びます。Mac は、画面の上のメニューの［表示］→［タブを縦方向に表示］のチェックを外しても戻せます。"}},{"@type":"Question","name":"「タブを縦方向に表示」がメニューに出てきません。","acceptedAnswer":{"@type":"Answer","text":"まず、右上の ︙ →［ヘルプ］→［Google Chrome について］で Chrome を最新にします。公式の提供は、Windows・Mac・Linux が Chrome 147 から、ChromeOS が Chrome 148 からです。右クリックで出ないときは、［設定］→［デザイン］→［タブの位置］か、︙ →［その他のツール］から選びます。職場や学校の Chrome は、管理者が機能を設定・制限していることがあります。"}},{"@type":"Question","name":"Chrome の縦タブの設定は、どこにありますか？","acceptedAnswer":{"@type":"Answer","text":"［設定］→［デザイン］の［タブの位置］です。［縦］か［横］を選びます。タブ検索とタブグループのボタンを出す設定、サイドパネルを左右どちらに開くかの設定も、同じ［デザイン］にあります（2026 年 11 月時点の Google Chrome ヘルプの表記）。"}},{"@type":"Question","name":"Chrome の縦タブを右側に出せますか？","acceptedAnswer":{"@type":"Answer","text":"2026 年 11 月時点の Google Chrome ヘルプには、縦タブの左右を選ぶ手順は載っていません。［タブの位置］で選べると書かれているのは［縦］と［横］です。当社で確かめた Chrome 157 の［設定］→［デザイン］にも、左右を選ぶ項目はありませんでした。サイドパネルのほうは、同じ［デザイン］で左右を選べます。"}},{"@type":"Question","name":"縦タブにしたら、タブ検索のボタンが見当たりません。","acceptedAnswer":{"@type":"Answer","text":"タブ検索とタブグループのボタンは、右クリック →［固定を解除］で外せます。戻すときは、［設定］→［デザイン］で［タブ検索のボタンを表示する］をオンにします。キーボードの Ctrl + Shift + A（Mac は ⌘ + Shift + A）でも、タブ検索を開けます。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>Chrome の縦タブを元に戻す方法<br>横に戻す・出てこない時・設定の場所</h1><p class="blog-meta"><time datetime="2026-11-24">2026.11.24</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 6分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-bookmarks-panel.webp" alt="画面の横に、フォルダごとの一覧が縦に並んでいるイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html&amp;text=Chrome%20%E3%81%AE%E7%B8%A6%E3%82%BF%E3%83%96%EF%BC%88%E5%9E%82%E7%9B%B4%E3%82%BF%E3%83%96%EF%BC%89%E3%82%92%E5%85%83%E3%81%AB%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%A8%AA%E3%81%AB%E6%88%BB%E3%81%99%E3%83%BB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E6%99%82%E3%83%BB%E8%A8%AD%E5%AE%9A%E3%81%AE%E5%A0%B4%E6%89%80" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html&amp;title=Chrome%20%E3%81%AE%E7%B8%A6%E3%82%BF%E3%83%96%EF%BC%88%E5%9E%82%E7%9B%B4%E3%82%BF%E3%83%96%EF%BC%89%E3%82%92%E5%85%83%E3%81%AB%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%A8%AA%E3%81%AB%E6%88%BB%E3%81%99%E3%83%BB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E6%99%82%E3%83%BB%E8%A8%AD%E5%AE%9A%E3%81%AE%E5%A0%B4%E6%89%80" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html" data-title="Chrome の縦タブ（垂直タブ）を元に戻す方法 — 横に戻す・表示されない時・設定の場所" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome の縦タブ（垂直タブ）を元に戻すには、縦に並んだタブか、タブバーの空白を右クリックして［タブを横方向に表示］を選びます。</strong>設定からなら、［設定］→［デザイン］→［タブの位置］で［横］を選びます。「タブを縦方向に表示」がメニューに出てこないときは、右上の ︙ →［ヘルプ］→［Google Chrome について］で Chrome を最新にしてから、もう一度確かめます（Google Chrome ヘルプの手順・2026 年 11 月時点）。</p>
+
+    <p>Chrome の縦タブ（タブを縦方向に表示）は、2026 年 4 月から順に提供が始まった機能です。試してみたけれど横のほうが合っていた。気づいたら縦になっていた。使いたいのにメニューに出てこない。この記事では、そんな「困ったとき」の答えを、Google の公式ヘルプの手順をもとにまとめます。</p>
+    <p>オンにする方法や、縦タブでできることは「<a href="chrome-vertical-tabs.html">Chrome の縦タブの使い方 — できること・できないこと</a>」にまとめています。</p>
+
+    <h2>Chrome の縦タブを横に戻す方法</h2>
+    <p>戻す入口は 5 つあります。どれを使っても、結果は同じです。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>どこから</th><th>操作</th></tr></thead><tbody>
+    <tr><td>縦に並んだタブ</td><td>タブを右クリック →［タブを横方向に表示］</td></tr>
+    <tr><td>タブバーの空白</td><td>縦のタブバーの空白を右クリック →［タブを横方向に表示］</td></tr>
+    <tr><td>設定</td><td>［設定］→［デザイン］→［タブの位置］で［横］を選ぶ</td></tr>
+    <tr><td>︙ のメニュー</td><td>右上の ︙（その他）→［その他のツール］→［タブを横方向に表示］</td></tr>
+    <tr><td>Mac のメニュー</td><td>画面の上のメニューの［表示］→［タブを縦方向に表示］のチェックを外す</td></tr>
+    </tbody></table></div>
+    <p>［タブを縦方向に表示］は、タブを右クリックしたメニューに入っています。気づかないうちに選んでいて、いつの間にか縦になっていた、ということもあります。その場合も、同じメニューから戻せます。</p>
+    <p>切り替えで変わるのは、タブバーの場所です。公式ヘルプは、縦タブを「タブバーがウィンドウの横に移動する」表示と説明しています。</p>
+
+    <h3>右クリックのメニューで見つからないときは、設定から</h3>
+    <ol>
+      <li>右上の ︙（その他）→［設定］を開く</li>
+      <li>左の［デザイン］を選ぶ</li>
+      <li>［タブの位置］で［横］を選ぶ（縦にしたいときは［縦］）</li>
+    </ol>
+
+    <aside class="blog-mid-cta has-video" aria-label="LB TAB Layers の紹介">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../img/hero-demo-m.webp" width="720" height="720" aria-label="実際の画面。■ で今やらない案件のタブをしまい、▶ で次の案件のタブをまとめて開く"><source src="../img/hero-demo-m.mp4" type="video/mp4"></video>
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">タブを仕事ごとにまとめて、<strong>▶ で開いて ■ で閉じる</strong>。</p>
+        <p class="blog-mid-cta-text">LB TAB Layers は、開いているタブを仕事ごとに Chrome のブックマークへ保存し、▶ ひとつで同じ名前・色のタブグループとして開き直せる、サイドパネルの拡張機能です。閉じても消えません。</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=chrome-vertical-tabs-turn-off&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
+      </div>
+    </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
+
+    <h2>縦タブの設定の場所は、［設定］→［デザイン］</h2>
+    <p>縦タブに関わる設定は、［設定］の［デザイン］に集まっています。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>項目</th><th>できること</th></tr></thead><tbody>
+    <tr><td>［タブの位置］</td><td>［縦］か［横］を選ぶ</td></tr>
+    <tr><td>［タブ検索のボタンを表示する］</td><td>外したタブ検索のボタンを、もう一度出す</td></tr>
+    <tr><td>［ブックマーク バーにタブグループを表示する］</td><td>外したタブグループのボタンを、もう一度出す</td></tr>
+    <tr><td>［サイドパネルの位置］</td><td>サイドパネルを、左右どちら側に開くかを選ぶ</td></tr>
+    </tbody></table></div>
+    <p>項目の名前は、2026 年 11 月 23 日に Chrome 157 の画面で確かめた表記です（Google Chrome ヘルプでは、タブグループの項目が「保存したタブグループを表示する」と書かれています）。Chrome の版によって、画面の言葉が少し違うことがあります。そのときは、［デザイン］の中で近い言葉を探してください。</p>
+
+    <h2>縦タブが表示されない・メニューに出てこないとき</h2>
+    <p>右クリックしても［タブを縦方向に表示］が出てこないときは、次の順に確かめます。</p>
+
+    <h3>1. Chrome を最新にする</h3>
+    <p>縦タブは、Google が 2026 年 4 月 7 日に提供の開始を発表した機能です。管理者向けのリリースノートには、Windows・Mac・Linux は Chrome 147 から、ChromeOS は Chrome 148 から、順に提供すると書かれています。それより前の版には、公式の機能としては入っていません。</p>
+    <ol>
+      <li>右上の ︙（その他）→［ヘルプ］→［Google Chrome について］を開く。見出しの下の番号が、今の版です。このページを開くと、更新があるかどうかも確かめられます</li>
+      <li>［再起動］が出ていたら、押す。出ていなければ、最新の版です</li>
+    </ol>
+    <p>開いていたタブやウィンドウは、再起動のあとで自動的に表示されます（シークレット ウィンドウは表示されません）。Linux はパッケージ マネージャで、Chromebook は本体のシステム（OS）の更新で、Chrome が新しくなります。</p>
+
+    <h3>2. 右クリックのほかの入口を使う</h3>
+    <p>公式ヘルプの手順は、タブバーの空白か、タブの上での右クリックです。うまく出ないときは、ほかの入口から選びます。</p>
+    <ul>
+      <li>右上の ︙（その他）→［その他のツール］→［タブを縦方向に表示］</li>
+      <li>［設定］→［デザイン］→［タブの位置］で［縦］</li>
+      <li>Mac なら、画面の上のメニューの［表示］→［タブを縦方向に表示］</li>
+    </ul>
+
+    <h3>3. パソコンの Chrome かどうか</h3>
+    <p>縦タブの手順は、公式ヘルプの「パソコン」向けの説明に載っています。Android と iPhone・iPad 向けの説明には、2026 年 11 月時点で縦タブの項目は載っていません。</p>
+
+    <h3>4. 会社や学校のパソコンの場合</h3>
+    <p>職場や学校の Chrome は、組織が設定を管理していることがあります。公式ヘルプによると、その場合は、管理者が特定の機能を設定したり制限したりしている可能性があります。</p>
+    <ul>
+      <li>右上の ︙ のメニューの下のほうに「組織によって管理されています」と出ていれば、管理されている Chrome です</li>
+      <li>アドレスバーに <code>chrome://management</code> と入力して Enter キーを押しても、確かめられます</li>
+    </ul>
+    <p>管理されている Chrome で、更新しても出てこないときは、社内や学校の管理者に聞くのが早道です。</p>
+
+    <h3>5.「chrome://flags から有効にする」という手順を見かけたら</h3>
+    <p>2026 年 11 月時点の公式ヘルプに、その手順は載っていません。公式の入口は、右クリック・︙ のメニュー・設定・Mac の［表示］メニューです。まず Chrome を最新にして、こちらの入口を確かめてください。</p>
+
+    <h2>縦タブは左右どちらに出る？ 右側に出したいとき</h2>
+    <p>公式ヘルプの説明は「タブバーがウィンドウの横に移動する」で、左右を選ぶ手順は載っていません（2026 年 11 月時点）。［タブの位置］で選べると書かれているのは、［縦］と［横］の 2 つです。</p>
+    <p>当社で Chrome 157 の［設定］→［デザイン］を確かめたところ、［タブの位置］で選べるのは［縦］と［横］で、左右を選ぶ項目はありませんでした（2026 年 11 月 23 日）。</p>
+    <p>一方、<strong>サイドパネルは左右を選べます</strong>。［設定］→［デザイン］の［サイドパネルの位置］で、どちら側に開くかを選びます。縦タブと同じ側にサイドパネルが出て窮屈なときは、サイドパネルを反対側に移すと、左右に分かれます。サイドパネルの幅は、パネルの端をドラッグして変えられます。サイドパネルの出し方や左右の変え方は「<a href="chrome-sidebar-guide.html">Chrome のサイドバー（サイドパネル）完全ガイド</a>」にまとめています。</p>
+
+    <h2>横に戻す前に試せること — 縦タブで困ったとき</h2>
+    <p>「縦は見やすいけれど、ここが困る」というときは、戻す前に次のことを試せます。</p>
+
+    <h3>横幅を取りすぎる</h3>
+    <p>縦のタブバーは、幅を変えられます。たたんで細くした表示もあり、その状態でタブにカーソルを合わせると、タブグループの名前やページの題名が広がって見えます。</p>
+
+    <h3>カーソルを合わせると広がるのが気になる</h3>
+    <p>たたんだ表示でカーソルを合わせたときに広がる動きは、オンとオフを選べます。公式ヘルプの手順は、「メニューを開く」アイコンを右クリック →［折りたたまれたタブにカーソルを合わせて展開する］です。</p>
+
+    <h3>タブ検索やタブグループのボタンが消えた</h3>
+    <p>この 2 つのボタンは、右クリック →［固定を解除］で外せます。外したボタンを戻すときは、［設定］→［デザイン］で［タブ検索のボタンを表示する］か［ブックマーク バーにタブグループを表示する］をオンにします。</p>
+    <p>タブ検索は、キーボードでも開けます。Windows・Linux は Ctrl + Shift + A、Mac は ⌘ + Shift + A です。タブを探す方法は「<a href="find-tab-among-many.html">Chrome のタブ検索とタブ一覧の出し方</a>」にもまとめています。</p>
+
+    <h2>縦か横か、迷ったときの目安</h2>
+    <ul>
+      <li><strong>ページの題名を読んで探したい</strong> → 縦。公式ヘルプも、縦タブでできることの最初に「すべてのページの題名を確認する」を挙げています</li>
+      <li><strong>ページの横幅を広く使いたい</strong> → 横。または、縦のままタブバーの幅を狭くする・たたむ</li>
+      <li><strong>決めきれない</strong> → 右クリックのメニューからすぐに行き来できるので、作業に合わせて切り替える</li>
+    </ul>
+
+    <h2>縦タブは「見せ方」。しまう・切り替えるのは、別の役目</h2>
+    <p>縦でも横でも、開いているタブの数は変わりません。縦タブは、開いているタブの並べ方を変える機能だからです。元の悩みが「タブが多くて困る」なら、並べ方とは別に、<strong>閉じても、あとで仕事ごとにまとめて戻せる場所</strong>があると楽になります。</p>
+    <p>私たちが自分たちの仕事のために作った Chrome 拡張「LB TAB Layers」は、その役目の道具です。サイドパネルで、開いているタブを案件ごとのグループに保存します。保存先は Chrome のブックマークなので、タブを閉じても、ブックマークに残ります。■ でまとめて閉じ、▶ で、同じ名前・同じ色の Chrome のタブグループとして開き直せます。</p>
+    <p>縦タブとは役目が違うので、両方を一緒に使えます。縦タブにしていれば、▶ で開いたタブグループが、そのまま縦に並びます。横に戻した場合も、使い方は同じです。くわしくは「<a href="chrome-vertical-tabs.html">Chrome の縦タブの使い方</a>」の後半と、「<a href="open-as-chrome-tab-group.html">まとめて開くと、タブグループになる</a>」をどうぞ。</p>
+
+    <h2>まとめ</h2>
+    <ul>
+      <li><strong>横に戻す</strong>：縦に並んだタブかタブバーの空白を右クリック →［タブを横方向に表示］。または［設定］→［デザイン］→［タブの位置］で［横］</li>
+      <li><strong>出てこないとき</strong>：Chrome を最新にする（︙ →［ヘルプ］→［Google Chrome について］）→ ほかの入口を使う → パソコンの Chrome か、管理されている Chrome かを確かめる</li>
+      <li><strong>設定の場所</strong>：［設定］→［デザイン］。［タブの位置］、タブ検索とタブグループのボタン、［サイドパネルの位置］の左右</li>
+      <li><strong>左右</strong>：公式ヘルプに、縦タブの左右を選ぶ手順は載っていない（2026 年 11 月時点）。サイドパネルは左右を選べる</li>
+      <li>縦タブは「見せ方」。タブを減らしたいときは、仕事ごとに保存して閉じられる場所を組み合わせる</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Chrome の縦タブを元に戻す（横に戻す）には？</h3>
+    <p>縦に並んだタブか、タブバーの空白を右クリックして［タブを横方向に表示］を選びます。設定からなら、［設定］→［デザイン］→［タブの位置］で［横］を選びます。Mac は、画面の上のメニューの［表示］→［タブを縦方向に表示］のチェックを外しても戻せます。</p>
+
+    <h3>Q. 「タブを縦方向に表示」がメニューに出てきません。</h3>
+    <p>まず、右上の ︙ →［ヘルプ］→［Google Chrome について］で Chrome を最新にします。公式の提供は、Windows・Mac・Linux が Chrome 147 から、ChromeOS が Chrome 148 からです。右クリックで出ないときは、［設定］→［デザイン］→［タブの位置］か、︙ →［その他のツール］から選びます。職場や学校の Chrome は、管理者が機能を設定・制限していることがあります。</p>
+
+    <h3>Q. Chrome の縦タブの設定は、どこにありますか？</h3>
+    <p>［設定］→［デザイン］の［タブの位置］です。［縦］か［横］を選びます。タブ検索とタブグループのボタンを出す設定、サイドパネルを左右どちらに開くかの設定も、同じ［デザイン］にあります（2026 年 11 月時点の Google Chrome ヘルプの表記）。</p>
+
+    <h3>Q. Chrome の縦タブを右側に出せますか？</h3>
+    <p>2026 年 11 月時点の Google Chrome ヘルプには、縦タブの左右を選ぶ手順は載っていません。［タブの位置］で選べると書かれているのは［縦］と［横］です。当社で確かめた Chrome 157 の［設定］→［デザイン］にも、左右を選ぶ項目はありませんでした。サイドパネルのほうは、同じ［デザイン］で左右を選べます。</p>
+
+    <h3>Q. 縦タブにしたら、タブ検索のボタンが見当たりません。</h3>
+    <p>タブ検索とタブグループのボタンは、右クリック →［固定を解除］で外せます。戻すときは、［設定］→［デザイン］で［タブ検索のボタンを表示する］をオンにします。キーボードの Ctrl + Shift + A（Mac は ⌘ + Shift + A）でも、タブ検索を開けます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html&amp;text=Chrome%20%E3%81%AE%E7%B8%A6%E3%82%BF%E3%83%96%EF%BC%88%E5%9E%82%E7%9B%B4%E3%82%BF%E3%83%96%EF%BC%89%E3%82%92%E5%85%83%E3%81%AB%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%A8%AA%E3%81%AB%E6%88%BB%E3%81%99%E3%83%BB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E6%99%82%E3%83%BB%E8%A8%AD%E5%AE%9A%E3%81%AE%E5%A0%B4%E6%89%80" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fchrome-vertical-tabs-turn-off.html&amp;title=Chrome%20%E3%81%AE%E7%B8%A6%E3%82%BF%E3%83%96%EF%BC%88%E5%9E%82%E7%9B%B4%E3%82%BF%E3%83%96%EF%BC%89%E3%82%92%E5%85%83%E3%81%AB%E6%88%BB%E3%81%99%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%A8%AA%E3%81%AB%E6%88%BB%E3%81%99%E3%83%BB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E6%99%82%E3%83%BB%E8%A8%AD%E5%AE%9A%E3%81%AE%E5%A0%B4%E6%89%80" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/chrome-vertical-tabs-turn-off.html" data-title="Chrome の縦タブ（垂直タブ）を元に戻す方法 — 横に戻す・表示されない時・設定の場所" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>縦でも横でも、タブは仕事ごとにしまう。</h3><p>開いているタブを案件ごとに保存して ■ で閉じ、▶ で同じ名前・同じ色のタブグループとして開き直す。アカウント登録なし · 保存先は Chrome のブックマーク</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=chrome-vertical-tabs-turn-off" class="btn">Chrome に無料で追加 →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-vertical-tabs.html">Chrome の縦タブの使い方 — できること・できないこと <span>→</span></a><a href="find-tab-among-many.html">Chromeのタブ検索とタブ一覧の出し方｜タブが多すぎて見つからない時の5つの方法 <span>→</span></a><a href="chrome-sidebar-guide.html">Chrome のサイドバー（サイドパネル）完全ガイド <span>→</span></a><a href="open-as-chrome-tab-group.html">Chromeのタブグループを自動で作る・まとめて閉じる <span>→</span></a><a href="chrome-tab-too-many.html">Chrome（クローム）のタブ開きすぎで重い！今すぐ軽くする対処法5つ <span>→</span></a><a href="claude-in-chrome-extension-guide.html">Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できること <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/2391819?hl=ja" target="_blank" rel="noopener">Chrome でタブを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/95414?hl=ja" target="_blank" rel="noopener">Google Chrome を更新する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">Chrome サイドパネルを管理する — Google Chrome ヘルプ</a>
+      <a href="https://support.google.com/chrome/answer/9281740?hl=ja" target="_blank" rel="noopener">Chrome ブラウザが管理対象かどうかを確認する — Google Chrome ヘルプ</a>
+      <a href="https://blog.google/products-and-platforms/products/chrome/new-chrome-productivity-features/" target="_blank" rel="noopener">Get more done with new vertical tabs and immersive reading mode in Chrome — Google 公式ブログ（2026 年 4 月 7 日）</a>
+      <a href="https://support.google.com/chrome/a/answer/10314655?hl=en" target="_blank" rel="noopener">Previous release notes（Chrome 147・148 の「Vertical tabs」）— Chrome Enterprise and Education ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
