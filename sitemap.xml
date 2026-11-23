@@ -1260,6 +1260,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://tablayers.liquid-block.com/press.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tablayers.liquid-block.com/en/press.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://tablayers.liquid-block.com/blog/research-tired-collect-then-sort.html</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
