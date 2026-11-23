@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【機能ガイド】再生位置の表示を選ぶ — 時間・フレーム数・分:秒:フレーム（タイムコード） | LB TAB Layers Blog</title>
+  <meta name="description" content="LB TAB Layers の修正指示で、再生位置の表示を「時間（00:08.78）」「フレーム数（263f）」「分:秒:フレーム（00:08:23）」から選ぶ方法。ピンクの時間を押すたびに替わり、指示シートと書き出しにも同じ形で入ります。">
+  <meta name="keywords" content="タイムコード フレーム 表示,YouTube フレーム数 確認,動画 フレーム数 修正指示,分秒フレーム 表記,タイムコード 読み方,動画 何フレーム目">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/timecode-display-frames.html">
+  <meta property="og:title" content="【機能ガイド】再生位置の表示を選ぶ"><meta property="og:description" content="00:08.78・263f・00:08:23。編集する人に合わせた形で、修正指示を渡せます。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/timecode-display-frames.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/feat-rn-annotate.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-23T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="【機能ガイド】再生位置の表示を選ぶ"><meta name="twitter:description" content="00:08.78・263f・00:08:23。編集する人に合わせた形で、修正指示を渡せます。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/feat-rn-annotate.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"【機能ガイド】再生位置の表示","item":"https://tablayers.liquid-block.com/blog/timecode-display-frames.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"【機能ガイド】再生位置の表示を選ぶ — 時間・フレーム数・分:秒:フレーム","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-23","image":"https://tablayers.liquid-block.com/blog/feat-rn-annotate.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/timecode-display-frames.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"修正指示の再生位置を、フレーム数で出せますか？","acceptedAnswer":{"@type":"Answer","text":"出せます。ピンクの時間を押すたびに、時間（00:08.78）→ フレーム数（263f）→ 分:秒:フレーム（00:08:23）と替わります。"}},{"@type":"Question","name":"選んだ表示は、書き出しにも入りますか？","acceptedAnswer":{"@type":"Answer","text":"入ります。テキスト・PDF・PowerPoint の書き出しにも、選んだ形で再生位置が入ります。"}},{"@type":"Question","name":"YouTube の動画でも、フレーム数がわかりますか？","acceptedAnswer":{"@type":"Answer","text":"わかります。YouTube はプレイヤーからコマ数を読みます。そのほかの Web の動画は再生中に測り、分かるまでは 30 コマ／秒として数えます。"}},{"@type":"Question","name":"フレームぴったりで指示を書きたいときは？","acceptedAnswer":{"@type":"Answer","text":"手元の動画ファイルを開くのが確実です。, と . で1コマずつ送って、そのコマで指示を書けます。"}}]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"修正指示の再生位置の表示を変える","step":[{"@type":"HowToStep","position":1,"name":"動画を止める","text":"動画の上で Alt+Shift+C を押して、書く欄を出します。"},{"@type":"HowToStep","position":2,"name":"ピンクの時間を押す","text":"押すたびに、時間 → フレーム数 → 分:秒:フレーム と替わります。"},{"@type":"HowToStep","position":3,"name":"そのまま書く","text":"選んだ形は覚えていて、指示シートと書き出しにも同じ形で入ります。"}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">機能ガイド</span><h1>【機能ガイド】再生位置の表示を選ぶ<br>時間・フレーム数・分:秒:フレーム</h1><p class="blog-meta"><time datetime="2026-11-23">2026.11.23</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 4分</p></div></section>
+
+  <article class="blog-content">
+    <img src="feat-rn-annotate.webp" alt="止めた場面の右上に、再生位置が出る" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E5%86%8D%E7%94%9F%E4%BD%8D%E7%BD%AE%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E9%81%B8%E3%81%B6%20%E2%80%94%20%E6%99%82%E9%96%93%E3%83%BB%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E6%95%B0%E3%83%BB%E5%88%86%3A%E7%A7%92%3A%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E5%86%8D%E7%94%9F%E4%BD%8D%E7%BD%AE%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E9%81%B8%E3%81%B6%20%E2%80%94%20%E6%99%82%E9%96%93%E3%83%BB%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E6%95%B0%E3%83%BB%E5%88%86%3A%E7%A7%92%3A%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/timecode-display-frames.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/timecode-display-frames.html" data-title="【機能ガイド】再生位置の表示を選ぶ — 時間・フレーム数・分:秒:フレーム" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>再生位置の表示は、ピンクの時間を押すたびに「時間（00:08.78）→ フレーム数（263f）→ 分:秒:フレーム（00:08:23）」と替わります。</strong>指示シートでは、選ぶ欄から変えられます。選んだ形は覚えていて、書く欄・指示シート・書き出し（テキスト・PDF・PowerPoint）のすべてに同じ形で入ります。</p>
+
+    <div class="blog-callout"><p>📌 再生位置の表示の切り替えは、3.0.5 から使えます。PRO の機能ですが、お試し期間中はすべて使えます。</p></div>
+    <p>「8秒78」と書かれても、編集ソフトのタイムラインは秒の小数では動いていません。編集する人が見ているのは、<strong>フレーム</strong>です。指示を書く側と直す側で、数え方がずれていると、そのたびに換算が入ります。3.0.5 から、再生位置の表示を3つから選べるようにしました。</p>
+
+    <h2>3つの表示</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>表示</th><th>例</th><th>向いている相手</th></tr></thead><tbody>
+    <tr><td><strong>時間</strong></td><td>00:08.78</td><td>YouTube などで確かめる人。お客さまとのやりとり</td></tr>
+    <tr><td><strong>フレーム数</strong></td><td>263f</td><td>頭からのフレーム数で作業する人（After Effects など）</td></tr>
+    <tr><td><strong>分:秒:フレーム</strong></td><td>00:08:23</td><td>タイムコードで作業する人（編集ソフト）</td></tr>
+    </tbody></table></div>
+    <p>例の3つは、同じ場面です。30コマ／秒の動画の 8.78 秒は、頭から 263 フレームめで、8秒と23フレームにあたります。</p>
+
+    <h2>変え方</h2>
+    <ul>
+      <li><strong>動画の上で</strong>：書く欄や帯に出ている<strong>ピンクの時間</strong>を押します。押すたびに、時間 → フレーム数 → 分:秒:フレーム と替わります</li>
+      <li><strong>指示シートで</strong>：上の選ぶ欄から変えます</li>
+    </ul>
+    <p>いちど選ぶと覚えています。ブラウザの動画・手元の動画・指示シート・書き出しのどこでも、同じ形で出ます。あとから変えても、<strong>もう書いた指示もまとめて切り替わります</strong>。</p>
+
+    <h2>コマ数（フレームレート）はどう決まる？</h2>
+    <ul>
+      <li><strong>手元の動画ファイル</strong>：再生しながら、コマの速さを自動で測ります</li>
+      <li><strong>YouTube</strong>：プレイヤーから読みます</li>
+      <li><strong>そのほかの Web の動画</strong>：再生中に測ります。分かるまでは 30 コマ／秒として数えます</li>
+    </ul>
+    <p>フレームまで正確に合わせたいときは、<strong>手元の動画ファイル</strong>で確かめるのが確実です。1コマずつ送って、そのコマで指示を書けます。</p>
+
+    <h2>【実体験】換算をなくしたかった</h2>
+    <p>この表示は、私たち自身が修正指示を使っていて「フレーム数でも、分:秒:フレームでも出したい」と感じて足したものです。映像の現場では、秒の小数よりフレームで話します。秒の小数で受け取ると、編集する人が頭の中でフレームに直すことになります。<strong>受け取った人が、数字をそのままタイムラインに打てる</strong>。そのための切り替えです。</p>
+
+    <h2>知っておきたいこと</h2>
+    <ul>
+      <li><strong>ブラウザの動画の細かさ</strong>：Web のプレイヤーは、フレームぴったりには止まらないことがあります。フレーム数は、止まった位置から計算した値です</li>
+      <li><strong>ドロップフレーム</strong>：29.97 コマのドロップフレームの表記（; で区切る形）には対応していません</li>
+      <li><strong>プラン</strong>：修正指示は PRO の機能です。お試し期間中はすべて使えます</li>
+    </ul>
+    
+    <div class="blog-callout"><p>🎬 <strong>修正指示のほかにも、いろいろできます。</strong>パネルを開く、保存したタブを開く、閉じたタブを履歴から戻す、ページにひもづけたメモ、ピンバーまで。ブラウザとパネルの動きをそのまま見られる <a href="operation-guide.html">操作ガイド（動く画面で見る10の操作）</a> にまとめています。入れたばかりの方は <a href="quick-start.html">クイックチュートリアル（5分）</a> からどうぞ。</p></div>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. 修正指示の再生位置を、フレーム数で出せますか？</h3>
+    <p>出せます。ピンクの時間を押すたびに、時間（00:08.78）→ フレーム数（263f）→ 分:秒:フレーム（00:08:23）と替わります。</p>
+
+    <h3>Q. 選んだ表示は、書き出しにも入りますか？</h3>
+    <p>入ります。テキスト・PDF・PowerPoint の書き出しにも、選んだ形で再生位置が入ります。</p>
+
+    <h3>Q. YouTube の動画でも、フレーム数がわかりますか？</h3>
+    <p>わかります。YouTube はプレイヤーからコマ数を読みます。そのほかの Web の動画は再生中に測り、分かるまでは 30 コマ／秒として数えます。</p>
+
+    <h3>Q. フレームぴったりで指示を書きたいときは？</h3>
+    <p>手元の動画ファイルを開くのが確実です。, と . で1コマずつ送って、そのコマで指示を書けます。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html&amp;text=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E5%86%8D%E7%94%9F%E4%BD%8D%E7%BD%AE%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E9%81%B8%E3%81%B6%20%E2%80%94%20%E6%99%82%E9%96%93%E3%83%BB%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E6%95%B0%E3%83%BB%E5%88%86%3A%E7%A7%92%3A%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ftimecode-display-frames.html&amp;title=%E3%80%90%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89%E3%80%91%E5%86%8D%E7%94%9F%E4%BD%8D%E7%BD%AE%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E9%81%B8%E3%81%B6%20%E2%80%94%20%E6%99%82%E9%96%93%E3%83%BB%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E6%95%B0%E3%83%BB%E5%88%86%3A%E7%A7%92%3A%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/timecode-display-frames.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/timecode-display-frames.html" data-title="【機能ガイド】再生位置の表示を選ぶ — 時間・フレーム数・分:秒:フレーム" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>編集する人の数え方で渡す。</h3><p>入れてあれば、Alt+T でパネルを開いて、すぐ試せます。</p><a href="all-features-guide.html" class="btn">ほかの機能の使い方を見る →</a><p class="blog-cta-sub">まだ入れていない方は <a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=timecode-display-frames">Chrome に無料で追加</a></p></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-bulk-screenshot.html">【機能ガイド】一括スクリーンショット <span>→</span></a><a href="feature-right-click-menu.html">【機能ガイド】右クリックメニュー <span>→</span></a><a href="v303-development-story.html">【開発ストーリー】3.0.3 を作った1日 <span>→</span></a><a href="web-page-image-revision-notes.html">【機能ガイド】Web ページ・画像に修正指示 <span>→</span></a><a href="revision-sheet-export-and-trash.html">【機能ガイド】指示シート — まとめる・送る・片づける <span>→</span></a><a href="local-video-frame-by-frame-notes.html">【機能ガイド】手元の動画ファイルに修正指示 <span>→</span></a></div>
+    <!--cluster--><div class="blog-related blog-cluster"><h3>まずはこちら：動画の修正指示・映像制作</h3><a href="feature-revision-notes.html">動画の修正指示ツール <span>→</span></a></div><div class="blog-related blog-cluster"><h3>同じテーマの記事</h3><a href="web-page-image-revision-notes.html">【機能ガイド】Web ページや届いた画像に、番号つきの修正指示を書く <span>→</span></a><a href="video-feedback-checkback-tips.html">動画の修正指示（チェックバック）の書き方 <span>→</span></a><a href="feature-live-pen.html">【機能ガイド】消えるペン <span>→</span></a><a href="video-revision-notes-continuous.html">【機能ガイド】動画の修正指示を、止めずに次々と書く <span>→</span></a></div><div class="blog-related blog-cluster"><h3>LB TAB Layers でどうできる？</h3><a href="feature-right-click-menu.html">【機能ガイド】右クリックメニューでできること一覧 <span>→</span></a></div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
