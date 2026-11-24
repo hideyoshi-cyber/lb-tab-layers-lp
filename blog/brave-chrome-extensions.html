@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>Brave で拡張機能を使う方法 — Chrome の拡張機能の入れ方・管理・使えないもの | LB TAB Layers Blog</title>
+  <meta name="description" content="Brave は Chrome ウェブストアの拡張機能をそのまま入れられます。［Brave に追加］からの入れ方、「Chrome に切り替えませんか？」が出たとき、管理とツールバーへの固定、使えないことがあるものを、公式ヘルプと実機の確認でまとめました。">
+  <meta name="keywords" content="brave 拡張機能,brave chrome 拡張機能,brave 拡張機能 入れ方,brave 拡張機能 追加,brave に追加,brave 拡張機能 管理,brave://extensions,brave 拡張機能 使えない,brave 拡張機能 ツールバー">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html">
+  <meta property="og:title" content="Brave で Chrome の拡張機能を使う方法"><meta property="og:description" content="［Brave に追加］で入れる手順、「Chrome に切り替えませんか？」の閉じ方、管理とツールバー、Brave で使えないことがあるもの。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-25T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Brave で Chrome の拡張機能を使う方法"><meta name="twitter:description" content="［Brave に追加］で入れる手順、「Chrome に切り替えませんか？」の閉じ方、管理とツールバー、Brave で使えないことがあるもの。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-safety-update.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"Brave で拡張機能を使う方法","item":"https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Brave で拡張機能を使う方法 — Chrome の拡張機能の入れ方・管理・使えないもの","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-25","image":"https://tablayers.liquid-block.com/blog/hero-safety-update.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Brave で Chrome の拡張機能は使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えます。Brave の公式ヘルプは、Chromium に対応した拡張機能のほぼすべてに Brave が対応していると説明しています。Brave で Chrome ウェブストアの拡張機能のページを開き、右上の［Brave に追加］→ 確認の画面で［拡張機能を追加］を押すと入ります。ただし、Brave では動かないものや、一部の機能が使えないものもあります。"}},{"@type":"Question","name":"Chrome ウェブストアで「Chrome に切り替えませんか？」と出ます。切り替えないと入れられませんか？","acceptedAnswer":{"@type":"Answer","text":"切り替えなくても入れられます。当社が Brave 1.100.58 で確かめたときは、右上の「Chrome に切り替えませんか？」を［閉じる］で閉じ、そのまま［Brave に追加］から入れられました（2026 年 11 月 23 日）。"}},{"@type":"Question","name":"Brave の拡張機能の管理の画面は、どこにありますか？","acceptedAnswer":{"@type":"Answer","text":"右上の ≡（メニュー）→［拡張機能］→［拡張機能を管理］で開きます。アドレスバーに brave://extensions と入力しても開けます。カードの右下のスイッチで止める・動かす、［削除］で消す、［詳細］で設定を見る、ができます（2026 年 11 月時点の Brave 1.100.58 の表記）。"}},{"@type":"Question","name":"入れた拡張機能を、ツールバーに出したり隠したりするには？","acceptedAnswer":{"@type":"Answer","text":"Brave の公式ヘルプによると、パズルの形のアイコン（拡張機能のツールバーメニュー）で、ツールバーに出すか隠すかを切り替えます。新しく入れた拡張機能をツールバーに固定するかどうかは、brave://extensions の［ツールバーに新しい拡張機能を固定する］のスイッチで選べます。"}},{"@type":"Question","name":"Brave で動かない拡張機能はありますか？","acceptedAnswer":{"@type":"Answer","text":"あります。Brave の公式ヘルプによると、Chrome ウェブストア以外から入れたものや、安全でないと判断されたものは、Brave がオフにすることがあります。古い形式（Manifest V2）の拡張機能で、Brave がサポートを続けると約束しているのは、AdGuard・NoScript・uBlock Origin・uMatrix の 4 つです。また当社の確かめでは、Google アカウントでログインして使う連携は、Brave では使えませんでした。"}},{"@type":"Question","name":"LB TAB Layers は Brave で使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えます。当社が 2026 年 11 月 23 日に Brave 1.100.58 で確かめたところ、Chrome ウェブストアから［Brave に追加］で入れて、サイドパネル、ブックマークのグループ、▶ でまとめて開く・■ で閉じる、タブグループが動きました。保存先は Brave のブックマークです。「Googleカレンダーと同期」「Googleスプレッドシート同期」など、Google アカウントでログインして使う連携は使えませんでした。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>Brave で Chrome の拡張機能を使う方法<br>入れ方・管理・ツールバー・使えないもの</h1><p class="blog-meta"><time datetime="2026-11-25">2026.11.25</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 7分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-safety-update.webp" alt="ブラウザーの画面の中央に、拡張機能の安全を表す盾のマークがあり、下に入れた拡張機能の一覧が並んでいるイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html&amp;text=Brave%20%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95%20%E2%80%94%20Chrome%20%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E7%AE%A1%E7%90%86%E3%83%BB%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html&amp;title=Brave%20%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95%20%E2%80%94%20Chrome%20%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E7%AE%A1%E7%90%86%E3%83%BB%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html" data-title="Brave で拡張機能を使う方法 — Chrome の拡張機能の入れ方・管理・使えないもの" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Brave は、Chrome ウェブストアの拡張機能をそのまま入れられます。</strong>Brave で拡張機能のページを開き、右上の［Brave に追加］を押して、確認の画面で［拡張機能を追加］を押します。ページに Google の「Chrome に切り替えませんか？」が出ても、［閉じる］で閉じてかまいません。入れた拡張機能は、右上の ≡ →［拡張機能］→［拡張機能を管理］（アドレスバーに brave://extensions でも開けます）で、止めたり消したりできます（Brave の公式ヘルプと、2026 年 11 月 23 日に当社が Brave 1.100 で確かめた手順）。</p>
+
+    <p>パソコンの Brave（ブレイブ）は、Chromium（クロミウム）をもとにしたブラウザーです。Chrome から乗り換えるとき、または試してみるときに気になるのが、「いつもの Chrome の拡張機能は、Brave でも使えるのか」ではないでしょうか。</p>
+    <p>この記事では、Brave の公式ヘルプの説明と、当社が 2026 年 11 月 23 日にパソコン（Windows 11）の Brave 1.100.58 で確かめた結果をもとに、入れ方・管理・ツールバーへの出し方・使えないことがあるものをまとめます。手順は、パソコンの Brave のものです。</p>
+
+    <h2>Brave で Chrome の拡張機能は使える？</h2>
+    <p><strong>使えます。</strong>Brave の公式ヘルプは、Chromium に対応した拡張機能の、ほぼすべてに Brave が対応していると説明しています。拡張機能は、Chrome と同じ Chrome ウェブストアから入れます。</p>
+    <p>理由は、Brave の作りにあります。Brave の公式の説明によると、パソコン（デスクトップ）の Brave は、オープンソースの Chromium をもとに動いています。そのため、Chrome ウェブストアの拡張機能を、Brave にも入れられます。</p>
+    <p>ただし、公式ヘルプの言い方は「ほぼすべて」です。Brave では動かないもの、一部の機能が使えないものもあります。それは、この記事の後半にまとめます。</p>
+
+    <aside class="blog-mid-cta has-video" aria-label="LB TAB Layers の紹介">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../img/hero-demo-m.webp" width="720" height="720" aria-label="実際の画面。■ で今やらない案件のタブをしまい、▶ で次の案件のタブをまとめて開く"><source src="../img/hero-demo-m.mp4" type="video/mp4"></video>
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">タブを仕事ごとにまとめて、<strong>▶ で開いて ■ で閉じる</strong>。</p>
+        <p class="blog-mid-cta-text">LB TAB Layers は、開いているタブを仕事ごとに Chrome のブックマークへ保存し、▶ ひとつで同じ名前・色のタブグループとして開き直せる、サイドパネルの拡張機能です。閉じても消えません。</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=brave-chrome-extensions&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
+      </div>
+    </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
+
+    <h2>Brave に Chrome の拡張機能を入れる手順（パソコン）</h2>
+    <ol>
+      <li>Brave で Chrome ウェブストアを開き、入れたい拡張機能のページを開く</li>
+      <li>右上の［Brave に追加］を押す</li>
+      <li>確認の画面が出る。拡張機能が使うデータや権限が書かれているので、読んでから［拡張機能を追加］を押す</li>
+    </ol>
+    <p>これで入ります。Brave の公式ヘルプは、この確認の画面をよく読み、拡張機能によるデータの扱いが信頼できる場合にだけ入れるよう呼びかけています。Brave は、ほかの会社や個人が作った拡張機能の安全やデータの扱いまでは保証できない、とも説明しています。</p>
+    <p>確認の画面に出る「権限」の読み方は「<a href="tab-extension-permissions-safety.html">タブ管理拡張の「権限」の見方</a>」に、危ない拡張機能の見分け方は「<a href="chrome-extension-safety.html">Chrome 拡張機能の安全性 — 危険な拡張の見分け方</a>」にまとめています。どちらも Chrome 向けに書いた記事ですが、考え方は Brave でも同じです。</p>
+
+    <h3>「Chrome に切り替えませんか？」と出たら</h3>
+    <p>Brave で Chrome ウェブストアを開くと、Google の案内が出ます。当社が確かめたときは、次の 2 つでした。</p>
+    <ul>
+      <li>ページの上の帯：「拡張機能とテーマをインストールするには、Chrome に切り替えてください」</li>
+      <li>右上の小さな画面：「Chrome に切り替えませんか？」（［閉じる］と［はい］）</li>
+    </ul>
+    <p>Brave で使うなら、切り替えなくてかまいません。当社の確かめでは、右上の画面を［閉じる］で閉じ、そのまま［Brave に追加］から入れられました。</p>
+
+    <h2>入れた拡張機能の管理 — 見る・止める・消す</h2>
+    <p>入れた拡張機能は、［拡張機能］の画面にまとまっています。開き方は 3 つです。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>どこから</th><th>操作</th></tr></thead><tbody>
+    <tr><td>≡ のメニュー</td><td>右上の ≡（メニュー）→［拡張機能］→［拡張機能を管理］</td></tr>
+    <tr><td>アドレスバー</td><td><code>brave://extensions</code> と入力して Enter キー</td></tr>
+    <tr><td>設定</td><td>［設定］→ 左の［拡張機能］→［拡張機能を管理］</td></tr>
+    </tbody></table></div>
+    <p>［拡張機能］の画面には、入れた拡張機能がカードで並びます。カードの中でできることは、次のとおりです。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>したいこと</th><th>操作</th></tr></thead><tbody>
+    <tr><td>止める（オフにする）</td><td>カードの右下のスイッチをオフにする。入れたまま止まるので、あとでオンに戻せる</td></tr>
+    <tr><td>消す</td><td>カードの［削除］を押す</td></tr>
+    <tr><td>くわしく見る・設定する</td><td>カードの［詳細］を押す。拡張機能によっては、ここに追加の設定がある</td></tr>
+    <tr><td>キーボードの操作を見る</td><td>画面の左の［キーボード ショートカット］</td></tr>
+    </tbody></table></div>
+    <p>画面の言葉は、2026 年 11 月 23 日に Brave 1.100.58 の日本語の画面で確かめた表記です。Brave の公式ヘルプ（日本語）では、≡ のメニューから［拡張機能］を選ぶ手順で書かれています。版によってメニューの並びが少し違うことがあるので、迷ったら <code>brave://extensions</code> を使うのが近道です。</p>
+    <p>拡張機能を消すと、その拡張機能が保存していたものがどうなるかは、拡張機能によって違います。消す前に確かめたいときは「<a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？</a>」をどうぞ。</p>
+
+    <h2>拡張機能をツールバーに出す（固定する）</h2>
+    <p>Brave の公式ヘルプによると、入れた拡張機能は、ブラウザーの右上に出ます。ツールバーに出すか隠すかは、パズルの形のアイコン（拡張機能のツールバーメニュー）で切り替えます。</p>
+    <p>当社が確かめた Brave 1.100.58 では、このパズルの形のボタンの名前は［拡張機能］で、アドレスバーの右側、≡ のメニューと同じ並びにありました。</p>
+    <p>もうひとつ、［拡張機能］の画面（<code>brave://extensions</code>）の上のほうに、［ツールバーに新しい拡張機能を固定する］というスイッチがあります。当社が空のプロフィールで開いたときは、オンでした。新しく入れた拡張機能がツールバーに増えていくのが気になるときは、このスイッチを見直してください。</p>
+
+    <h2>Brave で使えない・動きが違うことがあるもの</h2>
+    <p>Brave で拡張機能が思ったとおりに動かないときは、次のどれかに当てはまらないかを確かめます。</p>
+
+    <h3>1. Chrome ウェブストア以外から入れた拡張機能</h3>
+    <p>Brave の公式ヘルプによると、Brave は、Chrome ウェブストアから来ていない拡張機能や、安全でないと判断した拡張機能をオフにすることがあります。そのときは、拡張機能がオフになったという知らせが出ます（英語の公式ヘルプでは「Extensions Disabled」）。</p>
+    <p>Brave がオフにした拡張機能のうち、Chrome ウェブストアに公開されていないものは、［拡張機能］の画面で灰色になり、オンに戻せません。どうしても使いたいときは、その拡張機能の作り手に、もう一度公開してもらうよう頼む、というのが公式の案内です。</p>
+
+    <h3>2. 古い形式（Manifest V2）の拡張機能</h3>
+    <p>Brave の説明によると、Google が拡張機能の形式を新しい Manifest V3 に移したことで、古い形式（Manifest V2）の拡張機能の多くは使えなくなっていきます。そのなかで Brave は、AdGuard・NoScript・uBlock Origin・uMatrix の 4 つについては、Manifest V2 のサポートを続けると約束しています。当社が確かめた Brave でも、［設定］→［拡張機能］に［Manifest V2拡張機能］の項目がありました。</p>
+    <p>なお、広告をブロックする拡張機能について、Brave の公式ヘルプは、Brave に組み込まれた Brave Shields があるので特に必要ない、と説明しています。</p>
+
+    <h3>3. Google アカウントでログインして使う連携</h3>
+    <p>当社が自社の拡張機能（LB TAB Layers）で確かめたところ、Brave では、拡張機能から Google のログインを使おうとすると、Google のログインの画面がエラー（アクセスをブロック）を返しました。<strong>Google アカウントでログインして使う連携は、Brave では使えませんでした</strong>（2026 年 11 月 23 日・Brave 1.100.58）。Brave の［設定］→［拡張機能］にある［拡張機能のGoogleログインを許可する］をオンにして試しても、結果は同じでした。同じ拡張機能を Microsoft Edge で試したときも、拡張機能から Google のログインは使えない、という表示が出ました。</p>
+    <p>Google カレンダーや Google スプレッドシートとつなぐ機能など、Google アカウントでのログインを使う拡張機能を Brave で使いたいときは、入れる前に、その拡張機能の説明で対応しているブラウザーを確かめると安心です。</p>
+
+    <h3>4. ブックマークや拡張機能のデータは、Chrome とは別</h3>
+    <p>Brave と Chrome は、別のブラウザーです。ブックマークも別々なので、ブックマークを使う拡張機能は、Brave では Brave のブックマークを使います。Chrome で保存したものが、そのまま Brave に出てくるわけではありません。</p>
+    <p>Chrome のブックマークを Brave に移したいときは、Brave の公式ヘルプの手順で読み込めます。当社が確かめた Brave 1.100.58 では、右上の ≡ →［ブックマークとリスト］→［ブックマークと設定をインポート…］で、読み込み元のブラウザーを選びます。ブックマークを HTML のファイルに書き出してから読み込む方法もあります。Chrome 側での書き出し方は「<a href="bookmark-export-import.html">クロームのブックマークをエクスポート・インポートする方法</a>」にまとめています。</p>
+    <p>Brave 同士なら、Brave の［同期］で、ブックマークや開いているタブを複数の端末で共有できます。［設定］の［同期］から、同期チェーンを作ってほかの端末をつなぎます。公式ヘルプによると、同期されるのは、つないだ両方の端末でオンにした項目だけです。また、ブックマークが 1000 件を超えるなど同期するデータがとても多いと、同期が不安定になったり、時間がかかったりすることがある、とも書かれています。</p>
+
+    <h2>LB TAB Layers は Brave で使える？ — 当社で確かめた結果</h2>
+    <p>私たちが自分たちの仕事のために作った Chrome 拡張「LB TAB Layers」も、Brave で動くかを確かめました（2026 年 11 月 23 日・Windows 11・Brave 1.100.58・新しく作った空のプロフィール）。Chrome ウェブストアから［Brave に追加］で入れると、入れたあとにクイックスタートのページが開きました。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>確かめたこと</th><th>結果</th></tr></thead><tbody>
+    <tr><td>サイドパネル</td><td>画面の右側に、サイドパネルとして開いた（幅はおよそ 400px）</td></tr>
+    <tr><td>ブックマークのグループ</td><td>ブックマークが、グループとして並んだ。「今のブックマークから始める」で、今のブックマークをコピーして並べられた（元のブックマークはそのまま）</td></tr>
+    <tr><td>▶ と ■</td><td>▶ でまとめて開き、■ で閉じられた。開いたタブは、タブグループになった</td></tr>
+    <tr><td>画面のエラー</td><td>出なかった</td></tr>
+    <tr><td>Google アカウントでログインして使う連携（「Googleカレンダーと同期」「Googleスプレッドシート同期」など）</td><td>使えなかった（Google のログインの画面がエラーを返した）</td></tr>
+    </tbody></table></div>
+    <p>LB TAB Layers のほかの機能は、Google のログインを使いません。</p>
+    <p>Chrome と違うのは、保存先です。<strong>Brave では、LB TAB Layers の保存先は Brave のブックマーク</strong>です（Chrome のブックマークではありません）。そのため、Chrome の LB TAB Layers で保存したグループは、Brave の LB TAB Layers にはそのままでは出てきません。両方のブラウザーで使うときは、それぞれに保存されると考えてください。</p>
+    <p>LB TAB Layers は、開いているタブを仕事ごとにブックマークへ保存し、▶ ひとつでタブグループとして開き直せる、サイドパネルの拡張機能です。■ でタブを閉じても、保存はブックマークに残ります。基本の使い方は「<a href="quick-start.html">LB TAB Layers クイックチュートリアル</a>」に、▶ で開いたタブがタブグループになる仕組みは「<a href="open-as-chrome-tab-group.html">Chrome のタブグループを自動で作る・まとめて閉じる</a>」にまとめています。</p>
+
+    <h2>まとめ</h2>
+    <ul>
+      <li><strong>使えるか</strong>：Brave は、Chrome ウェブストアの拡張機能のほぼすべてに対応している（Brave の公式ヘルプ）</li>
+      <li><strong>入れ方</strong>：拡張機能のページで［Brave に追加］→ 確認の画面で［拡張機能を追加］。「Chrome に切り替えませんか？」は［閉じる］で閉じてよい</li>
+      <li><strong>管理</strong>：≡ →［拡張機能］→［拡張機能を管理］、または <code>brave://extensions</code>。右下のスイッチで止める、［削除］で消す、［詳細］で設定</li>
+      <li><strong>ツールバー</strong>：パズルの形の［拡張機能］ボタンで、出す・隠すを切り替える。新しく入れたものを自動で固定するかは、［ツールバーに新しい拡張機能を固定する］で選ぶ</li>
+      <li><strong>使えないことがあるもの</strong>：Chrome ウェブストア以外から入れたもの、古い形式（Manifest V2）のもの、Google アカウントでログインして使う連携</li>
+      <li><strong>LB TAB Layers</strong>：Brave で動いた。保存先は Brave のブックマーク。Google アカウントでログインして使う連携は使えなかった</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. Brave で Chrome の拡張機能は使えますか？</h3>
+    <p>使えます。Brave の公式ヘルプは、Chromium に対応した拡張機能のほぼすべてに Brave が対応していると説明しています。Brave で Chrome ウェブストアの拡張機能のページを開き、右上の［Brave に追加］→ 確認の画面で［拡張機能を追加］を押すと入ります。ただし、Brave では動かないものや、一部の機能が使えないものもあります。</p>
+
+    <h3>Q. Chrome ウェブストアで「Chrome に切り替えませんか？」と出ます。切り替えないと入れられませんか？</h3>
+    <p>切り替えなくても入れられます。当社が Brave 1.100.58 で確かめたときは、右上の「Chrome に切り替えませんか？」を［閉じる］で閉じ、そのまま［Brave に追加］から入れられました（2026 年 11 月 23 日）。</p>
+
+    <h3>Q. Brave の拡張機能の管理の画面は、どこにありますか？</h3>
+    <p>右上の ≡（メニュー）→［拡張機能］→［拡張機能を管理］で開きます。アドレスバーに brave://extensions と入力しても開けます。カードの右下のスイッチで止める・動かす、［削除］で消す、［詳細］で設定を見る、ができます（2026 年 11 月時点の Brave 1.100.58 の表記）。</p>
+
+    <h3>Q. 入れた拡張機能を、ツールバーに出したり隠したりするには？</h3>
+    <p>Brave の公式ヘルプによると、パズルの形のアイコン（拡張機能のツールバーメニュー）で、ツールバーに出すか隠すかを切り替えます。新しく入れた拡張機能をツールバーに固定するかどうかは、brave://extensions の［ツールバーに新しい拡張機能を固定する］のスイッチで選べます。</p>
+
+    <h3>Q. Brave で動かない拡張機能はありますか？</h3>
+    <p>あります。Brave の公式ヘルプによると、Chrome ウェブストア以外から入れたものや、安全でないと判断されたものは、Brave がオフにすることがあります。古い形式（Manifest V2）の拡張機能で、Brave がサポートを続けると約束しているのは、AdGuard・NoScript・uBlock Origin・uMatrix の 4 つです。また当社の確かめでは、Google アカウントでログインして使う連携は、Brave では使えませんでした。</p>
+
+    <h3>Q. LB TAB Layers は Brave で使えますか？</h3>
+    <p>使えます。当社が 2026 年 11 月 23 日に Brave 1.100.58 で確かめたところ、Chrome ウェブストアから［Brave に追加］で入れて、サイドパネル、ブックマークのグループ、▶ でまとめて開く・■ で閉じる、タブグループが動きました。保存先は Brave のブックマークです。「Googleカレンダーと同期」「Googleスプレッドシート同期」など、Google アカウントでログインして使う連携は使えませんでした。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html&amp;text=Brave%20%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95%20%E2%80%94%20Chrome%20%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E7%AE%A1%E7%90%86%E3%83%BB%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fbrave-chrome-extensions.html&amp;title=Brave%20%E3%81%A7%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95%20%E2%80%94%20Chrome%20%E3%81%AE%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E5%85%A5%E3%82%8C%E6%96%B9%E3%83%BB%E7%AE%A1%E7%90%86%E3%83%BB%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/brave-chrome-extensions.html" data-title="Brave で拡張機能を使う方法 — Chrome の拡張機能の入れ方・管理・使えないもの" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>Brave でも、タブは仕事ごとにしまう。</h3><p>開いているタブを案件ごとに保存して ■ で閉じ、▶ でタブグループとして開き直す。アカウント登録なし · Brave では保存先は Brave のブックマーク</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=brave-chrome-extensions" class="btn">Chrome に無料で追加 →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="chrome-extension-safety.html">Chrome拡張機能の安全性 — 危険な拡張の見分け方と安全なタブ管理 <span>→</span></a><a href="what-happens-uninstall.html">拡張機能を削除したらデータはどうなる？タブ管理拡張の保存先と、消す前にやること <span>→</span></a><a href="bookmark-export-import.html">クロームのブックマークをエクスポート（書き出し）・インポートする方法 <span>→</span></a><a href="chrome-vs-edge-tab-management.html">Chrome vs Edge — タブ管理機能を徹底比較 <span>→</span></a><a href="chrome-vertical-tabs-turn-off.html">Chrome の縦タブ（垂直タブ）を元に戻す方法 <span>→</span></a><a href="claude-in-chrome-extension-guide.html">Claude in Chrome（拡張機能）とは — 入れ方・使えるプラン・できること <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.brave.app/hc/ja/articles/360017909112" target="_blank" rel="noopener">拡張機能の追加方法 — Brave 日本語ヘルプセンター</a>
+      <a href="https://brave.com/learn/using-chrome-extensions-in-brave/" target="_blank" rel="noopener">Can I use extensions in Brave? — Brave（英語）</a>
+      <a href="https://brave.com/learn/enable-extensions-in-incognito/" target="_blank" rel="noopener">How to enable extensions in Incognito windows（≡ →［Extensions］→［Manage Extensions］の手順）— Brave（英語）</a>
+      <a href="https://support.brave.app/hc/en-us/articles/360055359111-Switch-to-Brave-from-Firefox" target="_blank" rel="noopener">Switch to Brave from Firefox（拡張機能の固定・パズルのアイコン）— Brave Help Center（英語）</a>
+      <a href="https://support.brave.app/hc/en-us/articles/360017914832-Why-am-I-seeing-the-message-extensions-disabled-by-Brave" target="_blank" rel="noopener">Why am I seeing the message "extensions disabled by Brave"? — Brave Help Center（英語）</a>
+      <a href="https://brave.com/learn/extension-no-longer-supported/" target="_blank" rel="noopener">What to do if your Chrome extension is no longer supported（Manifest V2）— Brave（英語）</a>
+      <a href="https://brave.com/about/" target="_blank" rel="noopener">About Brave（パソコンと Android の Brave は Chromium で動く）— Brave 公式サイト（英語）</a>
+      <a href="https://github.com/brave/brave-core" target="_blank" rel="noopener">brave/brave-core（Chromium をもとに Brave を作るための変更）— Brave の GitHub</a>
+      <a href="https://support.brave.app/hc/ja/articles/360019782291" target="_blank" rel="noopener">ブックマーク等ブラウザデータのインポートやエクスポートについて — Brave 日本語ヘルプセンター</a>
+      <a href="https://support.brave.app/hc/ja/articles/360021218111" target="_blank" rel="noopener">同期はどのように設定すればいいですか？ — Brave 日本語ヘルプセンター</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a><a href="../tokushoho.html">特定商取引法に基づく表記</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
