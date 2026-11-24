@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Payment complete | LB TAB Layers</title>
+<link rel="icon" href="../favicon.png">
+<style>
+  /* Page opened after payment (Stripe returns here). Not for search. */
+  :root { --ink:#212529; --sub:#5f676e; --line:#e5e1dd; --bg:#fbf8f6; --card:#ffffff; --accent:#e0473f; --ok:#1f7a4d; --ok-bg:#eaf6ef; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif; line-height:1.7; }
+  .wrap { max-width:600px; margin:0 auto; padding:40px 16px 64px; display:grid; gap:18px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); text-decoration:none; }
+  .brand img { width:32px; height:32px; }
+  .done { display:inline-flex; align-items:center; gap:8px; background:var(--ok-bg); color:var(--ok); font-weight:700; border-radius:999px; padding:4px 14px; font-size:14px; width:max-content; }
+  h1 { font-size:24px; line-height:1.35; margin:0; text-wrap:balance; }
+  .lead { color:var(--sub); margin:0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .card h2 { font-size:17px; margin:0 0 10px; }
+  ol, ul { margin:0; padding-left:1.4em; display:grid; gap:6px; }
+  .main { border:2px solid var(--accent); }
+  .main li::marker { color:var(--accent); font-weight:700; }
+  .pro { display:inline-block; background:var(--accent); color:#fff; font-weight:800; font-size:12px; border-radius:6px; padding:0 7px; letter-spacing:.04em; vertical-align:1px; }
+  p { margin:0; }
+  p + p { margin-top:8px; }
+  a { color:var(--accent); }
+  .mail { font-weight:700; user-select:all; }
+  .foot { color:var(--sub); font-size:13px; display:flex; flex-wrap:wrap; gap:6px 16px; }
+  .foot a { color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="./"><img src="../lb-logo.svg" alt="">LB TAB Layers</a>
+
+  <span class="done">✓ Payment complete</span>
+  <h1>Thank you. You can use PRO for 3 years from the day of purchase.</h1>
+  <p class="lead">If you used a student code for a $0 order, the steps are the same.</p>
+
+  <section class="card main" aria-labelledby="h-next">
+    <h2 id="h-next">Turn on PRO (one last step)</h2>
+    <ol>
+      <li>Close the LB TAB Layers side panel in Chrome with the × at the top right</li>
+      <li>Open it again from the LB TAB Layers icon in the toolbar</li>
+      <li>When the <span class="pro">PRO</span> badge appears at the top, you're done</li>
+    </ol>
+  </section>
+
+  <section class="card" aria-labelledby="h-no">
+    <h2 id="h-no">If PRO doesn't turn on</h2>
+    <p>Wait a minute or two, then close and reopen the side panel again.</p>
+    <p>If nothing changes, email <span class="mail">info@liquid-block.com</span> with the email address you paid with and the date and time of the payment. We'll check and reply.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-more">
+    <h2 id="h-more">Good to know</h2>
+    <ul>
+      <li>PRO lasts 3 years from the day of purchase (<a href="terms.html#a4">Terms of Service, Article 4</a>).</li>
+      <li>If you need a receipt, email <span class="mail">info@liquid-block.com</span> from the address you paid with.</li>
+      <li>For how to use it, see the <a href="blog/quick-start.html">Quick start</a> and <a href="help/">Help</a>.</li>
+    </ul>
+  </section>
+
+  <p class="foot"><a href="tokushoho.html">Legal notice (Japan)</a><a href="terms.html">Terms of Service</a><a href="privacy-policy.html">Privacy Policy</a><a href="../pro-thanks.html">日本語</a></p>
+</div>
+</body>
+</html>

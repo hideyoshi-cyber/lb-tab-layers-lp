@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>お支払いは行われていません | LB TAB Layers</title>
+<link rel="icon" href="favicon.png">
+<style>
+  /* 支払いの画面を閉じたときに開くページ（Stripe から戻る先）。検索には出さない */
+  :root { --ink:#212529; --sub:#5f676e; --line:#e5e1dd; --bg:#fbf8f6; --card:#ffffff; --accent:#e0473f; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Noto Sans JP","Yu Gothic UI","Hiragino Sans","Meiryo",system-ui,sans-serif; line-height:1.75; }
+  .wrap { max-width:600px; margin:0 auto; padding:40px 16px 64px; display:grid; gap:18px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); text-decoration:none; }
+  .brand img { width:32px; height:32px; }
+  h1 { font-size:24px; line-height:1.4; margin:0; }
+  .lead { color:var(--sub); margin:0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .card h2 { font-size:17px; margin:0 0 10px; }
+  ul { margin:0; padding-left:1.4em; display:grid; gap:6px; }
+  p { margin:0; }
+  p + p { margin-top:8px; }
+  a { color:var(--accent); }
+  .btn { display:inline-block; background:var(--accent); color:#fff; font-weight:700; font-size:13px; border-radius:999px; padding:0 10px; }
+  .mail { font-weight:700; user-select:all; }
+  .foot { color:var(--sub); font-size:13px; display:flex; flex-wrap:wrap; gap:6px 16px; }
+  .foot a { color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="./"><img src="lb-logo.svg" alt="">LB TAB Layers</a>
+
+  <h1>お支払いは行われていません。</h1>
+  <p class="lead">支払いの画面を閉じたため、料金はかかっていません。</p>
+
+  <section class="card" aria-labelledby="h-again">
+    <h2 id="h-again">もう一度お申し込みのときは</h2>
+    <p>LB TAB Layers のサイドパネルの上にある <span class="btn">$12.99 PRO</span> を押してください。日本語でお使いの場合は、円（2,065 円・税別）でのお支払いになり、カードと PayPay が使えます。</p>
+    <p>お試しの期間中は、PRO の機能をそのままお使いいただけます。</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-info">
+    <h2 id="h-info">料金と条件</h2>
+    <ul>
+      <li>買い切りの販売は 2027 年 11 月 30 日までで、購入した日から 3 年間お使いいただけます（<a href="tokushoho.html">特定商取引法に基づく表記</a>）。</li>
+      <li>学生の方は、申請で PRO を 3 年間無料でお使いいただけます（<a href="students.html">学生の方へ</a>）。</li>
+      <li>ご不明な点は <span class="mail">info@liquid-block.com</span> へどうぞ。</li>
+    </ul>
+  </section>
+
+  <p class="foot"><a href="./">LB TAB Layers のトップ</a><a href="terms.html">利用規約</a><a href="privacy-policy.html">プライバシーポリシー</a><a href="en/pro-cancel.html">English</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>お支払いが終わりました | LB TAB Layers</title>
+<link rel="icon" href="favicon.png">
+<style>
+  /* 支払いのあとに開くページ（Stripe から戻る先）。検索には出さない */
+  :root { --ink:#212529; --sub:#5f676e; --line:#e5e1dd; --bg:#fbf8f6; --card:#ffffff; --accent:#e0473f; --ok:#1f7a4d; --ok-bg:#eaf6ef; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Noto Sans JP","Yu Gothic UI","Hiragino Sans","Meiryo",system-ui,sans-serif; line-height:1.75; }
+  .wrap { max-width:600px; margin:0 auto; padding:40px 16px 64px; display:grid; gap:18px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); text-decoration:none; }
+  .brand img { width:32px; height:32px; }
+  .done { display:inline-flex; align-items:center; gap:8px; background:var(--ok-bg); color:var(--ok); font-weight:700; border-radius:999px; padding:4px 14px; font-size:14px; width:max-content; }
+  h1 { font-size:24px; line-height:1.4; margin:0; }
+  .lead { color:var(--sub); margin:0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .card h2 { font-size:17px; margin:0 0 10px; }
+  ol, ul { margin:0; padding-left:1.4em; display:grid; gap:6px; }
+  .main { border:2px solid var(--accent); }
+  .main li::marker { color:var(--accent); font-weight:700; }
+  .pro { display:inline-block; background:var(--accent); color:#fff; font-weight:800; font-size:12px; border-radius:6px; padding:0 7px; letter-spacing:.04em; vertical-align:1px; }
+  p { margin:0; }
+  p + p { margin-top:8px; }
+  a { color:var(--accent); }
+  .mail { font-weight:700; user-select:all; }
+  .foot { color:var(--sub); font-size:13px; display:flex; flex-wrap:wrap; gap:6px 16px; }
+  .foot a { color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="./"><img src="lb-logo.svg" alt="">LB TAB Layers</a>
+
+  <span class="done">✓ お支払いが終わりました</span>
+  <h1>ありがとうございます。<br>PRO を、購入した日から 3 年間お使いいただけます。</h1>
+  <p class="lead">学生のコードで 0 円にした方も、同じ手順で PRO になります。</p>
+
+  <section class="card main" aria-labelledby="h-next">
+    <h2 id="h-next">PRO にする（あと 1 つだけ）</h2>
+    <ol>
+      <li>Chrome の LB TAB Layers のサイドパネルを、右上の × で一度閉じる</li>
+      <li>ツールバーの LB TAB Layers のアイコンを押して、もう一度開く</li>
+      <li>上に <span class="pro">PRO</span> の印が出たら完了です</li>
+    </ol>
+  </section>
+
+  <section class="card" aria-labelledby="h-no">
+    <h2 id="h-no">PRO にならないとき</h2>
+    <p>1〜2 分待ってから、もう一度サイドパネルを開き直してください。</p>
+    <p>それでも変わらないときは、お支払いに使ったメールアドレスと、お支払いの日時を書いて <span class="mail">info@liquid-block.com</span> へお送りください。こちらで確かめて、お返事します。</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-more">
+    <h2 id="h-more">これからのこと</h2>
+    <ul>
+      <li>利用期間は、購入した日から 3 年間です（<a href="terms.html#a4">利用規約 第4条</a>）。</li>
+      <li>領収書が必要なときは、お支払いに使ったメールアドレスから <span class="mail">info@liquid-block.com</span> へご連絡ください。</li>
+      <li>使い方は <a href="blog/quick-start.html">はじめかた</a> と <a href="help/">ヘルプ</a> にまとめています。</li>
+    </ul>
+  </section>
+
+  <p class="foot"><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy-policy.html">プライバシーポリシー</a><a href="en/pro-thanks.html">English</a></p>
+</div>
+</body>
+</html>
