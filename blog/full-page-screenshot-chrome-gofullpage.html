@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>GoFullPage の使い方 — Chrome でページ全体のスクリーンショットを撮る方法 | LB TAB Layers Blog</title>
+  <meta name="description" content="GoFullPage の使い方（アイコンか Alt+Shift+P・PNG / JPEG / PDF で保存・無料の範囲）と、拡張機能なしで Chrome のデベロッパー ツールからページ全体を 1 枚に撮る手順、うまく撮れないときの対処。2026 年 11 月時点。">
+  <meta name="keywords" content="gofullpage,gofullpage 使い方,ページ全体 スクリーンショット chrome,Chrome フルページ スクリーンショット,フルサイズのスクリーンショット,Web ページ 全体 キャプチャ,スクロール スクリーンショット Chrome">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html">
+  <meta property="og:title" content="GoFullPage の使い方と、Chrome でページ全体のスクリーンショットを撮る 3 つの方法"><meta property="og:description" content="Web ページを下まで 1 枚に。拡張機能なしの Chrome 標準機能、GoFullPage、何ページもまとめて撮る方法と、うまく撮れないときの対処。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-26T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="GoFullPage の使い方と、Chrome でページ全体のスクリーンショットを撮る 3 つの方法"><meta name="twitter:description" content="Web ページを下まで 1 枚に。拡張機能なしの Chrome 標準機能、GoFullPage、何ページもまとめて撮る方法と、うまく撮れないときの対処。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"ページ全体のスクリーンショット","item":"https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"GoFullPage の使い方と、Chrome でページ全体のスクリーンショットを撮る 3 つの方法 — 拡張機能なしの手順も","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-26","image":"https://tablayers.liquid-block.com/blog/hero-extensions-comparison.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"GoFullPage は無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"ページ全体を撮ることと、画像・PDF で保存することは、無料でできます。枚数の制限もありません。画像の切り抜きや注釈などの編集は 有料の Premium の範囲です（7 日間の無料お試しあり。料金は公式ページで確かめてください）。2026 年 11 月時点の公式サイトと FAQ の説明です。"}},{"@type":"Question","name":"拡張機能を入れずに、Chrome でページ全体のスクリーンショットを撮れますか？","acceptedAnswer":{"@type":"Answer","text":"撮れます。デベロッパー ツール（F12）を開き、「デバイス ツールバーの切り替え」を押して、ツールバーの「その他のオプション」から「フルサイズのスクリーンショットをキャプチャ」を選びます。見えていない部分も含めて、ページ全体が 1 枚になります。"}},{"@type":"Question","name":"GoFullPage のショートカットキーは？","acceptedAnswer":{"@type":"Answer","text":"Alt+Shift+P です。変えたいときは、アドレスバーに chrome://extensions/shortcuts と入れて開く画面で変えられます。"}},{"@type":"Question","name":"GoFullPage は、今も Chrome ウェブストアにありますか？","acceptedAnswer":{"@type":"Answer","text":"2026 年 11 月 23 日の時点で、掲載ページから追加できます。公式ブログによると、2026 年 8 月 11 日に Chrome ウェブストアから一時的に外れ、9 月 14 日に戻りました。理由は著作権に関する件で、セキュリティの問題ではないと説明されています。"}},{"@type":"Question","name":"何ページもまとめて、ページ全体のスクリーンショットを撮りたいときは？","acceptedAnswer":{"@type":"Answer","text":"LB TAB Layers の「スクショ」で範囲を「ページ全体」にし、「グループ一括」でグループを選んで「撮る」を押すと、グループのページを順に開いて 1 枚ずつ撮ります。撮った画像は、PowerPoint・PDF・ZIP にまとめて保存できます（まとめて保存は PRO の機能で、お試し期間中は使えます）。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">Chrome活用</span><h1>GoFullPage の使い方と、<br>ページ全体を 1 枚に撮る 3 つの方法</h1><p class="blog-meta"><time datetime="2026-11-26">2026.11.26</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 8分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-extensions-comparison.webp" alt="Chrome の拡張機能と、重なって並ぶタブのイメージ" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html&amp;text=GoFullPage%20%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E3%80%81Chrome%20%E3%81%A7%E3%83%9A%E3%83%BC%E3%82%B8%E5%85%A8%E4%BD%93%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%92%E6%92%AE%E3%82%8B%203%20%E3%81%A4%E3%81%AE%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AA%E3%81%97%E3%81%AE%E6%89%8B%E9%A0%86%E3%82%82" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html&amp;title=GoFullPage%20%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E3%80%81Chrome%20%E3%81%A7%E3%83%9A%E3%83%BC%E3%82%B8%E5%85%A8%E4%BD%93%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%92%E6%92%AE%E3%82%8B%203%20%E3%81%A4%E3%81%AE%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AA%E3%81%97%E3%81%AE%E6%89%8B%E9%A0%86%E3%82%82" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html" data-title="GoFullPage の使い方と、Chrome でページ全体のスクリーンショットを撮る 3 つの方法 — 拡張機能なしの手順も" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome で Web ページを下まで 1 枚に撮る方法は、3 つあります。</strong>①拡張機能を入れずに、デベロッパー ツールの「フルサイズのスクリーンショットをキャプチャ」で撮る。②拡張機能の GoFullPage を入れて、アイコンを押す（または Alt+Shift+P）。撮った画像は PNG・JPEG・PDF で保存できます。③LB TAB Layers の「スクショ」で、範囲を「ページ全体」にして撮る。<strong>1 枚だけ撮るなら、①か②で足ります。</strong>何ページもまとめて撮って資料にするなら、③が向いています。</p>
+
+    <p>縦に長い Web ページを、上から下まで 1 枚の画像で残したい。デザインの参考にしたいとき、今の表示を記録しておきたいとき、資料に貼りたいときに、よく出てくる用事です。</p>
+    <p>ふつうのスクリーンショットは、見えている範囲しか撮れません。Chrome でページ全体を撮る方法は、大きく 3 つあります。この記事では、それぞれの手順と、どんな場面に向いているかを、公式の説明で確かめられた範囲でまとめます（2026 年 11 月時点）。</p>
+
+    <h2>3 つの方法を、先に表で</h2>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>方法</th><th>入れるもの</th><th>撮り方</th><th>向いている場面</th></tr></thead><tbody>
+    <tr><td><strong>① Chrome の標準機能</strong><br>（デベロッパー ツール）</td><td>なし</td><td>デバイスのツールバー →「その他のオプション」→「フルサイズのスクリーンショットをキャプチャ」</td><td>拡張機能を入れられない PC。たまに 1 枚だけ撮る</td></tr>
+    <tr><td><strong>② GoFullPage</strong></td><td>拡張機能</td><td>アイコンを押す（または Alt+Shift+P）</td><td>よく撮る。PDF でも残したい</td></tr>
+    <tr><td><strong>③ LB TAB Layers</strong></td><td>拡張機能</td><td>「スクショ」→ 範囲を「ページ全体」→「このページを撮る」</td><td>何ページもまとめて撮って、資料にする</td></tr>
+    </tbody></table></div>
+    <p>どれが上、という話ではありません。撮る枚数と、撮ったあとにどうしたいかで選びます。順に見ていきます。</p>
+
+    <aside class="blog-mid-cta has-video" aria-label="LB TAB Layers の紹介">
+      <video class="blog-mid-cta-video" muted loop playsinline preload="none" data-poster="../img/hero-demo-m.webp" width="720" height="720" aria-label="実際の画面。■ で今やらない案件のタブをしまい、▶ で次の案件のタブをまとめて開く"><source src="../img/hero-demo-m.mp4" type="video/mp4"></video>
+      <div class="blog-mid-cta-body">
+        <p class="blog-mid-cta-lead">タブを仕事ごとにまとめて、<strong>▶ で開いて ■ で閉じる</strong>。</p>
+        <p class="blog-mid-cta-text">LB TAB Layers は、開いているタブを仕事ごとに Chrome のブックマークへ保存し、▶ ひとつで同じ名前・色のタブグループとして開き直せる、サイドパネルの拡張機能です。閉じても消えません。</p>
+        <div class="blog-mid-cta-actions"><a class="blog-mid-cta-btn" href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=full-page-screenshot-chrome-gofullpage&amp;utm_content=mid">Chrome に無料で追加</a><a class="blog-mid-cta-link" href="operation-guide.html">動く画面で見る →</a></div>
+      </div>
+    </aside>
+    <script>(function(){var v=document.querySelector('.blog-mid-cta-video');if(!v||!('IntersectionObserver' in window)){if(v){v.poster=v.getAttribute('data-poster');v.controls=true;}return;}var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);})();</script>
+
+    <h2>方法 1：Chrome の標準機能で撮る（拡張機能なし）</h2>
+    <p>Chrome には、開発者向けの道具「デベロッパー ツール（DevTools）」が最初から入っています。この中に、見えていない部分も含めてページ全体を撮る機能があります。拡張機能を入れられない会社の PC でも使えます。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>撮りたいページで、デベロッパー ツールを開く</h3><p>F12、または Ctrl+Shift+I（Mac は Command+Option+I）で開きます。アドレスバーの右の ⋮ →「その他のツール」→「デベロッパー ツール」からも開けます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>デバイスのツールバーを出す</h3><p>デベロッパー ツールの上の列にある「デバイス ツールバーの切り替え」のボタンを押します。Ctrl+Shift+M（Mac は Command+Shift+M）でも切り替わります。ページの上に、幅や高さを選ぶ列（デバイスのツールバー）が出ます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>「その他のオプション」から「フルサイズのスクリーンショットをキャプチャ」を選ぶ</h3><p>デバイスのツールバーにある ⋮（その他のオプション）を押して、「フルサイズのスクリーンショットをキャプチャ」を選びます。見えていない部分も含めて、ページ全体が 1 枚になります。同じメニューの「スクリーンショットをキャプチャ」は、見えている範囲だけを撮ります。</p></div></div>
+    <p>覚えておくとよい点が 2 つあります。</p>
+    <ul>
+      <li><strong>撮れるのは、そのとき選んでいる幅での見え方</strong> — デバイスのツールバーは、スマホやタブレットの幅でページを確かめるための道具です。幅のプリセット（モバイル・タブレット・ノートパソコンなど）や、数字の入力で幅を変えられます。PC での見え方を撮りたいときは、幅を PC の幅にしてから撮ります</li>
+      <li><strong>メニューの名前は、公式ドキュメントの日本語版の表記</strong> — Chrome の版や表示の言語によって、少し違う名前で出ることがあります。「フルサイズ」「full size」の入った項目を探してください</li>
+    </ul>
+    <p>デベロッパー ツールには「コマンド メニュー」（Ctrl+Shift+P、Mac は Command+Shift+P）もあります。開いて「screenshot」と入力すると、スクリーンショットのコマンドを選べます。公式ドキュメントでは、ドラッグした範囲だけを撮る「領域のスクリーンショットをキャプチャ」が紹介されています。</p>
+
+    <h2>方法 2：GoFullPage の使い方</h2>
+    <p>GoFullPage は、ページ全体のスクリーンショットを撮るための拡張機能です。開発元は Full Page LLC。公式の FAQ によると、2012 年に「Full Page Screen Capture」の名前で公開され、2020 年 7 月に今の名前になりました。Chrome のほか、Edge と Firefox にも公式の版があります。Chrome ウェブストアの掲載ページでは、対応する言語に日本語が入っています（2026 年 11 月時点）。使い方は、次の 4 つです。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>Chrome ウェブストアの掲載ページから追加する</h3><p>掲載ページで「Chrome に追加」を押します。公式は、似た名前のものに気をつけて、公式の入り口から入れるよう呼びかけています。この記事の下の「参考リンク」に、掲載ページを載せています。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>アイコンをツールバーに出しておく</h3><p>アドレスバーの右のパズルのアイコンを押すと、入れた拡張機能が並びます。GoFullPage のピンを押すと、ツールバーにいつも出るようになります。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>撮りたいページで、アイコンを押す</h3><p>キーボードなら Alt+Shift+P です。拡張機能がページを少しずつスクロールして撮り、1 枚につなぎます。終わるまで、少し待ちます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">4</span><div class="blog-step-body"><h3>新しいタブに出た結果を、保存する</h3><p>撮り終わると、新しいタブに結果が出ます。そこから、画像か PDF でダウンロードできます。デスクトップへドラッグして保存することもできます。</p></div></div>
+
+    <h3>保存の形式とショートカット</h3>
+    <ul>
+      <li><strong>保存の形式</strong> — PNG・JPEG・PDF。PDF は用紙のサイズを選べます。どれにするかは、拡張機能のオプションの画面で決めます</li>
+      <li><strong>ショートカット</strong> — Alt+Shift+P。変えたいときは、アドレスバーに chrome://extensions/shortcuts と入れて開く画面で変えられます（<a href="extension-shortcut-keys.html">拡張機能のショートカットキーを設定・変更する方法</a>）</li>
+      <li><strong>結果が小さく見えるとき</strong> — 結果のタブでは、はじめは縮小して表示されます。画像を押すと、拡大と縮小が切り替わります。ダウンロードされる画像は、どちらでも元の大きさです</li>
+    </ul>
+
+    <h3>無料でできることと、有料の範囲</h3>
+    <p>公式サイトと FAQ に書いてある範囲です（2026 年 11 月時点）。</p>
+    <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th></th><th>無料</th><th>Premium</th></tr></thead><tbody>
+    <tr><td>ページ全体を撮る（枚数の制限なし）</td><td>○</td><td>○</td></tr>
+    <tr><td>画像・PDF で保存する</td><td>○</td><td>○</td></tr>
+    <tr><td>画像の切り抜き</td><td>—</td><td>○</td></tr>
+    <tr><td>URL と日付を入れる</td><td>—</td><td>○</td></tr>
+    <tr><td>注釈（ぼかし・文字・ハイライト）</td><td>—</td><td>○</td></tr>
+    <tr><td>PDF のページの切れ目を整える</td><td>—</td><td>○</td></tr>
+    <tr><td>優先サポート</td><td>—</td><td>○</td></tr>
+    </tbody></table></div>
+    <p>有料の Premium には、7 日間の無料お試しがあります（料金は、公式ページで確かめてください）。撮って保存するだけなら、無料の範囲で使えます。</p>
+
+    <h3>権限と、画像の置き場所</h3>
+    <ul>
+      <li><strong>権限</strong> — 公式の FAQ では、入れるときと基本の使い方に、特別な権限は要らないと説明されています。ダウンロードの権限と、ページの中の枠（iframe）をスクロールするための権限は、必要になったときに求められ、オプションの画面であとから取り消せます</li>
+      <li><strong>画像の置き場所</strong> — 撮った画像は、ブラウザの中（そのパソコンの中）に置かれます。拡張機能を削除すると、中の画像も消えます。残したいものは、先にダウンロードしておきます</li>
+    </ul>
+
+    <div class="blog-callout"><p><strong>「GoFullPage が Chrome から消えた」と見かけた方へ</strong></p><p>公式ブログによると、GoFullPage は 2026 年 8 月 11 日に Chrome ウェブストアから一時的に外れ、9 月 14 日に戻りました。理由は著作権に関する件で、セキュリティの問題ではないと説明されています。外れていた間に、GoFullPage を名乗る非公式のものが出回ったため、公式のリンクから入れるように、とも書かれています。2026 年 11 月 23 日に掲載ページを開いて確かめたところ、バージョンは 8.11、更新日は 2026 年 11 月 7 日でした。</p></div>
+
+    <h2>方法 3：LB TAB Layers で撮る（何ページもまとめて撮るとき）</h2>
+    <p>ここからは、このブログを書いている私たちの拡張機能の話です。LB TAB Layers は、タブとブックマークを、サイドパネルで案件ごとにしまう道具です。その中に「スクショ」の画面があり、ページ全体も撮れます。</p>
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>右の列の「スクショ」を開く</h3><p>パネルの右の列から「スクショ」を選び、上の切り替えで「静止画」にします。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>範囲を「ページ全体」にする</h3><p>範囲は「見えている範囲」と「ページ全体」から選びます。形式は JPG か PNG です。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>「このページを撮る」を押す</h3><p>下までスクロールしながら撮って、1 枚の画像につなぎます。撮った画像は一覧に入り、1 枚ずつコピー・保存・削除ができます。次に開いたときも残っています。</p></div></div>
+    <p>ページ全体を 1 枚撮るだけなら、方法 1 か方法 2 で足ります。LB TAB Layers が向いているのは、次のようなときです。</p>
+    <ul>
+      <li><strong>グループのページを、まとめて撮る</strong> — 「グループ一括」でグループを選んで「撮る」を押すと、そのグループのページを順に開いて、1 枚ずつ撮ります。競合のサイトを並べた資料や、作ったサイトの納品の記録に使えます</li>
+      <li><strong>撮った画像を、資料の形にまとめる</strong> — 「まとめて保存」から、PowerPoint（並べかた 5 種）・PDF・ZIP で保存できます。PRO の機能で、お試し期間中は使えます</li>
+      <li><strong>撮った絵に、直してほしい所を書く</strong> — 画像の「修正指示にする」で、番号のピンで指示を書き込めます。こちらも PRO の機能です（お試し期間中は使えます）</li>
+    </ul>
+    <p>長いページでは、1 ページに 10 秒ほどかかります。高さは、画面およそ 15 枚分で打ち切ります。くわしい使い方は「<a href="feature-bulk-screenshot.html">【機能ガイド】一括スクリーンショット</a>」にまとめています。</p>
+
+    <h2>どれを選ぶか — 場面ごとに</h2>
+    <ul>
+      <li><strong>拡張機能を入れられない。たまに 1 枚だけ撮る</strong> → 方法 1（Chrome の標準機能）</li>
+      <li><strong>よく撮る。1 回押すだけで済ませたい。PDF でも残したい</strong> → 方法 2（GoFullPage）</li>
+      <li><strong>撮った画像に、切り抜きや注釈まで同じ道具でしたい</strong> → 方法 2 の Premium（有料）</li>
+      <li><strong>スマホの幅での見え方を撮りたい</strong> → 方法 1（デバイスのツールバーで幅を選んでから撮る）</li>
+      <li><strong>何ページもまとめて撮って、PowerPoint や PDF の資料にしたい</strong> → 方法 3（LB TAB Layers）</li>
+      <li><strong>タブの管理と撮影を、1 つの拡張機能で済ませたい</strong> → 方法 3（LB TAB Layers）</li>
+    </ul>
+    <p>拡張機能は、入れるほど Chrome が抱えるものが増えます。たまにしか撮らないなら標準機能で足りますし、すでに入れている拡張機能に撮影の機能があるなら、それを使うのも手です（<a href="fewer-extensions-lighter-chrome.html">拡張機能を減らして Chrome を軽くする</a>）。入れる前に確かめたい点は「<a href="chrome-extension-safety.html">Chrome 拡張機能の安全性</a>」にまとめています。</p>
+
+    <h2>うまく撮れないとき</h2>
+    <p>ページ全体の撮影は、ページの作りによって、うまくいかないことがあります。GoFullPage の公式 FAQ と、LB TAB Layers のヘルプに書いてある範囲で、原因と対処をまとめます。</p>
+
+    <h3>画像が抜ける・途中が白い</h3>
+    <p>スクロールして近づいたときに、はじめて画像を読み込むページがあります。読み込みが終わる前に撮ると、そこが抜けます。</p>
+    <ul>
+      <li><strong>撮る前に、ページをいちばん下までスクロールして、中身を読み込ませる</strong> — GoFullPage の公式 FAQ が勧めている手順です。ほかの方法で撮るときにも試せます</li>
+      <li><strong>LB TAB Layers のグループ一括では、待ち時間を長くする</strong> — 読み込みのあと、撮るまでの待ち時間を 1〜5 秒から選べます。画像が遅れて出るサイトは、長めにします</li>
+    </ul>
+
+    <h3>お知らせのバーやポップアップが写り込む</h3>
+    <p>クッキーの同意のバーや、メールマガジンの案内などは、撮る前に閉じておきます。これも、GoFullPage の公式 FAQ にある手順です。</p>
+
+    <h3>固定のヘッダーが、何度も写る・重なる</h3>
+    <p>スクロールしても画面の上に残るヘッダー（固定のヘッダー）は、スクロールしながら撮ってつなぐ方法だと、つなぎ目ごとに写ってしまうことがあります。GoFullPage は、固定された部分のほとんどが繰り返し写らないようにしている、と公式の FAQ で説明しています。ただし、うまく撮れないページもある、とも書かれています。</p>
+    <p>1 つの方法でうまくいかないときは、別の方法で撮り比べてみてください。ページによって、うまくいく方法が変わります。</p>
+
+    <h3>ページが長すぎる</h3>
+    <ul>
+      <li><strong>GoFullPage</strong> — ページが大きすぎて 1 枚に収まらないときは、その旨が出て、何枚かの画像に分かれます。分かれる枚数が 10 枚以上になると、撮影が終わらないことがある、と FAQ にあります。PDF で保存し、オプションで PDF のサイズを「full image」にしておくと、1 ページにまとまります</li>
+      <li><strong>LB TAB Layers</strong> — 高さは、画面およそ 15 枚分で打ち切ります</li>
+    </ul>
+
+    <h3>そもそも撮れないページ</h3>
+    <ul>
+      <li><strong>GoFullPage</strong> — PDF を開いているタブは、拡張機能が中をスクロールできないので、ページ全体は撮れません。スクロールをページ独自の仕組みで動かしているサイトも、うまく撮れないことがあります</li>
+      <li><strong>LB TAB Layers</strong> — chrome:// で始まるページ（設定の画面など）は、撮れません</li>
+    </ul>
+
+    <h3>マウスを乗せたときだけ出るメニューを撮りたい</h3>
+    <p>GoFullPage では、ショートカットで撮り始めても、スクロールのたびにマウスを乗せた状態が外れるので、その表示は撮れません（公式 FAQ）。メニューが開いた状態を残したいときは、ページ全体ではなく、見えている範囲だけを撮る方法に切り替えます。</p>
+
+    <h2>まとめ</h2>
+    <ul>
+      <li>拡張機能なしで撮るなら、デベロッパー ツールのデバイスのツールバー →「その他のオプション」→「フルサイズのスクリーンショットをキャプチャ」</li>
+      <li>GoFullPage は、アイコンを押す（または Alt+Shift+P）だけ。PNG・JPEG・PDF で保存でき、撮って保存するところまでは無料</li>
+      <li>何ページもまとめて撮って資料にするなら、LB TAB Layers の「スクショ」のグループ一括</li>
+      <li>うまく撮れないときは、先に下までスクロールして読み込ませる。それでもだめなら、別の方法で撮り比べる</li>
+    </ul>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. GoFullPage は無料で使えますか？</h3>
+    <p>ページ全体を撮ることと、画像・PDF で保存することは、無料でできます。枚数の制限もありません。画像の切り抜きや注釈などの編集は 有料の Premium の範囲です（7 日間の無料お試しあり。料金は公式ページで確かめてください）。2026 年 11 月時点の公式サイトと FAQ の説明です。</p>
+
+    <h3>Q. 拡張機能を入れずに、Chrome でページ全体のスクリーンショットを撮れますか？</h3>
+    <p>撮れます。デベロッパー ツール（F12）を開き、「デバイス ツールバーの切り替え」を押して、ツールバーの「その他のオプション」から「フルサイズのスクリーンショットをキャプチャ」を選びます。見えていない部分も含めて、ページ全体が 1 枚になります。</p>
+
+    <h3>Q. GoFullPage のショートカットキーは？</h3>
+    <p>Alt+Shift+P です。変えたいときは、アドレスバーに chrome://extensions/shortcuts と入れて開く画面で変えられます。</p>
+
+    <h3>Q. GoFullPage は、今も Chrome ウェブストアにありますか？</h3>
+    <p>2026 年 11 月 23 日の時点で、掲載ページから追加できます。公式ブログによると、2026 年 8 月 11 日に Chrome ウェブストアから一時的に外れ、9 月 14 日に戻りました。理由は著作権に関する件で、セキュリティの問題ではないと説明されています。</p>
+
+    <h3>Q. 何ページもまとめて、ページ全体のスクリーンショットを撮りたいときは？</h3>
+    <p>LB TAB Layers の「スクショ」で範囲を「ページ全体」にし、「グループ一括」でグループを選んで「撮る」を押すと、グループのページを順に開いて 1 枚ずつ撮ります。撮った画像は、PowerPoint・PDF・ZIP にまとめて保存できます（まとめて保存は PRO の機能で、お試し期間中は使えます）。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html&amp;text=GoFullPage%20%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E3%80%81Chrome%20%E3%81%A7%E3%83%9A%E3%83%BC%E3%82%B8%E5%85%A8%E4%BD%93%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%92%E6%92%AE%E3%82%8B%203%20%E3%81%A4%E3%81%AE%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AA%E3%81%97%E3%81%AE%E6%89%8B%E9%A0%86%E3%82%82" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Ffull-page-screenshot-chrome-gofullpage.html&amp;title=GoFullPage%20%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%A8%E3%80%81Chrome%20%E3%81%A7%E3%83%9A%E3%83%BC%E3%82%B8%E5%85%A8%E4%BD%93%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%92%E6%92%AE%E3%82%8B%203%20%E3%81%A4%E3%81%AE%E6%96%B9%E6%B3%95%20%E2%80%94%20%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AA%E3%81%97%E3%81%AE%E6%89%8B%E9%A0%86%E3%82%82" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/full-page-screenshot-chrome-gofullpage.html" data-title="GoFullPage の使い方と、Chrome でページ全体のスクリーンショットを撮る 3 つの方法 — 拡張機能なしの手順も" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>撮るページを、案件ごとにしまっておく。</h3><p>LB TAB Layers は、タブとブックマークをサイドパネルで案件ごとにしまう拡張機能です。しまったページを、まとめて撮ることもできます。アカウント登録なし。</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=full-page-screenshot-chrome-gofullpage" class="btn">Chrome に無料で追加 →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-bulk-screenshot.html">【機能ガイド】一括スクリーンショット — グループのページをまとめて撮ってZIP・PowerPointに <span>→</span></a><a href="fewer-extensions-lighter-chrome.html">Chromeが重いなら拡張機能を減らそう — 1つで置き換えられる拡張の一覧と確かめ方 <span>→</span></a><a href="chrome-extension-safety.html">Chrome拡張機能の安全性 — 危険な拡張の見分け方と安全なタブ管理 <span>→</span></a><a href="extension-shortcut-keys.html">Chrome拡張機能のショートカットキーを設定・変更する方法 <span>→</span></a><a href="brave-chrome-extensions.html">Brave で Chrome の拡張機能を使う方法 <span>→</span></a><a href="chrome-vertical-tabs-turn-off.html">Chrome の縦タブ（垂直タブ）を元に戻す方法 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://developer.chrome.com/docs/devtools/device-mode?hl=ja" target="_blank" rel="noopener">Device Mode でモバイル デバイスをシミュレートする（スクリーンショットをキャプチャする）— Chrome for Developers</a>
+      <a href="https://developer.chrome.com/docs/devtools/open?hl=ja" target="_blank" rel="noopener">Chrome DevTools を開く — Chrome for Developers</a>
+      <a href="https://developer.chrome.com/docs/devtools/shortcuts?hl=ja" target="_blank" rel="noopener">Chrome DevTools のキーボード ショートカット — Chrome for Developers</a>
+      <a href="https://developer.chrome.com/docs/devtools/command-menu?hl=ja" target="_blank" rel="noopener">コマンド メニューでコマンドを実行する — Chrome for Developers</a>
+      <a href="https://developer.chrome.com/blog/devtools-tips-33?hl=ja" target="_blank" rel="noopener">DevTools でスクリーンショットをキャプチャする 4 つの方法 — Chrome for Developers</a>
+      <a href="https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=ja" target="_blank" rel="noopener">GoFullPage - Full Page Screen Capture — Chrome ウェブストア</a>
+      <a href="https://gofullpage.com/" target="_blank" rel="noopener">GoFullPage（公式サイト）</a>
+      <a href="https://gofullpage.com/faq" target="_blank" rel="noopener">Frequently Asked Questions — GoFullPage</a>
+      <a href="https://gofullpage.com/premium" target="_blank" rel="noopener">Go Premium — GoFullPage</a>
+      <a href="https://blog.gofullpage.com/2026/09/14/gofullpage-is-back-on-chrome-and-now-available-on-firefox/" target="_blank" rel="noopener">GoFullPage Is Back on Chrome and Now Available on Firefox — GoFullPage Blog</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a><a href="../tokushoho.html">特定商取引法に基づく表記</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
