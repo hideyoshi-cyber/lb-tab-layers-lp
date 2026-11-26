@@ -8,13 +8,16 @@
 <link rel="icon" href="../favicon.png">
 <style>
   /* Page opened after payment (Stripe returns here). Not for search. */
+  /* The ?k= in the address switches the text (none = paid once, lifetime / sub = subscription / paypay = PayPay / edu = students).
+     The start of the address (pro-thanks.html) must not change: the extension watches for it to re-check PRO. */
   :root { --ink:#212529; --sub:#5f676e; --line:#e5e1dd; --bg:#fbf8f6; --card:#ffffff; --accent:#e0473f; --ok:#1f7a4d; --ok-bg:#eaf6ef; }
   * { box-sizing: border-box; }
+  [hidden] { display:none !important; }
   body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif; line-height:1.7; }
   .wrap { max-width:600px; margin:0 auto; padding:40px 16px 64px; display:grid; gap:18px; }
   .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); text-decoration:none; }
   .brand img { width:32px; height:32px; }
-  .done { display:inline-flex; align-items:center; gap:8px; background:var(--ok-bg); color:var(--ok); font-weight:700; border-radius:999px; padding:4px 14px; font-size:14px; width:max-content; }
+  .done { display:inline-flex; align-items:center; gap:8px; background:var(--ok-bg); color:var(--ok); font-weight:700; border-radius:999px; padding:4px 14px; font-size:14px; width:max-content; max-width:100%; }
   h1 { font-size:24px; line-height:1.35; margin:0; text-wrap:balance; }
   .lead { color:var(--sub); margin:0; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
@@ -37,9 +40,14 @@
 <div class="wrap">
   <a class="brand" href="./"><img src="../lb-logo.svg" alt="">LB TAB Layers</a>
 
-  <span class="done">✓ Payment complete</span>
+  <span class="done" data-k="life paypay">✓ Payment complete</span>
+  <span class="done" data-k="sub" hidden>✓ Subscription started</span>
+  <span class="done" data-k="edu" hidden>✓ All set</span>
   <h1>Thank you. PRO is now yours to use.</h1>
-  <p class="lead">If you used a student code for a $0 order, the steps are the same.</p>
+  <p class="lead" data-k="life">If you used a student code for a $0 order, the steps are the same.</p>
+  <p class="lead" data-k="sub" hidden>Your subscription has started. It renews automatically until you cancel.</p>
+  <p class="lead" data-k="paypay" hidden>PayPay payments do not renew automatically. You can use PRO for the term you paid for.</p>
+  <p class="lead" data-k="edu" hidden>PRO for students is free for 3 years. It does not renew automatically.</p>
 
   <section class="card main" aria-labelledby="h-next">
     <h2 id="h-next">Turn on PRO (one last step)</h2>
@@ -49,8 +57,8 @@
       <li>When the <span class="pro">PRO</span> badge appears at the top, you're done</li>
     </ol>
     <div class="caution" role="note">
-      <p><b>Please note:</b> after reopening, the "Free trial" bar and the "$12.99 PRO" button may still be shown.</p>
-      <p>If the <span class="pro">PRO</span> badge is at the top, your payment is complete. <b>You don't need to pay again.</b> Close and reopen the side panel once more and they will go away.</p>
+      <p><b>Please note:</b> after reopening, the "Free trial" bar and the "PRO" button that shows a price (such as "$12.99 PRO") may still be shown.</p>
+      <p>If the <span class="pro">PRO</span> badge is at the top, everything is complete. <b>You don't need to pay again.</b> Close and reopen the side panel once more and they will go away.</p>
     </div>
   </section>
 
@@ -60,7 +68,8 @@
     <p>If nothing changes, email <span class="mail">info@liquid-block.com</span> with the email address you paid with and the date and time of the payment. We'll check and reply.</p>
   </section>
 
-  <section class="card" aria-labelledby="h-more">
+  <!-- Paid once (bought by December 31, 2026). Shown when there is no k -->
+  <section class="card" aria-labelledby="h-more" data-k="life">
     <h2 id="h-more">Good to know</h2>
     <ul>
       <li>If you bought by December 31, 2026, this is a lifetime license: no renewal and no further payment (<a href="terms.html#a4">Terms of Service, Article 4</a>). If you used a student code, PRO lasts 3 years from the day you used it.</li>
@@ -69,7 +78,56 @@
     </ul>
   </section>
 
+  <!-- Subscription (card, auto-renewing): ?k=sub -->
+  <section class="card" aria-labelledby="h-sub" data-k="sub" hidden>
+    <h2 id="h-sub">About your subscription</h2>
+    <ul>
+      <li><b>It renews automatically for the same term (3 years, 1 year or 1 month) until you cancel.</b> On each renewal date, your registered card is charged.</li>
+      <li>Your next renewal date is in the email from Stripe. You can also see it by clicking the <span class="pro">PRO</span> badge at the top of LB TAB Layers.</li>
+      <li><b>You can cancel anytime.</b> Use the management page linked in the email from Stripe, or click the <span class="pro">PRO</span> badge and choose "Manage or cancel subscription". If you can't find either, email <span class="mail">info@liquid-block.com</span> from the address you paid with and write "cancel". We'll do it for you.</li>
+      <li>After you cancel, you keep PRO until the end of the term you paid for. If you cancel by the day before the renewal date, you are not charged for the next term (<a href="terms.html#a4">Terms of Service, Article 4</a>).</li>
+      <li>Your receipt arrives by email from Stripe. For how to use it, see the <a href="blog/quick-start.html">Quick start</a> and <a href="help/">Help</a>.</li>
+    </ul>
+  </section>
+
+  <!-- PayPay (paid once for a term, no auto-renewal): ?k=paypay -->
+  <section class="card" aria-labelledby="h-paypay" data-k="paypay" hidden>
+    <h2 id="h-paypay">If you paid with PayPay</h2>
+    <ul>
+      <li><b>PayPay payments do not renew automatically.</b> PRO ends at the end of the term you paid for (3 years, 1 year or 1 month). You will not be charged again.</li>
+      <li>To see how long PRO lasts, click the <span class="pro">PRO</span> badge at the top of LB TAB Layers.</li>
+      <li>To continue, please pay again. If you pay before the end date, the new term is added after your current one.</li>
+      <li>When the term ends, nothing is deleted. The free features stay available (<a href="terms.html#a4">Terms of Service, Article 4</a>).</li>
+      <li>If you need a receipt, email <span class="mail">info@liquid-block.com</span> from the address you paid with. For how to use it, see the <a href="blog/quick-start.html">Quick start</a> and <a href="help/">Help</a>.</li>
+    </ul>
+  </section>
+
+  <!-- Students (code, $0, 3 years, no auto-renewal): ?k=edu -->
+  <section class="card" aria-labelledby="h-edu" data-k="edu" hidden>
+    <h2 id="h-edu">For students</h2>
+    <ul>
+      <li>PRO for students is <b>free for 3 years</b> from the day you used the code. It stays active for the 3 years even after you graduate.</li>
+      <li><b>It does not renew automatically.</b> You are not charged after the 3 years unless you choose to subscribe.</li>
+      <li>If you want to keep PRO after that, you can continue with a subscription at the price at that time. The free features stay available (<a href="terms.html#a5">Terms of Service, Article 5</a>).</li>
+      <li>For how to use it, see the <a href="blog/quick-start.html">Quick start</a> and <a href="help/">Help</a>.</li>
+    </ul>
+  </section>
+
   <p class="foot"><a href="tokushoho.html">Legal notice (Japan)</a><a href="terms.html">Terms of Service</a><a href="privacy-policy.html">Privacy Policy</a><a href="../pro-thanks.html">日本語</a></p>
 </div>
+<script>
+// Switch the text by ?k= in the address (sub, paypay, edu). With no k or any other value, the paid-once text stays.
+(function () {
+  var m = /[?&]k=(sub|paypay|edu)(?:&|$)/.exec(location.search);
+  var k = m ? m[1] : 'life';
+  var els = document.querySelectorAll('[data-k]');
+  for (var i = 0; i < els.length; i++) els[i].hidden = (' ' + els[i].getAttribute('data-k') + ' ').indexOf(' ' + k + ' ') < 0;
+  if (k === 'sub') document.title = 'Subscription started | LB TAB Layers';
+  if (k === 'edu') document.title = 'All set | LB TAB Layers';
+  // Keep the same kind of text when switching to the Japanese page
+  var ja = document.querySelector('.foot a[href="../pro-thanks.html"]');
+  if (ja && m) ja.href = '../pro-thanks.html?k=' + k;
+})();
+</script>
 </body>
 </html>

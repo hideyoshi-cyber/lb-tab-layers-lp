@@ -8,13 +8,16 @@
 <link rel="icon" href="favicon.png">
 <style>
   /* 支払いのあとに開くページ（Stripe から戻る先）。検索には出さない */
+  /* 出し分け：アドレスの ?k= で、文を切りかえる（k なし＝1回払い・永続／sub＝サブスクリプション／paypay＝PayPay／edu＝学生の方）。
+     アドレスの頭（pro-thanks.html）は変えない：拡張機能が、このアドレスを見て PRO を確かめ直すため */
   :root { --ink:#212529; --sub:#5f676e; --line:#e5e1dd; --bg:#fbf8f6; --card:#ffffff; --accent:#e0473f; --ok:#1f7a4d; --ok-bg:#eaf6ef; }
   * { box-sizing: border-box; }
+  [hidden] { display:none !important; }
   body { margin:0; background:var(--bg); color:var(--ink); font-family:"Noto Sans JP","Yu Gothic UI","Hiragino Sans","Meiryo",system-ui,sans-serif; line-height:1.75; }
   .wrap { max-width:600px; margin:0 auto; padding:40px 16px 64px; display:grid; gap:18px; }
   .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); text-decoration:none; }
   .brand img { width:32px; height:32px; }
-  .done { display:inline-flex; align-items:center; gap:8px; background:var(--ok-bg); color:var(--ok); font-weight:700; border-radius:999px; padding:4px 14px; font-size:14px; width:max-content; }
+  .done { display:inline-flex; align-items:center; gap:8px; background:var(--ok-bg); color:var(--ok); font-weight:700; border-radius:999px; padding:4px 14px; font-size:14px; width:max-content; max-width:100%; }
   h1 { font-size:24px; line-height:1.4; margin:0; }
   .lead { color:var(--sub); margin:0; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
@@ -37,9 +40,14 @@
 <div class="wrap">
   <a class="brand" href="./"><img src="lb-logo.svg" alt="">LB TAB Layers</a>
 
-  <span class="done">✓ お支払いが終わりました</span>
+  <span class="done" data-k="life paypay">✓ お支払いが終わりました</span>
+  <span class="done" data-k="sub" hidden>✓ お申し込みが終わりました</span>
+  <span class="done" data-k="edu" hidden>✓ 手続きが終わりました</span>
   <h1>ありがとうございます。<br>PRO を、お使いいただけるようになりました。</h1>
-  <p class="lead">学生のコードで 0 円にした方も、同じ手順で PRO になります。</p>
+  <p class="lead" data-k="life">学生のコードで 0 円にした方も、同じ手順で PRO になります。</p>
+  <p class="lead" data-k="sub" hidden>サブスクリプションのお申し込みを受け付けました。解約するまで、自動で更新されます。</p>
+  <p class="lead" data-k="paypay" hidden>PayPay でのお支払いは、自動更新になりません。お支払いいただいた期間のあいだ、PRO をお使いいただけます。</p>
+  <p class="lead" data-k="edu" hidden>学生の方の PRO は、3 年間無料です。自動更新はありません。</p>
 
   <section class="card main" aria-labelledby="h-next">
     <h2 id="h-next">PRO にする（あと 1 つだけ）</h2>
@@ -49,8 +57,8 @@
       <li>上に <span class="pro">PRO</span> の印が出たら完了です</li>
     </ol>
     <div class="caution" role="note">
-      <p><b>ご注意：</b>開き直したあとも、「無料トライアル」の帯や「$12.99 PRO」のボタンが残ることがあります。</p>
-      <p>上に <span class="pro">PRO</span> の印が出ていれば、お支払いは済んでいます。<b>もう一度お支払いいただく必要はありません。</b>帯やボタンは、サイドパネルをもう一度閉じて開き直すと消えます。</p>
+      <p><b>ご注意：</b>開き直したあとも、「無料トライアル」の帯や、値段の入った「PRO」のボタン（「$12.99 PRO」など）が残ることがあります。</p>
+      <p>上に <span class="pro">PRO</span> の印が出ていれば、手続きは済んでいます。<b>もう一度お支払いいただく必要はありません。</b>帯やボタンは、サイドパネルをもう一度閉じて開き直すと消えます。</p>
     </div>
   </section>
 
@@ -60,7 +68,8 @@
     <p>それでも変わらないときは、お支払いに使ったメールアドレスと、お支払いの日時を書いて <span class="mail">info@liquid-block.com</span> へお送りください。こちらで確かめて、お返事します。</p>
   </section>
 
-  <section class="card" aria-labelledby="h-more">
+  <!-- 1回払い（2026 年 12 月 31 日までのご購入）。k が無いときは、これを出す -->
+  <section class="card" aria-labelledby="h-more" data-k="life">
     <h2 id="h-more">これからのこと</h2>
     <ul>
       <li>2026 年 12 月 31 日までのご購入は、永続ライセンスです。自動更新や追加のお支払いはありません（<a href="terms.html#a4">利用規約 第4条</a>）。学生のコードで PRO になった方は、コードを使った日から 3 年間です。</li>
@@ -69,7 +78,56 @@
     </ul>
   </section>
 
+  <!-- サブスクリプション（カード・自動更新）：?k=sub -->
+  <section class="card" aria-labelledby="h-sub" data-k="sub" hidden>
+    <h2 id="h-sub">サブスクリプションについて</h2>
+    <ul>
+      <li><b>解約するまで、同じ期間（3年・1年・1か月）で自動的に更新されます。</b>更新の日に、登録されたカードに請求します。</li>
+      <li>次の更新の日は、Stripe から届くメールで分かります。LB TAB Layers の上の <span class="pro">PRO</span> の印を押しても確かめられます。</li>
+      <li><b>解約は、いつでもできます。</b>Stripe から届くメールにある管理のページか、<span class="pro">PRO</span> の印を押して出る「お支払いと解約の手続き」からどうぞ。見つからないときは、お支払いに使ったメールアドレスから <span class="mail">info@liquid-block.com</span> へ「解約」とお送りください。こちらで手続きします。</li>
+      <li>解約しても、お支払い済みの期間の終わりまでは PRO のままお使いいただけます。更新の日の前日までに解約すれば、次の期間の料金はかかりません（<a href="terms.html#a4">利用規約 第4条</a>）。</li>
+      <li>領収書は、Stripe からメールで届きます。使い方は <a href="blog/quick-start.html">はじめかた</a> と <a href="help/">ヘルプ</a> にまとめています。</li>
+    </ul>
+  </section>
+
+  <!-- PayPay（期間ぶんの 1 回払い・自動更新なし）：?k=paypay -->
+  <section class="card" aria-labelledby="h-paypay" data-k="paypay" hidden>
+    <h2 id="h-paypay">PayPay でお支払いの方へ</h2>
+    <ul>
+      <li><b>PayPay でのお支払いは、自動更新になりません。</b>お支払いいただいた期間（3年・1年・1か月）が終わると、PRO は終わります。あとから請求が来ることはありません。</li>
+      <li>いつまで使えるかは、LB TAB Layers の上の <span class="pro">PRO</span> の印を押すと確かめられます。</li>
+      <li>続けて使うときは、もう一度お支払いください。期限の前にお支払いいただいた分は、今の期限の続きから数えます。</li>
+      <li>期間が終わっても、何も消えません。無料版の機能は、そのままお使いいただけます（<a href="terms.html#a4">利用規約 第4条</a>）。</li>
+      <li>領収書が必要なときは、お支払いに使ったメールアドレスから <span class="mail">info@liquid-block.com</span> へご連絡ください。使い方は <a href="blog/quick-start.html">はじめかた</a> と <a href="help/">ヘルプ</a> にまとめています。</li>
+    </ul>
+  </section>
+
+  <!-- 学生の方（コードで 0 円・3 年間・自動更新なし）：?k=edu -->
+  <section class="card" aria-labelledby="h-edu" data-k="edu" hidden>
+    <h2 id="h-edu">学生の方へ</h2>
+    <ul>
+      <li>学生の方の PRO は、コードを使った日から <b>3 年間無料</b>です。卒業しても、3 年間はそのままお使いいただけます。</li>
+      <li><b>自動更新はありません。</b>3 年が過ぎても、何もしなければ料金はかかりません。</li>
+      <li>3 年が過ぎたあとも PRO を使う場合は、そのときの料金（サブスクリプション）でご案内します。無料版の機能は、そのままお使いいただけます（<a href="terms.html#a5">利用規約 第5条</a>）。</li>
+      <li>使い方は <a href="blog/quick-start.html">はじめかた</a> と <a href="help/">ヘルプ</a> にまとめています。</li>
+    </ul>
+  </section>
+
   <p class="foot"><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy-policy.html">プライバシーポリシー</a><a href="en/pro-thanks.html">English</a></p>
 </div>
+<script>
+// アドレスの ?k=（sub・paypay・edu）に合わせて、文を出し分ける。無いとき・ほかの値のときは、1回払い（life）の文のまま
+(function () {
+  var m = /[?&]k=(sub|paypay|edu)(?:&|$)/.exec(location.search);
+  var k = m ? m[1] : 'life';
+  var els = document.querySelectorAll('[data-k]');
+  for (var i = 0; i < els.length; i++) els[i].hidden = (' ' + els[i].getAttribute('data-k') + ' ').indexOf(' ' + k + ' ') < 0;
+  if (k === 'sub') document.title = 'お申し込みが終わりました | LB TAB Layers';
+  if (k === 'edu') document.title = '手続きが終わりました | LB TAB Layers';
+  // 英語のページへ移っても、同じ種類の文が出るようにする
+  var en = document.querySelector('.foot a[href="en/pro-thanks.html"]');
+  if (en && m) en.href = 'en/pro-thanks.html?k=' + k;
+})();
+</script>
 </body>
 </html>
