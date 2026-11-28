@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+  <title>Chrome のサイドパネルが邪魔・狭いときは — ページに重ねるか、別窓で開く | LB TAB Layers Blog</title>
+  <meta name="description" content="Chrome のサイドパネルを開くとページが狭くなって邪魔、というときの対処。Chrome 標準でできること（幅・左右）と、LB TAB Layers のパネルをページの上に重ねて出す「オーバーレイ」、新しいタブや別窓で開く方法を、動画つきで説明します。">
+  <meta name="keywords" content="Chrome サイドパネル 邪魔,Chrome サイドパネル 狭い,サイドパネル 重ねる,オーバーレイ 表示,ノートPC 画面 狭い,タブ管理 別窓">
+  <link rel="canonical" href="https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html">
+  <meta property="og:title" content="Chrome のサイドパネルが邪魔・画面が狭いときは"><meta property="og:description" content="サイドパネルでページが狭くなるときは、ページに重ねる「オーバーレイ」か、新しいタブ・別窓で開く。動画で説明します。"><meta property="og:type" content="article"><meta property="og:url" content="https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html"><meta property="og:image" content="https://tablayers.liquid-block.com/blog/hero-side-panel-narrow.webp"><meta property="og:site_name" content="LB TAB Layers"><meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-11-28T00:00:00+09:00"><meta property="article:author" content="蔡本 英賛">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@LBTabLayers"><meta name="twitter:title" content="Chrome のサイドパネルが邪魔・画面が狭いときは"><meta name="twitter:description" content="サイドパネルでページが狭くなるときは、ページに重ねる「オーバーレイ」か、新しいタブ・別窓で開く。動画で説明します。"><meta name="twitter:image" content="https://tablayers.liquid-block.com/blog/hero-side-panel-narrow.webp">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LB TAB Layers","item":"https://tablayers.liquid-block.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tablayers.liquid-block.com/blog/"},{"@type":"ListItem","position":3,"name":"サイドパネルが邪魔なときは","item":"https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html"}]},{"@context":"https://schema.org","@type":"Article","headline":"Chrome のサイドパネルが邪魔・画面が狭いときは — ページに重ねる「オーバーレイ」と、タブや別窓で開く方法","author":{"@type":"Person","name":"蔡本 英賛","alternateName":"Hideyoshi Saimoto","jobTitle":"株式会社リキッドブロック 代表","worksFor":{"@type":"Organization","name":"Liquid Block Inc.","alternateName":"株式会社リキッドブロック","url":"https://www.liquid-block.com"},"url":"https://tablayers.liquid-block.com/about.html","description":"映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。","knowsAbout":["映像制作","CG","VFX","モーショングラフィックス","After Effects","コンポジット"]},"publisher":{"@type":"Organization","name":"Liquid Block Inc.","logo":{"@type":"ImageObject","url":"https://tablayers.liquid-block.com/icon128.png"}},"datePublished":"2026-11-28","image":"https://tablayers.liquid-block.com/blog/hero-side-panel-narrow.webp","speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article h2",".ai-answer"]},"mainEntityOfPage":"https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html"}]
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png"><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&amp;display=swap"></noscript><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="blog.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"サイドパネルを開くと、ページが狭くなって邪魔です。","acceptedAnswer":{"@type":"Answer","text":"サイドパネルの幅は、境目をドラッグして狭くできます。それでも狭いときは、LB TAB Layers の設定 › 使い方 › 表示のしかた で「オーバーレイ」を選ぶと、パネルをページの上に重ねて出せます。ふだんはページの端に「＋」があるだけです。"}},{"@type":"Question","name":"オーバーレイでは、すべての機能が使えますか？","acceptedAnswer":{"@type":"Answer","text":"タブとブックマークの管理・メモ・ステップタスクなど、基本の機能が使えます。動画やページの修正指示は、サイドパネルで使います。"}},{"@type":"Question","name":"オーバーレイは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"オーバーレイは PRO の機能です。入れてから 30 日間のお試しでは使えます。新しいタブや別窓で開く方法は、無料版でも使えます。"}},{"@type":"Question","name":"元のサイドパネルに戻すには？","acceptedAnswer":{"@type":"Answer","text":"設定 › 使い方 › 表示のしかた で「固定」を選ぶと戻ります。"}}]}
+  </script>
+</head>
+<body>
+  <header id="site-header"><nav class="nav-container"><a href="https://tablayers.liquid-block.com/" class="logo" aria-label="LB TAB Layers Home"><img src="../liquidLogo.svg" alt="Liquid Block" class="logo-icon" width="45" height="45"><span class="logo-text">TAB Layers</span></a><div class="nav-links"><a href="../features.html">機能紹介</a><a href="../blog/quick-start.html">はじめかた</a><a href="../blog/">Blog</a></div><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=nav" class="nav-cta">無料で始める</a></nav></header>
+
+  <section class="blog-hero"><div class="container"><span class="blog-tag">使い方</span><h1>サイドパネルが邪魔なときは<br>ページに重ねる、外に出す。</h1><p class="blog-meta"><time datetime="2026-11-28">2026.11.28</time> · <span class="blog-author">執筆：<a href="../about.html">蔡本 英賛</a>（株式会社リキッドブロック 代表）</span> · 読了 5分</p></div></section>
+
+  <article class="blog-content">
+    <img src="hero-side-panel-narrow.webp" alt="LB TAB Layers のパネルを、ページの上に重ねて出したところ（オーバーレイ）" style="width:100%; border-radius:var(--radius-lg); margin-bottom:2rem;">
+    <div class="blog-share blog-share-top" role="group" aria-label="この記事をシェア"><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html&amp;text=Chrome%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%8C%E9%82%AA%E9%AD%94%E3%83%BB%E7%94%BB%E9%9D%A2%E3%81%8C%E7%8B%AD%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%20%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E9%87%8D%E3%81%AD%E3%82%8B%E3%80%8C%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%80%8D%E3%81%A8%E3%80%81%E3%82%BF%E3%83%96%E3%82%84%E5%88%A5%E7%AA%93%E3%81%A7%E9%96%8B%E3%81%8F%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html&amp;title=Chrome%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%8C%E9%82%AA%E9%AD%94%E3%83%BB%E7%94%BB%E9%9D%A2%E3%81%8C%E7%8B%AD%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%20%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E9%87%8D%E3%81%AD%E3%82%8B%E3%80%8C%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%80%8D%E3%81%A8%E3%80%81%E3%82%BF%E3%83%96%E3%82%84%E5%88%A5%E7%AA%93%E3%81%A7%E9%96%8B%E3%81%8F%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html" data-title="Chrome のサイドパネルが邪魔・画面が狭いときは — ページに重ねる「オーバーレイ」と、タブや別窓で開く方法" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+
+    <p class="ai-answer"><strong>Chrome のサイドパネルはページの横に並ぶので、画面の狭い PC ではページが狭くなります。</strong>LB TAB Layers では、設定 › 使い方 › 表示のしかた で<strong>「オーバーレイ」</strong>を選ぶと、パネルをページの上に重ねて出せます。ふだんはページの端に小さな「＋」があるだけで、使うときだけ開きます。パネルを<strong>新しいタブ</strong>や<strong>別窓</strong>で開くこともできます。</p>
+
+    <p>サイドパネルは便利ですが、ページの横に並ぶので、そのぶんページが狭くなります。ノート PC や小さな画面では、「パネルが邪魔で、ページが読みにくい」と感じることがあると思います。</p>
+    <p>LB TAB Layers を入れたその日に、「重い・邪魔だった」という理由で外した方がいました。サイドパネルが画面の幅を取ることが、合わない方もいます。この記事では、そんなときの逃げ道をまとめました。</p>
+
+    <h2>まず、Chrome の標準でできること</h2>
+    <ul>
+      <li><strong>幅を変える</strong> — サイドパネルとページの境目をドラッグすると、パネルの幅を狭くできます</li>
+      <li><strong>左右を変える</strong> — Chrome の設定 › 外観 の「サイドパネル」で、左に出すか右に出すかを選べます</li>
+      <li><strong>閉じる</strong> — 使わないときは閉じておき、使うときだけ開きます。LB TAB Layers なら Alt+T（Mac は Option+T）で開け閉めできます</li>
+    </ul>
+    <p>それでも狭いときは、パネルをページの横に並べるのをやめる方法があります。</p>
+
+    <h2>ページの上に重ねて出す「オーバーレイ」</h2>
+    <p>LB TAB Layers では、パネルを<strong>ページの上に重ねて出す「オーバーレイ」</strong>に切り替えられます。ふだんはページの端に小さな「＋」があるだけで、ページはいつもの幅のままです。使うときだけ「＋」にマウスを乗せると、パネルが重なって出て、ページへ戻ると閉じます。</p>
+    <figure style="margin:1.4rem auto;max-width:480px;text-align:center;"><video class="qs-video" muted loop playsinline preload="none" data-poster="qs-overlay.webp" width="720" height="734" aria-label="設定で「オーバーレイ」を選び、ページの端の「＋」にマウスを乗せると、パネルがページの上に重なって出る" style="display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);background:#e9ecf5;"><source src="qs-overlay.mp4" type="video/mp4"></video><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">設定で「オーバーレイ」を選び、ページの端の「＋」にマウスを乗せると開く</figcaption></figure>
+
+    <div class="blog-step"><span class="blog-num">1</span><div class="blog-step-body"><h3>設定 › 使い方 › 表示のしかた で「オーバーレイ」を選ぶ</h3><p>設定は、パネルの右の列のいちばん下の歯車から開きます。位置（左・右）、幅、ボタンの位置、起動時の表示（チラ見せなど）も、ここで選べます。</p></div></div>
+    <div class="blog-step"><span class="blog-num">2</span><div class="blog-step-body"><h3>サイドパネルを閉じる</h3><p>Alt+T か、パネルの右上の × で閉じます。開いていたページで「＋」が出ないときは、ページを読み込み直してください。</p></div></div>
+    <div class="blog-step"><span class="blog-num">3</span><div class="blog-step-body"><h3>ページの端の「＋」にマウスを乗せる</h3><p>パネルがページの上に重なって出ます。ページのほうへマウスを戻すと、閉じます。</p></div></div>
+
+    <h2>オーバーレイで使えるもの</h2>
+    <p>オーバーレイで使えるのは、基本の機能です。</p>
+    <ul>
+      <li>タブとブックマークの管理（保存・▶ で開く・■ で閉じる・検索）</li>
+      <li>メモ</li>
+      <li>ステップタスク</li>
+    </ul>
+    <p>動画やページの<strong>修正指示は、サイドパネルで使います</strong>。使うときは Alt+T でサイドパネルを開いてください。オーバーレイは PRO の機能です（入れてから 30 日間のお試しでは使えます）。</p>
+
+    <h2>パネルを、新しいタブや別窓で開く</h2>
+    <p>パネルは、サイドパネルの外でも開けます。右の列の下の「表示方法を選択」から、<strong>新しいタブ</strong>や<strong>独立ウィンドウ（別窓）</strong>で開けます。</p>
+    <figure style="margin:1.4rem auto;max-width:640px;text-align:center;"><video class="qs-video" muted loop playsinline preload="none" data-poster="qs-display.webp" width="960" height="540" aria-label="右の列の下の「表示方法を選択」から「新しいタブで開く」を選ぶと、パネルが 1 つのタブいっぱいに開く" style="display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 8px 28px rgba(33,37,41,.14);background:#e9ecf5;"><source src="qs-display.mp4" type="video/mp4"></video><figcaption style="font-size:.85rem;color:#6c757d;margin-top:.5rem;">「表示方法を選択」→「新しいタブで開く」で、パネルを 1 つのタブいっぱいに</figcaption></figure>
+    <ul>
+      <li><strong>ノート PC なら、1 つのタブで</strong> — 整理するときだけタブで広く開き、ふだんはページを広く使う</li>
+      <li><strong>モニターが 2 台なら、別窓で</strong> — 片方の画面にパネルの窓を置き、もう片方でページを広く見る</li>
+    </ul>
+
+    <h2>どれを選べばいいか</h2>
+    <ul>
+      <li><strong>ページを見ながら、ときどきタブを切り替える</strong> → オーバーレイ</li>
+      <li><strong>しっかり整理したい・修正指示を書く</strong> → サイドパネル（必要なときだけ Alt+T）</li>
+      <li><strong>画面が 2 つある</strong> → 別窓</li>
+      <li><strong>ノート PC で、整理するときだけ広く</strong> → 新しいタブ</li>
+    </ul>
+    <p>表示のしかたは、いつでも設定から戻せます。合わないと感じたら、外す前に一度、ほかの表示を試してみてください。</p>
+    <script>(function(){var vs=document.querySelectorAll('.qs-video');if(!vs.length)return;var calm=matchMedia('(prefers-reduced-motion: reduce)').matches,save=!!(navigator.connection&&navigator.connection.saveData);vs.forEach(function(v){if(!('IntersectionObserver' in window)){v.poster=v.getAttribute('data-poster');v.controls=true;return;}new IntersectionObserver(function(es,o){if(es[0].isIntersecting){v.poster=v.getAttribute('data-poster');o.disconnect();}},{rootMargin:'900px'}).observe(v);if(calm||save){v.controls=true;v.loop=false;return;}new IntersectionObserver(function(es){if(es[0].isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();},{threshold:.45}).observe(v);});})();</script>
+
+
+    <h2>よくある質問</h2>
+
+    <h3>Q. サイドパネルを開くと、ページが狭くなって邪魔です。</h3>
+    <p>サイドパネルの幅は、境目をドラッグして狭くできます。それでも狭いときは、LB TAB Layers の設定 › 使い方 › 表示のしかた で「オーバーレイ」を選ぶと、パネルをページの上に重ねて出せます。ふだんはページの端に「＋」があるだけです。</p>
+
+    <h3>Q. オーバーレイでは、すべての機能が使えますか？</h3>
+    <p>タブとブックマークの管理・メモ・ステップタスクなど、基本の機能が使えます。動画やページの修正指示は、サイドパネルで使います。</p>
+
+    <h3>Q. オーバーレイは無料ですか？</h3>
+    <p>オーバーレイは PRO の機能です。入れてから 30 日間のお試しでは使えます。新しいタブや別窓で開く方法は、無料版でも使えます。</p>
+
+    <h3>Q. 元のサイドパネルに戻すには？</h3>
+    <p>設定 › 使い方 › 表示のしかた で「固定」を選ぶと戻ります。</p>
+
+    <div class="blog-share blog-share-bottom" role="group" aria-label="この記事をシェア"><p class="blog-share-title">この記事が役に立ったらシェアしてください</p><div class="blog-share-buttons"><a class="bshare-btn bshare-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html&amp;text=Chrome%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%8C%E9%82%AA%E9%AD%94%E3%83%BB%E7%94%BB%E9%9D%A2%E3%81%8C%E7%8B%AD%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%20%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E9%87%8D%E3%81%AD%E3%82%8B%E3%80%8C%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%80%8D%E3%81%A8%E3%80%81%E3%82%BF%E3%83%96%E3%82%84%E5%88%A5%E7%AA%93%E3%81%A7%E9%96%8B%E3%81%8F%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="Xでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="bshare-label">ポスト</span></a><a class="bshare-btn bshare-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html" target="_blank" rel="noopener" aria-label="Facebookでシェア"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg><span class="bshare-label">シェア</span></a><a class="bshare-btn bshare-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html" target="_blank" rel="noopener" aria-label="LINEで送る"><span class="bshare-mark">LINE</span><span class="bshare-label">送る</span></a><a class="bshare-btn bshare-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Ftablayers.liquid-block.com%2Fblog%2Fside-panel-narrow-overlay.html&amp;title=Chrome%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB%E3%81%8C%E9%82%AA%E9%AD%94%E3%83%BB%E7%94%BB%E9%9D%A2%E3%81%8C%E7%8B%AD%E3%81%84%E3%81%A8%E3%81%8D%E3%81%AF%20%E2%80%94%20%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E9%87%8D%E3%81%AD%E3%82%8B%E3%80%8C%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%A4%E3%80%8D%E3%81%A8%E3%80%81%E3%82%BF%E3%83%96%E3%82%84%E5%88%A5%E7%AA%93%E3%81%A7%E9%96%8B%E3%81%8F%E6%96%B9%E6%B3%95" target="_blank" rel="noopener" aria-label="はてなブックマークに追加"><span class="bshare-mark">B!</span><span class="bshare-label">ブックマーク</span></a><button type="button" class="bshare-btn bshare-copy" data-url="https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html" aria-label="リンクをコピー"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="bshare-label">リンクをコピー</span></button><button type="button" class="bshare-btn bshare-native" data-url="https://tablayers.liquid-block.com/blog/side-panel-narrow-overlay.html" data-title="Chrome のサイドパネルが邪魔・画面が狭いときは — ページに重ねる「オーバーレイ」と、タブや別窓で開く方法" aria-label="その他のアプリで共有" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span class="bshare-label">共有</span></button></div></div>
+    <div class="blog-video"><p class="blog-video-title">▶ 実際の操作を動画で見る</p><button type="button" class="blog-video-play" data-yt="YeEdM_l6fMk" aria-label="操作イメージの動画を再生"><img src="https://i.ytimg.com/vi/YeEdM_l6fMk/hqdefault.jpg" alt="LB TAB Layers 操作イメージ映像" loading="lazy" width="480" height="360"><span class="blog-video-btn" aria-hidden="true"></span></button><p class="blog-video-note">サイドバーで、ブックマークとタブをいっしょに管理する様子です。</p></div>
+    <div class="blog-cta-box"><h3>ページを広く、パネルは必要なときだけ。</h3><p>サイドパネル・オーバーレイ・新しいタブ・別窓から、画面に合う形を選べます。アカウント登録なし · 保存先は Chrome のブックマーク</p><a href="https://chromewebstore.google.com/detail/lb-tab-layers/gcniamnnhmkppdlfejcmncjbabaamjej?utm_source=blog&amp;utm_campaign=side-panel-narrow-overlay" class="btn">Chrome に無料で追加 →</a></div>
+    <div class="blog-callout blog-author-box"><p><strong>この記事を書いた人：蔡本 英賛</strong>（株式会社リキッドブロック 代表取締役）</p><p>映像制作に携わって24年。2012年に神戸で株式会社リキッドブロックを設立し、CM や企業の映像、展示会・ミュージアム、大阪・関西万博の展示映像、プロジェクションマッピングなどの CG・VFX・モーショングラフィックスを手がけています（パナソニック、小林製薬、大和ハウス工業など）。バンタンゲームアカデミー（以前）と神戸・甲陽デザイン&amp;テクノロジー専門学校（神戸テック・現在）で After Effects のコンポジットと映像概論を教えています。カンヌ国際映画祭のショートフィルムコーナーと提携する国際短編映画コンペ The 48 Hour Film Project（大阪大会）でビジュアルエフェクト部門を2回受賞、兵庫県展グラフィック部門で三席・入賞。このブログは、毎日の仕事で実際にしているやり方をもとに書いています。</p><p><a href="../about.html#author">運営者情報</a> ・ <a href="https://www.liquid-block.com/works?utm_source=tablayers&amp;utm_medium=referral&amp;utm_campaign=author_box" target="_blank" rel="noopener">映像の制作実績（リキッドブロック）</a></p></div>
+
+    <div class="blog-related"><h3>関連記事</h3><a href="feature-sidebar-mode.html">【機能ガイド】表示モード — 固定・オーバーレイ・別窓・タブの違いと設定 <span>→</span></a><a href="standalone-window-tab-manager.html">タブ管理を別窓（独立ウィンドウ）で使うメリット — デュアルモニター・複数ウィンドウの仕事術 <span>→</span></a><a href="manage-tabs-in-browser-tab-view.html">サイドバーを出さずにタブとブックマークを整理する方法 <span>→</span></a><a href="reference-collect-video-frames.html">映像の参考集めを、出どころつきで <span>→</span></a><a href="how-to-use-tab-layers.html">LB TAB Layers の使い方 — インストールから毎日の流れまで <span>→</span></a><a href="quick-start.html">クイックチュートリアル — 最初の5分で覚える基本操作 <span>→</span></a></div>
+
+    <div class="blog-related">
+      <h3>🔗  参考リンク</h3>
+      <a href="https://support.google.com/chrome/answer/13156494?hl=ja" target="_blank" rel="noopener">Chrome サイドパネルを管理する — Google Chrome ヘルプ</a>
+    </div>
+    <form class="blog-search-mini" action="./" method="get" role="search"><label for="blog-search-mini-q" class="blog-search-mini-label">🔍 ブログ内を検索</label><div class="blog-search-mini-row"><input id="blog-search-mini-q" type="search" name="q" placeholder="例：スクショ、ブックマーク 重複、RSS" autocomplete="off"><button type="submit">検索</button></div></form>
+  </article>
+
+  <footer id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../liquidLogo.svg" alt="Liquid Block" class="footer-logo" width="64" height="64"><p>Liquid Block Inc.<br>映像・モーショングラフィックス制作<br>神戸を拠点に全国対応</p></div><div class="footer-links"><h4>Products</h4><a href="https://www.liquid-block.com/video-pool">Video Pool</a><a href="https://tablayers.liquid-block.com/">LB TAB Layers</a><a href="https://gijimemorec.liquid-block.com/">議事メモレック</a><a href="https://aipromptbar.liquid-block.com/">LB AI Prompt side bar</a></div><div class="footer-links"><h4>Company</h4><a href="https://tablayers.liquid-block.com/about.html">会社概要</a><a href="../privacy-policy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a><a href="../tokushoho.html">特定商取引法に基づく表記</a><a href="mailto:info@liquid-block.com">お問い合わせ</a><a href="https://x.com/LBTabLayers" target="_blank" rel="noopener">X（@LBTabLayers）</a></div></div><div class="footer-bottom"><p>&copy; 2026 Liquid Block Inc. All rights reserved.</p></div></div></footer>
+  <script src="../script.js"></script>
+  <script src="blog-ui.js" defer></script>
+</body>
+</html>
